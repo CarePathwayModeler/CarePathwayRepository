@@ -1,0 +1,2000 @@
+{
+    "id": 3362,
+    "url": "",
+    "codigo": "H053",
+    "nome": "Acidente Vascular Cerebral (AVC)",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 661,
+    "versao": 5,
+    "ultima_auditoria": {
+        "usuario": "Dr. Andre",
+        "data": "2019-02-04T14:33:03.548633-03:00"
+    },
+    "criado_por": {
+        "usuario": "Dr. Andre",
+        "data": "2019-02-04T14:33:03.548633-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Dr. Andre",
+        "data": "2019-02-04T14:35:49.260331-03:00"
+    },
+    "elementos": [
+        {
+            "id": 20286,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Hora de \u00ednicio",
+            "descricao": "Determinar a Hora de In\u00edcio dos Sintomas",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10266,
+                    "url": "",
+                    "texto": "Determinar a Hora de In\u00edcio dos Sintomas:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19859,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "hora_inicio",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "< 4,5 horas",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "> 4,5 horas",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 20294,
+                    "url": "",
+                    "nome": "S1 (tempo > 4,5h)",
+                    "descricao": "tempo > 4,5h",
+                    "passo_de_saida_id": 20286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Hora de \u00ednicio",
+                    "passo_de_entrada_id": 20287,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Eixo vermelho",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20295,
+                    "url": "",
+                    "nome": "S2 (tempo < 4,5h)",
+                    "descricao": "tempo < 4,5h",
+                    "passo_de_saida_id": 20286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Hora de \u00ednicio",
+                    "passo_de_entrada_id": 20288,
+                    "passo_de_entrada": "Tratamento: Sala de Cuidados e Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20287,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Eixo vermelho",
+            "descricao": "<p><span style=\"font-size:20px\">Encaminhar para eixo vermelho.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20294,
+                    "url": "",
+                    "nome": "S1 (tempo > 4,5h)",
+                    "descricao": "tempo > 4,5h",
+                    "passo_de_saida_id": 20286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Hora de \u00ednicio",
+                    "passo_de_entrada_id": 20287,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Eixo vermelho",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20288,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Sala de Cuidados e Exames",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:20px\">Encaminhar paciente para sala de cuidados.&nbsp;</span></li>\n\t<li><span style=\"font-size:20px\">Realizar acesso venoso.&nbsp;</span></li>\n\t<li><span style=\"font-size:20px\">Solicitar exames + TC.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Dr. Andre",
+                "data": "2019-02-04T14:35:31.454099-03:00"
+            },
+            "exames": [
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "EXAMES DE TOMOGRAFIA COMPUTADORIZADO",
+                    "exame": "16020138",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "AVC < 4,5h",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GLICEMIA P/ FITA",
+                    "exame": "99011973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "avc",
+                    "indicacao_clinica": "avc",
+                    "categoria": null
+                },
+                {
+                    "url": "CALCIO IONIZADO (IONICO)",
+                    "exame": "28010337",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "avc",
+                    "indicacao_clinica": "avc",
+                    "categoria": null
+                },
+                {
+                    "url": "GLICOSE  (SANGUE)",
+                    "exame": "28010973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "avc",
+                    "indicacao_clinica": "avc",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "ACESSO A CIRCULACAO VENOSA CENTRAL",
+                    "procedimento": "17010039",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20295,
+                    "url": "",
+                    "nome": "S2 (tempo < 4,5h)",
+                    "descricao": "tempo < 4,5h",
+                    "passo_de_saida_id": 20286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Hora de \u00ednicio",
+                    "passo_de_entrada_id": 20288,
+                    "passo_de_entrada": "Tratamento: Sala de Cuidados e Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20296,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20288,
+                    "passo_de_saida": "Tratamento: Sala de Cuidados e Exames",
+                    "passo_de_entrada_id": 20293,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Calcular escala NIHSS",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20289,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Calcular escala NIHSS",
+            "descricao": "<p>Calcular escala NIHSS:</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10267,
+                    "url": "",
+                    "texto": "1a. N\u00edvel de Consci\u00eancia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19860,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "nivel_consciencia",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Alerta; responde com entusiasmo.",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "N\u00e3o alerta, mas ao ser acordado por min\u00edma estimula\u00e7\u00e3o obedece, responde ou reage",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "N\u00e3o alerta, requer repetida estimula\u00e7\u00e3o ou estimula\u00e7\u00e3o dolorosa para realizar movimentos",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Responde somente com reflexo motor ou rea\u00e7\u00f5es auton\u00f4micas, ou totalmente irresponsivo, fl\u00e1cido e arreflexo.",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10268,
+                    "url": "",
+                    "texto": "1b. Perguntas de N\u00edvel de Consci\u00eancia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19881,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "p_nivel_consciencia",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Responde ambas as quest\u00f5es corretamente",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Responde uma quest\u00e3o corretamente",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "N\u00e3o responde nenhuma quest\u00e3o corretamente",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 10269,
+                    "url": "",
+                    "texto": "1c. Comandos de N\u00edvel de Consci\u00eancia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19882,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "c_nivel_consciencia",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Realiza ambas as tarefas corretamente",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Realiza uma tarefa corretamente",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "N\u00e3o realiza nenhuma tarefa corretamente",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 10270,
+                    "url": "",
+                    "texto": "2. Melhor olhar conjugado",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19883,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "m_olhar_conjugado",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Normal",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Paralisia parcial do olhar (olhar anormal em um ou ambos os olhos, mas n\u00e3o h\u00e1 desvio for\u00e7ado ou paresia total do olhar)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Desvio for\u00e7ado ou paralisia total do olhar que n\u00e3o podem ser vencidos pela manobra \u00f3culo-cef\u00e1lica",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 10271,
+                    "url": "",
+                    "texto": "3. Campos visuais",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19884,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "campos_visuais",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Sem perda visual",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Hemianopsia parcial",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Hemianopsia completa",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Hemianopsia bilateral (cego, incluindo cegueira cortical)",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 10272,
+                    "url": "",
+                    "texto": "4. Paralisia Facial",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19885,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "paralisia_facial",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Movimentos normais sim\u00e9tricos",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Paralisia facial leve (apagamento de prega nasolabial, assimetria no sorriso)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Paralisia facial central evidente (paralisia facial total ou quase toral da regi\u00e3o interior da face)",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Paralisia facial completa (aus\u00eancia de movimentos faciais das regi\u00f5es superior e inferior da face)",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 10273,
+                    "url": "",
+                    "texto": "5. Membros superiores",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19886,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "membros_superiores",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Sem queda; mant\u00e9m o bra\u00e7o 90\u00ba (ou 45\u00ba) por 10 segundos completos",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Queda; ment\u00e9m o bra\u00e7o a 90\u00ba (ou 45\u00ba), por\u00e9m este apresenta queda antes dos 10 segundos completos; n\u00e3o toca a cama ou outro suporte",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Algum esfor\u00e7o contra a gravidade; o bra\u00e7o n\u00e3o atinge ou n\u00e3o mant\u00e9m 90\u00ba (ou 45\u00ba), cai na cama, mas tem alguma for\u00e7a contra a gravidade",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Nenhum esfor\u00e7o contra a gravidade; bra\u00e7o despenca",
+                                "peso": 3.0
+                            },
+                            {
+                                "texto": "Nenhum movimento",
+                                "peso": 4.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 10274,
+                    "url": "",
+                    "texto": "6. Membros inferiores",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19887,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "membros_inferiores",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Sem queda; mant\u00e9m a perna a 30\u00ba por 5 segundos completos",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Queda; mant\u00e9m a perna a 30\u00ba, por\u00e9m esta apresenta queda antes dos 5 segundos completos; n\u00e3o toca a cama ou outro suporte",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Algum esfor\u00e7o contra a gravidade; a perna n\u00e3o atinge ou n\u00e3o mant\u00e9m 30\u00ba, cai na cama, mas tem alguma for\u00e7a contra a gravidade",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Nenhum esfor\u00e7o contra a gravidade; perna despenca",
+                                "peso": 3.0
+                            },
+                            {
+                                "texto": "Nenhum movimento",
+                                "peso": 4.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                },
+                {
+                    "id": 10275,
+                    "url": "",
+                    "texto": "7. Ataxia de membros",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19888,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "ataxia_membros",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Ausente",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Presente em um membro",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Presente em dois membros",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 15
+                },
+                {
+                    "id": 10276,
+                    "url": "",
+                    "texto": "8. Sensibilidade",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19889,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sensibilidade",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Normal; nenhuma perda",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Perda sensitiva leve a moderada; a sensibilidade ao beliscar \u00e9 menos aguda ou diminu\u00edda do lado afetado, ou h\u00e1 uma perda da dor superficial ao beliscar, mas o paciente est\u00e1 ciente de que est\u00e1 sendo tocado",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Perda da sensibilidade grave ou total; o paciente n\u00e3o sente que est\u00e1s sendo tocado",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 16
+                },
+                {
+                    "id": 10277,
+                    "url": "",
+                    "texto": "9. Melhor linguagem (afasia)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19890,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "linguagem_afasia",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Sem afasia; normal",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Afasia leve a moderada; alguma perda \u00f3bvia da flu\u00eancia ou dificuldade de compreens\u00e3o, sem limita\u00e7\u00e3o significativa das ideias express\u00e3o ou forma de express\u00e3o. .",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Afasia grave; toda a comunica\u00e7\u00e3o \u00e9 feita atrav\u00e9s de express\u00f5es fragmentadas; grande necessidade de interfer\u00eancia, questionamento e adivinha\u00e7\u00e3o por parte do ouvinte.",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Mudo, afasia global; nenhuma fala \u00fatil ou compreens\u00e3o auditiva",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 17
+                },
+                {
+                    "id": 10278,
+                    "url": "",
+                    "texto": "10. Disartia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19891,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "disartia",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Normal",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Disartia leve a moderada; paciente arrasta pelo menos algumas palavras, e na pior das hip\u00f3teses, pode ser entendido com alguma dificuldade.",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Disartia grave; fala do paciente \u00e9 t\u00e3o empastada que chega a ser inintelig\u00edvel, na aus\u00eancia de difasia ou com difasia desproporcional, ou \u00e9 mudo/an\u00e1rtrico",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 18
+                },
+                {
+                    "id": 10279,
+                    "url": "",
+                    "texto": "11. Extin\u00e7\u00e3o ou Desaten\u00e7\u00e3o (antiga neglig\u00eancia)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19892,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "extincao_desatencao",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Nenhuma anormalidade",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Desaten\u00e7\u00e3o visual, t\u00e1til, auditiva, espacial ou pessoal, ou extin\u00e7\u00e3o \u00e0 estimula\u00e7\u00e3o simult\u00e2nea em uma das modalidades sensoriais",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Profunda hemi-desaten\u00e7\u00e3o ou hemi-desaten\u00e7\u00e3o para mais de uma modalidade; n\u00e3o reconhece a pr\u00f3pria m\u00e3o e se orienta somente para um lado do espa\u00e7o",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 19
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20300,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20293,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Calcular escala NIHSS",
+                    "passo_de_entrada_id": 20289,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Calcular escala NIHSS",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20297,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20289,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Calcular escala NIHSS",
+                    "passo_de_entrada_id": 20290,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar contraindica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20290,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar contraindica\u00e7\u00f5es",
+            "descricao": "<p>Contra-indica&ccedil;&otilde;es para tratamento Trombol&iacute;tico:</p>\n\n<ul>\n\t<li>In&iacute;cio dos sintomas superior a 4,5h (se o paciente foi encontrado com d&eacute;ficits ou acordou assim, considerar o &uacute;ltimo hor&aacute;rio em que foi visto bem);</li>\n\t<li>Uso de Marevan com RNI &gt; 1,7 ou heparina n&atilde;o fracionada nas &uacute;ltimas 48h com PTTA&nbsp; elevado;</li>\n\t<li>Uso de novos anticoagulantes (inibidores diretos da trombina ou do fator Xa) nas &uacute;ltimas 48h;</li>\n\t<li>Anticoagula&ccedil;&atilde;o plena com heparina de baixo peso molecular (Enoxaparina) nas &uacute;ltimas 24h;</li>\n\t<li>Plaquetas &lt; 100000/mm3;</li>\n\t<li>Hist&oacute;ria pr&eacute;via de hemorragia intracraniana, MAV ou neoplasia intracraniana intra-axial;</li>\n\t<li>Pacientes que tiveram nos &uacute;ltimos 3 meses: AVCi, TCE grave, cirurgia intracraniana ou intraespinhal, IAM;</li>\n\t<li>Neoplasia maligna do TGI ou hemorragia do TGI/geniturin&aacute;ria nos &uacute;ltimos 21 dias;</li>\n\t<li>Melhora r&aacute;pida e completa dos d&eacute;ficits no per&iacute;odo que antecede a tromb&oacute;lise;</li>\n\t<li>Hipertens&atilde;o (PAS &gt;= 185 e/ou PAD &gt;=110) refrat&aacute;ria ao tratamento cl&iacute;nico;</li>\n\t<li>AVC com sintomas m&iacute;nimos, sem repercuss&atilde;o;</li>\n\t<li>TC de cr&acirc;nio com hipodensidade precoce &gt; 1/3 do territ&oacute;rio da ACM;</li>\n\t<li>Glicemia &lt; 50mg/dl com revers&atilde;o dos sintomas ap&oacute;s a corre&ccedil;&atilde;o;</li>\n\t<li>Evid&ecirc;ncia de endocardite ou &ecirc;mbolo s&eacute;ptico, gravidez;</li>\n\t<li>Suspeita cl&iacute;nica de hemorragia subaracnoide ou dissec&ccedil;&atilde;o aguda de aorta;</li>\n\t<li>Cirurgia de grande porte, procedimento invasivo ou trauma grave nos &uacute;ltimos 14 dias;</li>\n\t<li>Pun&ccedil;&atilde;o lombar nos &uacute;ltimos 7 dias;</li>\n\t<li>Idade maior que 80 anos;</li>\n\t<li>\n\t<div>Pacientes usando anticoagulante, independente do INR;</div>\n\t</li>\n\t<li>\n\t<div>Antecedentes de AVE e DM associados;</div>\n\t</li>\n\t<li>\n\t<div>Tomografia computadorizada com evid&ecirc;ncia de hemorragia.</div>\n\t</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10280,
+                    "url": "",
+                    "texto": "Paciente possui uma ou mais contra-indica\u00e7\u00e3o para Tromb\u00f3lise?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19893,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "contra_indicacao_trombolise",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20297,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20289,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Calcular escala NIHSS",
+                    "passo_de_entrada_id": 20290,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar contraindica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20298,
+                    "url": "",
+                    "nome": "S5 (n\u00e3o realizar tromb\u00f3lise)",
+                    "descricao": "n\u00e3o realizar tromb\u00f3lise",
+                    "passo_de_saida_id": 20290,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contraindica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 20291,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Verificar tratamento cl\u00ednico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20299,
+                    "url": "",
+                    "nome": "S6 (realizar trombolise)",
+                    "descricao": "realizar trombolise",
+                    "passo_de_saida_id": 20290,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contraindica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 20292,
+                    "passo_de_entrada": "Tratamento: Tromb\u00f3lise",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20291,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Verificar tratamento cl\u00ednico",
+            "descricao": "<p><span style=\"font-size:20px\">Verificar tratamento cl&iacute;nico a ser realizado junto com a chefia.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20298,
+                    "url": "",
+                    "nome": "S5 (n\u00e3o realizar tromb\u00f3lise)",
+                    "descricao": "n\u00e3o realizar tromb\u00f3lise",
+                    "passo_de_saida_id": 20290,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contraindica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 20291,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Verificar tratamento cl\u00ednico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20292,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tromb\u00f3lise",
+            "descricao": "<p><strong><u>Intru&ccedil;&otilde;es para&nbsp;INFUS&Atilde;O DO TRATAMENTO TROMBOL&Iacute;TICO (rTPA):</u></strong></p>\n\n<ul>\n\t<li>Instalar o segundo acesso venoso calibroso no membro superior, se este n&atilde;o tiver j&aacute; confeccionado.</li>\n\t<li>Dose de Alteplase: 0,9mg/kg (m&aacute;ximo: 90mg): 10% da dose em 1 minuto e o restante em 1hora.</li>\n\t<li>O acesso para a administra&ccedil;&atilde;o da Alteplase deve ser exclusivo e a infus&atilde;o controlada por bomba de infus&atilde;o cont&iacute;nua.</li>\n\t<li>N&atilde;o utilizar antiagregante ou anticoagulante (mesmo em dose profil&aacute;tica) nas pr&oacute;ximas 24h seguindo a infus&atilde;o.</li>\n\t<li>N&atilde;o realizar acesso arterial ou acesso venoso profundo nas pr&oacute;ximas 24h seguindo a infus&atilde;o.</li>\n\t<li>Evitar sondagem vesical nas pr&oacute;ximas 24h seguindo a infus&atilde;o. Se extremamente necess&aacute;rio, aguardar pelo menos 30 min do fim da infus&atilde;o.</li>\n\t<li>Evitar sondagem nasog&aacute;strica/nasoenteral ou nasog&aacute;stricas nas pr&oacute;ximas 24h seguindo a infus&atilde;o.</li>\n\t<li>Manter o paciente em jejum por 24h devido o risco de hemorragia e necessidade de interven&ccedil;&atilde;o cir&uacute;rgica de urg&ecirc;ncia.</li>\n\t<li>Manter hidrata&ccedil;&atilde;o com soro fisiol&oacute;gico.</li>\n\t<li>Solicitar TC de cr&acirc;nio sem contraste para controle ap&oacute;s 24h do fim da infus&atilde;o.</li>\n\t<li>Ap&oacute;s 24h do tratamento trombol&iacute;tico, o tratamento seguir&aacute; as mesmas orienta&ccedil;&otilde;es destinadas aos pacientes que n&atilde;o foram submetidos &agrave; tromb&oacute;lise (antiagrega&ccedil;&atilde;o, anticoagula&ccedil;&atilde;o, profilaxia medicamentosa para TVP &ndash; quando indicados), desde que n&atilde;o tenham ocorrido complica&ccedil;&otilde;es.</li>\n</ul>\n\n<p><strong><u>Dose:</u></strong></p>\n\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">PESO</td>\n\t\t\t<td style=\"text-align:center\">VOLUME BOLUS (mL)</td>\n\t\t\t<td style=\"text-align:center\">VOLUME EM UMA HORA (mL)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">40</td>\n\t\t\t<td style=\"text-align:center\">3.6</td>\n\t\t\t<td style=\"text-align:center\">32.4</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">45</td>\n\t\t\t<td style=\"text-align:center\">4.05</td>\n\t\t\t<td style=\"text-align:center\">36.45</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">50</td>\n\t\t\t<td style=\"text-align:center\">4.5</td>\n\t\t\t<td style=\"text-align:center\">40.5</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">55</td>\n\t\t\t<td style=\"text-align:center\">4.95</td>\n\t\t\t<td style=\"text-align:center\">44.55</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">60</td>\n\t\t\t<td style=\"text-align:center\">5.4</td>\n\t\t\t<td style=\"text-align:center\">48.6</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">65</td>\n\t\t\t<td style=\"text-align:center\">5.85</td>\n\t\t\t<td style=\"text-align:center\">52.65</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">70</td>\n\t\t\t<td style=\"text-align:center\">6.3</td>\n\t\t\t<td style=\"text-align:center\">56.7</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">75</td>\n\t\t\t<td style=\"text-align:center\">6.75</td>\n\t\t\t<td style=\"text-align:center\">60.75</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">80</td>\n\t\t\t<td style=\"text-align:center\">7.2</td>\n\t\t\t<td style=\"text-align:center\">64.8</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">85</td>\n\t\t\t<td style=\"text-align:center\">7.65</td>\n\t\t\t<td style=\"text-align:center\">68.85</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">90</td>\n\t\t\t<td style=\"text-align:center\">8.1</td>\n\t\t\t<td style=\"text-align:center\">72.9</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">95</td>\n\t\t\t<td style=\"text-align:center\">8.55</td>\n\t\t\t<td style=\"text-align:center\">76.95</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">100 ou mais</td>\n\t\t\t<td style=\"text-align:center\">9</td>\n\t\t\t<td style=\"text-align:center\">81</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p><u><strong>Suspender Tromb&oacute;lise se:</strong></u></p>\n\n<ul>\n\t<li>Evid&ecirc;ncias de sangramento;</li>\n\t<li>Rebaixamento do n&iacute;vel de consci&ecirc;ncia;</li>\n\t<li>Crise convulsiva;</li>\n\t<li>PAS &gt; 180 e/ou PAD &gt; 105, ou eleva&ccedil;&atilde;o s&uacute;bita da PA; V&ocirc;mitos;</li>\n\t<li>Eleva&ccedil;&atilde;o do NIHSS.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20299,
+                    "url": "",
+                    "nome": "S6 (realizar trombolise)",
+                    "descricao": "realizar trombolise",
+                    "passo_de_saida_id": 20290,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contraindica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 20292,
+                    "passo_de_entrada": "Tratamento: Tromb\u00f3lise",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20293,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Calcular escala NIHSS",
+            "descricao": "<p>Instru&ccedil;&otilde;es:</p>\n\n<ul>\n\t<li><u><strong>1a. N&iacute;vel de Consci&ecirc;ncia: </strong></u>O investigador deve escolher uma resposta&nbsp;mesmo se uma avalia&ccedil;&atilde;o completa &eacute;&nbsp;prejudicada por obst&aacute;culos como um tubo orotraqueal, barreiras de linguagem, trauma ou curativo orotraqueal. Um <strong>3 </strong>&eacute; dado apenas se o paciente n&atilde;o faz nenhum movimento (outro al&eacute;m de postura reflexa) em resposta &agrave; estimula&ccedil;&atilde;o dolorosa.</li>\n\t<li><u><strong>1b. Perguntas de N&iacute;vel de Consci&ecirc;ncia:</strong></u> O paciente &eacute; questionado sobre o m&ecirc;s e sua idade. A resposta deve ser correta &ndash; n&atilde;o h&aacute; nota parcial por chegar perto. Pacientes com afasia ou estupor que n&atilde;o compreendem as perguntas ir&atilde;o receber&nbsp;2. Pacientes incapazes de falar por tubo ou traumatismo orotraqueal, disartria grave de qualquer causa, barreiras de linguagem ou qualquer outro problema n&atilde;o secund&aacute;rio a afasia receber&atilde;o 1. &Eacute; importante considerar apenas a resposta inicial e que o examinador n&atilde;o &ldquo;ajude&rdquo; o paciente com dicas verbais ou n&atilde;o verbais.</li>\n\t<li><u><strong>1c. Comandos de N&iacute;vel de Consci&ecirc;ncia:</strong></u> O paciente &eacute; solicitado a abrir e fechar os olhos e depois abrir e fechar a m&atilde;o n&atilde;o par&eacute;tica. Substitua por outro comando de um &uacute;nico passo se as m&atilde;os n&atilde;o puderem ser utilizadas. Devemos valorizar uma tentativa inequ&iacute;voca, ainda que n&atilde;o completada devido &agrave; fraqueza muscular. Se o paciente n&atilde;o responde &agrave; ordem, a tarefa deve ser demonstrada usando gestos e o resultado registado. Aos pacientes com trauma, amputa&ccedil;&atilde;o ou outro impedimento f&iacute;sico devem ser dadas ordens simples adequadas. Pontue s&oacute; a primeira tentativa.</li>\n\t<li><u><strong>2. Melhor Olhar Conjugado: </strong></u>Teste apenas os movimentos oculares horizontais. Os movimentos oculares volunt&aacute;rios ou reflexos (oculocef&aacute;lico) s&atilde;o pontuados, mas a prova cal&oacute;rica n&atilde;o &eacute; avaliada. Se o paciente tem um desvio conjugado do olhar, que &eacute; revertido pela atividade volunt&aacute;ria ou reflexa, a pontua&ccedil;&atilde;o ser&aacute; 1. Se o paciente tem uma par&eacute;sia de nervo perif&eacute;rico isolada (NC III, IV ou VI), pontue 1. O olhar &eacute; testado em todos os pacientes af&aacute;sicos. Os pacientes com trauma ou curativo ocular, cegueira pr&eacute;-existente ou outro dist&uacute;rbio de acuidade ou campo visual devem ser testados com movimentos reflexos e a escolha feita pelo examinador. Estabelecer contacto visual e mover-se perto do paciente de um lado para outro pode esclarecer a presen&ccedil;a de paralisia do olhar conjugado.</li>\n\t<li><u><strong>3. Campos visuais:</strong></u> Os campos visuais (quadrantes superiores e inferiores) s&atilde;o testados por confronta&ccedil;&atilde;o, utilizando contagem de dedos ou amea&ccedil;a visual, conforme apropriado. O paciente pode ser encorajado, mas basta identificar olhando para o lado em que mexem os dedos para ser considerado como normal. Se houver cegueira unilateral ou enuclea&ccedil;&atilde;o, os campos visuais no olho restante s&atilde;o avaliados. Pontue 1 apenas se houver uma assimetria clara, incluindo quadrantan&oacute;psia. Se o paciente &eacute; cego por qualquer causa, pontue 3. A estimula&ccedil;&atilde;o dupla simult&acirc;nea &eacute; realizada neste momento. Se houver extin&ccedil;&atilde;o, o paciente recebe 1 e os resultados s&atilde;o usados para responder a quest&atilde;o 11.</li>\n\t<li><u><strong>4. Paralisia&nbsp;Facial:</strong></u> Pergunte ou use gestos para encorajar o paciente a mostrar os dentes ou levantar as sobrancelhas e fechar com for&ccedil;a os olhos. Pontue a simetria da contrac&ccedil;&atilde;o facial em resposta ao est&iacute;mulo doloroso nos pacientes pouco responsivos ou que n&atilde;o compreendam. Na presen&ccedil;a de traumatismo, tubo orotraqueal, adesivos ou outra barreira f&iacute;sica que possam esconder a face, estes devem ser removidos, tanto quanto poss&iacute;vel.</li>\n\t<li><u><strong>5. Membros Superiores:</strong></u> O bra&ccedil;o &eacute; colocado na posi&ccedil;&atilde;o apropriada: extens&atilde;o dos bra&ccedil;os, palmas para baixo, a 90&ordm; se sentado ou a 45&ordm; se posi&ccedil;&atilde;o supina. Pontue-se a queda do bra&ccedil;o quando esta ocorre antes de 10 segundos. O paciente af&aacute;sico &eacute; encorajado atrav&eacute;s de firmeza na voz ou gestos, mas n&atilde;o com estimula&ccedil;&atilde;o dolorosa. Cada membro &eacute; testado isoladamente, come&ccedil;ando no bra&ccedil;o n&atilde;o-par&eacute;tico.</li>\n\t<li><u><strong>6. Membros Inferiores:</strong></u> A perna &eacute; colocada na posi&ccedil;&atilde;o apropriada: extens&atilde;o a 30&ordm;. Teste sempre na posi&ccedil;&atilde;o supina. Pontue-se a queda da perna quando esta ocorre antes de 5 segundos. O paciente af&aacute;sico &eacute; encorajado atrav&eacute;s de firmeza na voz ou gestos, mas n&atilde;o com estimula&ccedil;&atilde;o dolorosa. Cada membro &eacute; testado isoladamente, come&ccedil;ando na perna n&atilde;o-par&eacute;tica.</li>\n\t<li><strong><u>7. Ataxia de membros:</u></strong> Este item procura evid&ecirc;ncia de les&atilde;o cerebelosa unilateral. Teste com os olhos abertos. No caso de d&eacute;fice de campo visual, assegure-se que o teste &eacute; feito no campo visual intacto. Os testes dedo-nariz e calcanhar-joelho s&atilde;o realizados em ambos os lados e a ataxia &eacute; valorizada, apenas, se for desproporcional em rela&ccedil;&atilde;o &agrave; fraqueza muscular. A ataxia &eacute; considerada ausente no doente com perturba&ccedil;&atilde;o da compreens&atilde;o ou pl&eacute;gico.</li>\n\t<li><u><strong>8. Sensibilidade: </strong></u>Avalie a sensibilidade ou m&iacute;mica facial &agrave; picada de alfinete ou a resposta de retirada ao est&iacute;mulo doloroso em paciente obnubilado ou af&aacute;sico. S&oacute; a perda de sensibilidade atribu&iacute;da ao AVC &eacute; pontuada. Teste tantas as partes do corpo &ndash; membros superiores (excepto m&atilde;os), inferiores (excepto p&eacute;s), tron11. Extin&ccedil;&atilde;o e Desaten&ccedil;&atilde;o, antiga neglig&ecirc;ncia. A informa&ccedil;&atilde;o suficiente para a identifica&ccedil;&atilde;o de neglig&ecirc;ncia pode ter sido obtida durante os testes anteriores. Se o doente tem perda visual grave, que impede o teste da estimula&ccedil;&atilde;o visual dupla simult&acirc;nea, e os est&iacute;mulos cut&acirc;neos s&atilde;o normais, a pontua&ccedil;&atilde;o &eacute; normal. Se o doente tem afasia, mas parece identificar ambos os lados, &eacute; pontuado como normal. A presen&ccedil;a de neglig&ecirc;ncia visuoespacial ou anosagnosia contribuem tamb&eacute;m para a evid&ecirc;ncia de anormalidade. Como a anormalidade s&oacute; &eacute; pontuada se presente, o item nunca &eacute; considerado n&atilde;o test&aacute;vel.co e face &ndash; quantas as necess&aacute;rias para avaliar com precis&atilde;o uma perda hemissensitiva. Pontue com 2 s&oacute; se uma perda grave ou total da sensibilidade puder ser claramente demonstrada. Deste modo, doentes estuporosos ou af&aacute;sicos ir&atilde;o ser pontuados possivelmente com 1 ou 0. O doente com AVC do tronco cerebral com perda de sensibilidade bilateral &eacute; pontuado com 2. Se o paciente n&atilde;o responde e est&aacute; quadripl&eacute;gico, pontue 2. Pacientes em coma (item 1a=3) s&atilde;o pontuados arbitrariamente com 2 neste item.</li>\n\t<li><u><strong>9. Melhor linguagem:</strong></u> Durante a pontua&ccedil;&atilde;o dos itens precedentes obter&aacute; muita informa&ccedil;&atilde;o acerca da capacidade de compreens&atilde;o. Pede-se ao doente para descrever o que est&aacute; a acontecer na imagem em anexo, para nomear objectos num cart&atilde;o de nomea&ccedil;&atilde;o anexo e para ler uma lista de frases em anexo. A compreens&atilde;o &eacute; julgada a partir destas respostas, assim como as referentes &agrave;s ordens dadas no exame neurol&oacute;gico geral precedente. Se a perda visual interferir com os testes, pe&ccedil;a ao doente para identificar objetos colocados na m&atilde;o, repetir frases e produzir discurso. O paciente entubado deve escrever as respostas. O doente em coma (1a=3) ser&aacute; pontuado arbitrariamente com 3. O examinador deve escolher a pontua&ccedil;&atilde;o no doente com estupor ou pouco colaborante, mas a pontua&ccedil;&atilde;o de 3 est&aacute; reservada a doentes em mutismo e que n&atilde;o cumpram nenhuma ordem simples.</li>\n\t<li><strong><u>10. Disartria:</u></strong> Se acredita que o doente consegue, pede-se para ler ou repetir as palavras da lista anexa. Se o paciente tem afasia grave, a clareza da articula&ccedil;&atilde;o da fala espont&acirc;nea pode ser pontuada.&nbsp;<strong>N&atilde;o diga ao paciente a raz&atilde;o pela qual est&aacute; a ser testado.</strong></li>\n\t<li><strong><u>11. Extin&ccedil;&atilde;o e Desaten&ccedil;&atilde;o, antiga neglig&ecirc;ncia:</u></strong>&nbsp;A informa&ccedil;&atilde;o suficiente para a identifica&ccedil;&atilde;o de neglig&ecirc;ncia pode ter sido obtida durante os testes anteriores. Se o doente tem perda visual grave, que impede o teste da estimula&ccedil;&atilde;o visual dupla simult&acirc;nea, e os est&iacute;mulos cut&acirc;neos s&atilde;o normais, a pontua&ccedil;&atilde;o &eacute; normal. Se o doente tem afasia, mas parece identificar ambos os lados, &eacute; pontuado como normal. A presen&ccedil;a de neglig&ecirc;ncia visuoespacial ou anosagnosia contribuem tamb&eacute;m para a evid&ecirc;ncia de anormalidade. Como a anormalidade s&oacute; &eacute; pontuada se presente, o item nunca &eacute; considerado n&atilde;o test&aacute;vel.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20296,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20288,
+                    "passo_de_saida": "Tratamento: Sala de Cuidados e Exames",
+                    "passo_de_entrada_id": 20293,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Calcular escala NIHSS",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20300,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20293,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Calcular escala NIHSS",
+                    "passo_de_entrada_id": 20289,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Calcular escala NIHSS",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20294,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (tempo > 4,5h)",
+            "descricao": "tempo > 4,5h",
+            "passo_de_saida_id": 20286,
+            "passo_de_saida": {
+                "id": 20286,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Hora de \u00ednicio",
+                "descricao": "Determinar a Hora de In\u00edcio dos Sintomas",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20287,
+            "passo_de_entrada": {
+                "id": 20287,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Eixo vermelho",
+                "descricao": "<p><span style=\"font-size:20px\">Encaminhar para eixo vermelho.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19913,
+                "nome": "tempo > 4,5h",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    19859,
+                    19894
+                ],
+                "argumentos": [
+                    "hora_inicio",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20295,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (tempo < 4,5h)",
+            "descricao": "tempo < 4,5h",
+            "passo_de_saida_id": 20286,
+            "passo_de_saida": {
+                "id": 20286,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Hora de \u00ednicio",
+                "descricao": "Determinar a Hora de In\u00edcio dos Sintomas",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20288,
+            "passo_de_entrada": {
+                "id": 20288,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Sala de Cuidados e Exames",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:20px\">Encaminhar paciente para sala de cuidados.&nbsp;</span></li>\n\t<li><span style=\"font-size:20px\">Realizar acesso venoso.&nbsp;</span></li>\n\t<li><span style=\"font-size:20px\">Solicitar exames + TC.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Dr. Andre",
+                    "data": "2019-02-04T14:35:31.454099-03:00"
+                }
+            },
+            "operacao": {
+                "id": 19914,
+                "nome": "tempo < 4,5h",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    19859,
+                    19895
+                ],
+                "argumentos": [
+                    "hora_inicio",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20296,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "-",
+            "passo_de_saida_id": 20288,
+            "passo_de_saida": {
+                "id": 20288,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Sala de Cuidados e Exames",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:20px\">Encaminhar paciente para sala de cuidados.&nbsp;</span></li>\n\t<li><span style=\"font-size:20px\">Realizar acesso venoso.&nbsp;</span></li>\n\t<li><span style=\"font-size:20px\">Solicitar exames + TC.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Dr. Andre",
+                    "data": "2019-02-04T14:35:31.454099-03:00"
+                }
+            },
+            "passo_de_entrada_id": 20293,
+            "passo_de_entrada": {
+                "id": 20293,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Calcular escala NIHSS",
+                "descricao": "<p>Instru&ccedil;&otilde;es:</p>\n\n<ul>\n\t<li><u><strong>1a. N&iacute;vel de Consci&ecirc;ncia: </strong></u>O investigador deve escolher uma resposta&nbsp;mesmo se uma avalia&ccedil;&atilde;o completa &eacute;&nbsp;prejudicada por obst&aacute;culos como um tubo orotraqueal, barreiras de linguagem, trauma ou curativo orotraqueal. Um <strong>3 </strong>&eacute; dado apenas se o paciente n&atilde;o faz nenhum movimento (outro al&eacute;m de postura reflexa) em resposta &agrave; estimula&ccedil;&atilde;o dolorosa.</li>\n\t<li><u><strong>1b. Perguntas de N&iacute;vel de Consci&ecirc;ncia:</strong></u> O paciente &eacute; questionado sobre o m&ecirc;s e sua idade. A resposta deve ser correta &ndash; n&atilde;o h&aacute; nota parcial por chegar perto. Pacientes com afasia ou estupor que n&atilde;o compreendem as perguntas ir&atilde;o receber&nbsp;2. Pacientes incapazes de falar por tubo ou traumatismo orotraqueal, disartria grave de qualquer causa, barreiras de linguagem ou qualquer outro problema n&atilde;o secund&aacute;rio a afasia receber&atilde;o 1. &Eacute; importante considerar apenas a resposta inicial e que o examinador n&atilde;o &ldquo;ajude&rdquo; o paciente com dicas verbais ou n&atilde;o verbais.</li>\n\t<li><u><strong>1c. Comandos de N&iacute;vel de Consci&ecirc;ncia:</strong></u> O paciente &eacute; solicitado a abrir e fechar os olhos e depois abrir e fechar a m&atilde;o n&atilde;o par&eacute;tica. Substitua por outro comando de um &uacute;nico passo se as m&atilde;os n&atilde;o puderem ser utilizadas. Devemos valorizar uma tentativa inequ&iacute;voca, ainda que n&atilde;o completada devido &agrave; fraqueza muscular. Se o paciente n&atilde;o responde &agrave; ordem, a tarefa deve ser demonstrada usando gestos e o resultado registado. Aos pacientes com trauma, amputa&ccedil;&atilde;o ou outro impedimento f&iacute;sico devem ser dadas ordens simples adequadas. Pontue s&oacute; a primeira tentativa.</li>\n\t<li><u><strong>2. Melhor Olhar Conjugado: </strong></u>Teste apenas os movimentos oculares horizontais. Os movimentos oculares volunt&aacute;rios ou reflexos (oculocef&aacute;lico) s&atilde;o pontuados, mas a prova cal&oacute;rica n&atilde;o &eacute; avaliada. Se o paciente tem um desvio conjugado do olhar, que &eacute; revertido pela atividade volunt&aacute;ria ou reflexa, a pontua&ccedil;&atilde;o ser&aacute; 1. Se o paciente tem uma par&eacute;sia de nervo perif&eacute;rico isolada (NC III, IV ou VI), pontue 1. O olhar &eacute; testado em todos os pacientes af&aacute;sicos. Os pacientes com trauma ou curativo ocular, cegueira pr&eacute;-existente ou outro dist&uacute;rbio de acuidade ou campo visual devem ser testados com movimentos reflexos e a escolha feita pelo examinador. Estabelecer contacto visual e mover-se perto do paciente de um lado para outro pode esclarecer a presen&ccedil;a de paralisia do olhar conjugado.</li>\n\t<li><u><strong>3. Campos visuais:</strong></u> Os campos visuais (quadrantes superiores e inferiores) s&atilde;o testados por confronta&ccedil;&atilde;o, utilizando contagem de dedos ou amea&ccedil;a visual, conforme apropriado. O paciente pode ser encorajado, mas basta identificar olhando para o lado em que mexem os dedos para ser considerado como normal. Se houver cegueira unilateral ou enuclea&ccedil;&atilde;o, os campos visuais no olho restante s&atilde;o avaliados. Pontue 1 apenas se houver uma assimetria clara, incluindo quadrantan&oacute;psia. Se o paciente &eacute; cego por qualquer causa, pontue 3. A estimula&ccedil;&atilde;o dupla simult&acirc;nea &eacute; realizada neste momento. Se houver extin&ccedil;&atilde;o, o paciente recebe 1 e os resultados s&atilde;o usados para responder a quest&atilde;o 11.</li>\n\t<li><u><strong>4. Paralisia&nbsp;Facial:</strong></u> Pergunte ou use gestos para encorajar o paciente a mostrar os dentes ou levantar as sobrancelhas e fechar com for&ccedil;a os olhos. Pontue a simetria da contrac&ccedil;&atilde;o facial em resposta ao est&iacute;mulo doloroso nos pacientes pouco responsivos ou que n&atilde;o compreendam. Na presen&ccedil;a de traumatismo, tubo orotraqueal, adesivos ou outra barreira f&iacute;sica que possam esconder a face, estes devem ser removidos, tanto quanto poss&iacute;vel.</li>\n\t<li><u><strong>5. Membros Superiores:</strong></u> O bra&ccedil;o &eacute; colocado na posi&ccedil;&atilde;o apropriada: extens&atilde;o dos bra&ccedil;os, palmas para baixo, a 90&ordm; se sentado ou a 45&ordm; se posi&ccedil;&atilde;o supina. Pontue-se a queda do bra&ccedil;o quando esta ocorre antes de 10 segundos. O paciente af&aacute;sico &eacute; encorajado atrav&eacute;s de firmeza na voz ou gestos, mas n&atilde;o com estimula&ccedil;&atilde;o dolorosa. Cada membro &eacute; testado isoladamente, come&ccedil;ando no bra&ccedil;o n&atilde;o-par&eacute;tico.</li>\n\t<li><u><strong>6. Membros Inferiores:</strong></u> A perna &eacute; colocada na posi&ccedil;&atilde;o apropriada: extens&atilde;o a 30&ordm;. Teste sempre na posi&ccedil;&atilde;o supina. Pontue-se a queda da perna quando esta ocorre antes de 5 segundos. O paciente af&aacute;sico &eacute; encorajado atrav&eacute;s de firmeza na voz ou gestos, mas n&atilde;o com estimula&ccedil;&atilde;o dolorosa. Cada membro &eacute; testado isoladamente, come&ccedil;ando na perna n&atilde;o-par&eacute;tica.</li>\n\t<li><strong><u>7. Ataxia de membros:</u></strong> Este item procura evid&ecirc;ncia de les&atilde;o cerebelosa unilateral. Teste com os olhos abertos. No caso de d&eacute;fice de campo visual, assegure-se que o teste &eacute; feito no campo visual intacto. Os testes dedo-nariz e calcanhar-joelho s&atilde;o realizados em ambos os lados e a ataxia &eacute; valorizada, apenas, se for desproporcional em rela&ccedil;&atilde;o &agrave; fraqueza muscular. A ataxia &eacute; considerada ausente no doente com perturba&ccedil;&atilde;o da compreens&atilde;o ou pl&eacute;gico.</li>\n\t<li><u><strong>8. Sensibilidade: </strong></u>Avalie a sensibilidade ou m&iacute;mica facial &agrave; picada de alfinete ou a resposta de retirada ao est&iacute;mulo doloroso em paciente obnubilado ou af&aacute;sico. S&oacute; a perda de sensibilidade atribu&iacute;da ao AVC &eacute; pontuada. Teste tantas as partes do corpo &ndash; membros superiores (excepto m&atilde;os), inferiores (excepto p&eacute;s), tron11. Extin&ccedil;&atilde;o e Desaten&ccedil;&atilde;o, antiga neglig&ecirc;ncia. A informa&ccedil;&atilde;o suficiente para a identifica&ccedil;&atilde;o de neglig&ecirc;ncia pode ter sido obtida durante os testes anteriores. Se o doente tem perda visual grave, que impede o teste da estimula&ccedil;&atilde;o visual dupla simult&acirc;nea, e os est&iacute;mulos cut&acirc;neos s&atilde;o normais, a pontua&ccedil;&atilde;o &eacute; normal. Se o doente tem afasia, mas parece identificar ambos os lados, &eacute; pontuado como normal. A presen&ccedil;a de neglig&ecirc;ncia visuoespacial ou anosagnosia contribuem tamb&eacute;m para a evid&ecirc;ncia de anormalidade. Como a anormalidade s&oacute; &eacute; pontuada se presente, o item nunca &eacute; considerado n&atilde;o test&aacute;vel.co e face &ndash; quantas as necess&aacute;rias para avaliar com precis&atilde;o uma perda hemissensitiva. Pontue com 2 s&oacute; se uma perda grave ou total da sensibilidade puder ser claramente demonstrada. Deste modo, doentes estuporosos ou af&aacute;sicos ir&atilde;o ser pontuados possivelmente com 1 ou 0. O doente com AVC do tronco cerebral com perda de sensibilidade bilateral &eacute; pontuado com 2. Se o paciente n&atilde;o responde e est&aacute; quadripl&eacute;gico, pontue 2. Pacientes em coma (item 1a=3) s&atilde;o pontuados arbitrariamente com 2 neste item.</li>\n\t<li><u><strong>9. Melhor linguagem:</strong></u> Durante a pontua&ccedil;&atilde;o dos itens precedentes obter&aacute; muita informa&ccedil;&atilde;o acerca da capacidade de compreens&atilde;o. Pede-se ao doente para descrever o que est&aacute; a acontecer na imagem em anexo, para nomear objectos num cart&atilde;o de nomea&ccedil;&atilde;o anexo e para ler uma lista de frases em anexo. A compreens&atilde;o &eacute; julgada a partir destas respostas, assim como as referentes &agrave;s ordens dadas no exame neurol&oacute;gico geral precedente. Se a perda visual interferir com os testes, pe&ccedil;a ao doente para identificar objetos colocados na m&atilde;o, repetir frases e produzir discurso. O paciente entubado deve escrever as respostas. O doente em coma (1a=3) ser&aacute; pontuado arbitrariamente com 3. O examinador deve escolher a pontua&ccedil;&atilde;o no doente com estupor ou pouco colaborante, mas a pontua&ccedil;&atilde;o de 3 est&aacute; reservada a doentes em mutismo e que n&atilde;o cumpram nenhuma ordem simples.</li>\n\t<li><strong><u>10. Disartria:</u></strong> Se acredita que o doente consegue, pede-se para ler ou repetir as palavras da lista anexa. Se o paciente tem afasia grave, a clareza da articula&ccedil;&atilde;o da fala espont&acirc;nea pode ser pontuada.&nbsp;<strong>N&atilde;o diga ao paciente a raz&atilde;o pela qual est&aacute; a ser testado.</strong></li>\n\t<li><strong><u>11. Extin&ccedil;&atilde;o e Desaten&ccedil;&atilde;o, antiga neglig&ecirc;ncia:</u></strong>&nbsp;A informa&ccedil;&atilde;o suficiente para a identifica&ccedil;&atilde;o de neglig&ecirc;ncia pode ter sido obtida durante os testes anteriores. Se o doente tem perda visual grave, que impede o teste da estimula&ccedil;&atilde;o visual dupla simult&acirc;nea, e os est&iacute;mulos cut&acirc;neos s&atilde;o normais, a pontua&ccedil;&atilde;o &eacute; normal. Se o doente tem afasia, mas parece identificar ambos os lados, &eacute; pontuado como normal. A presen&ccedil;a de neglig&ecirc;ncia visuoespacial ou anosagnosia contribuem tamb&eacute;m para a evid&ecirc;ncia de anormalidade. Como a anormalidade s&oacute; &eacute; pontuada se presente, o item nunca &eacute; considerado n&atilde;o test&aacute;vel.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20297,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "-",
+            "passo_de_saida_id": 20289,
+            "passo_de_saida": {
+                "id": 20289,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Calcular escala NIHSS",
+                "descricao": "<p>Calcular escala NIHSS:</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20290,
+            "passo_de_entrada": {
+                "id": 20290,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar contraindica\u00e7\u00f5es",
+                "descricao": "<p>Contra-indica&ccedil;&otilde;es para tratamento Trombol&iacute;tico:</p>\n\n<ul>\n\t<li>In&iacute;cio dos sintomas superior a 4,5h (se o paciente foi encontrado com d&eacute;ficits ou acordou assim, considerar o &uacute;ltimo hor&aacute;rio em que foi visto bem);</li>\n\t<li>Uso de Marevan com RNI &gt; 1,7 ou heparina n&atilde;o fracionada nas &uacute;ltimas 48h com PTTA&nbsp; elevado;</li>\n\t<li>Uso de novos anticoagulantes (inibidores diretos da trombina ou do fator Xa) nas &uacute;ltimas 48h;</li>\n\t<li>Anticoagula&ccedil;&atilde;o plena com heparina de baixo peso molecular (Enoxaparina) nas &uacute;ltimas 24h;</li>\n\t<li>Plaquetas &lt; 100000/mm3;</li>\n\t<li>Hist&oacute;ria pr&eacute;via de hemorragia intracraniana, MAV ou neoplasia intracraniana intra-axial;</li>\n\t<li>Pacientes que tiveram nos &uacute;ltimos 3 meses: AVCi, TCE grave, cirurgia intracraniana ou intraespinhal, IAM;</li>\n\t<li>Neoplasia maligna do TGI ou hemorragia do TGI/geniturin&aacute;ria nos &uacute;ltimos 21 dias;</li>\n\t<li>Melhora r&aacute;pida e completa dos d&eacute;ficits no per&iacute;odo que antecede a tromb&oacute;lise;</li>\n\t<li>Hipertens&atilde;o (PAS &gt;= 185 e/ou PAD &gt;=110) refrat&aacute;ria ao tratamento cl&iacute;nico;</li>\n\t<li>AVC com sintomas m&iacute;nimos, sem repercuss&atilde;o;</li>\n\t<li>TC de cr&acirc;nio com hipodensidade precoce &gt; 1/3 do territ&oacute;rio da ACM;</li>\n\t<li>Glicemia &lt; 50mg/dl com revers&atilde;o dos sintomas ap&oacute;s a corre&ccedil;&atilde;o;</li>\n\t<li>Evid&ecirc;ncia de endocardite ou &ecirc;mbolo s&eacute;ptico, gravidez;</li>\n\t<li>Suspeita cl&iacute;nica de hemorragia subaracnoide ou dissec&ccedil;&atilde;o aguda de aorta;</li>\n\t<li>Cirurgia de grande porte, procedimento invasivo ou trauma grave nos &uacute;ltimos 14 dias;</li>\n\t<li>Pun&ccedil;&atilde;o lombar nos &uacute;ltimos 7 dias;</li>\n\t<li>Idade maior que 80 anos;</li>\n\t<li>\n\t<div>Pacientes usando anticoagulante, independente do INR;</div>\n\t</li>\n\t<li>\n\t<div>Antecedentes de AVE e DM associados;</div>\n\t</li>\n\t<li>\n\t<div>Tomografia computadorizada com evid&ecirc;ncia de hemorragia.</div>\n\t</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20298,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (n\u00e3o realizar tromb\u00f3lise)",
+            "descricao": "n\u00e3o realizar tromb\u00f3lise",
+            "passo_de_saida_id": 20290,
+            "passo_de_saida": {
+                "id": 20290,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar contraindica\u00e7\u00f5es",
+                "descricao": "<p>Contra-indica&ccedil;&otilde;es para tratamento Trombol&iacute;tico:</p>\n\n<ul>\n\t<li>In&iacute;cio dos sintomas superior a 4,5h (se o paciente foi encontrado com d&eacute;ficits ou acordou assim, considerar o &uacute;ltimo hor&aacute;rio em que foi visto bem);</li>\n\t<li>Uso de Marevan com RNI &gt; 1,7 ou heparina n&atilde;o fracionada nas &uacute;ltimas 48h com PTTA&nbsp; elevado;</li>\n\t<li>Uso de novos anticoagulantes (inibidores diretos da trombina ou do fator Xa) nas &uacute;ltimas 48h;</li>\n\t<li>Anticoagula&ccedil;&atilde;o plena com heparina de baixo peso molecular (Enoxaparina) nas &uacute;ltimas 24h;</li>\n\t<li>Plaquetas &lt; 100000/mm3;</li>\n\t<li>Hist&oacute;ria pr&eacute;via de hemorragia intracraniana, MAV ou neoplasia intracraniana intra-axial;</li>\n\t<li>Pacientes que tiveram nos &uacute;ltimos 3 meses: AVCi, TCE grave, cirurgia intracraniana ou intraespinhal, IAM;</li>\n\t<li>Neoplasia maligna do TGI ou hemorragia do TGI/geniturin&aacute;ria nos &uacute;ltimos 21 dias;</li>\n\t<li>Melhora r&aacute;pida e completa dos d&eacute;ficits no per&iacute;odo que antecede a tromb&oacute;lise;</li>\n\t<li>Hipertens&atilde;o (PAS &gt;= 185 e/ou PAD &gt;=110) refrat&aacute;ria ao tratamento cl&iacute;nico;</li>\n\t<li>AVC com sintomas m&iacute;nimos, sem repercuss&atilde;o;</li>\n\t<li>TC de cr&acirc;nio com hipodensidade precoce &gt; 1/3 do territ&oacute;rio da ACM;</li>\n\t<li>Glicemia &lt; 50mg/dl com revers&atilde;o dos sintomas ap&oacute;s a corre&ccedil;&atilde;o;</li>\n\t<li>Evid&ecirc;ncia de endocardite ou &ecirc;mbolo s&eacute;ptico, gravidez;</li>\n\t<li>Suspeita cl&iacute;nica de hemorragia subaracnoide ou dissec&ccedil;&atilde;o aguda de aorta;</li>\n\t<li>Cirurgia de grande porte, procedimento invasivo ou trauma grave nos &uacute;ltimos 14 dias;</li>\n\t<li>Pun&ccedil;&atilde;o lombar nos &uacute;ltimos 7 dias;</li>\n\t<li>Idade maior que 80 anos;</li>\n\t<li>\n\t<div>Pacientes usando anticoagulante, independente do INR;</div>\n\t</li>\n\t<li>\n\t<div>Antecedentes de AVE e DM associados;</div>\n\t</li>\n\t<li>\n\t<div>Tomografia computadorizada com evid&ecirc;ncia de hemorragia.</div>\n\t</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20291,
+            "passo_de_entrada": {
+                "id": 20291,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Verificar tratamento cl\u00ednico",
+                "descricao": "<p><span style=\"font-size:20px\">Verificar tratamento cl&iacute;nico a ser realizado junto com a chefia.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19915,
+                "nome": "n\u00e3o realizar tromb\u00f3lise",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19912
+                ],
+                "argumentos": [
+                    "nao_trombolise"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20299,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (realizar trombolise)",
+            "descricao": "realizar trombolise",
+            "passo_de_saida_id": 20290,
+            "passo_de_saida": {
+                "id": 20290,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar contraindica\u00e7\u00f5es",
+                "descricao": "<p>Contra-indica&ccedil;&otilde;es para tratamento Trombol&iacute;tico:</p>\n\n<ul>\n\t<li>In&iacute;cio dos sintomas superior a 4,5h (se o paciente foi encontrado com d&eacute;ficits ou acordou assim, considerar o &uacute;ltimo hor&aacute;rio em que foi visto bem);</li>\n\t<li>Uso de Marevan com RNI &gt; 1,7 ou heparina n&atilde;o fracionada nas &uacute;ltimas 48h com PTTA&nbsp; elevado;</li>\n\t<li>Uso de novos anticoagulantes (inibidores diretos da trombina ou do fator Xa) nas &uacute;ltimas 48h;</li>\n\t<li>Anticoagula&ccedil;&atilde;o plena com heparina de baixo peso molecular (Enoxaparina) nas &uacute;ltimas 24h;</li>\n\t<li>Plaquetas &lt; 100000/mm3;</li>\n\t<li>Hist&oacute;ria pr&eacute;via de hemorragia intracraniana, MAV ou neoplasia intracraniana intra-axial;</li>\n\t<li>Pacientes que tiveram nos &uacute;ltimos 3 meses: AVCi, TCE grave, cirurgia intracraniana ou intraespinhal, IAM;</li>\n\t<li>Neoplasia maligna do TGI ou hemorragia do TGI/geniturin&aacute;ria nos &uacute;ltimos 21 dias;</li>\n\t<li>Melhora r&aacute;pida e completa dos d&eacute;ficits no per&iacute;odo que antecede a tromb&oacute;lise;</li>\n\t<li>Hipertens&atilde;o (PAS &gt;= 185 e/ou PAD &gt;=110) refrat&aacute;ria ao tratamento cl&iacute;nico;</li>\n\t<li>AVC com sintomas m&iacute;nimos, sem repercuss&atilde;o;</li>\n\t<li>TC de cr&acirc;nio com hipodensidade precoce &gt; 1/3 do territ&oacute;rio da ACM;</li>\n\t<li>Glicemia &lt; 50mg/dl com revers&atilde;o dos sintomas ap&oacute;s a corre&ccedil;&atilde;o;</li>\n\t<li>Evid&ecirc;ncia de endocardite ou &ecirc;mbolo s&eacute;ptico, gravidez;</li>\n\t<li>Suspeita cl&iacute;nica de hemorragia subaracnoide ou dissec&ccedil;&atilde;o aguda de aorta;</li>\n\t<li>Cirurgia de grande porte, procedimento invasivo ou trauma grave nos &uacute;ltimos 14 dias;</li>\n\t<li>Pun&ccedil;&atilde;o lombar nos &uacute;ltimos 7 dias;</li>\n\t<li>Idade maior que 80 anos;</li>\n\t<li>\n\t<div>Pacientes usando anticoagulante, independente do INR;</div>\n\t</li>\n\t<li>\n\t<div>Antecedentes de AVE e DM associados;</div>\n\t</li>\n\t<li>\n\t<div>Tomografia computadorizada com evid&ecirc;ncia de hemorragia.</div>\n\t</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20292,
+            "passo_de_entrada": {
+                "id": 20292,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tromb\u00f3lise",
+                "descricao": "<p><strong><u>Intru&ccedil;&otilde;es para&nbsp;INFUS&Atilde;O DO TRATAMENTO TROMBOL&Iacute;TICO (rTPA):</u></strong></p>\n\n<ul>\n\t<li>Instalar o segundo acesso venoso calibroso no membro superior, se este n&atilde;o tiver j&aacute; confeccionado.</li>\n\t<li>Dose de Alteplase: 0,9mg/kg (m&aacute;ximo: 90mg): 10% da dose em 1 minuto e o restante em 1hora.</li>\n\t<li>O acesso para a administra&ccedil;&atilde;o da Alteplase deve ser exclusivo e a infus&atilde;o controlada por bomba de infus&atilde;o cont&iacute;nua.</li>\n\t<li>N&atilde;o utilizar antiagregante ou anticoagulante (mesmo em dose profil&aacute;tica) nas pr&oacute;ximas 24h seguindo a infus&atilde;o.</li>\n\t<li>N&atilde;o realizar acesso arterial ou acesso venoso profundo nas pr&oacute;ximas 24h seguindo a infus&atilde;o.</li>\n\t<li>Evitar sondagem vesical nas pr&oacute;ximas 24h seguindo a infus&atilde;o. Se extremamente necess&aacute;rio, aguardar pelo menos 30 min do fim da infus&atilde;o.</li>\n\t<li>Evitar sondagem nasog&aacute;strica/nasoenteral ou nasog&aacute;stricas nas pr&oacute;ximas 24h seguindo a infus&atilde;o.</li>\n\t<li>Manter o paciente em jejum por 24h devido o risco de hemorragia e necessidade de interven&ccedil;&atilde;o cir&uacute;rgica de urg&ecirc;ncia.</li>\n\t<li>Manter hidrata&ccedil;&atilde;o com soro fisiol&oacute;gico.</li>\n\t<li>Solicitar TC de cr&acirc;nio sem contraste para controle ap&oacute;s 24h do fim da infus&atilde;o.</li>\n\t<li>Ap&oacute;s 24h do tratamento trombol&iacute;tico, o tratamento seguir&aacute; as mesmas orienta&ccedil;&otilde;es destinadas aos pacientes que n&atilde;o foram submetidos &agrave; tromb&oacute;lise (antiagrega&ccedil;&atilde;o, anticoagula&ccedil;&atilde;o, profilaxia medicamentosa para TVP &ndash; quando indicados), desde que n&atilde;o tenham ocorrido complica&ccedil;&otilde;es.</li>\n</ul>\n\n<p><strong><u>Dose:</u></strong></p>\n\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">PESO</td>\n\t\t\t<td style=\"text-align:center\">VOLUME BOLUS (mL)</td>\n\t\t\t<td style=\"text-align:center\">VOLUME EM UMA HORA (mL)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">40</td>\n\t\t\t<td style=\"text-align:center\">3.6</td>\n\t\t\t<td style=\"text-align:center\">32.4</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">45</td>\n\t\t\t<td style=\"text-align:center\">4.05</td>\n\t\t\t<td style=\"text-align:center\">36.45</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">50</td>\n\t\t\t<td style=\"text-align:center\">4.5</td>\n\t\t\t<td style=\"text-align:center\">40.5</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">55</td>\n\t\t\t<td style=\"text-align:center\">4.95</td>\n\t\t\t<td style=\"text-align:center\">44.55</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">60</td>\n\t\t\t<td style=\"text-align:center\">5.4</td>\n\t\t\t<td style=\"text-align:center\">48.6</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">65</td>\n\t\t\t<td style=\"text-align:center\">5.85</td>\n\t\t\t<td style=\"text-align:center\">52.65</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">70</td>\n\t\t\t<td style=\"text-align:center\">6.3</td>\n\t\t\t<td style=\"text-align:center\">56.7</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">75</td>\n\t\t\t<td style=\"text-align:center\">6.75</td>\n\t\t\t<td style=\"text-align:center\">60.75</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">80</td>\n\t\t\t<td style=\"text-align:center\">7.2</td>\n\t\t\t<td style=\"text-align:center\">64.8</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">85</td>\n\t\t\t<td style=\"text-align:center\">7.65</td>\n\t\t\t<td style=\"text-align:center\">68.85</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">90</td>\n\t\t\t<td style=\"text-align:center\">8.1</td>\n\t\t\t<td style=\"text-align:center\">72.9</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">95</td>\n\t\t\t<td style=\"text-align:center\">8.55</td>\n\t\t\t<td style=\"text-align:center\">76.95</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">100 ou mais</td>\n\t\t\t<td style=\"text-align:center\">9</td>\n\t\t\t<td style=\"text-align:center\">81</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p><u><strong>Suspender Tromb&oacute;lise se:</strong></u></p>\n\n<ul>\n\t<li>Evid&ecirc;ncias de sangramento;</li>\n\t<li>Rebaixamento do n&iacute;vel de consci&ecirc;ncia;</li>\n\t<li>Crise convulsiva;</li>\n\t<li>PAS &gt; 180 e/ou PAD &gt; 105, ou eleva&ccedil;&atilde;o s&uacute;bita da PA; V&ocirc;mitos;</li>\n\t<li>Eleva&ccedil;&atilde;o do NIHSS.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19916,
+                "nome": "realizar trombolise",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19911
+                ],
+                "argumentos": [
+                    "trombolise"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20300,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "-",
+            "passo_de_saida_id": 20293,
+            "passo_de_saida": {
+                "id": 20293,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Calcular escala NIHSS",
+                "descricao": "<p>Instru&ccedil;&otilde;es:</p>\n\n<ul>\n\t<li><u><strong>1a. N&iacute;vel de Consci&ecirc;ncia: </strong></u>O investigador deve escolher uma resposta&nbsp;mesmo se uma avalia&ccedil;&atilde;o completa &eacute;&nbsp;prejudicada por obst&aacute;culos como um tubo orotraqueal, barreiras de linguagem, trauma ou curativo orotraqueal. Um <strong>3 </strong>&eacute; dado apenas se o paciente n&atilde;o faz nenhum movimento (outro al&eacute;m de postura reflexa) em resposta &agrave; estimula&ccedil;&atilde;o dolorosa.</li>\n\t<li><u><strong>1b. Perguntas de N&iacute;vel de Consci&ecirc;ncia:</strong></u> O paciente &eacute; questionado sobre o m&ecirc;s e sua idade. A resposta deve ser correta &ndash; n&atilde;o h&aacute; nota parcial por chegar perto. Pacientes com afasia ou estupor que n&atilde;o compreendem as perguntas ir&atilde;o receber&nbsp;2. Pacientes incapazes de falar por tubo ou traumatismo orotraqueal, disartria grave de qualquer causa, barreiras de linguagem ou qualquer outro problema n&atilde;o secund&aacute;rio a afasia receber&atilde;o 1. &Eacute; importante considerar apenas a resposta inicial e que o examinador n&atilde;o &ldquo;ajude&rdquo; o paciente com dicas verbais ou n&atilde;o verbais.</li>\n\t<li><u><strong>1c. Comandos de N&iacute;vel de Consci&ecirc;ncia:</strong></u> O paciente &eacute; solicitado a abrir e fechar os olhos e depois abrir e fechar a m&atilde;o n&atilde;o par&eacute;tica. Substitua por outro comando de um &uacute;nico passo se as m&atilde;os n&atilde;o puderem ser utilizadas. Devemos valorizar uma tentativa inequ&iacute;voca, ainda que n&atilde;o completada devido &agrave; fraqueza muscular. Se o paciente n&atilde;o responde &agrave; ordem, a tarefa deve ser demonstrada usando gestos e o resultado registado. Aos pacientes com trauma, amputa&ccedil;&atilde;o ou outro impedimento f&iacute;sico devem ser dadas ordens simples adequadas. Pontue s&oacute; a primeira tentativa.</li>\n\t<li><u><strong>2. Melhor Olhar Conjugado: </strong></u>Teste apenas os movimentos oculares horizontais. Os movimentos oculares volunt&aacute;rios ou reflexos (oculocef&aacute;lico) s&atilde;o pontuados, mas a prova cal&oacute;rica n&atilde;o &eacute; avaliada. Se o paciente tem um desvio conjugado do olhar, que &eacute; revertido pela atividade volunt&aacute;ria ou reflexa, a pontua&ccedil;&atilde;o ser&aacute; 1. Se o paciente tem uma par&eacute;sia de nervo perif&eacute;rico isolada (NC III, IV ou VI), pontue 1. O olhar &eacute; testado em todos os pacientes af&aacute;sicos. Os pacientes com trauma ou curativo ocular, cegueira pr&eacute;-existente ou outro dist&uacute;rbio de acuidade ou campo visual devem ser testados com movimentos reflexos e a escolha feita pelo examinador. Estabelecer contacto visual e mover-se perto do paciente de um lado para outro pode esclarecer a presen&ccedil;a de paralisia do olhar conjugado.</li>\n\t<li><u><strong>3. Campos visuais:</strong></u> Os campos visuais (quadrantes superiores e inferiores) s&atilde;o testados por confronta&ccedil;&atilde;o, utilizando contagem de dedos ou amea&ccedil;a visual, conforme apropriado. O paciente pode ser encorajado, mas basta identificar olhando para o lado em que mexem os dedos para ser considerado como normal. Se houver cegueira unilateral ou enuclea&ccedil;&atilde;o, os campos visuais no olho restante s&atilde;o avaliados. Pontue 1 apenas se houver uma assimetria clara, incluindo quadrantan&oacute;psia. Se o paciente &eacute; cego por qualquer causa, pontue 3. A estimula&ccedil;&atilde;o dupla simult&acirc;nea &eacute; realizada neste momento. Se houver extin&ccedil;&atilde;o, o paciente recebe 1 e os resultados s&atilde;o usados para responder a quest&atilde;o 11.</li>\n\t<li><u><strong>4. Paralisia&nbsp;Facial:</strong></u> Pergunte ou use gestos para encorajar o paciente a mostrar os dentes ou levantar as sobrancelhas e fechar com for&ccedil;a os olhos. Pontue a simetria da contrac&ccedil;&atilde;o facial em resposta ao est&iacute;mulo doloroso nos pacientes pouco responsivos ou que n&atilde;o compreendam. Na presen&ccedil;a de traumatismo, tubo orotraqueal, adesivos ou outra barreira f&iacute;sica que possam esconder a face, estes devem ser removidos, tanto quanto poss&iacute;vel.</li>\n\t<li><u><strong>5. Membros Superiores:</strong></u> O bra&ccedil;o &eacute; colocado na posi&ccedil;&atilde;o apropriada: extens&atilde;o dos bra&ccedil;os, palmas para baixo, a 90&ordm; se sentado ou a 45&ordm; se posi&ccedil;&atilde;o supina. Pontue-se a queda do bra&ccedil;o quando esta ocorre antes de 10 segundos. O paciente af&aacute;sico &eacute; encorajado atrav&eacute;s de firmeza na voz ou gestos, mas n&atilde;o com estimula&ccedil;&atilde;o dolorosa. Cada membro &eacute; testado isoladamente, come&ccedil;ando no bra&ccedil;o n&atilde;o-par&eacute;tico.</li>\n\t<li><u><strong>6. Membros Inferiores:</strong></u> A perna &eacute; colocada na posi&ccedil;&atilde;o apropriada: extens&atilde;o a 30&ordm;. Teste sempre na posi&ccedil;&atilde;o supina. Pontue-se a queda da perna quando esta ocorre antes de 5 segundos. O paciente af&aacute;sico &eacute; encorajado atrav&eacute;s de firmeza na voz ou gestos, mas n&atilde;o com estimula&ccedil;&atilde;o dolorosa. Cada membro &eacute; testado isoladamente, come&ccedil;ando na perna n&atilde;o-par&eacute;tica.</li>\n\t<li><strong><u>7. Ataxia de membros:</u></strong> Este item procura evid&ecirc;ncia de les&atilde;o cerebelosa unilateral. Teste com os olhos abertos. No caso de d&eacute;fice de campo visual, assegure-se que o teste &eacute; feito no campo visual intacto. Os testes dedo-nariz e calcanhar-joelho s&atilde;o realizados em ambos os lados e a ataxia &eacute; valorizada, apenas, se for desproporcional em rela&ccedil;&atilde;o &agrave; fraqueza muscular. A ataxia &eacute; considerada ausente no doente com perturba&ccedil;&atilde;o da compreens&atilde;o ou pl&eacute;gico.</li>\n\t<li><u><strong>8. Sensibilidade: </strong></u>Avalie a sensibilidade ou m&iacute;mica facial &agrave; picada de alfinete ou a resposta de retirada ao est&iacute;mulo doloroso em paciente obnubilado ou af&aacute;sico. S&oacute; a perda de sensibilidade atribu&iacute;da ao AVC &eacute; pontuada. Teste tantas as partes do corpo &ndash; membros superiores (excepto m&atilde;os), inferiores (excepto p&eacute;s), tron11. Extin&ccedil;&atilde;o e Desaten&ccedil;&atilde;o, antiga neglig&ecirc;ncia. A informa&ccedil;&atilde;o suficiente para a identifica&ccedil;&atilde;o de neglig&ecirc;ncia pode ter sido obtida durante os testes anteriores. Se o doente tem perda visual grave, que impede o teste da estimula&ccedil;&atilde;o visual dupla simult&acirc;nea, e os est&iacute;mulos cut&acirc;neos s&atilde;o normais, a pontua&ccedil;&atilde;o &eacute; normal. Se o doente tem afasia, mas parece identificar ambos os lados, &eacute; pontuado como normal. A presen&ccedil;a de neglig&ecirc;ncia visuoespacial ou anosagnosia contribuem tamb&eacute;m para a evid&ecirc;ncia de anormalidade. Como a anormalidade s&oacute; &eacute; pontuada se presente, o item nunca &eacute; considerado n&atilde;o test&aacute;vel.co e face &ndash; quantas as necess&aacute;rias para avaliar com precis&atilde;o uma perda hemissensitiva. Pontue com 2 s&oacute; se uma perda grave ou total da sensibilidade puder ser claramente demonstrada. Deste modo, doentes estuporosos ou af&aacute;sicos ir&atilde;o ser pontuados possivelmente com 1 ou 0. O doente com AVC do tronco cerebral com perda de sensibilidade bilateral &eacute; pontuado com 2. Se o paciente n&atilde;o responde e est&aacute; quadripl&eacute;gico, pontue 2. Pacientes em coma (item 1a=3) s&atilde;o pontuados arbitrariamente com 2 neste item.</li>\n\t<li><u><strong>9. Melhor linguagem:</strong></u> Durante a pontua&ccedil;&atilde;o dos itens precedentes obter&aacute; muita informa&ccedil;&atilde;o acerca da capacidade de compreens&atilde;o. Pede-se ao doente para descrever o que est&aacute; a acontecer na imagem em anexo, para nomear objectos num cart&atilde;o de nomea&ccedil;&atilde;o anexo e para ler uma lista de frases em anexo. A compreens&atilde;o &eacute; julgada a partir destas respostas, assim como as referentes &agrave;s ordens dadas no exame neurol&oacute;gico geral precedente. Se a perda visual interferir com os testes, pe&ccedil;a ao doente para identificar objetos colocados na m&atilde;o, repetir frases e produzir discurso. O paciente entubado deve escrever as respostas. O doente em coma (1a=3) ser&aacute; pontuado arbitrariamente com 3. O examinador deve escolher a pontua&ccedil;&atilde;o no doente com estupor ou pouco colaborante, mas a pontua&ccedil;&atilde;o de 3 est&aacute; reservada a doentes em mutismo e que n&atilde;o cumpram nenhuma ordem simples.</li>\n\t<li><strong><u>10. Disartria:</u></strong> Se acredita que o doente consegue, pede-se para ler ou repetir as palavras da lista anexa. Se o paciente tem afasia grave, a clareza da articula&ccedil;&atilde;o da fala espont&acirc;nea pode ser pontuada.&nbsp;<strong>N&atilde;o diga ao paciente a raz&atilde;o pela qual est&aacute; a ser testado.</strong></li>\n\t<li><strong><u>11. Extin&ccedil;&atilde;o e Desaten&ccedil;&atilde;o, antiga neglig&ecirc;ncia:</u></strong>&nbsp;A informa&ccedil;&atilde;o suficiente para a identifica&ccedil;&atilde;o de neglig&ecirc;ncia pode ter sido obtida durante os testes anteriores. Se o doente tem perda visual grave, que impede o teste da estimula&ccedil;&atilde;o visual dupla simult&acirc;nea, e os est&iacute;mulos cut&acirc;neos s&atilde;o normais, a pontua&ccedil;&atilde;o &eacute; normal. Se o doente tem afasia, mas parece identificar ambos os lados, &eacute; pontuado como normal. A presen&ccedil;a de neglig&ecirc;ncia visuoespacial ou anosagnosia contribuem tamb&eacute;m para a evid&ecirc;ncia de anormalidade. Como a anormalidade s&oacute; &eacute; pontuada se presente, o item nunca &eacute; considerado n&atilde;o test&aacute;vel.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20289,
+            "passo_de_entrada": {
+                "id": 20289,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Calcular escala NIHSS",
+                "descricao": "<p>Calcular escala NIHSS:</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 19859,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "hora_inicio",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "< 4,5 horas",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "> 4,5 horas",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19860,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "nivel_consciencia",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Alerta; responde com entusiasmo.",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "N\u00e3o alerta, mas ao ser acordado por min\u00edma estimula\u00e7\u00e3o obedece, responde ou reage",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "N\u00e3o alerta, requer repetida estimula\u00e7\u00e3o ou estimula\u00e7\u00e3o dolorosa para realizar movimentos",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Responde somente com reflexo motor ou rea\u00e7\u00f5es auton\u00f4micas, ou totalmente irresponsivo, fl\u00e1cido e arreflexo.",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19881,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "p_nivel_consciencia",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Responde ambas as quest\u00f5es corretamente",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Responde uma quest\u00e3o corretamente",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "N\u00e3o responde nenhuma quest\u00e3o corretamente",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19882,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "c_nivel_consciencia",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Realiza ambas as tarefas corretamente",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Realiza uma tarefa corretamente",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "N\u00e3o realiza nenhuma tarefa corretamente",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19883,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "m_olhar_conjugado",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Normal",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Paralisia parcial do olhar (olhar anormal em um ou ambos os olhos, mas n\u00e3o h\u00e1 desvio for\u00e7ado ou paresia total do olhar)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Desvio for\u00e7ado ou paralisia total do olhar que n\u00e3o podem ser vencidos pela manobra \u00f3culo-cef\u00e1lica",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19884,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "campos_visuais",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Sem perda visual",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Hemianopsia parcial",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Hemianopsia completa",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Hemianopsia bilateral (cego, incluindo cegueira cortical)",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19885,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "paralisia_facial",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Movimentos normais sim\u00e9tricos",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Paralisia facial leve (apagamento de prega nasolabial, assimetria no sorriso)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Paralisia facial central evidente (paralisia facial total ou quase toral da regi\u00e3o interior da face)",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Paralisia facial completa (aus\u00eancia de movimentos faciais das regi\u00f5es superior e inferior da face)",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19886,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "membros_superiores",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Sem queda; mant\u00e9m o bra\u00e7o 90\u00ba (ou 45\u00ba) por 10 segundos completos",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Queda; ment\u00e9m o bra\u00e7o a 90\u00ba (ou 45\u00ba), por\u00e9m este apresenta queda antes dos 10 segundos completos; n\u00e3o toca a cama ou outro suporte",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Algum esfor\u00e7o contra a gravidade; o bra\u00e7o n\u00e3o atinge ou n\u00e3o mant\u00e9m 90\u00ba (ou 45\u00ba), cai na cama, mas tem alguma for\u00e7a contra a gravidade",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Nenhum esfor\u00e7o contra a gravidade; bra\u00e7o despenca",
+                    "peso": 3.0
+                },
+                {
+                    "texto": "Nenhum movimento",
+                    "peso": 4.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19887,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "membros_inferiores",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Sem queda; mant\u00e9m a perna a 30\u00ba por 5 segundos completos",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Queda; mant\u00e9m a perna a 30\u00ba, por\u00e9m esta apresenta queda antes dos 5 segundos completos; n\u00e3o toca a cama ou outro suporte",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Algum esfor\u00e7o contra a gravidade; a perna n\u00e3o atinge ou n\u00e3o mant\u00e9m 30\u00ba, cai na cama, mas tem alguma for\u00e7a contra a gravidade",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Nenhum esfor\u00e7o contra a gravidade; perna despenca",
+                    "peso": 3.0
+                },
+                {
+                    "texto": "Nenhum movimento",
+                    "peso": 4.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19888,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "ataxia_membros",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Ausente",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Presente em um membro",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Presente em dois membros",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19889,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sensibilidade",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Normal; nenhuma perda",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Perda sensitiva leve a moderada; a sensibilidade ao beliscar \u00e9 menos aguda ou diminu\u00edda do lado afetado, ou h\u00e1 uma perda da dor superficial ao beliscar, mas o paciente est\u00e1 ciente de que est\u00e1 sendo tocado",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Perda da sensibilidade grave ou total; o paciente n\u00e3o sente que est\u00e1s sendo tocado",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19890,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "linguagem_afasia",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Sem afasia; normal",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Afasia leve a moderada; alguma perda \u00f3bvia da flu\u00eancia ou dificuldade de compreens\u00e3o, sem limita\u00e7\u00e3o significativa das ideias express\u00e3o ou forma de express\u00e3o. .",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Afasia grave; toda a comunica\u00e7\u00e3o \u00e9 feita atrav\u00e9s de express\u00f5es fragmentadas; grande necessidade de interfer\u00eancia, questionamento e adivinha\u00e7\u00e3o por parte do ouvinte.",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Mudo, afasia global; nenhuma fala \u00fatil ou compreens\u00e3o auditiva",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19891,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "disartia",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Normal",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Disartia leve a moderada; paciente arrasta pelo menos algumas palavras, e na pior das hip\u00f3teses, pode ser entendido com alguma dificuldade.",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Disartia grave; fala do paciente \u00e9 t\u00e3o empastada que chega a ser inintelig\u00edvel, na aus\u00eancia de difasia ou com difasia desproporcional, ou \u00e9 mudo/an\u00e1rtrico",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19892,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "extincao_desatencao",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Nenhuma anormalidade",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Desaten\u00e7\u00e3o visual, t\u00e1til, auditiva, espacial ou pessoal, ou extin\u00e7\u00e3o \u00e0 estimula\u00e7\u00e3o simult\u00e2nea em uma das modalidades sensoriais",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Profunda hemi-desaten\u00e7\u00e3o ou hemi-desaten\u00e7\u00e3o para mais de uma modalidade; n\u00e3o reconhece a pr\u00f3pria m\u00e3o e se orienta somente para um lado do espa\u00e7o",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19893,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "contra_indicacao_trombolise",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19894,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19895,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19896,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "4",
+            "peso": 1.0,
+            "valor": 4.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19897,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "25",
+            "peso": 1.0,
+            "valor": 25.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19898,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "soma_NIHSS",
+            "descricao": "Soma escala NIHSS",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                19860,
+                19881,
+                19882,
+                19883,
+                19884,
+                19885,
+                19886,
+                19887,
+                19888,
+                19889,
+                19890,
+                19891,
+                19892
+            ],
+            "argumentos": [
+                "nivel_consciencia",
+                "p_nivel_consciencia",
+                "c_nivel_consciencia",
+                "m_olhar_conjugado",
+                "campos_visuais",
+                "paralisia_facial",
+                "membros_superiores",
+                "membros_inferiores",
+                "ataxia_membros",
+                "sensibilidade",
+                "linguagem_afasia",
+                "disartia",
+                "extincao_desatencao"
+            ]
+        },
+        {
+            "id": 19899,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "com_efasia",
+            "descricao": "com efasia",
+            "visivel": false,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                19890,
+                19895
+            ],
+            "argumentos": [
+                "linguagem_afasia",
+                "1"
+            ]
+        },
+        {
+            "id": 19900,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_maior_4",
+            "descricao": "NIHSS maior ou igual a 4",
+            "visivel": true,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                19898,
+                19896
+            ],
+            "argumentos": [
+                "soma_NIHSS",
+                "4"
+            ]
+        },
+        {
+            "id": 19901,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_menor_25",
+            "descricao": "NIHSS menor que 25",
+            "visivel": true,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                19898,
+                19897
+            ],
+            "argumentos": [
+                "soma_NIHSS",
+                "25"
+            ]
+        },
+        {
+            "id": 19902,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_1_crit_tromb",
+            "descricao": "NIHSS para tromb\u00f3lise - 1\u00ba crit\u00e9rio",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                19900,
+                19901
+            ],
+            "argumentos": [
+                "NIHSS_maior_4",
+                "NIHSS_menor_25"
+            ]
+        },
+        {
+            "id": 19903,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_menor_4",
+            "descricao": "NIHSS menor que 4",
+            "visivel": false,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                19898,
+                19896
+            ],
+            "argumentos": [
+                "soma_NIHSS",
+                "4"
+            ]
+        },
+        {
+            "id": 19904,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_menor_afasia",
+            "descricao": "NIHSS menor que 4 + afasia",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                19903,
+                19899
+            ],
+            "argumentos": [
+                "NIHSS_menor_4",
+                "com_efasia"
+            ]
+        },
+        {
+            "id": 19905,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_trombolise",
+            "descricao": "NIHSS com indica\u00e7\u00e3o para trombolise",
+            "visivel": false,
+            "operador": "ouLogico",
+            "operador_display": "Ou L\u00f3gico",
+            "argumentos_ids": [
+                19902,
+                19904
+            ],
+            "argumentos": [
+                "NIHSS_1_crit_tromb",
+                "NIHSS_menor_afasia"
+            ]
+        },
+        {
+            "id": 19906,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem_afasia",
+            "descricao": "sem afasia",
+            "visivel": true,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                19890,
+                19895
+            ],
+            "argumentos": [
+                "linguagem_afasia",
+                "1"
+            ]
+        },
+        {
+            "id": 19907,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_menor_s_afasia",
+            "descricao": "NIHSS menor que 4 e sem afasia",
+            "visivel": true,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                19903,
+                19906
+            ],
+            "argumentos": [
+                "NIHSS_menor_4",
+                "sem_afasia"
+            ]
+        },
+        {
+            "id": 19908,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_maior_25",
+            "descricao": "NIHSS  maior que 25",
+            "visivel": false,
+            "operador": "maiorQue",
+            "operador_display": "Maior Que",
+            "argumentos_ids": [
+                19898,
+                19897
+            ],
+            "argumentos": [
+                "soma_NIHSS",
+                "25"
+            ]
+        },
+        {
+            "id": 19909,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "NIHSS_nao_trombolise",
+            "descricao": "NIHSS n\u00e3o para trombolise",
+            "visivel": false,
+            "operador": "ouLogico",
+            "operador_display": "Ou L\u00f3gico",
+            "argumentos_ids": [
+                19907,
+                19908
+            ],
+            "argumentos": [
+                "NIHSS_menor_s_afasia",
+                "NIHSS_maior_25"
+            ]
+        },
+        {
+            "id": 19910,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem_contra_indicacao_trombolise",
+            "descricao": "N\u00e3o h\u00e1 contra indica\u00e7\u00e3o para trombolise",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                19893
+            ],
+            "argumentos": [
+                "contra_indicacao_trombolise"
+            ]
+        },
+        {
+            "id": 19911,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "trombolise",
+            "descricao": "Realizar trombolise",
+            "visivel": true,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                19905,
+                19910
+            ],
+            "argumentos": [
+                "NIHSS_trombolise",
+                "sem_contra_indicacao_trombolise"
+            ]
+        },
+        {
+            "id": 19912,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "nao_trombolise",
+            "descricao": "N\u00e3o realizar trombolise",
+            "visivel": true,
+            "operador": "ouLogico",
+            "operador_display": "Ou L\u00f3gico",
+            "argumentos_ids": [
+                19909,
+                19893
+            ],
+            "argumentos": [
+                "NIHSS_nao_trombolise",
+                "contra_indicacao_trombolise"
+            ]
+        }
+    ]
+}

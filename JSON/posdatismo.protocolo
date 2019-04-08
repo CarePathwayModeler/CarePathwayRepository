@@ -1,0 +1,3072 @@
+{
+    "id": 3112,
+    "url": "",
+    "codigo": "H043",
+    "nome": "Posdatismo",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Obstetr\u00edcia",
+    "repositorio_id": 502,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:39:21.123129-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:38:59.510582-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:39:21.123129-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17286,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Comorbidades?",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8957,
+                    "url": "",
+                    "texto": "S\u00edndromes hipertensivas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17061,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "comorbidades_sindromes_hipertensivas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8958,
+                    "url": "",
+                    "texto": "DM/DMG",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17062,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "comorbidades_dm_dmg",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8959,
+                    "url": "",
+                    "texto": "HIV",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17063,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "comorbidades_hiv",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                },
+                {
+                    "id": 8960,
+                    "url": "",
+                    "texto": "Placenta pr\u00e9via",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17064,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "comorbidades_placenta_previa",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17310,
+                    "url": "",
+                    "nome": "S1 (com comorbidades)",
+                    "descricao": "com comorbidades",
+                    "passo_de_saida_id": 17286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Comorbidades?",
+                    "passo_de_entrada_id": 17287,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17311,
+                    "url": "",
+                    "nome": "S2 (sem comorbidades)",
+                    "descricao": "sem comorbidades",
+                    "passo_de_saida_id": 17286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Comorbidades?",
+                    "passo_de_entrada_id": 17288,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17287,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "Avaliar interna\u00e7\u00e3o com l\u00edder local",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17310,
+                    "url": "",
+                    "nome": "S1 (com comorbidades)",
+                    "descricao": "com comorbidades",
+                    "passo_de_saida_id": 17286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Comorbidades?",
+                    "passo_de_entrada_id": 17287,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17288,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Idade Gestacional",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8981,
+                    "url": "",
+                    "texto": "Idade Gestacional",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17065,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "idade_gestacional",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "40 semanas a 40 semanas e 6 dias",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Maior ou igual a 41 semanas",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17311,
+                    "url": "",
+                    "nome": "S2 (sem comorbidades)",
+                    "descricao": "sem comorbidades",
+                    "passo_de_saida_id": 17286,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Comorbidades?",
+                    "passo_de_entrada_id": 17288,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17312,
+                    "url": "",
+                    "nome": "S3 (at\u00e9 40s e 6d)",
+                    "descricao": "at\u00e9 40s e 6d",
+                    "passo_de_saida_id": 17288,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 17289,
+                    "passo_de_entrada": "Tratamento: [At\u00e9 40s e 6d] Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17313,
+                    "url": "",
+                    "nome": "S4 (mais de 41s)",
+                    "descricao": "mais de 41s",
+                    "passo_de_saida_id": 17288,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 17290,
+                    "passo_de_entrada": "Tratamento: [Mais de 41s] Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17289,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[At\u00e9 40s e 6d] Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TOCOCARDIOGRAFIA ANTEPARTO",
+                    "exame": "45010072",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Posdatismo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17312,
+                    "url": "",
+                    "nome": "S3 (at\u00e9 40s e 6d)",
+                    "descricao": "at\u00e9 40s e 6d",
+                    "passo_de_saida_id": 17288,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 17289,
+                    "passo_de_entrada": "Tratamento: [At\u00e9 40s e 6d] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17314,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17289,
+                    "passo_de_saida": "Tratamento: [At\u00e9 40s e 6d] Exames",
+                    "passo_de_entrada_id": 17291,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG reativa? (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17290,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Mais de 41s] Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TOCOCARDIOGRAFIA ANTEPARTO",
+                    "exame": "45010072",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Posdatismo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "US OBSTETRICA",
+                    "exame": "33010110",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Posdatismo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17313,
+                    "url": "",
+                    "nome": "S4 (mais de 41s)",
+                    "descricao": "mais de 41s",
+                    "passo_de_saida_id": 17288,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 17290,
+                    "passo_de_entrada": "Tratamento: [Mais de 41s] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17321,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17290,
+                    "passo_de_saida": "Tratamento: [Mais de 41s] Exames",
+                    "passo_de_entrada_id": 17297,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG reativa? (3)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17291,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "CTG reativa? (1)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8982,
+                    "url": "",
+                    "texto": "Cardiotocografia reativa?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17066,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ctg_reativa_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17314,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17289,
+                    "passo_de_saida": "Tratamento: [At\u00e9 40s e 6d] Exames",
+                    "passo_de_entrada_id": 17291,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG reativa? (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17315,
+                    "url": "",
+                    "nome": "S6 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17291,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (1)",
+                    "passo_de_entrada_id": 17292,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retorno em 48h",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17316,
+                    "url": "",
+                    "nome": "S7 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17291,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (1)",
+                    "passo_de_entrada_id": 17293,
+                    "passo_de_entrada": "Tratamento: Reanima\u00e7\u00e3o (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17292,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Retorno em 48h",
+            "descricao": "Retorno em 48h para repetir cardiotocografia.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17315,
+                    "url": "",
+                    "nome": "S6 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17291,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (1)",
+                    "passo_de_entrada_id": 17292,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retorno em 48h",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17319,
+                    "url": "",
+                    "nome": "S10 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17295,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (2)",
+                    "passo_de_entrada_id": 17292,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retorno em 48h",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17293,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Reanima\u00e7\u00e3o (1)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9007,
+                    "url": "",
+                    "medicamento": 43800,
+                    "codigo": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 500,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "O2",
+                    "procedimento": "75010011",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "DECUBITO LATERAL ESQUERDO",
+                    "procedimento": "75130055",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17316,
+                    "url": "",
+                    "nome": "S7 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17291,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (1)",
+                    "passo_de_entrada_id": 17293,
+                    "passo_de_entrada": "Tratamento: Reanima\u00e7\u00e3o (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17317,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17293,
+                    "passo_de_saida": "Tratamento: Reanima\u00e7\u00e3o (1)",
+                    "passo_de_entrada_id": 17294,
+                    "passo_de_entrada": "Tratamento: Cardiotocografia (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17294,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Cardiotocografia (1)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TOCOCARDIOGRAFIA ANTEPARTO",
+                    "exame": "45010072",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Posdatismo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17317,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17293,
+                    "passo_de_saida": "Tratamento: Reanima\u00e7\u00e3o (1)",
+                    "passo_de_entrada_id": 17294,
+                    "passo_de_entrada": "Tratamento: Cardiotocografia (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17318,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17294,
+                    "passo_de_saida": "Tratamento: Cardiotocografia (1)",
+                    "passo_de_entrada_id": 17295,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG Reativa? (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17295,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "CTG Reativa? (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8983,
+                    "url": "",
+                    "texto": "Cardiotocograia reativa?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17067,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ctg_reativa_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17318,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17294,
+                    "passo_de_saida": "Tratamento: Cardiotocografia (1)",
+                    "passo_de_entrada_id": 17295,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG Reativa? (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17319,
+                    "url": "",
+                    "nome": "S10 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17295,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (2)",
+                    "passo_de_entrada_id": 17292,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retorno em 48h",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17320,
+                    "url": "",
+                    "nome": "S12 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17295,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (2)",
+                    "passo_de_entrada_id": 17296,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Resolu\u00e7\u00e3o Imediata da Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17296,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Avaliar Resolu\u00e7\u00e3o Imediata da Gesta\u00e7\u00e3o",
+            "descricao": "Avaliar com l\u00edder local resolu\u00e7\u00e3o imediata da gesta\u00e7\u00e3o.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17320,
+                    "url": "",
+                    "nome": "S12 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17295,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (2)",
+                    "passo_de_entrada_id": 17296,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Resolu\u00e7\u00e3o Imediata da Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17326,
+                    "url": "",
+                    "nome": "S17 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17300,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (4)",
+                    "passo_de_entrada_id": 17296,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Resolu\u00e7\u00e3o Imediata da Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17297,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "CTG reativa? (3)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8984,
+                    "url": "",
+                    "texto": "Cardiotocografia reativa?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17068,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ctg_reativa_3",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17321,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17290,
+                    "passo_de_saida": "Tratamento: [Mais de 41s] Exames",
+                    "passo_de_entrada_id": 17297,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG reativa? (3)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17322,
+                    "url": "",
+                    "nome": "S13 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17297,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (3)",
+                    "passo_de_entrada_id": 17298,
+                    "passo_de_entrada": "Tratamento: Reanima\u00e7\u00e3o (2)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17327,
+                    "url": "",
+                    "nome": "S18 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17297,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (3)",
+                    "passo_de_entrada_id": 17302,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Ultrassom",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17298,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Reanima\u00e7\u00e3o (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9008,
+                    "url": "",
+                    "medicamento": 43800,
+                    "codigo": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 500,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "O2",
+                    "procedimento": "75010011",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "DECUBITO LATERAL ESQUERDO",
+                    "procedimento": "75130055",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17322,
+                    "url": "",
+                    "nome": "S13 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17297,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (3)",
+                    "passo_de_entrada_id": 17298,
+                    "passo_de_entrada": "Tratamento: Reanima\u00e7\u00e3o (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17323,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17298,
+                    "passo_de_saida": "Tratamento: Reanima\u00e7\u00e3o (2)",
+                    "passo_de_entrada_id": 17299,
+                    "passo_de_entrada": "Tratamento: Cardiotocografia (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17299,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Cardiotocografia (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17323,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17298,
+                    "passo_de_saida": "Tratamento: Reanima\u00e7\u00e3o (2)",
+                    "passo_de_entrada_id": 17299,
+                    "passo_de_entrada": "Tratamento: Cardiotocografia (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17324,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17299,
+                    "passo_de_saida": "Tratamento: Cardiotocografia (2)",
+                    "passo_de_entrada_id": 17300,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG Reativa? (4)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17300,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "CTG Reativa? (4)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8985,
+                    "url": "",
+                    "texto": "Cardiotocografia reativa?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17069,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ctg_reativa_4",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17324,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17299,
+                    "passo_de_saida": "Tratamento: Cardiotocografia (2)",
+                    "passo_de_entrada_id": 17300,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: CTG Reativa? (4)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17325,
+                    "url": "",
+                    "nome": "S16 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17300,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (4)",
+                    "passo_de_entrada_id": 17301,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Indu\u00e7\u00e3o do parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17326,
+                    "url": "",
+                    "nome": "S17 (ctg n\u00e3o reativa)",
+                    "descricao": "ctg n\u00e3o reativa",
+                    "passo_de_saida_id": 17300,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (4)",
+                    "passo_de_entrada_id": 17296,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Resolu\u00e7\u00e3o Imediata da Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17301,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Indu\u00e7\u00e3o do parto",
+            "descricao": "Realizar indu\u00e7\u00e3o do trabalho de parto",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17325,
+                    "url": "",
+                    "nome": "S16 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17300,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG Reativa? (4)",
+                    "passo_de_entrada_id": 17301,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Indu\u00e7\u00e3o do parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17330,
+                    "url": "",
+                    "nome": "S21 (peso de 3 a 4kg)",
+                    "descricao": "peso de 3 a 4kg",
+                    "passo_de_saida_id": 17303,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (1)",
+                    "passo_de_entrada_id": 17301,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Indu\u00e7\u00e3o do parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17335,
+                    "url": "",
+                    "nome": "S26 (peso entre 2500 e 4500gr)",
+                    "descricao": "peso entre 2500 e 4500gr",
+                    "passo_de_saida_id": 17306,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (2)",
+                    "passo_de_entrada_id": 17301,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Indu\u00e7\u00e3o do parto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17302,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Ultrassom",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8986,
+                    "url": "",
+                    "texto": "L.A. normal (ILA > 50mm ou maior bols\u00e3o de 20 - 80mm)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17070,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "LA_normal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17327,
+                    "url": "",
+                    "nome": "S18 (ctg reativa)",
+                    "descricao": "ctg reativa",
+                    "passo_de_saida_id": 17297,
+                    "passo_de_saida": "Aux\u00edlio Conduta: CTG reativa? (3)",
+                    "passo_de_entrada_id": 17302,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Ultrassom",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17328,
+                    "url": "",
+                    "nome": "S19 (us normal)",
+                    "descricao": "us normal",
+                    "passo_de_saida_id": 17302,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom",
+                    "passo_de_entrada_id": 17303,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Peso (1)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17329,
+                    "url": "",
+                    "nome": "S20 (us alterada)",
+                    "descricao": "us alterada",
+                    "passo_de_saida_id": 17302,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom",
+                    "passo_de_entrada_id": 17304,
+                    "passo_de_entrada": "Tratamento: US Obstetrica com Doppler",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17303,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Peso (1)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8987,
+                    "url": "",
+                    "texto": "Peso entre 3000 e 4500gr?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17071,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "peso_3000_a_4000_gr",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17328,
+                    "url": "",
+                    "nome": "S19 (us normal)",
+                    "descricao": "us normal",
+                    "passo_de_saida_id": 17302,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom",
+                    "passo_de_entrada_id": 17303,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Peso (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17330,
+                    "url": "",
+                    "nome": "S21 (peso de 3 a 4kg)",
+                    "descricao": "peso de 3 a 4kg",
+                    "passo_de_saida_id": 17303,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (1)",
+                    "passo_de_entrada_id": 17301,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Indu\u00e7\u00e3o do parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17331,
+                    "url": "",
+                    "nome": "S22 (peso < 3 ou > 4 kg)",
+                    "descricao": "peso < 3 ou > 4 kg",
+                    "passo_de_saida_id": 17303,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (1)",
+                    "passo_de_entrada_id": 17309,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Peso (3)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17304,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "US Obstetrica com Doppler",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "US OBSTETRICA C/ DOPPLER",
+                    "exame": "33010293",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Posdatismo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17329,
+                    "url": "",
+                    "nome": "S20 (us alterada)",
+                    "descricao": "us alterada",
+                    "passo_de_saida_id": 17302,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom",
+                    "passo_de_entrada_id": 17304,
+                    "passo_de_entrada": "Tratamento: US Obstetrica com Doppler",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17337,
+                    "url": "",
+                    "nome": "S28",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17309,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (3)",
+                    "passo_de_entrada_id": 17304,
+                    "passo_de_entrada": "Tratamento: US Obstetrica com Doppler",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17332,
+                    "url": "",
+                    "nome": "S23",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17304,
+                    "passo_de_saida": "Tratamento: US Obstetrica com Doppler",
+                    "passo_de_entrada_id": 17305,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar US com Doppler",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17305,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar US com Doppler",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8988,
+                    "url": "",
+                    "texto": "US com doppler colorido alterada?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17072,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "us_doppler_alterada",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17332,
+                    "url": "",
+                    "nome": "S23",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17304,
+                    "passo_de_saida": "Tratamento: US Obstetrica com Doppler",
+                    "passo_de_entrada_id": 17305,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar US com Doppler",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17333,
+                    "url": "",
+                    "nome": "S24 (us doppler alterada)",
+                    "descricao": "us doppler alterada",
+                    "passo_de_saida_id": 17305,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US com Doppler",
+                    "passo_de_entrada_id": 17308,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Resolu\u00e7\u00e3o da Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17334,
+                    "url": "",
+                    "nome": "S25 (us doppler normal)",
+                    "descricao": "us doppler normal",
+                    "passo_de_saida_id": 17305,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US com Doppler",
+                    "passo_de_entrada_id": 17306,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Peso (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17306,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Peso (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8989,
+                    "url": "",
+                    "texto": "Peso entre 2500gr e 4500gr?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17073,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "peso_entre_2500_4500gr",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17334,
+                    "url": "",
+                    "nome": "S25 (us doppler normal)",
+                    "descricao": "us doppler normal",
+                    "passo_de_saida_id": 17305,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US com Doppler",
+                    "passo_de_entrada_id": 17306,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Peso (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17335,
+                    "url": "",
+                    "nome": "S26 (peso entre 2500 e 4500gr)",
+                    "descricao": "peso entre 2500 e 4500gr",
+                    "passo_de_saida_id": 17306,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (2)",
+                    "passo_de_entrada_id": 17301,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Indu\u00e7\u00e3o do parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17336,
+                    "url": "",
+                    "nome": "S27(peso < 2500 ou > 4500gr)",
+                    "descricao": "peso < 2500 ou > 4500gr",
+                    "passo_de_saida_id": 17306,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (2)",
+                    "passo_de_entrada_id": 17307,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Ces\u00e1rea com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17307,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Avaliar Ces\u00e1rea com L\u00edder Local",
+            "descricao": "Passar com l\u00edder local possibilidade de parto cesareano",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17336,
+                    "url": "",
+                    "nome": "S27(peso < 2500 ou > 4500gr)",
+                    "descricao": "peso < 2500 ou > 4500gr",
+                    "passo_de_saida_id": 17306,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (2)",
+                    "passo_de_entrada_id": 17307,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Ces\u00e1rea com L\u00edder Local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17338,
+                    "url": "",
+                    "nome": "S29",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17309,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (3)",
+                    "passo_de_entrada_id": 17307,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Ces\u00e1rea com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17308,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Avaliar Resolu\u00e7\u00e3o da Gesta\u00e7\u00e3o",
+            "descricao": "Avaliar resolu\u00e7\u00e3o da gesta\u00e7\u00e3o com l\u00edder local",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17333,
+                    "url": "",
+                    "nome": "S24 (us doppler alterada)",
+                    "descricao": "us doppler alterada",
+                    "passo_de_saida_id": 17305,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US com Doppler",
+                    "passo_de_entrada_id": 17308,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Resolu\u00e7\u00e3o da Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17309,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Peso (3)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8990,
+                    "url": "",
+                    "texto": "Peso do Feto",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17074,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "peso_feto",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "< 3000gr",
+                                "peso": 5.0
+                            },
+                            {
+                                "texto": "> 4500gr",
+                                "peso": 10.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17331,
+                    "url": "",
+                    "nome": "S22 (peso < 3 ou > 4 kg)",
+                    "descricao": "peso < 3 ou > 4 kg",
+                    "passo_de_saida_id": 17303,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (1)",
+                    "passo_de_entrada_id": 17309,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Peso (3)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17337,
+                    "url": "",
+                    "nome": "S28",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17309,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (3)",
+                    "passo_de_entrada_id": 17304,
+                    "passo_de_entrada": "Tratamento: US Obstetrica com Doppler",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17338,
+                    "url": "",
+                    "nome": "S29",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17309,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Peso (3)",
+                    "passo_de_entrada_id": 17307,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avaliar Ces\u00e1rea com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17310,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (com comorbidades)",
+            "descricao": "com comorbidades",
+            "passo_de_saida_id": 17286,
+            "passo_de_saida": {
+                "id": 17286,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Comorbidades?",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17287,
+            "passo_de_entrada": {
+                "id": 17287,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Avaliar interna\u00e7\u00e3o com l\u00edder local",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17080,
+                "nome": "comorbidades >= 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    17079,
+                    17075
+                ],
+                "argumentos": [
+                    "Comorbidades",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17311,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sem comorbidades)",
+            "descricao": "sem comorbidades",
+            "passo_de_saida_id": 17286,
+            "passo_de_saida": {
+                "id": 17286,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Comorbidades?",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17288,
+            "passo_de_entrada": {
+                "id": 17288,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17081,
+                "nome": "comorbidades < 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17079,
+                    17075
+                ],
+                "argumentos": [
+                    "Comorbidades",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17312,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (at\u00e9 40s e 6d)",
+            "descricao": "at\u00e9 40s e 6d",
+            "passo_de_saida_id": 17288,
+            "passo_de_saida": {
+                "id": 17288,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17289,
+            "passo_de_entrada": {
+                "id": 17289,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[At\u00e9 40s e 6d] Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17082,
+                "nome": "at\u00e9 40s e 6d",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17065,
+                    17075
+                ],
+                "argumentos": [
+                    "idade_gestacional",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17313,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (mais de 41s)",
+            "descricao": "mais de 41s",
+            "passo_de_saida_id": 17288,
+            "passo_de_saida": {
+                "id": 17288,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17290,
+            "passo_de_entrada": {
+                "id": 17290,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Mais de 41s] Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17083,
+                "nome": "mais de 41s",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17065,
+                    17076
+                ],
+                "argumentos": [
+                    "idade_gestacional",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17314,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17289,
+            "passo_de_saida": {
+                "id": 17289,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[At\u00e9 40s e 6d] Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17291,
+            "passo_de_entrada": {
+                "id": 17291,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG reativa? (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17315,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (ctg reativa)",
+            "descricao": "ctg reativa",
+            "passo_de_saida_id": 17291,
+            "passo_de_saida": {
+                "id": 17291,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG reativa? (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17292,
+            "passo_de_entrada": {
+                "id": 17292,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Retorno em 48h",
+                "descricao": "Retorno em 48h para repetir cardiotocografia.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17084,
+                "nome": "ctg reativa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17066
+                ],
+                "argumentos": [
+                    "ctg_reativa_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17316,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (ctg n\u00e3o reativa)",
+            "descricao": "ctg n\u00e3o reativa",
+            "passo_de_saida_id": 17291,
+            "passo_de_saida": {
+                "id": 17291,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG reativa? (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17293,
+            "passo_de_entrada": {
+                "id": 17293,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Reanima\u00e7\u00e3o (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17085,
+                "nome": "ctg n\u00e3o reativa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17066
+                ],
+                "argumentos": [
+                    "ctg_reativa_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17317,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17293,
+            "passo_de_saida": {
+                "id": 17293,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Reanima\u00e7\u00e3o (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17294,
+            "passo_de_entrada": {
+                "id": 17294,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Cardiotocografia (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17318,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17294,
+            "passo_de_saida": {
+                "id": 17294,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Cardiotocografia (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17295,
+            "passo_de_entrada": {
+                "id": 17295,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG Reativa? (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17319,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (ctg reativa)",
+            "descricao": "ctg reativa",
+            "passo_de_saida_id": 17295,
+            "passo_de_saida": {
+                "id": 17295,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG Reativa? (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17292,
+            "passo_de_entrada": {
+                "id": 17292,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Retorno em 48h",
+                "descricao": "Retorno em 48h para repetir cardiotocografia.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17086,
+                "nome": "ctg reativa (2)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17067
+                ],
+                "argumentos": [
+                    "ctg_reativa_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17320,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (ctg n\u00e3o reativa)",
+            "descricao": "ctg n\u00e3o reativa",
+            "passo_de_saida_id": 17295,
+            "passo_de_saida": {
+                "id": 17295,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG Reativa? (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17296,
+            "passo_de_entrada": {
+                "id": 17296,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Avaliar Resolu\u00e7\u00e3o Imediata da Gesta\u00e7\u00e3o",
+                "descricao": "Avaliar com l\u00edder local resolu\u00e7\u00e3o imediata da gesta\u00e7\u00e3o.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17087,
+                "nome": "ctg n\u00e3o reativa (2)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17067
+                ],
+                "argumentos": [
+                    "ctg_reativa_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17321,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17290,
+            "passo_de_saida": {
+                "id": 17290,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Mais de 41s] Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17297,
+            "passo_de_entrada": {
+                "id": 17297,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG reativa? (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17322,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (ctg n\u00e3o reativa)",
+            "descricao": "ctg n\u00e3o reativa",
+            "passo_de_saida_id": 17297,
+            "passo_de_saida": {
+                "id": 17297,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG reativa? (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17298,
+            "passo_de_entrada": {
+                "id": 17298,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Reanima\u00e7\u00e3o (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17088,
+                "nome": "ctg n\u00e3o reativa (3)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17068
+                ],
+                "argumentos": [
+                    "ctg_reativa_3"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17323,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17298,
+            "passo_de_saida": {
+                "id": 17298,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Reanima\u00e7\u00e3o (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17299,
+            "passo_de_entrada": {
+                "id": 17299,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Cardiotocografia (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17324,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17299,
+            "passo_de_saida": {
+                "id": 17299,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Cardiotocografia (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17300,
+            "passo_de_entrada": {
+                "id": 17300,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG Reativa? (4)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17325,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (ctg reativa)",
+            "descricao": "ctg reativa",
+            "passo_de_saida_id": 17300,
+            "passo_de_saida": {
+                "id": 17300,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG Reativa? (4)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17301,
+            "passo_de_entrada": {
+                "id": 17301,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Indu\u00e7\u00e3o do parto",
+                "descricao": "Realizar indu\u00e7\u00e3o do trabalho de parto",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17089,
+                "nome": "ctg reativa (4)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17069
+                ],
+                "argumentos": [
+                    "ctg_reativa_4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17326,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (ctg n\u00e3o reativa)",
+            "descricao": "ctg n\u00e3o reativa",
+            "passo_de_saida_id": 17300,
+            "passo_de_saida": {
+                "id": 17300,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG Reativa? (4)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17296,
+            "passo_de_entrada": {
+                "id": 17296,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Avaliar Resolu\u00e7\u00e3o Imediata da Gesta\u00e7\u00e3o",
+                "descricao": "Avaliar com l\u00edder local resolu\u00e7\u00e3o imediata da gesta\u00e7\u00e3o.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17090,
+                "nome": "ctg n\u00e3o reativa (4)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17069
+                ],
+                "argumentos": [
+                    "ctg_reativa_4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17327,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18 (ctg reativa)",
+            "descricao": "ctg reativa",
+            "passo_de_saida_id": 17297,
+            "passo_de_saida": {
+                "id": 17297,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "CTG reativa? (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17302,
+            "passo_de_entrada": {
+                "id": 17302,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17091,
+                "nome": "ctg reativa (3)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17068
+                ],
+                "argumentos": [
+                    "ctg_reativa_3"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17328,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19 (us normal)",
+            "descricao": "us normal",
+            "passo_de_saida_id": 17302,
+            "passo_de_saida": {
+                "id": 17302,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17303,
+            "passo_de_entrada": {
+                "id": 17303,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17092,
+                "nome": "us normal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17070
+                ],
+                "argumentos": [
+                    "LA_normal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17329,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20 (us alterada)",
+            "descricao": "us alterada",
+            "passo_de_saida_id": 17302,
+            "passo_de_saida": {
+                "id": 17302,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17304,
+            "passo_de_entrada": {
+                "id": 17304,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "US Obstetrica com Doppler",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17093,
+                "nome": "us alterada",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naonulo",
+                "operador_display": "N\u00e3o Nulo",
+                "argumentos_ids": [
+                    17070
+                ],
+                "argumentos": [
+                    "LA_normal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17330,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S21 (peso de 3 a 4kg)",
+            "descricao": "peso de 3 a 4kg",
+            "passo_de_saida_id": 17303,
+            "passo_de_saida": {
+                "id": 17303,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17301,
+            "passo_de_entrada": {
+                "id": 17301,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Indu\u00e7\u00e3o do parto",
+                "descricao": "Realizar indu\u00e7\u00e3o do trabalho de parto",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17094,
+                "nome": "peso de 3 a 4kg",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17071
+                ],
+                "argumentos": [
+                    "peso_3000_a_4000_gr"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17331,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S22 (peso < 3 ou > 4 kg)",
+            "descricao": "peso < 3 ou > 4 kg",
+            "passo_de_saida_id": 17303,
+            "passo_de_saida": {
+                "id": 17303,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17309,
+            "passo_de_entrada": {
+                "id": 17309,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17095,
+                "nome": "peso < 3 ou > 4 kg",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17071
+                ],
+                "argumentos": [
+                    "peso_3000_a_4000_gr"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17332,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S23",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17304,
+            "passo_de_saida": {
+                "id": 17304,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "US Obstetrica com Doppler",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17305,
+            "passo_de_entrada": {
+                "id": 17305,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US com Doppler",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17333,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S24 (us doppler alterada)",
+            "descricao": "us doppler alterada",
+            "passo_de_saida_id": 17305,
+            "passo_de_saida": {
+                "id": 17305,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US com Doppler",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17308,
+            "passo_de_entrada": {
+                "id": 17308,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Avaliar Resolu\u00e7\u00e3o da Gesta\u00e7\u00e3o",
+                "descricao": "Avaliar resolu\u00e7\u00e3o da gesta\u00e7\u00e3o com l\u00edder local",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17096,
+                "nome": "us doppler alterada",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17072
+                ],
+                "argumentos": [
+                    "us_doppler_alterada"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17334,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S25 (us doppler normal)",
+            "descricao": "us doppler normal",
+            "passo_de_saida_id": 17305,
+            "passo_de_saida": {
+                "id": 17305,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US com Doppler",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17306,
+            "passo_de_entrada": {
+                "id": 17306,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17097,
+                "nome": "us doppler normal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17072
+                ],
+                "argumentos": [
+                    "us_doppler_alterada"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17335,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S26 (peso entre 2500 e 4500gr)",
+            "descricao": "peso entre 2500 e 4500gr",
+            "passo_de_saida_id": 17306,
+            "passo_de_saida": {
+                "id": 17306,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17301,
+            "passo_de_entrada": {
+                "id": 17301,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Indu\u00e7\u00e3o do parto",
+                "descricao": "Realizar indu\u00e7\u00e3o do trabalho de parto",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17098,
+                "nome": "peso entre 2500 e 4500gr",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17073
+                ],
+                "argumentos": [
+                    "peso_entre_2500_4500gr"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17336,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S27(peso < 2500 ou > 4500gr)",
+            "descricao": "peso < 2500 ou > 4500gr",
+            "passo_de_saida_id": 17306,
+            "passo_de_saida": {
+                "id": 17306,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17307,
+            "passo_de_entrada": {
+                "id": 17307,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Avaliar Ces\u00e1rea com L\u00edder Local",
+                "descricao": "Passar com l\u00edder local possibilidade de parto cesareano",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17099,
+                "nome": "peso < 2500 ou > 4500gr",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17073
+                ],
+                "argumentos": [
+                    "peso_entre_2500_4500gr"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17337,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S28",
+            "descricao": "-",
+            "passo_de_saida_id": 17309,
+            "passo_de_saida": {
+                "id": 17309,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17304,
+            "passo_de_entrada": {
+                "id": 17304,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "US Obstetrica com Doppler",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17100,
+                "nome": "Peso < 3000gr",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17074,
+                    17077
+                ],
+                "argumentos": [
+                    "peso_feto",
+                    "5"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17338,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S29",
+            "descricao": "-",
+            "passo_de_saida_id": 17309,
+            "passo_de_saida": {
+                "id": 17309,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Peso (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17307,
+            "passo_de_entrada": {
+                "id": 17307,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Avaliar Ces\u00e1rea com L\u00edder Local",
+                "descricao": "Passar com l\u00edder local possibilidade de parto cesareano",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17101,
+                "nome": "Peso > 4500gr",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17074,
+                    17078
+                ],
+                "argumentos": [
+                    "peso_feto",
+                    "10"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17061,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "comorbidades_sindromes_hipertensivas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17062,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "comorbidades_dm_dmg",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17063,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "comorbidades_hiv",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17064,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "comorbidades_placenta_previa",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17065,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "idade_gestacional",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "40 semanas a 40 semanas e 6 dias",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Maior ou igual a 41 semanas",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17066,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ctg_reativa_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17067,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ctg_reativa_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17068,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ctg_reativa_3",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17069,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ctg_reativa_4",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17070,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "LA_normal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17071,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "peso_3000_a_4000_gr",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17072,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "us_doppler_alterada",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17073,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "peso_entre_2500_4500gr",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17074,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "peso_feto",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "< 3000gr",
+                    "peso": 5.0
+                },
+                {
+                    "texto": "> 4500gr",
+                    "peso": 10.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17075,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17076,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17077,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "5",
+            "peso": 1.0,
+            "valor": 5.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17078,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "10",
+            "peso": 1.0,
+            "valor": 10.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17079,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Comorbidades",
+            "descricao": "Comorbidades",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                17061,
+                17062,
+                17063,
+                17064
+            ],
+            "argumentos": [
+                "comorbidades_sindromes_hipertensivas",
+                "comorbidades_dm_dmg",
+                "comorbidades_hiv",
+                "comorbidades_placenta_previa"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,659 @@
+{
+    "id": 905,
+    "url": "",
+    "codigo": "VB_TRIPLO_IECA",
+    "nome": "[Viver Bem] Triploterapia Linha IECA",
+    "repositorio_id": 469,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:57:56.156971-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:46:58.450269-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:57:56.156971-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4217,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento com Enalapril + Clortalidona",
+            "descricao": "Prescrever Clortalidona 12,5mg/dia + Enalapril 20mg 2x/dia + (BCC) Anlodipino 5mg/dia PS > 180 e PD > 110",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4289,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 4217,
+                    "passo_de_saida": "Receita: Tratamento com Enalapril + Clortalidona",
+                    "passo_de_entrada_id": 4218,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4218,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Meta Press\u00f3rica",
+            "descricao": "Avalia\u00e7\u00e3o ap\u00f3s retorno quinzenal do Tratamento com Enalapril + Clortalidona",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1903,
+                    "url": "",
+                    "texto": "Atingiu meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3128,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ieca_triplo_meta_pressorica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4289,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 4217,
+                    "passo_de_saida": "Receita: Tratamento com Enalapril + Clortalidona",
+                    "passo_de_entrada_id": 4218,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4283,
+                    "url": "",
+                    "nome": "S3 (Avaliar Meta Press\u00f3rica - Retorno Semestral)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4218,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica",
+                    "passo_de_entrada_id": 4219,
+                    "passo_de_entrada": "Pausa: Retorno Semestral",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4284,
+                    "url": "",
+                    "nome": "S4 (Avaliar Meta Press\u00f3rica - Prescrever Triploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4218,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica",
+                    "passo_de_entrada_id": 4282,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Tetraterapia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4219,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Retorno Semestral",
+            "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4283,
+                    "url": "",
+                    "nome": "S3 (Avaliar Meta Press\u00f3rica - Retorno Semestral)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4218,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica",
+                    "passo_de_entrada_id": 4219,
+                    "passo_de_entrada": "Pausa: Retorno Semestral",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4286,
+                    "url": "",
+                    "nome": "S6 (Prescrever \u00faltima medica\u00e7\u00e3o - Retorno Semestral)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4281,
+                    "passo_de_saida": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4219,
+                    "passo_de_entrada": "Pausa: Retorno Semestral",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4288,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 4219,
+                    "passo_de_saida": "Pausa: Retorno Semestral",
+                    "passo_de_entrada_id": 4220,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4220,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Se Manteve Meta press\u00f3rica",
+            "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1904,
+                    "url": "",
+                    "texto": "Manteve meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3129,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ieca_triplo_manteve_meta_pressorica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4288,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 4219,
+                    "passo_de_saida": "Pausa: Retorno Semestral",
+                    "passo_de_entrada_id": 4220,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4285,
+                    "url": "",
+                    "nome": "S5 (Avaliar Se Manteve Meta - Prescrever \u00faltimo medicamento)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4220,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica",
+                    "passo_de_entrada_id": 4281,
+                    "passo_de_entrada": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4287,
+                    "url": "",
+                    "nome": "S6 (Avaliar Se Manteve Meta - Prescrever Triploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4220,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica",
+                    "passo_de_entrada_id": 4282,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Tetraterapia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4281,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescrever \u00faltima medica\u00e7\u00e3o",
+            "descricao": "Continuar tomando a \u00faltima medica\u00e7\u00e3o prescrita",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4285,
+                    "url": "",
+                    "nome": "S5 (Avaliar Se Manteve Meta - Prescrever \u00faltimo medicamento)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4220,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica",
+                    "passo_de_entrada_id": 4281,
+                    "passo_de_entrada": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4286,
+                    "url": "",
+                    "nome": "S6 (Prescrever \u00faltima medica\u00e7\u00e3o - Retorno Semestral)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4281,
+                    "passo_de_saida": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4219,
+                    "passo_de_entrada": "Pausa: Retorno Semestral",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4282,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Prescrever Tetraterapia",
+            "descricao": "Encaminhar paciente para Triploterapia",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_TETRA_IECA"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4284,
+                    "url": "",
+                    "nome": "S4 (Avaliar Meta Press\u00f3rica - Prescrever Triploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4218,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica",
+                    "passo_de_entrada_id": 4282,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Tetraterapia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4287,
+                    "url": "",
+                    "nome": "S6 (Avaliar Se Manteve Meta - Prescrever Triploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4220,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica",
+                    "passo_de_entrada_id": 4282,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Tetraterapia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4283,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (Avaliar Meta Press\u00f3rica - Retorno Semestral)",
+            "descricao": "",
+            "passo_de_saida_id": 4218,
+            "passo_de_saida": {
+                "id": 4218,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica",
+                "descricao": "Avalia\u00e7\u00e3o ap\u00f3s retorno quinzenal do Tratamento com Enalapril + Clortalidona",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4219,
+            "passo_de_entrada": {
+                "id": 4219,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3130,
+                "nome": "atingiu_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3128
+                ],
+                "argumentos": [
+                    "ieca_triplo_meta_pressorica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4284,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Avaliar Meta Press\u00f3rica - Prescrever Triploterapia)",
+            "descricao": "",
+            "passo_de_saida_id": 4218,
+            "passo_de_saida": {
+                "id": 4218,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica",
+                "descricao": "Avalia\u00e7\u00e3o ap\u00f3s retorno quinzenal do Tratamento com Enalapril + Clortalidona",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4282,
+            "passo_de_entrada": {
+                "id": 4282,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Prescrever Tetraterapia",
+                "descricao": "Encaminhar paciente para Triploterapia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    509
+                ]
+            },
+            "operacao": {
+                "id": 3131,
+                "nome": "nao_atingiu_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3128
+                ],
+                "argumentos": [
+                    "ieca_triplo_meta_pressorica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4285,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Avaliar Se Manteve Meta - Prescrever \u00faltimo medicamento)",
+            "descricao": "",
+            "passo_de_saida_id": 4220,
+            "passo_de_saida": {
+                "id": 4220,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4281,
+            "passo_de_entrada": {
+                "id": 4281,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever \u00faltima medica\u00e7\u00e3o",
+                "descricao": "Continuar tomando a \u00faltima medica\u00e7\u00e3o prescrita",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3132,
+                "nome": "manteve_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3129
+                ],
+                "argumentos": [
+                    "ieca_triplo_manteve_meta_pressorica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4286,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Prescrever \u00faltima medica\u00e7\u00e3o - Retorno Semestral)",
+            "descricao": "",
+            "passo_de_saida_id": 4281,
+            "passo_de_saida": {
+                "id": 4281,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever \u00faltima medica\u00e7\u00e3o",
+                "descricao": "Continuar tomando a \u00faltima medica\u00e7\u00e3o prescrita",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4219,
+            "passo_de_entrada": {
+                "id": 4219,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4287,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Avaliar Se Manteve Meta - Prescrever Triploterapia)",
+            "descricao": "",
+            "passo_de_saida_id": 4220,
+            "passo_de_saida": {
+                "id": 4220,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4282,
+            "passo_de_entrada": {
+                "id": 4282,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Prescrever Tetraterapia",
+                "descricao": "Encaminhar paciente para Triploterapia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    509
+                ]
+            },
+            "operacao": {
+                "id": 3133,
+                "nome": "nao_manteve_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3129
+                ],
+                "argumentos": [
+                    "ieca_triplo_manteve_meta_pressorica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4288,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "",
+            "passo_de_saida_id": 4219,
+            "passo_de_saida": {
+                "id": 4219,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4220,
+            "passo_de_entrada": {
+                "id": 4220,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4289,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "",
+            "passo_de_saida_id": 4217,
+            "passo_de_saida": {
+                "id": 4217,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento com Enalapril + Clortalidona",
+                "descricao": "Prescrever Clortalidona 12,5mg/dia + Enalapril 20mg 2x/dia + (BCC) Anlodipino 5mg/dia PS > 180 e PD > 110",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4218,
+            "passo_de_entrada": {
+                "id": 4218,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica",
+                "descricao": "Avalia\u00e7\u00e3o ap\u00f3s retorno quinzenal do Tratamento com Enalapril + Clortalidona",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3128,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ieca_triplo_meta_pressorica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3129,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ieca_triplo_manteve_meta_pressorica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

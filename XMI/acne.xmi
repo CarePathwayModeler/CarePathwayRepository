@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="1062" url="" name="Acne" code="MF_ACNE">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5168" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classifica&#xe7;&#xe3;o do Grau de Severidade" description="&lt;p>Classifica&amp;ccedil;&amp;atilde;o do grau de acne conforme sintomas apresentados:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Grau 1 ou Acne Leve: acne n&amp;atilde;o inflamat&amp;oacute;ria com predomin&amp;acirc;ncia de comed&amp;otilde;es. (p&amp;aacute;pulas e p&amp;uacute;stulas ocasionais)&lt;/li>&#xA;&#x9;&lt;li>Grau 2 ou Acne Moderada: acne inflamat&amp;oacute;ria com predomin&amp;acirc;ncia de m&amp;uacute;ltiplas p&amp;aacute;pulas e p&amp;uacute;stulas. N&amp;oacute;dulos ocasionais&lt;/li>&#xA;&#x9;&lt;li>Grau 3 ou Acne Grave: acne inflamat&amp;oacute;ria com in&amp;uacute;meras p&amp;aacute;pulas, al&amp;eacute;m de m&amp;uacute;ltiplos cistos ou n&amp;oacute;dulos&lt;/li>&#xA;&lt;/ul>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions text="Grau 1 ou Acne Leve: acne n&#xe3;o inflamat&#xf3;ria com predomin&#xe2;ncia de comed&#xf5;es. (p&#xe1;pulas e p&#xfa;stulas ocasionais)" url="" id="2232">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grau_i" id="3708" weight="1" value="false"/>
+    </questions>
+    <questions text="Grau 2 ou Acne Moderada: acne inflamat&#xf3;ria com predomin&#xe2;ncia de m&#xfa;ltiplas p&#xe1;pulas e p&#xfa;stulas. N&#xf3;dulos ocasionais" url="" id="2233">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grau_ii" id="3709" weight="1" value="false"/>
+    </questions>
+    <questions text="Grau 3 ou Acne Grave: acne inflamat&#xf3;ria com in&#xfa;meras p&#xe1;pulas, al&#xe9;m de m&#xfa;ltiplos cistos ou n&#xf3;dulos." url="" id="2234">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="grau_iii" id="3710" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5169" type="Receita" type_verbose="Receita" url="" name="[Grau I - Predom&#xed;nio Comed&#xf4;nico] Medica&#xe7;&#xe3;o" description="Receita para acne grau I" inputSequences="//@sequence.13" outputSequences="//@sequence.3">
+    <item id="2001" url="" name="ISOTREX" med_code="2101911250" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2002" url="" name="ISOTREX" med_code="2101911813" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2003" url="" name="ACNEE LOSS" med_code="50742911" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2004" url="" name="ESPINAZE" med_code="-596355053" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2005" url="" name="ACNEZIL" med_code="-1921649062" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5170" type="Receita" type_verbose="Receita" url="" name="[Grau II] Medica&#xe7;&#xe3;o" description="Receita para acne grau II" inputSequences="//@sequence.1" outputSequences="//@sequence.5">
+    <item id="2006" url="" name="ESTOLATO DE ERITROMICINA" med_code="1102648420" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="2007" url="" name="ISOTREX" med_code="2101911250" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2008" url="" name="ISOTREX" med_code="2101911813" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2009" url="" name="ACNEE LOSS" med_code="50742911" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2010" url="" name="ESPINAZE" med_code="-596355053" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2011" url="" name="ACNEZIL" med_code="-1921649062" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2012" url="" name="CLORIDRATO DE DOXICICLINA" med_code="1854829364" presentation="COMP" access="1" quantity="1" period="12" period_unit="SS" frequency="1" frequency_unit="DD" orientations="Usar de 4 a 12 semanas"/>
+    <item id="2013" url="" name="CLORIDRATO DE TETRACICLINA" med_code="-1581939287" presentation="COMP" access="1" quantity="1" period="12" period_unit="SS" frequency="1" frequency_unit="DD" orientations="Usar de 4 a 12 semanas"/>
+    <item id="2014" url="" name="AZITROMICINA" med_code="1854825909" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Observa&#xe7;&#xf5;es: Pausar Azitromicina ap&#xf3;s os 3 dias, esperar 7 dias e repetir por mais 2 ciclos."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5171" type="Processo" type_verbose="Processo" url="" name="[Grau I] Retorno" description="Retorno a crit&#xe9;rio do m&#xe9;dico" inputSequences="//@sequence.3 //@sequence.15" outputSequences="//@sequence.4">
+    <action id="224" process_id="5171" service="aprazamento" description="Retorno Semanal"/>
+    <action id="225" process_id="5171" service="aprazamento" description="Retorno Quinzenal"/>
+    <action id="226" process_id="5171" service="aprazamento" description="Retorno Mensal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5172" type="Pausa" type_verbose="Pausa" url="" name="[Grau I]  Aguardar Retorno" description="Aguardar retorno do paciente" inputSequences="//@sequence.4" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5173" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grau I]  Houve Melhora?" description="Averiguar se medica&#xe7;&#xe3;o trouxe melhora ao quadro de Acne Grau I" inputSequences="//@sequence.7" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Houve melhora?" url="" id="2235">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3711" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5174" type="Processo" type_verbose="Processo" url="" name="[Grau II] Retorno" description="Retorno conforme indica&#xe7;&#xe3;o m&#xe9;dica" inputSequences="//@sequence.5" outputSequences="//@sequence.6">
+    <action id="227" process_id="5174" service="aprazamento" description="Retorno Semanal"/>
+    <action id="228" process_id="5174" service="aprazamento" description="Retorno Quinzenal"/>
+    <action id="229" process_id="5174" service="aprazamento" description="Retorno Mensal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5175" type="Pausa" type_verbose="Pausa" url="" name="[Grau II] Aguardar Retorno" description="Aguardar retorno do paciente" inputSequences="//@sequence.6" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5176" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Grau II] Houve melhora?" description="Averiguar se medica&#xe7;&#xe3;o trouxe melhora ao quadro de Acne Grau II" inputSequences="//@sequence.8" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Houve melhora?" url="" id="2236">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3712" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="5177" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Dermatologista" description="Encaminhamento a dermatologista para tratamento" isTerminal="true" inputSequences="//@sequence.2 //@sequence.10 //@sequence.12">
+    <action id="230" process_id="5177" service="encaminhar_especialidade" description="Encaminhar ao Dermato"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5178" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Acne Grau I" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.13 //@sequence.14">
+    <questions text="Predom&#xed;nio Comed&#xf4;nico" url="" id="2237">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="predominio_comedonico" id="3713" weight="1" value="false"/>
+    </questions>
+    <questions text="Papulo pustuloso" url="" id="2238">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="papulo_pustuloso" id="3714" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5179" type="Receita" type_verbose="Receita" url="" name="[Grau I - Papulo Pustuloso] Medica&#xe7;&#xe3;o" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.15">
+    <item id="2015" url="" name="CLINDOXYL" med_code="2101912055" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2016" url="" name="CLINDOXYL" med_code="2101912598" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2017" url="" name="ISOTREX" med_code="2101911250" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2018" url="" name="ISOTREX" med_code="2101911813" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2019" url="" name="ACNEE LOSS" med_code="50742911" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2020" url="" name="ESPINAZE" med_code="-596355053" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2021" url="" name="ACNEZIL" med_code="-1921649062" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2022" url="" name="ISOTREXIN" med_code="2101911943" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="2023" url="" name="STIEMYCIN GEL" med_code="2101910297" presentation="-" access="18" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="5180" type="Receita" type_verbose="Receita" url="" name="Manter Prescri&#xe7;&#xe3;o" description="" isTerminal="true" inputSequences="//@sequence.9 //@sequence.11"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.0" id="5181" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Grau I)" description="Grau I">
+    <operation name="Grau I" Operator="affirmation" id="3715">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grau_i" id="3708" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="5182" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Grau II)" description="Grau II">
+    <operation name="Grau II" Operator="affirmation" id="3716">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grau_ii" id="3709" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="5183" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Grau III)" description="Grau III">
+    <operation name="Grau III" Operator="affirmation" id="3717">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="grau_iii" id="3710" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="5184" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="5185" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="5186" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="5187" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="5188" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="5189" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.5" id="5190" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Melhora - Grau I)" description="Melhora - Grau I">
+    <operation name="houve melhora" Operator="affirmation" id="3718">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3711" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.5" id="5191" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (Sem Melhora - Grau I)" description="Sem Melhora - Grau I">
+    <operation name="n&#xe3;o houve melhora" id="3719">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3711" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.8" id="5192" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Melhora - Grau II)" description="Melhora - Grau II">
+    <operation name="houve melhora" Operator="affirmation" id="3720">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3712" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="5193" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (Sem Melhora - Grau II)" description="Sem Melhora - Grau II">
+    <operation name="n&#xe3;o houve melhora" id="3721">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3712" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.10" id="5194" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (Predom&#xed;nio Comed&#xf4;nico)" description="Predom&#xed;nio Comed&#xf4;nico">
+    <operation name="Predom&#xed;nio Comed&#xf4;nico" Operator="affirmation" id="3722">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="predominio_comedonico" id="3713" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="5195" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (Papulo Pustuloso)" description="Papulo Pustuloso">
+    <operation name="Papulo Pustuloso" Operator="affirmation" id="3723">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="papulo_pustuloso" id="3714" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.11" id="5196" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grau_i" id="3708" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grau_ii" id="3709" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="grau_iii" id="3710" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_i" id="3711" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_grau_ii" id="3712" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="predominio_comedonico" id="3713" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="papulo_pustuloso" id="3714" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

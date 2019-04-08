@@ -1,0 +1,1662 @@
+{
+    "id": 3130,
+    "url": "",
+    "codigo": "H039",
+    "nome": "Pneumonia Adquirida na Comunidade",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 461,
+    "versao": 5,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:33:20.684192-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:33:12.963390-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:33:22.938908-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17085,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Quadro agudo?",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8921,
+                    "url": "",
+                    "texto": "Quadro agudo de tosse e/ou desconforto respirat\u00f3rio(taquipneia ou dispneia)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16900,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quadro_agudo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17098,
+                    "url": "",
+                    "nome": "S1 (com quadro agudo)",
+                    "descricao": "com quadro agudo",
+                    "passo_de_saida_id": 17085,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quadro agudo?",
+                    "passo_de_entrada_id": 17087,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17099,
+                    "url": "",
+                    "nome": "S2 (sem quadro agudo)",
+                    "descricao": "sem quadro agudo",
+                    "passo_de_saida_id": 17085,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quadro agudo?",
+                    "passo_de_entrada_id": 17086,
+                    "passo_de_entrada": "Encaminhamento: Protocolo IVAS Pedi\u00e1trico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17086,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Protocolo IVAS Pedi\u00e1trico",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H026"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17099,
+                    "url": "",
+                    "nome": "S2 (sem quadro agudo)",
+                    "descricao": "sem quadro agudo",
+                    "passo_de_saida_id": 17085,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quadro agudo?",
+                    "passo_de_entrada_id": 17086,
+                    "passo_de_entrada": "Encaminhamento: Protocolo IVAS Pedi\u00e1trico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17087,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Sinais de Alarme",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8922,
+                    "url": "",
+                    "texto": "O paciente apresenta sinais de alarme?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16901,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sinais_de_alarme",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Febre",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Satura\u00e7\u00e3o < 92%",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Hipersecre\u00e7\u00e3o",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Dor tor\u00e1cica",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Dor ventilat\u00f3ria dependente",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Dor abdominal",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Altera\u00e7\u00e3o na ausculta (crepta\u00e7\u00e3o, murm\u00fario diminu\u00eddo ou broncofonia)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Comorbidade associada (encefalopata, s\u00edndrome gen\u00e9tica, cardiopata, < 2 meses)",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17098,
+                    "url": "",
+                    "nome": "S1 (com quadro agudo)",
+                    "descricao": "com quadro agudo",
+                    "passo_de_saida_id": 17085,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quadro agudo?",
+                    "passo_de_entrada_id": 17087,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17100,
+                    "url": "",
+                    "nome": "S3 (sem sinais de alarme)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 17087,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 17088,
+                    "passo_de_entrada": "Tratamento: Raio X AP Lateral",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17101,
+                    "url": "",
+                    "nome": "S4 (com sinais de alarme)",
+                    "descricao": "com sinais de alarme",
+                    "passo_de_saida_id": 17087,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 17089,
+                    "passo_de_entrada": "Tratamento: [Com Sinais de Alarme] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17088,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Raio X AP Lateral",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17100,
+                    "url": "",
+                    "nome": "S3 (sem sinais de alarme)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 17087,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 17088,
+                    "passo_de_entrada": "Tratamento: Raio X AP Lateral",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17102,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17088,
+                    "passo_de_saida": "Tratamento: Raio X AP Lateral",
+                    "passo_de_entrada_id": 17090,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Raio X",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17089,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Com Sinais de Alarme] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">- Avaliar com chefia na sala de cuidados (eixo vermelho)</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar necessidade de suplementa&ccedil;&atilde;o O2 + Oximetria e avalia&ccedil;&atilde;o de sinais vitais de 1/1h</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "Pneumonia adquirida na comunidade",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidadeq",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOCULTURA",
+                    "exame": "28100298",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17101,
+                    "url": "",
+                    "nome": "S4 (com sinais de alarme)",
+                    "descricao": "com sinais de alarme",
+                    "passo_de_saida_id": 17087,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 17089,
+                    "passo_de_entrada": "Tratamento: [Com Sinais de Alarme] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17109,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17089,
+                    "passo_de_saida": "Tratamento: [Com Sinais de Alarme] Conduta",
+                    "passo_de_entrada_id": 17093,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17090,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Raio X",
+            "descricao": "Avaliar se ha altera\u00e7\u00f5es radiogr\u00e1ficas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8923,
+                    "url": "",
+                    "texto": "Raio X",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16902,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "raio_x_alterado",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Normal",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Alterado",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17102,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17088,
+                    "passo_de_saida": "Tratamento: Raio X AP Lateral",
+                    "passo_de_entrada_id": 17090,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Raio X",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17103,
+                    "url": "",
+                    "nome": "S6 (sem altera\u00e7\u00f5es)",
+                    "descricao": "sem altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17090,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Raio X",
+                    "passo_de_entrada_id": 17091,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Investigar causas",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17104,
+                    "url": "",
+                    "nome": "S7 (com altera\u00e7\u00f5es)",
+                    "descricao": "com altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17090,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Raio X",
+                    "passo_de_entrada_id": 17092,
+                    "passo_de_entrada": "Tratamento: [Raio X Alterado] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17091,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Investigar causas",
+            "descricao": "Investigar outras causas do desconforto respirat\u00f3rio",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17103,
+                    "url": "",
+                    "nome": "S6 (sem altera\u00e7\u00f5es)",
+                    "descricao": "sem altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17090,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Raio X",
+                    "passo_de_entrada_id": 17091,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Investigar causas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17092,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Raio X Alterado] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\"><u><strong>OBS1</strong></u>: Se altera&ccedil;&otilde;es leves e localizadas, solicitar HC + PCR&nbsp;</span></p>\n\n<p><span style=\"font-size:16px\"><u><strong>OBS2:</strong></u> Altera&ccedil;&otilde;es significativas, extensas e/ou lobares:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Discutir com chefia local</span></li>\n\t<li><span style=\"font-size:16px\">Avaliar paciente na sala de cuidados. </span></li>\n\t<li><span style=\"font-size:16px\">Solicitar HC + PCR + Hemocultura + Gasometria + S&oacute;dio + Pot&aacute;ssio + C&aacute;lcio&nbsp;</span></li>\n</ul>\n\n<p><span style=\"font-size:16px\"><u><strong>OBS3:</strong></u>&nbsp;Se sinais de derrame pleural, discutir com chefia e solicitar exames acima (Obs 2) + US T&oacute;rax.</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "Pneumonia adquirida na comunidade",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidadeq",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CALCIO (SANGUE)",
+                    "exame": "28010329",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOCULTURA",
+                    "exame": "28100298",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia adquirida na comunidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "US TORAX (EXTRA-CARDIACO)",
+                    "exame": "33010188",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Exames alterados",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Pneumonia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17104,
+                    "url": "",
+                    "nome": "S7 (com altera\u00e7\u00f5es)",
+                    "descricao": "com altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17090,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Raio X",
+                    "passo_de_entrada_id": 17092,
+                    "passo_de_entrada": "Tratamento: [Raio X Alterado] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17110,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17092,
+                    "passo_de_saida": "Tratamento: [Raio X Alterado] Conduta",
+                    "passo_de_entrada_id": 17094,
+                    "passo_de_entrada": "Tratamento: ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17093,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Idade",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8924,
+                    "url": "",
+                    "texto": "Idade do paciente",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16903,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "idade_paciente",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "< 2 meses",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": ">= 2 meses",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17109,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17089,
+                    "passo_de_saida": "Tratamento: [Com Sinais de Alarme] Conduta",
+                    "passo_de_entrada_id": 17093,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17105,
+                    "url": "",
+                    "nome": "S8 (< 2 meses)",
+                    "descricao": "< 2 meses",
+                    "passo_de_saida_id": 17093,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 17094,
+                    "passo_de_entrada": "Tratamento: ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17106,
+                    "url": "",
+                    "nome": "S9 (>= 2 meses)",
+                    "descricao": ">= 2 meses",
+                    "passo_de_saida_id": 17093,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 17095,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17094,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "ATB + Interna\u00e7\u00e3o",
+            "descricao": "<p><span style=\"font-size:16px\">- Discutir com chefia. Avaliar necessidade de&nbsp;interna&ccedil;&atilde;o.</span></p>\n\n<p><span style=\"font-size:16px\"><strong>-&nbsp; Se menor&nbsp; de 2 meses</strong>: Internar, prescrever: Ampicilina + Gentamicina (dose: conforme idade e peso do RN).</span></p>\n\n<p><strong><span style=\"font-size:16px\">- Interna&ccedil;&atilde;o em maiores de 2 meses:</span></strong></p>\n\n<p><span style=\"font-size:16px\">a) Prescrever Unasyn 100mg/kg/dia&nbsp;de&nbsp;6/6h EV se n&atilde;o houver uso de ATB pr&eacute;vio</span></p>\n\n<p><span style=\"font-size:16px\">b) Prescrever Cetriaxona 50-100mg/kg/dia&nbsp;EV se houver falha terapeutica com antibi&oacute;tico oral pr&eacute;vio.</span></p>\n\n<p><span style=\"font-size:16px\">c) Considerar uso de Oxacilina 100-200mg/kg/dia em casos de PNM lobar/extensa&nbsp;ou com derrame pleural.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17105,
+                    "url": "",
+                    "nome": "S8 (< 2 meses)",
+                    "descricao": "< 2 meses",
+                    "passo_de_saida_id": 17093,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 17094,
+                    "passo_de_entrada": "Tratamento: ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17110,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17092,
+                    "passo_de_saida": "Tratamento: [Raio X Alterado] Conduta",
+                    "passo_de_entrada_id": 17094,
+                    "passo_de_entrada": "Tratamento: ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17095,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8925,
+                    "url": "",
+                    "texto": "Avaliar Exames",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16904,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "nivel_alteracao_radiologica",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Altera\u00e7\u00e3o Radiol\u00f3gica leve e leuc\u00f3citos < 20 mil",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Altera\u00e7\u00e3o Radiol\u00f3gica importante, derrame pleural e/ou leuc\u00f3citos > 20 mil",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17106,
+                    "url": "",
+                    "nome": "S9 (>= 2 meses)",
+                    "descricao": ">= 2 meses",
+                    "passo_de_saida_id": 17093,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 17095,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17107,
+                    "url": "",
+                    "nome": "S10 (alteracao leve)",
+                    "descricao": "alteracao leve",
+                    "passo_de_saida_id": 17095,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames",
+                    "passo_de_entrada_id": 17097,
+                    "passo_de_entrada": "Receita: Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17108,
+                    "url": "",
+                    "nome": "S11 (alteracao importante)",
+                    "descricao": "alteracao importante",
+                    "passo_de_saida_id": 17095,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames",
+                    "passo_de_entrada_id": 17096,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com chefia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17096,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com chefia",
+            "descricao": "<p><span style=\"font-size:16px\">Discutir conduta com chefia devido a prov&aacute;vel interna&ccedil;&atilde;o.</span></p>\n\n<p><span style=\"font-size:16px\">Em caso de interna&ccedil;&atilde;o:</span></p>\n\n<p><span style=\"font-size:16px\">a) Prescrever Unasyn 100mg/kg/dia&nbsp;de&nbsp;6/6h EV se n&atilde;o houver uso de ATB pr&eacute;vio</span></p>\n\n<p><span style=\"font-size:16px\">b) Prescrever Cetriaxona 50-100mg/kg/dia&nbsp;EV se houver falha terapeutica com antibi&oacute;tico oral pr&eacute;vio.</span></p>\n\n<p><span style=\"font-size:16px\">c) Considerar uso de Oxacilina 100-200mg/kg/dia em casos de PNM lobar/extensa&nbsp;ou com derrame pleural.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17108,
+                    "url": "",
+                    "nome": "S11 (alteracao importante)",
+                    "descricao": "alteracao importante",
+                    "passo_de_saida_id": 17095,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames",
+                    "passo_de_entrada_id": 17096,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com chefia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17097,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita",
+            "descricao": "<p><span style=\"font-size:16px\">Considerar alta com antibi&oacute;tico oral e retorno em 48h para reavalia&ccedil;&atilde;o. </span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4593,
+                    "url": "",
+                    "nome": "Amoxicilina + Clavulanato 400+57 mg/ml ___________ FR",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar ___ ml de 12/12h por 10 dias (conservar na geladeira).",
+                    "ordem": 1
+                },
+                {
+                    "id": 4594,
+                    "url": "",
+                    "nome": "Ceftriaxona 1g ________________________fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 5,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 1 ampola IM, 1x por dia por 3 dias. Reavaliar ap\u00f3s 48h.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4595,
+                    "url": "",
+                    "nome": "Azitromicina 900mg ___ Fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar ___ ml 1x por dia por 5 dias.",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17107,
+                    "url": "",
+                    "nome": "S10 (alteracao leve)",
+                    "descricao": "alteracao leve",
+                    "passo_de_saida_id": 17095,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames",
+                    "passo_de_entrada_id": 17097,
+                    "passo_de_entrada": "Receita: Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17098,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (com quadro agudo)",
+            "descricao": "com quadro agudo",
+            "passo_de_saida_id": 17085,
+            "passo_de_saida": {
+                "id": 17085,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quadro agudo?",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17087,
+            "passo_de_entrada": {
+                "id": 17087,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16908,
+                "nome": "com quadro agudo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16900
+                ],
+                "argumentos": [
+                    "quadro_agudo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17099,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sem quadro agudo)",
+            "descricao": "sem quadro agudo",
+            "passo_de_saida_id": 17085,
+            "passo_de_saida": {
+                "id": 17085,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quadro agudo?",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17086,
+            "passo_de_entrada": {
+                "id": 17086,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Protocolo IVAS Pedi\u00e1trico",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    261
+                ]
+            },
+            "operacao": {
+                "id": 16909,
+                "nome": "sem quadro agudo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16900
+                ],
+                "argumentos": [
+                    "quadro_agudo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17100,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (sem sinais de alarme)",
+            "descricao": "sem sinais de alarme",
+            "passo_de_saida_id": 17087,
+            "passo_de_saida": {
+                "id": 17087,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17088,
+            "passo_de_entrada": {
+                "id": 17088,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Raio X AP Lateral",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16910,
+                "nome": "Sem Sinais de Alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    16901,
+                    16905
+                ],
+                "argumentos": [
+                    "sinais_de_alarme",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17101,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (com sinais de alarme)",
+            "descricao": "com sinais de alarme",
+            "passo_de_saida_id": 17087,
+            "passo_de_saida": {
+                "id": 17087,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17089,
+            "passo_de_entrada": {
+                "id": 17089,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Com Sinais de Alarme] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">- Avaliar com chefia na sala de cuidados (eixo vermelho)</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar necessidade de suplementa&ccedil;&atilde;o O2 + Oximetria e avalia&ccedil;&atilde;o de sinais vitais de 1/1h</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16911,
+                "nome": "Cont\u00e9m Sinais de Alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    16901,
+                    16905
+                ],
+                "argumentos": [
+                    "sinais_de_alarme",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17102,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17088,
+            "passo_de_saida": {
+                "id": 17088,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Raio X AP Lateral",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17090,
+            "passo_de_entrada": {
+                "id": 17090,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Raio X",
+                "descricao": "Avaliar se ha altera\u00e7\u00f5es radiogr\u00e1ficas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17103,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (sem altera\u00e7\u00f5es)",
+            "descricao": "sem altera\u00e7\u00f5es",
+            "passo_de_saida_id": 17090,
+            "passo_de_saida": {
+                "id": 17090,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Raio X",
+                "descricao": "Avaliar se ha altera\u00e7\u00f5es radiogr\u00e1ficas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17091,
+            "passo_de_entrada": {
+                "id": 17091,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Investigar causas",
+                "descricao": "Investigar outras causas do desconforto respirat\u00f3rio",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16912,
+                "nome": "sem altera\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16902
+                ],
+                "argumentos": [
+                    "raio_x_alterado"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17104,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (com altera\u00e7\u00f5es)",
+            "descricao": "com altera\u00e7\u00f5es",
+            "passo_de_saida_id": 17090,
+            "passo_de_saida": {
+                "id": 17090,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Raio X",
+                "descricao": "Avaliar se ha altera\u00e7\u00f5es radiogr\u00e1ficas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17092,
+            "passo_de_entrada": {
+                "id": 17092,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Raio X Alterado] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\"><u><strong>OBS1</strong></u>: Se altera&ccedil;&otilde;es leves e localizadas, solicitar HC + PCR&nbsp;</span></p>\n\n<p><span style=\"font-size:16px\"><u><strong>OBS2:</strong></u> Altera&ccedil;&otilde;es significativas, extensas e/ou lobares:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Discutir com chefia local</span></li>\n\t<li><span style=\"font-size:16px\">Avaliar paciente na sala de cuidados. </span></li>\n\t<li><span style=\"font-size:16px\">Solicitar HC + PCR + Hemocultura + Gasometria + S&oacute;dio + Pot&aacute;ssio + C&aacute;lcio&nbsp;</span></li>\n</ul>\n\n<p><span style=\"font-size:16px\"><u><strong>OBS3:</strong></u>&nbsp;Se sinais de derrame pleural, discutir com chefia e solicitar exames acima (Obs 2) + US T&oacute;rax.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16913,
+                "nome": "com altera\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16902
+                ],
+                "argumentos": [
+                    "raio_x_alterado"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17105,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (< 2 meses)",
+            "descricao": "< 2 meses",
+            "passo_de_saida_id": 17093,
+            "passo_de_saida": {
+                "id": 17093,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17094,
+            "passo_de_entrada": {
+                "id": 17094,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "ATB + Interna\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:16px\">- Discutir com chefia. Avaliar necessidade de&nbsp;interna&ccedil;&atilde;o.</span></p>\n\n<p><span style=\"font-size:16px\"><strong>-&nbsp; Se menor&nbsp; de 2 meses</strong>: Internar, prescrever: Ampicilina + Gentamicina (dose: conforme idade e peso do RN).</span></p>\n\n<p><strong><span style=\"font-size:16px\">- Interna&ccedil;&atilde;o em maiores de 2 meses:</span></strong></p>\n\n<p><span style=\"font-size:16px\">a) Prescrever Unasyn 100mg/kg/dia&nbsp;de&nbsp;6/6h EV se n&atilde;o houver uso de ATB pr&eacute;vio</span></p>\n\n<p><span style=\"font-size:16px\">b) Prescrever Cetriaxona 50-100mg/kg/dia&nbsp;EV se houver falha terapeutica com antibi&oacute;tico oral pr&eacute;vio.</span></p>\n\n<p><span style=\"font-size:16px\">c) Considerar uso de Oxacilina 100-200mg/kg/dia em casos de PNM lobar/extensa&nbsp;ou com derrame pleural.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16914,
+                "nome": "< 2 meses",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    16903,
+                    16906
+                ],
+                "argumentos": [
+                    "idade_paciente",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17106,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (>= 2 meses)",
+            "descricao": ">= 2 meses",
+            "passo_de_saida_id": 17093,
+            "passo_de_saida": {
+                "id": 17093,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17095,
+            "passo_de_entrada": {
+                "id": 17095,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16915,
+                "nome": ">= 2 meses",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    16903,
+                    16906
+                ],
+                "argumentos": [
+                    "idade_paciente",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17107,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (alteracao leve)",
+            "descricao": "alteracao leve",
+            "passo_de_saida_id": 17095,
+            "passo_de_saida": {
+                "id": 17095,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17097,
+            "passo_de_entrada": {
+                "id": 17097,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita",
+                "descricao": "<p><span style=\"font-size:16px\">Considerar alta com antibi&oacute;tico oral e retorno em 48h para reavalia&ccedil;&atilde;o. </span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 16916,
+                "nome": "alteracao leve",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16904,
+                    16905
+                ],
+                "argumentos": [
+                    "nivel_alteracao_radiologica",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17108,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (alteracao importante)",
+            "descricao": "alteracao importante",
+            "passo_de_saida_id": 17095,
+            "passo_de_saida": {
+                "id": 17095,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17096,
+            "passo_de_entrada": {
+                "id": 17096,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com chefia",
+                "descricao": "<p><span style=\"font-size:16px\">Discutir conduta com chefia devido a prov&aacute;vel interna&ccedil;&atilde;o.</span></p>\n\n<p><span style=\"font-size:16px\">Em caso de interna&ccedil;&atilde;o:</span></p>\n\n<p><span style=\"font-size:16px\">a) Prescrever Unasyn 100mg/kg/dia&nbsp;de&nbsp;6/6h EV se n&atilde;o houver uso de ATB pr&eacute;vio</span></p>\n\n<p><span style=\"font-size:16px\">b) Prescrever Cetriaxona 50-100mg/kg/dia&nbsp;EV se houver falha terapeutica com antibi&oacute;tico oral pr&eacute;vio.</span></p>\n\n<p><span style=\"font-size:16px\">c) Considerar uso de Oxacilina 100-200mg/kg/dia em casos de PNM lobar/extensa&nbsp;ou com derrame pleural.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16917,
+                "nome": "alteracao importante",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16904,
+                    16906
+                ],
+                "argumentos": [
+                    "nivel_alteracao_radiologica",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17109,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17089,
+            "passo_de_saida": {
+                "id": 17089,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Com Sinais de Alarme] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">- Avaliar com chefia na sala de cuidados (eixo vermelho)</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar necessidade de suplementa&ccedil;&atilde;o O2 + Oximetria e avalia&ccedil;&atilde;o de sinais vitais de 1/1h</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17093,
+            "passo_de_entrada": {
+                "id": 17093,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17110,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "-",
+            "passo_de_saida_id": 17092,
+            "passo_de_saida": {
+                "id": 17092,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Raio X Alterado] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\"><u><strong>OBS1</strong></u>: Se altera&ccedil;&otilde;es leves e localizadas, solicitar HC + PCR&nbsp;</span></p>\n\n<p><span style=\"font-size:16px\"><u><strong>OBS2:</strong></u> Altera&ccedil;&otilde;es significativas, extensas e/ou lobares:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Discutir com chefia local</span></li>\n\t<li><span style=\"font-size:16px\">Avaliar paciente na sala de cuidados. </span></li>\n\t<li><span style=\"font-size:16px\">Solicitar HC + PCR + Hemocultura + Gasometria + S&oacute;dio + Pot&aacute;ssio + C&aacute;lcio&nbsp;</span></li>\n</ul>\n\n<p><span style=\"font-size:16px\"><u><strong>OBS3:</strong></u>&nbsp;Se sinais de derrame pleural, discutir com chefia e solicitar exames acima (Obs 2) + US T&oacute;rax.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17094,
+            "passo_de_entrada": {
+                "id": 17094,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "ATB + Interna\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:16px\">- Discutir com chefia. Avaliar necessidade de&nbsp;interna&ccedil;&atilde;o.</span></p>\n\n<p><span style=\"font-size:16px\"><strong>-&nbsp; Se menor&nbsp; de 2 meses</strong>: Internar, prescrever: Ampicilina + Gentamicina (dose: conforme idade e peso do RN).</span></p>\n\n<p><strong><span style=\"font-size:16px\">- Interna&ccedil;&atilde;o em maiores de 2 meses:</span></strong></p>\n\n<p><span style=\"font-size:16px\">a) Prescrever Unasyn 100mg/kg/dia&nbsp;de&nbsp;6/6h EV se n&atilde;o houver uso de ATB pr&eacute;vio</span></p>\n\n<p><span style=\"font-size:16px\">b) Prescrever Cetriaxona 50-100mg/kg/dia&nbsp;EV se houver falha terapeutica com antibi&oacute;tico oral pr&eacute;vio.</span></p>\n\n<p><span style=\"font-size:16px\">c) Considerar uso de Oxacilina 100-200mg/kg/dia em casos de PNM lobar/extensa&nbsp;ou com derrame pleural.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16900,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quadro_agudo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16901,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sinais_de_alarme",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Febre",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Satura\u00e7\u00e3o < 92%",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Hipersecre\u00e7\u00e3o",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Dor tor\u00e1cica",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Dor ventilat\u00f3ria dependente",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Dor abdominal",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Altera\u00e7\u00e3o na ausculta (crepta\u00e7\u00e3o, murm\u00fario diminu\u00eddo ou broncofonia)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Comorbidade associada (encefalopata, s\u00edndrome gen\u00e9tica, cardiopata, < 2 meses)",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 16902,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "raio_x_alterado",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Normal",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Alterado",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16903,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "idade_paciente",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "< 2 meses",
+                    "peso": 1.0
+                },
+                {
+                    "texto": ">= 2 meses",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16904,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "nivel_alteracao_radiologica",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Altera\u00e7\u00e3o Radiol\u00f3gica leve e leuc\u00f3citos < 20 mil",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Altera\u00e7\u00e3o Radiol\u00f3gica importante, derrame pleural e/ou leuc\u00f3citos > 20 mil",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16905,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16906,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16907,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sinais de Alarme",
+            "descricao": "Sinais de Alarme",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [],
+            "argumentos": []
+        }
+    ]
+}

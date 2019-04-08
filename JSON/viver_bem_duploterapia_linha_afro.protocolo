@@ -1,0 +1,1169 @@
+{
+    "id": 864,
+    "url": "",
+    "codigo": "VB_DUPLO_AFRO",
+    "nome": "[Viver Bem] Duploterapia Linha Afro",
+    "repositorio_id": 484,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:51:08.137088-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:51:08.137088-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:10.460218-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4000,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita I - Enalapril",
+            "descricao": "<p>Enalapril 20mg 2x/dia + Anlodipino 5mg/dia</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4361,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 4349,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Medica\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4000,
+                    "passo_de_entrada": "Receita: Receita I - Enalapril",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4351,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 4000,
+                    "passo_de_saida": "Receita: Receita I - Enalapril",
+                    "passo_de_entrada_id": 4346,
+                    "passo_de_entrada": "Processo: Retorno Quinzenal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4341,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reavaliar press\u00e3o (1)",
+            "descricao": "Atingiu meta press\u00f3rica?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1780,
+                    "url": "",
+                    "texto": "Atingiu meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2952,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "atingiu_meta_pressorica_",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4352,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "",
+                    "passo_de_saida_id": 4347,
+                    "passo_de_saida": "Pausa: Aguardar Retorno Quinzenal",
+                    "passo_de_entrada_id": 4341,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4353,
+                    "url": "",
+                    "nome": "S3 (atingiu meta pressorica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4341,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (1)",
+                    "passo_de_entrada_id": 4344,
+                    "passo_de_entrada": "Processo: Retorno semestral",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4354,
+                    "url": "",
+                    "nome": "S4 (n\u00e3o atingiu meta pressorica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4341,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (1)",
+                    "passo_de_entrada_id": 4348,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Triploterapia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4342,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reavaliar press\u00e3o (2)",
+            "descricao": "Manteve meta press\u00f3rica?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1921,
+                    "url": "",
+                    "texto": "Manteve meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2953,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "manteve_meta_pressorica_",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4355,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "",
+                    "passo_de_saida_id": 4345,
+                    "passo_de_saida": "Pausa: Aguardar Retorno Semestral",
+                    "passo_de_entrada_id": 4342,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4356,
+                    "url": "",
+                    "nome": "S6 (manteve meta pressorica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (2)",
+                    "passo_de_entrada_id": 4343,
+                    "passo_de_entrada": "Receita: Manter Prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4357,
+                    "url": "",
+                    "nome": "S7 (n\u00e3o manteve meta pressorica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (2)",
+                    "passo_de_entrada_id": 4348,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Triploterapia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4343,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Manter Prescri\u00e7\u00e3o",
+            "descricao": "Prescrever novamente:\n\nEnalapril 20mg 2x/dia ou Losartan 50mg 2x/dia) + Anlodipino 5mg/d",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": true,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4356,
+                    "url": "",
+                    "nome": "S6 (manteve meta pressorica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (2)",
+                    "passo_de_entrada_id": 4343,
+                    "passo_de_entrada": "Receita: Manter Prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4358,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 4343,
+                    "passo_de_saida": "Receita: Manter Prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4344,
+                    "passo_de_entrada": "Processo: Retorno semestral",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4344,
+            "type": "Processo",
+            "type_verbose": "Processo",
+            "url": "",
+            "nome": "Retorno semestral",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "acoes": [
+                {
+                    "id": 81,
+                    "processo_id": 4344,
+                    "servico": "aprazamento",
+                    "servico_display": "Aprazamento",
+                    "descricao": "Retorno semestral",
+                    "entradas": {
+                        "orientacao": "Retorno semestral",
+                        "codigo_retorno": "4",
+                        "tipo_profissional": "M",
+                        "codigo_risco": "1"
+                    },
+                    "entradas_display": {
+                        "Orienta\u00e7\u00e3o": "Retorno semestral",
+                        "Tipo de retorno": "Semestral",
+                        "Tipo de profissional": "M\u00e9dico",
+                        "Risco": "Risco Habitual"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4345,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Aguardar Retorno Semestral",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4359,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4344,
+                    "passo_de_saida": "Processo: Retorno semestral",
+                    "passo_de_entrada_id": 4345,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno Semestral",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4355,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "",
+                    "passo_de_saida_id": 4345,
+                    "passo_de_saida": "Pausa: Aguardar Retorno Semestral",
+                    "passo_de_entrada_id": 4342,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4346,
+            "type": "Processo",
+            "type_verbose": "Processo",
+            "url": "",
+            "nome": "Retorno Quinzenal",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "acoes": [
+                {
+                    "id": 82,
+                    "processo_id": 4346,
+                    "servico": "aprazamento",
+                    "servico_display": "Aprazamento",
+                    "descricao": "Retorno Quinzenal",
+                    "entradas": {
+                        "orientacao": "Retorno Quinzenal",
+                        "codigo_retorno": "2",
+                        "tipo_profissional": "M",
+                        "codigo_risco": "1"
+                    },
+                    "entradas_display": {
+                        "Orienta\u00e7\u00e3o": "Retorno Quinzenal",
+                        "Tipo de retorno": "Quinzenal",
+                        "Tipo de profissional": "M\u00e9dico",
+                        "Risco": "Risco Habitual"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4347,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Aguardar Retorno Quinzenal",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4360,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4346,
+                    "passo_de_saida": "Processo: Retorno Quinzenal",
+                    "passo_de_entrada_id": 4347,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno Quinzenal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4352,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "",
+                    "passo_de_saida_id": 4347,
+                    "passo_de_saida": "Pausa: Aguardar Retorno Quinzenal",
+                    "passo_de_entrada_id": 4341,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4348,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "[Encaminhamento] Triploterapia",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_TRIPLO_AFRO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4354,
+                    "url": "",
+                    "nome": "S4 (n\u00e3o atingiu meta pressorica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4341,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (1)",
+                    "passo_de_entrada_id": 4348,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Triploterapia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4357,
+                    "url": "",
+                    "nome": "S7 (n\u00e3o manteve meta pressorica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar press\u00e3o (2)",
+                    "passo_de_entrada_id": 4348,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Triploterapia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4349,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Medica\u00e7\u00e3o",
+            "descricao": "<p><strong>Selecione medi&ccedil;&atilde;o para tratamento com&nbsp;<span style=\"color:#c0392b\"><u>Anlodipino</u> </span>5mg/dia</strong></p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1922,
+                    "url": "",
+                    "texto": "Selecionar Op\u00e7\u00e3o:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2954,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "medicacao_linha_duplo_afro",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Enalapril 20mg",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Losartana 50mg",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4361,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 4349,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Medica\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4000,
+                    "passo_de_entrada": "Receita: Receita I - Enalapril",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4362,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 4349,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Medica\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4350,
+                    "passo_de_entrada": "Receita: Receita II - Losartana",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4350,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita II - Losartana",
+            "descricao": "<p>Losartana&nbsp;50mg 2x/dia + Anlodipino 5mg/dia</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4362,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 4349,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Medica\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4350,
+                    "passo_de_entrada": "Receita: Receita II - Losartana",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4363,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 4350,
+                    "passo_de_saida": "Receita: Receita II - Losartana",
+                    "passo_de_entrada_id": 4346,
+                    "passo_de_entrada": "Processo: Retorno Quinzenal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4351,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "",
+            "passo_de_saida_id": 4000,
+            "passo_de_saida": {
+                "id": 4000,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita I - Enalapril",
+                "descricao": "<p>Enalapril 20mg 2x/dia + Anlodipino 5mg/dia</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4346,
+            "passo_de_entrada": {
+                "id": 4346,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno Quinzenal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4352,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "",
+            "passo_de_saida_id": 4347,
+            "passo_de_saida": {
+                "id": 4347,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno Quinzenal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4341,
+            "passo_de_entrada": {
+                "id": 4341,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar press\u00e3o (1)",
+                "descricao": "Atingiu meta press\u00f3rica?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4353,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (atingiu meta pressorica)",
+            "descricao": "",
+            "passo_de_saida_id": 4341,
+            "passo_de_saida": {
+                "id": 4341,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar press\u00e3o (1)",
+                "descricao": "Atingiu meta press\u00f3rica?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4344,
+            "passo_de_entrada": {
+                "id": 4344,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno semestral",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2957,
+                "nome": "atingiu meta pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2952
+                ],
+                "argumentos": [
+                    "atingiu_meta_pressorica_"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4354,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (n\u00e3o atingiu meta pressorica)",
+            "descricao": "",
+            "passo_de_saida_id": 4341,
+            "passo_de_saida": {
+                "id": 4341,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar press\u00e3o (1)",
+                "descricao": "Atingiu meta press\u00f3rica?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4348,
+            "passo_de_entrada": {
+                "id": 4348,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "[Encaminhamento] Triploterapia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    470
+                ]
+            },
+            "operacao": {
+                "id": 2958,
+                "nome": "n\u00e3o atingiu meta pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2952
+                ],
+                "argumentos": [
+                    "atingiu_meta_pressorica_"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4355,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "",
+            "passo_de_saida_id": 4345,
+            "passo_de_saida": {
+                "id": 4345,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno Semestral",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4342,
+            "passo_de_entrada": {
+                "id": 4342,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar press\u00e3o (2)",
+                "descricao": "Manteve meta press\u00f3rica?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4356,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (manteve meta pressorica)",
+            "descricao": "",
+            "passo_de_saida_id": 4342,
+            "passo_de_saida": {
+                "id": 4342,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar press\u00e3o (2)",
+                "descricao": "Manteve meta press\u00f3rica?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4343,
+            "passo_de_entrada": {
+                "id": 4343,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter Prescri\u00e7\u00e3o",
+                "descricao": "Prescrever novamente:\n\nEnalapril 20mg 2x/dia ou Losartan 50mg 2x/dia) + Anlodipino 5mg/d",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2959,
+                "nome": "manteve meta pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2953
+                ],
+                "argumentos": [
+                    "manteve_meta_pressorica_"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4357,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (n\u00e3o manteve meta pressorica)",
+            "descricao": "",
+            "passo_de_saida_id": 4342,
+            "passo_de_saida": {
+                "id": 4342,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar press\u00e3o (2)",
+                "descricao": "Manteve meta press\u00f3rica?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4348,
+            "passo_de_entrada": {
+                "id": 4348,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "[Encaminhamento] Triploterapia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    470
+                ]
+            },
+            "operacao": {
+                "id": 2960,
+                "nome": "n\u00e3o manteve meta pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2953
+                ],
+                "argumentos": [
+                    "manteve_meta_pressorica_"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4358,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "",
+            "passo_de_saida_id": 4343,
+            "passo_de_saida": {
+                "id": 4343,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter Prescri\u00e7\u00e3o",
+                "descricao": "Prescrever novamente:\n\nEnalapril 20mg 2x/dia ou Losartan 50mg 2x/dia) + Anlodipino 5mg/d",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4344,
+            "passo_de_entrada": {
+                "id": 4344,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno semestral",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4359,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4344,
+            "passo_de_saida": {
+                "id": 4344,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno semestral",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4345,
+            "passo_de_entrada": {
+                "id": 4345,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno Semestral",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4360,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4346,
+            "passo_de_saida": {
+                "id": 4346,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno Quinzenal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4347,
+            "passo_de_entrada": {
+                "id": 4347,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno Quinzenal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4361,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "-",
+            "passo_de_saida_id": 4349,
+            "passo_de_saida": {
+                "id": 4349,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Medica\u00e7\u00e3o",
+                "descricao": "<p><strong>Selecione medi&ccedil;&atilde;o para tratamento com&nbsp;<span style=\"color:#c0392b\"><u>Anlodipino</u> </span>5mg/dia</strong></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4000,
+            "passo_de_entrada": {
+                "id": 4000,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita I - Enalapril",
+                "descricao": "<p>Enalapril 20mg 2x/dia + Anlodipino 5mg/dia</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3201,
+                "nome": "enalapril",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    2954,
+                    2955
+                ],
+                "argumentos": [
+                    "medicacao_linha_duplo_afro",
+                    "UM"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4362,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "-",
+            "passo_de_saida_id": 4349,
+            "passo_de_saida": {
+                "id": 4349,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Medica\u00e7\u00e3o",
+                "descricao": "<p><strong>Selecione medi&ccedil;&atilde;o para tratamento com&nbsp;<span style=\"color:#c0392b\"><u>Anlodipino</u> </span>5mg/dia</strong></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4350,
+            "passo_de_entrada": {
+                "id": 4350,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita II - Losartana",
+                "descricao": "<p>Losartana&nbsp;50mg 2x/dia + Anlodipino 5mg/dia</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3202,
+                "nome": "losartana",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    2954,
+                    2956
+                ],
+                "argumentos": [
+                    "medicacao_linha_duplo_afro",
+                    "DOIS"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4363,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "-",
+            "passo_de_saida_id": 4350,
+            "passo_de_saida": {
+                "id": 4350,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita II - Losartana",
+                "descricao": "<p>Losartana&nbsp;50mg 2x/dia + Anlodipino 5mg/dia</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4346,
+            "passo_de_entrada": {
+                "id": 4346,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno Quinzenal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 2952,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "atingiu_meta_pressorica_",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2953,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "manteve_meta_pressorica_",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2954,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "medicacao_linha_duplo_afro",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Enalapril 20mg",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Losartana 50mg",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 2955,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "UM",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 2956,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "DOIS",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3137" url="" name="Diabetes Mellitus" code="H048">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17516" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar cen&#xe1;rio do paciente diab&#xe9;tico" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.5 //@sequence.6">
+    <questions text="Qual cen&#xe1;rio o paciente se enquadra?" url="" id="9081">
+      <answers xsi:type="pathwayMetamodel:Choice" name="cenario_paciente" id="17302" weight="1" value="0.0">
+        <option description="Cen&#xe1;rio 1 - Paciente diab&#xe9;tico mal controlado, assintom&#xe1;tico ou com sintomas leves" weight="1"/>
+        <option description="Cen&#xe1;rio 2 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico ou com achados cl&#xed;nicos importantes (desidrata&#xe7;&#xe3;o, taquicardia)" weight="2"/>
+        <option description="Cen&#xe1;rio 3 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico e com sinais de gravidade (torporoso, com rebaixamento do n&#xed;vel de consci&#xea;ncia) - Cetoacidose Diab&#xe9;tica ou Estado Hiperglic&#xea;mico Hiperosmolar" weight="3"/>
+        <option description="Cen&#xe1;rio 4 - Paciente diab&#xe9;tico com hipoglicemia" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17517" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Alta" description="&lt;p>&lt;strong>&lt;u>Dar alta ambulatorial com as seguintes orienta&amp;ccedil;&amp;otilde;es:&lt;/u>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Estimular a ingest&amp;atilde;o h&amp;iacute;drica, se n&amp;atilde;o houver contra-indica&amp;ccedil;&amp;otilde;es.&lt;/li>&#xA;&#x9;&lt;li>Controle adequado do peso, com atividade f&amp;iacute;sica e dieta adequada.&lt;/li>&#xA;&#x9;&lt;li>Refor&amp;ccedil;ar a ader&amp;ecirc;ncia ao tratamento medicamentoso.&lt;/li>&#xA;&#x9;&lt;li>Ajustar esquema anti-diab&amp;eacute;tico se necess&amp;aacute;rio.&lt;/li>&#xA;&#x9;&lt;li>Se sinais de infec&amp;ccedil;&amp;atilde;o, iniciar antibioticoterapia conforme foco infeccioso suspeito.&lt;/li>&#xA;&#x9;&lt;li>Retornar a emerg&amp;ecirc;ncia se houver piora do quadro.&lt;/li>&#xA;&#x9;&lt;li>Orientar sobre sintomas, riscos e tratamento das eventuais hipoglicemias.&lt;/li>&#xA;&#x9;&lt;li>Tratar as comorbidades.&lt;/li>&#xA;&#x9;&lt;li>Acompanhamento ambulatorial com endocrinologista.&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.0 //@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17518" type="Tratamento" type_verbose="Tratamento" url="" name="[Cen&#xe1;rio 2] Conduta" description="&lt;p>-&amp;nbsp;&lt;u>Solicitar:&lt;/u> hemograma completo, glicemia s&amp;eacute;rica, ureia, creatinina, s&amp;oacute;dio, pot&amp;aacute;ssio. E, &lt;u>se necess&amp;aacute;rio:&lt;/u>&amp;nbsp;gasometria arterial, raio-x t&amp;oacute;rax e eletrocardiograma.&lt;br />&#xA;- Colocar o paciente deitado em observa&amp;ccedil;&amp;atilde;o.&lt;br />&#xA;- Prescrever jejum,&amp;nbsp;&lt;u>se for necess&amp;aacute;rio (se n&amp;aacute;useas e/ou v&amp;ocirc;mitos).&lt;/u>&lt;br />&#xA;- Realizar hidrata&amp;ccedil;&amp;atilde;o oral,&amp;nbsp;&lt;u>se n&amp;atilde;o houver contra-indica&amp;ccedil;&amp;otilde;es.&lt;/u>&lt;br />&#xA;- Obter acesso venoso e iniciar hidrata&amp;ccedil;&amp;atilde;o endovenosa com Soro Fisiol&amp;oacute;gico 0,9% de acordo coma condi&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica, condi&amp;ccedil;&amp;atilde;o cardiovascular.&lt;br />&#xA;- Iniciar tratamento medicamentoso sintom&amp;aacute;tico &lt;u>quando necess&amp;aacute;rio.&amp;nbsp;&lt;/u>&lt;br />&#xA;- Verificar glicemia capilar a cada 1 hora e prescrever Insulina Regular subcut&amp;acirc;nea de acordo com os n&amp;iacute;veis da glicemia capilar.&lt;br />&#xA;- Identificar e iniciar o tratamento dos dist&amp;uacute;rbios hidroeletrol&amp;iacute;ticos, inflamat&amp;oacute;rios, infecciosos, dentre outros existentes, se poss&amp;iacute;vel.&lt;br />&#xA;- Monitoramento dos sinais vitais frente &amp;agrave;s medidas prescritas.&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="GLICEMIA PELA FITA ( DX ) / HGT" procedure="75130013" frequency="1" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17519" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar melhora e exames" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Houve melhora cl&#xed;nica e n&#xed;veis de glicemia capilar aceit&#xe1;veis (&lt; 200,0 mg/dL)?" url="" id="9082">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="17303" weight="1" value="true"/>
+    </questions>
+    <questions text="Exames sem altera&#xe7;&#xf5;es importantes?" url="" id="9083">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exames_normais" id="17304" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17520" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der local" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Discutir caso com l&amp;iacute;der local.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.4 //@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17561" type="Tratamento" type_verbose="Tratamento" url="" name="[Cen&#xe1;rio 3] Conduta" description="&lt;p>&lt;strong>&lt;u>Deve ser encaminhado ao&lt;/u>&lt;/strong>&lt;strong>&lt;u> l&amp;iacute;der local.&lt;/u>&lt;/strong>&lt;br />&#xA;- &lt;u>Solicitar:&lt;/u> hemograma completo, ureia, creatinina, s&amp;oacute;dio, pot&amp;aacute;ssio, gasometria arterial, TAP,&amp;nbsp;TTPA. E, &lt;u>se necess&amp;aacute;rio:&amp;nbsp;&lt;/u>raio-x t&amp;oacute;rax e eletrocardiograma.&lt;br />&#xA;- Iniciar tratamento precoce de fator desencadeante (infec&amp;ccedil;&amp;atilde;o ou&amp;nbsp;abandono de tratamento) e conduzir a descompensa&amp;ccedil;&amp;atilde;o aguda.&lt;br />&#xA;- Oferecer suporte de oxig&amp;ecirc;nio, &lt;u>se houver evid&amp;ecirc;ncia de m&amp;aacute; satura&amp;ccedil;&amp;atilde;o sangu&amp;iacute;nea.&lt;/u>&lt;br />&#xA;- Instalar monitoriza&amp;ccedil;&amp;atilde;o cardiol&amp;oacute;gica cont&amp;iacute;nua.&amp;nbsp;&lt;br />&#xA;- Obter acesso venoso calibroso e iniciar reposi&amp;ccedil;&amp;atilde;o de flu&amp;iacute;dos.&lt;br />&#xA;- A insulinoterapia s&amp;oacute; deve ser iniciada 1-2 horas ap&amp;oacute;s iniciada a&amp;nbsp;ressuscita&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica e se os n&amp;iacute;veis de pot&amp;aacute;ssio s&amp;eacute;rico for &amp;ge; 3,3&amp;nbsp;mEq/L .&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.5">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="Diabetes mellitus mal controlada" clinical_indication="n/a"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="DIABETES MELLITUS" clinical_indication="n/a"/>
+    <procedure url="MONITOR CARDIACO" procedure="75130036" quantity="1"/>
+    <procedure url="O2 UMIDO C/ CATETER NASAL" procedure="75010001" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17562" type="Tratamento" type_verbose="Tratamento" url="" name="[Cen&#xe1;rio 4] Conduta" description="&lt;p>- Prescrever jejum, &lt;u>se for necess&amp;aacute;rio (se n&amp;aacute;useas e/ou v&amp;ocirc;mitos, ou rebaixamento do n&amp;iacute;vel de consci&amp;ecirc;ncia).&lt;/u>&lt;br />&#xA;- Obter acesso venoso e infundir imediatamente 50 mL de Glicose 50% endovenoso.&lt;br />&#xA;- O paciente com prov&amp;aacute;vel defici&amp;ecirc;ncia de tiamina&amp;nbsp;(vitamina B1) (desnutrido e/ou com hist&amp;oacute;rico de etilismo cr&amp;ocirc;nico e/ou&amp;nbsp;hepatopatia cr&amp;ocirc;nica)&amp;nbsp; necessita de reposi&amp;ccedil;&amp;atilde;o imediata com 100 mg&amp;nbsp;endovenosa, concomitantemente, com o aporte de glicose&amp;nbsp;para preven&amp;ccedil;&amp;atilde;o da S&amp;iacute;ndrome de Wernicke-Korsakoff. Na d&amp;uacute;vida, o&amp;nbsp;m&amp;eacute;dico dever&amp;aacute; prescrever a dupla terapia com tiamina e solu&amp;ccedil;&amp;atilde;o&amp;nbsp;glicosada a 50%.&lt;br />&#xA;- Iniciar hidrata&amp;ccedil;&amp;atilde;o endovenosa com Soro Fisiol&amp;oacute;gico 0,9% de acordo com&amp;nbsp;o estado de hidrata&amp;ccedil;&amp;atilde;o e condi&amp;ccedil;&amp;atilde;o&amp;nbsp;cardiovascular.&lt;br />&#xA;- Iniciar tratamento medicamentoso sintom&amp;aacute;tico quando necess&amp;aacute;rio.&lt;br />&#xA;- Verificar a glicemia capilar 15-30 minutos ap&amp;oacute;s a medica&amp;ccedil;&amp;atilde;o com glicose e repetir o tratamento, &lt;u>se necess&amp;aacute;rio.&lt;/u>&lt;br />&#xA;- Identificar e tratar os dist&amp;uacute;rbios hidroeletrol&amp;iacute;ticos, inflamat&amp;oacute;rios, infecciosos, existentes,&lt;u> se poss&amp;iacute;vel.&lt;/u>&lt;br />&#xA;- O paciente deve permanecer na sala de observa&amp;ccedil;&amp;atilde;o com reavalia&amp;ccedil;&amp;otilde;es cl&amp;iacute;nicas para verifica&amp;ccedil;&amp;atilde;o da melhora ou piora do quadro cl&amp;iacute;nico.&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <medication url="" med_id="48593" id="8999" name="GLICOSE 50% AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="5" cycles="1" treatement_time="8999" standard="null"/>
+    <procedure url="GLICEMIA PELA FITA ( DX ) / HGT" procedure="75130013" frequency="1" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17563" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar melhora" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Houve melhora cl&#xed;nica e dos n&#xed;veis de glicemia capilar aceit&#xe1;veis (> 70 mg/dL)?" url="" id="9084">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica" id="17305" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17564" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Alta" description="&lt;p>&lt;strong>&lt;u>Dar alta ambulatorial com as seguintes orienta&amp;ccedil;&amp;otilde;es:&lt;/u>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Estimular a ingest&amp;atilde;o h&amp;iacute;drica, se n&amp;atilde;o houver contra-indica&amp;ccedil;&amp;otilde;es.&lt;/li>&#xA;&#x9;&lt;li>Controle adequado do peso, com atividade f&amp;iacute;sica e dieta adequada.&lt;/li>&#xA;&#x9;&lt;li>Refor&amp;ccedil;ar a ader&amp;ecirc;ncia ao tratamento medicamentoso.&lt;/li>&#xA;&#x9;&lt;li>Ajustar esquema anti-diab&amp;eacute;tico se necess&amp;aacute;rio.&lt;/li>&#xA;&#x9;&lt;li>Orientar sobre sintomas, riscos e tratamento das eventuais hipoglicemias.&lt;/li>&#xA;&#x9;&lt;li>Tratar as comorbidades.&lt;/li>&#xA;&#x9;&lt;li>Acompanhamento ambulatorial com endocrinologista.&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.8"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17565" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Cen&#xe1;rio 1)" description="Cen&#xe1;rio 1">
+    <operation name="Cen&#xe1;rio 1" Operator="equal" id="17312">
+      <operand xsi:type="pathwayMetamodel:Choice" name="cenario_paciente" id="17302" weight="1" value="0.0">
+        <option description="Cen&#xe1;rio 1 - Paciente diab&#xe9;tico mal controlado, assintom&#xe1;tico ou com sintomas leves" weight="1"/>
+        <option description="Cen&#xe1;rio 2 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico ou com achados cl&#xed;nicos importantes (desidrata&#xe7;&#xe3;o, taquicardia)" weight="2"/>
+        <option description="Cen&#xe1;rio 3 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico e com sinais de gravidade (torporoso, com rebaixamento do n&#xed;vel de consci&#xea;ncia) - Cetoacidose Diab&#xe9;tica ou Estado Hiperglic&#xea;mico Hiperosmolar" weight="3"/>
+        <option description="Cen&#xe1;rio 4 - Paciente diab&#xe9;tico com hipoglicemia" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17306" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17566" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Cen&#xe1;rio 2)" description="Cen&#xe1;rio 2">
+    <operation name="Cen&#xe1;rio 2" Operator="equal" id="17313">
+      <operand xsi:type="pathwayMetamodel:Choice" name="cenario_paciente" id="17302" weight="1" value="0.0">
+        <option description="Cen&#xe1;rio 1 - Paciente diab&#xe9;tico mal controlado, assintom&#xe1;tico ou com sintomas leves" weight="1"/>
+        <option description="Cen&#xe1;rio 2 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico ou com achados cl&#xed;nicos importantes (desidrata&#xe7;&#xe3;o, taquicardia)" weight="2"/>
+        <option description="Cen&#xe1;rio 3 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico e com sinais de gravidade (torporoso, com rebaixamento do n&#xed;vel de consci&#xea;ncia) - Cetoacidose Diab&#xe9;tica ou Estado Hiperglic&#xea;mico Hiperosmolar" weight="3"/>
+        <option description="Cen&#xe1;rio 4 - Paciente diab&#xe9;tico com hipoglicemia" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17307" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="17567" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.3" id="17568" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (houve melhora e exames normais)" description="houve melhora e exames normais">
+    <operation name="houve melhora e exames normais" Operator="and" id="17314">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="17303" weight="1" value="true"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_normais" id="17304" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="17569" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (n&#xe3;o houve melhora e/ou exames alterados)" description="n&#xe3;o houve melhora e/ou exames alterados">
+    <operation name="n&#xe3;o houve melhora e/ou exames alterados" Operator="or" id="17315">
+      <operand xsi:type="pathwayMetamodel:Operation" name="exames_ruins" id="17310">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_normais" id="17304" weight="1" value="true"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem_melhora" id="17311">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="17303" weight="1" value="true"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="17570" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Cen&#xe1;rio 3)" description="Cen&#xe1;rio 3">
+    <operation name="Cen&#xe1;rio 3" Operator="equal" id="17316">
+      <operand xsi:type="pathwayMetamodel:Choice" name="cenario_paciente" id="17302" weight="1" value="0.0">
+        <option description="Cen&#xe1;rio 1 - Paciente diab&#xe9;tico mal controlado, assintom&#xe1;tico ou com sintomas leves" weight="1"/>
+        <option description="Cen&#xe1;rio 2 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico ou com achados cl&#xed;nicos importantes (desidrata&#xe7;&#xe3;o, taquicardia)" weight="2"/>
+        <option description="Cen&#xe1;rio 3 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico e com sinais de gravidade (torporoso, com rebaixamento do n&#xed;vel de consci&#xea;ncia) - Cetoacidose Diab&#xe9;tica ou Estado Hiperglic&#xea;mico Hiperosmolar" weight="3"/>
+        <option description="Cen&#xe1;rio 4 - Paciente diab&#xe9;tico com hipoglicemia" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="17308" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="17571" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Cen&#xe1;rio 4)" description="Cen&#xe1;rio 4">
+    <operation name="Cen&#xe1;rio 4" Operator="equal" id="17317">
+      <operand xsi:type="pathwayMetamodel:Choice" name="cenario_paciente" id="17302" weight="1" value="0.0">
+        <option description="Cen&#xe1;rio 1 - Paciente diab&#xe9;tico mal controlado, assintom&#xe1;tico ou com sintomas leves" weight="1"/>
+        <option description="Cen&#xe1;rio 2 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico ou com achados cl&#xed;nicos importantes (desidrata&#xe7;&#xe3;o, taquicardia)" weight="2"/>
+        <option description="Cen&#xe1;rio 3 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico e com sinais de gravidade (torporoso, com rebaixamento do n&#xed;vel de consci&#xea;ncia) - Cetoacidose Diab&#xe9;tica ou Estado Hiperglic&#xea;mico Hiperosmolar" weight="3"/>
+        <option description="Cen&#xe1;rio 4 - Paciente diab&#xe9;tico com hipoglicemia" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="17309" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="17572" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="17573" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Houve melhora)" description="Houve melhora">
+    <operation name="Houve melhora" Operator="affirmation" id="17318">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica" id="17305" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.7" id="17574" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Sem melhora cl&#xed;nica)" description="Sem melhora cl&#xed;nica">
+    <operation name="Sem melhora cl&#xed;nica" id="17319">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica" id="17305" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <operation name="exames_ruins" id="17310">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_normais" id="17304" weight="1" value="true"/>
+  </operation>
+  <operation name="sem_melhora" id="17311">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="17303" weight="1" value="true"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="cenario_paciente" id="17302" weight="1" value="0.0">
+    <option description="Cen&#xe1;rio 1 - Paciente diab&#xe9;tico mal controlado, assintom&#xe1;tico ou com sintomas leves" weight="1"/>
+    <option description="Cen&#xe1;rio 2 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico ou com achados cl&#xed;nicos importantes (desidrata&#xe7;&#xe3;o, taquicardia)" weight="2"/>
+    <option description="Cen&#xe1;rio 3 - Paciente diab&#xe9;tico mal controlado, sintom&#xe1;tico e com sinais de gravidade (torporoso, com rebaixamento do n&#xed;vel de consci&#xea;ncia) - Cetoacidose Diab&#xe9;tica ou Estado Hiperglic&#xea;mico Hiperosmolar" weight="3"/>
+    <option description="Cen&#xe1;rio 4 - Paciente diab&#xe9;tico com hipoglicemia" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="17303" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exames_normais" id="17304" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica" id="17305" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17306" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="17307" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="17308" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="17309" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

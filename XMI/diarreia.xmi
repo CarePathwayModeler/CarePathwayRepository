@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3148" url="" name="Diarr&#xe9;ia" code="H017">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18085" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Plano B] Reavalia&#xe7;&#xe3;o" description="Avaliar se paciente exibiu melhora" inputSequences="//@sequence.37 //@sequence.42" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Paciente apresentou melhora?" url="" id="9277">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_plano_b" id="17795" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18086" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Plano C" description="Definir conduta com l&#xed;der local" isTerminal="true" inputSequences="//@sequence.4 //@sequence.20 //@sequence.35"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18087" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Hipovolemia" description="Verificar se paciente est&#xe1; hipovol&#xea;mico" inputSequences="//@sequence.45" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Olhos fundos?" url="" id="9278">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_olhos_fundos" id="17796" weight="1" value="false"/>
+    </questions>
+    <questions text="Aus&#xea;ncia de l&#xe1;grimas?" url="" id="9279">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_ausencia_de_lagrimas" id="17797" weight="1" value="false"/>
+    </questions>
+    <questions text="Boca e l&#xed;ngua secas?" url="" id="9280">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_boca_seca" id="17798" weight="1" value="false"/>
+    </questions>
+    <questions text="Sede?" url="" id="9301">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_sede" id="17799" weight="1" value="false"/>
+    </questions>
+    <questions text="Turgor da pele reduzido?" url="" id="9302">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_turgor_reduzido" id="17800" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18088" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Severidade da Hipovolemia" description="Avaliar severidade do quadro de hipovolemia" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.5">
+    <questions text="Paciente encontra-se com incapacidade de beber l&#xed;quidos, v&#xf4;mitos incoerc&#xed;veis, turgor de pele reduzido, febre ou com sangue, pus ou muco nas fezes?" url="" id="9303">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterio_severidade" id="17821" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18089" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Fluxo A] Complicacoes" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.6 //@sequence.7 //@sequence.8 //@sequence.9 //@sequence.10 //@sequence.11 //@sequence.12 //@sequence.41">
+    <questions text="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa?" url="" id="9304">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+    </questions>
+    <questions text="Constipa&#xe7;&#xe3;o cr&#xf4;nica ou fecaloma?" url="" id="9305">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente idoso ou com comorbidades?" url="" id="9306">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18090" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo A] Tratamento Complicacoes I" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.13">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18091" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo A] Tratamento Complicacoes II" description="Solicite o Raio X para avaliar o paciente e realize toque retal para excluir diarreia paradoxal." inputSequences="//@sequence.7" outputSequences="//@sequence.14">
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18092" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo A] Tratamento Complicacoes III" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.15">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18093" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo A] Tratamento Complicacoes I &amp; III" description="ATEN&#xc7;&#xc3;O: &#xA;&#xA;Realizar toque retal para excluir diarreia paradoxal" inputSequences="//@sequence.10" outputSequences="//@sequence.16">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18094" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo A] Tratamento Complicacoes I &amp; II" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.17">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="Protocolo Diarr&#xe9;ia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18095" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo A] Tratamento Complicacoes II &amp; III" description="ATEN&#xc7;&#xc3;O: &#xA;Realizar toque retal para excluir diarreia paradoxal" inputSequences="//@sequence.11" outputSequences="//@sequence.18">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo Diarreia" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo Diarreia" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo Diarreia" clinical_indication="N/A"/>
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18096" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo A] Tratamento Complicacoes I, II &amp; III" description="ATEN&#xc7;&#xc3;O: &#xA;Realizar toque retal para excluir diarreia paradoxal" inputSequences="//@sequence.12" outputSequences="//@sequence.19">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18097" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Fluxo A] Avaliar Exames de Apoio" description="" inputSequences="//@sequence.13 //@sequence.14 //@sequence.15 //@sequence.16 //@sequence.17 //@sequence.18 //@sequence.19" outputSequences="//@sequence.20 //@sequence.36">
+    <questions text="Exames apresentam resultados alterados?" url="" id="9307">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_complicacao_alterados" id="17825" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18098" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Fluxo B] Complicacoes" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.21 //@sequence.22 //@sequence.23 //@sequence.24 //@sequence.25 //@sequence.26 //@sequence.27 //@sequence.40">
+    <questions text="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa?" url="" id="9308">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+    </questions>
+    <questions text="Constipa&#xe7;&#xe3;o cr&#xf4;nica ou fecaloma?" url="" id="9309">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente idoso ou com comorbidades?" url="" id="9310">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18099" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo B] Tratamento Complicacoes I" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM ap&#xf3;s solicitar os exames:&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)" inputSequences="//@sequence.21" outputSequences="//@sequence.28">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18100" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo B] Tratamento Complicacoes II" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM ap&#xf3;s solicitar os exames:&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)&#xA;&#xA;Solicite o Raio X (via protocolo) para avaliar o paciente.&#xA;Realize toque retal para excluir diarreia paradoxal." inputSequences="//@sequence.22" outputSequences="//@sequence.29">
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18141" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo B] Tratamento Complicacoes III" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM ap&#xf3;s solicitar os exames:&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)" inputSequences="//@sequence.23" outputSequences="//@sequence.30">
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de DIarr&#xe9;ia"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18142" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo B] Tratamento Complicacoes I &amp; III" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM ap&#xf3;s solicitar os exames:&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)" inputSequences="//@sequence.25" outputSequences="//@sequence.31">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18143" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo B] Tratamento Complicacoes I &amp; II" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM ap&#xf3;s solicitar os exames:&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)" inputSequences="//@sequence.24" outputSequences="//@sequence.32">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="Protocolo Diarr&#xe9;ia"/>
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="Protocolo Diarr&#xe9;ia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18144" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo B] Tratamento Complicacoes II &amp; III" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM ap&#xf3;s solicitar os exames:&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)" inputSequences="//@sequence.26" outputSequences="//@sequence.33">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo Diarreia" clinical_indication="Protocolo Diarr&#xe9;ia"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo Diarreia" clinical_indication="Protocolo Diarr&#xe9;ia"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo Diarreia" clinical_indication="Protocolo Diarreia"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="Protocolo Diarreia" clinical_indication="Protocolo Diarreia"/>
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo Diarr&#xe9;ia" clinical_indication="Protocolo Diarr&#xe9;ia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18145" type="Tratamento" type_verbose="Tratamento" url="" name="[Fluxo B] Tratamento Complicacoes I, II &amp; III" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM ap&#xf3;s solicitar os exames:&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)" inputSequences="//@sequence.27" outputSequences="//@sequence.34">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="MAGNESIO  (SANGUE)" exam_id="28011120" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="Protocolo de Diarr&#xe9;ia" clinical_indication="Protocolo de Diarr&#xe9;ia"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Diarreia" clinical_indication="Protocolo de Diarreia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18146" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Fluxo B] Avaliar Exames de Apoio" description="" inputSequences="//@sequence.28 //@sequence.29 //@sequence.30 //@sequence.31 //@sequence.32 //@sequence.33 //@sequence.34" outputSequences="//@sequence.35 //@sequence.37">
+    <questions text="Exames apresentam resultados alterados?" url="" id="9311">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_b_complicacao_alterados" id="17829" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18147" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Plano A] Informa&#xe7;&#xf5;es Auxiliares" description="" inputSequences="//@sequence.3 //@sequence.36 //@sequence.41" outputSequences="//@sequence.38 //@sequence.39">
+    <questions text="Paciente maior de 70 anos, cardiopatas, imunocomprometidos ou apresenta algum dos seguintes fatores: febre, diarreia com sangue, dor abdominal severa." url="" id="9312">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_final_I_a" id="17830" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18148" type="Receita" type_verbose="Receita" url="" name="Plano A [Simples]" description="" isTerminal="true" inputSequences="//@sequence.48 //@sequence.50 //@sequence.52">
+    <item id="4735" url="" name="Butilbrometo de Escopolamina + Dipirona ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Se dor abdominal"/>
+    <item id="4736" url="" name="Bromoprida 10mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="se n&#xe1;usea ou v&#xf4;mitos"/>
+    <item id="4737" url="" name="Floratil 200mg ...... 1cx" med_code="-1" presentation="CAPS" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4738" url="" name="Solu&#xe7;&#xe3;o de Reidrata&#xe7;&#xe3;o Oral ...... 10pct" med_code="-1" presentation="PCT" access="1" quantity="1" period="3" period_unit="DD" frequency="12" frequency_unit="DD" orientations="Diluir 1 pacote em 1L de &#xe1;gua e tomar a vontade durante o dia."/>
+    <item id="4739" url="" name="Racecadotrila 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="4740" url="" name="Ondansetrona 4Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas ou v&#xf4;mito"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18149" type="Receita" type_verbose="Receita" url="" name="Plano A [Sintomas I]" description="" isTerminal="true" inputSequences="//@sequence.47">
+    <item id="4761" url="" name="Butilbrometo de Escopolamina + Dipirona ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se dor abdominal"/>
+    <item id="4762" url="" name="Bromoprida 10mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;usea ou v&#xf4;mito"/>
+    <item id="4763" url="" name="Floratil 200mg ...... 1cx" med_code="-1" presentation="CAPS" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4764" url="" name="Ciprofloxacino 500mg ...... 6cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4765" url="" name="Solu&#xe7;&#xe3;o de Reidrata&#xe7;&#xe3;o Oral ...... 10pct" med_code="-1" presentation="PCT" access="1" quantity="1" period="3" period_unit="DD" frequency="12" frequency_unit="DD" orientations="Diluir 1 pacote em 1L de &#xe1;gua e tomar a vontade durante o dia."/>
+    <item id="4766" url="" name="Racecadotrila 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="4767" url="" name="Ondansetrona 4Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas ou v&#xf4;mito"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18150" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Plano B] Tratamento Padr&#xe3;o" description="ATEN&#xc7;&#xc3;O:&#xA;Realizar hidrata&#xe7;&#xe3;o do paciente no PEP-SAM:&#xA;&#xA;SF 0,9% 30ml/kg nas primeiras 2h (se paciente cardiopata, realizar al&#xed;quotas 250ml, reavaliando o paciente)&#xA;&#xA;Reavaliar paciente, se melhora dos sinais de desidrata&#xe7;&#xe3;o, conseguir realizar ingesta via oral e n&#xe3;o tiver aguardando exames ou exames sem altera&#xe7;&#xf5;es, alta com orienta&#xe7;&#xf5;es do Plano A&#xA;&#xA;Se paciente n&#xe3;o melhorar, ir para o Plano C" inputSequences="//@sequence.40" outputSequences="//@sequence.42"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18151" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA (Avaliar Sepse)" description="" isInitial="true" outputSequences="//@sequence.43 //@sequence.45">
+    <questions text="Confus&#xe3;o Mental" url="" id="9313">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="17831" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt; 100" url="" id="9314">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="17832" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 22" url="" id="9315">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="17833" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18152" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar ao Eixo Vermelho" description="Paciente com sinais de sepse. Encaminhar ao eixo vermelho." inputSequences="//@sequence.43" outputSequences="//@sequence.44"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="18153" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="Encaminhar paciente ao protocolo de tratamento de SEPSE." isTerminal="true" inputSequences="//@sequence.44">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18154" type="Tratamento" type_verbose="Tratamento" url="" name="[Hipovolemia Severa] Tratamento" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.46">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <medication url="" med_id="43800" id="9223" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9223" standard="null"/>
+    <medication url="" med_id="43290" id="9224" name="RINGER C/LACTATO 500ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9224" standard="null"/>
+    <medication url="" med_id="41564" id="9225" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9225" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:3820,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="9226" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9226" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:3821,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="36064" id="9227" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9227" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:3822,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1327}"/>
+    <medication url="" med_id="36161" id="9228" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9228" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:3823,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+    <medication url="" med_id="49581" id="9229" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9229" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:3824,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18155" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Infec&#xe7;&#xe3;o bacteriana?" description="Aventar possibilidade de infec&#xe7;&#xe3;o bacteriana." inputSequences="//@sequence.46 //@sequence.49" outputSequences="//@sequence.47 //@sequence.48">
+    <questions text="Apresenta infec&#xe7;&#xe3;o bacteriana?" url="" id="9316">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_bacteriana" id="17834" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18156" type="Tratamento" type_verbose="Tratamento" url="" name="[Sintomas I] Tratamento" description="" inputSequences="//@sequence.38" outputSequences="//@sequence.49">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Diarr&#xe9;ia" clinical_indication="n/a"/>
+    <medication url="" med_id="43800" id="9230" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9230" standard="null"/>
+    <medication url="" med_id="43290" id="9231" name="RINGER C/LACTATO 500ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9231" standard="null"/>
+    <medication url="" med_id="41564" id="9232" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9232" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:3825,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="36064" id="9233" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9233" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:3826,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1327}"/>
+    <medication url="" med_id="36161" id="9234" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9234" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:3827,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+    <medication url="" med_id="49581" id="9235" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9235" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:3828,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="126122" id="9236" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9236" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:3829,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18157" type="Tratamento" type_verbose="Tratamento" url="" name="Hidrata&#xe7;&#xe3;o" description="" inputSequences="//@sequence.51" outputSequences="//@sequence.50">
+    <medication url="" med_id="43800" id="9237" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9237" standard="null"/>
+    <medication url="" med_id="43290" id="9238" name="RINGER C/LACTATO 500ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9238" standard="null"/>
+    <medication url="" med_id="36161" id="9239" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9239" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:3830,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+    <medication url="" med_id="36064" id="9240" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9240" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:3831,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1327}"/>
+    <medication url="" med_id="49581" id="9261" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9261" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:3832,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="41564" id="9262" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9262" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:3833,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="9263" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9263" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:3834,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18158" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Paciente Sintom&#xe1;tico?" description="" inputSequences="//@sequence.39" outputSequences="//@sequence.51 //@sequence.52">
+    <questions text="Paciente nesse momento apresenta c&#xf3;licas, n&#xe1;useas e/ou v&#xf4;mitos?" url="" id="9317">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomatico" id="17835" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="18159" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (2 ou mais fatores)" description="2 ou mais fatores">
+    <operation name="Criterios Hipovolemia >= 2" Operator="greaterOrEqual" id="17853">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Hipovolemia" Operator="addition" id="17840">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_olhos_fundos" id="17796" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_ausencia_de_lagrimas" id="17797" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_boca_seca" id="17798" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_sede" id="17799" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_turgor_reduzido" id="17800" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17836" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="18160" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (menos de 2 fatores)" description="menos de 2 fatores">
+    <operation name="Criterios Hipovolemia &lt; 2" Operator="lessThan" id="17854">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Hipovolemia" Operator="addition" id="17840">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_olhos_fundos" id="17796" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_ausencia_de_lagrimas" id="17797" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_boca_seca" id="17798" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_sede" id="17799" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_turgor_reduzido" id="17800" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17836" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.3" id="18161" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (sem fatores)" description="sem fatores">
+    <operation name="Sem fator de severidade" id="17855">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterio_severidade" id="17821" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.0" id="18162" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (houve melhora)" description="houve melhora">
+    <operation name="houve melhora" Operator="affirmation" id="17856">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_plano_b" id="17795" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="18163" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora" id="17857">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_plano_b" id="17795" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.3" id="18164" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (1 ou mais fatores)" description="Possui crit&#xe9;rio de severidade">
+    <operation name="Com crit&#xe9;rio de severidade" Operator="affirmation" id="17858">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterio_severidade" id="17821" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="18165" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (Comp I)" description="">
+    <operation name="Complicacao I" Operator="and" id="17859">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_constipacao_ou_fecaloma" id="17850">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_idoso_ou_comorbidades" id="17851">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="18166" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Comp II)" description="">
+    <operation name="Complicacoes II" Operator="and" id="17860">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_irritacao_peritoneal" id="17849">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_idoso_ou_comorbidades" id="17851">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.4" id="18167" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Comp III)" description="">
+    <operation name="Complicacoes III" Operator="and" id="17861">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_irritacao_peritoneal" id="17849">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_constipacao_ou_fecaloma" id="17850">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.4" id="18168" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (Comp I e II)" description="">
+    <operation name="Complicacoes I &amp; II" Operator="and" id="17862">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_idoso_ou_comorbidades" id="17851">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.4" id="18169" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Comp I e III)" description="">
+    <operation name="Complicacoes I &amp; III" Operator="and" id="17863">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_constipacao_ou_fecaloma" id="17850">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.4" id="18170" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (Comp II e III)" description="">
+    <operation name="Complicacoes II &amp; III" Operator="and" id="17864">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_irritacao_peritoneal" id="17849">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.4" id="18171" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (Comp I, II e III)" description="">
+    <operation name="Complicacoes I, II &amp; III" Operator="and" id="17865">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.5" id="18172" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.6" id="18173" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.7" id="18174" type="Sequencia" type_verbose="Sequencia" url="" name="S17" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.8" id="18175" type="Sequencia" type_verbose="Sequencia" url="" name="S18" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.9" id="18176" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="18177" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="18178" type="Sequencia" type_verbose="Sequencia" url="" name="S21" description=""/>
+  <sequence inputStep="//@element.1" outputStep="//@element.12" id="18179" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (Exames de apoio alterados)" description="">
+    <operation name="Exames de apoio alterados" Operator="affirmation" id="17866">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_complicacao_alterados" id="17825" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="18180" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (Comp I)" description="">
+    <operation name="Complicacao I" Operator="and" id="17867">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17847">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_idoso_ou_comorbidades" id="17848">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.13" id="18181" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (Comp II)" description="">
+    <operation name="Complicacao II" Operator="and" id="17868">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_irritacao_peritoneal" id="17846">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_idoso_ou_comorbidades" id="17848">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.13" id="18182" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (Comp III)" description="">
+    <operation name="Complicacao III" Operator="and" id="17869">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_irritacao_peritoneal" id="17846">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17847">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.13" id="18183" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (Comp I &amp; II)" description="">
+    <operation name="Complicacoes I &amp; II" Operator="and" id="17870">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_idoso_ou_comorbidades" id="17848">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.13" id="18184" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (Comp I &amp; III)" description="">
+    <operation name="Complicacoes I &amp; III" Operator="and" id="17871">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17847">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.13" id="18185" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (Comp II &amp; III)" description="">
+    <operation name="Complicacoes II &amp; III" Operator="and" id="17872">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_irritacao_peritoneal" id="17846">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.13" id="18186" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (Comp I, II &amp; III)" description="">
+    <operation name="Complicacoes I, II &amp; III" Operator="and" id="17873">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.14" id="18187" type="Sequencia" type_verbose="Sequencia" url="" name="S30" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.15" id="18188" type="Sequencia" type_verbose="Sequencia" url="" name="S31" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.16" id="18189" type="Sequencia" type_verbose="Sequencia" url="" name="S32" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.17" id="18190" type="Sequencia" type_verbose="Sequencia" url="" name="S33" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.18" id="18191" type="Sequencia" type_verbose="Sequencia" url="" name="S34" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="18192" type="Sequencia" type_verbose="Sequencia" url="" name="S35" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.20" id="18193" type="Sequencia" type_verbose="Sequencia" url="" name="S36" description=""/>
+  <sequence inputStep="//@element.1" outputStep="//@element.21" id="18194" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (Exames de apoio alterados)" description="">
+    <operation name="Exames de apoio alterados" Operator="affirmation" id="17874">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_b_complicacao_alterados" id="17829" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.12" id="18195" type="Sequencia" type_verbose="Sequencia" url="" name="S38 (Exames de Apoio Normais)" description="">
+    <operation name="exames-apoio-normais" id="17875">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_complicacao_alterados" id="17825" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.21" id="18196" type="Sequencia" type_verbose="Sequencia" url="" name="S39 (Exames de Apoio Normais)" description="">
+    <operation name="exames de apoio normais" id="17876">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_b_complicacao_alterados" id="17829" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.22" id="18197" type="Sequencia" type_verbose="Sequencia" url="" name="S40 (A - Sintoma I)" description="">
+    <operation name="A - Sintoma I" Operator="affirmation" id="17877">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_final_I_a" id="17830" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.22" id="18198" type="Sequencia" type_verbose="Sequencia" url="" name="S43 (Sem sintomas adicionais)" description="">
+    <operation name="Sem sintomas adicionais" Operator="affirmation" id="17878">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Not Sintomas Final I a" id="17842">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_final_I_a" id="17830" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.13" id="18199" type="Sequencia" type_verbose="Sequencia" url="" name="s44 (sem fatores agravantes)" description="">
+    <operation name="plano-b-sem-complicacoes" Operator="and" id="17879">
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_irritacao_peritoneal" id="17846">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17847">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_b_idoso_ou_comorbidades" id="17848">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.4" id="18200" type="Sequencia" type_verbose="Sequencia" url="" name="s45 (plano a sem complicacoes)" description="">
+    <operation name="plano-a-sem-complicacoes" Operator="and" id="17880">
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_irritacao_peritoneal" id="17849">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_constipacao_ou_fecaloma" id="17850">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_pre_avaliacao_a_idoso_ou_comorbidades" id="17851">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.25" id="18201" type="Sequencia" type_verbose="Sequencia" url="" name="s45" description=""/>
+  <sequence inputStep="//@element.27" outputStep="//@element.26" id="18202" type="Sequencia" type_verbose="Sequencia" url="" name="S46 (Quick SOFA >= 2)" description="Quick SOFA >= 2">
+    <operation name="Quick SOFA >= 2" Operator="greaterOrEqual" id="17881">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="17852">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="17831" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="17832" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="17833" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17836" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.27" id="18203" type="Sequencia" type_verbose="Sequencia" url="" name="S47" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.26" id="18204" type="Sequencia" type_verbose="Sequencia" url="" name="S48 (Quick SOFA &lt; 2)" description="Quick SOFA &lt; 1">
+    <operation name="Quick SOFA &lt; 2" Operator="lessThan" id="17882">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="17852">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="17831" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="17832" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="17833" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17836" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.29" id="18205" type="Sequencia" type_verbose="Sequencia" url="" name="S49" description="Incondicional"/>
+  <sequence inputStep="//@element.24" outputStep="//@element.30" id="18206" type="Sequencia" type_verbose="Sequencia" url="" name="S50 (paciente com infec&#xe7;&#xe3;o)" description="paciente com infec&#xe7;&#xe3;o">
+    <operation name="paciente com infec&#xe7;&#xe3;o" Operator="affirmation" id="17883">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_bacteriana" id="17834" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.30" id="18207" type="Sequencia" type_verbose="Sequencia" url="" name="S51 (paciente sem infec&#xe7;&#xe3;o)" description="paciente sem infec&#xe7;&#xe3;o">
+    <operation name="paciente sem infec&#xe7;&#xe3;o" id="17884">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_bacteriana" id="17834" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.31" id="18208" type="Sequencia" type_verbose="Sequencia" url="" name="S50" description="Incondicional"/>
+  <sequence inputStep="//@element.23" outputStep="//@element.32" id="18209" type="Sequencia" type_verbose="Sequencia" url="" name="S51" description="Incondicional"/>
+  <sequence inputStep="//@element.32" outputStep="//@element.33" id="18210" type="Sequencia" type_verbose="Sequencia" url="" name="S52 (paciente sintomatico)" description="paciente sintomatico">
+    <operation name="paciente sintomatico" Operator="affirmation" id="17885">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomatico" id="17835" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.33" id="18211" type="Sequencia" type_verbose="Sequencia" url="" name="S53 (paciente n&#xe3;o sintomatico)" description="paciente n&#xe3;o sintomatico">
+    <operation name="paciente n&#xe3;o sintomatico" id="17886">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomatico" id="17835" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Sinais B >= 2" Operator="greaterOrEqual" id="17838">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17836" weight="1" value="2.0"/>
+  </operation>
+  <operation name="Sinais C &lt; 2" Operator="lessThan" id="17839">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17836" weight="1" value="2.0"/>
+  </operation>
+  <operation name="Crit&#xe9;rios Hipovolemia" Operator="addition" id="17840">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_olhos_fundos" id="17796" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_ausencia_de_lagrimas" id="17797" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_boca_seca" id="17798" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_sede" id="17799" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_turgor_reduzido" id="17800" weight="1" value="false"/>
+  </operation>
+  <operation name="Fatores de Severidade" Operator="addition" id="17841"/>
+  <operation name="Not Sintomas Final I a" id="17842">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_final_I_a" id="17830" weight="1" value="false"/>
+  </operation>
+  <operation name="Not Sintomas Final II a" id="17843"/>
+  <operation name="Not Sintomas Final I b" id="17844"/>
+  <operation name="Not Sintomas Final II b" id="17845"/>
+  <operation name="not_pre_avaliacao_b_irritacao_peritoneal" id="17846">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+  </operation>
+  <operation name="not_pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17847">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+  </operation>
+  <operation name="not_pre_avaliacao_b_idoso_ou_comorbidades" id="17848">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+  </operation>
+  <operation name="not_pre_avaliacao_a_irritacao_peritoneal" id="17849">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+  </operation>
+  <operation name="not_pre_avaliacao_a_constipacao_ou_fecaloma" id="17850">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+  </operation>
+  <operation name="not_pre_avaliacao_a_idoso_ou_comorbidades" id="17851">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+  </operation>
+  <operation name="Quick SOFA" Operator="addition" id="17852">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="17831" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="17832" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="17833" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_plano_b" id="17795" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_olhos_fundos" id="17796" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_ausencia_de_lagrimas" id="17797" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_boca_seca" id="17798" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_sede" id="17799" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hipovolemia_turgor_reduzido" id="17800" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterio_severidade" id="17821" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_irritacao_peritoneal" id="17822" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_constipacao_ou_fecaloma" id="17823" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_a_idoso_ou_comorbidades" id="17824" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_complicacao_alterados" id="17825" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_irritacao_peritoneal" id="17826" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_constipacao_cronica_e_fecaloma" id="17827" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pre_avaliacao_b_idoso_ou_comorbidades" id="17828" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exames_de_apoio_b_complicacao_alterados" id="17829" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_final_I_a" id="17830" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="17831" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="17832" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="17833" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="infeccao_bacteriana" id="17834" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sintomatico" id="17835" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="17836" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17837" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,1945 @@
+{
+    "id": 3132,
+    "url": "",
+    "codigo": "H035",
+    "nome": "Aminiorrexe Prematura",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Obstetr\u00edcia",
+    "repositorio_id": 365,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:37:43.748474-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:37:43.748474-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:37:53.796786-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17177,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento Inicial",
+            "descricao": "Solicite os exames para iniciar o tratamento do paciente.",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Aminiorrexe Prematura",
+                    "indicacao_clinica": "Protocolo de Aminiorrexe Prematura",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Aminiorrexe Prematura",
+                    "indicacao_clinica": "Protocolo de Aminiorrexe Prematura",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "amniorexe  prematura",
+                    "indicacao_clinica": "amniorexe  prematura",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA",
+                    "exame": "99130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Amniorrexe Prematura",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17231,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "s1",
+                    "passo_de_saida_id": 17177,
+                    "passo_de_saida": "Tratamento: Tratamento Inicial",
+                    "passo_de_entrada_id": 17178,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resultado dos Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17178,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Resultado dos Exames",
+            "descricao": "Verifique o resultados dos exames.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8962,
+                    "url": "",
+                    "texto": "H\u00e1 infec\u00e7\u00e3o?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16986,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "presenca-infeccao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17231,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "s1",
+                    "passo_de_saida_id": 17177,
+                    "passo_de_saida": "Tratamento: Tratamento Inicial",
+                    "passo_de_entrada_id": 17178,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resultado dos Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17232,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "s2",
+                    "passo_de_saida_id": 17178,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado dos Exames",
+                    "passo_de_entrada_id": 17179,
+                    "passo_de_entrada": "Tratamento: Tratamento Corioamnionite",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17233,
+                    "url": "",
+                    "nome": "s3",
+                    "descricao": "s3",
+                    "passo_de_saida_id": 17178,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado dos Exames",
+                    "passo_de_entrada_id": 17180,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17179,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento Corioamnionite",
+            "descricao": "Inicie o tratamento para Corioamnionite.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8981,
+                    "url": "",
+                    "medicamento": 37400,
+                    "codigo": "",
+                    "nome": "GENTAMICINA 80 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "MG",
+                    "unidade_display": "MILIGRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 240,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "24",
+                    "frequencia_display": "24/24",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8982,
+                    "url": "",
+                    "medicamento": 38822,
+                    "codigo": "",
+                    "nome": "DALACIN 300 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "MG",
+                    "unidade_display": "MILIGRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 900,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "8",
+                    "frequencia_display": "8/8",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17232,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "s2",
+                    "passo_de_saida_id": 17178,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado dos Exames",
+                    "passo_de_entrada_id": 17179,
+                    "passo_de_entrada": "Tratamento: Tratamento Corioamnionite",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17234,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "s4",
+                    "passo_de_saida_id": 17179,
+                    "passo_de_saida": "Tratamento: Tratamento Corioamnionite",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17180,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Idade Gestacional",
+            "descricao": "Verifique a idade gestacional da paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8963,
+                    "url": "",
+                    "texto": "Gesta\u00e7\u00e3o < 24 semanas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16987,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ig-menor-24",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8964,
+                    "url": "",
+                    "texto": "Gesta\u00e7\u00e3o entre 24 e 33 semanas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16988,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ig-entre-24-33",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8965,
+                    "url": "",
+                    "texto": "Gesta\u00e7\u00e3o >= 34 semanas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16989,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ig-maior-igual-34",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17233,
+                    "url": "",
+                    "nome": "s3",
+                    "descricao": "s3",
+                    "passo_de_saida_id": 17178,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado dos Exames",
+                    "passo_de_entrada_id": 17180,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17235,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "s5",
+                    "passo_de_saida_id": 17180,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "passo_de_entrada_id": 17221,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conduta Individualizada",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17236,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "s6",
+                    "passo_de_saida_id": 17180,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "passo_de_entrada_id": 17222,
+                    "passo_de_entrada": "Tratamento: Tratamento Gesta\u00e7\u00e3o Entre 24 e 33 Semanas",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17237,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "s7",
+                    "passo_de_saida_id": 17180,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "passo_de_entrada_id": 17223,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Tempo de Aminiorrexe",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17221,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Conduta Individualizada",
+            "descricao": "Texto da conduta individualizada",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17235,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "s5",
+                    "passo_de_saida_id": 17180,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "passo_de_entrada_id": 17221,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conduta Individualizada",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17242,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "s12",
+                    "passo_de_saida_id": 17221,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conduta Individualizada",
+                    "passo_de_entrada_id": 17228,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17222,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento Gesta\u00e7\u00e3o Entre 24 e 33 Semanas",
+            "descricao": "Sugerimos,  iniciar antibi\u00f3tico para prolongar lat\u00eancia. Ap\u00f3s 48 horas, indicar substitui\u00e7\u00e3o do tratamento por: AMOXICILINA 500 MG VO 8/8H durante 5 Dias. Aten\u00e7\u00e3o: N\u00c3O USAR AMOXICILINA-CLAVULONATO PELO RISCO DE ENTEROCOLITE NECROSANTE.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8983,
+                    "url": "",
+                    "medicamento": 75116,
+                    "codigo": "",
+                    "nome": "AMPICILINA 1 GR AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GR",
+                    "unidade_display": "GRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 2,
+                    "frequencia": "6",
+                    "frequencia_display": "6/6",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8984,
+                    "url": "",
+                    "medicamento": 37150,
+                    "codigo": "",
+                    "nome": "CELESTONE SOLUSPAN AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 2,
+                    "frequencia": "24",
+                    "frequencia_display": "24/24",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8985,
+                    "url": "",
+                    "medicamento": 130123,
+                    "codigo": "",
+                    "nome": "ZITROMAX 500MG AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GR",
+                    "unidade_display": "GRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "24",
+                    "frequencia_display": "24/24",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17236,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "s6",
+                    "passo_de_saida_id": 17180,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "passo_de_entrada_id": 17222,
+                    "passo_de_entrada": "Tratamento: Tratamento Gesta\u00e7\u00e3o Entre 24 e 33 Semanas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17241,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "navega para informa\u00e7\u00e3o de interna\u00e7\u00e3o no SAM",
+                    "passo_de_saida_id": 17222,
+                    "passo_de_saida": "Tratamento: Tratamento Gesta\u00e7\u00e3o Entre 24 e 33 Semanas",
+                    "passo_de_entrada_id": 17227,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo de Interna\u00e7\u00e3o no SAM",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17223,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Tempo de Aminiorrexe",
+            "descricao": "Verifique o tempo de aminiorrexe",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8966,
+                    "url": "",
+                    "texto": "Aminiorrexe > 18 horas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16990,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aminiorexe-maior-18-horas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17237,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "s7",
+                    "passo_de_saida_id": 17180,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional",
+                    "passo_de_entrada_id": 17223,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Tempo de Aminiorrexe",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17238,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "s8",
+                    "passo_de_saida_id": 17223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Tempo de Aminiorrexe",
+                    "passo_de_entrada_id": 17230,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Via de Parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17239,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "s9",
+                    "passo_de_saida_id": 17223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Tempo de Aminiorrexe",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17224,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Profilaxia para GBS - Parto Normal",
+            "descricao": "Inicie o tratamento de profilaxia para GBS parto normal - Definir os medicamentos",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8986,
+                    "url": "",
+                    "medicamento": 75116,
+                    "codigo": "",
+                    "nome": "AMPICILINA 1 GR AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GR",
+                    "unidade_display": "GRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 2,
+                    "frequencia": "6",
+                    "frequencia_display": "6/6",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17246,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "s16",
+                    "passo_de_saida_id": 17230,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Via de Parto",
+                    "passo_de_entrada_id": 17224,
+                    "passo_de_entrada": "Tratamento: Profilaxia para GBS - Parto Normal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17240,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "s10",
+                    "passo_de_saida_id": 17224,
+                    "passo_de_saida": "Tratamento: Profilaxia para GBS - Parto Normal",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17225,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+            "descricao": "Recomenda-se antecipa\u00e7\u00e3o do parto. Solicite a interna\u00e7\u00e3o no PEP\\SAM para prosseguir com os cuidados.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17234,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "s4",
+                    "passo_de_saida_id": 17179,
+                    "passo_de_saida": "Tratamento: Tratamento Corioamnionite",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17239,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "s9",
+                    "passo_de_saida_id": 17223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Tempo de Aminiorrexe",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17240,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "s10",
+                    "passo_de_saida_id": 17224,
+                    "passo_de_saida": "Tratamento: Profilaxia para GBS - Parto Normal",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17243,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "s13",
+                    "passo_de_saida_id": 17228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Conduta",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17247,
+                    "url": "",
+                    "nome": "s17",
+                    "descricao": "s17",
+                    "passo_de_saida_id": 17226,
+                    "passo_de_saida": "Tratamento: Profilaxia para GBS - Ces\u00e1rea",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17226,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Profilaxia para GBS - Ces\u00e1rea",
+            "descricao": "Inicie o tratamento de profilaxia para GBS parto ces\u00e1rea - Definir os medicamentos",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17245,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "s15",
+                    "passo_de_saida_id": 17230,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Via de Parto",
+                    "passo_de_entrada_id": 17226,
+                    "passo_de_entrada": "Tratamento: Profilaxia para GBS - Ces\u00e1rea",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17247,
+                    "url": "",
+                    "nome": "s17",
+                    "descricao": "s17",
+                    "passo_de_saida_id": 17226,
+                    "passo_de_saida": "Tratamento: Profilaxia para GBS - Ces\u00e1rea",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17227,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Informativo de Interna\u00e7\u00e3o no SAM",
+            "descricao": "Solicite a interna\u00e7\u00e3o clinico/obst\u00e9trico no PEP/SAM",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17241,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "navega para informa\u00e7\u00e3o de interna\u00e7\u00e3o no SAM",
+                    "passo_de_saida_id": 17222,
+                    "passo_de_saida": "Tratamento: Tratamento Gesta\u00e7\u00e3o Entre 24 e 33 Semanas",
+                    "passo_de_entrada_id": 17227,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo de Interna\u00e7\u00e3o no SAM",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17228,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Crit\u00e9rios de Conduta",
+            "descricao": "Avalie os crit\u00e9rios a seguir para definir a conduta da paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8967,
+                    "url": "",
+                    "texto": "Vitalidade Fetal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16991,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "vitalidade-fetal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8968,
+                    "url": "",
+                    "texto": "Trabalho de Parto?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16992,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "trabalho-parto",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8969,
+                    "url": "",
+                    "texto": "Paciente opta por conduta ativa?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16993,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "conduta-ativa-paciente",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17242,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "s12",
+                    "passo_de_saida_id": 17221,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conduta Individualizada",
+                    "passo_de_entrada_id": 17228,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17243,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "s13",
+                    "passo_de_saida_id": 17228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Conduta",
+                    "passo_de_entrada_id": 17225,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17244,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "s14",
+                    "passo_de_saida_id": 17228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Conduta",
+                    "passo_de_entrada_id": 17229,
+                    "passo_de_entrada": "Receita: Receita Conduta Passiva",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17229,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita Conduta Passiva",
+            "descricao": "Adicionar texto e medicamentos da conduta passiva",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17244,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "s14",
+                    "passo_de_saida_id": 17228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Conduta",
+                    "passo_de_entrada_id": 17229,
+                    "passo_de_entrada": "Receita: Receita Conduta Passiva",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17230,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Via de Parto",
+            "descricao": "Verifique a via de parto desejada pela paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8970,
+                    "url": "",
+                    "texto": "Normal",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16994,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "opcao-parto-normal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8971,
+                    "url": "",
+                    "texto": "Ces\u00e1rea",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16995,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "opcao-parto-cesarea",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17238,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "s8",
+                    "passo_de_saida_id": 17223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Tempo de Aminiorrexe",
+                    "passo_de_entrada_id": 17230,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Via de Parto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17245,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "s15",
+                    "passo_de_saida_id": 17230,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Via de Parto",
+                    "passo_de_entrada_id": 17226,
+                    "passo_de_entrada": "Tratamento: Profilaxia para GBS - Ces\u00e1rea",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17246,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "s16",
+                    "passo_de_saida_id": 17230,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Via de Parto",
+                    "passo_de_entrada_id": 17224,
+                    "passo_de_entrada": "Tratamento: Profilaxia para GBS - Parto Normal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17231,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s1",
+            "descricao": "s1",
+            "passo_de_saida_id": 17177,
+            "passo_de_saida": {
+                "id": 17177,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento Inicial",
+                "descricao": "Solicite os exames para iniciar o tratamento do paciente.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17178,
+            "passo_de_entrada": {
+                "id": 17178,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado dos Exames",
+                "descricao": "Verifique o resultados dos exames.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17232,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s2",
+            "descricao": "s2",
+            "passo_de_saida_id": 17178,
+            "passo_de_saida": {
+                "id": 17178,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado dos Exames",
+                "descricao": "Verifique o resultados dos exames.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17179,
+            "passo_de_entrada": {
+                "id": 17179,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento Corioamnionite",
+                "descricao": "Inicie o tratamento para Corioamnionite.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17000,
+                "nome": "ha-infeccao",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16986
+                ],
+                "argumentos": [
+                    "presenca-infeccao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17233,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s3",
+            "descricao": "s3",
+            "passo_de_saida_id": 17178,
+            "passo_de_saida": {
+                "id": 17178,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado dos Exames",
+                "descricao": "Verifique o resultados dos exames.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17180,
+            "passo_de_entrada": {
+                "id": 17180,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional",
+                "descricao": "Verifique a idade gestacional da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17021,
+                "nome": "sem-infeccao",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16986
+                ],
+                "argumentos": [
+                    "presenca-infeccao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17234,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s4",
+            "descricao": "s4",
+            "passo_de_saida_id": 17179,
+            "passo_de_saida": {
+                "id": 17179,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento Corioamnionite",
+                "descricao": "Inicie o tratamento para Corioamnionite.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17225,
+            "passo_de_entrada": {
+                "id": 17225,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                "descricao": "Recomenda-se antecipa\u00e7\u00e3o do parto. Solicite a interna\u00e7\u00e3o no PEP\\SAM para prosseguir com os cuidados.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17235,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s5",
+            "descricao": "s5",
+            "passo_de_saida_id": 17180,
+            "passo_de_saida": {
+                "id": 17180,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional",
+                "descricao": "Verifique a idade gestacional da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17221,
+            "passo_de_entrada": {
+                "id": 17221,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conduta Individualizada",
+                "descricao": "Texto da conduta individualizada",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17022,
+                "nome": "s4-ig-menor-24-semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16987
+                ],
+                "argumentos": [
+                    "ig-menor-24"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17236,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s6",
+            "descricao": "s6",
+            "passo_de_saida_id": 17180,
+            "passo_de_saida": {
+                "id": 17180,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional",
+                "descricao": "Verifique a idade gestacional da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17222,
+            "passo_de_entrada": {
+                "id": 17222,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento Gesta\u00e7\u00e3o Entre 24 e 33 Semanas",
+                "descricao": "Sugerimos,  iniciar antibi\u00f3tico para prolongar lat\u00eancia. Ap\u00f3s 48 horas, indicar substitui\u00e7\u00e3o do tratamento por: AMOXICILINA 500 MG VO 8/8H durante 5 Dias. Aten\u00e7\u00e3o: N\u00c3O USAR AMOXICILINA-CLAVULONATO PELO RISCO DE ENTEROCOLITE NECROSANTE.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17023,
+                "nome": "s5-ig-entre-24-33",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16988
+                ],
+                "argumentos": [
+                    "ig-entre-24-33"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17237,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s7",
+            "descricao": "s7",
+            "passo_de_saida_id": 17180,
+            "passo_de_saida": {
+                "id": 17180,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional",
+                "descricao": "Verifique a idade gestacional da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17223,
+            "passo_de_entrada": {
+                "id": 17223,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Tempo de Aminiorrexe",
+                "descricao": "Verifique o tempo de aminiorrexe",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17024,
+                "nome": "s7-ig-maior-igual-34",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16989
+                ],
+                "argumentos": [
+                    "ig-maior-igual-34"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17238,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s8",
+            "descricao": "s8",
+            "passo_de_saida_id": 17223,
+            "passo_de_saida": {
+                "id": 17223,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Tempo de Aminiorrexe",
+                "descricao": "Verifique o tempo de aminiorrexe",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17230,
+            "passo_de_entrada": {
+                "id": 17230,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Via de Parto",
+                "descricao": "Verifique a via de parto desejada pela paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17025,
+                "nome": "aminio-maior-18h",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16990
+                ],
+                "argumentos": [
+                    "aminiorexe-maior-18-horas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17239,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s9",
+            "descricao": "s9",
+            "passo_de_saida_id": 17223,
+            "passo_de_saida": {
+                "id": 17223,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Tempo de Aminiorrexe",
+                "descricao": "Verifique o tempo de aminiorrexe",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17225,
+            "passo_de_entrada": {
+                "id": 17225,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                "descricao": "Recomenda-se antecipa\u00e7\u00e3o do parto. Solicite a interna\u00e7\u00e3o no PEP\\SAM para prosseguir com os cuidados.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17026,
+                "nome": "aminio-menor-18h",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16990
+                ],
+                "argumentos": [
+                    "aminiorexe-maior-18-horas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17240,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s10",
+            "descricao": "s10",
+            "passo_de_saida_id": 17224,
+            "passo_de_saida": {
+                "id": 17224,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Profilaxia para GBS - Parto Normal",
+                "descricao": "Inicie o tratamento de profilaxia para GBS parto normal - Definir os medicamentos",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17225,
+            "passo_de_entrada": {
+                "id": 17225,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                "descricao": "Recomenda-se antecipa\u00e7\u00e3o do parto. Solicite a interna\u00e7\u00e3o no PEP\\SAM para prosseguir com os cuidados.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17241,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s11",
+            "descricao": "navega para informa\u00e7\u00e3o de interna\u00e7\u00e3o no SAM",
+            "passo_de_saida_id": 17222,
+            "passo_de_saida": {
+                "id": 17222,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento Gesta\u00e7\u00e3o Entre 24 e 33 Semanas",
+                "descricao": "Sugerimos,  iniciar antibi\u00f3tico para prolongar lat\u00eancia. Ap\u00f3s 48 horas, indicar substitui\u00e7\u00e3o do tratamento por: AMOXICILINA 500 MG VO 8/8H durante 5 Dias. Aten\u00e7\u00e3o: N\u00c3O USAR AMOXICILINA-CLAVULONATO PELO RISCO DE ENTEROCOLITE NECROSANTE.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17227,
+            "passo_de_entrada": {
+                "id": 17227,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Informativo de Interna\u00e7\u00e3o no SAM",
+                "descricao": "Solicite a interna\u00e7\u00e3o clinico/obst\u00e9trico no PEP/SAM",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17242,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s12",
+            "descricao": "s12",
+            "passo_de_saida_id": 17221,
+            "passo_de_saida": {
+                "id": 17221,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conduta Individualizada",
+                "descricao": "Texto da conduta individualizada",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17228,
+            "passo_de_entrada": {
+                "id": 17228,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Crit\u00e9rios de Conduta",
+                "descricao": "Avalie os crit\u00e9rios a seguir para definir a conduta da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17243,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s13",
+            "descricao": "s13",
+            "passo_de_saida_id": 17228,
+            "passo_de_saida": {
+                "id": 17228,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Crit\u00e9rios de Conduta",
+                "descricao": "Avalie os crit\u00e9rios a seguir para definir a conduta da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17225,
+            "passo_de_entrada": {
+                "id": 17225,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                "descricao": "Recomenda-se antecipa\u00e7\u00e3o do parto. Solicite a interna\u00e7\u00e3o no PEP\\SAM para prosseguir com os cuidados.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17027,
+                "nome": "sem-vitalidade-fetal-ou-trabalho-de-parto-ou-opcao-ativa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    16996,
+                    16997
+                ],
+                "argumentos": [
+                    "sem-vitalidade-fetal",
+                    "trabalho-parto-ou-conduta-ativa"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17244,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s14",
+            "descricao": "s14",
+            "passo_de_saida_id": 17228,
+            "passo_de_saida": {
+                "id": 17228,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Crit\u00e9rios de Conduta",
+                "descricao": "Avalie os crit\u00e9rios a seguir para definir a conduta da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17229,
+            "passo_de_entrada": {
+                "id": 17229,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita Conduta Passiva",
+                "descricao": "Adicionar texto e medicamentos da conduta passiva",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17028,
+                "nome": "vitalidade-fetal-sem-trabalho-parto-sem-optar-conduta-ativa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    16991,
+                    16998,
+                    16999
+                ],
+                "argumentos": [
+                    "vitalidade-fetal",
+                    "sem-trabalho-parto",
+                    "nao-optante-conduta-ativa"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17245,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s15",
+            "descricao": "s15",
+            "passo_de_saida_id": 17230,
+            "passo_de_saida": {
+                "id": 17230,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Via de Parto",
+                "descricao": "Verifique a via de parto desejada pela paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17226,
+            "passo_de_entrada": {
+                "id": 17226,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Profilaxia para GBS - Ces\u00e1rea",
+                "descricao": "Inicie o tratamento de profilaxia para GBS parto ces\u00e1rea - Definir os medicamentos",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17029,
+                "nome": "optante-parto-cesarea",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16995
+                ],
+                "argumentos": [
+                    "opcao-parto-cesarea"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17246,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s16",
+            "descricao": "s16",
+            "passo_de_saida_id": 17230,
+            "passo_de_saida": {
+                "id": 17230,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Via de Parto",
+                "descricao": "Verifique a via de parto desejada pela paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17224,
+            "passo_de_entrada": {
+                "id": 17224,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Profilaxia para GBS - Parto Normal",
+                "descricao": "Inicie o tratamento de profilaxia para GBS parto normal - Definir os medicamentos",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17030,
+                "nome": "optante-parto-normal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16994
+                ],
+                "argumentos": [
+                    "opcao-parto-normal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17247,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s17",
+            "descricao": "s17",
+            "passo_de_saida_id": 17226,
+            "passo_de_saida": {
+                "id": 17226,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Profilaxia para GBS - Ces\u00e1rea",
+                "descricao": "Inicie o tratamento de profilaxia para GBS parto ces\u00e1rea - Definir os medicamentos",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17225,
+            "passo_de_entrada": {
+                "id": 17225,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Informativo: Conduta Ativa - Antecipa\u00e7\u00e3o do Parto",
+                "descricao": "Recomenda-se antecipa\u00e7\u00e3o do parto. Solicite a interna\u00e7\u00e3o no PEP\\SAM para prosseguir com os cuidados.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16986,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "presenca-infeccao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16987,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ig-menor-24",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16988,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ig-entre-24-33",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16989,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ig-maior-igual-34",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16990,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aminiorexe-maior-18-horas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16991,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "vitalidade-fetal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16992,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "trabalho-parto",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16993,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "conduta-ativa-paciente",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16994,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "opcao-parto-normal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16995,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "opcao-parto-cesarea",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16996,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem-vitalidade-fetal",
+            "descricao": "",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                16991
+            ],
+            "argumentos": [
+                "vitalidade-fetal"
+            ]
+        },
+        {
+            "id": 16997,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "trabalho-parto-ou-conduta-ativa",
+            "descricao": "",
+            "visivel": false,
+            "operador": "ouLogico",
+            "operador_display": "Ou L\u00f3gico",
+            "argumentos_ids": [
+                16992,
+                16993
+            ],
+            "argumentos": [
+                "trabalho-parto",
+                "conduta-ativa-paciente"
+            ]
+        },
+        {
+            "id": 16998,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem-trabalho-parto",
+            "descricao": "",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                16992
+            ],
+            "argumentos": [
+                "trabalho-parto"
+            ]
+        },
+        {
+            "id": 16999,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "nao-optante-conduta-ativa",
+            "descricao": "",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                16993
+            ],
+            "argumentos": [
+                "conduta-ativa-paciente"
+            ]
+        }
+    ]
+}

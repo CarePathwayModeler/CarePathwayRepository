@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3245" url="" name="Dor Articular/Tendinopatia" code="H033">
+  <element xsi:type="pathwayMetamodel:Information" id="18944" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Poliartrite] Discutir com chefe de equipe" description=""/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18945" type="Receita" type_verbose="Receita" url="" name="[Trauma simples recente] Receita" description="" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="5051" url="" name="Maxsulid 400mg .... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5052" url="" name="Cetoprofeno 100mg .... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5053" url="" name="DIPIRONA 500MG COMP 1 UD" med_code="38024" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18946" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Anamnese Completa" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Anamnese completa + exame f&amp;iacute;sico do local da dor &lt;/span>&lt;/strong>&lt;/p>" isInitial="true" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18947" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Sinais de Alarme" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="H&#xe1; sinais de alarme?" url="" id="9670">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="18645" weight="1" value="0.0">
+        <option description="Rigidez ou dor que torna o movimento imposs&#xed;vel" weight="1"/>
+        <option description="Dor que fica implacavelmente pior ao longo de um per&#xed;odo de dias ou semanas" weight="1"/>
+        <option description="Articula&#xe7;&#xe3;o inflamada com febre associada ou altera&#xe7;&#xe3;o constitucional" weight="1"/>
+        <option description="Dor severa em repouso ou durante a noite" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18948" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Apresenta Sinais de Alarme] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Solicitar ultrassom da articula&amp;ccedil;&amp;atilde;o acometida e hemograma&lt;/span>&lt;/strong>.&lt;br />&#xA;&lt;span style=&quot;font-size:16px&quot;>Ap&amp;oacute;s realiza&amp;ccedil;&amp;atilde;o dos exames, encaminhar para o ortopedista da urg&amp;ecirc;ncia para avalia&amp;ccedil;&amp;atilde;o de artrite s&amp;eacute;ptica e poss&amp;iacute;vel pun&amp;ccedil;&amp;atilde;o articular.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18949" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Dor" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.0 //@sequence.4 //@sequence.7">
+    <questions text="Dor no local da articula&#xe7;&#xe3;o?" url="" id="9671">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_local_articulacao" id="18646" weight="1" value="false"/>
+    </questions>
+    <questions text="[Dor periarticular?]&#xA;&#xA;Tendinite,&#xA;Bursite,&#xA;Entesite.&#xA;&#xA;Paciente com dor na mobilidade ativa, por&#xe9;m com mobilidade passiva preservada." url="" id="9672">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_periarticular" id="18647" weight="1" value="false"/>
+    </questions>
+    <questions text="Trauma simples recente sem evid&#xea;ncia de fraturas?" url="" id="9673">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trauma_superficial_recente" id="18648" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18950" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Idade Paciente" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Paciente idoso e/ou com hist&#xf3;ria de altera&#xe7;&#xe3;o da fun&#xe7;&#xe3;o renal?" url="" id="9674">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso" id="18649" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18951" type="Receita" type_verbose="Receita" url="" name="[Paciente n&#xe3;o idoso] Receita" description="" isTerminal="true" inputSequences="//@sequence.5">
+    <item id="5054" url="" name="Cetoprofeno 100 mg ............. 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5055" url="" name="Dipirona 1G" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="5056" url="" name="Ibuprofeno 600mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18952" type="Receita" type_verbose="Receita" url="" name="[Paciente idoso] Receita" description="" isTerminal="true" inputSequences="//@sequence.6">
+    <item id="5057" url="" name="Dipirona 1G" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="5058" url="" name="Prednisona 20mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 02 comprimidos pela manh&#xe3; durante 3 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18953" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Sinais Flog&#xed;sticos" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.11">
+    <questions text="H&#xe1; sinais flog&#xed;sticos? Edema, eritema, dor, calor e rubor?" url="" id="9675">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinais_flogisticos" id="18650" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18954" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Artralgia" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Osteoartrose?" url="" id="9676">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="osteoartrose" id="18651" weight="1" value="false"/>
+    </questions>
+    <questions text="[ARBOVIROSE]&#xA;&#xA;Instala&#xe7;&#xe3;o aguda, durante um processo viral, sem sinais de gravidade?" url="" id="9677">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="arbovirose" id="18652" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18955" type="Receita" type_verbose="Receita" url="" name="[Osteoartrose] Receita" description="" isTerminal="true" inputSequences="//@sequence.9">
+    <item id="5059" url="" name="Cetoprofeno 100 mg............ 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5060" url="" name="Dipirona 1G" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="5081" url="" name="Ibuprofeno 600mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18956" type="Receita" type_verbose="Receita" url="" name="[Arbovirose] Receita" description="Retornar a emerg&#xea;ncia se n&#xe3;o houver melhora com 72h ou houver piora importante dos sintomas." isTerminal="true" inputSequences="//@sequence.10">
+    <item id="5082" url="" name="Paracetamol 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se dor ou febre"/>
+    <item id="5083" url="" name="Loratadina 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Se espirros/coriza"/>
+    <item id="5084" url="" name="Dipirona 1g ............ 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="4" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18957" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Artrite" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Tempo de instala&amp;ccedil;&amp;atilde;o da dor?&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="&lt;= 6 semanas: Quadro agudo" url="" id="9678">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="menor_seis_semanas" id="18653" weight="1" value="false"/>
+    </questions>
+    <questions text="> 6 semanas: Quadro cr&#xf4;nico" url="" id="9679">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="maior_seis_semanas" id="18654" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18958" type="Receita" type_verbose="Receita" url="" name="[Artrite] Quadro Cr&#xf4;nico" description="" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="5085" url="" name="Dipirona 1G" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="5086" url="" name="Prednisona 20mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 02 comprimidos pela manh&#xe3;"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18959" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Artrite] Quadro Agudo/Subagudo" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="[Monoartrite aguda] Acometimento de 1 articula&#xe7;&#xe3;o?" url="" id="9680">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="monoartrite_aguda" id="18655" weight="1" value="false"/>
+    </questions>
+    <questions text="[Oligo e Poliartrite Aguda] Acometimento de 2 ou mais articula&#xe7;&#xf5;es?" url="" id="9781">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="poliartrite_aguda" id="18656" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18960" type="Receita" type_verbose="Receita" url="" name="[Poliartrite Aguda] Receita" description="&lt;p>&lt;u>&lt;strong>Discutir caso com chefe de equipe antes de prescrever tratamento.&lt;/strong>&lt;/u>&lt;/p>" isTerminal="true" inputSequences="//@sequence.14">
+    <item id="5087" url="" name="Dipirona 1G" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="5088" url="" name="Prednisona 20mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 02 comprimidos pela manh&#xe3;"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19041" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Monoartrite Aguda" description="&lt;table border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:500px&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>&lt;span style=&quot;font-size:14px&quot;>Artrite S&amp;eacute;ptica&lt;/span>&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&lt;span style=&quot;font-size:14px&quot;>Monoartrite abrupta associado a calor, edema e consider&amp;aacute;vel dor a mobilidade passiva e ativa, n&amp;atilde;o aliviando com o repouso. Pode haver hist&amp;oacute;ria de&amp;nbsp;febre com infec&amp;ccedil;&amp;atilde;o pr&amp;eacute;via predisponente na pele, pulm&amp;atilde;o ou bexiga.&amp;nbsp; &lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>&lt;span style=&quot;font-size:14px&quot;>Artrite Gotosa&lt;/span>&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&lt;span style=&quot;font-size:14px&quot;>Geralmente acomete 1 articula&amp;ccedil;&amp;atilde;o (principalmente 1&amp;ordf; metatarsofalangiana ou joelho), paciente com hist&amp;oacute;ria de epis&amp;oacute;dios pr&amp;eacute;vios, ficando assintom&amp;aacute;ticos entre as crises, com &amp;aacute;cido &amp;uacute;rico sabidamente elevado. Pode j&amp;aacute; haver presen&amp;ccedil;a de tofos gotosos.&amp;nbsp;Dor &amp;agrave; movimenta&amp;ccedil;&amp;atilde;o ativa e passiva, n&amp;atilde;o aliviando com o repouso. &lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>&lt;span style=&quot;font-size:14px&quot;>Artrite P&amp;oacute;s Traum&amp;aacute;tica&lt;/span>&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&lt;span style=&quot;font-size:14px&quot;>Desconforto ao movimento, aumento discreto de temperatura, dor piora com atividade, aliviando ao repouso (ativa &amp;gt; passiva). Hist&amp;oacute;rico de trauma / tor&amp;ccedil;&amp;atilde;o&lt;/span>&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" inputSequences="//@sequence.15" outputSequences="//@sequence.16 //@sequence.17 //@sequence.22">
+    <questions text="Artrite S&#xe9;ptica?" url="" id="9782">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="artrite_septica" id="18657" weight="1" value="false"/>
+    </questions>
+    <questions text="Artrite Gotosa?" url="" id="9783">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="artrite_gotosa" id="18658" weight="1" value="false"/>
+    </questions>
+    <questions text="Artrite P&#xf3;s traum&#xe1;tica?" url="" id="9784">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="artrite_pos_traumatica" id="18659" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19042" type="Tratamento" type_verbose="Tratamento" url="" name="[Artrite S&#xe9;ptica] Tratamento" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para o ortopedista da emerg&amp;ecirc;ncia para tentativa de pun&amp;ccedil;&amp;atilde;o articular com cultura e Gram, citologia, bioqu&amp;iacute;mica e&amp;nbsp;pesquisa de cristais com microscopia de luz polarizada do l&amp;iacute;quido sinovial.&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Solicitar &lt;/span> (via conduta complementar)&amp;nbsp; &lt;span style=&quot;font-size:16px&quot;>rx da articula&amp;ccedil;&amp;atilde;o acometida&lt;/span>&lt;/strong>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Antibioticoterapia emp&amp;iacute;rica:&amp;nbsp;Oxacilina 2g endovenoso de 4/4h +&amp;nbsp;Gentamicina 5mg/kg/dia (se paciente possuir&amp;nbsp;comorbidades ou imunodepress&amp;atilde;o)&lt;/strong>&lt;/span>&lt;br />&#xA;&lt;br />&#xA;&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Discutir a conduta com l&amp;iacute;der local ou ortopedista.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.16">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Artrite S&#xe9;ptica" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Artrite S&#xe9;ptica" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Artrite S&#xe9;ptica" clinical_indication="n/a"/>
+    <medication url="" med_id="42951" id="9815" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="9815" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19043" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Artrite Gotosa] Idade Paciente" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.18 //@sequence.19">
+    <questions text="Paciente idoso ou com disfuns&#xe3;o renal?" url="" id="9785">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso_dois" id="18660" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19044" type="Receita" type_verbose="Receita" url="" name="[Paciente Idoso] Receita" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.20">
+    <item id="5089" url="" name="Prednisona 20mg" med_code="-1" presentation="COMP" access="1" quantity="2" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 02 comprimidos pela manh&#xe3;"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19045" type="Receita" type_verbose="Receita" url="" name="[N&#xe3;o Idoso] Receita" description="" inputSequences="//@sequence.19" outputSequences="//@sequence.21">
+    <item id="5090" url="" name="Ibuprofeno 600mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="19046" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Artrite Gotosa] Orienta&#xe7;&#xf5;es" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>ORIENTA&amp;Ccedil;&amp;Otilde;ES&lt;/strong>&lt;br />&#xA;&lt;br />&#xA;- Redu&amp;ccedil;&amp;atilde;o do peso&lt;br />&#xA;- Mudan&amp;ccedil;a alimentar: optar por alimentos com baixo teor de purinas e gordura saturada. Reduzr ingest&amp;atilde;o de refrigerantes&amp;nbsp;&amp;nbsp;&lt;br />&#xA;- Redu&amp;ccedil;&amp;atilde;o da ingest&amp;atilde;o de &amp;aacute;lcool&lt;br />&#xA;- Modificar as medica&amp;ccedil;&amp;otilde;es, quando poss&amp;iacute;vel que aumentem a produ&amp;ccedil;&amp;atilde;o ou reduzem a excre&amp;ccedil;&amp;atilde;o do &amp;aacute;cido &amp;uacute;rico&lt;br />&#xA;- Tratamento correto das comorbidades preexistentes&lt;/span>&lt;br />&#xA;&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.20 //@sequence.21"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19047" type="Tratamento" type_verbose="Tratamento" url="" name="[Artrite P&#xf3;s Traum&#xe1;tica] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Solicitar avalia&amp;ccedil;&amp;atilde;o da ortopedia&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.22">
+    <medication url="" med_id="42951" id="9816" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="9816" standard="null"/>
+    <medication url="" med_id="36811" id="9817" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="9817" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19048" type="Tratamento" type_verbose="Tratamento" url="" name="[Trauma Simples Recente] Tratamento" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.23">
+    <medication url="" med_id="42951" id="9818" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="9818" standard="null"/>
+    <medication url="" med_id="38008" id="9819" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="GR" access="5" daily_dosage="1" cycles="1" treatement_time="9819" standard="null"/>
+  </element>
+  <sequence inputStep="//@element.24" outputStep="//@element.5" id="19049" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (Trauma superficial sem fratura)" description="Trauma superficial sem fratura">
+    <operation name="Trauma superficial sem fratura" Operator="affirmation" id="18822">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma_superficial_recente" id="18648" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="19050" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="19051" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-">
+    <operation name="Cont&#xe9;m_sinais_de_alarme" Operator="greaterOrEqual" id="18823">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="18645" weight="1" value="0.0">
+        <option description="Rigidez ou dor que torna o movimento imposs&#xed;vel" weight="1"/>
+        <option description="Dor que fica implacavelmente pior ao longo de um per&#xed;odo de dias ou semanas" weight="1"/>
+        <option description="Articula&#xe7;&#xe3;o inflamada com febre associada ou altera&#xe7;&#xe3;o constitucional" weight="1"/>
+        <option description="Dor severa em repouso ou durante a noite" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="18821" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="19052" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-">
+    <operation name="Sem_sinais_de_alarme" Operator="lessThan" id="18824">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="18645" weight="1" value="0.0">
+        <option description="Rigidez ou dor que torna o movimento imposs&#xed;vel" weight="1"/>
+        <option description="Dor que fica implacavelmente pior ao longo de um per&#xed;odo de dias ou semanas" weight="1"/>
+        <option description="Articula&#xe7;&#xe3;o inflamada com febre associada ou altera&#xe7;&#xe3;o constitucional" weight="1"/>
+        <option description="Dor severa em repouso ou durante a noite" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="18821" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="19053" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-">
+    <operation name="Dor_periarticular_" Operator="affirmation" id="18825">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_periarticular" id="18647" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="19054" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-">
+    <operation name="Paciente_n&#xe3;o_idoso" id="18826">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso" id="18649" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="19055" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-">
+    <operation name="Paciente_idoso" Operator="affirmation" id="18827">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso" id="18649" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.5" id="19056" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="-">
+    <operation name="Dor_no_local_da_articula&#xe7;&#xe3;o" Operator="affirmation" id="18828">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_local_articulacao" id="18646" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="19057" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-">
+    <operation name="N&#xe3;o_apresenta_sinais_flogisticos" id="18829">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_flogisticos" id="18650" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="19058" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-">
+    <operation name="Osteoartrose" Operator="affirmation" id="18830">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="osteoartrose" id="18651" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="19059" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-">
+    <operation name="Arbovirose" Operator="affirmation" id="18831">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="arbovirose" id="18652" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.9" id="19060" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-">
+    <operation name="Cont&#xe9;m_sinais_flogisticos" Operator="affirmation" id="18832">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_flogisticos" id="18650" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="19061" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="-">
+    <operation name="Quadro_cr&#xf4;nico" Operator="affirmation" id="18833">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="maior_seis_semanas" id="18654" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.13" id="19062" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-">
+    <operation name="Quadro_agudo" Operator="affirmation" id="18834">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="menor_seis_semanas" id="18653" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="19063" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-">
+    <operation name="Poliartrite_aguda" Operator="affirmation" id="18835">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="poliartrite_aguda" id="18656" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.15" id="19064" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="-">
+    <operation name="Monoartrite_aguda_" Operator="affirmation" id="18836">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoartrite_aguda" id="18655" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="19065" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="-">
+    <operation name="Artrite_s&#xe9;ptica" Operator="affirmation" id="18837">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_septica" id="18657" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.17" id="19066" type="Sequencia" type_verbose="Sequencia" url="" name="S17" description="-">
+    <operation name="Artrite_gotosa" Operator="affirmation" id="18838">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_gotosa" id="18658" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="19067" type="Sequencia" type_verbose="Sequencia" url="" name="S18" description="-">
+    <operation name="Paciente_idoso_" Operator="affirmation" id="18839">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso_dois" id="18660" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="19068" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description="-">
+    <operation name="N&#xe3;o_idoso" id="18840">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso_dois" id="18660" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.20" id="19069" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="-"/>
+  <sequence inputStep="//@element.22" outputStep="//@element.21" id="19070" type="Sequencia" type_verbose="Sequencia" url="" name="S21" description="-"/>
+  <sequence inputStep="//@element.23" outputStep="//@element.17" id="19071" type="Sequencia" type_verbose="Sequencia" url="" name="S22" description="-">
+    <operation name="Artrite_P&#xf3;s_Traum&#xe1;tica" Operator="affirmation" id="18841">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="artrite_pos_traumatica" id="18659" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.24" id="19072" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="18645" weight="1" value="0.0">
+    <option description="Rigidez ou dor que torna o movimento imposs&#xed;vel" weight="1"/>
+    <option description="Dor que fica implacavelmente pior ao longo de um per&#xed;odo de dias ou semanas" weight="1"/>
+    <option description="Articula&#xe7;&#xe3;o inflamada com febre associada ou altera&#xe7;&#xe3;o constitucional" weight="1"/>
+    <option description="Dor severa em repouso ou durante a noite" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_local_articulacao" id="18646" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_periarticular" id="18647" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trauma_superficial_recente" id="18648" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso" id="18649" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinais_flogisticos" id="18650" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="osteoartrose" id="18651" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="arbovirose" id="18652" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="menor_seis_semanas" id="18653" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="maior_seis_semanas" id="18654" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="monoartrite_aguda" id="18655" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="poliartrite_aguda" id="18656" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="artrite_septica" id="18657" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="artrite_gotosa" id="18658" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="artrite_pos_traumatica" id="18659" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_idoso_dois" id="18660" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="18821" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

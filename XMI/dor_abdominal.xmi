@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3322" url="" name="Dor Abdominal" code="H022">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20101" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA (Avaliar Sepse)" description="Avaliar sintomas de SEPSE" isInitial="true" outputSequences="//@sequence.4 //@sequence.7">
+    <questions text="Quick Sofa (2 ou mais sintomas indicam sinais de SEPSE)" url="" id="10192">
+      <answers xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="19713" weight="1" value="0.0">
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="FR > 22" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20102" type="Tratamento" type_verbose="Tratamento" url="" name="[H&#xe9;rnia Abdominal] Conduta" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>&lt;strong>&lt;span style=&quot;color:#e74c3c&quot;>Solicitar Ultrasom de Parede Abdominal em caso de H&amp;eacute;rnia Irredut&amp;iacute;vel.&lt;/span>&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.44" outputSequences="//@sequence.45">
+    <medication url="" med_id="36064" id="10232" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10232" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4293,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="41564" id="10233" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10233" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4294,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="10234" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10234" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4295,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="59609" id="10235" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10235" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4296,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20103" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com Chefia (aventar TC de abdomem)" description="&lt;p>Discutir caso com chefie de equipe ou cirurgi&amp;atilde;o. Aventar possibilidade de TC de abd&amp;ocirc;men total com contraste.&lt;/p>&#xA;&#xA;&lt;p>Aventar hip&amp;oacute;tese de pancreatite (complementar com exames), cetoacidose diab&amp;eacute;tica, &amp;uacute;lcera g&amp;aacute;strica, infarto mesent&amp;eacute;rico ou condi&amp;ccedil;&amp;otilde;es que ultrassom n&amp;atilde;o foi capaz de identificar satisfatoriamente.&lt;/p>&#xA;&#xA;&lt;p>Em mulheres em idade f&amp;eacute;rtil, complementar com laborat&amp;oacute;rio Beta-HCG.&lt;/p>" isTerminal="true" inputSequences="//@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20104" type="Tratamento" type_verbose="Tratamento" url="" name="[Dor Abdominal Simples] Tratamento" description="" inputSequences="//@sequence.49" outputSequences="//@sequence.50">
+    <medication url="" med_id="36064" id="10236" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10236" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:4297,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1327}"/>
+    <medication url="" med_id="126122" id="10237" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="10237" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4298,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="36161" id="10238" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10238" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:4299,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1327}"/>
+    <medication url="" med_id="49581" id="10239" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10239" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4300,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="41564" id="10240" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10240" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4301,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="39144" id="10261" name="ANTAK AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10261" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:4302,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2047}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20105" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Dor Abdominal Simples] Discutir com L&#xed;der" description="Sugere-se discuss&#xe3;o com l&#xed;der de equipe." isTerminal="true"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20106" type="Tratamento" type_verbose="Tratamento" url="" name="[Dismenorr&#xe9;ia] Tratamento" description="" inputSequences="//@sequence.33" outputSequences="//@sequence.51">
+    <medication url="" med_id="36064" id="10262" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="ML" access="6" daily_dosage="5" cycles="1" treatement_time="10262" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:4303,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1327}"/>
+    <medication url="" med_id="36161" id="10263" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10263" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:4304,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+    <medication url="" med_id="80012" id="10264" name="TRANSAMIN AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10264" standard="null"/>
+    <medication url="" med_id="49581" id="10265" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10265" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4305,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="41564" id="10266" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10266" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4306,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="10267" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10267" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4307,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="59609" id="10268" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10268" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4308,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="59765" id="10269" name="TRAMAL 50MG AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10269" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4309,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="43800" id="10270" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10270" standard="null"/>
+    <medication url="" med_id="43800" id="10271" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10271" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20107" type="Tratamento" type_verbose="Tratamento" url="" name="[H&#xe9;rnia Abdominal] Exame" description=""/>
+  <element xsi:type="pathwayMetamodel:Information" id="20108" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar ao Eixo Vermelho" description="Paciente com sinais de sepse. Encaminhar ao eixo vermelho." inputSequences="//@sequence.4" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20109" type="Tratamento" type_verbose="Tratamento" url="" name="[Dispepsia / DRGE] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Encaminhar paciente ao Gastroenterologista eletivo.&lt;/span>&lt;/p>" inputSequences="//@sequence.38" outputSequences="//@sequence.39">
+    <medication url="" med_id="36064" id="10272" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10272" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4310,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="39144" id="10273" name="ANTAK AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10273" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:4311,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2047}"/>
+    <medication url="" med_id="126122" id="10274" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10274" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4312,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="41564" id="10275" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10275" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4313,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="36161" id="10276" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="10276" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:4314,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1325}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20110" type="Tratamento" type_verbose="Tratamento" url="" name="[Gravidez Ect&#xf3;pica Rota] Conduta" description="" inputSequences="//@sequence.40" outputSequences="//@sequence.3">
+    <examination url="US PELVICA TRANSVAGINAL" exam_id="33010145" limb_side="" quantity="1" reason="Suspeita de Gravidez Ect&#xf3;pica Rota" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de Gravidez Ect&#xf3;pica Rota" clinical_indication="n/a"/>
+    <examination url="BETA-HCG" exam_id="28050347" limb_side="" quantity="1" reason="Suspeita de Gravidez Ect&#xf3;pica Rota" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Suspeita de Gravidez Ect&#xf3;pica Rota" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Suspeita de Gravidez Ect&#xf3;pica Rota" clinical_indication="n/a"/>
+    <medication url="" med_id="39586" id="10277" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10277" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4315,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="36064" id="10278" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10278" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4316,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="59609" id="10279" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10279" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4317,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20111" type="Tratamento" type_verbose="Tratamento" url="" name="ATB Inicial + Exames/Procedimentos [sem exames cadastrados*]" description="Iniciar ATB na primeira hora, coleta de culturas, ressuscita&#xe7;&#xe3;o vol&#xea;mica, monitoriza&#xe7;&#xe3;o." inputSequences="//@sequence.5" outputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="20112" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo de SEPSE" description="Encaminhar ao protocolo de sepse" isTerminal="true" inputSequences="//@sequence.6">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20113" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Exame F&#xed;sico do Abdome e Anamnese" description="Realizar anamnese completa e exame f&#xed;sico do abdome." inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.11">
+    <questions text="Sinais de irrita&#xe7;&#xe3;o peritoneal ou dor abdominal intensa?" url="" id="10193">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal_ou_dor" id="19714" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20114" type="Tratamento" type_verbose="Tratamento" url="" name="Exames de Apoio" description="Solicitar ultrassom de abdome total para afastar causas de abdome agudo. Exames adicionais: Hemograma, ureia, creatinina." inputSequences="//@sequence.8" outputSequences="//@sequence.9">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Afastar causas de abdome agudo" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Exame auxiliar" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Exame auxiliar" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Exame auxiliar" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="dor abdominal a/e" clinical_indication="dor abdominal a/e"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20115" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resultados" description="Avaliar resultado dos exames solicitados no passo anterior" inputSequences="//@sequence.9" outputSequences="//@sequence.10 //@sequence.12">
+    <questions text="Paciente apresenta ultrassom com sinal de abdome agudo ou leucocitose importante?" url="" id="10194">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="abdome_agudo_ou_leucocitose" id="19715" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20116" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Chefe de Equipe" description="Discutir caso com chefe de equipe para avaliar como proceder." isTerminal="true" inputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20117" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar suspeita conforme dor" description="Classificar suspeita de quadro do paciente conforme particularidade da dor descrita" inputSequences="//@sequence.11 //@sequence.53" outputSequences="//@sequence.0 //@sequence.1 //@sequence.13 //@sequence.15 //@sequence.17 //@sequence.18 //@sequence.19 //@sequence.20 //@sequence.24 //@sequence.25 //@sequence.26 //@sequence.28 //@sequence.29 //@sequence.30 //@sequence.31 //@sequence.33 //@sequence.34 //@sequence.35 //@sequence.36 //@sequence.38 //@sequence.40 //@sequence.41 //@sequence.44 //@sequence.47 //@sequence.49">
+    <questions text="Dor Abdominal Simples: dor abdominal sem altera&#xe7;&#xf5;es do exame f&#xed;sico, paciente jovem, sem comorbidades ou HIST&#xd3;RICO DE M&#xda;LTIPLAS VINDAS PELA MESMA QUEIXA." url="" id="10195">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_abdominal_simples" id="19716" weight="1" value="false"/>
+    </questions>
+    <questions text="Pancreatite Aguda: Dor em abdome superior em faixa, com irradia&#xe7;&#xe3;o para dorso, associada a n&#xe1;useas/v&#xf4;mitos." url="" id="10196">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pancreatite_aguda" id="19717" weight="1" value="false"/>
+    </questions>
+    <questions text="Nefrolit&#xed;ase: Dor lombar, com irradia&#xe7;&#xe3;o para abdome, at&#xe9; regi&#xe3;o inguinal, podendo estar associada a n&#xe1;useas/v&#xf4;mitos, dis&#xfa;ria." url="" id="10197">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nefrolit&#xed;ase" id="19718" weight="1" value="false"/>
+    </questions>
+    <questions text="Apendicite Aguda: Dor abdominal periumbilical inespec&#xed;fica, que migra para fossa il&#xed;aca direita, associada a n&#xe1;useas e anorexia. Sinal de Blumberg positivo." url="" id="10198">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="apendicite_aguda" id="19719" weight="1" value="false"/>
+    </questions>
+    <questions text="Colecistite Aguda: Dor abdominal s&#xfa;bita, em c&#xf3;lica, no epigastro e quadrante superior direito, podendo irradiar para dorso ou ombro direito. Pode haver n&#xe1;useas, v&#xf4;mitos, diarreia, anorexia e/ou dispepsia. Sinal de Murphy positivo." url="" id="10199">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="colecistite_aguda" id="19720" weight="1" value="false"/>
+    </questions>
+    <questions text="Diverticulite Aguda: Dor abdominal inespec&#xed;fica, com dor principalmente em fosse il&#xed;aca esquerda. Pode ter febre, distens&#xe3;o abdominal, empachamento e n&#xe1;useas. Geralmente em pacientes maiores que 40 anos. Hist&#xf3;ria de constipa&#xe7;&#xe3;o pr&#xe9;via." url="" id="10200">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diverticulite_aguda" id="19721" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a Inflamat&#xf3;ria P&#xe9;lvica: Paciente do sexo feminino, com vida sexual ativa, dor em abdome inferior, secre&#xe7;&#xe3;o vaginal, febre." url="" id="10201">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="doenca_inflamatoria_pelvica" id="19722" weight="1" value="false"/>
+    </questions>
+    <questions text="Cetoacidose Diab&#xe9;tica: Paciente com dor abdominal difusa, sonolenta, hist&#xf3;ria de DM n&#xe3;o controlada." url="" id="10202">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cetoacidose_diabetica" id="19723" weight="1" value="false"/>
+    </questions>
+    <questions text="Colangite Aguda: Paciente com dor abdominal em hipoc&#xf4;ndrio direito, associada a febre e icter&#xed;cia. Pode ter hist&#xf3;ria de colelit&#xed;ase." url="" id="10203">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="colangite_aguda" id="19724" weight="1" value="false"/>
+    </questions>
+    <questions text="&#xda;lcera G&#xe1;strica: Paciente com dor em epig&#xe1;strio, em c&#xf3;lica, que piora piora com alimenta&#xe7;&#xe3;o. Pode haver empachamento, n&#xe1;useas, v&#xf4;mitos, hemat&#xea;mese, melena. Avaliar uso de AAS sem prote&#xe7;&#xe3;o g&#xe1;strica e uso indiscriminado de AINEs." url="" id="10204">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ulcera_gastrica" id="19725" weight="1" value="false"/>
+    </questions>
+    <questions text="Inicio de dor ap&#xf3;s trauma em abdome" url="" id="10205">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_apos_trauma" id="19726" weight="1" value="false"/>
+    </questions>
+    <questions text="Cistite: Dis&#xfa;ria, polaci&#xfa;ria, urg&#xea;ncia miccional ou dor abdominal baixa" url="" id="10206">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cistite" id="19727" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor abdominal e diarr&#xe9;ia" url="" id="10207">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diarreia" id="19728" weight="1" value="false"/>
+    </questions>
+    <questions text="C&#xe2;ncer colorretal: Se dor abdominal, hematoquezia/melena, anemia por defici&#xea;ncia de ferro, mudan&#xe7;a no h&#xe1;bito intestinal, hist&#xf3;ria familiar de c&#xe2;ncer colorretal" url="" id="10208">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cancer_colorretal" id="19729" weight="1" value="false"/>
+    </questions>
+    <questions text="Peritonite Bacteriana Espont&#xe2;nea: Se paciente hepatopata, com dor abdominal difusa, ascite, febre, encefalopatia." url="" id="10209">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="peritonite_bacteriana_espontanea" id="19730" weight="1" value="false"/>
+    </questions>
+    <questions text="Tor&#xe7;&#xe3;o do ov&#xe1;rio: Se dor abdominal baixa de in&#xed;cio s&#xfa;bito, em paciente do sexo feminino, associada a n&#xe1;useas/v&#xf4;mitos. Paciente pode ter hist&#xf3;ria de cistos ovarianos. Pode haver febre e presen&#xe7;a de massa anexial." url="" id="10210">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="torcao_do_ovario" id="19731" weight="1" value="false"/>
+    </questions>
+    <questions text="Dismenorr&#xe9;ia: Se dor abdominal em c&#xf3;lica no per&#xed;odo menstrual" url="" id="10211">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dismonorreia" id="19732" weight="1" value="false"/>
+    </questions>
+    <questions text="Aneurisma de Aorta Abdominal: Dor lombar s&#xfa;bita, lancinante e intensa, com irradia&#xe7;&#xe3;o para abdome. Diferen&#xe7;a de pulso nos membros superiores contralaterais ou entre os pulsos superiores e inferiores. Diferen&#xe7;a de 20mmHg na PAS dos membros superiores." url="" id="10212">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aneurisma_aorta_abdominal" id="19733" weight="1" value="false"/>
+    </questions>
+    <questions text="Obstru&#xe7;&#xe3;o Intestinal: Parada da elimina&#xe7;&#xe3;o de flatos e fezes, v&#xf4;mitos." url="" id="10213">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="obstucao_intestinal" id="19734" weight="1" value="false"/>
+    </questions>
+    <questions text="C&#xf3;lica Biliar: dor em hipoc&#xf4;ndrio direito, v&#xf4;mitos, sinal de Murphy negativo." url="" id="10214">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="colica_biliar" id="19735" weight="1" value="false"/>
+    </questions>
+    <questions text="Dispepsia / DRGE: dor epig&#xe1;strica, sensa&#xe7;&#xe3;o de plenitude p&#xf3;s-prandial, pirose, n&#xe1;useas, v&#xf4;mitos." url="" id="10215">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dispepsia_drge" id="19736" weight="1" value="false"/>
+    </questions>
+    <questions text="Gravidez Ect&#xf3;pica Rota: dor intensa em abd&#xf4;men inferior, in&#xed;cio s&#xfa;bito, hist&#xf3;rico de atraso menstrual." url="" id="10216">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gravidez_ectopica" id="19737" weight="1" value="false"/>
+    </questions>
+    <questions text="Infarto Mesent&#xe9;rico: dor de in&#xed;cio s&#xfa;bito e fort&#xed;ssima intensidade com exame abdominal n&#xe3;o compat&#xed;vel com o quadro cl&#xed;nico." url="" id="10217">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="infarto_mesenterico" id="19738" weight="1" value="false"/>
+    </questions>
+    <questions text="H&#xe9;rnia Abdominal: dor localizada em s&#xed;tio herni&#xe1;rio (inguinal, umbilical, epig&#xe1;strica ou incisional), podendo ser redut&#xed;vel ou irredut&#xed;vel." url="" id="10218">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hernia_abdominal" id="19739" weight="1" value="false"/>
+    </questions>
+    <questions text="Diagn&#xf3;stico inconclusivo ap&#xf3;s realiza&#xe7;&#xe3;o de exames?" url="" id="10219">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diagnostico_inconclusivo" id="19740" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20118" type="Tratamento" type_verbose="Tratamento" url="" name="Pancreatite Aguda: Conduta" description="&lt;p>Exames e orienta&amp;ccedil;&amp;otilde;es para paciente com pancreatite aguda.&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/u>: Se&amp;nbsp;mulher em idade f&amp;eacute;rtil, solicitar B-hCG&lt;br />&#xA;&lt;br />&#xA;&lt;u>Dieta zero e sintom&amp;aacute;ticos&lt;/u>&lt;/p>" inputSequences="//@sequence.13" outputSequences="//@sequence.14">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="suspeita de pancreatite aguda" clinical_indication="n/a"/>
+    <examination url="AMILASE  (SANGUE)" exam_id="28010256" limb_side="" quantity="1" reason="suspeita de pancreatite aguda" clinical_indication="n/a"/>
+    <examination url="LIPASE" exam_id="28011082" limb_side="" quantity="1" reason="suspeita de pancreatite aguda" clinical_indication="n/a"/>
+    <medication url="" med_id="36161" id="10280" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10280" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1 ml = 500 mg&quot;,&quot;id&quot;:4318,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:910}"/>
+    <medication url="" med_id="36064" id="10281" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10281" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;DILUI&#xc7;&#xc3;O COM AD&quot;,&quot;id&quot;:4319,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1327}"/>
+    <medication url="" med_id="41564" id="10282" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10282" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4320,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="49581" id="10283" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10283" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4321,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="126122" id="10284" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10284" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4322,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="39586" id="10285" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10285" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4323,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20119" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Nefrolit&#xed;ase] Conduta" description="&lt;p>Exames e orienta&amp;ccedil;&amp;otilde;es para pacientes sob suspeita de nefrolit&amp;iacute;ase.&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>: Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG&lt;br />&#xA;&lt;br />&#xA;Prescrever sintom&amp;aacute;ticos&lt;/p>" inputSequences="//@sequence.15" outputSequences="//@sequence.16">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="US APARELHO URINARIO (RINS E BEXIGA)" exam_id="33010030" limb_side="" quantity="1" reason="Suspeita de nefrolot&#xed;ase" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Suspeita de Nefrolit&#xed;ase" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20120" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Suspeita de Nefrolitiase] Orienta&#xe7;&#xf5;es" description="&lt;p>SE ultrassom de vias urin&amp;aacute;rias normal, mas suspeita alta de c&amp;aacute;lculo, discutir necessidade de TC vias urin&amp;aacute;rias sem contraste com chefe local.&lt;/p>&#xA;&#xA;&lt;p>SE c&amp;aacute;lculo presente, discutir com chefe local a avalia&amp;ccedil;&amp;atilde;o do urologista.&lt;/p>" isTerminal="true" inputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20121" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Apendicite Aguda] Conduta" description="&lt;p>&lt;strong>&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>&lt;/strong>: Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG.&lt;/p>&#xA;&#xA;&lt;p>Prescrever sintom&amp;aacute;ticos e dieta zero.&lt;br />&#xA;&lt;br />&#xA;Discutir caso com chefia local.&lt;/p>" isTerminal="true" inputSequences="//@sequence.17">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="f" clinical_indication="f"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20122" type="Tratamento" type_verbose="Tratamento" url="" name="Padr&#xe3;o de Exames (para c&#xf3;pia de passo)" description="&lt;p>&lt;strong>&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>&lt;/strong>: Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG&lt;br />&#xA;&lt;br />&#xA;Discutir caso com chefia local&lt;/p>">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="AMILASE  (SANGUE)" exam_id="28010256" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="LIPASE" exam_id="28011082" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="TRANSAMINASE PIRUVICA-TGP ALT P/UD SANG" exam_id="27040380" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20123" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Colecistite Aguda] Conduta" description="&lt;p>&lt;strong>&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>&lt;/strong>: Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG&lt;/p>&#xA;&#xA;&lt;p>Prescrever sintom&amp;aacute;ticos.&lt;/p>&#xA;&#xA;&lt;p>Discutir caso com chefia local&lt;/p>" isTerminal="true" inputSequences="//@sequence.18">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20124" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Diverticulite Aguda] Conduta" description="&lt;p>&lt;strong>&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>&lt;/strong>: Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG&lt;/p>&#xA;&#xA;&lt;p>Prescrever sintom&amp;aacute;ticos.&lt;/p>&#xA;&#xA;&lt;p>Discutir caso com chefia local&lt;/p>&#xA;&#xA;&lt;p>&lt;u>Aventar com l&amp;iacute;der de equipe a necessidade de TC de Abdomen Total.&lt;/u>&lt;/p>" isTerminal="true" inputSequences="//@sequence.19">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20125" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Doen&#xe7;a Inflamat&#xf3;ria P&#xe9;lvica] Conduta" description="" inputSequences="//@sequence.20" outputSequences="//@sequence.21">
+    <examination url="US PELVICA TRANSVAGINAL" exam_id="33010145" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="BETA-HCG" exam_id="26100126" limb_side="" quantity="1" reason="Doen&#xe7;a inflamat&#xf3;ria p&#xe9;lvica" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20126" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Suspeita de Doen&#xe7;a Inflamat&#xf3;ria P&#xe9;lvica] Avaliar Resultados" description="Avaliar resultados dos exames solicitados para paciente sob suspeita de doen&#xe7;a inflamat&#xf3;ria p&#xe9;lvica." inputSequences="//@sequence.21" outputSequences="//@sequence.22 //@sequence.23">
+    <questions text="H&#xe1; febre e/ou leucocitose?" url="" id="10220">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="febre_ou_leucocitose" id="19741" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20127" type="Tratamento" type_verbose="Tratamento" url="" name="[Doen&#xe7;a Inflamat&#xf3;ria P&#xe9;lvica] Interna&#xe7;&#xe3;o" description="&lt;p>Ministrar medica&amp;ccedil;&amp;otilde;es:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Cefoxitina 2g, endovenoso, de 6/6h&lt;/li>&#xA;&#x9;&lt;li>Doxiciclina 100mg, via oral, de 12/12h&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;h1>&lt;span style=&quot;font-size:20px&quot;>&lt;u>&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/strong>&lt;/u>: Realizar Internamento Hospitalar do paciente.&lt;/span>&lt;/h1>" isTerminal="true" inputSequences="//@sequence.22">
+    <medication url="" med_id="47074" id="10286" name="MEFOXIN 1 GR IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="2" cycles="1" treatement_time="10286" frequency="6" standard="null"/>
+    <medication url="" med_id="45055" id="10287" name="VIBRAMICINA 100MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="10287" frequency="12" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20128" type="Receita" type_verbose="Receita" url="" name="[Suspeita de Doen&#xe7;a Inflamat&#xf3;ria P&#xe9;lvica] Sem sinais de gravidade" description="&lt;p>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>&lt;strong>:&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>Retornar a emerg&amp;ecirc;ncia se n&amp;atilde;o houver melhora ou ocorrer piora do quadro.&lt;/p>" isTerminal="true" inputSequences="//@sequence.23">
+    <item id="5385" url="" name="Ceftriaxona 500mg" med_code="-1" presentation="DOSE" access="5" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica."/>
+    <item id="5386" url="" name="Doxicilina 100mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5387" url="" name="Metronidazol 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20129" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Cetoacidose Diab&#xe9;tica] Conduta" description="&lt;p>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>:&amp;nbsp;&lt;br />&#xA;Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;span style=&quot;font-size:16px&quot;>Passar caso com chefe local.&lt;/span>&lt;/u>&lt;/p>" isTerminal="true" inputSequences="//@sequence.24">
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Suspeita de Cetoacidose Diab&#xe9;tica" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20130" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de &#xda;lcera G&#xe1;strica] Conduta" description="&lt;p>&lt;strong>&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>&lt;/strong>: Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG&lt;/p>&#xA;&#xA;&lt;p>Dieta zero e sintom&amp;aacute;ticos.&lt;/p>&#xA;&#xA;&lt;p>Passar caso com chefia local.&lt;/p>" isTerminal="true" inputSequences="//@sequence.25">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="&#xfa;lcera g&#xe1;strica" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20131" type="Tratamento" type_verbose="Tratamento" url="" name="[In&#xed;cio de dor p&#xf3;s trauma] Conduta" description="" inputSequences="//@sequence.26" outputSequences="//@sequence.27">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="dor abdominal p&#xf3;s trauma" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="f" clinical_indication="f"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20132" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[In&#xed;cio de dor p&#xf3;s trauma] Avalia&#xe7;&#xe3;o do exame e paciente" description="&lt;p>Avaliar cl&amp;iacute;nica e estabilidade do paciente. Se ultrassom normal e paciente bem, avaliar conduta conservadora com sintom&amp;aacute;ticos.&lt;br />&#xA;Se ultrassom com l&amp;iacute;quido livre na cavidade, discutir caso com chefia local.&lt;/p>" isTerminal="true" inputSequences="//@sequence.27"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="20133" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Suspeita de Cistite Aguda] Encaminhar" description="Encaminhar ao protocolo de Cistite Aguda." isTerminal="true" inputSequences="//@sequence.28">
+    <pathways>H008</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="20134" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="[Dor Abdominal e Diarr&#xe9;ia] Encaminhar" description="Encaminhar ao protocolo de diarr&#xe9;ia." isTerminal="true" inputSequences="//@sequence.34">
+    <pathways>H017</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20135" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de C&#xe2;ncer Colorretal] Conduta" description="&lt;h3>&lt;u>Discutir caso com chefia local. Aventar necessidade de tomografia computadorizada sob cuidados da pr&amp;oacute;pria chefia.&lt;/u>&lt;/h3>" isTerminal="true" inputSequences="//@sequence.29">
+    <examination url="RX ABDOMEN SIMPLES - A.P" exam_id="32080018" limb_side="" quantity="1" reason="cancer colorretal" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="f" clinical_indication="f"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="f" clinical_indication="f"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="f" clinical_indication="f"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20136" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Peritonite Bacteriana Espont&#xe2;nea] Conduta" description="Discutir caso e avaliar necessidade de internamento hospitalar com l&#xed;der de equipe." isTerminal="true" inputSequences="//@sequence.30">
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Peritonite bacteriana espont&#xe2;nea" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Peritonite bacteriana espont&#xe2;nea" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Suspeitar de Peritonite bacteriana Espont&#xe2;nea" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Peritonite bacteriana espont&#xe2;nea" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Peritonite bacteriana espont&#xe2;nea" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Peritonite bacteriana espont&#xe2;nea" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20137" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Tor&#xe7;&#xe3;o do Ov&#xe1;rio] Conduta" description="&lt;p>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>: se mulher em idade f&amp;eacute;rtil, solicitar B-hCG.&lt;/p>&#xA;&#xA;&lt;p>Discutir caso com l&amp;iacute;der local.&lt;/p>" inputSequences="//@sequence.31" outputSequences="//@sequence.32">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de tor&#xe7;&#xe3;o de ov&#xe1;rio" clinical_indication="n/a"/>
+    <examination url="BETA-HCG" exam_id="28050347" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="US PELVICA TRANSVAGINAL" exam_id="33010145" limb_side="" quantity="1" reason="f" clinical_indication="f"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20138" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Suspeita de Tor&#xe7;&#xe3;o de Ov&#xe1;rio] Orienta&#xe7;&#xf5;es" description="Se ultrassom evidenciar tor&#xe7;&#xe3;o, trata-se de uma emerg&#xea;ncia ginecol&#xf3;gica, discutir caso com a cirurgia geral e internamento hospitalar." isTerminal="true" inputSequences="//@sequence.32"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20139" type="Receita" type_verbose="Receita" url="" name="[Suspeita de Dismenorr&#xe9;ia] Conduta" description="&lt;p>-&lt;/p>" isTerminal="true" inputSequences="//@sequence.51">
+    <item id="5388" url="" name="Cetoprofeno 100mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Usar por 3 dias ou at&#xe9; a resolu&#xe7;&#xe3;o dos sintomas."/>
+    <item id="5389" url="" name="Ibuprofeno 600mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="5390" url="" name="Flanax 550mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="5391" url="" name="Transamin 250mg ..... 2 cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="5392" url="" name="Bromoprida 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;useas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20140" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de Colangite Aguda]" description="&lt;p>Dividir diagn&amp;oacute;stico com l&amp;iacute;der local ap&amp;oacute;s recebimento dos resultados.&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>: Se mulher em idade f&amp;eacute;rtil, solicitar B-hCG.&lt;br />&#xA;&lt;br />&#xA;Dieta zero e sintom&amp;aacute;ticos.&lt;/p>" isTerminal="true" inputSequences="//@sequence.35">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="GAMA-GT (GAMA-GLUTAMILTRANSFERASE)" exam_id="28010957" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="FOSFATASE ALCALINA" exam_id="28010850" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="suspeita de colangite aguda" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20141" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Suspeita de Pancreatite] Avaliar Exames" description="&lt;p>Se exames alterados, discutir caso com chefe de equipe.&lt;/p>&#xA;&#xA;&lt;p>Se paciente continuar com dor importante ap&amp;oacute;s tratamento inicial, discutir caso com l&amp;iacute;der e aventar possibilidade de TC de Abdomen Total com contraste e exames complementares.&lt;/p>" isTerminal="true" inputSequences="//@sequence.14"/>
+  <element xsi:type="pathwayMetamodel:Information" id="20142" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Suspeita de Aneurisma de Aorta Abdominal] Conduta" description="&lt;p>Discutir com chefia local para confirma&amp;ccedil;&amp;atilde;o da suspeita.&lt;/p>" isTerminal="true" inputSequences="//@sequence.36"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20143" type="Tratamento" type_verbose="Tratamento" url="" name="[Obstru&#xe7;&#xe3;o Intestinal] Conduta" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.37">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de Obstru&#xe7;&#xe3;o Intestinal" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Suspeita de Obstru&#xe7;&#xe3;o Intestinal" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Suspeita de Obstru&#xe7;&#xe3;o Intestinal" clinical_indication="n/a"/>
+    <examination url="RX ABDOMEN AGUDO" exam_id="32080034" limb_side="" quantity="1" reason="Suspeita de Obstru&#xe7;&#xe3;o Intestinal" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Suspeita de Obstru&#xe7;&#xe3;o Intestinal" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Suspeita de Obstru&#xe7;&#xe3;o Intestinal" clinical_indication="n/a"/>
+    <medication url="" med_id="36064" id="10288" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10288" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4324,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="41564" id="10289" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10289" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4325,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="10290" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10290" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4326,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="39586" id="10291" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10291" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4327,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20144" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Obstru&#xe7;&#xe3;o Intestinal] Encaminhamento" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Raio X de Abd&amp;ocirc;men com presen&amp;ccedil;a de gases e fezes em ampola retal, realizar clister evacuativo.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Se n&amp;atilde;o houver presen&amp;ccedil;a de gases e fezes em ampola retal, &lt;u>&lt;strong>discutir caso com chefe local&lt;/strong>&lt;/u>.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.37"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20145" type="Tratamento" type_verbose="Tratamento" url="" name="[C&#xf3;lica Biliar] Conduta" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <medication url="" med_id="36064" id="10292" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10292" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4328,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="39144" id="10293" name="ANTAK AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10293" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:4329,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2047}"/>
+    <medication url="" med_id="41564" id="10294" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10294" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4330,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="126122" id="10295" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10295" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4331,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="59609" id="10296" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10296" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4332,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="39586" id="10297" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10297" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4333,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20146" type="Receita" type_verbose="Receita" url="" name="[C&#xf3;lica Biliar] Receita" description="" isTerminal="true" inputSequences="//@sequence.2">
+    <item id="5393" url="" name="Buscopan Composto" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se apresentar dor abdominal"/>
+    <item id="5394" url="" name="Plamet 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se apresentar n&#xe1;useas ou v&#xf4;mitos"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20147" type="Receita" type_verbose="Receita" url="" name="[Dispepsia /DRGE] Receita" description="" isTerminal="true" inputSequences="//@sequence.39">
+    <item id="5395" url="" name="Omeprazol 20mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar em jejum"/>
+    <item id="5396" url="" name="Buscopan Composto" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se apresentar Dor Abdominal"/>
+    <item id="5397" url="" name="Domperidona 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 30 minutos antes das refei&#xe7;&#xf5;es"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20148" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Gravidez Ect&#xf3;pica Rota] Encaminhamento" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Caso exames positivos para Gravidez Ect&amp;oacute;pica Rota, discutir com l&amp;iacute;der local.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20149" type="Tratamento" type_verbose="Tratamento" url="" name="[Infarto Mesent&#xe9;rico] Conduta" description="" inputSequences="//@sequence.41" outputSequences="//@sequence.42">
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Suspeita de Infarto Mesent&#xe9;rico" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Suspeita de Infarto Mesent&#xe9;rico" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA VENOSA" exam_id="28011759" limb_side="" quantity="1" reason="Suspeita de Infarto Mesent&#xe9;rico" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Suspeita de Infarto Mesent&#xe9;rico" clinical_indication="n/a"/>
+    <medication url="" med_id="39586" id="10298" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10298" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4334,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="36064" id="10299" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10299" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:15,&quot;quantidade_volume&quot;:5,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4335,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1328}"/>
+    <medication url="" med_id="39144" id="10300" name="ANTAK AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10300" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;2 ml + 18 ml AD&quot;,&quot;id&quot;:4336,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2047}"/>
+    <medication url="" med_id="59609" id="10301" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10301" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4337,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="41564" id="10302" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10302" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4338,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20150" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Infarto Mesent&#xe9;rico] Encaminhamento" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Em caso de exames positivos para Infarto Mesent&amp;eacute;rico, procurar l&amp;iacute;der local.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.42"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20151" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[H&#xe9;rnia Abdominal] Resultados Exames" description="" inputSequences="//@sequence.45" outputSequences="//@sequence.43 //@sequence.46">
+    <questions text="H&#xe9;rnia Redut&#xed;vel ou Ultrasom de parede abdominal sem sinais de estrangulamento?" url="" id="10221">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hernia_redutivel" id="19742" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20152" type="Receita" type_verbose="Receita" url="" name="[H&#xe9;rnia Abdominal] Receita" description="" isTerminal="true" inputSequences="//@sequence.43">
+    <item id="5398" url="" name="Buscopam Composto" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se apresentar Dor Abdominal"/>
+    <item id="5399" url="" name="Cetoprofeno 100mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se apresentar Dor Abdominal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20153" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[H&#xe9;rnia Abdominal] Encaminhamento" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Encaminhar paciente para avalia&amp;ccedil;&amp;atilde;o da cirurgia geral de urg&amp;ecirc;ncia.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.46"/>
+  <element xsi:type="pathwayMetamodel:Information" id="20154" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Diagn&#xf3;stico Inconclusivo] Informativo" description="&lt;p>&lt;u>&lt;strong>Solicitar discuss&amp;atilde;o com chefe de equipe para reavaliar o paciente e solicitar exames complementares se necess&amp;aacute;rio&lt;/strong>&lt;/u>.&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Orientar paciente a procurar atendimento especializado (Hapcl&amp;iacute;nicas) ou retornar imediatamente &amp;agrave; emerg&amp;ecirc;ncia caso n&amp;atilde;o melhora dos sintomas com sintom&amp;aacute;ticos.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.48"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20155" type="Receita" type_verbose="Receita" url="" name="[Diagn&#xf3;stico Inconclusivo] Receita" description="" inputSequences="//@sequence.47" outputSequences="//@sequence.48">
+    <item id="5400" url="" name="Buscopan Composto" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Enquanto persistirem os sintomas."/>
+    <item id="5401" url="" name="Omeprazol 20mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar em jejum."/>
+    <item id="5402" url="" name="Domperidona 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 30 minutos antes das refei&#xe7;&#xf5;es."/>
+    <item id="5403" url="" name="Plamet 10mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Enquanto persistirem v&#xf4;mitos."/>
+    <item id="5404" url="" name="Buscopan Simples" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Enquanto persistirem os sintomas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20156" type="Receita" type_verbose="Receita" url="" name="[Dor Abdominal Simples] Receita" description="" isTerminal="true" inputSequences="//@sequence.52">
+    <item id="5405" url="" name="Buscopan Composto ... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se dor."/>
+    <item id="5406" url="" name="Bromoprida 10mg .... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Se n&#xe1;usea."/>
+    <item id="5407" url="" name="Domperidona 10mg ..... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="4" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="5408" url="" name="Hidr&#xf3;xido de Alum&#xed;nio 300mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Mastigar um comprimido se dor de est&#xf4;mago."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20157" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor Abdominal Simples] Avaliar Melhora" description="" inputSequences="//@sequence.50" outputSequences="//@sequence.52 //@sequence.53">
+    <questions text="Paciente apresenta melhora ap&#xf3;s medica&#xe7;&#xe3;o?" url="" id="10222">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora" id="19743" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.42" outputStep="//@element.16" id="20158" type="Sequencia" type_verbose="Sequencia" url="" name="S34" description="-">
+    <operation name="suspeita_obstrucao_intestinal" Operator="affirmation" id="19748">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="obstucao_intestinal" id="19734" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.44" outputStep="//@element.16" id="20159" type="Sequencia" type_verbose="Sequencia" url="" name="S51" description="-">
+    <operation name="suspeita_colica_biliar" Operator="affirmation" id="19749">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="colica_biliar" id="19735" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.45" outputStep="//@element.44" id="20160" type="Sequencia" type_verbose="Sequencia" url="" name="S53" description="-"/>
+  <sequence inputStep="//@element.47" outputStep="//@element.9" id="20161" type="Sequencia" type_verbose="Sequencia" url="" name="S57" description="-"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.0" id="20162" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (quick sofa >= 2)" description="quick sofa >= 2">
+    <operation name="quick sofa >= 2" Operator="greaterOrEqual" id="19750">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="19713" weight="1" value="0.0">
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="FR > 22" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19745" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.7" id="20163" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="20164" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.0" id="20165" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (quick sofa &lt; 2)" description="quick sofa &lt; 2">
+    <operation name="quick sofa &lt; 2" Operator="lessThan" id="19751">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="19713" weight="1" value="0.0">
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="FR > 22" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19745" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="20166" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="irritacao peritoneal ou dor abdominal">
+    <operation name="irritacao peritoneal ou dor abdominal" Operator="affirmation" id="19752">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal_ou_dor" id="19714" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="20167" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="20168" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (abdomen agudo ou leucocitose)" description="abdomen agudo ou leucocitose">
+    <operation name="abdomen agudo ou leucocitose" Operator="affirmation" id="19753">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="abdome_agudo_ou_leucocitose" id="19715" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.12" id="20169" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (sem irritacao ou dor)" description="sem irritacao ou dor">
+    <operation name="sem irritacao ou dor" id="19754">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal_ou_dor" id="19714" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.14" id="20170" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (sem abdomen agudo nem leucocitose)" description="sem abdomen agudo nem leucocitose">
+    <operation name="sem abdomen agudo nem leucocitose" id="19755">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="abdome_agudo_ou_leucocitose" id="19715" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.16" id="20171" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (pancreatite aguda)" description="pancreatite aguda">
+    <operation name="pancreatite aguda" Operator="affirmation" id="19756">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pancreatite_aguda" id="19717" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.40" outputStep="//@element.17" id="20172" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.18" outputStep="//@element.16" id="20173" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (suspeita de nefrolitiase)" description="suspeita de nefrolitiase">
+    <operation name="suspeita de nefrolitiase" Operator="affirmation" id="19757">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nefrolit&#xed;ase" id="19718" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="20174" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="Incondicional"/>
+  <sequence inputStep="//@element.20" outputStep="//@element.16" id="20175" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (suspeita de apendicite)" description="suspeita de apendicite">
+    <operation name="suspeita de apendicite" Operator="affirmation" id="19758">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apendicite_aguda" id="19719" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.16" id="20176" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (Suspeita de Colecistite Aguda)" description="Suspeita de Colecistite Aguda">
+    <operation name="Suspeita de Colecistite Aguda" Operator="affirmation" id="19759">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="colecistite_aguda" id="19720" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.16" id="20177" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (Suspeita de Diverticulite Aguda)" description="Suspeita de Diverticulite Aguda">
+    <operation name="Suspeita de Diverticulite Aguda" Operator="affirmation" id="19760">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diverticulite_aguda" id="19721" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.16" id="20178" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (Suspeita de doen&#xe7;a inflamat&#xf3;ria p&#xe9;lvica)" description="Suspeita de doen&#xe7;a inflamat&#xf3;ria p&#xe9;lvica">
+    <operation name="Suspeita de doen&#xe7;a inflamat&#xf3;ria p&#xe9;lvica" Operator="affirmation" id="19761">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_inflamatoria_pelvica" id="19722" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.24" id="20179" type="Sequencia" type_verbose="Sequencia" url="" name="S21" description="Incondicional"/>
+  <sequence inputStep="//@element.26" outputStep="//@element.25" id="20180" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (com febre ou leucocitose)" description="com febre ou leucocitose">
+    <operation name="com febre ou leucocitose" Operator="affirmation" id="19762">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="febre_ou_leucocitose" id="19741" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.25" id="20181" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (sem febre ou leucocitose)" description="sem febre ou leucocitose">
+    <operation name="sem febre ou leucocitose" id="19763">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="febre_ou_leucocitose" id="19741" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.16" id="20182" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (suspeita de cetoacidose diabetica)" description="suspeita de cetoacidose diabetica">
+    <operation name="suspeita de cetoacidose diabetica" Operator="affirmation" id="19764">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cetoacidose_diabetica" id="19723" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.16" id="20183" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (Suspeita de &#xda;lcera G&#xe1;strica)" description="Suspeita de &#xda;lcera G&#xe1;strica.">
+    <operation name="Suspeita de &#xda;lcera G&#xe1;strica" Operator="affirmation" id="19765">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ulcera_gastrica" id="19725" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.16" id="20184" type="Sequencia" type_verbose="Sequencia" url="" name="S27 (dor p&#xf3;s trauma)" description="dor p&#xf3;s trauma">
+    <operation name="dor p&#xf3;s trauma" Operator="affirmation" id="19766">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_apos_trauma" id="19726" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.30" id="20185" type="Sequencia" type_verbose="Sequencia" url="" name="S28" description="Incondicional"/>
+  <sequence inputStep="//@element.32" outputStep="//@element.16" id="20186" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (Suspeita de cistite)" description="Suspeita de cistite">
+    <operation name="Suspeita de cistite" Operator="affirmation" id="19767">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cistite" id="19727" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.34" outputStep="//@element.16" id="20187" type="Sequencia" type_verbose="Sequencia" url="" name="S30 (suspeita de cancer colorretal)" description="suspeita de cancer colorretal">
+    <operation name="suspeita de cancer colorretal" Operator="affirmation" id="19768">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cancer_colorretal" id="19729" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.35" outputStep="//@element.16" id="20188" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (suspeita peritonite bacteriana espontanea)" description="suspeita peritonite bacteriana espontanea">
+    <operation name="suspeita peritonite bacteriana espontanea" Operator="affirmation" id="19769">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="peritonite_bacteriana_espontanea" id="19730" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.36" outputStep="//@element.16" id="20189" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (suspeita de tor&#xe7;&#xe3;o de ov&#xe1;rio)" description="suspeita de tor&#xe7;&#xe3;o de ov&#xe1;rio">
+    <operation name="suspeita de tor&#xe7;&#xe3;o de ov&#xe1;rio" Operator="affirmation" id="19770">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="torcao_do_ovario" id="19731" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.37" outputStep="//@element.36" id="20190" type="Sequencia" type_verbose="Sequencia" url="" name="S34" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.16" id="20191" type="Sequencia" type_verbose="Sequencia" url="" name="S35 (Suspeita de Dismenorr&#xe9;ia)" description="Suspeita de Dismenorr&#xe9;ia">
+    <operation name="Suspeita de Dismenorr&#xe9;ia" Operator="affirmation" id="19771">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dismonorreia" id="19732" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.16" id="20192" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (diarreia)" description="diarreia">
+    <operation name="dor abdominal e diarreia" Operator="affirmation" id="19772">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diarreia" id="19728" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.39" outputStep="//@element.16" id="20193" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (Suspeita de Colangite Aguda)" description="Suspeita de Colangite Aguda">
+    <operation name="Suspeita de Colangite Aguda" Operator="affirmation" id="19773">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="colangite_aguda" id="19724" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.41" outputStep="//@element.16" id="20194" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (aneurisma de aorta abdominal)" description="aneurisma de aorta abdominal">
+    <operation name="aneurisma de aorta abdominal" Operator="affirmation" id="19774">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aneurisma_aorta_abdominal" id="19733" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.43" outputStep="//@element.42" id="20195" type="Sequencia" type_verbose="Sequencia" url="" name="S50" description="-"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.16" id="20196" type="Sequencia" type_verbose="Sequencia" url="" name="S54" description="-">
+    <operation name="suspeita_dispepsia" Operator="affirmation" id="19775">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepsia_drge" id="19736" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.46" outputStep="//@element.8" id="20197" type="Sequencia" type_verbose="Sequencia" url="" name="S55" description="-"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.16" id="20198" type="Sequencia" type_verbose="Sequencia" url="" name="S56" description="-">
+    <operation name="suspeita_gravidez_ectopica" Operator="affirmation" id="19776">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gravidez_ectopica" id="19737" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.48" outputStep="//@element.16" id="20199" type="Sequencia" type_verbose="Sequencia" url="" name="S58" description="-">
+    <operation name="suspeita_infarto_mesenterico" Operator="affirmation" id="19777">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="infarto_mesenterico" id="19738" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.49" outputStep="//@element.48" id="20200" type="Sequencia" type_verbose="Sequencia" url="" name="S59" description="-"/>
+  <sequence inputStep="//@element.51" outputStep="//@element.50" id="20201" type="Sequencia" type_verbose="Sequencia" url="" name="S62" description="-">
+    <operation name="suspeita_hernia_redutivel" Operator="affirmation" id="19778">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hernia_redutivel" id="19742" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.16" id="20202" type="Sequencia" type_verbose="Sequencia" url="" name="S60" description="-">
+    <operation name="suspeita_hernia_abdominal" Operator="affirmation" id="19779">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hernia_abdominal" id="19739" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.50" outputStep="//@element.1" id="20203" type="Sequencia" type_verbose="Sequencia" url="" name="S61" description="-"/>
+  <sequence inputStep="//@element.52" outputStep="//@element.50" id="20204" type="Sequencia" type_verbose="Sequencia" url="" name="S63" description="-">
+    <operation name="suspeita_negativa_hernia_redutivel" id="19780">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hernia_abdominal" id="19739" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.54" outputStep="//@element.16" id="20205" type="Sequencia" type_verbose="Sequencia" url="" name="S66" description="-">
+    <operation name="diagnostico_nao_conclusivo" Operator="affirmation" id="19781">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diagnostico_inconclusivo" id="19740" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.53" outputStep="//@element.54" id="20206" type="Sequencia" type_verbose="Sequencia" url="" name="S67" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.16" id="20207" type="Sequencia" type_verbose="Sequencia" url="" name="S52 (Dor Abdominal Simples)" description="Dor Abdominal Simples">
+    <operation name="Dor Abdominal Simples" Operator="affirmation" id="19782">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_abdominal_simples" id="19716" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.56" outputStep="//@element.3" id="20208" type="Sequencia" type_verbose="Sequencia" url="" name="S53 (Dor abdominal simples - incondicional)" description="Incondicional"/>
+  <sequence inputStep="//@element.38" outputStep="//@element.5" id="20209" type="Sequencia" type_verbose="Sequencia" url="" name="S56 (Dismenorreia - incondicional)" description="Incondicional"/>
+  <sequence inputStep="//@element.55" outputStep="//@element.56" id="20210" type="Sequencia" type_verbose="Sequencia" url="" name="S64 (apresenta melhora)" description="apresenta melhora">
+    <operation name="apresenta melhora" Operator="affirmation" id="19783">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora" id="19743" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.56" id="20211" type="Sequencia" type_verbose="Sequencia" url="" name="S65 (n&#xe3;o apresenta melhora)" description="n&#xe3;o apresenta melhora">
+    <operation name="n&#xe3;o apresenta melhora" id="19784">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora" id="19743" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Suspeita de hernia abdominal" Operator="affirmation" id="19747"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="19713" weight="1" value="0.0">
+    <option description="Confus&#xe3;o Mental" weight="1"/>
+    <option description="FR > 22" weight="1"/>
+    <option description="PAS &lt; 100" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="irritacao_peritoneal_ou_dor" id="19714" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="abdome_agudo_ou_leucocitose" id="19715" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_abdominal_simples" id="19716" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pancreatite_aguda" id="19717" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nefrolit&#xed;ase" id="19718" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="apendicite_aguda" id="19719" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="colecistite_aguda" id="19720" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diverticulite_aguda" id="19721" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="doenca_inflamatoria_pelvica" id="19722" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cetoacidose_diabetica" id="19723" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="colangite_aguda" id="19724" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ulcera_gastrica" id="19725" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_apos_trauma" id="19726" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cistite" id="19727" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diarreia" id="19728" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cancer_colorretal" id="19729" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="peritonite_bacteriana_espontanea" id="19730" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="torcao_do_ovario" id="19731" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dismonorreia" id="19732" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aneurisma_aorta_abdominal" id="19733" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="obstucao_intestinal" id="19734" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="colica_biliar" id="19735" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dispepsia_drge" id="19736" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gravidez_ectopica" id="19737" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="infarto_mesenterico" id="19738" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hernia_abdominal" id="19739" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diagnostico_inconclusivo" id="19740" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="febre_ou_leucocitose" id="19741" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hernia_redutivel" id="19742" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="apresenta_melhora" id="19743" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="sim" id="19744" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="19745" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="n&#xe3;o" id="19746" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

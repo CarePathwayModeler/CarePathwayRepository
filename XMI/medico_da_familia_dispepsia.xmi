@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="981" url="" name="[Medico da Fam&#xed;lia] Dispepsia" code="MF_DISP(TEMP)">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4901" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Sinais e Sintomas de Alerta" description="Investigar sinais e sintomas" inputSequences="//@sequence.2 //@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Anemia" url="" id="2121">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_anemia" id="3521" weight="1" value="false"/>
+    </questions>
+    <questions text="Perda de peso n&#xe3;o intencional" url="" id="2122">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_perda_de_peso" id="3522" weight="1" value="false"/>
+    </questions>
+    <questions text="Disfagia" url="" id="2123">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_disfagia" id="3523" weight="1" value="false"/>
+    </questions>
+    <questions text="Massa abdominal palp&#xe1;vel" url="" id="2124">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_massa_abdominal" id="3524" weight="1" value="false"/>
+    </questions>
+    <questions text="&#xca;mese importante e recorrente" url="" id="2125">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_emese" id="3525" weight="1" value="false"/>
+    </questions>
+    <questions text="Hemat&#xea;meses" url="" id="2126">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_hematemeses" id="3526" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente com mais de 50 anos (?)" url="" id="2127">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_maior_de_50_anos" id="3527" weight="1" value="false"/>
+    </questions>
+    <questions text="Melenas" url="" id="2128">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_melenas" id="3528" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente apresenta antecedente de c&#xe2;ncer g&#xe1;strico na fam&#xed;lia no primeiro grau?" url="" id="2129" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="antecedente_cancer_gastrico" id="3529" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4902" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Risco de Dispepsias Funcional e/ou Org&#xe2;nica" description="Avaliar fatores de risco para Dispepcia Org&#xe2;nica" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Uso cr&#xf4;nico de AINES" url="" id="2130" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+    </questions>
+    <questions text="Tabagismo" url="" id="2131" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+    </questions>
+    <questions text="Antecedente de ulcera" url="" id="2132" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+    </questions>
+    <questions text="Antecedente de &#xfa;lcera na fam&#xed;lia" url="" id="2133" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+    </questions>
+    <questions text="Patologias cr&#xf4;nicas" url="" id="2134" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+    </questions>
+    <questions text="Infec&#xe7;&#xe3;o por Helicobacter Pylori" url="" id="2135" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+    </questions>
+    <questions text="Sintomas de longo tempo" url="" id="2136" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+    </questions>
+    <questions text="Tabagismo" url="" id="2137" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+    </questions>
+    <questions text="Transtorno psicol&#xf3;gico ou psiqui&#xe1;trico" url="" id="2138" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4903" type="Tratamento" type_verbose="Tratamento" url="" name="Apoio Diagn&#xf3;stico: Encoscopia" description="Prescrever endoscopia para apoio diagn&#xf3;stico do paciente" inputSequences="//@sequence.4 //@sequence.10" outputSequences="//@sequence.7">
+    <examination url="" exam_id="23010037" limb_side="" quantity="1" reason="Dispepcia" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4904" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Resposta ao Tratamento" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="H&#xe1; resposta adequada ao tratamento farmacol&#xf3;gico?" url="" id="2139">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_ao_tratamento" id="3539" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4905" type="Receita" type_verbose="Receita" url="" name="[Dispepsia Funcional] Tratamento N&#xe3;o Farmacol&#xf3;gico" description="&lt;ul dir=&quot;ltr&quot;>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Mapa di&amp;aacute;rio de sintomas e refei&amp;ccedil;&amp;otilde;es.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>N&amp;atilde;o fumar. &lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Evitar alimentos que causam desconforto e agravar os sintomas.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Restri&amp;ccedil;&amp;atilde;o de licor, AINEs, caf&amp;eacute; e ch&amp;aacute;.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Gest&amp;atilde;o do stress.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.0" outputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4906" type="Receita" type_verbose="Receita" url="" name="[Dispepsia Org&#xe2;nica] Tratamento Farmacol&#xf3;gico" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.3">
+    <item id="946" url="" name="OMEPRAZOL" med_code="1146321342" presentation="COMP" access="1" quantity="1" period="60" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="947" url="" name="CLORIDRATO DE RANITIDINA" med_code="766253977" presentation="COMP" access="1" quantity="1" period="60" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="948" url="" name="SUCRAFILM" med_code="766610821" presentation="COMP" access="1" quantity="1" period="60" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="4907" type="Processo" type_verbose="Processo" url="" name="Retorno em 8 semanas" description="Agendar retorno para ap&#xf3;s 8 semanas" inputSequences="//@sequence.5" outputSequences="//@sequence.6">
+    <action id="141" process_id="4907" service="aprazamento" description="Retorno em 8 semanas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4908" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno" description="Aguardar retorno do paciente." inputSequences="//@sequence.6" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Process" id="4909" type="Processo" type_verbose="Processo" url="" name="Encaminhar ao Endocrinologista" description="" isTerminal="true" inputSequences="//@sequence.7">
+    <action id="142" process_id="4909" service="encaminhar_especialidade" description="Endocrinologista"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4910" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Decis&#xe3;o de tratamento" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Mant&#xe9;m tratamento atual?" url="" id="2140">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="manter_tratamento" id="3540" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4911" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Suspender Tratamento" description="Suspender tratamento e liberar paciente." isTerminal="true" inputSequences="//@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4912" type="Receita" type_verbose="Receita" url="" name="Manter &#xda;ltimo Tratamento" description="&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p dir=&quot;ltr&quot;>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Manter &amp;uacute;ltimo tratamento. Se tratamento n&amp;atilde;o farmacol&amp;oacute;gico, fazer:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul dir=&quot;ltr&quot;>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Mapa di&amp;aacute;rio de sintomas e refei&amp;ccedil;&amp;otilde;es.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>N&amp;atilde;o fumar. &lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Evitar alimentos que causam desconforto e agravar os sintomas.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Restri&amp;ccedil;&amp;atilde;o de licor, AINEs, caf&amp;eacute; e ch&amp;aacute;.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt&quot;>Gest&amp;atilde;o do stress.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.11" outputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4913" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Definir Necessidade de Retorno" description="Retorno a crit&#xe9;rio m&#xe9;dico." isTerminal="true" inputSequences="//@sequence.13"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="4914" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (dispepsia funcional)" description="">
+    <operation name="dispepsia funcional" Operator="and" id="3554">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Fat Dispep Fun >= 1" Operator="greaterOrEqual" id="3547">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Funcional" Operator="addition" id="3543">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Fat Dispep Org &lt; 1" Operator="lessThan" id="3545">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Organica" Operator="addition" id="3544">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="4915" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (dispepsia organica)" description="">
+    <operation name="dispepsia organica" Operator="and" id="3555">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Fat Dispep Org >= 1" Operator="greaterOrEqual" id="3548">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Organica" Operator="addition" id="3544">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Fat Dispep Fun &lt; 1" Operator="lessThan" id="3546">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Funcional" Operator="addition" id="3543">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.4" id="4916" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.5" id="4917" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="Incondiconal"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="4918" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (sinais de alarme >= 1 ou antecedente de cancer)" description="sinais de alarme >= 1">
+    <operation name="sinais de alarme >= 1 ou antecedente de cancer" Operator="or" id="3556">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas de Alarme >= 1" Operator="greaterOrEqual" id="3549">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas de Alarme" Operator="addition" id="3542">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_anemia" id="3521" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_perda_de_peso" id="3522" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_disfagia" id="3523" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_massa_abdominal" id="3524" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_emese" id="3525" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_hematemeses" id="3526" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_maior_de_50_anos" id="3527" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_melenas" id="3528" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="antecedente_cancer_gastrico" id="3529" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="4919" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (sinais de alarme &lt; 1)" description="sinais de alarme &lt; 1">
+    <operation name="Sinais de Alarme &lt; 1 e sem antecedente de cancer" Operator="and" id="3557">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas de Alarme &lt; 1" Operator="lessThan" id="3550">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas de Alarme" Operator="addition" id="3542">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_anemia" id="3521" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_perda_de_peso" id="3522" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_disfagia" id="3523" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_massa_abdominal" id="3524" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_emese" id="3525" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_hematemeses" id="3526" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_maior_de_50_anos" id="3527" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_melenas" id="3528" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sem antecedente de cancer" id="3551">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="antecedente_cancer_gastrico" id="3529" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="4920" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="4921" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.7" id="4922" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.3" id="4923" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (h&#xe1; resposta ao tratamento)" description="h&#xe1; resposta ao tratamento">
+    <operation name="h&#xe1; resposta ao tratamento" Operator="affirmation" id="3558">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_ao_tratamento" id="3539" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.3" id="4924" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (n&#xe3;o h&#xe1; resposta ao tratamento)" description="n&#xe3;o h&#xe1; resposta ao tratamento">
+    <operation name="n&#xe3;o h&#xe1; resposta ao tratamento" id="3559">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_ao_tratamento" id="3539" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="4925" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (manter medica&#xe7;&#xe3;o)" description="manter medica&#xe7;&#xe3;o">
+    <operation name="manter medica&#xe7;&#xe3;o" Operator="affirmation" id="3560">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manter_tratamento" id="3540" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="4926" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (n&#xe3;o manter medica&#xe7;&#xe3;o)" description="n&#xe3;o manter medica&#xe7;&#xe3;o">
+    <operation name="n&#xe3;o manter medica&#xe7;&#xe3;o" id="3561">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manter_tratamento" id="3540" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="4927" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="Incondicional"/>
+  <category name="Antecedente de C&#xe2;ncer" question="//@element.0/@questions.8"/>
+  <category name="Dispepsia Org&#xe2;nica" question="//@element.1/@questions.0 //@element.1/@questions.1 //@element.1/@questions.2 //@element.1/@questions.3 //@element.1/@questions.4 //@element.1/@questions.5 //@element.1/@questions.6"/>
+  <category name="Dispepsia Funcional" question="//@element.1/@questions.7 //@element.1/@questions.8"/>
+  <operation name="Sintomas de Alarme" Operator="addition" id="3542">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_anemia" id="3521" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_perda_de_peso" id="3522" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_disfagia" id="3523" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_massa_abdominal" id="3524" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_emese" id="3525" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_hematemeses" id="3526" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_maior_de_50_anos" id="3527" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_melenas" id="3528" weight="1" value="false"/>
+  </operation>
+  <operation name="Fatores Dispspsia Funcional" Operator="addition" id="3543">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+  </operation>
+  <operation name="Fatores Dispspsia Organica" Operator="addition" id="3544">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+  </operation>
+  <operation name="Fat Dispep Org &lt; 1" Operator="lessThan" id="3545">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Organica" Operator="addition" id="3544">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Fat Dispep Fun &lt; 1" Operator="lessThan" id="3546">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Funcional" Operator="addition" id="3543">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Fat Dispep Fun >= 1" Operator="greaterOrEqual" id="3547">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Funcional" Operator="addition" id="3543">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Fat Dispep Org >= 1" Operator="greaterOrEqual" id="3548">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Organica" Operator="addition" id="3544">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Sintomas de Alarme >= 1" Operator="greaterOrEqual" id="3549">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas de Alarme" Operator="addition" id="3542">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_anemia" id="3521" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_perda_de_peso" id="3522" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_disfagia" id="3523" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_massa_abdominal" id="3524" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_emese" id="3525" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_hematemeses" id="3526" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_maior_de_50_anos" id="3527" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_melenas" id="3528" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Sintomas de Alarme &lt; 1" Operator="lessThan" id="3550">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Sintomas de Alarme" Operator="addition" id="3542">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_anemia" id="3521" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_perda_de_peso" id="3522" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_disfagia" id="3523" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_massa_abdominal" id="3524" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_emese" id="3525" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_hematemeses" id="3526" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_maior_de_50_anos" id="3527" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_melenas" id="3528" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Sem antecedente de cancer" id="3551">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="antecedente_cancer_gastrico" id="3529" weight="1" value="false"/>
+  </operation>
+  <operation name="Tratamento N&#xe3;o Farmacologico" Operator="affirmation" id="3552">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Fat Dispep Fun >= 1" Operator="greaterOrEqual" id="3547">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Funcional" Operator="addition" id="3543">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="Tratamento Farmacologico" Operator="affirmation" id="3553">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Fat Dispep Org >= 1" Operator="greaterOrEqual" id="3548">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Fatores Dispspsia Organica" Operator="addition" id="3544">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_anemia" id="3521" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_perda_de_peso" id="3522" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_disfagia" id="3523" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_massa_abdominal" id="3524" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_emese" id="3525" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_hematemeses" id="3526" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_maior_de_50_anos" id="3527" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_melenas" id="3528" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="antecedente_cancer_gastrico" id="3529" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_uso_cronico_aines" id="3530" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_tabagismo" id="3531" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_antecedente_ulcera" id="3532" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_ulcera_familia" id="3533" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_patologias_cronicas" id="3534" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_infeccap_helicobacter" id="3535" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_dispepcia_organica_longo_tempo" id="3536" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_tabagismo" id="3537" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dispepcia_funcional_transtorno_psicologico" id="3538" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_ao_tratamento" id="3539" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="manter_tratamento" id="3540" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="3541" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

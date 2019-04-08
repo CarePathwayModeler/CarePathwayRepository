@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3111" url="" name="Hemorragia P&#xf3;s-Parto" code="H042">
+  <element xsi:type="pathwayMetamodel:Treatment" id="17205" type="Tratamento" type_verbose="Tratamento" url="" name="Conduta Inicial" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Mobilizar equipe&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Garantir Via A&amp;eacute;rea&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Duplo Acesso Perif&amp;eacute;rico Calibroso&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Posi&amp;ccedil;&amp;atilde;o de Trendelemburg&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Reserva de Sangue&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Verificar Sinais Vitais&lt;/span>&lt;/li>&#xA;&lt;/ul>" isInitial="true" outputSequences="//@sequence.0">
+    <examination url="HEMOGLOBINA" exam_id="28040422" limb_side="" quantity="1" reason="Hemorragia p&#xf3;s-parto" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="Hemorragia p&#xf3;s-parto" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="Hemorragia p&#xf3;s-parto" clinical_indication="n/a"/>
+    <examination url="FIBRINOGENIO" exam_id="28040333" limb_side="" quantity="1" reason="Hemorragia p&#xf3;s-parto" clinical_indication="n/a"/>
+    <examination url="CONTAGEM DE PLAQUETAS" exam_id="28040562" limb_side="" quantity="1" reason="Hemorragia p&#xf3;s-parto" clinical_indication="n/a"/>
+    <medication url="" med_id="43788" id="9001" name="SORO FISIOLOGICO 0,9% 1000 ML TUBO 1000 ML" brand="" unit="BL" access="6" daily_dosage="1" cycles="1" treatement_time="9001" standard="null"/>
+    <medication url="" med_id="80012" id="9002" name="TRANSAMIN AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="4" cycles="1" treatement_time="9002" standard="null"/>
+    <procedure url="SONDAGEM VESICAL DE DEMORA" procedure="76040005" quantity="1"/>
+    <procedure url="O2 UMIDO C/ CATETER NASAL" procedure="75010001" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17206" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Condi&#xe7;&#xe3;o" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Atonia Uterina" url="" id="8952">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="condicao_atonia_uterina" id="17008" weight="1" value="false"/>
+    </questions>
+    <questions text="Resto placent&#xe1;rio ou lacera&#xe7;&#xe3;o de trajeto" url="" id="8953">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="condicao_resto_placentario" id="17009" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17207" type="Tratamento" type_verbose="Tratamento" url="" name="[Atonia Uterina] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Realizar massagem uterina&lt;/span>&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.3">
+    <medication url="" med_id="121737" id="9003" name="ORASTINA 5UI / ML AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="4" cycles="1" treatement_time="9003" standard="null"/>
+    <medication url="" med_id="37478" id="9004" name="ERGOTRATE AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9004" standard="null"/>
+    <medication url="" med_id="103950" id="9005" name="CYTOTEC COMP 1 UD" brand="" unit="Mc" access="3" daily_dosage="4" cycles="1" treatement_time="9005" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17208" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Curagem e corre&#xe7;&#xe3;o da lacera&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Avaliar necessidade de curagem e corre&amp;ccedil;&amp;atilde;o de lacera&amp;ccedil;&amp;atilde;o do trajeto.&lt;/span>&lt;/p>" inputSequences="//@sequence.2 //@sequence.6" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17209" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Resposta Adequada (1)" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Paciente respondeu adequadamente ao tratamento?" url="" id="8954">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_1" id="17010" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17210" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Resposta Adequada (2)" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Paciente respondeu adequadamente ao tratamento?" url="" id="8955">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_2" id="17011" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17211" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Orastina 20 UI + 1000 ml SRL EV, em BIC, 42 ml/h por mais 48h&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Vigil&amp;acirc;ncia de par&amp;acirc;metros PAS &amp;gt;= 90 mmHg&amp;nbsp;&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>D&amp;eacute;bito urin&amp;aacute;rio 30-60 ml/h &lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Ht 25 - 30% / Hb 7g/dl&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.5 //@sequence.7">
+    <medication url="" med_id="121737" id="9006" name="ORASTINA 5UI / ML AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="4" cycles="1" treatement_time="9006" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17212" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Coagulopatia?" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Paciente apresenta coagulopatia?" url="" id="8956">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="coagulopatia" id="17012" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17213" type="Tratamento" type_verbose="Tratamento" url="" name="Avali&#xe7;&#xe3;o da Coagulopatia" description="&lt;p style=&quot;margin-left:0cm; margin-right:0cm&quot;>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local e verificar par&amp;acirc;metros dos exames:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;margin-left:0cm; margin-right:0cm&quot;>TAP/TTPA &amp;gt;1,5&lt;/span>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;margin-left:0cm; margin-right:0cm&quot;>Fibrinog&amp;ecirc;nio &amp;lt; 100&lt;/span>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;margin-left:0cm; margin-right:0cm&quot;>Plaquetas &amp;lt; 100.000&lt;/span>&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17214" type="Tratamento" type_verbose="Tratamento" url="" name="[Sem coagulopatia] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local e avaliar tratamento adequado:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Tamponamento&lt;/span>&#xA;&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Sonda Foliy/Condom&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Laparotomia suturas de B-Lynch&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Desvasculariza&amp;ccedil;&amp;atilde;o&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Histerectomia&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.10"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17215" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="Incondicionl"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="17216" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (atonia uterina)" description="atonia uterina">
+    <operation name="atonia uterina" Operator="affirmation" id="17013">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="condicao_atonia_uterina" id="17008" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="17217" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (resto placentario)" description="resto placentario">
+    <operation name="resto placentario" Operator="affirmation" id="17014">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="condicao_resto_placentario" id="17009" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="17218" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="17219" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="17220" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (resposta adequada 1)" description="resposta adequada 1">
+    <operation name="resposta adequada 1" Operator="affirmation" id="17015">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_1" id="17010" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.4" id="17281" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (resposta inadequada 1)" description="resposta inadequada 1">
+    <operation name="resposta inadequada 1" id="17016">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_1" id="17010" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="17282" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (resposta adequada 2)" description="resposta adequada 2">
+    <operation name="resposta adequada 2" Operator="affirmation" id="17017">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_2" id="17011" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="17283" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (resposta inadequada 2)" description="resposta inadequada 2">
+    <operation name="resposta inadequada 2" id="17018">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_2" id="17011" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="17284" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (com coagulopatia)" description="com coagulopatia">
+    <operation name="com coagulopatia" Operator="affirmation" id="17019">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="coagulopatia" id="17012" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="17285" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (sem coagulopatia)" description="sem coagulopatia">
+    <operation name="sem coagulopatia" id="17020">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="coagulopatia" id="17012" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="condicao_atonia_uterina" id="17008" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="condicao_resto_placentario" id="17009" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_1" id="17010" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resposta_adequada_2" id="17011" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="coagulopatia" id="17012" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

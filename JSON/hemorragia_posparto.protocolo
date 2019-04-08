@@ -1,0 +1,1295 @@
+{
+    "id": 3111,
+    "url": "",
+    "codigo": "H042",
+    "nome": "Hemorragia P\u00f3s-Parto",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Obstetr\u00edcia",
+    "repositorio_id": 501,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:38:35.585425-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:38:19.235743-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:38:35.585425-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17205,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Conduta Inicial",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:16px\">Mobilizar equipe</span></li>\n\t<li><span style=\"font-size:16px\">Garantir Via A&eacute;rea</span></li>\n\t<li><span style=\"font-size:16px\">Duplo Acesso Perif&eacute;rico Calibroso</span></li>\n\t<li><span style=\"font-size:16px\">Posi&ccedil;&atilde;o de Trendelemburg</span></li>\n\t<li><span style=\"font-size:16px\">Reserva de Sangue</span></li>\n\t<li><span style=\"font-size:16px\">Verificar Sinais Vitais</span></li>\n</ul>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGLOBINA",
+                    "exame": "28040422",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Hemorragia p\u00f3s-parto",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Hemorragia p\u00f3s-parto",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Hemorragia p\u00f3s-parto",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "FIBRINOGENIO",
+                    "exame": "28040333",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Hemorragia p\u00f3s-parto",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CONTAGEM DE PLAQUETAS",
+                    "exame": "28040562",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Hemorragia p\u00f3s-parto",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9001,
+                    "url": "",
+                    "medicamento": 43788,
+                    "codigo": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 1000 ML TUBO 1000 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "BL",
+                    "unidade_display": "BOLSA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9002,
+                    "url": "",
+                    "medicamento": 80012,
+                    "codigo": "",
+                    "nome": "TRANSAMIN AMPL 5 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 4,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "SONDAGEM VESICAL DE DEMORA",
+                    "procedimento": "76040005",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2 UMIDO C/ CATETER NASAL",
+                    "procedimento": "75010001",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17215,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicionl",
+                    "passo_de_saida_id": 17205,
+                    "passo_de_saida": "Tratamento: Conduta Inicial",
+                    "passo_de_entrada_id": 17206,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Condi\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17206,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Condi\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8952,
+                    "url": "",
+                    "texto": "Atonia Uterina",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17008,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "condicao_atonia_uterina",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8953,
+                    "url": "",
+                    "texto": "Resto placent\u00e1rio ou lacera\u00e7\u00e3o de trajeto",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17009,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "condicao_resto_placentario",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17215,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicionl",
+                    "passo_de_saida_id": 17205,
+                    "passo_de_saida": "Tratamento: Conduta Inicial",
+                    "passo_de_entrada_id": 17206,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Condi\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17216,
+                    "url": "",
+                    "nome": "S2 (atonia uterina)",
+                    "descricao": "atonia uterina",
+                    "passo_de_saida_id": 17206,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Condi\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17207,
+                    "passo_de_entrada": "Tratamento: [Atonia Uterina] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17217,
+                    "url": "",
+                    "nome": "S3 (resto placentario)",
+                    "descricao": "resto placentario",
+                    "passo_de_saida_id": 17206,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Condi\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17208,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17207,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Atonia Uterina] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Realizar massagem uterina</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9003,
+                    "url": "",
+                    "medicamento": 121737,
+                    "codigo": "",
+                    "nome": "ORASTINA 5UI / ML AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 4,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9004,
+                    "url": "",
+                    "medicamento": 37478,
+                    "codigo": "",
+                    "nome": "ERGOTRATE AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9005,
+                    "url": "",
+                    "medicamento": 103950,
+                    "codigo": "",
+                    "nome": "CYTOTEC COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "Mc",
+                    "unidade_display": "MICROGRAMA",
+                    "via_acesso": 3,
+                    "dose_diaria": 4,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17216,
+                    "url": "",
+                    "nome": "S2 (atonia uterina)",
+                    "descricao": "atonia uterina",
+                    "passo_de_saida_id": 17206,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Condi\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17207,
+                    "passo_de_entrada": "Tratamento: [Atonia Uterina] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17218,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17207,
+                    "passo_de_saida": "Tratamento: [Atonia Uterina] Conduta",
+                    "passo_de_entrada_id": 17209,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta Adequada (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17208,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+            "descricao": "<p><span style=\"font-size:16px\">Avaliar necessidade de curagem e corre&ccedil;&atilde;o de lacera&ccedil;&atilde;o do trajeto.</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17217,
+                    "url": "",
+                    "nome": "S3 (resto placentario)",
+                    "descricao": "resto placentario",
+                    "passo_de_saida_id": 17206,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Condi\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17208,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17281,
+                    "url": "",
+                    "nome": "S7 (resposta inadequada 1)",
+                    "descricao": "resposta inadequada 1",
+                    "passo_de_saida_id": 17209,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (1)",
+                    "passo_de_entrada_id": 17208,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17219,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17208,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17210,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta Adequada (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17209,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Resposta Adequada (1)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8954,
+                    "url": "",
+                    "texto": "Paciente respondeu adequadamente ao tratamento?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17010,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "resposta_adequada_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17218,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17207,
+                    "passo_de_saida": "Tratamento: [Atonia Uterina] Conduta",
+                    "passo_de_entrada_id": 17209,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta Adequada (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17220,
+                    "url": "",
+                    "nome": "S6 (resposta adequada 1)",
+                    "descricao": "resposta adequada 1",
+                    "passo_de_saida_id": 17209,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (1)",
+                    "passo_de_entrada_id": 17211,
+                    "passo_de_entrada": "Tratamento: Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17281,
+                    "url": "",
+                    "nome": "S7 (resposta inadequada 1)",
+                    "descricao": "resposta inadequada 1",
+                    "passo_de_saida_id": 17209,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (1)",
+                    "passo_de_entrada_id": 17208,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17210,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Resposta Adequada (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8955,
+                    "url": "",
+                    "texto": "Paciente respondeu adequadamente ao tratamento?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17011,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "resposta_adequada_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17219,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17208,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17210,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta Adequada (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17282,
+                    "url": "",
+                    "nome": "S8 (resposta adequada 2)",
+                    "descricao": "resposta adequada 2",
+                    "passo_de_saida_id": 17210,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (2)",
+                    "passo_de_entrada_id": 17211,
+                    "passo_de_entrada": "Tratamento: Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17283,
+                    "url": "",
+                    "nome": "S9 (resposta inadequada 2)",
+                    "descricao": "resposta inadequada 2",
+                    "passo_de_saida_id": 17210,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (2)",
+                    "passo_de_entrada_id": 17212,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Coagulopatia?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17211,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:16px\">Orastina 20 UI + 1000 ml SRL EV, em BIC, 42 ml/h por mais 48h</span></li>\n\t<li><span style=\"font-size:16px\">Vigil&acirc;ncia de par&acirc;metros PAS &gt;= 90 mmHg&nbsp;</span></li>\n\t<li><span style=\"font-size:16px\">D&eacute;bito urin&aacute;rio 30-60 ml/h </span></li>\n\t<li><span style=\"font-size:16px\">Ht 25 - 30% / Hb 7g/dl</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9006,
+                    "url": "",
+                    "medicamento": 121737,
+                    "codigo": "",
+                    "nome": "ORASTINA 5UI / ML AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 4,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17220,
+                    "url": "",
+                    "nome": "S6 (resposta adequada 1)",
+                    "descricao": "resposta adequada 1",
+                    "passo_de_saida_id": 17209,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (1)",
+                    "passo_de_entrada_id": 17211,
+                    "passo_de_entrada": "Tratamento: Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17282,
+                    "url": "",
+                    "nome": "S8 (resposta adequada 2)",
+                    "descricao": "resposta adequada 2",
+                    "passo_de_saida_id": 17210,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (2)",
+                    "passo_de_entrada_id": 17211,
+                    "passo_de_entrada": "Tratamento: Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17212,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Coagulopatia?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8956,
+                    "url": "",
+                    "texto": "Paciente apresenta coagulopatia?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17012,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "coagulopatia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17283,
+                    "url": "",
+                    "nome": "S9 (resposta inadequada 2)",
+                    "descricao": "resposta inadequada 2",
+                    "passo_de_saida_id": 17210,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta Adequada (2)",
+                    "passo_de_entrada_id": 17212,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Coagulopatia?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17284,
+                    "url": "",
+                    "nome": "S11 (com coagulopatia)",
+                    "descricao": "com coagulopatia",
+                    "passo_de_saida_id": 17212,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Coagulopatia?",
+                    "passo_de_entrada_id": 17213,
+                    "passo_de_entrada": "Tratamento: Avali\u00e7\u00e3o da Coagulopatia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17285,
+                    "url": "",
+                    "nome": "S15 (sem coagulopatia)",
+                    "descricao": "sem coagulopatia",
+                    "passo_de_saida_id": 17212,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Coagulopatia?",
+                    "passo_de_entrada_id": 17214,
+                    "passo_de_entrada": "Tratamento: [Sem coagulopatia] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17213,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Avali\u00e7\u00e3o da Coagulopatia",
+            "descricao": "<p style=\"margin-left:0cm; margin-right:0cm\"><span style=\"font-size:16px\">Discutir caso com l&iacute;der local e verificar par&acirc;metros dos exames:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\"><span style=\"margin-left:0cm; margin-right:0cm\">TAP/TTPA &gt;1,5</span></span></li>\n\t<li><span style=\"font-size:16px\"><span style=\"margin-left:0cm; margin-right:0cm\">Fibrinog&ecirc;nio &lt; 100</span></span></li>\n\t<li><span style=\"font-size:16px\"><span style=\"margin-left:0cm; margin-right:0cm\">Plaquetas &lt; 100.000</span></span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17284,
+                    "url": "",
+                    "nome": "S11 (com coagulopatia)",
+                    "descricao": "com coagulopatia",
+                    "passo_de_saida_id": 17212,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Coagulopatia?",
+                    "passo_de_entrada_id": 17213,
+                    "passo_de_entrada": "Tratamento: Avali\u00e7\u00e3o da Coagulopatia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17214,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Sem coagulopatia] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Discutir caso com l&iacute;der local e avaliar tratamento adequado:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Tamponamento</span>\n\n\t<ul>\n\t\t<li><span style=\"font-size:16px\">Sonda Foliy/Condom</span></li>\n\t</ul>\n\t</li>\n\t<li><span style=\"font-size:16px\">Laparotomia suturas de B-Lynch</span></li>\n\t<li><span style=\"font-size:16px\">Desvasculariza&ccedil;&atilde;o</span></li>\n\t<li><span style=\"font-size:16px\">Histerectomia</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17285,
+                    "url": "",
+                    "nome": "S15 (sem coagulopatia)",
+                    "descricao": "sem coagulopatia",
+                    "passo_de_saida_id": 17212,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Coagulopatia?",
+                    "passo_de_entrada_id": 17214,
+                    "passo_de_entrada": "Tratamento: [Sem coagulopatia] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17215,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "Incondicionl",
+            "passo_de_saida_id": 17205,
+            "passo_de_saida": {
+                "id": 17205,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Conduta Inicial",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:16px\">Mobilizar equipe</span></li>\n\t<li><span style=\"font-size:16px\">Garantir Via A&eacute;rea</span></li>\n\t<li><span style=\"font-size:16px\">Duplo Acesso Perif&eacute;rico Calibroso</span></li>\n\t<li><span style=\"font-size:16px\">Posi&ccedil;&atilde;o de Trendelemburg</span></li>\n\t<li><span style=\"font-size:16px\">Reserva de Sangue</span></li>\n\t<li><span style=\"font-size:16px\">Verificar Sinais Vitais</span></li>\n</ul>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17206,
+            "passo_de_entrada": {
+                "id": 17206,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Condi\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17216,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (atonia uterina)",
+            "descricao": "atonia uterina",
+            "passo_de_saida_id": 17206,
+            "passo_de_saida": {
+                "id": 17206,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Condi\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17207,
+            "passo_de_entrada": {
+                "id": 17207,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Atonia Uterina] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Realizar massagem uterina</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17013,
+                "nome": "atonia uterina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17008
+                ],
+                "argumentos": [
+                    "condicao_atonia_uterina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17217,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (resto placentario)",
+            "descricao": "resto placentario",
+            "passo_de_saida_id": 17206,
+            "passo_de_saida": {
+                "id": 17206,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Condi\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17208,
+            "passo_de_entrada": {
+                "id": 17208,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:16px\">Avaliar necessidade de curagem e corre&ccedil;&atilde;o de lacera&ccedil;&atilde;o do trajeto.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17014,
+                "nome": "resto placentario",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17009
+                ],
+                "argumentos": [
+                    "condicao_resto_placentario"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17218,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17207,
+            "passo_de_saida": {
+                "id": 17207,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Atonia Uterina] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Realizar massagem uterina</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17209,
+            "passo_de_entrada": {
+                "id": 17209,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta Adequada (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17219,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17208,
+            "passo_de_saida": {
+                "id": 17208,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:16px\">Avaliar necessidade de curagem e corre&ccedil;&atilde;o de lacera&ccedil;&atilde;o do trajeto.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17210,
+            "passo_de_entrada": {
+                "id": 17210,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta Adequada (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17220,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (resposta adequada 1)",
+            "descricao": "resposta adequada 1",
+            "passo_de_saida_id": 17209,
+            "passo_de_saida": {
+                "id": 17209,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta Adequada (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17211,
+            "passo_de_entrada": {
+                "id": 17211,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:16px\">Orastina 20 UI + 1000 ml SRL EV, em BIC, 42 ml/h por mais 48h</span></li>\n\t<li><span style=\"font-size:16px\">Vigil&acirc;ncia de par&acirc;metros PAS &gt;= 90 mmHg&nbsp;</span></li>\n\t<li><span style=\"font-size:16px\">D&eacute;bito urin&aacute;rio 30-60 ml/h </span></li>\n\t<li><span style=\"font-size:16px\">Ht 25 - 30% / Hb 7g/dl</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17015,
+                "nome": "resposta adequada 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17010
+                ],
+                "argumentos": [
+                    "resposta_adequada_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17281,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (resposta inadequada 1)",
+            "descricao": "resposta inadequada 1",
+            "passo_de_saida_id": 17209,
+            "passo_de_saida": {
+                "id": 17209,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta Adequada (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17208,
+            "passo_de_entrada": {
+                "id": 17208,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Curagem e corre\u00e7\u00e3o da lacera\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:16px\">Avaliar necessidade de curagem e corre&ccedil;&atilde;o de lacera&ccedil;&atilde;o do trajeto.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17016,
+                "nome": "resposta inadequada 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17010
+                ],
+                "argumentos": [
+                    "resposta_adequada_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17282,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (resposta adequada 2)",
+            "descricao": "resposta adequada 2",
+            "passo_de_saida_id": 17210,
+            "passo_de_saida": {
+                "id": 17210,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta Adequada (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17211,
+            "passo_de_entrada": {
+                "id": 17211,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:16px\">Orastina 20 UI + 1000 ml SRL EV, em BIC, 42 ml/h por mais 48h</span></li>\n\t<li><span style=\"font-size:16px\">Vigil&acirc;ncia de par&acirc;metros PAS &gt;= 90 mmHg&nbsp;</span></li>\n\t<li><span style=\"font-size:16px\">D&eacute;bito urin&aacute;rio 30-60 ml/h </span></li>\n\t<li><span style=\"font-size:16px\">Ht 25 - 30% / Hb 7g/dl</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17017,
+                "nome": "resposta adequada 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17011
+                ],
+                "argumentos": [
+                    "resposta_adequada_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17283,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (resposta inadequada 2)",
+            "descricao": "resposta inadequada 2",
+            "passo_de_saida_id": 17210,
+            "passo_de_saida": {
+                "id": 17210,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta Adequada (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17212,
+            "passo_de_entrada": {
+                "id": 17212,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Coagulopatia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17018,
+                "nome": "resposta inadequada 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17011
+                ],
+                "argumentos": [
+                    "resposta_adequada_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17284,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (com coagulopatia)",
+            "descricao": "com coagulopatia",
+            "passo_de_saida_id": 17212,
+            "passo_de_saida": {
+                "id": 17212,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Coagulopatia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17213,
+            "passo_de_entrada": {
+                "id": 17213,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Avali\u00e7\u00e3o da Coagulopatia",
+                "descricao": "<p style=\"margin-left:0cm; margin-right:0cm\"><span style=\"font-size:16px\">Discutir caso com l&iacute;der local e verificar par&acirc;metros dos exames:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\"><span style=\"margin-left:0cm; margin-right:0cm\">TAP/TTPA &gt;1,5</span></span></li>\n\t<li><span style=\"font-size:16px\"><span style=\"margin-left:0cm; margin-right:0cm\">Fibrinog&ecirc;nio &lt; 100</span></span></li>\n\t<li><span style=\"font-size:16px\"><span style=\"margin-left:0cm; margin-right:0cm\">Plaquetas &lt; 100.000</span></span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17019,
+                "nome": "com coagulopatia",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17012
+                ],
+                "argumentos": [
+                    "coagulopatia"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17285,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (sem coagulopatia)",
+            "descricao": "sem coagulopatia",
+            "passo_de_saida_id": 17212,
+            "passo_de_saida": {
+                "id": 17212,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Coagulopatia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17214,
+            "passo_de_entrada": {
+                "id": 17214,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem coagulopatia] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Discutir caso com l&iacute;der local e avaliar tratamento adequado:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Tamponamento</span>\n\n\t<ul>\n\t\t<li><span style=\"font-size:16px\">Sonda Foliy/Condom</span></li>\n\t</ul>\n\t</li>\n\t<li><span style=\"font-size:16px\">Laparotomia suturas de B-Lynch</span></li>\n\t<li><span style=\"font-size:16px\">Desvasculariza&ccedil;&atilde;o</span></li>\n\t<li><span style=\"font-size:16px\">Histerectomia</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17020,
+                "nome": "sem coagulopatia",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17012
+                ],
+                "argumentos": [
+                    "coagulopatia"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17008,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "condicao_atonia_uterina",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17009,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "condicao_resto_placentario",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17010,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "resposta_adequada_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17011,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "resposta_adequada_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17012,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "coagulopatia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

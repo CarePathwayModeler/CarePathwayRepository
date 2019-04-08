@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="915" url="" name="[Viver Bem] Hipertens&#xe3;o" code="MF_HAS">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4486" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="J&#xe1; est&#xe1; em tratamento?" description="Verificar se paciente j&#xe1; est&#xe1; em tratamento" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="J&#xe1; est&#xe1; em tratamento?" url="" id="1919">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="3267" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4487" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Etnia" description="Verificar se paciente &#xe9; afroamericano" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Paciente &#xe9; afroamericano?" url="" id="1920">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="3268" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4488" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Alergia a IECA?" description="Verificar se paciente possui alergia a IECA" inputSequences="//@sequence.3" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Paciente al&#xe9;rgico a IECA?" url="" id="1961">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="3269" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4489" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Tratamento Alternativo?" description="Paciente Al&#xe9;rgico a IECA, em caso de n&#xe3;o realizar tratamento alternativo, paciente ir&#xe1; ser encaminhado para tratamento BAR + BBC + BETABLOQUEADOR" inputSequences="//@sequence.6" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Tratamento alternativo?" url="" id="1962">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="3270" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4490" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Tratamento Alternativo" description="Prescrever e Justificar tratamento alternativo" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4491" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Avaliar continuidade do tratamento" description="Selecionar tratamento adequado para o Paciente" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>VB_PROT_FARM_AFRO</pathways>
+    <pathways>VB_DIA_IECA</pathways>
+    <pathways>VB_BAR</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4492" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo Farmacol&#xf3;gico Afroamericano" description="- Encaminhar para Protocolo Farmacol&#xf3;gico Afroamericano" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>VB_PROT_FARM_AFRO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4493" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="BAR + BBC + BETABLOQUEADOR" description="Encaminhar para tratamento BAR + BBC + BETABLOQUEADOR" isTerminal="true" inputSequences="//@sequence.5">
+    <pathways>VB_BAR</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4494" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="IECA + BBC + BETABLOQUEADOR" description="Encaminhar para tratamento IECA + BBC + BETABLOQUEADOR" isTerminal="true" inputSequences="//@sequence.7">
+    <pathways>VB_DIA_IECA</pathways>
+  </element>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="4495" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com tratamento previo)" description="">
+    <operation name="com tratamento previo" Operator="affirmation" id="3271">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="3267" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4496" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem tratamento previo)" description="">
+    <operation name="sem tratamento previo" id="3272">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="3267" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="4497" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (paciente afroamericano)" description="">
+    <operation name="paciente afroamericano" Operator="affirmation" id="3273">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="3268" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="4498" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (paciente nao afroamericano)" description="">
+    <operation name="paciente nao afroamericano" id="3274">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="3268" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="4499" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (tratamento alternativo)" description="">
+    <operation name="com tratamento alternativo" Operator="affirmation" id="3275">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="3270" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.3" id="4500" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (sem tratamento alternativo)" description="">
+    <operation name="sem tratamento alternativo" id="3276">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="3270" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4501" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (alergico a IECA)" description="">
+    <operation name="alergico a IECA" Operator="affirmation" id="3277">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="3269" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="4502" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (nao alergico a IECA)" description="">
+    <operation name="nao alergico a IECA" id="3278">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="3269" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ja_esta_em_tratamento" id="3267" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_afroamericano" id="3268" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_IECA" id="3269" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_alternativo" id="3270" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

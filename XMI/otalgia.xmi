@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3421" url="" name="Otalgia" code="H027">
+  <element xsi:type="pathwayMetamodel:Information" id="20501" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Enviar ao L&#xed;der Local" description="Enviar paciente ao l&#xed;der local e aventar possibilidade de solicita&#xe7;&#xe3;o de tomografia computadorizada." isTerminal="true" inputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Information" id="20502" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Anamnese e Exame Fisico" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:18px&quot;>&lt;u>&lt;strong>Anamnese completa:&lt;/strong>&lt;/u>&lt;/span>&lt;br />&#xA;&lt;br />&#xA;&lt;span style=&quot;font-size:16px&quot;>- Idade do paciente&lt;br />&#xA;- Caracter&amp;iacute;sticas da dor: tipo, intensidade, localiza&amp;ccedil;&amp;atilde;o, irradia&amp;ccedil;&amp;atilde;o, fatores agravantes e de al&amp;iacute;vio&lt;br />&#xA;- Fatores predisponentes a otite (trauma, nata&amp;ccedil;&amp;atilde;o, resfriado recente, rinite)&lt;/span>&lt;br />&#xA;&lt;br />&#xA;&lt;span style=&quot;font-size:18px&quot;>&lt;u>&lt;strong>Exame f&amp;iacute;sico:&lt;/strong>&lt;/u>&lt;/span>&lt;br />&#xA;&lt;br />&#xA;&lt;span style=&quot;font-size:16px&quot;>- Inspe&amp;ccedil;&amp;atilde;o da orelha, das regi&amp;otilde;es pr&amp;eacute; e p&amp;oacute;s-auriculares, e da regi&amp;atilde;o cervical&lt;br />&#xA;- Palpa&amp;ccedil;&amp;atilde;o e mobiliza&amp;ccedil;&amp;atilde;o da orelha&lt;br />&#xA;- Otoscopia&lt;br />&#xA;- Inspe&amp;ccedil;&amp;otilde;es da orofaringe&lt;br />&#xA;- Palpa&amp;ccedil;&amp;atilde;o da articula&amp;ccedil;&amp;atilde;o temporomandibular&lt;/span>&lt;/p>" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20503" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Sinais de Alarme" description="Paciente exibe algum dos sinais de alarme a seguir?" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Sinais de Alarme" url="" id="10361">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="20081" weight="1" value="0.0">
+        <option description="Idade Avan&#xe7;ada" weight="1"/>
+        <option description="Cefal&#xe9;ia com &#xca;mese Associada" weight="1"/>
+        <option description="Doen&#xe7;a ou Sequela Neurol&#xf3;gica Pr&#xe9;via" weight="1"/>
+        <option description="Cefal&#xe9;ia Refrat&#xe1;ria a Analgesia" weight="2"/>
+        <option description="&#xca;mese Incoerc&#xed;vel" weight="2"/>
+        <option description="Suspeita velada das complica&#xe7;oes tipo mastoidite, abcesso, trombose do seio lateral, etc" weight="2"/>
+        <option description="Altera&#xe7;&#xe3;o do N&#xed;vel de Consci&#xea;ncia" weight="2"/>
+        <option description="Abaulamento ou Hipersensibilidade de Mastoide Ipsilateral" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20504" type="Tratamento" type_verbose="Tratamento" url="" name="Tomografia" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.3">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="Otalgia com sinais de alarme" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20505" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com L&#xed;der Local" description="Discutir quadro do paciente com l&#xed;der local para defini&#xe7;&#xe3;o de conduta." isTerminal="true" inputSequences="//@sequence.3 //@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20506" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Quadro de Otalgia" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.4 //@sequence.10 //@sequence.19">
+    <questions text="Acometimento do Pavilh&#xe3;o Auricular" url="" id="10362">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_pavilhao_auricular" id="20082" weight="1" value="false"/>
+    </questions>
+    <questions text="Acometimento do Conduto Auditivo (Otite Externa)&#xA;Ap&#xf3;s banhos de piscina, mar ou manipula&#xe7;&#xe3;o do conduto auditivo externo. Otalgia, prurido, plenitude auricular, hipoacusia. Pode ocorrer otorreia.&#xA;&#xA;Otoscopia: eritema e edema do conduto auditivo externo" url="" id="10363">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa" id="20083" weight="1" value="false"/>
+    </questions>
+    <questions text="Acometimento do Ouvido M&#xe9;dio - Otite M&#xe9;dia&#xA;Otalgia, otorreia, IVAS pr&#xe9;via, plenitude aural, hipoacusia, zumbido, pode haver febre&#xA;&#xA;Na otoscopia h&#xe1; hiperemia, diminui&#xe7;&#xe3;o da transpar&#xea;ncia da membrana timp&#xe2;nica, abaulamento da membrana." url="" id="10364">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_media" id="20084" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20507" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Acometimento do Pavilh&#xe3;o Auricular] Tratamento Individualizado" description="O tratamento ser&#xe1; individualizado, dependendo do tipo de lacera&#xe7;&#xe3;o, extens&#xe3;o, se h&#xe1; infec&#xe7;&#xe3;o associada, necessidade de profilaxia de t&#xe9;tano e raiva ou debridamento" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20508" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite Externa] Conduta" description="" inputSequences="//@sequence.19" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Paciente idoso diab&#xe9;tico mal controlado ou imunossuprimido com suspeita de otite externa malina, ou celulite de face e pavilh&#xe3;o auricular ou abscesso de pavilh&#xe3;o auricular e pesco&#xe7;o ou envolvimento de pares cranianos?" url="" id="10365">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_criterios_decisao" id="20085" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20509" type="Tratamento" type_verbose="Tratamento" url="" name="[Otite Externa] Exames" description="&lt;p>&lt;strong>&lt;span style=&quot;color:null&quot;>&lt;span style=&quot;font-size:16px&quot;>Discutir internamento hospitalar com l&amp;iacute;der local&lt;/span>&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="CULTURA DA SECRECAO DO OUVIDO" exam_id="99100665" limb_side="" quantity="1" reason="Otite Externa" clinical_indication="n/a"/>
+    <examination url="ANTIBIOGRAMA AUTOMATIZADO" exam_id="99100672" limb_side="" quantity="1" reason="Otite Externa" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Otite Externa" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Otite Externa" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Otite Externa" clinical_indication="n/a"/>
+    <examination url="PESQ DE ANTI-HIV-EIE P/UND D/SANG TOTAL" exam_id="27040224" limb_side="" quantity="1" reason="Otite Externa" clinical_indication="n/a"/>
+    <examination url="TC DAS MASTOIDES OU OUVIDOS" exam_id="34010092" limb_side="" quantity="1" reason="Otite Externa" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20510" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite Externa] Definir Tratamento" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Tratamento Ambulatorial" url="" id="10366">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_ambulatorial" id="20086" weight="1" value="false"/>
+    </questions>
+    <questions text="Tratamento Hospitalar" url="" id="10367">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_hospitalar" id="20087" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20511" type="Receita" type_verbose="Receita" url="" name="[Otite Externa] Tratamento Ambulatorial" description="" isTerminal="true" inputSequences="//@sequence.8">
+    <item id="5501" url="" name="Ciprofloxacino + hidrocortisona (2,0 + 10mg/ml)" med_code="-1" presentation="GOTA" access="16" quantity="3" period="6" period_unit="SS" frequency="2" frequency_unit="DD" orientations="De 4 a 6 semanas"/>
+    <item id="5502" url="" name="Dipirona 1g" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="5503" url="" name="Ibuprofeno 600mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="5504" url="" name="Ciprofloxacino 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20512" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite M&#xe9;dia] Suspeita de Complica&#xe7;&#xe3;o?" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Suspeita de complica&#xe7;&#xe3;o?&#xA;(Mastoidite, meningite, abscesso cerebral, trombose se seio venoso)" url="" id="10368">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_suspeita_complicacao" id="20088" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20513" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Otite M&#xe9;dia" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.13 //@sequence.14">
+    <questions text="OTITE M&#xc9;DIA AGUDA (OMA):" url="" id="10369">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda" id="20089" weight="1" value="false"/>
+    </questions>
+    <questions text="OTITE M&#xc9;DIA CR&#xd4;NICA" url="" id="10370">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_cronica" id="20090" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20514" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Otite M&#xe9;dia Aguda] Sinais de gravidade" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.15 //@sequence.16">
+    <questions text="Paciente apresenta sinais de gravidade?&#xA;- Otalgia moderada a severa, febre maior que 39&#xb0;C e dura&#xe7;&#xe3;o maior que 48h" url="" id="10371">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda_sinais_gravidade" id="20091" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20515" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Otite M&#xe9;dia Aguda] Tratamento" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Reavalia&amp;ccedil;&amp;atilde;o com otorrinolaringologista com 48-72h ou procurar a emerg&amp;ecirc;ncia se n&amp;atilde;o houver melhora/piora do quadro.&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.16 //@sequence.17" outputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20516" type="Receita" type_verbose="Receita" url="" name="[Otite M&#xe9;dia Aguda] Antibioticoterapia" description="" inputSequences="//@sequence.15" outputSequences="//@sequence.17">
+    <item id="5505" url="" name="Amoxicilina+Clavulanato 875/125mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5506" url="" name="Azitromicina 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="4" period_unit="DD" frequency="1" frequency_unit="DD" orientations="se paciente al&#xe9;rgico a penicilina"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20517" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Orienta&#xe7;&#xf5;es p&#xf3;s-alta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Orienta&amp;ccedil;&amp;otilde;es p&amp;oacute;s alta:&lt;/strong>&lt;br />&#xA;&lt;br />&#xA;- N&amp;atilde;o bloqueie o conduto auditivo com algod&amp;atilde;o, n&amp;atilde;o use cotonetes ou gotas otol&amp;oacute;gicas&lt;br />&#xA;- Febre e dor pode permanecer por at&amp;eacute; 48-72h&lt;br />&#xA;&lt;br />&#xA;&lt;strong>Procurar a emerg&amp;ecirc;ncia caso:&lt;/strong>&lt;br />&#xA;- Ap&amp;oacute;s 72h do tratamento, n&amp;atilde;o apresentar melhor, mantiver otalgia intensa ou febre&amp;nbsp;&lt;br />&#xA;- Apresentar dor de cabe&amp;ccedil;a intensa ou dor de ouvido persistente&lt;br />&#xA;- Apresentar incha&amp;ccedil;o atr&amp;aacute;s ou ao redor do ouvido&lt;br />&#xA;- Ficar sonolento, com dor no pesco&amp;ccedil;o ou n&amp;atilde;o puder andar normalmente&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.18"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20518" type="Receita" type_verbose="Receita" url="" name="[Otite Externa] Orienta&#xe7;&#xf5;es e medica&#xe7;&#xe3;o" description="Evitar a entrada de &#xe1;gua no conduto externo durante o banho e esportes aqu&#xe1;ticos, al&#xe9;m de traumatismos pelo uso de hastes flex&#xed;veis" isTerminal="true" inputSequences="//@sequence.5">
+    <item id="5507" url="" name="Otosporin Gotas" med_code="-1" presentation="GOTA" access="16" quantity="4" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="5508" url="" name="Ciprofloxacino gotas" med_code="-1" presentation="GOTA" access="16" quantity="3" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="5509" url="" name="Ciprofloxacino 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5510" url="" name="Nimesulida 100mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20519" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Otorrinolaringologista" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Encaminhar ao Otorrinolaringologista&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.14"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="20520" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="20521" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sinais de alarme >= 2)" description="com sinais de alarme">
+    <operation name="sinais de alarme >= 2" Operator="greaterOrEqual" id="20098">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="20081" weight="1" value="0.0">
+        <option description="Idade Avan&#xe7;ada" weight="1"/>
+        <option description="Cefal&#xe9;ia com &#xca;mese Associada" weight="1"/>
+        <option description="Doen&#xe7;a ou Sequela Neurol&#xf3;gica Pr&#xe9;via" weight="1"/>
+        <option description="Cefal&#xe9;ia Refrat&#xe1;ria a Analgesia" weight="2"/>
+        <option description="&#xca;mese Incoerc&#xed;vel" weight="2"/>
+        <option description="Suspeita velada das complica&#xe7;oes tipo mastoidite, abcesso, trombose do seio lateral, etc" weight="2"/>
+        <option description="Altera&#xe7;&#xe3;o do N&#xed;vel de Consci&#xea;ncia" weight="2"/>
+        <option description="Abaulamento ou Hipersensibilidade de Mastoide Ipsilateral" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="20092" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="20522" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (sinais de alarme &lt; 2)" description="sem sinais de alarme">
+    <operation name="sinais de alarme &lt; 2" Operator="lessThan" id="20099">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="20081" weight="1" value="0.0">
+        <option description="Idade Avan&#xe7;ada" weight="1"/>
+        <option description="Cefal&#xe9;ia com &#xca;mese Associada" weight="1"/>
+        <option description="Doen&#xe7;a ou Sequela Neurol&#xf3;gica Pr&#xe9;via" weight="1"/>
+        <option description="Cefal&#xe9;ia Refrat&#xe1;ria a Analgesia" weight="2"/>
+        <option description="&#xca;mese Incoerc&#xed;vel" weight="2"/>
+        <option description="Suspeita velada das complica&#xe7;oes tipo mastoidite, abcesso, trombose do seio lateral, etc" weight="2"/>
+        <option description="Altera&#xe7;&#xe3;o do N&#xed;vel de Consci&#xea;ncia" weight="2"/>
+        <option description="Abaulamento ou Hipersensibilidade de Mastoide Ipsilateral" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="20092" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="20523" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="20524" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (acometimento do pavilhao auricular)" description="acometimento do pavilhao auricular">
+    <operation name="acometimento do pavilhao auricular" Operator="affirmation" id="20100">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_pavilhao_auricular" id="20082" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.7" id="20525" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (criterios ausentes)" description="criterios ausentes">
+    <operation name="criterios ausentes" id="20101">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_criterios_decisao" id="20085" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="20526" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (criterios presentes)" description="criterios presentes">
+    <operation name="criterios presentes" Operator="affirmation" id="20102">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_criterios_decisao" id="20085" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="20527" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="20528" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (tratamento ambulatorial)" description="tratamento ambulatorial">
+    <operation name="tratamento ambulatorial" Operator="and" id="20103">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_ambulatorial" id="20086" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="otite tratamento nao hospitalar" id="20094">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_hospitalar" id="20087" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.9" id="20529" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (tratamento hospitalar)" description="tratamento hospitalar">
+    <operation name="tratamento hospitalar" Operator="and" id="20104">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_hospitalar" id="20087" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="otite tratamento nao ambulatorial" id="20095">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_ambulatorial" id="20086" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.5" id="20530" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (otite media)" description="otite media">
+    <operation name="otite media" Operator="affirmation" id="20105">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media" id="20084" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.11" id="20531" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (sob suspeita de complicacao)" description="sob suspeita de complicacao">
+    <operation name="sob suspeita de complicacao" Operator="affirmation" id="20106">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_suspeita_complicacao" id="20088" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="20532" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (sem suspeita de complicacao)" description="sem suspeita de complicacao">
+    <operation name="sem suspeita de complicacao" id="20107">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_suspeita_complicacao" id="20088" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="20533" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (otite media aguda)" description="otite media aguda">
+    <operation name="otite media aguda" Operator="and" id="20108">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda" id="20089" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="otite media nao cronica" id="20097">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_cronica" id="20090" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.12" id="20534" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (otite media cronica)" description="otite media cronica">
+    <operation name="otite media cronica" Operator="and" id="20109">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_cronica" id="20090" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="otite media nao aguda" id="20096">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda" id="20089" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.13" id="20535" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (com sinais de gravidade)" description="com sinais de gravidade">
+    <operation name="com sinais de gravidade" Operator="affirmation" id="20110">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda_sinais_gravidade" id="20091" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="20536" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (sem sinais de gravidade)" description="sem sinais de gravidade">
+    <operation name="sem sinais de gravidade" id="20111">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda_sinais_gravidade" id="20091" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.15" id="20537" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description="Incondicional"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="20538" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="20539" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (otite externa)" description="otite externa">
+    <operation name="otite externa" Operator="affirmation" id="20112">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa" id="20083" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="otite tratamento nao hospitalar" id="20094">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_hospitalar" id="20087" weight="1" value="false"/>
+  </operation>
+  <operation name="otite tratamento nao ambulatorial" id="20095">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_ambulatorial" id="20086" weight="1" value="false"/>
+  </operation>
+  <operation name="otite media nao aguda" id="20096">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda" id="20089" weight="1" value="false"/>
+  </operation>
+  <operation name="otite media nao cronica" id="20097">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_cronica" id="20090" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="20081" weight="1" value="0.0">
+    <option description="Idade Avan&#xe7;ada" weight="1"/>
+    <option description="Cefal&#xe9;ia com &#xca;mese Associada" weight="1"/>
+    <option description="Doen&#xe7;a ou Sequela Neurol&#xf3;gica Pr&#xe9;via" weight="1"/>
+    <option description="Cefal&#xe9;ia Refrat&#xe1;ria a Analgesia" weight="2"/>
+    <option description="&#xca;mese Incoerc&#xed;vel" weight="2"/>
+    <option description="Suspeita velada das complica&#xe7;oes tipo mastoidite, abcesso, trombose do seio lateral, etc" weight="2"/>
+    <option description="Altera&#xe7;&#xe3;o do N&#xed;vel de Consci&#xea;ncia" weight="2"/>
+    <option description="Abaulamento ou Hipersensibilidade de Mastoide Ipsilateral" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="acometimento_pavilhao_auricular" id="20082" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa" id="20083" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_media" id="20084" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_criterios_decisao" id="20085" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_ambulatorial" id="20086" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_externa_tratamento_hospitalar" id="20087" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_suspeita_complicacao" id="20088" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda" id="20089" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_cronica" id="20090" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="otite_media_aguda_sinais_gravidade" id="20091" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="20092" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="20093" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

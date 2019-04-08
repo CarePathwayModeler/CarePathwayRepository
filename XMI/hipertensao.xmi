@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="642" url="" name="Hipertens&#xe3;o" code="HIP">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3341" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reconhecer Press&#xe3;o Arterial Alterada [Fluxo 01]" description="Verifique a press&#xe3;o arterial da paciente." isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="PAS >= 140 ou PAD >= 90?" url="" id="1500">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad" id="2437" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3342" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Identificar Epis&#xf3;dio [Fluxo 1]" description="Verifique o epis&#xf3;dio de hipertens&#xe3;o da paciente" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Primeiro Epis&#xf3;dio?" url="" id="1541">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_ep_fluxo_1" id="2438" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3343" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Resutados de Exames Pr&#xe9;-Eclampsia [Fluxo 1]" description="Analise o resultado dos exames de pr&#xe9;-ecl&#xe2;npsia para seguir com o protocolo." inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Exames pr&#xe9;-ecl&#xe2;mpsia alterados?" url="" id="1542">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_alterados_fluxo_1" id="2439" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3344" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]" description="Verifique a idade gestacional da paciente" inputSequences="//@sequence.2 //@sequence.4" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="IG acima de 20 semanas?" url="" id="1543">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_1" id="2440" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3345" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Necessidade de Encaminhamento para Emerg&#xea;ncia" description="Verifique se h&#xe1; necessidade de encaminhar paciente para a emerg&#xea;ncia?" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="H&#xe1; necessidade de encaminhar paciente para a emerg&#xea;ncia?" url="" id="1544">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_necessita_emergencia_fluxo_1" id="2501" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3348" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de AAS" description="Prescrever AAS para a paciente." inputSequences="//@sequence.9" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3349" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Pacote de Exames Pr&#xe9;-Eclampsia" description="Solicite o pacote de exames pr&#xe9;-eclampsia" inputSequences="//@sequence.10 //@sequence.11" outputSequences="//@sequence.12">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28011368" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010655" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28130588" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="40322483" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="27040380" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010175" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3350" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Necessidade de Prescri&#xe7;&#xe3;o Adicional" description="Verifique se h&#xe1; necessidade de prescri&#xe7;&#xe3;o adicional para individualizar o tratamento da paciente." inputSequences="//@sequence.12" outputSequences="//@sequence.13 //@sequence.14">
+    <questions text="H&#xe1; necessidade de prescri&#xe7;&#xe3;o adicional?" url="" id="1545">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_prescricao_adicional_fluxo_1" id="2502" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3351" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Inserir prescri&#xe7;&#xe3;o adicional no Nascer Bem" description="IMPORTANTE: &#xA;Para os casos em que seja necess&#xe1;rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at&#xe9; o fim e realizar a prescri&#xe7;&#xe3;o adicional ao retornar ao prontu&#xe1;rio do Nascer Bem." inputSequences="//@sequence.13" outputSequences="//@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3353" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reconhecer Press&#xe3;o Arterial Alterada [Fluxo 02]" description="PAS entre 141 e 160 ou PAS entre 100 e 110?" inputSequences="//@sequence.1" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="PAS entre 141 e 160 ou PAD entre 100 e 110?" url="" id="1546">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad_alterado_fluxo_2" id="2503" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3354" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Identificar Episodio [Fluxo 2]" description="Verifique o episodio de hipertens&#xe3;o da paciente" inputSequences="//@sequence.17" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Primeiro Epis&#xf3;dio?" url="" id="1547">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_episodio_fluxo_2" id="2504" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3356" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Resutados de Exames Pr&#xe9;-Eclampsia [Fluxo 2]" description="Verifique o resultado dos exames de pr&#xe9;-eclampsia" inputSequences="//@sequence.21" outputSequences="//@sequence.22 //@sequence.23">
+    <questions text="Exames pr&#xe9;-ecl&#xe2;mpsia alterados?" url="" id="1548">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_pre_eclampsia_alterados_fluxo_2" id="2505" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3360" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar crit&#xe9;rios para prescri&#xe7;&#xe3;o" description="Avalie os crit&#xe9;rios para definir o tratamento adequado para a paciente" inputSequences="//@sequence.27" outputSequences="//@sequence.28 //@sequence.29 //@sequence.30 //@sequence.31 //@sequence.32">
+    <questions text="Primeiro Epis&#xf3;dio ou HAS Controlado?" url="" id="1549">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep01_has_controlado" id="2506" weight="1" value="false"/>
+    </questions>
+    <questions text="Segundo Epis&#xf3;dio?" url="" id="1550">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep02" id="2507" weight="1" value="false"/>
+    </questions>
+    <questions text="Terceiro Epis&#xf3;dio?" url="" id="1551">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep03" id="2508" weight="1" value="false"/>
+    </questions>
+    <questions text="Quarto Epis&#xf3;dio?" url="" id="1552">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep04" id="2509" weight="1" value="false"/>
+    </questions>
+    <questions text="A partir do Quinto Epis&#xf3;dio" url="" id="1553">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep05_ou_superior" id="2510" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3361" type="Receita" type_verbose="Receita" url="" name="Gerar prescri&#xe7;&#xe3;o de metildopa 250 8/8" description="Gerar prescri&#xe7;&#xe3;o de metildopa 250 8/8" inputSequences="//@sequence.28" outputSequences="//@sequence.33">
+    <item id="650" url="" name="METILDOPA" med_code="2032016145" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3362" type="Receita" type_verbose="Receita" url="" name="Gerar prescri&#xe7;&#xe3;o de metildopa 250 6/6" description="Gerar prescri&#xe7;&#xe3;o de metildopa 250 6/6" inputSequences="//@sequence.29" outputSequences="//@sequence.34">
+    <item id="651" url="" name="METILDOPA" med_code="2032016145" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3363" type="Receita" type_verbose="Receita" url="" name="Gerar prescri&#xe7;&#xe3;o de metildopa 500 6/6" description="Gerar prescri&#xe7;&#xe3;o de metildopa 500 6/6" inputSequences="//@sequence.30" outputSequences="//@sequence.35">
+    <item id="668" url="" name="METILDOPA" med_code="2032014745" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar: 01 comprimido de 06/06 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3364" type="Receita" type_verbose="Receita" url="" name="Gerar prescri&#xe7;&#xe3;o de metildopa + nifedipina 10mg" description="Gerar prescri&#xe7;&#xe3;o de metildopa e nifedipina 10 mg&#xA;&#xA;Aten&#xe7;&#xe3;o:&#xA;No caso de retorno as quantidades de METILDOPA ser&#xe3;o alteradas:&#xA;- Metildopa 500mg / Posologia: 01 comprimido de 08/08horas." inputSequences="//@sequence.31" outputSequences="//@sequence.36">
+    <item id="652" url="" name="METILDOPA" med_code="2032016145" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3365" type="Receita" type_verbose="Receita" url="" name="Gerar prescri&#xe7;&#xe3;o de metildopa + nifedipina 20mg" description="Gerar prescri&#xe7;&#xe3;o de metildopa 500 mg 6/6 h e nifedipina 20 mg12/12h" inputSequences="//@sequence.32" outputSequences="//@sequence.37">
+    <item id="653" url="" name="METILDOPA" med_code="2032016145" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas"/>
+    <item id="654" url="" name="NIFELAT" med_code="2032014233" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3366" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]" description="Verifique a idade gestacional da paciente" inputSequences="//@sequence.33 //@sequence.34 //@sequence.35 //@sequence.36 //@sequence.37" outputSequences="//@sequence.38 //@sequence.44">
+    <questions text="IG acima de 20 semanas?" url="" id="1554">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_2" id="2511" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3367" type="Receita" type_verbose="Receita" url="" name="Adicionar AAS na prescri&#xe7;&#xe3;o" description="Adicionar AAS na prescri&#xe7;&#xe3;o da paciente" inputSequences="//@sequence.38" outputSequences="//@sequence.39"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3368" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Idade Gestacional [24 / 36] [Fluxo 2]" description="verifique a idade gestacional da paciente" inputSequences="//@sequence.39" outputSequences="//@sequence.40 //@sequence.41">
+    <questions text="IG entre 24 e 36 semanas?" url="" id="1555">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_24_36_fluxo_2" id="2512" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3369" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar indica&#xe7;&#xe3;o de corticoide" description="Paciente apresenta indica&#xe7;&#xe3;o de corticoide?" inputSequences="//@sequence.40" outputSequences="//@sequence.42 //@sequence.48">
+    <questions text="Paciente tem indica&#xe7;&#xe3;o de corticoide?" url="" id="1556">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_indicacao_corticoide" id="2513" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3370" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Necessidade de Prescri&#xe7;&#xe3;o Adicional [Fluxo 2]" description="Verifique se h&#xe1; necessidade de prescri&#xe7;&#xe3;o adicional para individualizar o tratamento da paciente." inputSequences="//@sequence.41 //@sequence.43 //@sequence.44 //@sequence.48" outputSequences="//@sequence.45 //@sequence.47">
+    <questions text="H&#xe1; necessidade de prescri&#xe7;&#xe3;o adicional?" url="" id="1557">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper_precricao_adicional_fluxo_2" id="2514" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3371" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Inserir prescri&#xe7;&#xe3;o adicional no Nascer Bem" description="IMPORTANTE:&#xA;Para os casos em que seja necess&#xe1;rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at&#xe9; o fim  e realizar a prescri&#xe7;&#xe3;o adicional ao retornar ao prontu&#xe1;rio do Nascer Bem." inputSequences="//@sequence.45" outputSequences="//@sequence.46"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3372" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Pacote de Exames Pr&#xe9;-Eclampsia + US com Doppler e Cardiograma" description="Solicitar pacote de exames para a paciente." isTerminal="true" inputSequences="//@sequence.46 //@sequence.47">
+    <examination url="" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28011368" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010655" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28130588" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="40322483" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="27040380" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010175" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="40901424" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+    <examination url="" exam_id="80057101" limb_side="" quantity="1" reason="Protocolo de Hipertens&#xe3;o" clinical_indication="Protocolo de Hipertens&#xe3;o"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3373" type="Receita" type_verbose="Receita" url="" name="Adicionar betametasona na prescri&#xe7;&#xe3;o" description="Adicionar betametasona na prescri&#xe7;&#xe3;o. Definir o codigo do medicamento correto para inserir na prescri&#xe7;&#xe3;o." inputSequences="//@sequence.42" outputSequences="//@sequence.43"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="3376" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description="">
+    <operation name="PAS_maior_igual_130_ou_PAD_maior_igual_90" Operator="affirmation" id="2515">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad" id="2437" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="3377" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="">
+    <operation name="PAS_menor_130_ou_PAD_menor_90" id="2516">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad" id="2437" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="3378" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="">
+    <operation name="primeiro_episodio_fluxo_01" Operator="affirmation" id="2517">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_ep_fluxo_1" id="2438" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="3379" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="">
+    <operation name="segundo_episodio_ou_superior" id="2518">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_ep_fluxo_1" id="2438" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="3380" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="">
+    <operation name="sem_alteracao_exames_fluxo_1" id="2519">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_alterados_fluxo_1" id="2439" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="3381" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description="">
+    <operation name="exames_alterados_fluxo_1" Operator="affirmation" id="2520">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_alterados_fluxo_1" id="2439" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.4" id="3382" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="">
+    <operation name="paciente_necessita_emergencia_fluxo_1" Operator="affirmation" id="2521">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_necessita_emergencia_fluxo_1" id="2501" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.4" id="3383" type="Sequencia" type_verbose="Sequencia" url="" name="s8" description="">
+    <operation name="paciente_nao_necessita_emergencia_fluxo_1" id="2522">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_necessita_emergencia_fluxo_1" id="2501" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence id="3384" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="3385" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="">
+    <operation name="idade_gestacional_entre_12_36_fluxo_1" Operator="affirmation" id="2523">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_1" id="2440" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="3386" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description="">
+    <operation name="idade_gestacional_fora_intervalo_12_36_fluxo_1" id="2524">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_1" id="2440" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="3387" type="Sequencia" type_verbose="Sequencia" url="" name="s12" description=""/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="3388" type="Sequencia" type_verbose="Sequencia" url="" name="s13" description=""/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="3389" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description="">
+    <operation name="com_prescricao_adicional_fluxo_1" Operator="affirmation" id="2525">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_prescricao_adicional_fluxo_1" id="2502" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.7" id="3390" type="Sequencia" type_verbose="Sequencia" url="" name="s15" description="">
+    <operation name="sem_prescricao_adicional_fluxo_1" id="2526">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_prescricao_adicional_fluxo_1" id="2502" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.8" id="3391" type="Sequencia" type_verbose="Sequencia" url="" name="s16" description=""/>
+  <sequence id="3392" type="Sequencia" type_verbose="Sequencia" url="" name="s17" description=""/>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="3393" type="Sequencia" type_verbose="Sequencia" url="" name="s18" description="">
+    <operation name="pas_pad_alterado_fluxo_2" Operator="affirmation" id="2527">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad_alterado_fluxo_2" id="2503" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.9" id="3394" type="Sequencia" type_verbose="Sequencia" url="" name="s19" description="">
+    <operation name="pas_maior_160_pad_maior_110" id="2528">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad_alterado_fluxo_2" id="2503" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence id="3395" type="Sequencia" type_verbose="Sequencia" url="" name="s20" description=""/>
+  <sequence outputStep="//@element.10" id="3396" type="Sequencia" type_verbose="Sequencia" url="" name="s21" description="">
+    <operation name="primeiro_ep_fluxo_2" Operator="affirmation" id="2529">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_episodio_fluxo_2" id="2504" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="3397" type="Sequencia" type_verbose="Sequencia" url="" name="s22" description="">
+    <operation name="segundo_ep_ou_posterior_fluxo_2" id="2530">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_episodio_fluxo_2" id="2504" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.11" id="3398" type="Sequencia" type_verbose="Sequencia" url="" name="s23" description="">
+    <operation name="exames_alterados_fluxo_2" Operator="affirmation" id="2531">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_pre_eclampsia_alterados_fluxo_2" id="2505" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.11" id="3399" type="Sequencia" type_verbose="Sequencia" url="" name="s24" description="">
+    <operation name="sem_lateracao_exames_fluxo_2" id="2532">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_pre_eclampsia_alterados_fluxo_2" id="2505" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence id="3400" type="Sequencia" type_verbose="Sequencia" url="" name="s25" description=""/>
+  <sequence id="3401" type="Sequencia" type_verbose="Sequencia" url="" name="s26" description=""/>
+  <sequence id="3402" type="Sequencia" type_verbose="Sequencia" url="" name="s27" description=""/>
+  <sequence inputStep="//@element.12" id="3403" type="Sequencia" type_verbose="Sequencia" url="" name="s28" description=""/>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="3404" type="Sequencia" type_verbose="Sequencia" url="" name="s29" description="">
+    <operation name="criterio_ep_1_fluxo_2" Operator="affirmation" id="2533">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep01_has_controlado" id="2506" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="3405" type="Sequencia" type_verbose="Sequencia" url="" name="s30" description="">
+    <operation name="criterio_ep_2_fluxo_2" Operator="affirmation" id="2534">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep02" id="2507" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.12" id="3406" type="Sequencia" type_verbose="Sequencia" url="" name="s31" description="">
+    <operation name="criterio_ep_3_fluxo_2" Operator="affirmation" id="2535">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep03" id="2508" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.12" id="3407" type="Sequencia" type_verbose="Sequencia" url="" name="s32" description="">
+    <operation name="criterio_ep_4_fluxo_2" Operator="affirmation" id="2536">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep04" id="2509" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.12" id="3408" type="Sequencia" type_verbose="Sequencia" url="" name="s33" description="">
+    <operation name="criterio_ep_5_superior_fluxo_2" Operator="affirmation" id="2537">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep05_ou_superior" id="2510" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.13" id="3409" type="Sequencia" type_verbose="Sequencia" url="" name="s34" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.14" id="3410" type="Sequencia" type_verbose="Sequencia" url="" name="s35" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.15" id="3411" type="Sequencia" type_verbose="Sequencia" url="" name="s36" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.16" id="3412" type="Sequencia" type_verbose="Sequencia" url="" name="s37" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="3413" type="Sequencia" type_verbose="Sequencia" url="" name="s38" description=""/>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="3414" type="Sequencia" type_verbose="Sequencia" url="" name="s39" description="">
+    <operation name="idade_gestacional_entre_12_36_fluxo_2" Operator="affirmation" id="2538">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_2" id="2511" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="3415" type="Sequencia" type_verbose="Sequencia" url="" name="s40" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.20" id="3416" type="Sequencia" type_verbose="Sequencia" url="" name="s41" description="">
+    <operation name="idade_gestacional_entre_24_36_fluxo_2" Operator="affirmation" id="2539">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_24_36_fluxo_2" id="2512" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.20" id="3417" type="Sequencia" type_verbose="Sequencia" url="" name="s42" description="">
+    <operation name="idade_gestacional_fora_intervalo_24_36_fluxo_2" id="2540">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_24_36_fluxo_2" id="2512" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.21" id="3418" type="Sequencia" type_verbose="Sequencia" url="" name="s43" description="">
+    <operation name="pacitente_com_indicacao_corticoide_fluxo_2" Operator="affirmation" id="2541">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_indicacao_corticoide" id="2513" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.25" id="3419" type="Sequencia" type_verbose="Sequencia" url="" name="s44" description=""/>
+  <sequence inputStep="//@element.22" outputStep="//@element.18" id="3420" type="Sequencia" type_verbose="Sequencia" url="" name="s45" description="">
+    <operation name="idade_gestacional_fora_intervalo_12_36" id="2542">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_2" id="2511" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="3421" type="Sequencia" type_verbose="Sequencia" url="" name="s46" description="">
+    <operation name="com_prescricao_adicional_fluxo2" Operator="affirmation" id="2543">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_precricao_adicional_fluxo_2" id="2514" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.23" id="3422" type="Sequencia" type_verbose="Sequencia" url="" name="s47" description=""/>
+  <sequence inputStep="//@element.24" outputStep="//@element.22" id="3423" type="Sequencia" type_verbose="Sequencia" url="" name="s48" description="">
+    <operation name="sem_prescricao_adicional_fluxo2" id="2544">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_precricao_adicional_fluxo_2" id="2514" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.21" id="3424" type="Sequencia" type_verbose="Sequencia" url="" name="s49" description="">
+    <operation name="sem_indicacao_corticoide_fluxo_2" id="2545">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper_indicacao_corticoide" id="2513" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad" id="2437" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_ep_fluxo_1" id="2438" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_alterados_fluxo_1" id="2439" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_1" id="2440" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_necessita_emergencia_fluxo_1" id="2501" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_prescricao_adicional_fluxo_1" id="2502" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_pas_pad_alterado_fluxo_2" id="2503" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_primeiro_episodio_fluxo_2" id="2504" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_exames_pre_eclampsia_alterados_fluxo_2" id="2505" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep01_has_controlado" id="2506" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep02" id="2507" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep03" id="2508" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep04" id="2509" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_criterios_ep05_ou_superior" id="2510" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_12_36_fluxo_2" id="2511" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_ig_24_36_fluxo_2" id="2512" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_indicacao_corticoide" id="2513" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper_precricao_adicional_fluxo_2" id="2514" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3133" url="" name="Endometrite Puerperal" code="H041">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17248" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Crit&#xe9;rios de Sepse" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Escala de Glasgow (GCS) &lt; 15" url="" id="8972">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="17031" weight="1" value="false"/>
+    </questions>
+    <questions text="FR >= 22" url="" id="8973">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="17032" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt;= 100" url="" id="8974">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="17033" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="17249" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17250" type="Tratamento" type_verbose="Tratamento" url="" name="Conduta" description="&lt;p>&lt;u>&lt;strong>Orienta&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Avaliar necessidade de Ultrasom Transvaginal&lt;/li>&#xA;&#x9;&lt;li>Avaliar necessidade de Cultura Intrainterina.&lt;/li>&#xA;&#x9;&lt;li>Curva T&amp;eacute;rmica e de pulso.&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="US PELVICA TRANSVAGINAL" exam_id="33010145" limb_side="" quantity="1" reason="Endometrite Puerperal" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Endometrite Puerperal" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Endometrite Puerperal" clinical_indication="n/a"/>
+    <examination url="CULTURAS EM GERAL" exam_id="28100581" limb_side="" quantity="1" reason="Endometrite Puerperal" clinical_indication="n/a"/>
+    <medication url="" med_id="43788" id="8987" name="SORO FISIOLOGICO 0,9% 1000 ML TUBO 1000 ML" brand="" unit="ML" access="6" daily_dosage="2000" cycles="1" treatement_time="8987" standard="null"/>
+    <medication url="" med_id="121737" id="8988" name="ORASTINA 5UI / ML AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="4" cycles="1" treatement_time="8988" standard="null"/>
+    <medication url="" med_id="38822" id="8989" name="DALACIN 300 MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="3" cycles="1" treatement_time="8989" frequency="8" standard="null"/>
+    <medication url="" med_id="37400" id="8990" name="GENTAMICINA 80 MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="3" cycles="1" treatement_time="8990" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17251" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavalia&#xe7;&#xe3;o (24 a 48h)" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Houve melhora do quadro?" url="" id="8975">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_1_melhora" id="17034" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17252" type="Receita" type_verbose="Receita" url="" name="Alta + Receita" description="" isTerminal="true" inputSequences="//@sequence.3 //@sequence.6">
+    <item id="4596" url="" name="SULFATO FERROSO 40MG DRAG 1 UD" med_code="37028" presentation="COMP" access="1" quantity="1" period="42" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar em jejum."/>
+    <item id="4597" url="" name="BUSCOPAN COMPOSTO COMP 1 UD" med_code="36080" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se dor."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17253" type="Tratamento" type_verbose="Tratamento" url="" name="Conduta (2)" description="&lt;p>&lt;u>&lt;strong>Orienta&amp;ccedil;&amp;otilde;es&lt;/strong>&lt;/u>:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Reavaliar necessidade de US Transvaginal.&lt;/li>&#xA;&#x9;&lt;li>Avaliar necessidade de adicionar tratamento com 75116: AMPICILINA 1 GR AMPL 1 UD / 6/6h, EV&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <examination url="US PELVICA TRANSVAGINAL" exam_id="33010145" limb_side="" quantity="1" reason="Endometrite Puereral" clinical_indication="n/a"/>
+    <medication url="" med_id="75116" id="8991" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="8991" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17254" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavalia&#xe7;&#xe3;o" description="Avaliar resultado do US Transvaginal e do quadro geral do paciente." inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Houve melhora do quadro?" url="" id="8976">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_2_melhora" id="17035" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17255" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der local" description="Discutir com l&#xed;der local poss&#xed;vel interna&#xe7;&#xe3;o e necessidade de Curagem/Curetagem." isTerminal="true" inputSequences="//@sequence.7"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17256" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com sepse crit&#xe9;rios de sepse)" description="com sepse crit&#xe9;rios de sepse">
+    <operation name="com sepse crit&#xe9;rios de sepse" Operator="greaterOrEqual" id="17038">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios SEPSE" Operator="addition" id="17037">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="17031" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="17032" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="17033" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17036" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17257" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem sepse crit&#xe9;rios de sepse)" description="sem sepse crit&#xe9;rios de sepse">
+    <operation name="sem sepse crit&#xe9;rios de sepse" Operator="lessThan" id="17039">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios SEPSE" Operator="addition" id="17037">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="17031" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="17032" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="17033" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17036" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="17258" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="17259" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (houve melhora)" description="houve melhora">
+    <operation name="houve melhora" Operator="affirmation" id="17040">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_1_melhora" id="17034" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="17260" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora" id="17041">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_1_melhora" id="17034" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="17261" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="17262" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (houve melhora)" description="houve melhora">
+    <operation name="houve melhora (2)" Operator="affirmation" id="17042">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_2_melhora" id="17035" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="17263" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora (2)" id="17043">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_2_melhora" id="17035" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Crit&#xe9;rios SEPSE" Operator="addition" id="17037">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="17031" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="17032" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="17033" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sepse_glasgow_menor_que_15" id="17031" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sepse_fr_maior_22" id="17032" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sepse_pas_menor_100" id="17033" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_1_melhora" id="17034" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="reavaliacao_2_melhora" id="17035" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17036" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

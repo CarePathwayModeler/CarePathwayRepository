@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3119" url="" name="Tontura e Vertigem" code="H025">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17741" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar como Tontura ou Vertigem" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="D&#xe9;ficit s&#xfa;bito, pr&#xe9;-s&#xed;ncope, dispneia, palpita&#xe7;&#xe3;o, hipotens&#xe3;o, desconforto tor&#xe1;cico, rebaixamento sensorial." url="" id="9128">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tontura" id="17501" weight="1" value="false"/>
+    </questions>
+    <questions text="VERTIGEM ROTAT&#xd3;RIA (cinetose, piora com movimenta&#xe7;&#xe3;o da cabe&#xe7;a, n&#xe1;useas)" url="" id="9129">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem" id="17502" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17742" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Tontura] Anamnese" description="Anamnese completa com sinais vitais" inputSequences="//@sequence.0" outputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17743" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Vertigem] Sinais de Alarme" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Sinais de Alarme" url="" id="9130">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_alarme" id="17503" weight="1" value="0.0">
+        <option description="Ataxia" weight="1"/>
+        <option description="Nistagmo Vertical" weight="1"/>
+        <option description="Diplopia" weight="1"/>
+        <option description="Convuls&#xe3;o" weight="1"/>
+        <option description="Cefal&#xe9;ia Associada" weight="1"/>
+        <option description="Disartria" weight="1"/>
+        <option description="D&#xe9;ficit Motor ou Sensitivo" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17744" type="Tratamento" type_verbose="Tratamento" url="" name="[Tontura] Exames" description="Solicitar ECG, hemograma, ureia, creatinina, s&#xf3;dio pot&#xe1;ssio, glicemia capilar" inputSequences="//@sequence.2" outputSequences="//@sequence.3">
+    <examination url="ELETROCARDIOGRAMA (ECG)" exam_id="75130050" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+    <examination url="GLICEMIA P/ FITA" exam_id="99011973" limb_side="" quantity="1" reason="Tontura" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17745" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Tontura] Discutir com l&#xed;der local" description="Avaliar caso com l&#xed;der local" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17746" type="Tratamento" type_verbose="Tratamento" url="" name="[Vertigem Central] Exames e Internamento" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Solicitar Tomografia de cr&amp;acirc;nio sem contraste.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;u>Solicitar avalia&amp;ccedil;&amp;atilde;o da neurologia.&lt;/u>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>Discutir necessidade de internamento hospitalar do paciente.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.4">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="n/a" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17747" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Vertigem Perif&#xe9;rica] Verificar Idade e hist&#xf3;rico do paciente" description="&lt;p>VERTIGEM PERIF&amp;Eacute;RICA&lt;/p>&#xA;&#xA;&lt;p>Sensa&amp;ccedil;&amp;atilde;o de rota&amp;ccedil;&amp;atilde;o, desequil&amp;iacute;brio, n&amp;aacute;usea e v&amp;ocirc;mito, nistagmo horizonto-rotat&amp;oacute;rio, desvio da marcha para um dos lados e tend&amp;ecirc;ncia a queda ao fechar os olhos.&lt;/p>" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.18">
+    <questions text="Paciente com idade > 50 anos + um ou mais fatores de risco para doen&#xe7;a cerebrovascular?" url="" id="9131">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50_ou_doenca_cerebrovascular" id="17504" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17748" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar suspeita de doen&#xe7;a" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.7 //@sequence.8 //@sequence.9 //@sequence.10 //@sequence.14">
+    <questions text="Neurite Vestibular: &#xA;&#xA;Idade entre 30-50 anos. Vertigem rotat&#xf3;ria aguda, com dura&#xe7;&#xe3;o de dias e melhora progressiva. Associada a n&#xe1;useas, v&#xf4;mitos e desequil&#xed;brio" url="" id="9132">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a de Meniere: &#xA;&#xA;Idade entre 30-50 anos. Vertigem rotat&#xf3;ria aguda associada a zumbido, hipoacusia e plenitude auricular" url="" id="9133">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+    </questions>
+    <questions text="Mastoidite com envolvimento do labirinto: &#xA;&#xA;Complica&#xe7;&#xe3;o de um quadro infeccioso pr&#xe9;vio como otite m&#xe9;dia" url="" id="9134">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+    </questions>
+    <questions text="Trauma: &#xA;&#xA;In&#xed;cio do quadro ap&#xf3;s epis&#xf3;dio de trauma na cabe&#xe7;a" url="" id="9135">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+    </questions>
+    <questions text="VERTIGEM POSICIONAL PAROX&#xcd;STICA BENIGNA (VPPB): &#xA;&#xA;Epis&#xf3;dios curtos de vertigem desencadeados por movimentos r&#xe1;pidos da cabe&#xe7;a" url="" id="9136">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17749" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com L&#xed;der Local" description="Discutir caso com l&#xed;der local e aventar possibilidade de TC de cr&#xe2;nio." isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17750" type="Tratamento" type_verbose="Tratamento" url="" name="[VPPB] Tratamento" description="&lt;h3>&lt;span style=&quot;font-size:18px&quot;>Se paciente sintom&amp;aacute;tico no momento da consulta:&amp;nbsp;&lt;/span>&lt;/h3>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&#xA;&#x9;&lt;h3>&lt;span style=&quot;font-size:18px&quot;>Dimenidrato 1 ampola, endovenosa, agora&lt;/span>&lt;/h3>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&#xA;&#x9;&lt;h3>&lt;span style=&quot;font-size:18px&quot;>Ondansetrona 4mg, endovenoso, agora&lt;/span>&lt;/h3>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;color:#c0392b&quot;>&lt;span style=&quot;font-size:18px&quot;>Sugerir que o paciente procure&amp;nbsp;consulta ambulatorial com neurologista ou otorrinolaringologista.&lt;/span>&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.7" outputSequences="//@sequence.21">
+    <medication url="" med_id="40088" id="9076" name="DRAMIN B6  IM AMPL 1 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="9076" standard="null"/>
+    <medication url="" med_id="126122" id="9077" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9077" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:3752,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <procedure url="PUNCAO C/ JELCO" procedure="76030002" quantity="1"/>
+    <procedure url="PUNCAO C/ SCALP" procedure="76030001" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17751" type="Tratamento" type_verbose="Tratamento" url="" name="[M&#xe9;ni&#xe8;re] Tratamento" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11">
+    <medication url="" med_id="40088" id="9078" name="DRAMIN B6  IM AMPL 1 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="9078" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17752" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[M&#xe9;ni&#xe8;re] Avaliar melhora" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Houve melhora?" url="" id="9137">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="meniere_houve_melhora" id="17510" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17753" type="Receita" type_verbose="Receita" url="" name="[M&#xe9;ni&#xe8;re] Fase Subaguda/Cr&#xf4;nica - Alta + Receita" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Liberar paciente ap&amp;oacute;s prescri&amp;ccedil;&amp;atilde;o da receita.&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;br />&#xA;&lt;span style=&quot;font-size:16px&quot;>&lt;u>Procurar emerg&amp;ecirc;ncia em caso de n&amp;atilde;o melhora ou piora do quadro&lt;/u>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.20">
+    <item id="4681" url="" name="Betaistina 24mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="3 a 5 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17754" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der local" description="Discutir com l&#xed;der local. Aventar possibilidade de internamento." isTerminal="true" inputSequences="//@sequence.13 //@sequence.17"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17755" type="Tratamento" type_verbose="Tratamento" url="" name="[Neurite Vestibular] Tratamento" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.15">
+    <medication url="" med_id="126122" id="9079" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9079" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:3774,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17756" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Neurite Vestibular] Avaliar Melhora" description="" inputSequences="//@sequence.15" outputSequences="//@sequence.16 //@sequence.17">
+    <questions text="Houve melhora?" url="" id="9138">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurite_houve_melhora" id="17511" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17757" type="Receita" type_verbose="Receita" url="" name="[Neurite Vestibular] Alta + Receita" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>&lt;strong>ALTA&lt;/strong>&amp;nbsp;&lt;br />&#xA;Dimenidrinato + piridoxina 50mg, 01 comprimido, via oral 6/6h por 3-5 dias e Prednisona 1mg/kg, via oral, 1x/dia por 5 dias, com redu&amp;ccedil;&amp;atilde;o gradativa da dose por mais 15 dias&lt;br />&#xA;&lt;br />&#xA;Procurar emerg&amp;ecirc;ncia em caso de n&amp;atilde;o melhora ou piora do quadro&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.16">
+    <item id="4682" url="" name="Dimenidrato + Piridoxina 50mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="tomar por 3 a 5 duas"/>
+    <item id="4683" url="" name="Prednisona 1mg/kg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="com redu&#xe7;&#xe3;o gradativa da dose por mais 15 dias"/>
+    <item id="4684" url="" name="Vertix 10mg ..... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uma vez durante a noite, at&#xe9; a melhora do paciente."/>
+    <item id="4685" url="" name="Vertizine D 3mg + 10mg ...... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Uma vez durante a noite."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17758" type="Receita" type_verbose="Receita" url="" name="[M&#xe9;ni&#xe8;re] Fase Aguda - Alta + Receita" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Liberar paciente ap&amp;oacute;s prescri&amp;ccedil;&amp;atilde;o da receita.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;br />&#xA;&lt;span style=&quot;font-size:18px&quot;>&lt;u>&lt;strong>Procurar emerg&amp;ecirc;ncia em caso de n&amp;atilde;o melhora ou piora do quadro.&lt;/strong>&lt;/u>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.19">
+    <item id="4686" url="" name="Dimenidrato + Piridoxina 50mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="usar medica&#xe7;&#xe3;o por 3 a 5 dias."/>
+    <item id="4687" url="" name="Prednisona 1mg/kg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="usar medica&#xe7;&#xe3;o por 3 a 5 dias, com redu&#xe7;&#xe3;o gradativa da dose por mais 15 dias"/>
+    <item id="4688" url="" name="HIDROCLOROTIAZIDA 25MG COMP 1 UD" med_code="154015" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17759" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[M&#xe9;ni&#xe8;re] Classificar quadro" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.19 //@sequence.20">
+    <questions text="Fase Aguda" url="" id="9139">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fase_aguda" id="17512" weight="1" value="false"/>
+    </questions>
+    <questions text="Fase Subaguda ou Cr&#xf4;nica" url="" id="9140">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="meniere_fase_subaguda_ou_cronica" id="17513" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17760" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[VPPB] Encaminhamentos" description="Se julgar necess&#xe1;rio, agendar consulta eletiva com Neurologista ou Otorrinolaringologista" isTerminal="true" inputSequences="//@sequence.21"/>
+  <element xsi:type="pathwayMetamodel:Information" id="17761" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com L&#xed;der Local (mastoidite)" description="Discutir caso com l&#xed;der de plant&#xe3;o e aventar possibilidade de TC de mast&#xf3;ide." isTerminal="true" inputSequences="//@sequence.8 //@sequence.9"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17762" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Tontura)" description="tontura">
+    <operation name="tontura (e sem vertigem)" Operator="and" id="17524">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tontura" id="17501" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem vertigem" id="17516">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem" id="17502" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17763" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Vertigem)" description="vertigem">
+    <operation name="vertigem (e sem tontura)" Operator="and" id="17525">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem" id="17502" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem tontura" id="17515">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="tontura" id="17501" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="17764" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondiciona"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="17765" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="17766" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (um ou mais sinais de alarme)" description="um ou mais sinais de alarme">
+    <operation name="um ou mais sinais de alarme" Operator="greaterOrEqual" id="17526">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_alarme" id="17503" weight="1" value="0.0">
+        <option description="Ataxia" weight="1"/>
+        <option description="Nistagmo Vertical" weight="1"/>
+        <option description="Diplopia" weight="1"/>
+        <option description="Convuls&#xe3;o" weight="1"/>
+        <option description="Cefal&#xe9;ia Associada" weight="1"/>
+        <option description="Disartria" weight="1"/>
+        <option description="D&#xe9;ficit Motor ou Sensitivo" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17514" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="17767" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (sem sinais de alarme)" description="sem sinais de alarme">
+    <operation name="sem sinais de alarme" Operator="lessThan" id="17527">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_alarme" id="17503" weight="1" value="0.0">
+        <option description="Ataxia" weight="1"/>
+        <option description="Nistagmo Vertical" weight="1"/>
+        <option description="Diplopia" weight="1"/>
+        <option description="Convuls&#xe3;o" weight="1"/>
+        <option description="Cefal&#xe9;ia Associada" weight="1"/>
+        <option description="Disartria" weight="1"/>
+        <option description="D&#xe9;ficit Motor ou Sensitivo" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17514" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="17768" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (mais de 50 anos + doenca cerebrovascular)" description="mais de 50 anos + doenca cerebrovascular">
+    <operation name="mais de 50 anos + doenca cerebrovascular" Operator="affirmation" id="17528">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50_ou_doenca_cerebrovascular" id="17504" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="17769" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (VPPB)" description="VPPB">
+    <operation name="VPPB" Operator="and" id="17529">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem neurite" id="17521">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem meniere" id="17520">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem mastoidite" id="17519">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem trauma" id="17518">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.7" id="17770" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (trauma)" description="trauma">
+    <operation name="com trauma" Operator="and" id="17530">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem neurite" id="17521">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem VPPB" id="17517">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem mastoidite" id="17519">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem meniere" id="17520">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.7" id="17771" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (mastoidite)" description="mastoidite">
+    <operation name="mastoidite" Operator="and" id="17531">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem VPPB" id="17517">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem meniere" id="17520">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem trauma" id="17518">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem neurite" id="17521">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.7" id="17772" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (Meniere)" description="Meniere">
+    <operation name="Meniere" Operator="and" id="17532">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem VPPB" id="17517">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem trauma" id="17518">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem mastoidite" id="17519">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem neurite" id="17521">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="17773" type="Sequencia" type_verbose="Sequencia" url="" name="S18" description="Incondicionao"/>
+  <sequence inputStep="//@element.18" outputStep="//@element.11" id="17774" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (meniere - houve melhora)" description="meniere - houve melhora">
+    <operation name="meniere - houve melhora" Operator="affirmation" id="17533">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="meniere_houve_melhora" id="17510" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="17775" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (meniere - nao houve melhora)" description="meniere - nao houve melhora">
+    <operation name="meniere - nao houve melhora" id="17534">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="meniere_houve_melhora" id="17510" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.7" id="17776" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (neurite vestibular)" description="neurite vestibular">
+    <operation name="neurite vestibular" Operator="and" id="17535">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem VPPB" id="17517">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem trauma" id="17518">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem mastoidite" id="17519">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem meniere" id="17520">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="17777" type="Sequencia" type_verbose="Sequencia" url="" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.16" outputStep="//@element.15" id="17778" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (neurite - houve melhora)" description="houve melhora">
+    <operation name="houve melhora" Operator="affirmation" id="17536">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_houve_melhora" id="17511" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.15" id="17779" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora" id="17537">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_houve_melhora" id="17511" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="17780" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (menos de 50 anos ou sem doen&#xe7;a cerebrovascular)" description="menos de 50 anos ou sem doen&#xe7;a cerebrovascular">
+    <operation name="menos de 50 anos e sem doen&#xe7;a cerebrovascular" id="17538">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50_ou_doenca_cerebrovascular" id="17504" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.18" id="17781" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (meniere aguda)" description="meniere aguda">
+    <operation name="meniere aguda" Operator="and" id="17539">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fase_aguda" id="17512" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="meniere nao cronica" id="17523">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="meniere_fase_subaguda_ou_cronica" id="17513" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.18" id="17782" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (meniere subaguda ou cronica)" description="meniere subaguda ou cronica">
+    <operation name="meniere subaguda ou cronica" Operator="and" id="17540">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="meniere_fase_subaguda_ou_cronica" id="17513" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="meniere nao aguda" id="17522">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fase_aguda" id="17512" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.9" id="17783" type="Sequencia" type_verbose="Sequencia" url="" name="S25" description="Incondicional"/>
+  <operation name="sem tontura" id="17515">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="tontura" id="17501" weight="1" value="false"/>
+  </operation>
+  <operation name="sem vertigem" id="17516">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem" id="17502" weight="1" value="false"/>
+  </operation>
+  <operation name="sem VPPB" id="17517">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+  </operation>
+  <operation name="sem trauma" id="17518">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+  </operation>
+  <operation name="sem mastoidite" id="17519">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+  </operation>
+  <operation name="sem meniere" id="17520">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+  </operation>
+  <operation name="sem neurite" id="17521">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+  </operation>
+  <operation name="meniere nao aguda" id="17522">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="fase_aguda" id="17512" weight="1" value="false"/>
+  </operation>
+  <operation name="meniere nao cronica" id="17523">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="meniere_fase_subaguda_ou_cronica" id="17513" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tontura" id="17501" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem" id="17502" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_alarme" id="17503" weight="1" value="0.0">
+    <option description="Ataxia" weight="1"/>
+    <option description="Nistagmo Vertical" weight="1"/>
+    <option description="Diplopia" weight="1"/>
+    <option description="Convuls&#xe3;o" weight="1"/>
+    <option description="Cefal&#xe9;ia Associada" weight="1"/>
+    <option description="Disartria" weight="1"/>
+    <option description="D&#xe9;ficit Motor ou Sensitivo" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_50_ou_doenca_cerebrovascular" id="17504" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurite_vestibular" id="17505" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="doenca_de_meniere" id="17506" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mastoidite_envolvimento_labirinto" id="17507" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trauma" id="17508" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vertigem_posicional_paroxistica_benigna" id="17509" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="meniere_houve_melhora" id="17510" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurite_houve_melhora" id="17511" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fase_aguda" id="17512" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="meniere_fase_subaguda_ou_cronica" id="17513" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17514" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

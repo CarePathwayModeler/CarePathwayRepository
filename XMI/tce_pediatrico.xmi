@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3107" url="" name="TCE Pedi&#xe1;trico" code="H034">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16893" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar quadro de TCE" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.15">
+    <questions text="Glasgow" url="" id="8884">
+      <answers xsi:type="pathwayMetamodel:Choice" name="quadro_tce" id="16768" weight="1" value="0.0">
+        <option description="Leve e Moderado (Glasgow > 8)" weight="1"/>
+        <option description="Grave (Glasgow &lt; 8)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16894" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[TCE Leve ou Moderado] Idade do Paciente" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.5 //@sequence.11">
+    <questions text="&lt; 3 meses" url="" id="8885">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="menor_tres_meses" id="16769" weight="1" value="false"/>
+    </questions>
+    <questions text="3 meses - 2 anos" url="" id="8886">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="entre_tres_meses_dois_anos" id="16770" weight="1" value="false"/>
+    </questions>
+    <questions text="> 2 anos" url="" id="8887">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="maior_dois_anos" id="16771" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16895" type="Tratamento" type_verbose="Tratamento" url="" name="[&lt; 3 meses] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Solicitar exames:&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Avaliar a possibilidade de USG TF preferencialmente; se n&amp;atilde;o for poss&amp;iacute;vel, solicitar TC cr&amp;acirc;nio sem contraste.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="TCE Leve ou moderado" clinical_indication="n/a"/>
+    <examination url="US DOPPLER COLOR TRANSCRANIANO OU TRANSFONTAN" exam_id="33010412" limb_side="" quantity="1" reason="TCE" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16896" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Resultados Exames" description="" inputSequences="//@sequence.2 //@sequence.14" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Existe altera&#xe7;&#xe3;o na TC Cr&#xe2;nio ou no Ultra-som?" url="" id="8888">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_tc_cranio" id="16772" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="16897" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Altera&#xe7;&#xe3;o no TC] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Dieta zero&lt;/span>&lt;/strong>;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Monitorizar paciente - observa&amp;ccedil;&amp;atilde;o rigorosa;&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Contactar sobre-aviso da neurocirurgia imediatamente.&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Passar caso para chefia local.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="16898" type="Receita" type_verbose="Receita" url="" name="[Alta] Conduta" description="- Compressa com gelo, 3x ao dia" isTerminal="true" inputSequences="//@sequence.4 //@sequence.8 //@sequence.17">
+    <item id="4551" url="" name="Dipirona Solu&#xe7;&#xe3;o 50mg/ml  _____ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 6/6h se dor ou febre."/>
+    <item id="4552" url="" name="Paracetamol Gotas _____ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas de 6/6h se dor ou febre."/>
+    <item id="4553" url="" name="Orienta&#xe7;&#xf5;es p&#xf3;s-sutura: SF 0,9% _____ 1 Fr." med_code="-1" presentation="-" access="18" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Deixar curativo coberto por 48h. Realizar limpeza com soro 2x ao dia. Retirar os pontos ap&#xf3;s 10 dias. Revisar esquema vacinal antitet&#xe2;nico."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16899" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[3 meses - 2 anos] Verificar Sinais de Alarme" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>O paciente possui sinais de alarme?&lt;/span>&lt;/p>" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.10">
+    <questions text="O paciente possui Sinais de Alarme?" url="" id="8889">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme_tres_meses_dois_anos" id="16773" weight="1" value="0.0">
+        <option description="Mecanismo alto impacto" weight="1"/>
+        <option description="V&#xf4;mitos + 3x" weight="1"/>
+        <option description="Queda > 1m" weight="1"/>
+        <option description="Glasgow &lt; 14" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Fratura palp&#xe1;vel ou crepita&#xe7;&#xe3;o" weight="1"/>
+        <option description="Sinal guaxinim e/ou Battle" weight="1"/>
+        <option description="S&#xed;ncope" weight="1"/>
+        <option description="Irritabilidade importante" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="16900" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Sem Sinais de Alarme] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Observa&amp;ccedil;&amp;atilde;o de 6 horas em jejum na emerg&amp;ecirc;ncia&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.18" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17021" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sem Sinais de Alarme] Verificar Intercorr&#xea;ncias" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Intercorr&#xea;ncias no per&#xed;odo?" url="" id="8890">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_intercorrencias" id="16774" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17022" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Exames" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Comunicar chefia;&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Deixar paciente em jejum&lt;/span>&lt;/strong>;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Monitoriza&amp;ccedil;&amp;atilde;o e observa&amp;ccedil;&amp;atilde;o rigorosa.&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Prescrever:&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Dipirona 20 mg/kg/dose EV 6/6h dilu&amp;iacute;do em AD -&amp;nbsp; SN&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Profenid 1 mg/kg/dose EV 8/8h dilu&amp;iacute;do em SF0,9% - SN&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Tramal 1 mg/kg/dose EV 8/8h dilu&amp;iacute;do em SF0,9% - SN&lt;/span>&lt;/p>" inputSequences="//@sequence.9 //@sequence.10 //@sequence.12" outputSequences="//@sequence.14">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="TCE" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17023" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[> 2 anos] Verificar Sinais de Alarme" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="O paciente possui sinais de alarme?" url="" id="8891">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_alarme_maior_dois_anos" id="16775" weight="1" value="0.0">
+        <option description="Mecanismo alto impacto" weight="1"/>
+        <option description="S&#xed;ncope" weight="1"/>
+        <option description="Cefal&#xe9;ia refrat&#xe1;ria ao uso opi&#xf3;ides" weight="1"/>
+        <option description="Glasgow &lt; 14" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Hemot&#xed;mpano" weight="1"/>
+        <option description="+ 4 v&#xf4;mitos" weight="1"/>
+        <option description="Sa&#xed;da LCR nasal" weight="1"/>
+        <option description="Sinal guaxinim ou battle" weight="1"/>
+        <option description="Queda > 1,5m" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17024" type="Tratamento" type_verbose="Tratamento" url="" name="[TCE Grave] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Sala de cuidados imediatamente&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>1) Iniciar avalia&amp;ccedil;&amp;atilde;o Pals (C-A-B):&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Monitoriza&amp;ccedil;&amp;atilde;o (FC+PA+FR+ SatO&amp;sup2;) + pun&amp;ccedil;&amp;atilde;o com jelco calibroso&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- IOT + Prote&amp;ccedil;&amp;atilde;o cervical&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- VM / Se sinais HIC iniciar hiperventila&amp;ccedil;&amp;atilde;o&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Outras medidas:&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>2) Controle DX&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>3) Controle temperatura&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>4) Decadron 0,6 mg/kg/dose EV&lt;/span>&lt;/p>" inputSequences="//@sequence.15" outputSequences="//@sequence.16">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="TCE Grave" clinical_indication="n/a"/>
+    <examination url="TC COLUNA CERVICAL,DORSAL" exam_id="34010033" limb_side="" quantity="1" reason="TCE grave" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="TCE grave" clinical_indication="n/a"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="TCE grave" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="TCE grave" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="TCE grave" clinical_indication="n/a"/>
+    <examination url="CALCIO (SANGUE)" exam_id="28010329" limb_side="" quantity="1" reason="TCE grave" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="TCE grave" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17025" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[TCE Grave] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Comunicar UTI e neurocirurgi&amp;atilde;o de sobreaviso&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17026" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Necessita Observa&#xe7;&#xe3;o?" description="" inputSequences="//@sequence.6 //@sequence.13" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Paciente necessita observa&#xe7;&#xe3;o na emerg&#xea;ncia?" url="" id="8892">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="necessita_observacao" id="16776" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17027" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-">
+    <operation name="TCE_leve_ou_moderado" Operator="equal" id="16779">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quadro_tce" id="16768" weight="1" value="0.0">
+        <option description="Leve e Moderado (Glasgow > 8)" weight="1"/>
+        <option description="Grave (Glasgow &lt; 8)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16778" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="17028" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-">
+    <operation name="Menor_3_meses" Operator="affirmation" id="16780">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="menor_tres_meses" id="16769" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="17029" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="17030" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-">
+    <operation name="Existe_altera&#xe7;&#xe3;o_no_TC" Operator="affirmation" id="16861">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_tc_cranio" id="16772" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="17031" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-">
+    <operation name="Sem_altera&#xe7;&#xe3;o_TC" id="16862">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_tc_cranio" id="16772" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="17032" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-">
+    <operation name="3_meses_a_2_anos" Operator="affirmation" id="16863">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="entre_tres_meses_dois_anos" id="16770" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.6" id="17033" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="-">
+    <operation name="Sem_sinais_de_alarme" Operator="lessThan" id="16864">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme_tres_meses_dois_anos" id="16773" weight="1" value="0.0">
+        <option description="Mecanismo alto impacto" weight="1"/>
+        <option description="V&#xf4;mitos + 3x" weight="1"/>
+        <option description="Queda > 1m" weight="1"/>
+        <option description="Glasgow &lt; 14" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Fratura palp&#xe1;vel ou crepita&#xe7;&#xe3;o" weight="1"/>
+        <option description="Sinal guaxinim e/ou Battle" weight="1"/>
+        <option description="S&#xed;ncope" weight="1"/>
+        <option description="Irritabilidade importante" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16778" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="17034" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.8" id="17035" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-">
+    <operation name="Sem_intercorr&#xea;ncias" id="16865">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_intercorrencias" id="16774" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="17036" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-">
+    <operation name="Houve_intercorr&#xea;ncias" Operator="affirmation" id="16866">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_intercorrencias" id="16774" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.6" id="17037" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-">
+    <operation name="Com_sinais_de_alarme" Operator="greaterOrEqual" id="16867">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme_tres_meses_dois_anos" id="16773" weight="1" value="0.0">
+        <option description="Mecanismo alto impacto" weight="1"/>
+        <option description="V&#xf4;mitos + 3x" weight="1"/>
+        <option description="Queda > 1m" weight="1"/>
+        <option description="Glasgow &lt; 14" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Fratura palp&#xe1;vel ou crepita&#xe7;&#xe3;o" weight="1"/>
+        <option description="Sinal guaxinim e/ou Battle" weight="1"/>
+        <option description="S&#xed;ncope" weight="1"/>
+        <option description="Irritabilidade importante" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16778" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.1" id="17038" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="-">
+    <operation name="Maior_que_2_anos" Operator="affirmation" id="16868">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="maior_dois_anos" id="16771" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.10" id="17039" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-">
+    <operation name="Cont&#xe9;m_sinais_de_alarme" Operator="greaterOrEqual" id="16869">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_alarme_maior_dois_anos" id="16775" weight="1" value="0.0">
+        <option description="Mecanismo alto impacto" weight="1"/>
+        <option description="S&#xed;ncope" weight="1"/>
+        <option description="Cefal&#xe9;ia refrat&#xe1;ria ao uso opi&#xf3;ides" weight="1"/>
+        <option description="Glasgow &lt; 14" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Hemot&#xed;mpano" weight="1"/>
+        <option description="+ 4 v&#xf4;mitos" weight="1"/>
+        <option description="Sa&#xed;da LCR nasal" weight="1"/>
+        <option description="Sinal guaxinim ou battle" weight="1"/>
+        <option description="Queda > 1,5m" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16778" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.10" id="17040" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-">
+    <operation name="Sem_sinais_de_alarme_" Operator="lessThan" id="16870">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_alarme_maior_dois_anos" id="16775" weight="1" value="0.0">
+        <option description="Mecanismo alto impacto" weight="1"/>
+        <option description="S&#xed;ncope" weight="1"/>
+        <option description="Cefal&#xe9;ia refrat&#xe1;ria ao uso opi&#xf3;ides" weight="1"/>
+        <option description="Glasgow &lt; 14" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Hemot&#xed;mpano" weight="1"/>
+        <option description="+ 4 v&#xf4;mitos" weight="1"/>
+        <option description="Sa&#xed;da LCR nasal" weight="1"/>
+        <option description="Sinal guaxinim ou battle" weight="1"/>
+        <option description="Queda > 1,5m" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16778" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.9" id="17041" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.0" id="17042" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="-">
+    <operation name="TCE_grave" Operator="equal" id="16871">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quadro_tce" id="16768" weight="1" value="0.0">
+        <option description="Leve e Moderado (Glasgow > 8)" weight="1"/>
+        <option description="Grave (Glasgow &lt; 8)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16777" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="17043" type="Sequencia" type_verbose="Sequencia" url="" name="S17" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.13" id="17044" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (sem necessidade de observa&#xe7;&#xe3;o)" description="sem necessidade de observa&#xe7;&#xe3;o">
+    <operation name="sem necessidade de observa&#xe7;&#xe3;o" id="16872">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_observacao" id="16776" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.13" id="17045" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (necessita observa&#xe7;&#xe3;o)" description="necessita observa&#xe7;&#xe3;o">
+    <operation name="necessita observa&#xe7;&#xe3;o" Operator="affirmation" id="16873">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_observacao" id="16776" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="quadro_tce" id="16768" weight="1" value="0.0">
+    <option description="Leve e Moderado (Glasgow > 8)" weight="1"/>
+    <option description="Grave (Glasgow &lt; 8)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="menor_tres_meses" id="16769" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="entre_tres_meses_dois_anos" id="16770" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="maior_dois_anos" id="16771" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_tc_cranio" id="16772" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme_tres_meses_dois_anos" id="16773" weight="1" value="0.0">
+    <option description="Mecanismo alto impacto" weight="1"/>
+    <option description="V&#xf4;mitos + 3x" weight="1"/>
+    <option description="Queda > 1m" weight="1"/>
+    <option description="Glasgow &lt; 14" weight="1"/>
+    <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+    <option description="Fratura palp&#xe1;vel ou crepita&#xe7;&#xe3;o" weight="1"/>
+    <option description="Sinal guaxinim e/ou Battle" weight="1"/>
+    <option description="S&#xed;ncope" weight="1"/>
+    <option description="Irritabilidade importante" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_intercorrencias" id="16774" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_alarme_maior_dois_anos" id="16775" weight="1" value="0.0">
+    <option description="Mecanismo alto impacto" weight="1"/>
+    <option description="S&#xed;ncope" weight="1"/>
+    <option description="Cefal&#xe9;ia refrat&#xe1;ria ao uso opi&#xf3;ides" weight="1"/>
+    <option description="Glasgow &lt; 14" weight="1"/>
+    <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+    <option description="Hemot&#xed;mpano" weight="1"/>
+    <option description="+ 4 v&#xf4;mitos" weight="1"/>
+    <option description="Sa&#xed;da LCR nasal" weight="1"/>
+    <option description="Sinal guaxinim ou battle" weight="1"/>
+    <option description="Queda > 1,5m" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="necessita_observacao" id="16776" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="16777" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="16778" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

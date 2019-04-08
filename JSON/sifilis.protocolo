@@ -1,0 +1,948 @@
+{
+    "id": 721,
+    "url": "",
+    "codigo": "SIF",
+    "nome": "S\u00edfilis",
+    "repositorio_id": 321,
+    "versao": 2,
+    "ultima_auditoria": null,
+    "criado_por": null,
+    "finalizado_por": null,
+    "elementos": [
+        {
+            "id": 3581,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Exame de VDRL",
+            "descricao": "Gerar solicita\u00e7\u00e3o de exame de VDRL mensal at\u00e9 o final da gesta\u00e7\u00e3o",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28061004",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Tratamento de S\u00edfilis",
+                    "indicacao_clinica": "N/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 3590,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3581,
+                    "passo_de_saida": "Tratamento: Exame de VDRL",
+                    "passo_de_entrada_id": 3582,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar VDRL",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3582,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar VDRL",
+            "descricao": "Avaliar VDRL",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1621,
+                    "url": "",
+                    "texto": "VDRL Positivo?(  >=1:8 )",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2661,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sifilis_vdrl_positivo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3590,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3581,
+                    "passo_de_saida": "Tratamento: Exame de VDRL",
+                    "passo_de_entrada_id": 3582,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar VDRL",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3591,
+                    "url": "",
+                    "nome": "S2 (VDRL >= 1:8)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3582,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar VDRL",
+                    "passo_de_entrada_id": 3588,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Diagnosticar S\u00edfilis",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3593,
+                    "url": "",
+                    "nome": "S5 (vdrl < 1:8)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3582,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar VDRL",
+                    "passo_de_entrada_id": 3584,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Averiguar Tratamento Pr\u00e9vio",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3583,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento para S\u00edfilis",
+            "descricao": "Necess\u00e1rio realizar mesmo tratamento para parceiro da gestante.\n\n*Paciente com alergia comprovada \u00e0 penicilina, realizar preferencialmente a dessensibiliza\u00e7\u00e3o e, em seguida o tratamento com penicilina sob internamento hospitalar.\nSe n\u00e3o for poss\u00edvel, tratar com estearato de eritromicina 500 mg por via oral de 6 em 6 horas durante 15 dias para a s\u00edfilis recente ou 30 dias para s\u00edfilis tardia ou quando n\u00e3o se souber a dura\u00e7\u00e3o da doen\u00e7a.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 721,
+                    "url": "",
+                    "nome": "BENZETACIL",
+                    "medicamento": 7891317496104,
+                    "apresentacao": "FRAP",
+                    "via_acesso": 5,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar em dose \u00fanica."
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3592,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Prescrever Penicilina para gestante e parceiro",
+                    "passo_de_saida_id": 3588,
+                    "passo_de_saida": "A\u00e7\u00e3o: Diagnosticar S\u00edfilis",
+                    "passo_de_entrada_id": 3583,
+                    "passo_de_entrada": "Receita: Tratamento para S\u00edfilis",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3594,
+                    "url": "",
+                    "nome": "S6 (sem tratamento previo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3584,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 3583,
+                    "passo_de_entrada": "Receita: Tratamento para S\u00edfilis",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3598,
+                    "url": "",
+                    "nome": "S10 (fta positivo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3586,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar FTA ABS",
+                    "passo_de_entrada_id": 3583,
+                    "passo_de_entrada": "Receita: Tratamento para S\u00edfilis",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3584,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Averiguar Tratamento Pr\u00e9vio",
+            "descricao": "Averiguar Tratamento Pr\u00e9vio",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1622,
+                    "url": "",
+                    "texto": "Houve tratamento previo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2662,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sifilis_tratamento_previo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3593,
+                    "url": "",
+                    "nome": "S5 (vdrl < 1:8)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3582,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar VDRL",
+                    "passo_de_entrada_id": 3584,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Averiguar Tratamento Pr\u00e9vio",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3594,
+                    "url": "",
+                    "nome": "S6 (sem tratamento previo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3584,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 3583,
+                    "passo_de_entrada": "Receita: Tratamento para S\u00edfilis",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3595,
+                    "url": "",
+                    "nome": "S7 (houve tratamento pr\u00e9vio)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3584,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 3589,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: A\u00e7\u00e3o - Classificar como Cicatriz Sorol\u00f3gico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3585,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Exame FTA ABS",
+            "descricao": "Solicitar exame FTA ABS",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "27040259",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Tratamento para S\u00edfilis",
+                    "indicacao_clinica": "N/a",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28062345",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "-",
+                    "indicacao_clinica": "Verificar se h\u00e1 cicatriz sorol\u00f3gica.",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3596,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3589,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: A\u00e7\u00e3o - Classificar como Cicatriz Sorol\u00f3gico",
+                    "passo_de_entrada_id": 3585,
+                    "passo_de_entrada": "Tratamento: Exame FTA ABS",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3597,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 3585,
+                    "passo_de_saida": "Tratamento: Exame FTA ABS",
+                    "passo_de_entrada_id": 3586,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar FTA ABS",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3586,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar FTA ABS",
+            "descricao": "Avaliar resultado do exame de FTA ABS",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1623,
+                    "url": "",
+                    "texto": "Resultado do FTA ABS positivo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2663,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sifilis_fta_abs_positivo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3597,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 3585,
+                    "passo_de_saida": "Tratamento: Exame FTA ABS",
+                    "passo_de_entrada_id": 3586,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar FTA ABS",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3598,
+                    "url": "",
+                    "nome": "S10 (fta positivo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3586,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar FTA ABS",
+                    "passo_de_entrada_id": 3583,
+                    "passo_de_entrada": "Receita: Tratamento para S\u00edfilis",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3599,
+                    "url": "",
+                    "nome": "S11 (FTA negativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3586,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar FTA ABS",
+                    "passo_de_entrada_id": 3587,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: N\u00e3o necessita tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3587,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "N\u00e3o necessita tratamento",
+            "descricao": "N\u00e3o \u00e9 necess\u00e1rio tratamento para essa situa\u00e7\u00e3o",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 3599,
+                    "url": "",
+                    "nome": "S11 (FTA negativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3586,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar FTA ABS",
+                    "passo_de_entrada_id": 3587,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: N\u00e3o necessita tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3588,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Diagnosticar S\u00edfilis",
+            "descricao": "Classificar como \"S\u00edfilis\"",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_diagnostico",
+            "entradas": {
+                "diagnostico": "FL_SIFILIS"
+            }
+        },
+        {
+            "id": 3589,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "A\u00e7\u00e3o - Classificar como Cicatriz Sorol\u00f3gico",
+            "descricao": "\u00c9 necess\u00e1rio classificar como \"cicatriz sorol\u00f3gico\" no Nascer Bem",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 3595,
+                    "url": "",
+                    "nome": "S7 (houve tratamento pr\u00e9vio)",
+                    "descricao": "",
+                    "passo_de_saida_id": 3584,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 3589,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: A\u00e7\u00e3o - Classificar como Cicatriz Sorol\u00f3gico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3596,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3589,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: A\u00e7\u00e3o - Classificar como Cicatriz Sorol\u00f3gico",
+                    "passo_de_entrada_id": 3585,
+                    "passo_de_entrada": "Tratamento: Exame FTA ABS",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3590,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "",
+            "passo_de_saida_id": 3581,
+            "passo_de_saida": {
+                "id": 3581,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exame de VDRL",
+                "descricao": "Gerar solicita\u00e7\u00e3o de exame de VDRL mensal at\u00e9 o final da gesta\u00e7\u00e3o",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3582,
+            "passo_de_entrada": {
+                "id": 3582,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar VDRL",
+                "descricao": "Avaliar VDRL",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3591,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (VDRL >= 1:8)",
+            "descricao": "",
+            "passo_de_saida_id": 3582,
+            "passo_de_saida": {
+                "id": 3582,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar VDRL",
+                "descricao": "Avaliar VDRL",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3588,
+            "passo_de_entrada": {
+                "id": 3588,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Diagnosticar S\u00edfilis",
+                "descricao": "Classificar como \"S\u00edfilis\"",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "operacao": {
+                "id": 2664,
+                "nome": "vdrl >= 1:8",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2661
+                ],
+                "argumentos": [
+                    "sifilis_vdrl_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3592,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Prescrever Penicilina para gestante e parceiro",
+            "passo_de_saida_id": 3588,
+            "passo_de_saida": {
+                "id": 3588,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Diagnosticar S\u00edfilis",
+                "descricao": "Classificar como \"S\u00edfilis\"",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "passo_de_entrada_id": 3583,
+            "passo_de_entrada": {
+                "id": 3583,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento para S\u00edfilis",
+                "descricao": "Necess\u00e1rio realizar mesmo tratamento para parceiro da gestante.\n\n*Paciente com alergia comprovada \u00e0 penicilina, realizar preferencialmente a dessensibiliza\u00e7\u00e3o e, em seguida o tratamento com penicilina sob internamento hospitalar.\nSe n\u00e3o for poss\u00edvel, tratar com estearato de eritromicina 500 mg por via oral de 6 em 6 horas durante 15 dias para a s\u00edfilis recente ou 30 dias para s\u00edfilis tardia ou quando n\u00e3o se souber a dura\u00e7\u00e3o da doen\u00e7a.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3593,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (vdrl < 1:8)",
+            "descricao": "",
+            "passo_de_saida_id": 3582,
+            "passo_de_saida": {
+                "id": 3582,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar VDRL",
+                "descricao": "Avaliar VDRL",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3584,
+            "passo_de_entrada": {
+                "id": 3584,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Averiguar Tratamento Pr\u00e9vio",
+                "descricao": "Averiguar Tratamento Pr\u00e9vio",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2665,
+                "nome": "VDRL negativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2661
+                ],
+                "argumentos": [
+                    "sifilis_vdrl_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3594,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (sem tratamento previo)",
+            "descricao": "",
+            "passo_de_saida_id": 3584,
+            "passo_de_saida": {
+                "id": 3584,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Averiguar Tratamento Pr\u00e9vio",
+                "descricao": "Averiguar Tratamento Pr\u00e9vio",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3583,
+            "passo_de_entrada": {
+                "id": 3583,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento para S\u00edfilis",
+                "descricao": "Necess\u00e1rio realizar mesmo tratamento para parceiro da gestante.\n\n*Paciente com alergia comprovada \u00e0 penicilina, realizar preferencialmente a dessensibiliza\u00e7\u00e3o e, em seguida o tratamento com penicilina sob internamento hospitalar.\nSe n\u00e3o for poss\u00edvel, tratar com estearato de eritromicina 500 mg por via oral de 6 em 6 horas durante 15 dias para a s\u00edfilis recente ou 30 dias para s\u00edfilis tardia ou quando n\u00e3o se souber a dura\u00e7\u00e3o da doen\u00e7a.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2666,
+                "nome": "Sem tratamento pr\u00e9vio",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2662
+                ],
+                "argumentos": [
+                    "sifilis_tratamento_previo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3595,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (houve tratamento pr\u00e9vio)",
+            "descricao": "",
+            "passo_de_saida_id": 3584,
+            "passo_de_saida": {
+                "id": 3584,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Averiguar Tratamento Pr\u00e9vio",
+                "descricao": "Averiguar Tratamento Pr\u00e9vio",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3589,
+            "passo_de_entrada": {
+                "id": 3589,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "A\u00e7\u00e3o - Classificar como Cicatriz Sorol\u00f3gico",
+                "descricao": "\u00c9 necess\u00e1rio classificar como \"cicatriz sorol\u00f3gico\" no Nascer Bem",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2667,
+                "nome": "Houve tratamento pr\u00e9vio",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2662
+                ],
+                "argumentos": [
+                    "sifilis_tratamento_previo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3596,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "",
+            "passo_de_saida_id": 3589,
+            "passo_de_saida": {
+                "id": 3589,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "A\u00e7\u00e3o - Classificar como Cicatriz Sorol\u00f3gico",
+                "descricao": "\u00c9 necess\u00e1rio classificar como \"cicatriz sorol\u00f3gico\" no Nascer Bem",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3585,
+            "passo_de_entrada": {
+                "id": 3585,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exame FTA ABS",
+                "descricao": "Solicitar exame FTA ABS",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3597,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "",
+            "passo_de_saida_id": 3585,
+            "passo_de_saida": {
+                "id": 3585,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exame FTA ABS",
+                "descricao": "Solicitar exame FTA ABS",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3586,
+            "passo_de_entrada": {
+                "id": 3586,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar FTA ABS",
+                "descricao": "Avaliar resultado do exame de FTA ABS",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3598,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (fta positivo)",
+            "descricao": "",
+            "passo_de_saida_id": 3586,
+            "passo_de_saida": {
+                "id": 3586,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar FTA ABS",
+                "descricao": "Avaliar resultado do exame de FTA ABS",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3583,
+            "passo_de_entrada": {
+                "id": 3583,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento para S\u00edfilis",
+                "descricao": "Necess\u00e1rio realizar mesmo tratamento para parceiro da gestante.\n\n*Paciente com alergia comprovada \u00e0 penicilina, realizar preferencialmente a dessensibiliza\u00e7\u00e3o e, em seguida o tratamento com penicilina sob internamento hospitalar.\nSe n\u00e3o for poss\u00edvel, tratar com estearato de eritromicina 500 mg por via oral de 6 em 6 horas durante 15 dias para a s\u00edfilis recente ou 30 dias para s\u00edfilis tardia ou quando n\u00e3o se souber a dura\u00e7\u00e3o da doen\u00e7a.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2668,
+                "nome": "FTA ABS positivo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2663
+                ],
+                "argumentos": [
+                    "sifilis_fta_abs_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3599,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (FTA negativo)",
+            "descricao": "",
+            "passo_de_saida_id": 3586,
+            "passo_de_saida": {
+                "id": 3586,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar FTA ABS",
+                "descricao": "Avaliar resultado do exame de FTA ABS",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3587,
+            "passo_de_entrada": {
+                "id": 3587,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "N\u00e3o necessita tratamento",
+                "descricao": "N\u00e3o \u00e9 necess\u00e1rio tratamento para essa situa\u00e7\u00e3o",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2669,
+                "nome": "FTA ABS negativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2663
+                ],
+                "argumentos": [
+                    "sifilis_fta_abs_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 2661,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sifilis_vdrl_positivo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2662,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sifilis_tratamento_previo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2663,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sifilis_fta_abs_positivo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

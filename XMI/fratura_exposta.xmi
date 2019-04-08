@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3120" url="" name="Fratura Exposta" code="H001">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17784" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Grau da Fratura" description="Informe o Grau da fratura baseado na classifica&#xe7;&#xe3;o de Gustillo" inputSequences="//@sequence.3" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Fratura exposta Grau I / II" url="" id="9201">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="frat-grau12" id="17621" weight="1" value="false"/>
+    </questions>
+    <questions text="Fratura exposta Grau III / IV" url="" id="9202">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="frat-grau34" id="17622" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17785" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Fratura de Grau I/II" description="Orienta&#xe7;&#xe3;o de antibioticoterapia e tratamento cirurgico pr&#xe9;-definidos com equipe de ccih e ortopedia para fratura grau I/II." inputSequences="//@sequence.0" outputSequences="//@sequence.2">
+    <medication url="" med_id="38008" id="9080" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9080" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1 ml = 500 mg&quot;,&quot;id&quot;:3753,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:910}"/>
+    <medication url="" med_id="37400" id="9121" name="GENTAMICINA 80 MG AMPL 2 ML" brand="BIOCHIMICO" unit="UD" access="6" daily_dosage="3" cycles="1" treatement_time="9121" frequency="24" standard="null"/>
+    <medication url="" med_id="42099" id="9122" name="KEFLIN 1 GR FRAP 1 UD" brand="LILLY" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9122" frequency="4" standard="null"/>
+    <medication url="" med_id="59609" id="9123" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9123" standard="null"/>
+    <medication url="" med_id="39586" id="9124" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9124" standard="null"/>
+    <medication url="" med_id="59765" id="9125" name="TRAMAL 50MG AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9125" standard="null"/>
+    <medication url="" med_id="48887" id="9126" name="DIMORF 1MG/ML(2ML) AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9126" standard="null"/>
+    <medication url="" med_id="118477" id="9127" name="DIMORF 10 MG  AMP AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9127" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17786" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Informativo" description="Se necess&#xe1;rio exames de imagem, solicitar no PEP/SAM, bem como a interna&#xe7;&#xe3;o cir&#xfa;rgica/procedimentos.&#xA;&#xA;Realizar profilaxia antitet&#xe2;nica." isTerminal="true" inputSequences="//@sequence.2 //@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17787" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar tipo de fratura" description="" isInitial="true" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Paciente apresenta fratura exposta?" url="" id="9203">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fratura_exposta" id="17623" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17788" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar protocolo" description="Paciente n&#xe3;o apresenta fratura exposta. Fim do protocolo." isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17789" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Fratura de Grau III/IV" description="Orienta&#xe7;&#xe3;o de antibioticoterapia e tratamento cirurgico pr&#xe9;-definidos com equipe de ccih e ortopedia para fratura grau I/II." inputSequences="//@sequence.1" outputSequences="//@sequence.5">
+    <medication url="" med_id="38008" id="9128" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9128" standard="null"/>
+    <medication url="" med_id="59609" id="9129" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9129" standard="null"/>
+    <medication url="" med_id="59765" id="9130" name="TRAMAL 50MG AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="9130" standard="null"/>
+    <medication url="" med_id="39586" id="9131" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9131" standard="null"/>
+    <medication url="" med_id="118477" id="9132" name="DIMORF 10 MG  AMP AMPL 1 ML" brand="" unit="ML" access="6" daily_dosage="1" cycles="1" treatement_time="9132" standard="null"/>
+    <medication url="" med_id="48887" id="9133" name="DIMORF 1MG/ML(2ML) AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9133" standard="null"/>
+    <medication url="" med_id="85561" id="9134" name="UNASYN 3GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9134" standard="null"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17790" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description="s1">
+    <operation name="s1-guarda" Operator="affirmation" id="17624">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="frat-grau12" id="17621" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="17791" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="s2">
+    <operation name="s2-guarda" Operator="affirmation" id="17625">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="frat-grau34" id="17622" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="17792" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="s3"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.3" id="17793" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (apresenta fratura exposta)" description="apresenta fratura exposta">
+    <operation name="apresenta fratura exposta" Operator="affirmation" id="17626">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fratura_exposta" id="17623" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="17794" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (sem fratura exposta)" description="sem fratura exposta">
+    <operation name="sem fratura exposta" id="17627">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fratura_exposta" id="17623" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.5" id="17795" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="frat-grau12" id="17621" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="frat-grau34" id="17622" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fratura_exposta" id="17623" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

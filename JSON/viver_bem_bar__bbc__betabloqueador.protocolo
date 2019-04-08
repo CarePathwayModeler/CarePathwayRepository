@@ -1,0 +1,465 @@
+{
+    "id": 914,
+    "url": "",
+    "codigo": "VB_BAR",
+    "nome": "[Viver Bem] BAR + BBC + BETABLOQUEADOR [*]",
+    "repositorio_id": 478,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:39.561106-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:55:43.080511-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:39.561106-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4476,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar PS/PD (1)",
+            "descricao": "PS 130 -159 ou PD 80 - 99?",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1917,
+                    "url": "",
+                    "texto": "PS 130 -159 ou PD 80 - 99?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3261,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ps_pd_positivo_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4482,
+                    "url": "",
+                    "nome": "S1 (PD/PS positivo(1))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (1)",
+                    "passo_de_entrada_id": 4478,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Monoterapia BAR",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4483,
+                    "url": "",
+                    "nome": "S2 (PD/PS negativo (1))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (1)",
+                    "passo_de_entrada_id": 4477,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar PS/PD (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4477,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar PS/PD (2)",
+            "descricao": "PS 160 - 179 ou PD 100 - 109?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1918,
+                    "url": "",
+                    "texto": "PS 160-179 ou PD 100 -109?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3262,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ps_pd_positivo_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4483,
+                    "url": "",
+                    "nome": "S2 (PD/PS negativo (1))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (1)",
+                    "passo_de_entrada_id": 4477,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar PS/PD (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4484,
+                    "url": "",
+                    "nome": "S3 (PD/PS positivo (2))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4477,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (2)",
+                    "passo_de_entrada_id": 4479,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Duploterapia BAR",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4485,
+                    "url": "",
+                    "nome": "S4 (PD/PS negativo (2))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4477,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (2)",
+                    "passo_de_entrada_id": 4480,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Triploterapia BAR",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4478,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "[Encaminhamento] Monoterapia BAR",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4482,
+                    "url": "",
+                    "nome": "S1 (PD/PS positivo(1))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (1)",
+                    "passo_de_entrada_id": 4478,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Monoterapia BAR",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4479,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "[Encaminhamento] Duploterapia BAR",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4484,
+                    "url": "",
+                    "nome": "S3 (PD/PS positivo (2))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4477,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (2)",
+                    "passo_de_entrada_id": 4479,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Duploterapia BAR",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4480,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "[Encaminhamento] Triploterapia BAR",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4485,
+                    "url": "",
+                    "nome": "S4 (PD/PS negativo (2))",
+                    "descricao": "",
+                    "passo_de_saida_id": 4477,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS/PD (2)",
+                    "passo_de_entrada_id": 4480,
+                    "passo_de_entrada": "Encaminhamento: [Encaminhamento] Triploterapia BAR",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4481,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "[Encaminhamento] Tetraterapia BAR",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_BAR_TETRA"
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4482,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (PD/PS positivo(1))",
+            "descricao": "",
+            "passo_de_saida_id": 4476,
+            "passo_de_saida": {
+                "id": 4476,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS/PD (1)",
+                "descricao": "PS 130 -159 ou PD 80 - 99?",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4478,
+            "passo_de_entrada": {
+                "id": 4478,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "[Encaminhamento] Monoterapia BAR",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": []
+            },
+            "operacao": {
+                "id": 3263,
+                "nome": "PD/PS positivo(1)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3261
+                ],
+                "argumentos": [
+                    "ps_pd_positivo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4483,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (PD/PS negativo (1))",
+            "descricao": "",
+            "passo_de_saida_id": 4476,
+            "passo_de_saida": {
+                "id": 4476,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS/PD (1)",
+                "descricao": "PS 130 -159 ou PD 80 - 99?",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4477,
+            "passo_de_entrada": {
+                "id": 4477,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS/PD (2)",
+                "descricao": "PS 160 - 179 ou PD 100 - 109?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3264,
+                "nome": "PD/PS negativo (1)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3261
+                ],
+                "argumentos": [
+                    "ps_pd_positivo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4484,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (PD/PS positivo (2))",
+            "descricao": "",
+            "passo_de_saida_id": 4477,
+            "passo_de_saida": {
+                "id": 4477,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS/PD (2)",
+                "descricao": "PS 160 - 179 ou PD 100 - 109?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4479,
+            "passo_de_entrada": {
+                "id": 4479,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "[Encaminhamento] Duploterapia BAR",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": []
+            },
+            "operacao": {
+                "id": 3265,
+                "nome": "PD/PS positivo (2)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3262
+                ],
+                "argumentos": [
+                    "ps_pd_positivo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4485,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (PD/PS negativo (2))",
+            "descricao": "",
+            "passo_de_saida_id": 4477,
+            "passo_de_saida": {
+                "id": 4477,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS/PD (2)",
+                "descricao": "PS 160 - 179 ou PD 100 - 109?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4480,
+            "passo_de_entrada": {
+                "id": 4480,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "[Encaminhamento] Triploterapia BAR",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": []
+            },
+            "operacao": {
+                "id": 3266,
+                "nome": "PD/PS negativo (2)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3262
+                ],
+                "argumentos": [
+                    "ps_pd_positivo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3261,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ps_pd_positivo_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3262,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ps_pd_positivo_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

@@ -1,0 +1,1733 @@
+{
+    "id": 3118,
+    "url": "",
+    "codigo": "H044",
+    "nome": "Hipertens\u00e3o Arterial Sist\u00eamica",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 521,
+    "versao": 4,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:44:35.215571-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:44:29.827018-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:44:37.062174-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17555,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Anamnese + Exame F\u00edsico",
+            "descricao": "Anamnese completa e exame f\u00edsico.",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9121,
+                    "url": "",
+                    "texto": "PA acentuadamente alta? (PAS >= 180 e PAD >= 120  mmHg)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17339,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "pa_alta",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17668,
+                    "url": "",
+                    "nome": "S1 (PA acentuadamente alta)",
+                    "descricao": "PA acentuadamente alta",
+                    "passo_de_saida_id": 17555,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Anamnese + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17557,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17669,
+                    "url": "",
+                    "nome": "S2 (PA normal)",
+                    "descricao": "PA normal",
+                    "passo_de_saida_id": 17555,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Anamnese + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17556,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Apresenta Les\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17556,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Apresenta Les\u00e3o?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9122,
+                    "url": "",
+                    "texto": "Paciente com les\u00e3o de \u00f3rg\u00e3o-alvo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17340,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "lesao_orgao_alvo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17669,
+                    "url": "",
+                    "nome": "S2 (PA normal)",
+                    "descricao": "PA normal",
+                    "passo_de_saida_id": 17555,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Anamnese + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17556,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Apresenta Les\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17673,
+                    "url": "",
+                    "nome": "S6 (com les\u00e3o em orgao ativo)",
+                    "descricao": "Com les\u00e3o aguda em \u00f3rg\u00e3o alvo",
+                    "passo_de_saida_id": 17556,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Les\u00e3o?",
+                    "passo_de_entrada_id": 17558,
+                    "passo_de_entrada": "Tratamento: Emerg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17674,
+                    "url": "",
+                    "nome": "S7 (sem les\u00e3o em orgao ativo)",
+                    "descricao": "sem les\u00e3o em orgao ativo",
+                    "passo_de_saida_id": 17556,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Les\u00e3o?",
+                    "passo_de_entrada_id": 17661,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Epis\u00f3dio",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17557,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar Hipertens\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9123,
+                    "url": "",
+                    "texto": "Emerg\u00eancia Hipertensiva: Paciente com les\u00e3o aguda de \u00f3rg\u00e3os-alvo e risco iminente de morte. Ex: encefalopatia hipertensiva, AVC, dissec\u00e7\u00e3o aorta, edema agudo de pulm\u00e3o, s\u00edndrome coronariana aguda, crise de feocromocitoma, pr\u00e9-ecl\u00e2mpsia.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17421,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "emergencia_hipertensiva",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9124,
+                    "url": "",
+                    "texto": "Urg\u00eancia Hipertensiva: Paciente com risco potencial de les\u00e3o aguda de \u00f3rg\u00e3os-alvo. Ex: com alguma les\u00e3o pr\u00e9via de \u00f3rg\u00e3o-alvo (IAM, AVC ou ICC) apresentando, portanto, maior risco de novas complica\u00e7\u00f5es em curto prazo na vig\u00eancia de PA acentuadamente alta.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17422,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "urgencia_hipertensiva",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9125,
+                    "url": "",
+                    "texto": "Pseudocrise Hipertensiva: O aumento da PA \u00e9 desencadeado por dor (c\u00f3licas, cefaleias, fibromialgia), ansiedade e/ou abandono do tratamento anti-hipertensivo.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17423,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "pseudocrise_hipertensiva",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17668,
+                    "url": "",
+                    "nome": "S1 (PA acentuadamente alta)",
+                    "descricao": "PA acentuadamente alta",
+                    "passo_de_saida_id": 17555,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Anamnese + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17557,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17670,
+                    "url": "",
+                    "nome": "S3 (emergencia hipertensiva)",
+                    "descricao": "emergencia hipertensiva",
+                    "passo_de_saida_id": 17557,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "passo_de_entrada_id": 17558,
+                    "passo_de_entrada": "Tratamento: Emerg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17671,
+                    "url": "",
+                    "nome": "S4 (urgencia hipertensiva)",
+                    "descricao": "urgencia hipertensiva",
+                    "passo_de_saida_id": 17557,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "passo_de_entrada_id": 17559,
+                    "passo_de_entrada": "Tratamento: Urg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17672,
+                    "url": "",
+                    "nome": "S5 (pseudocrise hipertensiva)",
+                    "descricao": "pseudocrise hipertensiva",
+                    "passo_de_saida_id": 17557,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "passo_de_entrada_id": 17560,
+                    "passo_de_entrada": "Tratamento: Pseudocrise Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17558,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Emerg\u00eancia Hipertensiva",
+            "descricao": "<p><span style=\"font-size:14px\">Discutir caso com l&iacute;der local<br />\nEncaminhar para sala de cuidados, iniciar anti-hipertensivo parenteral, diferenciar e tratar conforme a causa da emerg&ecirc;ncia hipertensiva e internamento em UTI</span></p>\n\n<ul>\n\t<li><span style=\"font-size:14px\"><strong>Se suspeita de AVC</strong>, solicitar tomografia de cr&acirc;nio sem contraste, avalia&ccedil;&atilde;o da neurologia. Diminuir em 15% a PA nas primeiras 24h, alcan&ccedil;ando 160x100 mmHg (evitar PA inferior a este valor)</span></li>\n\t<li><span style=\"font-size:14px\"><strong>Se suspeita de pr&eacute;-ecl&acirc;mpsia</strong>, solicitar tamb&eacute;m LDH, TGO, TGP, bilirrubinas&nbsp;</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Emerg\u00eancia hipertensiva",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17670,
+                    "url": "",
+                    "nome": "S3 (emergencia hipertensiva)",
+                    "descricao": "emergencia hipertensiva",
+                    "passo_de_saida_id": 17557,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "passo_de_entrada_id": 17558,
+                    "passo_de_entrada": "Tratamento: Emerg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17673,
+                    "url": "",
+                    "nome": "S6 (com les\u00e3o em orgao ativo)",
+                    "descricao": "Com les\u00e3o aguda em \u00f3rg\u00e3o alvo",
+                    "passo_de_saida_id": 17556,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Les\u00e3o?",
+                    "passo_de_entrada_id": 17558,
+                    "passo_de_entrada": "Tratamento: Emerg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17559,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Urg\u00eancia Hipertensiva",
+            "descricao": "<p><span style=\"font-size:14px\">Avaliar solicita&ccedil;&atilde;o de exames complementares conforme a comorbidade pr&eacute;via do paciente e sintomas atuais associados.&nbsp;<br />\n<br />\nRealizar tratamento anti-hipertensivo via oral com captopril ou clonidina (se disfun&ccedil;&atilde;o renal). Reavaliar PA ap&oacute;s 1 hora, com objetivo PA &lt;= 160x100</span></p>\n\n<p><span style=\"font-size:14px\">Caso paciente apresente disfun&ccedil;&atilde;o renal, discutir caso com chefe local para prescri&ccedil;&atilde;o de Clonidina.<br />\n<br />\nSe paciente assintom&aacute;tico, est&aacute;vel, ajustar prescri&ccedil;&atilde;o de anti-hipertensivos de uso em domic&iacute;lio, marcar consulta ambulatorial com cardiologista e procurar a emerg&ecirc;ncia caso nova crise hipertensiva</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9070,
+                    "url": "",
+                    "medicamento": 36560,
+                    "codigo": "",
+                    "nome": "CAPOTEN 25 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17671,
+                    "url": "",
+                    "nome": "S4 (urgencia hipertensiva)",
+                    "descricao": "urgencia hipertensiva",
+                    "passo_de_saida_id": 17557,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "passo_de_entrada_id": 17559,
+                    "passo_de_entrada": "Tratamento: Urg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17679,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17559,
+                    "passo_de_saida": "Tratamento: Urg\u00eancia Hipertensiva",
+                    "passo_de_entrada_id": 17666,
+                    "passo_de_entrada": "Receita: [Receita] Urg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17560,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Pseudocrise Hipertensiva",
+            "descricao": "<p><span style=\"font-size:14px\"><strong>Tratar a causa de base do aumento da PA</strong><br />\n<br />\nRealizar nova avalia&ccedil;&atilde;o da PA ap&oacute;s 1 hora<br />\n<br />\nSe paciente assintom&aacute;tico, est&aacute;vel, marcar consulta ambulatorial com cl&iacute;nico geral para pesquisa de diagn&oacute;sticos diferenciais ou procurar cardiologista em caso de abandono do tratamento ou otimiza&ccedil;&atilde;o terap&ecirc;utica nos pacientes hipertensos pr&eacute;vios</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9071,
+                    "url": "",
+                    "medicamento": 38075,
+                    "codigo": "",
+                    "nome": "DIAZEPAN 10 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9072,
+                    "url": "",
+                    "medicamento": 38008,
+                    "codigo": "",
+                    "nome": "DIPIRONA 1 G AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9073,
+                    "url": "",
+                    "medicamento": 59609,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IV FRAP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 9074,
+                    "url": "",
+                    "medicamento": 39586,
+                    "codigo": "",
+                    "nome": "TRAMAL 100MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null
+                },
+                {
+                    "id": 9075,
+                    "url": "",
+                    "medicamento": 38121,
+                    "codigo": "",
+                    "nome": "DIAZEPAN 5 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17672,
+                    "url": "",
+                    "nome": "S5 (pseudocrise hipertensiva)",
+                    "descricao": "pseudocrise hipertensiva",
+                    "passo_de_saida_id": 17557,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Hipertens\u00e3o",
+                    "passo_de_entrada_id": 17560,
+                    "passo_de_entrada": "Tratamento: Pseudocrise Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17680,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17560,
+                    "passo_de_saida": "Tratamento: Pseudocrise Hipertensiva",
+                    "passo_de_entrada_id": 17667,
+                    "passo_de_entrada": "Receita: [Receita] Pseudocrise Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17661,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar Epis\u00f3dio",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9126,
+                    "url": "",
+                    "texto": "Epis\u00f3dio de crise hipertensiva",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17424,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "episodio_has",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Primeiro epis\u00f3dio",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Paciente j\u00e1 hipertenso previamente",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17674,
+                    "url": "",
+                    "nome": "S7 (sem les\u00e3o em orgao ativo)",
+                    "descricao": "sem les\u00e3o em orgao ativo",
+                    "passo_de_saida_id": 17556,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Les\u00e3o?",
+                    "passo_de_entrada_id": 17661,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Epis\u00f3dio",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17675,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17661,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Epis\u00f3dio",
+                    "passo_de_entrada_id": 17662,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17662,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Apresenta Sintomas Associados?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9127,
+                    "url": "",
+                    "texto": "Paciente com algum sintoma associado? Dor tor\u00e1cica? Dispneia? Cefaleia importante? Dor abdominal? Tontura?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17425,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_associados",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17675,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17661,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Epis\u00f3dio",
+                    "passo_de_entrada_id": 17662,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17676,
+                    "url": "",
+                    "nome": "S9 (apresenta sintomas associados)",
+                    "descricao": "apresenta sintomas associados",
+                    "passo_de_saida_id": 17662,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "passo_de_entrada_id": 17665,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhamentos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17677,
+                    "url": "",
+                    "nome": "S10 (primeiro episodio, sem sintomas associados)",
+                    "descricao": "primeiro episodio, sem sintomas associados",
+                    "passo_de_saida_id": 17662,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "passo_de_entrada_id": 17663,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Mudan\u00e7a de Estilo de Vida + Cardiologista",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17678,
+                    "url": "",
+                    "nome": "S11 (previamente diagnosticado, sem sintomas associados)",
+                    "descricao": "previamente diagnosticado, sem sintomas associados",
+                    "passo_de_saida_id": 17662,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "passo_de_entrada_id": 17664,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Ajuste da Terapia Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17663,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Mudan\u00e7a de Estilo de Vida + Cardiologista",
+            "descricao": "<h3><span style=\"font-size:14px\">Orienta&ccedil;&otilde;es quanto a mudan&ccedil;a de estilo de vida (perda de peso, abandono do tabagismo, alimenta&ccedil;&atilde;o hiposs&oacute;dica)<br />\n<br />\n<strong>Agendar consulta ambulatorial com cardiologista.</strong></span></h3>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17677,
+                    "url": "",
+                    "nome": "S10 (primeiro episodio, sem sintomas associados)",
+                    "descricao": "primeiro episodio, sem sintomas associados",
+                    "passo_de_saida_id": 17662,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "passo_de_entrada_id": 17663,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Mudan\u00e7a de Estilo de Vida + Cardiologista",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17664,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Ajuste da Terapia Hipertensiva",
+            "descricao": "<p>Realizar ajuste de terapia anti-hipertensiva e orienta&ccedil;&otilde;es de mudan&ccedil;a de vida<br />\n<br />\nAgendar consulta ambulatorial com cardiologista.</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17678,
+                    "url": "",
+                    "nome": "S11 (previamente diagnosticado, sem sintomas associados)",
+                    "descricao": "previamente diagnosticado, sem sintomas associados",
+                    "passo_de_saida_id": 17662,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "passo_de_entrada_id": 17664,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Ajuste da Terapia Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17665,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhamentos",
+            "descricao": "<p>Encaminhar paciente ao protocolo adequado.</p>\n\n<ul>\n\t<li>Dor tor&aacute;cica</li>\n\t<li>Dispneia</li>\n\t<li>Cefaleia importante</li>\n\t<li>Dor abdominal</li>\n\t<li>Tontura</li>\n\t<li>Outros</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17676,
+                    "url": "",
+                    "nome": "S9 (apresenta sintomas associados)",
+                    "descricao": "apresenta sintomas associados",
+                    "passo_de_saida_id": 17662,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Apresenta Sintomas Associados?",
+                    "passo_de_entrada_id": 17665,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhamentos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17666,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Receita] Urg\u00eancia Hipertensiva",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4616,
+                    "url": "",
+                    "nome": "Captopril 25mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 4617,
+                    "url": "",
+                    "nome": "Losartan 50mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17679,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17559,
+                    "passo_de_saida": "Tratamento: Urg\u00eancia Hipertensiva",
+                    "passo_de_entrada_id": 17666,
+                    "passo_de_entrada": "Receita: [Receita] Urg\u00eancia Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17667,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Receita] Pseudocrise Hipertensiva",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4618,
+                    "url": "",
+                    "nome": "Cetoprofeno 100mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 4619,
+                    "url": "",
+                    "nome": "Paracetamol 750mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Enquanto durarem os sintomas",
+                    "ordem": 2
+                },
+                {
+                    "id": 4620,
+                    "url": "",
+                    "nome": "Valeriane 50mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17680,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17560,
+                    "passo_de_saida": "Tratamento: Pseudocrise Hipertensiva",
+                    "passo_de_entrada_id": 17667,
+                    "passo_de_entrada": "Receita: [Receita] Pseudocrise Hipertensiva",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17668,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (PA acentuadamente alta)",
+            "descricao": "PA acentuadamente alta",
+            "passo_de_saida_id": 17555,
+            "passo_de_saida": {
+                "id": 17555,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Anamnese + Exame F\u00edsico",
+                "descricao": "Anamnese completa e exame f\u00edsico.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17557,
+            "passo_de_entrada": {
+                "id": 17557,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Hipertens\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17431,
+                "nome": "PA acentuadamente alta",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17339
+                ],
+                "argumentos": [
+                    "pa_alta"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17669,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (PA normal)",
+            "descricao": "PA normal",
+            "passo_de_saida_id": 17555,
+            "passo_de_saida": {
+                "id": 17555,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Anamnese + Exame F\u00edsico",
+                "descricao": "Anamnese completa e exame f\u00edsico.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17556,
+            "passo_de_entrada": {
+                "id": 17556,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Apresenta Les\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17432,
+                "nome": "PA normal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17339
+                ],
+                "argumentos": [
+                    "pa_alta"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17670,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (emergencia hipertensiva)",
+            "descricao": "emergencia hipertensiva",
+            "passo_de_saida_id": 17557,
+            "passo_de_saida": {
+                "id": 17557,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Hipertens\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17558,
+            "passo_de_entrada": {
+                "id": 17558,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Emerg\u00eancia Hipertensiva",
+                "descricao": "<p><span style=\"font-size:14px\">Discutir caso com l&iacute;der local<br />\nEncaminhar para sala de cuidados, iniciar anti-hipertensivo parenteral, diferenciar e tratar conforme a causa da emerg&ecirc;ncia hipertensiva e internamento em UTI</span></p>\n\n<ul>\n\t<li><span style=\"font-size:14px\"><strong>Se suspeita de AVC</strong>, solicitar tomografia de cr&acirc;nio sem contraste, avalia&ccedil;&atilde;o da neurologia. Diminuir em 15% a PA nas primeiras 24h, alcan&ccedil;ando 160x100 mmHg (evitar PA inferior a este valor)</span></li>\n\t<li><span style=\"font-size:14px\"><strong>Se suspeita de pr&eacute;-ecl&acirc;mpsia</strong>, solicitar tamb&eacute;m LDH, TGO, TGP, bilirrubinas&nbsp;</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17433,
+                "nome": "emergencia hipertensiva",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17421
+                ],
+                "argumentos": [
+                    "emergencia_hipertensiva"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17671,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (urgencia hipertensiva)",
+            "descricao": "urgencia hipertensiva",
+            "passo_de_saida_id": 17557,
+            "passo_de_saida": {
+                "id": 17557,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Hipertens\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17559,
+            "passo_de_entrada": {
+                "id": 17559,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Urg\u00eancia Hipertensiva",
+                "descricao": "<p><span style=\"font-size:14px\">Avaliar solicita&ccedil;&atilde;o de exames complementares conforme a comorbidade pr&eacute;via do paciente e sintomas atuais associados.&nbsp;<br />\n<br />\nRealizar tratamento anti-hipertensivo via oral com captopril ou clonidina (se disfun&ccedil;&atilde;o renal). Reavaliar PA ap&oacute;s 1 hora, com objetivo PA &lt;= 160x100</span></p>\n\n<p><span style=\"font-size:14px\">Caso paciente apresente disfun&ccedil;&atilde;o renal, discutir caso com chefe local para prescri&ccedil;&atilde;o de Clonidina.<br />\n<br />\nSe paciente assintom&aacute;tico, est&aacute;vel, ajustar prescri&ccedil;&atilde;o de anti-hipertensivos de uso em domic&iacute;lio, marcar consulta ambulatorial com cardiologista e procurar a emerg&ecirc;ncia caso nova crise hipertensiva</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17434,
+                "nome": "urgencia hipertensiva",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17422
+                ],
+                "argumentos": [
+                    "urgencia_hipertensiva"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17672,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (pseudocrise hipertensiva)",
+            "descricao": "pseudocrise hipertensiva",
+            "passo_de_saida_id": 17557,
+            "passo_de_saida": {
+                "id": 17557,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Hipertens\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17560,
+            "passo_de_entrada": {
+                "id": 17560,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Pseudocrise Hipertensiva",
+                "descricao": "<p><span style=\"font-size:14px\"><strong>Tratar a causa de base do aumento da PA</strong><br />\n<br />\nRealizar nova avalia&ccedil;&atilde;o da PA ap&oacute;s 1 hora<br />\n<br />\nSe paciente assintom&aacute;tico, est&aacute;vel, marcar consulta ambulatorial com cl&iacute;nico geral para pesquisa de diagn&oacute;sticos diferenciais ou procurar cardiologista em caso de abandono do tratamento ou otimiza&ccedil;&atilde;o terap&ecirc;utica nos pacientes hipertensos pr&eacute;vios</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17435,
+                "nome": "pseudocrise hipertensiva",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17423
+                ],
+                "argumentos": [
+                    "pseudocrise_hipertensiva"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17673,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (com les\u00e3o em orgao ativo)",
+            "descricao": "Com les\u00e3o aguda em \u00f3rg\u00e3o alvo",
+            "passo_de_saida_id": 17556,
+            "passo_de_saida": {
+                "id": 17556,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Apresenta Les\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17558,
+            "passo_de_entrada": {
+                "id": 17558,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Emerg\u00eancia Hipertensiva",
+                "descricao": "<p><span style=\"font-size:14px\">Discutir caso com l&iacute;der local<br />\nEncaminhar para sala de cuidados, iniciar anti-hipertensivo parenteral, diferenciar e tratar conforme a causa da emerg&ecirc;ncia hipertensiva e internamento em UTI</span></p>\n\n<ul>\n\t<li><span style=\"font-size:14px\"><strong>Se suspeita de AVC</strong>, solicitar tomografia de cr&acirc;nio sem contraste, avalia&ccedil;&atilde;o da neurologia. Diminuir em 15% a PA nas primeiras 24h, alcan&ccedil;ando 160x100 mmHg (evitar PA inferior a este valor)</span></li>\n\t<li><span style=\"font-size:14px\"><strong>Se suspeita de pr&eacute;-ecl&acirc;mpsia</strong>, solicitar tamb&eacute;m LDH, TGO, TGP, bilirrubinas&nbsp;</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17436,
+                "nome": "com les\u00e3o em orgao ativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17340
+                ],
+                "argumentos": [
+                    "lesao_orgao_alvo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17674,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (sem les\u00e3o em orgao ativo)",
+            "descricao": "sem les\u00e3o em orgao ativo",
+            "passo_de_saida_id": 17556,
+            "passo_de_saida": {
+                "id": 17556,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Apresenta Les\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17661,
+            "passo_de_entrada": {
+                "id": 17661,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Epis\u00f3dio",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17437,
+                "nome": "sem les\u00e3o em orgao ativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17340
+                ],
+                "argumentos": [
+                    "lesao_orgao_alvo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17675,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17661,
+            "passo_de_saida": {
+                "id": 17661,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Epis\u00f3dio",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17662,
+            "passo_de_entrada": {
+                "id": 17662,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Apresenta Sintomas Associados?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17676,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (apresenta sintomas associados)",
+            "descricao": "apresenta sintomas associados",
+            "passo_de_saida_id": 17662,
+            "passo_de_saida": {
+                "id": 17662,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Apresenta Sintomas Associados?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17665,
+            "passo_de_entrada": {
+                "id": 17665,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhamentos",
+                "descricao": "<p>Encaminhar paciente ao protocolo adequado.</p>\n\n<ul>\n\t<li>Dor tor&aacute;cica</li>\n\t<li>Dispneia</li>\n\t<li>Cefaleia importante</li>\n\t<li>Dor abdominal</li>\n\t<li>Tontura</li>\n\t<li>Outros</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17438,
+                "nome": "apresenta sintomas associados",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17425
+                ],
+                "argumentos": [
+                    "sintomas_associados"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17677,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (primeiro episodio, sem sintomas associados)",
+            "descricao": "primeiro episodio, sem sintomas associados",
+            "passo_de_saida_id": 17662,
+            "passo_de_saida": {
+                "id": 17662,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Apresenta Sintomas Associados?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17663,
+            "passo_de_entrada": {
+                "id": 17663,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Mudan\u00e7a de Estilo de Vida + Cardiologista",
+                "descricao": "<h3><span style=\"font-size:14px\">Orienta&ccedil;&otilde;es quanto a mudan&ccedil;a de estilo de vida (perda de peso, abandono do tabagismo, alimenta&ccedil;&atilde;o hiposs&oacute;dica)<br />\n<br />\n<strong>Agendar consulta ambulatorial com cardiologista.</strong></span></h3>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17439,
+                "nome": "primeiro episodio, sem sintomas associados",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17428,
+                    17430
+                ],
+                "argumentos": [
+                    "primeiro episodio",
+                    "sem sintomas associados"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17678,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (previamente diagnosticado, sem sintomas associados)",
+            "descricao": "previamente diagnosticado, sem sintomas associados",
+            "passo_de_saida_id": 17662,
+            "passo_de_saida": {
+                "id": 17662,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Apresenta Sintomas Associados?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17664,
+            "passo_de_entrada": {
+                "id": 17664,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Ajuste da Terapia Hipertensiva",
+                "descricao": "<p>Realizar ajuste de terapia anti-hipertensiva e orienta&ccedil;&otilde;es de mudan&ccedil;a de vida<br />\n<br />\nAgendar consulta ambulatorial com cardiologista.</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17440,
+                "nome": "previamente diagnosticado, sem sintomas associados",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17429,
+                    17430
+                ],
+                "argumentos": [
+                    "previamente diagnosticado",
+                    "sem sintomas associados"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17679,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "-",
+            "passo_de_saida_id": 17559,
+            "passo_de_saida": {
+                "id": 17559,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Urg\u00eancia Hipertensiva",
+                "descricao": "<p><span style=\"font-size:14px\">Avaliar solicita&ccedil;&atilde;o de exames complementares conforme a comorbidade pr&eacute;via do paciente e sintomas atuais associados.&nbsp;<br />\n<br />\nRealizar tratamento anti-hipertensivo via oral com captopril ou clonidina (se disfun&ccedil;&atilde;o renal). Reavaliar PA ap&oacute;s 1 hora, com objetivo PA &lt;= 160x100</span></p>\n\n<p><span style=\"font-size:14px\">Caso paciente apresente disfun&ccedil;&atilde;o renal, discutir caso com chefe local para prescri&ccedil;&atilde;o de Clonidina.<br />\n<br />\nSe paciente assintom&aacute;tico, est&aacute;vel, ajustar prescri&ccedil;&atilde;o de anti-hipertensivos de uso em domic&iacute;lio, marcar consulta ambulatorial com cardiologista e procurar a emerg&ecirc;ncia caso nova crise hipertensiva</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17666,
+            "passo_de_entrada": {
+                "id": 17666,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Receita] Urg\u00eancia Hipertensiva",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17680,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "-",
+            "passo_de_saida_id": 17560,
+            "passo_de_saida": {
+                "id": 17560,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Pseudocrise Hipertensiva",
+                "descricao": "<p><span style=\"font-size:14px\"><strong>Tratar a causa de base do aumento da PA</strong><br />\n<br />\nRealizar nova avalia&ccedil;&atilde;o da PA ap&oacute;s 1 hora<br />\n<br />\nSe paciente assintom&aacute;tico, est&aacute;vel, marcar consulta ambulatorial com cl&iacute;nico geral para pesquisa de diagn&oacute;sticos diferenciais ou procurar cardiologista em caso de abandono do tratamento ou otimiza&ccedil;&atilde;o terap&ecirc;utica nos pacientes hipertensos pr&eacute;vios</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17667,
+            "passo_de_entrada": {
+                "id": 17667,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Receita] Pseudocrise Hipertensiva",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17339,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "pa_alta",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17340,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "lesao_orgao_alvo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17421,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "emergencia_hipertensiva",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17422,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "urgencia_hipertensiva",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17423,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "pseudocrise_hipertensiva",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17424,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "episodio_has",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Primeiro epis\u00f3dio",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Paciente j\u00e1 hipertenso previamente",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17425,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_associados",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17426,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17427,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17428,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "primeiro episodio",
+            "descricao": "primeiro episodio",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17424,
+                17426
+            ],
+            "argumentos": [
+                "episodio_has",
+                "1"
+            ]
+        },
+        {
+            "id": 17429,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "previamente diagnosticado",
+            "descricao": "previamente diagnosticado",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17424,
+                17427
+            ],
+            "argumentos": [
+                "episodio_has",
+                "2"
+            ]
+        },
+        {
+            "id": 17430,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem sintomas associados",
+            "descricao": "sem sintomas associados",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17425
+            ],
+            "argumentos": [
+                "sintomas_associados"
+            ]
+        }
+    ]
+}

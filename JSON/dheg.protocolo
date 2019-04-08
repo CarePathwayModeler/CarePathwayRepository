@@ -1,0 +1,2147 @@
+{
+    "id": 3108,
+    "url": "",
+    "codigo": "H031",
+    "nome": "DHEG",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Obstetr\u00edcia",
+    "repositorio_id": 341,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:34:46.184603-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:34:19.319245-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:34:48.326241-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17046,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Press\u00e3o",
+            "descricao": "Verifique a situa\u00e7\u00e3o inicial da paciente para seguir com o tratamento adequado",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8893,
+                    "url": "",
+                    "texto": "PA >= 140/90 e PA < 160/110 mmHg",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16874,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_pa_maior14_menor16",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8894,
+                    "url": "",
+                    "texto": "PA >= 160/110 mmHg",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16875,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_pa_maior16",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8895,
+                    "url": "",
+                    "texto": "Eclampsia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16876,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_eclampsia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17125,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17047,
+                    "passo_de_saida": "Tratamento: Exames Iniciais",
+                    "passo_de_entrada_id": 17046,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17059,
+                    "url": "",
+                    "nome": "S1 (pa > 16)",
+                    "descricao": "pa > 16",
+                    "passo_de_saida_id": 17046,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "passo_de_entrada_id": 17058,
+                    "passo_de_entrada": "Tratamento: [PA > 160] Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17060,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "s3",
+                    "passo_de_saida_id": 17046,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "passo_de_entrada_id": 17048,
+                    "passo_de_entrada": "Tratamento: Exames Eclampsia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17126,
+                    "url": "",
+                    "nome": "S8 (PA > 140/110 e < 160/110)",
+                    "descricao": "PA > 140/110 e < 160/110",
+                    "passo_de_saida_id": 17046,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "passo_de_entrada_id": 17055,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [PA <= 160] Sofrimento Fetal?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17047,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Exames Iniciais",
+            "descricao": "Solicite os exames para avaliar a situa\u00e7\u00e3o da paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "teste",
+                    "indicacao_clinica": "teste",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "TGO/AST (ASPARTATO AMINOTRANSFERASE)",
+                    "exame": "28011368",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "TGP/ALT (ALANINA AMINOTRANSFERASE)",
+                    "exame": "28011376",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "LDH (DESIDROGENASE LATICA)",
+                    "exame": "28010655",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "BILIRRUBINA TOTAL E FRACOES",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "US OBSTETRICA CONVENCIONAL COM DOPPLER COLORI",
+                    "exame": "33020019",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "t",
+                    "indicacao_clinica": "t",
+                    "categoria": null
+                },
+                {
+                    "url": "ACIDO URICO  (SANGUE)",
+                    "exame": "28010175",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de DHEG",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "FOSFATASE ALCALINA",
+                    "exame": "28010850",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DHEG",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17122,
+                    "url": "",
+                    "nome": "S4 (IG >= 20)",
+                    "descricao": "IG >= 20",
+                    "passo_de_saida_id": 17050,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (Inicial)",
+                    "passo_de_entrada_id": 17047,
+                    "passo_de_entrada": "Tratamento: Exames Iniciais",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17125,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17047,
+                    "passo_de_saida": "Tratamento: Exames Iniciais",
+                    "passo_de_entrada_id": 17046,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17048,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Exames Eclampsia",
+            "descricao": "<p>Se prescrever Adalat:</p>\n\n<ul>\n\t<li>Tomar 1 comprimido a cada 30 minutos se a PAS &gt; 160mmHg e/ou PAD &gt; 110. Fazer <span style=\"color:#e74c3c\"><strong><u>no m&aacute;ximo&nbsp; 3 doses.</u></strong></span></li>\n</ul>\n\n<p>Suspender Sulfato de magn&eacute;sio se:</p>\n\n<p>- <u>FR &lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&euml;ncia de reflexos patelares.</u></p>\n\n<p>Se sinais de intoxica&ccedil;&atilde;o pelo sulfato, fazer Gluconato de c&aacute;lcio a 10%, uma ampola EV embolus.</p>\n\n<p>Prescrever Hidralazina somente se:<br />\n- <u>PA &gt;= 160/110 mmHg</u></p>\n\n<p>A dose de ataque do MgSO4 (12ml) dever&aacute; ser dilu&iacute;da em 250ml de SG 5% e correr em 20 minutos.<br />\nA dose de manuten&ccedil;&atilde;o do MgSO4 (24ml) dever&aacute; ser dilu&iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.</p>\n\n<p>O2 8L/min sob cat&eacute;ter nasal.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8969,
+                    "url": "",
+                    "medicamento": 43931,
+                    "codigo": "",
+                    "nome": "SULFATO DE MAGNESIO 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "31",
+                    "unidade_display": "ML POR DIA",
+                    "via_acesso": 6,
+                    "dose_diaria": 12,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3747,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "ENDO",
+                        "codigo_principio_ativo": 1554,
+                        "codigo_diluente": 2246,
+                        "nome_diluente": "SORO GLICOSADO 5%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 10,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "%"
+                    }
+                },
+                {
+                    "id": 8970,
+                    "url": "",
+                    "medicamento": 48879,
+                    "codigo": "",
+                    "nome": "SORO GLICOSADO 50% 500ML TUBO 500 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "BL",
+                    "unidade_display": "BOLSA",
+                    "via_acesso": 6,
+                    "dose_diaria": 4,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8971,
+                    "url": "",
+                    "medicamento": 115690,
+                    "codigo": "",
+                    "nome": "HIDRALAZINA AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 3748,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "ev",
+                        "codigo_principio_ativo": 1302,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 20,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 8972,
+                    "url": "",
+                    "medicamento": 43931,
+                    "codigo": "",
+                    "nome": "SULFATO DE MAGNESIO 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 24,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "6",
+                    "frequencia_display": "6/6",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null
+                },
+                {
+                    "id": 8973,
+                    "url": "",
+                    "medicamento": 36145,
+                    "codigo": "",
+                    "nome": "ADALAT 20 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "MG",
+                    "unidade_display": "MILIGRAMA",
+                    "via_acesso": 1,
+                    "dose_diaria": 20,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "SONDAGEM VESICAL DE DEMORA",
+                    "procedimento": "76040005",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2",
+                    "procedimento": "75010026",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CURVA PRESSORICA",
+                    "procedimento": "75130077",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17060,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "s3",
+                    "passo_de_saida_id": 17046,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "passo_de_entrada_id": 17048,
+                    "passo_de_entrada": "Tratamento: Exames Eclampsia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17121,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17048,
+                    "passo_de_saida": "Tratamento: Exames Eclampsia",
+                    "passo_de_entrada_id": 17053,
+                    "passo_de_entrada": "Tratamento: [Eclampsia] Interna\u00e7\u00e3o e Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17049,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Sinais de Gravidade",
+            "descricao": "Verifique o resultado dos exames e avalie sinais de gravidade para a paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8896,
+                    "url": "",
+                    "texto": "Cefaleia persistente, turva\u00e7\u00e3o visual, nauseas, vomitos ou epigastralgia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16877,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_gravidade_criterios_cefaleia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8897,
+                    "url": "",
+                    "texto": "Plaquetas < 150.000",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16878,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_gravidade_plaquetas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8898,
+                    "url": "",
+                    "texto": "Creatinina > 1,1",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16879,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_gravidade_creatinina",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                },
+                {
+                    "id": 8899,
+                    "url": "",
+                    "texto": "TGO e TGP 2x acima do valor normal",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16880,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_gravidade_tgo_tgp",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 5
+                },
+                {
+                    "id": 8900,
+                    "url": "",
+                    "texto": "Dispneia Intensa",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16921,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "aux_gravidade_dispneia_intensa",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 6
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17130,
+                    "url": "",
+                    "nome": "S12 (sem sofrimento fetal)",
+                    "descricao": "sem sofrimento fetal",
+                    "passo_de_saida_id": 17055,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA <= 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17049,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Sinais de Gravidade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17131,
+                    "url": "",
+                    "nome": "S13 (sem sinais de gravidade)",
+                    "descricao": "sem sinais de gravidade",
+                    "passo_de_saida_id": 17049,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Gravidade",
+                    "passo_de_entrada_id": 17052,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pr\u00e9-Natal de Alto Risco",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17132,
+                    "url": "",
+                    "nome": "S14 (com sinais de gravidade)",
+                    "descricao": "com sinais de gravidade",
+                    "passo_de_saida_id": 17049,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Gravidade",
+                    "passo_de_entrada_id": 17056,
+                    "passo_de_entrada": "Tratamento: Sulfato + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17050,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Idade Gestacional (Inicial)",
+            "descricao": "Qual a idade gestacional da paciente?",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8941,
+                    "url": "",
+                    "texto": "IG >= 20 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16922,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ig_maior_igual_20_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17122,
+                    "url": "",
+                    "nome": "S4 (IG >= 20)",
+                    "descricao": "IG >= 20",
+                    "passo_de_saida_id": 17050,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (Inicial)",
+                    "passo_de_entrada_id": 17047,
+                    "passo_de_entrada": "Tratamento: Exames Iniciais",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17123,
+                    "url": "",
+                    "nome": "S5 (IG < 20)",
+                    "descricao": "IG < 20",
+                    "passo_de_saida_id": 17050,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (Inicial)",
+                    "passo_de_entrada_id": 17051,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Hipertens\u00e3o Cr\u00f4nica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17051,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Hipertens\u00e3o Cr\u00f4nica",
+            "descricao": "Tratar paciente como paciente de hipertens\u00e3o cr\u00f4nica",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17123,
+                    "url": "",
+                    "nome": "S5 (IG < 20)",
+                    "descricao": "IG < 20",
+                    "passo_de_saida_id": 17050,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (Inicial)",
+                    "passo_de_entrada_id": 17051,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Hipertens\u00e3o Cr\u00f4nica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17124,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17051,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Hipertens\u00e3o Cr\u00f4nica",
+                    "passo_de_entrada_id": 17052,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pr\u00e9-Natal de Alto Risco",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17052,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Pr\u00e9-Natal de Alto Risco",
+            "descricao": "Encaminhar paciente ao pr\u00e9-natal de alto risco.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17124,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17051,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Hipertens\u00e3o Cr\u00f4nica",
+                    "passo_de_entrada_id": 17052,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pr\u00e9-Natal de Alto Risco",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17131,
+                    "url": "",
+                    "nome": "S13 (sem sinais de gravidade)",
+                    "descricao": "sem sinais de gravidade",
+                    "passo_de_saida_id": 17049,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Gravidade",
+                    "passo_de_entrada_id": 17052,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pr\u00e9-Natal de Alto Risco",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17053,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Eclampsia] Interna\u00e7\u00e3o e Tratamento",
+            "descricao": "<p><u><strong>Solicitar interna&ccedil;&atilde;o da paciente.</strong></u></p>\n\n<p><u><strong>SE PACIENTE COM GESTA&Ccedil;&Atilde;O INFERIOR A 37 SEMANAS</strong></u>, tratar com <strong>Celestone Soluspan</strong>.</p>\n\n<p>SE AP&Oacute;S SULFATO A PACIENTE MANTIVER CRISE CONVULSIVA, PRESCREVER HIDANTAL CONFORME ESQUEMA:</p>\n\n<ul>\n\t<li><u><strong>50-70kg</strong></u>&nbsp;- 1g (04 ampolas) - 750mg (3 ampolas) em 100 ml SF 0,9%, em 30 min. 250mg em SF 0,9%, nas pr&oacute;ximas 2h.</li>\n\t<li><u><strong>&lt; 50kg</strong></u>&nbsp;- 750mg (03 ampolas) - 500mg (02 ampolas) em 100 ml de SF 0,9%, EV, em 30 min. 250mg (01 ampola) em SF 0,9%, nas pr&oacute;ximas 2h.</li>\n\t<li><u><strong>&gt; 70kg</strong></u>&nbsp;- 1,5g - 1g (04 ampolas) em 100 ml SF 0,9%, EV, em 30 min. e 500mg (02 ampolas) em SF 0,9%, nas pr&oacute;ximas 2h.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8974,
+                    "url": "",
+                    "medicamento": 37150,
+                    "codigo": "",
+                    "nome": "CELESTONE SOLUSPAN AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "45990000",
+                    "justificativa": "Paciente com Ecl\u00e2mpsia",
+                    "indicacao_clinica": "SE AP\u00d3S SULFATO A PACIENTE MANTIVER CRISE CONVULSIVA, PRESCREVER HIDANTAL CONFORME ESQUEMA:\n\n50-70kg - 1g (04 ampolas) - 750mg (3 ampolas) em 100 ml SF 0,9%, em 30 min. 250mg em SF 0,9%, nas pr\u00f3ximas 2h.\n< 50kg - 750mg (03 ampolas) - 500mg (02 ampolas) em 100 ml de SF 0,9%, EV, em 30 min. 250mg (01 ampola) em SF 0,9%, nas pr\u00f3ximas 2h.\n> 70kg - 1,5g - 1g (04 ampolas) em 100 ml SF 0,9%, EV, em 30 min. e 500mg (02 ampolas) em SF 0,9%, nas pr\u00f3ximas 2h.",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17121,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17048,
+                    "passo_de_saida": "Tratamento: Exames Eclampsia",
+                    "passo_de_entrada_id": 17053,
+                    "passo_de_entrada": "Tratamento: [Eclampsia] Interna\u00e7\u00e3o e Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17054,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[PA > 160] Sofrimento Fetal?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8942,
+                    "url": "",
+                    "texto": "H\u00e1 sinais de sofrimento fetal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16923,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sofrimento_fetal1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17133,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17058,
+                    "passo_de_saida": "Tratamento: [PA > 160] Exames",
+                    "passo_de_entrada_id": 17054,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [PA > 160] Sofrimento Fetal?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17127,
+                    "url": "",
+                    "nome": "S9 (ha sofrimento fetal)",
+                    "descricao": "ha sofrimento fetal",
+                    "passo_de_saida_id": 17054,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA > 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17057,
+                    "passo_de_entrada": "Tratamento: [Sofrimento Fetal] Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17129,
+                    "url": "",
+                    "nome": "S11 (sem sofrimento fetal)",
+                    "descricao": "sem sofrimento fetal",
+                    "passo_de_saida_id": 17054,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA > 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17056,
+                    "passo_de_entrada": "Tratamento: Sulfato + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17055,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[PA <= 160] Sofrimento Fetal?",
+            "descricao": "Sofrimento Fetal?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8943,
+                    "url": "",
+                    "texto": "H\u00e1 sinais de sofrimento fetal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16924,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sofrimento_fetal2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17126,
+                    "url": "",
+                    "nome": "S8 (PA > 140/110 e < 160/110)",
+                    "descricao": "PA > 140/110 e < 160/110",
+                    "passo_de_saida_id": 17046,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "passo_de_entrada_id": 17055,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [PA <= 160] Sofrimento Fetal?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17128,
+                    "url": "",
+                    "nome": "S10 (ha sofrimento fetal)",
+                    "descricao": "ha sofrimento fetal",
+                    "passo_de_saida_id": 17055,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA <= 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17057,
+                    "passo_de_entrada": "Tratamento: [Sofrimento Fetal] Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17130,
+                    "url": "",
+                    "nome": "S12 (sem sofrimento fetal)",
+                    "descricao": "sem sofrimento fetal",
+                    "passo_de_saida_id": 17055,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA <= 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17049,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Sinais de Gravidade",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17056,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Sulfato + Interna\u00e7\u00e3o",
+            "descricao": "Internar paciente para tratamento",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8975,
+                    "url": "",
+                    "medicamento": 43931,
+                    "codigo": "",
+                    "nome": "SULFATO DE MAGNESIO 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 12,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "45990000",
+                    "justificativa": "Paciente com PA > 160/110 e sob suspeita de DHEG",
+                    "indicacao_clinica": "n/a",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17129,
+                    "url": "",
+                    "nome": "S11 (sem sofrimento fetal)",
+                    "descricao": "sem sofrimento fetal",
+                    "passo_de_saida_id": 17054,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA > 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17056,
+                    "passo_de_entrada": "Tratamento: Sulfato + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17132,
+                    "url": "",
+                    "nome": "S14 (com sinais de gravidade)",
+                    "descricao": "com sinais de gravidade",
+                    "passo_de_saida_id": 17049,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Gravidade",
+                    "passo_de_entrada_id": 17056,
+                    "passo_de_entrada": "Tratamento: Sulfato + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17057,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Sofrimento Fetal] Interna\u00e7\u00e3o",
+            "descricao": "Internar paciente por exibi\u00e7\u00e3o de sinais de sofrimento fetal.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "45990000",
+                    "justificativa": "Paciente exibe sinais de sofrimento fetal. Interna\u00e7\u00e3o para resolu\u00e7\u00e3o emergencial da gesta\u00e7\u00e3o.",
+                    "indicacao_clinica": "n/a",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17127,
+                    "url": "",
+                    "nome": "S9 (ha sofrimento fetal)",
+                    "descricao": "ha sofrimento fetal",
+                    "passo_de_saida_id": 17054,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA > 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17057,
+                    "passo_de_entrada": "Tratamento: [Sofrimento Fetal] Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17128,
+                    "url": "",
+                    "nome": "S10 (ha sofrimento fetal)",
+                    "descricao": "ha sofrimento fetal",
+                    "passo_de_saida_id": 17055,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [PA <= 160] Sofrimento Fetal?",
+                    "passo_de_entrada_id": 17057,
+                    "passo_de_entrada": "Tratamento: [Sofrimento Fetal] Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17058,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[PA > 160] Exames",
+            "descricao": "<p>Se prescrever Adalat:</p>\n\n<ul>\n\t<li>Tomar 1 comprimido a cada 30 minutos se a PAS &gt; 160mmHg e/ou PAD &gt; 110. Fazer <span style=\"color:#e74c3c\"><strong><u>no m&aacute;ximo&nbsp; 3 doses.</u></strong></span></li>\n</ul>\n\n<p>Suspender Sulfato de magn&eacute;sio se:</p>\n\n<p>- <u>FR &lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&euml;ncia de reflexos patelares.</u></p>\n\n<p>Se sinais de intoxica&ccedil;&atilde;o pelo sulfato, fazer Gluconato de c&aacute;lcio a 10%, uma ampola EV embolus.</p>\n\n<p>Prescrever Hidralazina somente se:<br />\n- <u>PA &gt;= 160/110 mmHg</u></p>\n\n<p>A dose de ataque do MgSO4 (12ml) dever&aacute; ser dilu&iacute;da em 250ml de SG 5% e correr em 20 minutos.<br />\nA dose de manuten&ccedil;&atilde;o do MgSO4 (24ml) dever&aacute; ser dilu&iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.</p>\n\n<p>O2 8L/min sob cat&eacute;ter nasal.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8976,
+                    "url": "",
+                    "medicamento": 43931,
+                    "codigo": "",
+                    "nome": "SULFATO DE MAGNESIO 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "31",
+                    "unidade_display": "ML POR DIA",
+                    "via_acesso": 6,
+                    "dose_diaria": 12,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3749,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "ENDO",
+                        "codigo_principio_ativo": 1554,
+                        "codigo_diluente": 2246,
+                        "nome_diluente": "SORO GLICOSADO 5%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 10,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "%"
+                    }
+                },
+                {
+                    "id": 8977,
+                    "url": "",
+                    "medicamento": 48879,
+                    "codigo": "",
+                    "nome": "SORO GLICOSADO 50% 500ML TUBO 500 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "BL",
+                    "unidade_display": "BOLSA",
+                    "via_acesso": 6,
+                    "dose_diaria": 4,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8978,
+                    "url": "",
+                    "medicamento": 115690,
+                    "codigo": "",
+                    "nome": "HIDRALAZINA AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 3750,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "ev",
+                        "codigo_principio_ativo": 1302,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 20,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 8979,
+                    "url": "",
+                    "medicamento": 43931,
+                    "codigo": "",
+                    "nome": "SULFATO DE MAGNESIO 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 24,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "6",
+                    "frequencia_display": "6/6",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null
+                },
+                {
+                    "id": 8980,
+                    "url": "",
+                    "medicamento": 36145,
+                    "codigo": "",
+                    "nome": "ADALAT 20 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "MG",
+                    "unidade_display": "MILIGRAMA",
+                    "via_acesso": 1,
+                    "dose_diaria": 20,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "SONDAGEM VESICAL DE DEMORA",
+                    "procedimento": "76040005",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2",
+                    "procedimento": "75010026",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CURVA PRESSORICA",
+                    "procedimento": "75130077",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17059,
+                    "url": "",
+                    "nome": "S1 (pa > 16)",
+                    "descricao": "pa > 16",
+                    "passo_de_saida_id": 17046,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Press\u00e3o",
+                    "passo_de_entrada_id": 17058,
+                    "passo_de_entrada": "Tratamento: [PA > 160] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17133,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17058,
+                    "passo_de_saida": "Tratamento: [PA > 160] Exames",
+                    "passo_de_entrada_id": 17054,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [PA > 160] Sofrimento Fetal?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17059,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (pa > 16)",
+            "descricao": "pa > 16",
+            "passo_de_saida_id": 17046,
+            "passo_de_saida": {
+                "id": 17046,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Press\u00e3o",
+                "descricao": "Verifique a situa\u00e7\u00e3o inicial da paciente para seguir com o tratamento adequado",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17058,
+            "passo_de_entrada": {
+                "id": 17058,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[PA > 160] Exames",
+                "descricao": "<p>Se prescrever Adalat:</p>\n\n<ul>\n\t<li>Tomar 1 comprimido a cada 30 minutos se a PAS &gt; 160mmHg e/ou PAD &gt; 110. Fazer <span style=\"color:#e74c3c\"><strong><u>no m&aacute;ximo&nbsp; 3 doses.</u></strong></span></li>\n</ul>\n\n<p>Suspender Sulfato de magn&eacute;sio se:</p>\n\n<p>- <u>FR &lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&euml;ncia de reflexos patelares.</u></p>\n\n<p>Se sinais de intoxica&ccedil;&atilde;o pelo sulfato, fazer Gluconato de c&aacute;lcio a 10%, uma ampola EV embolus.</p>\n\n<p>Prescrever Hidralazina somente se:<br />\n- <u>PA &gt;= 160/110 mmHg</u></p>\n\n<p>A dose de ataque do MgSO4 (12ml) dever&aacute; ser dilu&iacute;da em 250ml de SG 5% e correr em 20 minutos.<br />\nA dose de manuten&ccedil;&atilde;o do MgSO4 (24ml) dever&aacute; ser dilu&iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.</p>\n\n<p>O2 8L/min sob cat&eacute;ter nasal.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16927,
+                "nome": "pa > 16",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16875
+                ],
+                "argumentos": [
+                    "aux_pa_maior16"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17060,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "s3",
+            "passo_de_saida_id": 17046,
+            "passo_de_saida": {
+                "id": 17046,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Press\u00e3o",
+                "descricao": "Verifique a situa\u00e7\u00e3o inicial da paciente para seguir com o tratamento adequado",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17048,
+            "passo_de_entrada": {
+                "id": 17048,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exames Eclampsia",
+                "descricao": "<p>Se prescrever Adalat:</p>\n\n<ul>\n\t<li>Tomar 1 comprimido a cada 30 minutos se a PAS &gt; 160mmHg e/ou PAD &gt; 110. Fazer <span style=\"color:#e74c3c\"><strong><u>no m&aacute;ximo&nbsp; 3 doses.</u></strong></span></li>\n</ul>\n\n<p>Suspender Sulfato de magn&eacute;sio se:</p>\n\n<p>- <u>FR &lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&euml;ncia de reflexos patelares.</u></p>\n\n<p>Se sinais de intoxica&ccedil;&atilde;o pelo sulfato, fazer Gluconato de c&aacute;lcio a 10%, uma ampola EV embolus.</p>\n\n<p>Prescrever Hidralazina somente se:<br />\n- <u>PA &gt;= 160/110 mmHg</u></p>\n\n<p>A dose de ataque do MgSO4 (12ml) dever&aacute; ser dilu&iacute;da em 250ml de SG 5% e correr em 20 minutos.<br />\nA dose de manuten&ccedil;&atilde;o do MgSO4 (24ml) dever&aacute; ser dilu&iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.</p>\n\n<p>O2 8L/min sob cat&eacute;ter nasal.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16928,
+                "nome": "eclampsia",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16876
+                ],
+                "argumentos": [
+                    "aux_eclampsia"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17121,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17048,
+            "passo_de_saida": {
+                "id": 17048,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exames Eclampsia",
+                "descricao": "<p>Se prescrever Adalat:</p>\n\n<ul>\n\t<li>Tomar 1 comprimido a cada 30 minutos se a PAS &gt; 160mmHg e/ou PAD &gt; 110. Fazer <span style=\"color:#e74c3c\"><strong><u>no m&aacute;ximo&nbsp; 3 doses.</u></strong></span></li>\n</ul>\n\n<p>Suspender Sulfato de magn&eacute;sio se:</p>\n\n<p>- <u>FR &lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&euml;ncia de reflexos patelares.</u></p>\n\n<p>Se sinais de intoxica&ccedil;&atilde;o pelo sulfato, fazer Gluconato de c&aacute;lcio a 10%, uma ampola EV embolus.</p>\n\n<p>Prescrever Hidralazina somente se:<br />\n- <u>PA &gt;= 160/110 mmHg</u></p>\n\n<p>A dose de ataque do MgSO4 (12ml) dever&aacute; ser dilu&iacute;da em 250ml de SG 5% e correr em 20 minutos.<br />\nA dose de manuten&ccedil;&atilde;o do MgSO4 (24ml) dever&aacute; ser dilu&iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.</p>\n\n<p>O2 8L/min sob cat&eacute;ter nasal.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17053,
+            "passo_de_entrada": {
+                "id": 17053,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Eclampsia] Interna\u00e7\u00e3o e Tratamento",
+                "descricao": "<p><u><strong>Solicitar interna&ccedil;&atilde;o da paciente.</strong></u></p>\n\n<p><u><strong>SE PACIENTE COM GESTA&Ccedil;&Atilde;O INFERIOR A 37 SEMANAS</strong></u>, tratar com <strong>Celestone Soluspan</strong>.</p>\n\n<p>SE AP&Oacute;S SULFATO A PACIENTE MANTIVER CRISE CONVULSIVA, PRESCREVER HIDANTAL CONFORME ESQUEMA:</p>\n\n<ul>\n\t<li><u><strong>50-70kg</strong></u>&nbsp;- 1g (04 ampolas) - 750mg (3 ampolas) em 100 ml SF 0,9%, em 30 min. 250mg em SF 0,9%, nas pr&oacute;ximas 2h.</li>\n\t<li><u><strong>&lt; 50kg</strong></u>&nbsp;- 750mg (03 ampolas) - 500mg (02 ampolas) em 100 ml de SF 0,9%, EV, em 30 min. 250mg (01 ampola) em SF 0,9%, nas pr&oacute;ximas 2h.</li>\n\t<li><u><strong>&gt; 70kg</strong></u>&nbsp;- 1,5g - 1g (04 ampolas) em 100 ml SF 0,9%, EV, em 30 min. e 500mg (02 ampolas) em SF 0,9%, nas pr&oacute;ximas 2h.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17122,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (IG >= 20)",
+            "descricao": "IG >= 20",
+            "passo_de_saida_id": 17050,
+            "passo_de_saida": {
+                "id": 17050,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional (Inicial)",
+                "descricao": "Qual a idade gestacional da paciente?",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17047,
+            "passo_de_entrada": {
+                "id": 17047,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exames Iniciais",
+                "descricao": "Solicite os exames para avaliar a situa\u00e7\u00e3o da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16929,
+                "nome": "IG >= 20",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16922
+                ],
+                "argumentos": [
+                    "ig_maior_igual_20_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17123,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (IG < 20)",
+            "descricao": "IG < 20",
+            "passo_de_saida_id": 17050,
+            "passo_de_saida": {
+                "id": 17050,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional (Inicial)",
+                "descricao": "Qual a idade gestacional da paciente?",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17051,
+            "passo_de_entrada": {
+                "id": 17051,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Hipertens\u00e3o Cr\u00f4nica",
+                "descricao": "Tratar paciente como paciente de hipertens\u00e3o cr\u00f4nica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16930,
+                "nome": "IG < 20",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16922
+                ],
+                "argumentos": [
+                    "ig_maior_igual_20_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17124,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17051,
+            "passo_de_saida": {
+                "id": 17051,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Hipertens\u00e3o Cr\u00f4nica",
+                "descricao": "Tratar paciente como paciente de hipertens\u00e3o cr\u00f4nica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17052,
+            "passo_de_entrada": {
+                "id": 17052,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Pr\u00e9-Natal de Alto Risco",
+                "descricao": "Encaminhar paciente ao pr\u00e9-natal de alto risco.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17125,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17047,
+            "passo_de_saida": {
+                "id": 17047,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exames Iniciais",
+                "descricao": "Solicite os exames para avaliar a situa\u00e7\u00e3o da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17046,
+            "passo_de_entrada": {
+                "id": 17046,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Press\u00e3o",
+                "descricao": "Verifique a situa\u00e7\u00e3o inicial da paciente para seguir com o tratamento adequado",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17126,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (PA > 140/110 e < 160/110)",
+            "descricao": "PA > 140/110 e < 160/110",
+            "passo_de_saida_id": 17046,
+            "passo_de_saida": {
+                "id": 17046,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Press\u00e3o",
+                "descricao": "Verifique a situa\u00e7\u00e3o inicial da paciente para seguir com o tratamento adequado",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17055,
+            "passo_de_entrada": {
+                "id": 17055,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[PA <= 160] Sofrimento Fetal?",
+                "descricao": "Sofrimento Fetal?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16931,
+                "nome": "PA > 140/110 e < 160/110",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16874
+                ],
+                "argumentos": [
+                    "aux_pa_maior14_menor16"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17127,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (ha sofrimento fetal)",
+            "descricao": "ha sofrimento fetal",
+            "passo_de_saida_id": 17054,
+            "passo_de_saida": {
+                "id": 17054,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[PA > 160] Sofrimento Fetal?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17057,
+            "passo_de_entrada": {
+                "id": 17057,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sofrimento Fetal] Interna\u00e7\u00e3o",
+                "descricao": "Internar paciente por exibi\u00e7\u00e3o de sinais de sofrimento fetal.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16932,
+                "nome": "ha sofrimento fetal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16923
+                ],
+                "argumentos": [
+                    "sofrimento_fetal1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17128,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (ha sofrimento fetal)",
+            "descricao": "ha sofrimento fetal",
+            "passo_de_saida_id": 17055,
+            "passo_de_saida": {
+                "id": 17055,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[PA <= 160] Sofrimento Fetal?",
+                "descricao": "Sofrimento Fetal?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17057,
+            "passo_de_entrada": {
+                "id": 17057,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sofrimento Fetal] Interna\u00e7\u00e3o",
+                "descricao": "Internar paciente por exibi\u00e7\u00e3o de sinais de sofrimento fetal.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16933,
+                "nome": "ha sofrimento fetal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16924
+                ],
+                "argumentos": [
+                    "sofrimento_fetal2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17129,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (sem sofrimento fetal)",
+            "descricao": "sem sofrimento fetal",
+            "passo_de_saida_id": 17054,
+            "passo_de_saida": {
+                "id": 17054,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[PA > 160] Sofrimento Fetal?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17056,
+            "passo_de_entrada": {
+                "id": 17056,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Sulfato + Interna\u00e7\u00e3o",
+                "descricao": "Internar paciente para tratamento",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16934,
+                "nome": "sem sofrimento fetal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16923
+                ],
+                "argumentos": [
+                    "sofrimento_fetal1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17130,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (sem sofrimento fetal)",
+            "descricao": "sem sofrimento fetal",
+            "passo_de_saida_id": 17055,
+            "passo_de_saida": {
+                "id": 17055,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[PA <= 160] Sofrimento Fetal?",
+                "descricao": "Sofrimento Fetal?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17049,
+            "passo_de_entrada": {
+                "id": 17049,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais de Gravidade",
+                "descricao": "Verifique o resultado dos exames e avalie sinais de gravidade para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16935,
+                "nome": "sem sofrimento fetal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16924
+                ],
+                "argumentos": [
+                    "sofrimento_fetal2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17131,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (sem sinais de gravidade)",
+            "descricao": "sem sinais de gravidade",
+            "passo_de_saida_id": 17049,
+            "passo_de_saida": {
+                "id": 17049,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais de Gravidade",
+                "descricao": "Verifique o resultado dos exames e avalie sinais de gravidade para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17052,
+            "passo_de_entrada": {
+                "id": 17052,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Pr\u00e9-Natal de Alto Risco",
+                "descricao": "Encaminhar paciente ao pr\u00e9-natal de alto risco.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16936,
+                "nome": "sinais gravidade < 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    16926,
+                    16925
+                ],
+                "argumentos": [
+                    "Sinais de Gravidade",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17132,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (com sinais de gravidade)",
+            "descricao": "com sinais de gravidade",
+            "passo_de_saida_id": 17049,
+            "passo_de_saida": {
+                "id": 17049,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais de Gravidade",
+                "descricao": "Verifique o resultado dos exames e avalie sinais de gravidade para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17056,
+            "passo_de_entrada": {
+                "id": 17056,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Sulfato + Interna\u00e7\u00e3o",
+                "descricao": "Internar paciente para tratamento",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16937,
+                "nome": "sinais gravidade >= 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    16926,
+                    16925
+                ],
+                "argumentos": [
+                    "Sinais de Gravidade",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17133,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17058,
+            "passo_de_saida": {
+                "id": 17058,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[PA > 160] Exames",
+                "descricao": "<p>Se prescrever Adalat:</p>\n\n<ul>\n\t<li>Tomar 1 comprimido a cada 30 minutos se a PAS &gt; 160mmHg e/ou PAD &gt; 110. Fazer <span style=\"color:#e74c3c\"><strong><u>no m&aacute;ximo&nbsp; 3 doses.</u></strong></span></li>\n</ul>\n\n<p>Suspender Sulfato de magn&eacute;sio se:</p>\n\n<p>- <u>FR &lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&euml;ncia de reflexos patelares.</u></p>\n\n<p>Se sinais de intoxica&ccedil;&atilde;o pelo sulfato, fazer Gluconato de c&aacute;lcio a 10%, uma ampola EV embolus.</p>\n\n<p>Prescrever Hidralazina somente se:<br />\n- <u>PA &gt;= 160/110 mmHg</u></p>\n\n<p>A dose de ataque do MgSO4 (12ml) dever&aacute; ser dilu&iacute;da em 250ml de SG 5% e correr em 20 minutos.<br />\nA dose de manuten&ccedil;&atilde;o do MgSO4 (24ml) dever&aacute; ser dilu&iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.</p>\n\n<p>O2 8L/min sob cat&eacute;ter nasal.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17054,
+            "passo_de_entrada": {
+                "id": 17054,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[PA > 160] Sofrimento Fetal?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16874,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_pa_maior14_menor16",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16875,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_pa_maior16",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16876,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_eclampsia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16877,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_gravidade_criterios_cefaleia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16878,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_gravidade_plaquetas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16879,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_gravidade_creatinina",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16880,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_gravidade_tgo_tgp",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16921,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "aux_gravidade_dispneia_intensa",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16922,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ig_maior_igual_20_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16923,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sofrimento_fetal1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16924,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sofrimento_fetal2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16925,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16926,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sinais de Gravidade",
+            "descricao": "Sinais de Gravidade",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                16877,
+                16878,
+                16879,
+                16880,
+                16921
+            ],
+            "argumentos": [
+                "aux_gravidade_criterios_cefaleia",
+                "aux_gravidade_plaquetas",
+                "aux_gravidade_creatinina",
+                "aux_gravidade_tgo_tgp",
+                "aux_gravidade_dispneia_intensa"
+            ]
+        }
+    ]
+}

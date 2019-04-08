@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="912" url="" name="[Viver Bem] Protocolo Farmacol&#xf3;gico Afroamericano" code="VB_PROT_FARM_AFRO">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4420" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar PS e PD (1)" description="Avaliar taxas de PS e PD" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="PS 130 -159 e PD 80 - 99?" url="" id="1913">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ps_130_159_pb_80_99" id="3222" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4461" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar PS e PD (2)" description="Avaliar taxas de PS e PD" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="PS 160-179 e PD 100 -109?" url="" id="1914">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ps_160_170_pd_100_109" id="3223" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4462" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Monoterapia Linha Afro" description="Monoterapia Linha Afro" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>VB_MONO_AFRO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4463" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Duploterapia Linha Afro" description="Duploterapia Linha Afro" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>VB_DUPLO_AFRO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="4464" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Triploterapia Linha Afro" description="Triploterapia Linha Afro" isTerminal="true" inputSequences="//@sequence.3">
+    <pathways>VB_TRIPLO_AFRO</pathways>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="4465" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (ps(1) sim)" description="">
+    <operation name="ps(1) sim" Operator="affirmation" id="3224">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_130_159_pb_80_99" id="3222" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4466" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (ps(1) nao)" description="">
+    <operation name="ps(1) nao" id="3225">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_130_159_pb_80_99" id="3222" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="4467" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (ps(2) sim)" description="">
+    <operation name="ps(2) sim" Operator="affirmation" id="3226">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_160_170_pd_100_109" id="3223" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="4468" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (ps(2) nao)" description="">
+    <operation name="ps(2) nao" id="3227">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ps_160_170_pd_100_109" id="3223" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ps_130_159_pb_80_99" id="3222" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ps_160_170_pd_100_109" id="3223" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

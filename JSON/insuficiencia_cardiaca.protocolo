@@ -1,0 +1,1555 @@
+{
+    "id": 3247,
+    "url": "",
+    "codigo": "H045",
+    "nome": "Insufici\u00eancia Card\u00edaca",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 522,
+    "versao": 5,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:23:53.826914-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:23:53.826914-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:24:50.910396-03:00"
+    },
+    "elementos": [
+        {
+            "id": 19197,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Exame F\u00edsico & Hist\u00f3rico",
+            "descricao": "<p>Realizar exame f&iacute;sico no paciente.</p>\n\n<p>Interrogar sobre medica&ccedil;&otilde;es em uso, exames pr&eacute;vios realizados, hist&oacute;ria de IC, SCA, revasculariza&ccedil;&atilde;o, HAS, DM, DRC, AVC.</p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 19206,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19197,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Exame F\u00edsico & Hist\u00f3rico",
+                    "passo_de_entrada_id": 19198,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19198,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Investigar Sintomas",
+            "descricao": "<p><span style=\"font-size:14px\"><strong><u>H&aacute; congest&atilde;o?</u></strong></span> (Paciente com crepita&ccedil;&otilde;es na ausculta, edema de membros inferiores, turg&ecirc;ncia jugular, refluxo hepato-jugular)</p>\n\n<p><span style=\"font-size:14px\"><strong><u>H&aacute; m&aacute; perfus&atilde;o?</u></strong></span> (Paciente com pele fria, &uacute;mida, tempo de enchimento capilar &gt; 3 segundos, contra&ccedil;&atilde;o da diurese)</p>\n\n<p><br />\n&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9834,
+                    "url": "",
+                    "texto": "-",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18963,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "congestao_perfusao",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Sem congest\u00e3o e bem perfundido",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Com congest\u00e3o e bem perfundido",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Com congest\u00e3o e mal perfundido",
+                                "peso": 3.0
+                            },
+                            {
+                                "texto": "Sem congest\u00e3o e mal perfundido",
+                                "peso": 4.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19206,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19197,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Exame F\u00edsico & Hist\u00f3rico",
+                    "passo_de_entrada_id": 19198,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19207,
+                    "url": "",
+                    "nome": "S2 (Perfil A)",
+                    "descricao": "Perfil A",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19199,
+                    "passo_de_entrada": "Tratamento: Perfil A: Quente e Seco",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19209,
+                    "url": "",
+                    "nome": "S4 (Perfil B)",
+                    "descricao": "Perfil B",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19201,
+                    "passo_de_entrada": "Tratamento: Perfil B: Quente e \u00damido",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19210,
+                    "url": "",
+                    "nome": "S5 (Perfil C)",
+                    "descricao": "Perfil C",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19202,
+                    "passo_de_entrada": "Tratamento: Perfil C: Frio e \u00damido",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19211,
+                    "url": "",
+                    "nome": "S6 (Perfil D)",
+                    "descricao": "Perfil D",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19203,
+                    "passo_de_entrada": "Tratamento: Perfil D: Frio e Seco",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19199,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Perfil A: Quente e Seco",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Encaminhar paciente para chefia local</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p>Investigar fator desencadeador da descompensa&ccedil;&atilde;o card&iacute;aca.</p>\n\n<ul>\n\t<li>Infec&ccedil;&atilde;o?</li>\n\t<li>SCA?</li>\n\t<li>Abandono do tratamento para IC?</li>\n\t<li>Anemia?</li>\n\t<li>DM n&atilde;o controlada?</li>\n\t<li>Disfun&ccedil;&atilde;o tireoidiana?</li>\n\t<li>Arritmias?</li>\n\t<li>TEP?</li>\n\t<li>Abuso de drogas?</li>\n\t<li>Gravidez?</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "N/A",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "LACTATO",
+                    "exame": "28090209",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19207,
+                    "url": "",
+                    "nome": "S2 (Perfil A)",
+                    "descricao": "Perfil A",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19199,
+                    "passo_de_entrada": "Tratamento: Perfil A: Quente e Seco",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19208,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19199,
+                    "passo_de_saida": "Tratamento: Perfil A: Quente e Seco",
+                    "passo_de_entrada_id": 19204,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Perfil A] Avaliar exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19200,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Orienta\u00e7\u00f5es",
+            "descricao": "<p><span style=\"font-size:16px\">Se paciente est&aacute;vel e sem sinais de gravidade: otimizar medica&ccedil;&otilde;es da IC, tratar fator desencadeante e agendar consulta com cardiologista.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19213,
+                    "url": "",
+                    "nome": "S7 (Descoberta causa da descompensa\u00e7\u00e3o)",
+                    "descricao": "Descoberta causa da descompensa\u00e7\u00e3o",
+                    "passo_de_saida_id": 19204,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Perfil A] Avaliar exames",
+                    "passo_de_entrada_id": 19200,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19214,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19205,
+                    "passo_de_saida": "Tratamento: [Perfil A] Exames adicionais",
+                    "passo_de_entrada_id": 19200,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19201,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Perfil B: Quente e \u00damido",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Encaminhar paciente para chefia local</strong></span></p>\n\n<p>&nbsp;</p>\n\n<p>Prescrever furosemida (1-2 ampolas), suporte de O2 se necess&aacute;rio, VNI se necess&aacute;rio, se pico hipertensivo iniciar tridil/vasodilatador oral<br />\n<br />\n<u><strong>Indica&ccedil;&atilde;o de VNI</strong></u>: Pacientes com congest&atilde;o pulmonar, SpO2 &lt; 92% ou FR &gt; 30 ipm com m&aacute;scara com reservat&oacute;rio,uso de musculatura acess&oacute;ria, n&iacute;vel de consci&ecirc;ncia preservado(GCS &gt; 13) e reflexos de prote&ccedil;&atilde;o de via a&eacute;rea presentes<br />\n<br />\n<span style=\"font-size:16px\"><strong>Reavaliar ap&oacute;s 30 - 60 minutos</strong></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "N/A",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "LACTATO",
+                    "exame": "28090209",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9821,
+                    "url": "",
+                    "medicamento": 36722,
+                    "codigo": "",
+                    "nome": "FUROSEMIDA 20 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9822,
+                    "url": "",
+                    "medicamento": 59790,
+                    "codigo": "",
+                    "nome": "TRIDIL 50MG AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19209,
+                    "url": "",
+                    "nome": "S4 (Perfil B)",
+                    "descricao": "Perfil B",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19201,
+                    "passo_de_entrada": "Tratamento: Perfil B: Quente e \u00damido",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19202,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Perfil C: Frio e \u00damido",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Encaminhar paciente para chefia local</strong></span></p>\n\n<p>&nbsp;</p>\n\n<p><u><strong>Solicitar avalia&ccedil;&atilde;o do cardiologista</strong></u><br />\n<br />\nPrescrever furosemida (1-2 ampolas), considerar noradrenalina + dobutamina, VNI, <u><strong>considerar internamento em UTI</strong></u><br />\n<br />\n<u><strong>Indica&ccedil;&atilde;o de VNI</strong></u>: Pacientes com congest&atilde;o pulmonar, SpO2 &lt; 92% ou FR &gt; 30 ipm com m&aacute;scara com reservat&oacute;rio,uso de musculatura acess&oacute;ria, n&iacute;vel de consci&ecirc;ncia preservado(GCS &gt; 13) e reflexos de prote&ccedil;&atilde;o de via a&eacute;rea presentes<br />\n<br />\n<span style=\"font-size:16px\"><strong>Reavaliar ap&oacute;s 30 - 60 minutos</strong></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATINO FOSFOQUINASE - CK MASSA",
+                    "exame": "28012119",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "N/A",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca Perfil C",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca Perfil C",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9823,
+                    "url": "",
+                    "medicamento": 36722,
+                    "codigo": "",
+                    "nome": "FUROSEMIDA 20 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9824,
+                    "url": "",
+                    "medicamento": 59790,
+                    "codigo": "",
+                    "nome": "TRIDIL 50MG AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9825,
+                    "url": "",
+                    "medicamento": 50571,
+                    "codigo": "",
+                    "nome": "NORADRENALINA (LEVOPHED) AMPL 4 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 9826,
+                    "url": "",
+                    "medicamento": 39918,
+                    "codigo": "",
+                    "nome": "DOBUTREX AMPL 20 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19210,
+                    "url": "",
+                    "nome": "S5 (Perfil C)",
+                    "descricao": "Perfil C",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19202,
+                    "passo_de_entrada": "Tratamento: Perfil C: Frio e \u00damido",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19203,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Perfil D: Frio e Seco",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Encaminhar paciente para chefia local</strong></span></p>\n\n<p><br />\nFazer expans&atilde;o vol&ecirc;mica com al&iacute;quotas de soro fisiol&oacute;gico 250ml em 30min, reavaliando a ausculta<br />\n<br />\nSe n&atilde;o melhorar, considerar iniciar inotr&oacute;pico (dobutamina) e avalia&ccedil;&atilde;o do cardiologista</p>\n\n<p>&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATINO FOSFOQUINASE - CK MASSA",
+                    "exame": "28012119",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca perfil A",
+                    "indicacao_clinica": "N/A",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9827,
+                    "url": "",
+                    "medicamento": 43796,
+                    "codigo": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 250 ML TUBO 250 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "BL",
+                    "unidade_display": "BOLSA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9828,
+                    "url": "",
+                    "medicamento": 39918,
+                    "codigo": "",
+                    "nome": "DOBUTREX AMPL 20 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19211,
+                    "url": "",
+                    "nome": "S6 (Perfil D)",
+                    "descricao": "Perfil D",
+                    "passo_de_saida_id": 19198,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Investigar Sintomas",
+                    "passo_de_entrada_id": 19203,
+                    "passo_de_entrada": "Tratamento: Perfil D: Frio e Seco",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19204,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Perfil A] Avaliar exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9835,
+                    "url": "",
+                    "texto": "For descoberta causa da descompensa\u00e7\u00e3o?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18964,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "descoberta_causa_descompensacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19208,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19199,
+                    "passo_de_saida": "Tratamento: Perfil A: Quente e Seco",
+                    "passo_de_entrada_id": 19204,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Perfil A] Avaliar exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19212,
+                    "url": "",
+                    "nome": "S8 (N\u00e3o descoberta causa da descompensa\u00e7\u00e3o)",
+                    "descricao": "N\u00e3o descoberta causa da descompensa\u00e7\u00e3o",
+                    "passo_de_saida_id": 19204,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Perfil A] Avaliar exames",
+                    "passo_de_entrada_id": 19205,
+                    "passo_de_entrada": "Tratamento: [Perfil A] Exames adicionais",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19213,
+                    "url": "",
+                    "nome": "S7 (Descoberta causa da descompensa\u00e7\u00e3o)",
+                    "descricao": "Descoberta causa da descompensa\u00e7\u00e3o",
+                    "passo_de_saida_id": 19204,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Perfil A] Avaliar exames",
+                    "passo_de_entrada_id": 19200,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19205,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Perfil A] Exames adicionais",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "D' DIMERO",
+                    "exame": "28140110",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATINO FOSFOQUINASE - CK MASSA",
+                    "exame": "28012119",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Insufici\u00eancia Card\u00edaca",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19212,
+                    "url": "",
+                    "nome": "S8 (N\u00e3o descoberta causa da descompensa\u00e7\u00e3o)",
+                    "descricao": "N\u00e3o descoberta causa da descompensa\u00e7\u00e3o",
+                    "passo_de_saida_id": 19204,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Perfil A] Avaliar exames",
+                    "passo_de_entrada_id": 19205,
+                    "passo_de_entrada": "Tratamento: [Perfil A] Exames adicionais",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19214,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19205,
+                    "passo_de_saida": "Tratamento: [Perfil A] Exames adicionais",
+                    "passo_de_entrada_id": 19200,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19206,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19197,
+            "passo_de_saida": {
+                "id": 19197,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Exame F\u00edsico & Hist\u00f3rico",
+                "descricao": "<p>Realizar exame f&iacute;sico no paciente.</p>\n\n<p>Interrogar sobre medica&ccedil;&otilde;es em uso, exames pr&eacute;vios realizados, hist&oacute;ria de IC, SCA, revasculariza&ccedil;&atilde;o, HAS, DM, DRC, AVC.</p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19198,
+            "passo_de_entrada": {
+                "id": 19198,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Investigar Sintomas",
+                "descricao": "<p><span style=\"font-size:14px\"><strong><u>H&aacute; congest&atilde;o?</u></strong></span> (Paciente com crepita&ccedil;&otilde;es na ausculta, edema de membros inferiores, turg&ecirc;ncia jugular, refluxo hepato-jugular)</p>\n\n<p><span style=\"font-size:14px\"><strong><u>H&aacute; m&aacute; perfus&atilde;o?</u></strong></span> (Paciente com pele fria, &uacute;mida, tempo de enchimento capilar &gt; 3 segundos, contra&ccedil;&atilde;o da diurese)</p>\n\n<p><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19207,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (Perfil A)",
+            "descricao": "Perfil A",
+            "passo_de_saida_id": 19198,
+            "passo_de_saida": {
+                "id": 19198,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Investigar Sintomas",
+                "descricao": "<p><span style=\"font-size:14px\"><strong><u>H&aacute; congest&atilde;o?</u></strong></span> (Paciente com crepita&ccedil;&otilde;es na ausculta, edema de membros inferiores, turg&ecirc;ncia jugular, refluxo hepato-jugular)</p>\n\n<p><span style=\"font-size:14px\"><strong><u>H&aacute; m&aacute; perfus&atilde;o?</u></strong></span> (Paciente com pele fria, &uacute;mida, tempo de enchimento capilar &gt; 3 segundos, contra&ccedil;&atilde;o da diurese)</p>\n\n<p><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19199,
+            "passo_de_entrada": {
+                "id": 19199,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Perfil A: Quente e Seco",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Encaminhar paciente para chefia local</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p>Investigar fator desencadeador da descompensa&ccedil;&atilde;o card&iacute;aca.</p>\n\n<ul>\n\t<li>Infec&ccedil;&atilde;o?</li>\n\t<li>SCA?</li>\n\t<li>Abandono do tratamento para IC?</li>\n\t<li>Anemia?</li>\n\t<li>DM n&atilde;o controlada?</li>\n\t<li>Disfun&ccedil;&atilde;o tireoidiana?</li>\n\t<li>Arritmias?</li>\n\t<li>TEP?</li>\n\t<li>Abuso de drogas?</li>\n\t<li>Gravidez?</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18971,
+                "nome": "perfil a - bem perfundido e sem congest\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18963,
+                    18965
+                ],
+                "argumentos": [
+                    "congestao_perfusao",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19208,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19199,
+            "passo_de_saida": {
+                "id": 19199,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Perfil A: Quente e Seco",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Encaminhar paciente para chefia local</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p>Investigar fator desencadeador da descompensa&ccedil;&atilde;o card&iacute;aca.</p>\n\n<ul>\n\t<li>Infec&ccedil;&atilde;o?</li>\n\t<li>SCA?</li>\n\t<li>Abandono do tratamento para IC?</li>\n\t<li>Anemia?</li>\n\t<li>DM n&atilde;o controlada?</li>\n\t<li>Disfun&ccedil;&atilde;o tireoidiana?</li>\n\t<li>Arritmias?</li>\n\t<li>TEP?</li>\n\t<li>Abuso de drogas?</li>\n\t<li>Gravidez?</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19204,
+            "passo_de_entrada": {
+                "id": 19204,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Perfil A] Avaliar exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19209,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Perfil B)",
+            "descricao": "Perfil B",
+            "passo_de_saida_id": 19198,
+            "passo_de_saida": {
+                "id": 19198,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Investigar Sintomas",
+                "descricao": "<p><span style=\"font-size:14px\"><strong><u>H&aacute; congest&atilde;o?</u></strong></span> (Paciente com crepita&ccedil;&otilde;es na ausculta, edema de membros inferiores, turg&ecirc;ncia jugular, refluxo hepato-jugular)</p>\n\n<p><span style=\"font-size:14px\"><strong><u>H&aacute; m&aacute; perfus&atilde;o?</u></strong></span> (Paciente com pele fria, &uacute;mida, tempo de enchimento capilar &gt; 3 segundos, contra&ccedil;&atilde;o da diurese)</p>\n\n<p><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19201,
+            "passo_de_entrada": {
+                "id": 19201,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Perfil B: Quente e \u00damido",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Encaminhar paciente para chefia local</strong></span></p>\n\n<p>&nbsp;</p>\n\n<p>Prescrever furosemida (1-2 ampolas), suporte de O2 se necess&aacute;rio, VNI se necess&aacute;rio, se pico hipertensivo iniciar tridil/vasodilatador oral<br />\n<br />\n<u><strong>Indica&ccedil;&atilde;o de VNI</strong></u>: Pacientes com congest&atilde;o pulmonar, SpO2 &lt; 92% ou FR &gt; 30 ipm com m&aacute;scara com reservat&oacute;rio,uso de musculatura acess&oacute;ria, n&iacute;vel de consci&ecirc;ncia preservado(GCS &gt; 13) e reflexos de prote&ccedil;&atilde;o de via a&eacute;rea presentes<br />\n<br />\n<span style=\"font-size:16px\"><strong>Reavaliar ap&oacute;s 30 - 60 minutos</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18972,
+                "nome": "Perfil B - bem perfundido e com congest\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18963,
+                    18966
+                ],
+                "argumentos": [
+                    "congestao_perfusao",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19210,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Perfil C)",
+            "descricao": "Perfil C",
+            "passo_de_saida_id": 19198,
+            "passo_de_saida": {
+                "id": 19198,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Investigar Sintomas",
+                "descricao": "<p><span style=\"font-size:14px\"><strong><u>H&aacute; congest&atilde;o?</u></strong></span> (Paciente com crepita&ccedil;&otilde;es na ausculta, edema de membros inferiores, turg&ecirc;ncia jugular, refluxo hepato-jugular)</p>\n\n<p><span style=\"font-size:14px\"><strong><u>H&aacute; m&aacute; perfus&atilde;o?</u></strong></span> (Paciente com pele fria, &uacute;mida, tempo de enchimento capilar &gt; 3 segundos, contra&ccedil;&atilde;o da diurese)</p>\n\n<p><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19202,
+            "passo_de_entrada": {
+                "id": 19202,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Perfil C: Frio e \u00damido",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Encaminhar paciente para chefia local</strong></span></p>\n\n<p>&nbsp;</p>\n\n<p><u><strong>Solicitar avalia&ccedil;&atilde;o do cardiologista</strong></u><br />\n<br />\nPrescrever furosemida (1-2 ampolas), considerar noradrenalina + dobutamina, VNI, <u><strong>considerar internamento em UTI</strong></u><br />\n<br />\n<u><strong>Indica&ccedil;&atilde;o de VNI</strong></u>: Pacientes com congest&atilde;o pulmonar, SpO2 &lt; 92% ou FR &gt; 30 ipm com m&aacute;scara com reservat&oacute;rio,uso de musculatura acess&oacute;ria, n&iacute;vel de consci&ecirc;ncia preservado(GCS &gt; 13) e reflexos de prote&ccedil;&atilde;o de via a&eacute;rea presentes<br />\n<br />\n<span style=\"font-size:16px\"><strong>Reavaliar ap&oacute;s 30 - 60 minutos</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18973,
+                "nome": "Perfil C - mal perfundido e com congest\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18963,
+                    18967
+                ],
+                "argumentos": [
+                    "congestao_perfusao",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19211,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Perfil D)",
+            "descricao": "Perfil D",
+            "passo_de_saida_id": 19198,
+            "passo_de_saida": {
+                "id": 19198,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Investigar Sintomas",
+                "descricao": "<p><span style=\"font-size:14px\"><strong><u>H&aacute; congest&atilde;o?</u></strong></span> (Paciente com crepita&ccedil;&otilde;es na ausculta, edema de membros inferiores, turg&ecirc;ncia jugular, refluxo hepato-jugular)</p>\n\n<p><span style=\"font-size:14px\"><strong><u>H&aacute; m&aacute; perfus&atilde;o?</u></strong></span> (Paciente com pele fria, &uacute;mida, tempo de enchimento capilar &gt; 3 segundos, contra&ccedil;&atilde;o da diurese)</p>\n\n<p><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19203,
+            "passo_de_entrada": {
+                "id": 19203,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Perfil D: Frio e Seco",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Encaminhar paciente para chefia local</strong></span></p>\n\n<p><br />\nFazer expans&atilde;o vol&ecirc;mica com al&iacute;quotas de soro fisiol&oacute;gico 250ml em 30min, reavaliando a ausculta<br />\n<br />\nSe n&atilde;o melhorar, considerar iniciar inotr&oacute;pico (dobutamina) e avalia&ccedil;&atilde;o do cardiologista</p>\n\n<p>&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18974,
+                "nome": "Perfil D - mal perfundido e sem congest\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18963,
+                    18968
+                ],
+                "argumentos": [
+                    "congestao_perfusao",
+                    "4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19212,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (N\u00e3o descoberta causa da descompensa\u00e7\u00e3o)",
+            "descricao": "N\u00e3o descoberta causa da descompensa\u00e7\u00e3o",
+            "passo_de_saida_id": 19204,
+            "passo_de_saida": {
+                "id": 19204,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Perfil A] Avaliar exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19205,
+            "passo_de_entrada": {
+                "id": 19205,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Perfil A] Exames adicionais",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18975,
+                "nome": "N\u00e3o descoberta causa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18964
+                ],
+                "argumentos": [
+                    "descoberta_causa_descompensacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19213,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (Descoberta causa da descompensa\u00e7\u00e3o)",
+            "descricao": "Descoberta causa da descompensa\u00e7\u00e3o",
+            "passo_de_saida_id": 19204,
+            "passo_de_saida": {
+                "id": 19204,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Perfil A] Avaliar exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19200,
+            "passo_de_entrada": {
+                "id": 19200,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Orienta\u00e7\u00f5es",
+                "descricao": "<p><span style=\"font-size:16px\">Se paciente est&aacute;vel e sem sinais de gravidade: otimizar medica&ccedil;&otilde;es da IC, tratar fator desencadeante e agendar consulta com cardiologista.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18976,
+                "nome": "Descoberta causa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18964
+                ],
+                "argumentos": [
+                    "descoberta_causa_descompensacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19214,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19205,
+            "passo_de_saida": {
+                "id": 19205,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Perfil A] Exames adicionais",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19200,
+            "passo_de_entrada": {
+                "id": 19200,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Orienta\u00e7\u00f5es",
+                "descricao": "<p><span style=\"font-size:16px\">Se paciente est&aacute;vel e sem sinais de gravidade: otimizar medica&ccedil;&otilde;es da IC, tratar fator desencadeante e agendar consulta com cardiologista.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 18963,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "congestao_perfusao",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Sem congest\u00e3o e bem perfundido",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Com congest\u00e3o e bem perfundido",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Com congest\u00e3o e mal perfundido",
+                    "peso": 3.0
+                },
+                {
+                    "texto": "Sem congest\u00e3o e mal perfundido",
+                    "peso": 4.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 18964,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "descoberta_causa_descompensacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18965,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18966,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18967,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18968,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "4",
+            "peso": 1.0,
+            "valor": 4.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18969,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "bem perfundido",
+            "descricao": "bem perfundido",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [],
+            "argumentos": []
+        },
+        {
+            "id": 18970,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem congest\u00e3o",
+            "descricao": "sem congest\u00e3o",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [],
+            "argumentos": []
+        }
+    ]
+}

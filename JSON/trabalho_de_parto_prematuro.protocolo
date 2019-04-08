@@ -1,0 +1,1572 @@
+{
+    "id": 3106,
+    "url": "",
+    "codigo": "H030",
+    "nome": "Trabalho de Parto Prematuro",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Obstetr\u00edcia",
+    "repositorio_id": 321,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:24:56.041792-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:23:48.279432-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:25:04.257908-03:00"
+    },
+    "elementos": [
+        {
+            "id": 16870,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Exames Iniciais",
+            "descricao": "<p>Observa&ccedil;&otilde;es: Solicitar Tococardiografia apenas se IG &gt;= 28 semanas.</p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Trabalho de Parto Prematuro",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA",
+                    "exame": "99130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Trabalho de Parto Prematuro",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Trabalho de Parto Prematuro",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "US OBSTETRICA",
+                    "exame": "33010110",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Trabalho de Parto Prematuro",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TOCOCARDIOGRAFIA ANTEPARTO",
+                    "exame": "45010072",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Trabalho de Parto Prematuro",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 16882,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16870,
+                    "passo_de_saida": "Tratamento: Solicitar Exames Iniciais",
+                    "passo_de_entrada_id": 16871,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16871,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Idade Gestacional",
+            "descricao": "<p>Avaliar Idade Gestacional da paciente.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8859,
+                    "url": "",
+                    "texto": "IG < 24 semanas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16756,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "IG_menor_24_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8860,
+                    "url": "",
+                    "texto": "IG >= 24 e < 34 semanas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16757,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ig_maior_que_24_e_menor_que_34_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8881,
+                    "url": "",
+                    "texto": "IG >= 34 semanas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16758,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ig_maior_ou_igual_a_34_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16882,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16870,
+                    "passo_de_saida": "Tratamento: Solicitar Exames Iniciais",
+                    "passo_de_entrada_id": 16871,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16883,
+                    "url": "",
+                    "nome": "S2 (IG < 24)",
+                    "descricao": "IG < 24",
+                    "passo_de_saida_id": 16871,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 16872,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [IG < 24 Semanas] Conduta Individualizada",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16884,
+                    "url": "",
+                    "nome": "S3 (IG >= 24 e < 34)",
+                    "descricao": "IG >= 24 e < 34",
+                    "passo_de_saida_id": 16871,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 16873,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16885,
+                    "url": "",
+                    "nome": "S4 (IG >= 34)",
+                    "descricao": "IG >= 34",
+                    "passo_de_saida_id": 16871,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 16876,
+                    "passo_de_entrada": "Tratamento: [IG >= 34 semanas] Prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16872,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[IG < 24 Semanas] Conduta Individualizada",
+            "descricao": "Conduta individualizada para paciente com idade gestacional inferior a 24 semanas.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 16883,
+                    "url": "",
+                    "nome": "S2 (IG < 24)",
+                    "descricao": "IG < 24",
+                    "passo_de_saida_id": 16871,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 16872,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [IG < 24 Semanas] Conduta Individualizada",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16873,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+            "descricao": "Avaliar dilata\u00e7\u00e3o do colo do \u00fatero da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8882,
+                    "url": "",
+                    "texto": "Dilata\u00e7\u00e3o >= 3cm?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16759,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dilatacao_maior_igual_3_cm",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16884,
+                    "url": "",
+                    "nome": "S3 (IG >= 24 e < 34)",
+                    "descricao": "IG >= 24 e < 34",
+                    "passo_de_saida_id": 16871,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 16873,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16887,
+                    "url": "",
+                    "nome": "S6 (dilata\u00e7\u00e3o >= 3cm)",
+                    "descricao": "dilata\u00e7\u00e3o >= 3cm",
+                    "passo_de_saida_id": 16873,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                    "passo_de_entrada_id": 16875,
+                    "passo_de_entrada": "Tratamento: [Dilata\u00e7\u00e3o >= 3cm] Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16888,
+                    "url": "",
+                    "nome": "S7 (dilata\u00e7\u00e3o < 3cm)",
+                    "descricao": "dilata\u00e7\u00e3o < 3cm",
+                    "passo_de_saida_id": 16873,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                    "passo_de_entrada_id": 16877,
+                    "passo_de_entrada": "Tratamento: [Dilata\u00e7\u00e3o < 3cm] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16874,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Orienta\u00e7\u00f5es",
+            "descricao": "Solicitar Internamento e assist\u00eancia ao parto.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 16886,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16876,
+                    "passo_de_saida": "Tratamento: [IG >= 34 semanas] Prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 16874,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16875,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Dilata\u00e7\u00e3o >= 3cm] Tratamento",
+            "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:<br />\nSolicitar Internamento da paciente.<br />\nSe falha na toc&oacute;lise, suspender Nifedipina (Adalat) e iniciar Sulfato de Magn&eacute;sio para neuroprote&ccedil;&atilde;o fetal entre 24 e 32 semanas.<br />\nDose de ataque da Ampicilina 2g EV.&nbsp;<br />\nDose de manuten&ccedil;&atilde;o da Ampicilina 1g EV de 6/6h.<br />\n<br />\nDose de ataque do Nifedipino (ADALAT) 1 comprimido via oral de 20 em 20 minutos, 4 DOSES.<br />\nDose de manuten&ccedil;&atilde;o do Nifedipino (ADALAT) 1 comprimido via oral de 8/8h.<br />\n<br />\nN&Atilde;O ASSOCIAR SULFATO DE MAGN&Eacute;SIO E NIFEDIPINO (ADALAT)</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8955,
+                    "url": "",
+                    "medicamento": 36145,
+                    "codigo": "",
+                    "nome": "ADALAT 20 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "DS",
+                    "unidade_display": "DOSE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8956,
+                    "url": "",
+                    "medicamento": 37150,
+                    "codigo": "",
+                    "nome": "CELESTONE SOLUSPAN AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "MG",
+                    "unidade_display": "MILIGRAMA",
+                    "via_acesso": 5,
+                    "dose_diaria": 12,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "24",
+                    "frequencia_display": "24/24",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8957,
+                    "url": "",
+                    "medicamento": 36145,
+                    "codigo": "",
+                    "nome": "ADALAT 20 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "8",
+                    "frequencia_display": "8/8",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 8958,
+                    "url": "",
+                    "medicamento": 75116,
+                    "codigo": "",
+                    "nome": "AMPICILINA 1 GR AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GR",
+                    "unidade_display": "GRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null
+                },
+                {
+                    "id": 8959,
+                    "url": "",
+                    "medicamento": 75116,
+                    "codigo": "",
+                    "nome": "AMPICILINA 1 GR AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GR",
+                    "unidade_display": "GRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "6",
+                    "frequencia_display": "6/6",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null
+                },
+                {
+                    "id": 8960,
+                    "url": "",
+                    "medicamento": 35203,
+                    "codigo": "",
+                    "nome": "BRICANYL AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 5,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 5,
+                    "padrao": {
+                        "id": 3744,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "EV INTERMITENTE COM SF 0,9%",
+                        "codigo_principio_ativo": 2259,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 5,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16887,
+                    "url": "",
+                    "nome": "S6 (dilata\u00e7\u00e3o >= 3cm)",
+                    "descricao": "dilata\u00e7\u00e3o >= 3cm",
+                    "passo_de_saida_id": 16873,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                    "passo_de_entrada_id": 16875,
+                    "passo_de_entrada": "Tratamento: [Dilata\u00e7\u00e3o >= 3cm] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16876,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[IG >= 34 semanas] Prescri\u00e7\u00e3o",
+            "descricao": "<p><strong>Orienta&ccedil;&otilde;es</strong>:<br />\nSe pacientes al&eacute;rgicos a Ampicilina, fazer clindamicina 900mg de 8/8h.&nbsp;<br />\nDose de ataque da Ampicilina 2g EV.&nbsp;<br />\nDose de manuten&ccedil;&atilde;o da Ampicilina 1g EV de 6/6h.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8961,
+                    "url": "",
+                    "medicamento": 75116,
+                    "codigo": "",
+                    "nome": "AMPICILINA 1 GR AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8962,
+                    "url": "",
+                    "medicamento": 75116,
+                    "codigo": "",
+                    "nome": "AMPICILINA 1 GR AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "6",
+                    "frequencia_display": "6/6",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8963,
+                    "url": "",
+                    "medicamento": 37150,
+                    "codigo": "",
+                    "nome": "CELESTONE SOLUSPAN AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "MG",
+                    "unidade_display": "MILIGRAMA",
+                    "via_acesso": 5,
+                    "dose_diaria": 12,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 8964,
+                    "url": "",
+                    "medicamento": 38822,
+                    "codigo": "",
+                    "nome": "DALACIN 300 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 3,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 3745,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "SF 0,9%",
+                        "codigo_principio_ativo": 2532,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 300,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16885,
+                    "url": "",
+                    "nome": "S4 (IG >= 34)",
+                    "descricao": "IG >= 34",
+                    "passo_de_saida_id": 16871,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 16876,
+                    "passo_de_entrada": "Tratamento: [IG >= 34 semanas] Prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16886,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16876,
+                    "passo_de_saida": "Tratamento: [IG >= 34 semanas] Prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 16874,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16877,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Dilata\u00e7\u00e3o < 3cm] Tratamento",
+            "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:<br />\nSolicitar Internamento da paciente.<br />\nSe falha na toc&oacute;lise, suspender Nifedipina (Adalat) e iniciar Sulfato de Magn&eacute;sio para neuroprote&ccedil;&atilde;o fetal entre 24 e 32 semanas.</p>\n\n<p>Dose de ataque do Nifedipino (ADALAT) 1 comprimido via oral de 20 em 20 minutos, <strong>4 DOSES</strong>.<br />\nDose de manuten&ccedil;&atilde;o do Nifedipino (ADALAT) 1 comprimido via oral de 8/8h.<br />\n<br />\nN&Atilde;O ASSOCIAR SULFATO DE MAGN&Eacute;SIO E NIFEDIPINO (ADALAT)</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8965,
+                    "url": "",
+                    "medicamento": 36145,
+                    "codigo": "",
+                    "nome": "ADALAT 20 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8966,
+                    "url": "",
+                    "medicamento": 36145,
+                    "codigo": "",
+                    "nome": "ADALAT 20 MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "8",
+                    "frequencia_display": "8/8",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8967,
+                    "url": "",
+                    "medicamento": 37150,
+                    "codigo": "",
+                    "nome": "CELESTONE SOLUSPAN AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "MG",
+                    "unidade_display": "MILIGRAMA",
+                    "via_acesso": 5,
+                    "dose_diaria": 12,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "24",
+                    "frequencia_display": "24/24",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 8968,
+                    "url": "",
+                    "medicamento": 35203,
+                    "codigo": "",
+                    "nome": "BRICANYL AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 5,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 3746,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "EV INTERMITENTE COM SF 0,9%",
+                        "codigo_principio_ativo": 2259,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 5,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16888,
+                    "url": "",
+                    "nome": "S7 (dilata\u00e7\u00e3o < 3cm)",
+                    "descricao": "dilata\u00e7\u00e3o < 3cm",
+                    "passo_de_saida_id": 16873,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                    "passo_de_entrada_id": 16877,
+                    "passo_de_entrada": "Tratamento: [Dilata\u00e7\u00e3o < 3cm] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16889,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16877,
+                    "passo_de_saida": "Tratamento: [Dilata\u00e7\u00e3o < 3cm] Tratamento",
+                    "passo_de_entrada_id": 16878,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Trabalho de parto prematuro Inibido",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16878,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Trabalho de parto prematuro Inibido",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8883,
+                    "url": "",
+                    "texto": "Trabalho de parto prematuro Inibido?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16760,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "trabalho_de_parto_prematuro_inibido",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16889,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16877,
+                    "passo_de_saida": "Tratamento: [Dilata\u00e7\u00e3o < 3cm] Tratamento",
+                    "passo_de_entrada_id": 16878,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Trabalho de parto prematuro Inibido",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16890,
+                    "url": "",
+                    "nome": "S9 (trab. parto prematuro inibido)",
+                    "descricao": "trab. parto prematuro inibido",
+                    "passo_de_saida_id": 16878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Trabalho de parto prematuro Inibido",
+                    "passo_de_entrada_id": 16879,
+                    "passo_de_entrada": "Receita: [Receita] Trab. de Parto Prematuro Inibido",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16892,
+                    "url": "",
+                    "nome": "S11 (trab. parto prematuro n\u00e3o inibido)",
+                    "descricao": "trab. parto prematuro n\u00e3o inibido",
+                    "passo_de_saida_id": 16878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Trabalho de parto prematuro Inibido",
+                    "passo_de_entrada_id": 16881,
+                    "passo_de_entrada": "Tratamento: Internamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16879,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Receita] Trab. de Parto Prematuro Inibido",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4549,
+                    "url": "",
+                    "nome": "CELESTONE SOLUSPAN AMPL 1 ML",
+                    "medicamento": 37150,
+                    "apresentacao": "AMPL",
+                    "via_acesso": 5,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar ap\u00f3s 24h da primeira dose.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4550,
+                    "url": "",
+                    "nome": "ADALAT 20 MG COMP 1 UD",
+                    "medicamento": 36145,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 2,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16890,
+                    "url": "",
+                    "nome": "S9 (trab. parto prematuro inibido)",
+                    "descricao": "trab. parto prematuro inibido",
+                    "passo_de_saida_id": 16878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Trabalho de parto prematuro Inibido",
+                    "passo_de_entrada_id": 16879,
+                    "passo_de_entrada": "Receita: [Receita] Trab. de Parto Prematuro Inibido",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16891,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16879,
+                    "passo_de_saida": "Receita: [Receita] Trab. de Parto Prematuro Inibido",
+                    "passo_de_entrada_id": 16880,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pr\u00e9-Natal de Alto Risco",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16880,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Pr\u00e9-Natal de Alto Risco",
+            "descricao": "Encaminhamento ao pr\u00e9-natal de alto risco.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 16891,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16879,
+                    "passo_de_saida": "Receita: [Receita] Trab. de Parto Prematuro Inibido",
+                    "passo_de_entrada_id": 16880,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pr\u00e9-Natal de Alto Risco",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16881,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Internamento",
+            "descricao": "<p><u><strong>Observa&ccedil;&otilde;es:</strong></u><br />\nSuspender Nifedipino e Iniciar Sulfato de Magn&eacute;sio entre 24 e 32 semanas para neuroprote&ccedil;&atilde;o fetal.</p>\n\n<p>Iniciar profilaxia para GBS.</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "45990000",
+                    "justificativa": "Paciente em trabalho de parto prematuro",
+                    "indicacao_clinica": "n/a",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16892,
+                    "url": "",
+                    "nome": "S11 (trab. parto prematuro n\u00e3o inibido)",
+                    "descricao": "trab. parto prematuro n\u00e3o inibido",
+                    "passo_de_saida_id": 16878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Trabalho de parto prematuro Inibido",
+                    "passo_de_entrada_id": 16881,
+                    "passo_de_entrada": "Tratamento: Internamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16882,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 16870,
+            "passo_de_saida": {
+                "id": 16870,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Exames Iniciais",
+                "descricao": "<p>Observa&ccedil;&otilde;es: Solicitar Tococardiografia apenas se IG &gt;= 28 semanas.</p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16871,
+            "passo_de_entrada": {
+                "id": 16871,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "<p>Avaliar Idade Gestacional da paciente.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16883,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (IG < 24)",
+            "descricao": "IG < 24",
+            "passo_de_saida_id": 16871,
+            "passo_de_saida": {
+                "id": 16871,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "<p>Avaliar Idade Gestacional da paciente.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16872,
+            "passo_de_entrada": {
+                "id": 16872,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[IG < 24 Semanas] Conduta Individualizada",
+                "descricao": "Conduta individualizada para paciente com idade gestacional inferior a 24 semanas.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16761,
+                "nome": "IG < 24",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16756
+                ],
+                "argumentos": [
+                    "IG_menor_24_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16884,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (IG >= 24 e < 34)",
+            "descricao": "IG >= 24 e < 34",
+            "passo_de_saida_id": 16871,
+            "passo_de_saida": {
+                "id": 16871,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "<p>Avaliar Idade Gestacional da paciente.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16873,
+            "passo_de_entrada": {
+                "id": 16873,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                "descricao": "Avaliar dilata\u00e7\u00e3o do colo do \u00fatero da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16762,
+                "nome": "IG >= 24 e < 34",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16757
+                ],
+                "argumentos": [
+                    "ig_maior_que_24_e_menor_que_34_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16885,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (IG >= 34)",
+            "descricao": "IG >= 34",
+            "passo_de_saida_id": 16871,
+            "passo_de_saida": {
+                "id": 16871,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "<p>Avaliar Idade Gestacional da paciente.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16876,
+            "passo_de_entrada": {
+                "id": 16876,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[IG >= 34 semanas] Prescri\u00e7\u00e3o",
+                "descricao": "<p><strong>Orienta&ccedil;&otilde;es</strong>:<br />\nSe pacientes al&eacute;rgicos a Ampicilina, fazer clindamicina 900mg de 8/8h.&nbsp;<br />\nDose de ataque da Ampicilina 2g EV.&nbsp;<br />\nDose de manuten&ccedil;&atilde;o da Ampicilina 1g EV de 6/6h.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16763,
+                "nome": "IG >= 34",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16758
+                ],
+                "argumentos": [
+                    "ig_maior_ou_igual_a_34_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16886,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 16876,
+            "passo_de_saida": {
+                "id": 16876,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[IG >= 34 semanas] Prescri\u00e7\u00e3o",
+                "descricao": "<p><strong>Orienta&ccedil;&otilde;es</strong>:<br />\nSe pacientes al&eacute;rgicos a Ampicilina, fazer clindamicina 900mg de 8/8h.&nbsp;<br />\nDose de ataque da Ampicilina 2g EV.&nbsp;<br />\nDose de manuten&ccedil;&atilde;o da Ampicilina 1g EV de 6/6h.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16874,
+            "passo_de_entrada": {
+                "id": 16874,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Orienta\u00e7\u00f5es",
+                "descricao": "Solicitar Internamento e assist\u00eancia ao parto.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16887,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (dilata\u00e7\u00e3o >= 3cm)",
+            "descricao": "dilata\u00e7\u00e3o >= 3cm",
+            "passo_de_saida_id": 16873,
+            "passo_de_saida": {
+                "id": 16873,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                "descricao": "Avaliar dilata\u00e7\u00e3o do colo do \u00fatero da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16875,
+            "passo_de_entrada": {
+                "id": 16875,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Dilata\u00e7\u00e3o >= 3cm] Tratamento",
+                "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:<br />\nSolicitar Internamento da paciente.<br />\nSe falha na toc&oacute;lise, suspender Nifedipina (Adalat) e iniciar Sulfato de Magn&eacute;sio para neuroprote&ccedil;&atilde;o fetal entre 24 e 32 semanas.<br />\nDose de ataque da Ampicilina 2g EV.&nbsp;<br />\nDose de manuten&ccedil;&atilde;o da Ampicilina 1g EV de 6/6h.<br />\n<br />\nDose de ataque do Nifedipino (ADALAT) 1 comprimido via oral de 20 em 20 minutos, 4 DOSES.<br />\nDose de manuten&ccedil;&atilde;o do Nifedipino (ADALAT) 1 comprimido via oral de 8/8h.<br />\n<br />\nN&Atilde;O ASSOCIAR SULFATO DE MAGN&Eacute;SIO E NIFEDIPINO (ADALAT)</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16764,
+                "nome": "dilata\u00e7\u00e3o >= 3cm",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16759
+                ],
+                "argumentos": [
+                    "dilatacao_maior_igual_3_cm"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16888,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (dilata\u00e7\u00e3o < 3cm)",
+            "descricao": "dilata\u00e7\u00e3o < 3cm",
+            "passo_de_saida_id": 16873,
+            "passo_de_saida": {
+                "id": 16873,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[IG >= 24 e < 34] Avaliar Dilata\u00e7\u00e3o do Colo",
+                "descricao": "Avaliar dilata\u00e7\u00e3o do colo do \u00fatero da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16877,
+            "passo_de_entrada": {
+                "id": 16877,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Dilata\u00e7\u00e3o < 3cm] Tratamento",
+                "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:<br />\nSolicitar Internamento da paciente.<br />\nSe falha na toc&oacute;lise, suspender Nifedipina (Adalat) e iniciar Sulfato de Magn&eacute;sio para neuroprote&ccedil;&atilde;o fetal entre 24 e 32 semanas.</p>\n\n<p>Dose de ataque do Nifedipino (ADALAT) 1 comprimido via oral de 20 em 20 minutos, <strong>4 DOSES</strong>.<br />\nDose de manuten&ccedil;&atilde;o do Nifedipino (ADALAT) 1 comprimido via oral de 8/8h.<br />\n<br />\nN&Atilde;O ASSOCIAR SULFATO DE MAGN&Eacute;SIO E NIFEDIPINO (ADALAT)</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16765,
+                "nome": "dilata\u00e7\u00e3o < 3cm",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16759
+                ],
+                "argumentos": [
+                    "dilatacao_maior_igual_3_cm"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16889,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 16877,
+            "passo_de_saida": {
+                "id": 16877,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Dilata\u00e7\u00e3o < 3cm] Tratamento",
+                "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:<br />\nSolicitar Internamento da paciente.<br />\nSe falha na toc&oacute;lise, suspender Nifedipina (Adalat) e iniciar Sulfato de Magn&eacute;sio para neuroprote&ccedil;&atilde;o fetal entre 24 e 32 semanas.</p>\n\n<p>Dose de ataque do Nifedipino (ADALAT) 1 comprimido via oral de 20 em 20 minutos, <strong>4 DOSES</strong>.<br />\nDose de manuten&ccedil;&atilde;o do Nifedipino (ADALAT) 1 comprimido via oral de 8/8h.<br />\n<br />\nN&Atilde;O ASSOCIAR SULFATO DE MAGN&Eacute;SIO E NIFEDIPINO (ADALAT)</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16878,
+            "passo_de_entrada": {
+                "id": 16878,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Trabalho de parto prematuro Inibido",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16890,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (trab. parto prematuro inibido)",
+            "descricao": "trab. parto prematuro inibido",
+            "passo_de_saida_id": 16878,
+            "passo_de_saida": {
+                "id": 16878,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Trabalho de parto prematuro Inibido",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16879,
+            "passo_de_entrada": {
+                "id": 16879,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Receita] Trab. de Parto Prematuro Inibido",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 16766,
+                "nome": "trab. parto prematuro inibido",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16760
+                ],
+                "argumentos": [
+                    "trabalho_de_parto_prematuro_inibido"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16891,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 16879,
+            "passo_de_saida": {
+                "id": 16879,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Receita] Trab. de Parto Prematuro Inibido",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 16880,
+            "passo_de_entrada": {
+                "id": 16880,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Pr\u00e9-Natal de Alto Risco",
+                "descricao": "Encaminhamento ao pr\u00e9-natal de alto risco.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16892,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (trab. parto prematuro n\u00e3o inibido)",
+            "descricao": "trab. parto prematuro n\u00e3o inibido",
+            "passo_de_saida_id": 16878,
+            "passo_de_saida": {
+                "id": 16878,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Trabalho de parto prematuro Inibido",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16881,
+            "passo_de_entrada": {
+                "id": 16881,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Internamento",
+                "descricao": "<p><u><strong>Observa&ccedil;&otilde;es:</strong></u><br />\nSuspender Nifedipino e Iniciar Sulfato de Magn&eacute;sio entre 24 e 32 semanas para neuroprote&ccedil;&atilde;o fetal.</p>\n\n<p>Iniciar profilaxia para GBS.</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16767,
+                "nome": "trab. parto prematuro n\u00e3o inibido",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16760
+                ],
+                "argumentos": [
+                    "trabalho_de_parto_prematuro_inibido"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16756,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "IG_menor_24_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16757,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ig_maior_que_24_e_menor_que_34_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16758,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ig_maior_ou_igual_a_34_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16759,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dilatacao_maior_igual_3_cm",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16760,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "trabalho_de_parto_prematuro_inibido",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

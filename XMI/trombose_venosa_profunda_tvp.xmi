@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3147" url="" name="Trombose Venosa Profunda (TVP)" code="H054">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18033" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Escore de Wells" description="&lt;p>&lt;strong>Suspeita cl&amp;iacute;nica:&lt;/strong>&amp;nbsp;Paciente com dor, edema e calor em membro inferior unilateral, panturrilha empastada.&lt;br />&#xA;&lt;br />&#xA;&lt;strong>Fatores de risco:&amp;nbsp;&lt;/strong>idade avan&amp;ccedil;ada, epis&amp;oacute;dio pr&amp;eacute;vio, hist&amp;oacute;ria familiar, cirurgia recente, trauma no membro, imobiliza&amp;ccedil;&amp;atilde;o, neoplasia, uso de anticoncepcionais orais, obesidade, gravidez/puerp&amp;eacute;rio, tabagismo, HAS, ICC, s&amp;iacute;ndorme nefr&amp;oacute;tica, HPN, doen&amp;ccedil;as mieloproliferativas, doen&amp;ccedil;a infamat&amp;oacute;ria intestinal.&lt;/p>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.13">
+    <questions text="Avaliar quadro cl&#xed;nico:" url="" id="9267">
+      <answers xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17742" weight="1" value="0.0">
+        <option description="Diagn&#xf3;stico diferencial alternativo mais prov&#xe1;vel" weight="-2"/>
+        <option description="C&#xe2;ncer em atividade (em tratamento nos &#xfa;ltimos 6 meses)" weight="1"/>
+        <option description="Paralisia, paresia ou imobiliza&#xe7;&#xe3;o recente dos membros inferiores" weight="1"/>
+        <option description="Acamado recentemente por no m&#xed;nimo 3 dias ou cirurgia de grande porte nas &#xfa;ltimas 12 semanas que necessitou de anestesia geral ou regional" weight="1"/>
+        <option description="Incha&#xe7;o em toda perna" weight="1"/>
+        <option description="Incha&#xe7;o na panturrilha maior que 3 cm de di&#xe2;metro em rela&#xe7;&#xe3;o a perna normal" weight="1"/>
+        <option description="Edema depress&#xed;vel (cacifo) maior na perna afetada (unilateral)" weight="1"/>
+        <option description="Veias colaterais superficiais" weight="1"/>
+        <option description="Parestesia ao longo da distribui&#xe7;&#xe3;o do sistema venoso profundo" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Paciente taquic&#xe1;rdico, taquipneico, referindo dispneia, com dor pleur&#xed;tica? Com ou sem hipoxemia." url="" id="9268">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tep" id="17743" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18034" type="Tratamento" type_verbose="Tratamento" url="" name="[Baixo Risco] Conduta 01" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="D' DIMERO" exam_id="28140110" limb_side="" quantity="1" reason="TVP com baixo risco" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18035" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar D-d&#xed;mero 01" description="Avaliar resultado do D-d&#xed;mero" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Avaliar resultado do D-d&#xed;mero" url="" id="9269">
+      <answers xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17744" weight="1" value="0.0">
+        <option description="D-d&#xed;mero negativo (&lt; 500 ng/mL)"/>
+        <option description="D-d&#xed;mero positivo (> 500 ng/mL)" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18036" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[D-d&#xed;mero negativo] conduta" description="&lt;p>&lt;strong>Excluir diagn&amp;oacute;stico de TVP.&lt;/strong>&lt;br />&#xA;&lt;br />&#xA;&lt;strong>Investigar diagn&amp;oacute;stico diferencial:&lt;/strong> trauma, edema por imobiliza&amp;ccedil;&amp;atilde;o, linfedema, insufici&amp;ecirc;ncia venosa, cisto de baker, celulite, tromboflebite superficial, edema medicamentoso (uso do bloqueador canais de c&amp;aacute;lcio), p&amp;oacute;s safenectomia.&lt;br />&#xA;&lt;br />&#xA;&lt;strong>Discutir com l&amp;iacute;der local.&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3 //@sequence.6 //@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18037" type="Tratamento" type_verbose="Tratamento" url="" name="[D-d&#xed;mero positivo] conduta 1" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Solicitar de acordo com o membro acometido:&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>US Doppler colorido venoso de membro inferior unilateral. &lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>US Doppler colorido venoso de membro superior unilateral.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.4" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18038" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar US - 01" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Avaliar resultado da Ultrassom" url="" id="9270">
+      <answers xsi:type="pathwayMetamodel:Choice" name="res_us" id="17745" weight="1" value="0.0">
+        <option description="Negativo"/>
+        <option description="Positivo" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18039" type="Tratamento" type_verbose="Tratamento" url="" name="[Us Positivo] Conduta 1" description="&lt;p>- Confirmar diagn&amp;oacute;stico de TVP e solicitar exames.&amp;nbsp;&lt;/p>" inputSequences="//@sequence.7 //@sequence.16" outputSequences="//@sequence.8">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Suspeita de TVP de baixo risco com D-d&#xed;mero e US positivo" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Suspeita de TVP de baixo risco com D-d&#xed;mero e US positivo" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Suspeita de TVP de baixo risco com D-d&#xed;mero e US positivo" clinical_indication="n/a"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="Suspeita de TVP de baixo risco com D-d&#xed;mero e US positivo" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="Suspeita de TVP de baixo risco com D-d&#xed;mero e US positivo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18040" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar condi&#xe7;&#xf5;es do paciente" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Paciente com alguma dessas condi&amp;ccedil;&amp;otilde;es abaixo?&lt;/span>&lt;/p>" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="TVP maci&#xe7;o (por exemplo, TVP iliofemoral, phlegmasia cerulea dolens)?" url="" id="9271">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="TVP_maci&#xe7;o" id="17746" weight="1" value="false"/>
+    </questions>
+    <questions text="Embolia pulmonar sintom&#xe1;tica concomitante (TEP)?" url="" id="9272">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="embolia_pulmonar" id="17747" weight="1" value="false"/>
+    </questions>
+    <questions text="Alto risco de sangramento com terapia anticoagulante?" url="" id="9273">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_terapia_anticoagulante" id="17748" weight="1" value="false"/>
+    </questions>
+    <questions text="Comorbidades ou outros fatores que justifiquem cuidados hospitalares?" url="" id="9274">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades" id="17749" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18061" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der local" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local para tratamento hospitalar.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18062" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar contra-indica&#xe7;&#xe3;o &#xe0; anticoagula&#xe7;&#xe3;o" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Paciente com alguma das contra-indica&#xe7;&#xf5;es &#xe0; anticoagula&#xe7;&#xe3;o abaixo?" url="" id="9275">
+      <answers xsi:type="pathwayMetamodel:Choice" name="contra_indicacoes_anticoagulante" id="17750" weight="1" value="0.0">
+        <option description="Hist&#xf3;ria de hemorragia intracraniana, particularmente recente" weight="1"/>
+        <option description="Trauma maior" weight="1"/>
+        <option description="Di&#xe1;tese hemorr&#xe1;gica grave" weight="1"/>
+        <option description="Sangramento ativo" weight="1"/>
+        <option description="Cirurgia / procedimento de risco de sangramento recente, planejado ou de emerg&#xea;ncia" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18063" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der local" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18064" type="Tratamento" type_verbose="Tratamento" url="" name="[Moderado ou alto risco] conduta 1" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Solicitar de acordo com o membro acometido:&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>US Doppler colorido venoso de membro inferior unilateral. &lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>US Doppler colorido venoso de membro superior unilateral.&lt;/span>&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.13" outputSequences="//@sequence.14"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18065" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar US - 02" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.15 //@sequence.16">
+    <questions text="Avaliar resultado da Ultrassom" url="" id="9276">
+      <answers xsi:type="pathwayMetamodel:Choice" name="resultado_us" id="17751" weight="1" value="0.0">
+        <option description="Negativo"/>
+        <option description="Positivo" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18066" type="Receita" type_verbose="Receita" url="" name="Receita" description="&lt;p>&lt;strong>Se paciente est&amp;aacute;vel hemodinamicamente, com baixo risco de sangramento, sem insufici&amp;ecirc;ncia renal e com compreens&amp;atilde;o do tratamento anticoagulante, realizar tratamento ambulatorial:&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Xarelto 15mg, 01 comprimido, via oral de 12/12h por 21 dias. Ap&amp;oacute;s os 21 dias, utilizar&amp;nbsp;Xarelto 20mg, 01 comprimido ao dia, via oral&amp;nbsp;(durante o per&amp;iacute;odo que o vascular orientar) &lt;strong>OU&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>Varfarina 5mg, 01 comprimido, via oral, 1x/dia (nos pacientes com Cl Cr &amp;lt;30)&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>Marcar consulta com cirurgi&amp;atilde;o vascular para avalia&amp;ccedil;&amp;atilde;o do tempo de tratamento e rastreios cl&amp;iacute;nicos&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O: SE PACIENTE OPTAR PELO USO DA VARFARINA, ORIENTAR REALIZAR EXAME DE TAP/INR COM 1 SEMANA PARA REAVALIA&amp;Ccedil;&amp;Atilde;O DA DOSE (META INR ENTRE 2 E 3).&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="4732" url="" name="XARELTO 15MG COMP 1 UD" med_code="171050" presentation="COMP" access="1" quantity="1" period="21" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4733" url="" name="XARELTO 20MG COMP 1 UD" med_code="168803" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Ap&#xf3;s os 21 dias, durante _____ dias"/>
+    <item id="4734" url="" name="VARFARINA 5MG" med_code="-1" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="18067" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhar protocolo de TEP" description="" isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>H055</pathways>
+  </element>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="18068" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (protocolo TEP)" description="protocolo TEP">
+    <operation name="protocolo TEP" Operator="affirmation" id="17782">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tep" id="17743" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="18069" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (baixo risco)" description="TVP com baixo risco">
+    <operation name="baixo risco" Operator="and" id="17783">
+      <operand xsi:type="pathwayMetamodel:Operation" name="wells_zero" Operator="equal" id="17781">
+        <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17742" weight="1" value="0.0">
+          <option description="Diagn&#xf3;stico diferencial alternativo mais prov&#xe1;vel" weight="-2"/>
+          <option description="C&#xe2;ncer em atividade (em tratamento nos &#xfa;ltimos 6 meses)" weight="1"/>
+          <option description="Paralisia, paresia ou imobiliza&#xe7;&#xe3;o recente dos membros inferiores" weight="1"/>
+          <option description="Acamado recentemente por no m&#xed;nimo 3 dias ou cirurgia de grande porte nas &#xfa;ltimas 12 semanas que necessitou de anestesia geral ou regional" weight="1"/>
+          <option description="Incha&#xe7;o em toda perna" weight="1"/>
+          <option description="Incha&#xe7;o na panturrilha maior que 3 cm de di&#xe2;metro em rela&#xe7;&#xe3;o a perna normal" weight="1"/>
+          <option description="Edema depress&#xed;vel (cacifo) maior na perna afetada (unilateral)" weight="1"/>
+          <option description="Veias colaterais superficiais" weight="1"/>
+          <option description="Parestesia ao longo da distribui&#xe7;&#xe3;o do sistema venoso profundo" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="0" id="17753" weight="1" value="0.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem_tep" id="17754">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="tep" id="17743" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="18070" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="18071" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (D-d&#xed;mero negativo)" description="D-d&#xed;mero negativo">
+    <operation name="D-d&#xed;mero negativo" Operator="lessThan" id="17784">
+      <operand xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17744" weight="1" value="0.0">
+        <option description="D-d&#xed;mero negativo (&lt; 500 ng/mL)"/>
+        <option description="D-d&#xed;mero positivo (> 500 ng/mL)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="18072" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (D-d&#xed;mero positivo)" description="D-d&#xed;mero positivo">
+    <operation name="D-d&#xed;mero positivo" Operator="equal" id="17785">
+      <operand xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17744" weight="1" value="0.0">
+        <option description="D-d&#xed;mero negativo (&lt; 500 ng/mL)"/>
+        <option description="D-d&#xed;mero positivo (> 500 ng/mL)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="18073" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.5" id="18074" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (US negativo)" description="US negativo">
+    <operation name="US negativo" Operator="lessThan" id="17786">
+      <operand xsi:type="pathwayMetamodel:Choice" name="res_us" id="17745" weight="1" value="0.0">
+        <option description="Negativo"/>
+        <option description="Positivo" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="18075" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (US Positivo)" description="US Positivo">
+    <operation name="US Positivo" Operator="equal" id="17787">
+      <operand xsi:type="pathwayMetamodel:Choice" name="res_us" id="17745" weight="1" value="0.0">
+        <option description="Negativo"/>
+        <option description="Positivo" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="18076" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="18077" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (com condi&#xe7;&#xf5;es)" description="com condi&#xe7;&#xf5;es">
+    <operation name="com condi&#xe7;&#xf5;es" Operator="or" id="17788">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="TVP_maci&#xe7;o" id="17746" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="embolia_pulmonar" id="17747" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_terapia_anticoagulante" id="17748" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades" id="17749" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="18078" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (sem condi&#xe7;&#xf5;es)" description="sem condi&#xe7;&#xf5;es">
+    <operation name="sem condi&#xe7;&#xf5;es" Operator="and" id="17789">
+      <operand xsi:type="pathwayMetamodel:Operation" name="TVP_maci&#xe7;o_nao" id="17757">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="TVP_maci&#xe7;o" id="17746" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="embolia_pulmonar_nao" id="17758">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="embolia_pulmonar" id="17747" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="risco_terapia_anticoagulante_nao" id="17759">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_terapia_anticoagulante" id="17748" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="comorbidades_nao" id="17760">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades" id="17749" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="18079" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (com contra-indica&#xe7;&#xe3;o)" description="com contra-indica&#xe7;&#xe3;o">
+    <operation name="com contra-indica&#xe7;&#xe3;o" Operator="greaterOrEqual" id="17790">
+      <operand xsi:type="pathwayMetamodel:Choice" name="contra_indicacoes_anticoagulante" id="17750" weight="1" value="0.0">
+        <option description="Hist&#xf3;ria de hemorragia intracraniana, particularmente recente" weight="1"/>
+        <option description="Trauma maior" weight="1"/>
+        <option description="Di&#xe1;tese hemorr&#xe1;gica grave" weight="1"/>
+        <option description="Sangramento ativo" weight="1"/>
+        <option description="Cirurgia / procedimento de risco de sangramento recente, planejado ou de emerg&#xea;ncia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.9" id="18080" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (sem contra-indica&#xe7;&#xf5;es)" description="sem contra-indica&#xe7;&#xf5;es">
+    <operation name="sem contra-indica&#xe7;&#xf5;es" Operator="lessThan" id="17791">
+      <operand xsi:type="pathwayMetamodel:Choice" name="contra_indicacoes_anticoagulante" id="17750" weight="1" value="0.0">
+        <option description="Hist&#xf3;ria de hemorragia intracraniana, particularmente recente" weight="1"/>
+        <option description="Trauma maior" weight="1"/>
+        <option description="Di&#xe1;tese hemorr&#xe1;gica grave" weight="1"/>
+        <option description="Sangramento ativo" weight="1"/>
+        <option description="Cirurgia / procedimento de risco de sangramento recente, planejado ou de emerg&#xea;ncia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.0" id="18081" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (moderado ou alto risco)" description="moderado ou alto risco">
+    <operation name="moderado ou alto risco" Operator="and" id="17792">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem_tep" id="17754">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="tep" id="17743" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="wells_maior_1" Operator="greaterOrEqual" id="17756">
+        <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17742" weight="1" value="0.0">
+          <option description="Diagn&#xf3;stico diferencial alternativo mais prov&#xe1;vel" weight="-2"/>
+          <option description="C&#xe2;ncer em atividade (em tratamento nos &#xfa;ltimos 6 meses)" weight="1"/>
+          <option description="Paralisia, paresia ou imobiliza&#xe7;&#xe3;o recente dos membros inferiores" weight="1"/>
+          <option description="Acamado recentemente por no m&#xed;nimo 3 dias ou cirurgia de grande porte nas &#xfa;ltimas 12 semanas que necessitou de anestesia geral ou regional" weight="1"/>
+          <option description="Incha&#xe7;o em toda perna" weight="1"/>
+          <option description="Incha&#xe7;o na panturrilha maior que 3 cm de di&#xe2;metro em rela&#xe7;&#xe3;o a perna normal" weight="1"/>
+          <option description="Edema depress&#xed;vel (cacifo) maior na perna afetada (unilateral)" weight="1"/>
+          <option description="Veias colaterais superficiais" weight="1"/>
+          <option description="Parestesia ao longo da distribui&#xe7;&#xe3;o do sistema venoso profundo" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="18082" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.12" id="18083" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (Ultrassom negativo)" description="Ultrassom negativo">
+    <operation name="Ultrassom negativo" Operator="lessThan" id="17793">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_us" id="17751" weight="1" value="0.0">
+        <option description="Negativo"/>
+        <option description="Positivo" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.12" id="18084" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (Ultrassom positivo)" description="Ultrassom positivo">
+    <operation name="Ultrassom positivo" Operator="equal" id="17794">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resultado_us" id="17751" weight="1" value="0.0">
+        <option description="Negativo"/>
+        <option description="Positivo" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="sem_tep" id="17754">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="tep" id="17743" weight="1" value="false"/>
+  </operation>
+  <operation name="wells_menor_1" Operator="lessThan" id="17755">
+    <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17742" weight="1" value="0.0">
+      <option description="Diagn&#xf3;stico diferencial alternativo mais prov&#xe1;vel" weight="-2"/>
+      <option description="C&#xe2;ncer em atividade (em tratamento nos &#xfa;ltimos 6 meses)" weight="1"/>
+      <option description="Paralisia, paresia ou imobiliza&#xe7;&#xe3;o recente dos membros inferiores" weight="1"/>
+      <option description="Acamado recentemente por no m&#xed;nimo 3 dias ou cirurgia de grande porte nas &#xfa;ltimas 12 semanas que necessitou de anestesia geral ou regional" weight="1"/>
+      <option description="Incha&#xe7;o em toda perna" weight="1"/>
+      <option description="Incha&#xe7;o na panturrilha maior que 3 cm de di&#xe2;metro em rela&#xe7;&#xe3;o a perna normal" weight="1"/>
+      <option description="Edema depress&#xed;vel (cacifo) maior na perna afetada (unilateral)" weight="1"/>
+      <option description="Veias colaterais superficiais" weight="1"/>
+      <option description="Parestesia ao longo da distribui&#xe7;&#xe3;o do sistema venoso profundo" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+  </operation>
+  <operation name="wells_maior_1" Operator="greaterOrEqual" id="17756">
+    <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17742" weight="1" value="0.0">
+      <option description="Diagn&#xf3;stico diferencial alternativo mais prov&#xe1;vel" weight="-2"/>
+      <option description="C&#xe2;ncer em atividade (em tratamento nos &#xfa;ltimos 6 meses)" weight="1"/>
+      <option description="Paralisia, paresia ou imobiliza&#xe7;&#xe3;o recente dos membros inferiores" weight="1"/>
+      <option description="Acamado recentemente por no m&#xed;nimo 3 dias ou cirurgia de grande porte nas &#xfa;ltimas 12 semanas que necessitou de anestesia geral ou regional" weight="1"/>
+      <option description="Incha&#xe7;o em toda perna" weight="1"/>
+      <option description="Incha&#xe7;o na panturrilha maior que 3 cm de di&#xe2;metro em rela&#xe7;&#xe3;o a perna normal" weight="1"/>
+      <option description="Edema depress&#xed;vel (cacifo) maior na perna afetada (unilateral)" weight="1"/>
+      <option description="Veias colaterais superficiais" weight="1"/>
+      <option description="Parestesia ao longo da distribui&#xe7;&#xe3;o do sistema venoso profundo" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+  </operation>
+  <operation name="TVP_maci&#xe7;o_nao" id="17757">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="TVP_maci&#xe7;o" id="17746" weight="1" value="false"/>
+  </operation>
+  <operation name="embolia_pulmonar_nao" id="17758">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="embolia_pulmonar" id="17747" weight="1" value="false"/>
+  </operation>
+  <operation name="risco_terapia_anticoagulante_nao" id="17759">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_terapia_anticoagulante" id="17748" weight="1" value="false"/>
+  </operation>
+  <operation name="comorbidades_nao" id="17760">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades" id="17749" weight="1" value="false"/>
+  </operation>
+  <operation name="wells_zero" Operator="equal" id="17781">
+    <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17742" weight="1" value="0.0">
+      <option description="Diagn&#xf3;stico diferencial alternativo mais prov&#xe1;vel" weight="-2"/>
+      <option description="C&#xe2;ncer em atividade (em tratamento nos &#xfa;ltimos 6 meses)" weight="1"/>
+      <option description="Paralisia, paresia ou imobiliza&#xe7;&#xe3;o recente dos membros inferiores" weight="1"/>
+      <option description="Acamado recentemente por no m&#xed;nimo 3 dias ou cirurgia de grande porte nas &#xfa;ltimas 12 semanas que necessitou de anestesia geral ou regional" weight="1"/>
+      <option description="Incha&#xe7;o em toda perna" weight="1"/>
+      <option description="Incha&#xe7;o na panturrilha maior que 3 cm de di&#xe2;metro em rela&#xe7;&#xe3;o a perna normal" weight="1"/>
+      <option description="Edema depress&#xed;vel (cacifo) maior na perna afetada (unilateral)" weight="1"/>
+      <option description="Veias colaterais superficiais" weight="1"/>
+      <option description="Parestesia ao longo da distribui&#xe7;&#xe3;o do sistema venoso profundo" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="0" id="17753" weight="1" value="0.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17742" weight="1" value="0.0">
+    <option description="Diagn&#xf3;stico diferencial alternativo mais prov&#xe1;vel" weight="-2"/>
+    <option description="C&#xe2;ncer em atividade (em tratamento nos &#xfa;ltimos 6 meses)" weight="1"/>
+    <option description="Paralisia, paresia ou imobiliza&#xe7;&#xe3;o recente dos membros inferiores" weight="1"/>
+    <option description="Acamado recentemente por no m&#xed;nimo 3 dias ou cirurgia de grande porte nas &#xfa;ltimas 12 semanas que necessitou de anestesia geral ou regional" weight="1"/>
+    <option description="Incha&#xe7;o em toda perna" weight="1"/>
+    <option description="Incha&#xe7;o na panturrilha maior que 3 cm de di&#xe2;metro em rela&#xe7;&#xe3;o a perna normal" weight="1"/>
+    <option description="Edema depress&#xed;vel (cacifo) maior na perna afetada (unilateral)" weight="1"/>
+    <option description="Veias colaterais superficiais" weight="1"/>
+    <option description="Parestesia ao longo da distribui&#xe7;&#xe3;o do sistema venoso profundo" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tep" id="17743" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17744" weight="1" value="0.0">
+    <option description="D-d&#xed;mero negativo (&lt; 500 ng/mL)"/>
+    <option description="D-d&#xed;mero positivo (> 500 ng/mL)" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="res_us" id="17745" weight="1" value="0.0">
+    <option description="Negativo"/>
+    <option description="Positivo" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="TVP_maci&#xe7;o" id="17746" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="embolia_pulmonar" id="17747" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_terapia_anticoagulante" id="17748" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades" id="17749" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="contra_indicacoes_anticoagulante" id="17750" weight="1" value="0.0">
+    <option description="Hist&#xf3;ria de hemorragia intracraniana, particularmente recente" weight="1"/>
+    <option description="Trauma maior" weight="1"/>
+    <option description="Di&#xe1;tese hemorr&#xe1;gica grave" weight="1"/>
+    <option description="Sangramento ativo" weight="1"/>
+    <option description="Cirurgia / procedimento de risco de sangramento recente, planejado ou de emerg&#xea;ncia" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="resultado_us" id="17751" weight="1" value="0.0">
+    <option description="Negativo"/>
+    <option description="Positivo" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17752" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="0" id="17753" weight="1" value="0.0"/>
+</pathwayMetamodel:Pathway>

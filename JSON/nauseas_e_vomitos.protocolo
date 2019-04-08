@@ -1,0 +1,2839 @@
+{
+    "id": 3269,
+    "url": "",
+    "codigo": "H029",
+    "nome": "N\u00e1useas e V\u00f4mitos",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 282,
+    "versao": 6,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:48:55.682925-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:46:34.305893-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:49:16.710601-03:00"
+    },
+    "elementos": [
+        {
+            "id": 19138,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Ingest\u00e3o \u00c1lcool] Conduta (com glicose)",
+            "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais, glicemia capilar. Se n&atilde;o houver sinais de alarme, realizar medica&ccedil;&atilde;o endovenosa e alta hospitalar .</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "GLICEMIA P/ FITA",
+                    "exame": "99011973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Para ingest\u00e3o de \u00e1lcool",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9799,
+                    "url": "",
+                    "medicamento": 48593,
+                    "codigo": "",
+                    "nome": "GLICOSE 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 10,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9800,
+                    "url": "",
+                    "medicamento": 43826,
+                    "codigo": "",
+                    "nome": "SORO GLICOFISIOLOGIC 1:1 500ML TUBO 500 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9941,
+                    "url": "",
+                    "medicamento": 41564,
+                    "codigo": "",
+                    "nome": "PLAMET 10MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 3954,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1ml = 5 mg",
+                        "codigo_principio_ativo": 482,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9942,
+                    "url": "",
+                    "medicamento": 126122,
+                    "codigo": "",
+                    "nome": "DRAMIN B6 DL IV AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 3955,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Lento",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 10,
+                        "quantidade_dosagem": 1000,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9943,
+                    "url": "",
+                    "medicamento": 39144,
+                    "codigo": "",
+                    "nome": "ANTAK AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": {
+                        "id": 3956,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "2 ml + 18 ml AD",
+                        "codigo_principio_ativo": 2048,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19475,
+                    "url": "",
+                    "nome": "S16 (glicemia < 70)",
+                    "descricao": "glicemia < 70",
+                    "passo_de_saida_id": 19455,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Glicemia",
+                    "passo_de_entrada_id": 19138,
+                    "passo_de_entrada": "Tratamento: [Ingest\u00e3o \u00c1lcool] Conduta (com glicose)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19139,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Hiperemese Gravidica] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Aventar para possibilidade de hipotens\u00e3o na gestante e dor abdominal, devendo-se discutir com l\u00edder local em caso de altera\u00e7\u00f5es.",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5112,
+                    "url": "",
+                    "nome": "Vonau Flash 4mg ... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se n\u00e1usea ou v\u00f4mitos.",
+                    "ordem": 1
+                },
+                {
+                    "id": 5113,
+                    "url": "",
+                    "nome": "Meclin 25mg ..... 1 cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se n\u00e1usea ou v\u00f4mitos.",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19476,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19457,
+                    "passo_de_saida": "Tratamento: [Hiperemese Gravidica] Tratamento",
+                    "passo_de_entrada_id": 19139,
+                    "passo_de_entrada": "Receita: [Hiperemese Gravidica] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19140,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Realizar anamnese completa",
+            "descricao": "<p><span style=\"font-size:18px\">Realizar anamnese completa, identificando os sintomas associados ao quadro de n&aacute;useas/v&ocirc;mitos.</span></p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 19460,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19140,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Realizar anamnese completa",
+                    "passo_de_entrada_id": 19441,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19441,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Sintomas do Paciente",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T16:48:55.682925-03:00"
+            },
+            "perguntas": [
+                {
+                    "id": 9812,
+                    "url": "",
+                    "texto": "Cefaleia + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19062,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "cefaleia_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9813,
+                    "url": "",
+                    "texto": "Dor abdominal + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19063,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dor_abdominal_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 6
+                },
+                {
+                    "id": 9814,
+                    "url": "",
+                    "texto": "Dor ou desconforto tor\u00e1cico + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19064,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dor_toracico_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 9815,
+                    "url": "",
+                    "texto": "Diarreia + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19065,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "diarreia_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9816,
+                    "url": "",
+                    "texto": "Dor lombar + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19066,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dor_lombar_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9817,
+                    "url": "",
+                    "texto": "Tontura + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19067,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "tontura_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9818,
+                    "url": "",
+                    "texto": "Paciente em tratamento quimioter\u00e1pico + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19068,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "tratamento_quimioterapico_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9819,
+                    "url": "",
+                    "texto": "Ingest\u00e3o \u00e1lcool + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19069,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ingestao_alcool_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 9820,
+                    "url": "",
+                    "texto": "Paciente cardiopata em uso de digoxina + n\u00e1useas ou v\u00f4mitos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19070,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "cardiopata_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 9901,
+                    "url": "",
+                    "texto": "N\u00e1useas ou v\u00f4mitos SEM CAUSA APARENTE ou POR SUSPEITA SIMPLES como causas alimentares, efeitos adversos de medica\u00e7\u00f5es, v\u00f4mito em epis\u00f3dio \u00fanico e isolado.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19071,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sem_causa_aparente_nauseas_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                },
+                {
+                    "id": 9902,
+                    "url": "",
+                    "texto": "Hiper\u00eamese grav\u00eddica",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19072,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiperemese_gravidica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 15
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19460,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19140,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Realizar anamnese completa",
+                    "passo_de_entrada_id": 19441,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19458,
+                    "url": "",
+                    "nome": "S18 (Hiper\u00eamese Grav\u00eddica)",
+                    "descricao": "Hiper\u00eamese Grav\u00eddica",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19457,
+                    "passo_de_entrada": "Tratamento: [Hiperemese Gravidica] Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19461,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19442,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Cefal\u00e9ia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19462,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19443,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Dor Abdominal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19463,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19444,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Dor Tor\u00e1cica",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19464,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19445,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Diarr\u00e9ia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19465,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19446,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Dor Lombar",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19466,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19447,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Tontura",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19467,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19448,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Atentar para sinais de alarme",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19470,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19451,
+                    "passo_de_entrada": "Tratamento: [Ingest\u00e3o \u00c1lcool] Glicemia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19471,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19452,
+                    "passo_de_entrada": "Tratamento: [Paciente Cardiopata] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19473,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19454,
+                    "passo_de_entrada": "Tratamento: [N\u00e1useas e V\u00f4mitos sem causa aparente] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19442,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Iniciar Protocolo de Cefal\u00e9ia",
+            "descricao": "<h3><span style=\"font-size:16px\">Iniciar Protocolo de Cefal&eacute;ia</span></h3>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H018"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19461,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19442,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Cefal\u00e9ia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19443,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Iniciar Protocolo de Dor Abdominal",
+            "descricao": "<p><span style=\"font-size:16px\">Iniciar Protocolo de Dor Abdominal</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H022"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19462,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19443,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Dor Abdominal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19444,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Iniciar Protocolo de Dor Tor\u00e1cica",
+            "descricao": "<p><span style=\"font-size:16px\">Iniciar Protocolo de Dor Tor&aacute;cica</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H020"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19463,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19444,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Dor Tor\u00e1cica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19445,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Iniciar Protocolo de Diarr\u00e9ia",
+            "descricao": "<p><span style=\"font-size:16px\">Iniciar Protocolo de Diarr&eacute;ia</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H017"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19464,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19445,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Diarr\u00e9ia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19446,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Iniciar Protocolo de Dor Lombar",
+            "descricao": "<h3><span style=\"font-size:16px\">Iniciar Protocolo de Dor Lombar</span></h3>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H019"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19465,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19446,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Dor Lombar",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19447,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Iniciar Protocolo de Tontura",
+            "descricao": "<h3><span style=\"font-size:16px\">Iniciar Protocolo de Tontura</span></h3>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H025"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19466,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19447,
+                    "passo_de_entrada": "Encaminhamento: Iniciar Protocolo de Tontura",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19448,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Atentar para sinais de alarme",
+            "descricao": "<p><span style=\"font-size:16px\">Atentar para sinais de alarme, como desidrata&ccedil;&atilde;o, hipoperfus&atilde;o e excluir diagn&oacute;sticos diferenciais como obstru&ccedil;&atilde;o intestinal maligna, met&aacute;stase em SNC, gastroenterite.</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19467,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19448,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Atentar para sinais de alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19468,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19448,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Atentar para sinais de alarme",
+                    "passo_de_entrada_id": 19449,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19449,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "N\u00e1useas / V\u00f4mitos",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "N\u00e1useas / V\u00f4mitos",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "N\u00e1useas / V\u00f4mitos",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "N\u00e1useas / V\u00f4mitos",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "N\u00e1useas / V\u00f4mitos",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9944,
+                    "url": "",
+                    "medicamento": 41564,
+                    "codigo": "",
+                    "nome": "PLAMET 10MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3957,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1ml = 5 mg",
+                        "codigo_principio_ativo": 482,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9945,
+                    "url": "",
+                    "medicamento": 126122,
+                    "codigo": "",
+                    "nome": "DRAMIN B6 DL IV AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3958,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Lento",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 10,
+                        "quantidade_dosagem": 1000,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19468,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19448,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Atentar para sinais de alarme",
+                    "passo_de_entrada_id": 19449,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19469,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19449,
+                    "passo_de_saida": "Tratamento: Solicitar Exames",
+                    "passo_de_entrada_id": 19450,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19450,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com L\u00edder Local",
+            "descricao": "<p><span style=\"font-size:16px\">Discutir com l&iacute;der local, ap&oacute;s resultado de exames, necessidade de internamento hospitalar .</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19469,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19449,
+                    "passo_de_saida": "Tratamento: Solicitar Exames",
+                    "passo_de_entrada_id": 19450,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19451,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Ingest\u00e3o \u00c1lcool] Glicemia",
+            "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais, glicemia capilar. Se n&atilde;o houver sinais de alarme, realizar medica&ccedil;&atilde;o endovenosa e alta hospitalar .</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "GLICEMIA P/ FITA",
+                    "exame": "99011973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Para ingest\u00e3o de \u00e1lcool",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19470,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19451,
+                    "passo_de_entrada": "Tratamento: [Ingest\u00e3o \u00c1lcool] Glicemia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19474,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19451,
+                    "passo_de_saida": "Tratamento: [Ingest\u00e3o \u00c1lcool] Glicemia",
+                    "passo_de_entrada_id": 19455,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Glicemia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19452,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Paciente Cardiopata] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais </span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "ELETROCARDIOGRAMA (ECG)",
+                    "exame": "75130050",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "DIGOXINA",
+                    "exame": "28010698",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente Cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA VENOSA",
+                    "exame": "28011759",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente cardiopata",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9946,
+                    "url": "",
+                    "medicamento": 41564,
+                    "codigo": "",
+                    "nome": "PLAMET 10MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3959,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1ml = 5 mg",
+                        "codigo_principio_ativo": 482,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9947,
+                    "url": "",
+                    "medicamento": 126122,
+                    "codigo": "",
+                    "nome": "DRAMIN B6 DL IV AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3960,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Lento",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 10,
+                        "quantidade_dosagem": 1000,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19471,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19452,
+                    "passo_de_entrada": "Tratamento: [Paciente Cardiopata] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19472,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19452,
+                    "passo_de_saida": "Tratamento: [Paciente Cardiopata] Conduta",
+                    "passo_de_entrada_id": 19453,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Paciente Cardiopata] Discutir ECG",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19453,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Paciente Cardiopata] Discutir ECG",
+            "descricao": "<p><span style=\"font-size:18px\">Discutir ECG com cardiologista da emerg&ecirc;ncia </span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19472,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19452,
+                    "passo_de_saida": "Tratamento: [Paciente Cardiopata] Conduta",
+                    "passo_de_entrada_id": 19453,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Paciente Cardiopata] Discutir ECG",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19454,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[N\u00e1useas e V\u00f4mitos sem causa aparente] Conduta",
+            "descricao": "<p>Realizar medica&ccedil;&otilde;es e observar quadro cl&iacute;nico do paciente. Se n&atilde;o houver melhora, indica-se discutir causas com l&iacute;der local e reavaliar se h&aacute; necessidade de maior avalia&ccedil;&atilde;o.</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9948,
+                    "url": "",
+                    "medicamento": 41564,
+                    "codigo": "",
+                    "nome": "PLAMET 10MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9949,
+                    "url": "",
+                    "medicamento": 40088,
+                    "codigo": "",
+                    "nome": "DRAMIN B6  IM AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19473,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19454,
+                    "passo_de_entrada": "Tratamento: [N\u00e1useas e V\u00f4mitos sem causa aparente] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19455,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Glicemia",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9903,
+                    "url": "",
+                    "texto": "Glicemia < 70?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19073,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "glicemia_abaixo_de_70",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19474,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19451,
+                    "passo_de_saida": "Tratamento: [Ingest\u00e3o \u00c1lcool] Glicemia",
+                    "passo_de_entrada_id": 19455,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Glicemia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19459,
+                    "url": "",
+                    "nome": "S17 (glicemia >= 70)",
+                    "descricao": "glicemia >= 70",
+                    "passo_de_saida_id": 19455,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Glicemia",
+                    "passo_de_entrada_id": 19456,
+                    "passo_de_entrada": "Tratamento: [Ingest\u00e3o \u00c1lcool] Conduta (sem glicose)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19475,
+                    "url": "",
+                    "nome": "S16 (glicemia < 70)",
+                    "descricao": "glicemia < 70",
+                    "passo_de_saida_id": 19455,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Glicemia",
+                    "passo_de_entrada_id": 19138,
+                    "passo_de_entrada": "Tratamento: [Ingest\u00e3o \u00c1lcool] Conduta (com glicose)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19456,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Ingest\u00e3o \u00c1lcool] Conduta (sem glicose)",
+            "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais, glicemia capilar. Se n&atilde;o houver sinais de alarme, realizar medica&ccedil;&atilde;o endovenosa e alta hospitalar .</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "GLICEMIA P/ FITA",
+                    "exame": "99011973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Para ingest\u00e3o de \u00e1lcool",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9950,
+                    "url": "",
+                    "medicamento": 43826,
+                    "codigo": "",
+                    "nome": "SORO GLICOFISIOLOGIC 1:1 500ML TUBO 500 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9951,
+                    "url": "",
+                    "medicamento": 41564,
+                    "codigo": "",
+                    "nome": "PLAMET 10MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 4101,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1ml = 5 mg",
+                        "codigo_principio_ativo": 482,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9952,
+                    "url": "",
+                    "medicamento": 126122,
+                    "codigo": "",
+                    "nome": "DRAMIN B6 DL IV AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 4102,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Lento",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 10,
+                        "quantidade_dosagem": 1000,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9953,
+                    "url": "",
+                    "medicamento": 39144,
+                    "codigo": "",
+                    "nome": "ANTAK AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 4103,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "2 ml + 18 ml AD",
+                        "codigo_principio_ativo": 2048,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19459,
+                    "url": "",
+                    "nome": "S17 (glicemia >= 70)",
+                    "descricao": "glicemia >= 70",
+                    "passo_de_saida_id": 19455,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Glicemia",
+                    "passo_de_entrada_id": 19456,
+                    "passo_de_entrada": "Tratamento: [Ingest\u00e3o \u00c1lcool] Conduta (sem glicose)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19457,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Hiperemese Gravidica] Tratamento",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9954,
+                    "url": "",
+                    "medicamento": 126122,
+                    "codigo": "",
+                    "nome": "DRAMIN B6 DL IV AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 10,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 4104,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Infusao ev",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9955,
+                    "url": "",
+                    "medicamento": 40088,
+                    "codigo": "",
+                    "nome": "DRAMIN B6  IM AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19458,
+                    "url": "",
+                    "nome": "S18 (Hiper\u00eamese Grav\u00eddica)",
+                    "descricao": "Hiper\u00eamese Grav\u00eddica",
+                    "passo_de_saida_id": 19441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sintomas do Paciente",
+                    "passo_de_entrada_id": 19457,
+                    "passo_de_entrada": "Tratamento: [Hiperemese Gravidica] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19476,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19457,
+                    "passo_de_saida": "Tratamento: [Hiperemese Gravidica] Tratamento",
+                    "passo_de_entrada_id": 19139,
+                    "passo_de_entrada": "Receita: [Hiperemese Gravidica] Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19458,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18 (Hiper\u00eamese Grav\u00eddica)",
+            "descricao": "Hiper\u00eamese Grav\u00eddica",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19457,
+            "passo_de_entrada": {
+                "id": 19457,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Hiperemese Gravidica] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19075,
+                "nome": "Hiper\u00eamese Grav\u00eddica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19072
+                ],
+                "argumentos": [
+                    "hiperemese_gravidica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19459,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (glicemia >= 70)",
+            "descricao": "glicemia >= 70",
+            "passo_de_saida_id": 19455,
+            "passo_de_saida": {
+                "id": 19455,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Glicemia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19456,
+            "passo_de_entrada": {
+                "id": 19456,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Ingest\u00e3o \u00c1lcool] Conduta (sem glicose)",
+                "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais, glicemia capilar. Se n&atilde;o houver sinais de alarme, realizar medica&ccedil;&atilde;o endovenosa e alta hospitalar .</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19076,
+                "nome": "glicemia >= 70",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19073
+                ],
+                "argumentos": [
+                    "glicemia_abaixo_de_70"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19460,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "-",
+            "passo_de_saida_id": 19140,
+            "passo_de_saida": {
+                "id": 19140,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar anamnese completa",
+                "descricao": "<p><span style=\"font-size:18px\">Realizar anamnese completa, identificando os sintomas associados ao quadro de n&aacute;useas/v&ocirc;mitos.</span></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19441,
+            "passo_de_entrada": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19461,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19442,
+            "passo_de_entrada": {
+                "id": 19442,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Iniciar Protocolo de Cefal\u00e9ia",
+                "descricao": "<h3><span style=\"font-size:16px\">Iniciar Protocolo de Cefal&eacute;ia</span></h3>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    121
+                ]
+            },
+            "operacao": {
+                "id": 19077,
+                "nome": "Cefaleia",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19062
+                ],
+                "argumentos": [
+                    "cefaleia_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19462,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19443,
+            "passo_de_entrada": {
+                "id": 19443,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Iniciar Protocolo de Dor Abdominal",
+                "descricao": "<p><span style=\"font-size:16px\">Iniciar Protocolo de Dor Abdominal</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    201
+                ]
+            },
+            "operacao": {
+                "id": 19078,
+                "nome": "Dor_abdominal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19063
+                ],
+                "argumentos": [
+                    "dor_abdominal_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19463,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19444,
+            "passo_de_entrada": {
+                "id": 19444,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Iniciar Protocolo de Dor Tor\u00e1cica",
+                "descricao": "<p><span style=\"font-size:16px\">Iniciar Protocolo de Dor Tor&aacute;cica</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    181
+                ]
+            },
+            "operacao": {
+                "id": 19079,
+                "nome": "Dor_toracica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19064
+                ],
+                "argumentos": [
+                    "dor_toracico_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19464,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19445,
+            "passo_de_entrada": {
+                "id": 19445,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Iniciar Protocolo de Diarr\u00e9ia",
+                "descricao": "<p><span style=\"font-size:16px\">Iniciar Protocolo de Diarr&eacute;ia</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    101
+                ]
+            },
+            "operacao": {
+                "id": 19080,
+                "nome": "Diarreia",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19065
+                ],
+                "argumentos": [
+                    "diarreia_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19465,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19446,
+            "passo_de_entrada": {
+                "id": 19446,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Iniciar Protocolo de Dor Lombar",
+                "descricao": "<h3><span style=\"font-size:16px\">Iniciar Protocolo de Dor Lombar</span></h3>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    161
+                ]
+            },
+            "operacao": {
+                "id": 19161,
+                "nome": "Dor_lombar",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19066
+                ],
+                "argumentos": [
+                    "dor_lombar_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19466,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19447,
+            "passo_de_entrada": {
+                "id": 19447,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Iniciar Protocolo de Tontura",
+                "descricao": "<h3><span style=\"font-size:16px\">Iniciar Protocolo de Tontura</span></h3>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    221
+                ]
+            },
+            "operacao": {
+                "id": 19162,
+                "nome": "Tontura",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19067
+                ],
+                "argumentos": [
+                    "tontura_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19467,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19448,
+            "passo_de_entrada": {
+                "id": 19448,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atentar para sinais de alarme",
+                "descricao": "<p><span style=\"font-size:16px\">Atentar para sinais de alarme, como desidrata&ccedil;&atilde;o, hipoperfus&atilde;o e excluir diagn&oacute;sticos diferenciais como obstru&ccedil;&atilde;o intestinal maligna, met&aacute;stase em SNC, gastroenterite.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19163,
+                "nome": "Tratamento_quimioterapico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19068
+                ],
+                "argumentos": [
+                    "tratamento_quimioterapico_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19468,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "-",
+            "passo_de_saida_id": 19448,
+            "passo_de_saida": {
+                "id": 19448,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atentar para sinais de alarme",
+                "descricao": "<p><span style=\"font-size:16px\">Atentar para sinais de alarme, como desidrata&ccedil;&atilde;o, hipoperfus&atilde;o e excluir diagn&oacute;sticos diferenciais como obstru&ccedil;&atilde;o intestinal maligna, met&aacute;stase em SNC, gastroenterite.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19449,
+            "passo_de_entrada": {
+                "id": 19449,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19469,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "-",
+            "passo_de_saida_id": 19449,
+            "passo_de_saida": {
+                "id": 19449,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19450,
+            "passo_de_entrada": {
+                "id": 19450,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com L\u00edder Local",
+                "descricao": "<p><span style=\"font-size:16px\">Discutir com l&iacute;der local, ap&oacute;s resultado de exames, necessidade de internamento hospitalar .</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19470,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19451,
+            "passo_de_entrada": {
+                "id": 19451,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Ingest\u00e3o \u00c1lcool] Glicemia",
+                "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais, glicemia capilar. Se n&atilde;o houver sinais de alarme, realizar medica&ccedil;&atilde;o endovenosa e alta hospitalar .</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19164,
+                "nome": "Ingest\u00e3o_Alcool",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19069
+                ],
+                "argumentos": [
+                    "ingestao_alcool_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19471,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19452,
+            "passo_de_entrada": {
+                "id": 19452,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Paciente Cardiopata] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais </span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19165,
+                "nome": "Cardiopata",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19070
+                ],
+                "argumentos": [
+                    "cardiopata_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19472,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "-",
+            "passo_de_saida_id": 19452,
+            "passo_de_saida": {
+                "id": 19452,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Paciente Cardiopata] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais </span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19453,
+            "passo_de_entrada": {
+                "id": 19453,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Paciente Cardiopata] Discutir ECG",
+                "descricao": "<p><span style=\"font-size:18px\">Discutir ECG com cardiologista da emerg&ecirc;ncia </span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19473,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14",
+            "descricao": "-",
+            "passo_de_saida_id": 19441,
+            "passo_de_saida": {
+                "id": 19441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sintomas do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:48:55.682925-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19454,
+            "passo_de_entrada": {
+                "id": 19454,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[N\u00e1useas e V\u00f4mitos sem causa aparente] Conduta",
+                "descricao": "<p>Realizar medica&ccedil;&otilde;es e observar quadro cl&iacute;nico do paciente. Se n&atilde;o houver melhora, indica-se discutir causas com l&iacute;der local e reavaliar se h&aacute; necessidade de maior avalia&ccedil;&atilde;o.</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19166,
+                "nome": "Sem_causas_aparentes",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19071
+                ],
+                "argumentos": [
+                    "sem_causa_aparente_nauseas_vomitos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19474,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19451,
+            "passo_de_saida": {
+                "id": 19451,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Ingest\u00e3o \u00c1lcool] Glicemia",
+                "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais, glicemia capilar. Se n&atilde;o houver sinais de alarme, realizar medica&ccedil;&atilde;o endovenosa e alta hospitalar .</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19455,
+            "passo_de_entrada": {
+                "id": 19455,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Glicemia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19475,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (glicemia < 70)",
+            "descricao": "glicemia < 70",
+            "passo_de_saida_id": 19455,
+            "passo_de_saida": {
+                "id": 19455,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Glicemia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19138,
+            "passo_de_entrada": {
+                "id": 19138,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Ingest\u00e3o \u00c1lcool] Conduta (com glicose)",
+                "descricao": "<p><span style=\"font-size:16px\">Checar sinais vitais, glicemia capilar. Se n&atilde;o houver sinais de alarme, realizar medica&ccedil;&atilde;o endovenosa e alta hospitalar .</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19167,
+                "nome": "glicemia < 70",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19073
+                ],
+                "argumentos": [
+                    "glicemia_abaixo_de_70"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19476,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19457,
+            "passo_de_saida": {
+                "id": 19457,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Hiperemese Gravidica] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19139,
+            "passo_de_entrada": {
+                "id": 19139,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Hiperemese Gravidica] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Aventar para possibilidade de hipotens\u00e3o na gestante e dor abdominal, devendo-se discutir com l\u00edder local em caso de altera\u00e7\u00f5es."
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 19062,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "cefaleia_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19063,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dor_abdominal_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19064,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dor_toracico_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19065,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "diarreia_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19066,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dor_lombar_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19067,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "tontura_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19068,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "tratamento_quimioterapico_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19069,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ingestao_alcool_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19070,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "cardiopata_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19071,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sem_causa_aparente_nauseas_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19072,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiperemese_gravidica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19073,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "glicemia_abaixo_de_70",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19074,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "70",
+            "peso": 1.0,
+            "valor": 70.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

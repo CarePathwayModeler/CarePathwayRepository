@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="721" url="" name="S&#xed;filis" code="SIF">
+  <element xsi:type="pathwayMetamodel:Treatment" id="3581" type="Tratamento" type_verbose="Tratamento" url="" name="Exame de VDRL" description="Gerar solicita&#xe7;&#xe3;o de exame de VDRL mensal at&#xe9; o final da gesta&#xe7;&#xe3;o" isInitial="true" outputSequences="//@sequence.0">
+    <examination url="" exam_id="28061004" limb_side="" quantity="1" reason="Tratamento de S&#xed;filis" clinical_indication="N/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3582" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar VDRL" description="Avaliar VDRL" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.3">
+    <questions text="VDRL Positivo?(  >=1:8 )" url="" id="1621">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2661" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3583" type="Receita" type_verbose="Receita" url="" name="Tratamento para S&#xed;filis" description="Necess&#xe1;rio realizar mesmo tratamento para parceiro da gestante.&#xA;&#xA;*Paciente com alergia comprovada &#xe0; penicilina, realizar preferencialmente a dessensibiliza&#xe7;&#xe3;o e, em seguida o tratamento com penicilina sob internamento hospitalar.&#xA;Se n&#xe3;o for poss&#xed;vel, tratar com estearato de eritromicina 500 mg por via oral de 6 em 6 horas durante 15 dias para a s&#xed;filis recente ou 30 dias para s&#xed;filis tardia ou quando n&#xe3;o se souber a dura&#xe7;&#xe3;o da doen&#xe7;a." isTerminal="true" inputSequences="//@sequence.2 //@sequence.4 //@sequence.8">
+    <item id="721" url="" name="BENZETACIL" med_code="1462573352" presentation="FRAP" access="5" quantity="2" period="0" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar em dose &#xfa;nica."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3584" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Averiguar Tratamento Pr&#xe9;vio" description="Averiguar Tratamento Pr&#xe9;vio" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Houve tratamento previo?" url="" id="1622">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2662" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3585" type="Tratamento" type_verbose="Tratamento" url="" name="Exame FTA ABS" description="Solicitar exame FTA ABS" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="" exam_id="27040259" limb_side="" quantity="1" reason="Tratamento para S&#xed;filis" clinical_indication="N/a"/>
+    <examination url="" exam_id="28062345" limb_side="" quantity="1" reason="-" clinical_indication="Verificar se h&#xe1; cicatriz sorol&#xf3;gica."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3586" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar FTA ABS" description="Avaliar resultado do exame de FTA ABS" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Resultado do FTA ABS positivo?" url="" id="1623">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2663" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3587" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="N&#xe3;o necessita tratamento" description="N&#xe3;o &#xe9; necess&#xe1;rio tratamento para essa situa&#xe7;&#xe3;o" isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Information" id="3589" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="A&#xe7;&#xe3;o - Classificar como Cicatriz Sorol&#xf3;gico" description="&#xc9; necess&#xe1;rio classificar como &quot;cicatriz sorol&#xf3;gico&quot; no Nascer Bem" inputSequences="//@sequence.5" outputSequences="//@sequence.6"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="3590" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description=""/>
+  <sequence outputStep="//@element.1" id="3591" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (VDRL >= 1:8)" description="">
+    <operation name="vdrl >= 1:8" Operator="affirmation" id="2664">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2661" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" id="3592" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Prescrever Penicilina para gestante e parceiro"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="3593" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (vdrl &lt; 1:8)" description="">
+    <operation name="VDRL negativo" id="2665">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2661" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.3" id="3594" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (sem tratamento previo)" description="">
+    <operation name="Sem tratamento pr&#xe9;vio" id="2666">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2662" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.3" id="3595" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (houve tratamento pr&#xe9;vio)" description="">
+    <operation name="Houve tratamento pr&#xe9;vio" Operator="affirmation" id="2667">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2662" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.7" id="3596" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="3597" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.5" id="3598" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (fta positivo)" description="">
+    <operation name="FTA ABS positivo" Operator="affirmation" id="2668">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2663" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="3599" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (FTA negativo)" description="">
+    <operation name="FTA ABS negativo" id="2669">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2663" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2661" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2662" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2663" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

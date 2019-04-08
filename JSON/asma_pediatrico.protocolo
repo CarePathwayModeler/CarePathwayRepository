@@ -1,0 +1,1451 @@
+{
+    "id": 3125,
+    "url": "",
+    "codigo": "H049",
+    "nome": "Asma Pedi\u00e1trico",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 601,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:25:54.943833-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:25:48.299274-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:25:56.770063-03:00"
+    },
+    "elementos": [
+        {
+            "id": 16909,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Anamnese + Oximetria",
+            "descricao": "<p><span style=\"font-size:20px\">Anamnese + Exame F&iacute;sico + Oximetria.</span></p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 16919,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16909,
+                    "passo_de_saida": "Tratamento: Anamnese + Oximetria",
+                    "passo_de_entrada_id": 16910,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Satura\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16910,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Satura\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8871,
+                    "url": "",
+                    "texto": "Paciente apresenta Satura\u00e7\u00e3o < 85%?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16787,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "saturacao_menor_85",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16919,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16909,
+                    "passo_de_saida": "Tratamento: Anamnese + Oximetria",
+                    "passo_de_entrada_id": 16910,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Satura\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16920,
+                    "url": "",
+                    "nome": "S2 (Satura\u00e7\u00e3o menor que 85%)",
+                    "descricao": "Satura\u00e7\u00e3o menor que 85%",
+                    "passo_de_saida_id": 16910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Satura\u00e7\u00e3o",
+                    "passo_de_entrada_id": 16911,
+                    "passo_de_entrada": "Tratamento: [Asma Grave] Sala de Cuidados",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16921,
+                    "url": "",
+                    "nome": "S3 (Satura\u00e7\u00e3o maior ou igual a 85%)",
+                    "descricao": "Satura\u00e7\u00e3o maior ou igual a 85%",
+                    "passo_de_saida_id": 16910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Satura\u00e7\u00e3o",
+                    "passo_de_entrada_id": 16912,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Intensidade da Crise",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16911,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Asma Grave] Sala de Cuidados",
+            "descricao": "<ul>\n\t<li>Dieta Zero.</li>\n\t<li>M&aacute;scara de Venturi 50%</li>\n\t<li>Pun&ccedil;&atilde;o com jelco</li>\n\t<li>Aerossol 1h cont&iacute;nua com<strong> Aerolin nebules<span style=\"color:#e74c3c\"> </span></strong>+ SF 0,9%. Dose: Aerolin Nebules 1,2ml (&lt;15kg) ou 2,5ml (&gt; 15kg)&nbsp;</li>\n\t<li>Considerar Sulfato de Magn&eacute;sio 50% ap&oacute;s 1h de nebuliza&ccedil;&atilde;o cont&iacute;nua. Dose: 50mg/kg - Max 2g. Correr 30 min.</li>\n\t<li>Metilprednisolona 1mg/kg/dose EV</li>\n\t<li>Hidrata&ccedil;&atilde;o Venosa - Manuten&ccedil;&atilde;o</li>\n\t<li>Ox&iacute;metro pulso cont&iacute;nuo</li>\n\t<li>Cabeceira 30&ordm;</li>\n\t<li>Sinais Vitais de 1/1h</li>\n\t<li><strong>Considerar Interna&ccedil;&atilde;o</strong></li>\n\t<li><strong>Considerar IOT</strong></li>\n\t<li><strong>Considerar vaga na UTI</strong></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8800,
+                    "url": "",
+                    "medicamento": 43931,
+                    "codigo": "",
+                    "nome": "SULFATO DE MAGNESIO 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 602,
+                    "url": "",
+                    "medicamento": 43745,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3706,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1 FA + 18 ml AD",
+                        "codigo_principio_ativo": 1642,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 500,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 482,
+                        "codigo_produto": 4295,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "FRAP    125.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 1.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 125,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 1642,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [
+                {
+                    "url": "O2 C/MASCARA DE VENTURI/FACIAL",
+                    "procedimento": "75010014",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "PUNCAO C/ JELCO",
+                    "procedimento": "76030002",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "OXIMETRO DE PULSO",
+                    "procedimento": "75130035",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CABECEIRA  ELEVADA",
+                    "procedimento": "75130016",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "SINAIS VITAIS",
+                    "procedimento": "75130020",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "ENTUBACAO OROTRAQUEAL",
+                    "procedimento": "76010003",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16920,
+                    "url": "",
+                    "nome": "S2 (Satura\u00e7\u00e3o menor que 85%)",
+                    "descricao": "Satura\u00e7\u00e3o menor que 85%",
+                    "passo_de_saida_id": 16910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Satura\u00e7\u00e3o",
+                    "passo_de_entrada_id": 16911,
+                    "passo_de_entrada": "Tratamento: [Asma Grave] Sala de Cuidados",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16930,
+                    "url": "",
+                    "nome": "S12 (Resposta Ausente)",
+                    "descricao": "Resposta Ausente",
+                    "passo_de_saida_id": 16917,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 16911,
+                    "passo_de_entrada": "Tratamento: [Asma Grave] Sala de Cuidados",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16912,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Intensidade da Crise",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8872,
+                    "url": "",
+                    "texto": "Intensidade da Crise",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16788,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "intensidade_crise",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Leve (Sat O2 > 94%)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Moderada (Sat O2 entre 85 e 94%)",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16921,
+                    "url": "",
+                    "nome": "S3 (Satura\u00e7\u00e3o maior ou igual a 85%)",
+                    "descricao": "Satura\u00e7\u00e3o maior ou igual a 85%",
+                    "passo_de_saida_id": 16910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Satura\u00e7\u00e3o",
+                    "passo_de_entrada_id": 16912,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Intensidade da Crise",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16922,
+                    "url": "",
+                    "nome": "S4 (Crise Leve)",
+                    "descricao": "Crise Leve",
+                    "passo_de_saida_id": 16912,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Intensidade da Crise",
+                    "passo_de_entrada_id": 16913,
+                    "passo_de_entrada": "Receita: [Asma Leve] Alta com Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16923,
+                    "url": "",
+                    "nome": "S5 (Crise Moderada)",
+                    "descricao": "Crise Moderada",
+                    "passo_de_saida_id": 16912,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Intensidade da Crise",
+                    "passo_de_entrada_id": 16914,
+                    "passo_de_entrada": "Tratamento: [Asma Moderada] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16913,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Asma Leve] Alta com Receita",
+            "descricao": "<p><strong>Orientar acompanhamento ambulatorial com pneumopediatra</strong></p>\n\n<ul>\n\t<li>Aerossol com Aerolin Nebules, 1 amp de 4/4h por 5 dias.</li>\n\t<li>Aerossol com SF 0,9% 3ml + Berotec ____ gotas de 4/4h por 5 dias.</li>\n\t<li>Prednisolona 3mg/ml ____ 1FR. Dar ___ ml 1x ao dia por 5 dias.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4514,
+                    "url": "",
+                    "nome": "Aerossol com Soro Fisiol\u00f3gico 0,9% 3ml + Berotec.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 20,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aerossol de SF 0,9% 3ml + Berotec ___ gotas de 4/4h por 5 dias.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4515,
+                    "url": "",
+                    "nome": "Aerossol com Aerolin Nebules",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 20,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "1 amp de 4/4h por 5 dias.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4516,
+                    "url": "",
+                    "nome": "Prednisolona 3mg/ml ___ 1 FR.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar ___ ml 1x ao dia por 5 dias.",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16922,
+                    "url": "",
+                    "nome": "S4 (Crise Leve)",
+                    "descricao": "Crise Leve",
+                    "passo_de_saida_id": 16912,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Intensidade da Crise",
+                    "passo_de_entrada_id": 16913,
+                    "passo_de_entrada": "Receita: [Asma Leve] Alta com Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16925,
+                    "url": "",
+                    "nome": "S7 (Houve melhora)",
+                    "descricao": "Houve melhora",
+                    "passo_de_saida_id": 16915,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Melhora",
+                    "passo_de_entrada_id": 16913,
+                    "passo_de_entrada": "Receita: [Asma Leve] Alta com Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16928,
+                    "url": "",
+                    "nome": "S10 (Boa resposta)",
+                    "descricao": "Boa resposta",
+                    "passo_de_saida_id": 16917,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 16913,
+                    "passo_de_entrada": "Receita: [Asma Leve] Alta com Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16914,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Asma Moderada] Tratamento",
+            "descricao": "<p><strong><u>Prescrever</u></strong>:</p>\n\n<p>Nebuliza&ccedil;&atilde;o de resgate 3x (de 20 em 20 min) com:</p>\n\n<ul>\n\t<li>Aerolin Nebules\n\t<ul>\n\t\t<li>2,5ml (&gt;15kg) <strong>OU</strong></li>\n\t\t<li>1,2ml (&lt;15kg)</li>\n\t</ul>\n\t</li>\n\t<li>Prednisolona 3ml/ml oral (1-2mg/Kg/dose)</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16923,
+                    "url": "",
+                    "nome": "S5 (Crise Moderada)",
+                    "descricao": "Crise Moderada",
+                    "passo_de_saida_id": 16912,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Intensidade da Crise",
+                    "passo_de_entrada_id": 16914,
+                    "passo_de_entrada": "Tratamento: [Asma Moderada] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16924,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16914,
+                    "passo_de_saida": "Tratamento: [Asma Moderada] Tratamento",
+                    "passo_de_entrada_id": 16915,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Melhora",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16915,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Melhora",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8873,
+                    "url": "",
+                    "texto": "Houve melhora?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16789,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "houve_melhora",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16924,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16914,
+                    "passo_de_saida": "Tratamento: [Asma Moderada] Tratamento",
+                    "passo_de_entrada_id": 16915,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Melhora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16925,
+                    "url": "",
+                    "nome": "S7 (Houve melhora)",
+                    "descricao": "Houve melhora",
+                    "passo_de_saida_id": 16915,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Melhora",
+                    "passo_de_entrada_id": 16913,
+                    "passo_de_entrada": "Receita: [Asma Leve] Alta com Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16926,
+                    "url": "",
+                    "nome": "S8 (N\u00e3o houve melhora)",
+                    "descricao": "N\u00e3o houve melhora",
+                    "passo_de_saida_id": 16915,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Melhora",
+                    "passo_de_entrada_id": 16916,
+                    "passo_de_entrada": "Tratamento: [Asma Moderada] Tratamento Alternativo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16916,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Asma Moderada] Tratamento Alternativo",
+            "descricao": "<p>Repetir resgate 3x (20 em 20 min) com:</p>\n\n<ul>\n\t<li>Aerolin Nebules 1,2ml (&lt;15kg) ou 2,5ml (&gt; 15kg) + Atrovent 10 gotas (&lt; 6 anos) ou 20 gotas (&gt; 6 anos).</li>\n\t<li>Solicitar Gasometria Arterial</li>\n\t<li>Se suspeita de infec&ccedil;&atilde;o:\n\t<ul>\n\t\t<li>RX Torax PA. Lat</li>\n\t\t<li>Hemograma Completo</li>\n\t\t<li>PCR</li>\n\t</ul>\n\t</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Asma pedi\u00e1trica",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Asma pedi\u00e1trica",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Asma pedi\u00e1trica",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Asma pedi\u00e1trica",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16926,
+                    "url": "",
+                    "nome": "S8 (N\u00e3o houve melhora)",
+                    "descricao": "N\u00e3o houve melhora",
+                    "passo_de_saida_id": 16915,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Melhora",
+                    "passo_de_entrada_id": 16916,
+                    "passo_de_entrada": "Tratamento: [Asma Moderada] Tratamento Alternativo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16927,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16916,
+                    "passo_de_saida": "Tratamento: [Asma Moderada] Tratamento Alternativo",
+                    "passo_de_entrada_id": 16917,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16917,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Resposta",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8874,
+                    "url": "",
+                    "texto": "Resposta",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16790,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "resposta_tratamento",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Boa Resposta (eupneico, sat O2 > 92%, sem altera\u00e7\u00f5es nos exames)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Resposta Incompleta (taquidispn\u00e9ia leve a moderada, sat O2 entre 88-92%, altera\u00e7\u00f5es nos exames)",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Resposta Ausente ou piora do quadro, sat O2 < 88%",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16927,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 16916,
+                    "passo_de_saida": "Tratamento: [Asma Moderada] Tratamento Alternativo",
+                    "passo_de_entrada_id": 16917,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16928,
+                    "url": "",
+                    "nome": "S10 (Boa resposta)",
+                    "descricao": "Boa resposta",
+                    "passo_de_saida_id": 16917,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 16913,
+                    "passo_de_entrada": "Receita: [Asma Leve] Alta com Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16929,
+                    "url": "",
+                    "nome": "S11 (Resposta Incompleta)",
+                    "descricao": "Resposta Incompleta",
+                    "passo_de_saida_id": 16917,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 16918,
+                    "passo_de_entrada": "Tratamento: Tratamento + Chefia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16930,
+                    "url": "",
+                    "nome": "S12 (Resposta Ausente)",
+                    "descricao": "Resposta Ausente",
+                    "passo_de_saida_id": 16917,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 16911,
+                    "passo_de_entrada": "Tratamento: [Asma Grave] Sala de Cuidados",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16918,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento + Chefia",
+            "descricao": "<p><u><strong>Comunicar Chefia</strong></u></p>\n\n<p>Encaminhar para sala de cuidados.</p>\n\n<ul>\n\t<li>Suporte O2 - M&aacute;scara de Venturi.</li>\n\t<li>Ox&iacute;metro Pulso</li>\n\t<li>Aerossol 1h cont&iacute;nua com:\n\t<ul>\n\t\t<li>Aerolin nebules + SF 0,9%</li>\n\t\t<li>Sulfato de Magn&eacute;sio 50% EV em 30 min.</li>\n\t</ul>\n\t</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16929,
+                    "url": "",
+                    "nome": "S11 (Resposta Incompleta)",
+                    "descricao": "Resposta Incompleta",
+                    "passo_de_saida_id": 16917,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 16918,
+                    "passo_de_entrada": "Tratamento: Tratamento + Chefia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16919,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 16909,
+            "passo_de_saida": {
+                "id": 16909,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Anamnese + Oximetria",
+                "descricao": "<p><span style=\"font-size:20px\">Anamnese + Exame F&iacute;sico + Oximetria.</span></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16910,
+            "passo_de_entrada": {
+                "id": 16910,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Satura\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16920,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (Satura\u00e7\u00e3o menor que 85%)",
+            "descricao": "Satura\u00e7\u00e3o menor que 85%",
+            "passo_de_saida_id": 16910,
+            "passo_de_saida": {
+                "id": 16910,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Satura\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16911,
+            "passo_de_entrada": {
+                "id": 16911,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Asma Grave] Sala de Cuidados",
+                "descricao": "<ul>\n\t<li>Dieta Zero.</li>\n\t<li>M&aacute;scara de Venturi 50%</li>\n\t<li>Pun&ccedil;&atilde;o com jelco</li>\n\t<li>Aerossol 1h cont&iacute;nua com<strong> Aerolin nebules<span style=\"color:#e74c3c\"> </span></strong>+ SF 0,9%. Dose: Aerolin Nebules 1,2ml (&lt;15kg) ou 2,5ml (&gt; 15kg)&nbsp;</li>\n\t<li>Considerar Sulfato de Magn&eacute;sio 50% ap&oacute;s 1h de nebuliza&ccedil;&atilde;o cont&iacute;nua. Dose: 50mg/kg - Max 2g. Correr 30 min.</li>\n\t<li>Metilprednisolona 1mg/kg/dose EV</li>\n\t<li>Hidrata&ccedil;&atilde;o Venosa - Manuten&ccedil;&atilde;o</li>\n\t<li>Ox&iacute;metro pulso cont&iacute;nuo</li>\n\t<li>Cabeceira 30&ordm;</li>\n\t<li>Sinais Vitais de 1/1h</li>\n\t<li><strong>Considerar Interna&ccedil;&atilde;o</strong></li>\n\t<li><strong>Considerar IOT</strong></li>\n\t<li><strong>Considerar vaga na UTI</strong></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16794,
+                "nome": "Satura\u00e7\u00e3o menor que 85%",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16787
+                ],
+                "argumentos": [
+                    "saturacao_menor_85"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16921,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (Satura\u00e7\u00e3o maior ou igual a 85%)",
+            "descricao": "Satura\u00e7\u00e3o maior ou igual a 85%",
+            "passo_de_saida_id": 16910,
+            "passo_de_saida": {
+                "id": 16910,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Satura\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16912,
+            "passo_de_entrada": {
+                "id": 16912,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Intensidade da Crise",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16795,
+                "nome": "Satura\u00e7\u00e3o maior ou igual a 85%",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16787
+                ],
+                "argumentos": [
+                    "saturacao_menor_85"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16922,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Crise Leve)",
+            "descricao": "Crise Leve",
+            "passo_de_saida_id": 16912,
+            "passo_de_saida": {
+                "id": 16912,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Intensidade da Crise",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16913,
+            "passo_de_entrada": {
+                "id": 16913,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Asma Leve] Alta com Receita",
+                "descricao": "<p><strong>Orientar acompanhamento ambulatorial com pneumopediatra</strong></p>\n\n<ul>\n\t<li>Aerossol com Aerolin Nebules, 1 amp de 4/4h por 5 dias.</li>\n\t<li>Aerossol com SF 0,9% 3ml + Berotec ____ gotas de 4/4h por 5 dias.</li>\n\t<li>Prednisolona 3mg/ml ____ 1FR. Dar ___ ml 1x ao dia por 5 dias.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 16796,
+                "nome": "Crise Leve",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16788,
+                    16791
+                ],
+                "argumentos": [
+                    "intensidade_crise",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16923,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Crise Moderada)",
+            "descricao": "Crise Moderada",
+            "passo_de_saida_id": 16912,
+            "passo_de_saida": {
+                "id": 16912,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Intensidade da Crise",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16914,
+            "passo_de_entrada": {
+                "id": 16914,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Asma Moderada] Tratamento",
+                "descricao": "<p><strong><u>Prescrever</u></strong>:</p>\n\n<p>Nebuliza&ccedil;&atilde;o de resgate 3x (de 20 em 20 min) com:</p>\n\n<ul>\n\t<li>Aerolin Nebules\n\t<ul>\n\t\t<li>2,5ml (&gt;15kg) <strong>OU</strong></li>\n\t\t<li>1,2ml (&lt;15kg)</li>\n\t</ul>\n\t</li>\n\t<li>Prednisolona 3ml/ml oral (1-2mg/Kg/dose)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16797,
+                "nome": "Crise Moderada",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16788,
+                    16792
+                ],
+                "argumentos": [
+                    "intensidade_crise",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16924,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 16914,
+            "passo_de_saida": {
+                "id": 16914,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Asma Moderada] Tratamento",
+                "descricao": "<p><strong><u>Prescrever</u></strong>:</p>\n\n<p>Nebuliza&ccedil;&atilde;o de resgate 3x (de 20 em 20 min) com:</p>\n\n<ul>\n\t<li>Aerolin Nebules\n\t<ul>\n\t\t<li>2,5ml (&gt;15kg) <strong>OU</strong></li>\n\t\t<li>1,2ml (&lt;15kg)</li>\n\t</ul>\n\t</li>\n\t<li>Prednisolona 3ml/ml oral (1-2mg/Kg/dose)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16915,
+            "passo_de_entrada": {
+                "id": 16915,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16925,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (Houve melhora)",
+            "descricao": "Houve melhora",
+            "passo_de_saida_id": 16915,
+            "passo_de_saida": {
+                "id": 16915,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16913,
+            "passo_de_entrada": {
+                "id": 16913,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Asma Leve] Alta com Receita",
+                "descricao": "<p><strong>Orientar acompanhamento ambulatorial com pneumopediatra</strong></p>\n\n<ul>\n\t<li>Aerossol com Aerolin Nebules, 1 amp de 4/4h por 5 dias.</li>\n\t<li>Aerossol com SF 0,9% 3ml + Berotec ____ gotas de 4/4h por 5 dias.</li>\n\t<li>Prednisolona 3mg/ml ____ 1FR. Dar ___ ml 1x ao dia por 5 dias.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 16798,
+                "nome": "Houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16789
+                ],
+                "argumentos": [
+                    "houve_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16926,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (N\u00e3o houve melhora)",
+            "descricao": "N\u00e3o houve melhora",
+            "passo_de_saida_id": 16915,
+            "passo_de_saida": {
+                "id": 16915,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16916,
+            "passo_de_entrada": {
+                "id": 16916,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Asma Moderada] Tratamento Alternativo",
+                "descricao": "<p>Repetir resgate 3x (20 em 20 min) com:</p>\n\n<ul>\n\t<li>Aerolin Nebules 1,2ml (&lt;15kg) ou 2,5ml (&gt; 15kg) + Atrovent 10 gotas (&lt; 6 anos) ou 20 gotas (&gt; 6 anos).</li>\n\t<li>Solicitar Gasometria Arterial</li>\n\t<li>Se suspeita de infec&ccedil;&atilde;o:\n\t<ul>\n\t\t<li>RX Torax PA. Lat</li>\n\t\t<li>Hemograma Completo</li>\n\t\t<li>PCR</li>\n\t</ul>\n\t</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16799,
+                "nome": "N\u00e3o houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16789
+                ],
+                "argumentos": [
+                    "houve_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16927,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 16916,
+            "passo_de_saida": {
+                "id": 16916,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Asma Moderada] Tratamento Alternativo",
+                "descricao": "<p>Repetir resgate 3x (20 em 20 min) com:</p>\n\n<ul>\n\t<li>Aerolin Nebules 1,2ml (&lt;15kg) ou 2,5ml (&gt; 15kg) + Atrovent 10 gotas (&lt; 6 anos) ou 20 gotas (&gt; 6 anos).</li>\n\t<li>Solicitar Gasometria Arterial</li>\n\t<li>Se suspeita de infec&ccedil;&atilde;o:\n\t<ul>\n\t\t<li>RX Torax PA. Lat</li>\n\t\t<li>Hemograma Completo</li>\n\t\t<li>PCR</li>\n\t</ul>\n\t</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16917,
+            "passo_de_entrada": {
+                "id": 16917,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resposta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16928,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (Boa resposta)",
+            "descricao": "Boa resposta",
+            "passo_de_saida_id": 16917,
+            "passo_de_saida": {
+                "id": 16917,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resposta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16913,
+            "passo_de_entrada": {
+                "id": 16913,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Asma Leve] Alta com Receita",
+                "descricao": "<p><strong>Orientar acompanhamento ambulatorial com pneumopediatra</strong></p>\n\n<ul>\n\t<li>Aerossol com Aerolin Nebules, 1 amp de 4/4h por 5 dias.</li>\n\t<li>Aerossol com SF 0,9% 3ml + Berotec ____ gotas de 4/4h por 5 dias.</li>\n\t<li>Prednisolona 3mg/ml ____ 1FR. Dar ___ ml 1x ao dia por 5 dias.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 16800,
+                "nome": "Boa resposta",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16790,
+                    16791
+                ],
+                "argumentos": [
+                    "resposta_tratamento",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16929,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (Resposta Incompleta)",
+            "descricao": "Resposta Incompleta",
+            "passo_de_saida_id": 16917,
+            "passo_de_saida": {
+                "id": 16917,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resposta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16918,
+            "passo_de_entrada": {
+                "id": 16918,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento + Chefia",
+                "descricao": "<p><u><strong>Comunicar Chefia</strong></u></p>\n\n<p>Encaminhar para sala de cuidados.</p>\n\n<ul>\n\t<li>Suporte O2 - M&aacute;scara de Venturi.</li>\n\t<li>Ox&iacute;metro Pulso</li>\n\t<li>Aerossol 1h cont&iacute;nua com:\n\t<ul>\n\t\t<li>Aerolin nebules + SF 0,9%</li>\n\t\t<li>Sulfato de Magn&eacute;sio 50% EV em 30 min.</li>\n\t</ul>\n\t</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16801,
+                "nome": "Resposta Incompleta",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16790,
+                    16792
+                ],
+                "argumentos": [
+                    "resposta_tratamento",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16930,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (Resposta Ausente)",
+            "descricao": "Resposta Ausente",
+            "passo_de_saida_id": 16917,
+            "passo_de_saida": {
+                "id": 16917,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resposta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16911,
+            "passo_de_entrada": {
+                "id": 16911,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Asma Grave] Sala de Cuidados",
+                "descricao": "<ul>\n\t<li>Dieta Zero.</li>\n\t<li>M&aacute;scara de Venturi 50%</li>\n\t<li>Pun&ccedil;&atilde;o com jelco</li>\n\t<li>Aerossol 1h cont&iacute;nua com<strong> Aerolin nebules<span style=\"color:#e74c3c\"> </span></strong>+ SF 0,9%. Dose: Aerolin Nebules 1,2ml (&lt;15kg) ou 2,5ml (&gt; 15kg)&nbsp;</li>\n\t<li>Considerar Sulfato de Magn&eacute;sio 50% ap&oacute;s 1h de nebuliza&ccedil;&atilde;o cont&iacute;nua. Dose: 50mg/kg - Max 2g. Correr 30 min.</li>\n\t<li>Metilprednisolona 1mg/kg/dose EV</li>\n\t<li>Hidrata&ccedil;&atilde;o Venosa - Manuten&ccedil;&atilde;o</li>\n\t<li>Ox&iacute;metro pulso cont&iacute;nuo</li>\n\t<li>Cabeceira 30&ordm;</li>\n\t<li>Sinais Vitais de 1/1h</li>\n\t<li><strong>Considerar Interna&ccedil;&atilde;o</strong></li>\n\t<li><strong>Considerar IOT</strong></li>\n\t<li><strong>Considerar vaga na UTI</strong></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16802,
+                "nome": "Resposta Ausente",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16790,
+                    16793
+                ],
+                "argumentos": [
+                    "resposta_tratamento",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16787,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "saturacao_menor_85",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16788,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "intensidade_crise",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Leve (Sat O2 > 94%)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Moderada (Sat O2 entre 85 e 94%)",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16789,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "houve_melhora",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16790,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "resposta_tratamento",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Boa Resposta (eupneico, sat O2 > 92%, sem altera\u00e7\u00f5es nos exames)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Resposta Incompleta (taquidispn\u00e9ia leve a moderada, sat O2 entre 88-92%, altera\u00e7\u00f5es nos exames)",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Resposta Ausente ou piora do quadro, sat O2 < 88%",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16791,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16792,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16793,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

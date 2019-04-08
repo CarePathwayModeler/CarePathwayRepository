@@ -1,0 +1,460 @@
+{
+    "id": 912,
+    "url": "",
+    "codigo": "VB_PROT_FARM_AFRO",
+    "nome": "[Viver Bem] Protocolo Farmacol\u00f3gico Afroamericano",
+    "repositorio_id": 476,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:35.754938-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:55:17.600303-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:35.754938-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4420,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar PS e PD (1)",
+            "descricao": "Avaliar taxas de PS e PD",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1913,
+                    "url": "",
+                    "texto": "PS 130 -159 e PD 80 - 99?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3222,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ps_130_159_pb_80_99",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4465,
+                    "url": "",
+                    "nome": "S1 (ps(1) sim)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4420,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (1)",
+                    "passo_de_entrada_id": 4462,
+                    "passo_de_entrada": "Encaminhamento: Monoterapia Linha Afro",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4466,
+                    "url": "",
+                    "nome": "S2 (ps(1) nao)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4420,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (1)",
+                    "passo_de_entrada_id": 4461,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar PS e PD (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4461,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar PS e PD (2)",
+            "descricao": "Avaliar taxas de PS e PD",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1914,
+                    "url": "",
+                    "texto": "PS 160-179 e PD 100 -109?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3223,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ps_160_170_pd_100_109",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4466,
+                    "url": "",
+                    "nome": "S2 (ps(1) nao)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4420,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (1)",
+                    "passo_de_entrada_id": 4461,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar PS e PD (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4467,
+                    "url": "",
+                    "nome": "S3 (ps(2) sim)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4461,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (2)",
+                    "passo_de_entrada_id": 4463,
+                    "passo_de_entrada": "Encaminhamento: Duploterapia Linha Afro",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4468,
+                    "url": "",
+                    "nome": "S4 (ps(2) nao)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4461,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (2)",
+                    "passo_de_entrada_id": 4464,
+                    "passo_de_entrada": "Encaminhamento: Triploterapia Linha Afro",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4462,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Monoterapia Linha Afro",
+            "descricao": "Monoterapia Linha Afro",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_MONO_AFRO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4465,
+                    "url": "",
+                    "nome": "S1 (ps(1) sim)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4420,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (1)",
+                    "passo_de_entrada_id": 4462,
+                    "passo_de_entrada": "Encaminhamento: Monoterapia Linha Afro",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4463,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Duploterapia Linha Afro",
+            "descricao": "Duploterapia Linha Afro",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_DUPLO_AFRO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4467,
+                    "url": "",
+                    "nome": "S3 (ps(2) sim)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4461,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (2)",
+                    "passo_de_entrada_id": 4463,
+                    "passo_de_entrada": "Encaminhamento: Duploterapia Linha Afro",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4464,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Triploterapia Linha Afro",
+            "descricao": "Triploterapia Linha Afro",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_TRIPLO_AFRO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4468,
+                    "url": "",
+                    "nome": "S4 (ps(2) nao)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4461,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PS e PD (2)",
+                    "passo_de_entrada_id": 4464,
+                    "passo_de_entrada": "Encaminhamento: Triploterapia Linha Afro",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4465,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (ps(1) sim)",
+            "descricao": "",
+            "passo_de_saida_id": 4420,
+            "passo_de_saida": {
+                "id": 4420,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS e PD (1)",
+                "descricao": "Avaliar taxas de PS e PD",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4462,
+            "passo_de_entrada": {
+                "id": 4462,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Monoterapia Linha Afro",
+                "descricao": "Monoterapia Linha Afro",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    475
+                ]
+            },
+            "operacao": {
+                "id": 3224,
+                "nome": "ps(1) sim",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3222
+                ],
+                "argumentos": [
+                    "ps_130_159_pb_80_99"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4466,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (ps(1) nao)",
+            "descricao": "",
+            "passo_de_saida_id": 4420,
+            "passo_de_saida": {
+                "id": 4420,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS e PD (1)",
+                "descricao": "Avaliar taxas de PS e PD",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4461,
+            "passo_de_entrada": {
+                "id": 4461,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS e PD (2)",
+                "descricao": "Avaliar taxas de PS e PD",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3225,
+                "nome": "ps(1) nao",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3222
+                ],
+                "argumentos": [
+                    "ps_130_159_pb_80_99"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4467,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (ps(2) sim)",
+            "descricao": "",
+            "passo_de_saida_id": 4461,
+            "passo_de_saida": {
+                "id": 4461,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS e PD (2)",
+                "descricao": "Avaliar taxas de PS e PD",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4463,
+            "passo_de_entrada": {
+                "id": 4463,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Duploterapia Linha Afro",
+                "descricao": "Duploterapia Linha Afro",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    484
+                ]
+            },
+            "operacao": {
+                "id": 3226,
+                "nome": "ps(2) sim",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3223
+                ],
+                "argumentos": [
+                    "ps_160_170_pd_100_109"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4468,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (ps(2) nao)",
+            "descricao": "",
+            "passo_de_saida_id": 4461,
+            "passo_de_saida": {
+                "id": 4461,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PS e PD (2)",
+                "descricao": "Avaliar taxas de PS e PD",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4464,
+            "passo_de_entrada": {
+                "id": 4464,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Triploterapia Linha Afro",
+                "descricao": "Triploterapia Linha Afro",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    470
+                ]
+            },
+            "operacao": {
+                "id": 3227,
+                "nome": "ps(2) nao",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3223
+                ],
+                "argumentos": [
+                    "ps_160_170_pd_100_109"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3222,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ps_130_159_pb_80_99",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3223,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ps_160_170_pd_100_109",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

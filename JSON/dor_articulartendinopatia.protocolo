@@ -1,0 +1,3151 @@
+{
+    "id": 3245,
+    "url": "",
+    "codigo": "H033",
+    "nome": "Dor Articular/Tendinopatia",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 381,
+    "versao": 7,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:03:09.624603-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T15:54:33.274445-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:03:09.624603-03:00"
+    },
+    "elementos": [
+        {
+            "id": 18944,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Poliartrite] Discutir com chefe de equipe",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18945,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Trauma simples recente] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T16:02:55.451891-03:00"
+            },
+            "manter_prescricao": false,
+            "orientacao_medica": "Fazer compressa gelada por 15 minutos, 3 vezes ao dia.",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5051,
+                    "url": "",
+                    "nome": "Maxsulid 400mg .... 1 cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5052,
+                    "url": "",
+                    "nome": "Cetoprofeno 100mg .... 1 cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                },
+                {
+                    "id": 5053,
+                    "url": "",
+                    "nome": "DIPIRONA 500MG COMP 1 UD",
+                    "medicamento": 38024,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se dor.",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19072,
+                    "url": "",
+                    "nome": "S24",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19048,
+                    "passo_de_saida": "Tratamento: [Trauma Simples Recente] Tratamento",
+                    "passo_de_entrada_id": 18945,
+                    "passo_de_entrada": "Receita: [Trauma simples recente] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18946,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Anamnese Completa",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Anamnese completa + exame f&iacute;sico do local da dor </span></strong></p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 19050,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18946,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Anamnese Completa",
+                    "passo_de_entrada_id": 18947,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18947,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Sinais de Alarme",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9670,
+                    "url": "",
+                    "texto": "H\u00e1 sinais de alarme?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18645,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sinais_de_alarme",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Rigidez ou dor que torna o movimento imposs\u00edvel",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Dor que fica implacavelmente pior ao longo de um per\u00edodo de dias ou semanas",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Articula\u00e7\u00e3o inflamada com febre associada ou altera\u00e7\u00e3o constitucional",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Dor severa em repouso ou durante a noite",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19050,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18946,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Anamnese Completa",
+                    "passo_de_entrada_id": 18947,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19051,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18947,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 18948,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Apresenta Sinais de Alarme] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19052,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18947,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 18949,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Dor",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18948,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Apresenta Sinais de Alarme] Conduta",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Solicitar ultrassom da articula&ccedil;&atilde;o acometida e hemograma</span></strong>.<br />\n<span style=\"font-size:16px\">Ap&oacute;s realiza&ccedil;&atilde;o dos exames, encaminhar para o ortopedista da urg&ecirc;ncia para avalia&ccedil;&atilde;o de artrite s&eacute;ptica e poss&iacute;vel pun&ccedil;&atilde;o articular.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19051,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18947,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 18948,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Apresenta Sinais de Alarme] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18949,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar Dor",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T16:02:29.679416-03:00"
+            },
+            "perguntas": [
+                {
+                    "id": 9671,
+                    "url": "",
+                    "texto": "Dor no local da articula\u00e7\u00e3o?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18646,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dor_local_articulacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9672,
+                    "url": "",
+                    "texto": "[Dor periarticular?]\n\nTendinite,\nBursite,\nEntesite.\n\nPaciente com dor na mobilidade ativa, por\u00e9m com mobilidade passiva preservada.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18647,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dor_periarticular",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 6
+                },
+                {
+                    "id": 9673,
+                    "url": "",
+                    "texto": "Trauma simples recente sem evid\u00eancia de fraturas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18648,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "trauma_superficial_recente",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19052,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18947,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 18949,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Dor",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19049,
+                    "url": "",
+                    "nome": "S23 (Trauma superficial sem fratura)",
+                    "descricao": "Trauma superficial sem fratura",
+                    "passo_de_saida_id": 18949,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Dor",
+                    "passo_de_entrada_id": 19048,
+                    "passo_de_entrada": "Tratamento: [Trauma Simples Recente] Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19053,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18949,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Dor",
+                    "passo_de_entrada_id": 18950,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Paciente",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19056,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18949,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Dor",
+                    "passo_de_entrada_id": 18953,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Sinais Flog\u00edsticos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18950,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Idade Paciente",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9674,
+                    "url": "",
+                    "texto": "Paciente idoso e/ou com hist\u00f3ria de altera\u00e7\u00e3o da fun\u00e7\u00e3o renal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18649,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "paciente_idoso",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19053,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18949,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Dor",
+                    "passo_de_entrada_id": 18950,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19054,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18950,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Paciente",
+                    "passo_de_entrada_id": 18951,
+                    "passo_de_entrada": "Receita: [Paciente n\u00e3o idoso] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19055,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18950,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Paciente",
+                    "passo_de_entrada_id": 18952,
+                    "passo_de_entrada": "Receita: [Paciente idoso] Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18951,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Paciente n\u00e3o idoso] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Encaminhar para ambulat\u00f3rio de ortopedia",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5054,
+                    "url": "",
+                    "nome": "Cetoprofeno 100 mg ............. 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5055,
+                    "url": "",
+                    "nome": "Dipirona 1G",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                },
+                {
+                    "id": 5056,
+                    "url": "",
+                    "nome": "Ibuprofeno 600mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19054,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18950,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Paciente",
+                    "passo_de_entrada_id": 18951,
+                    "passo_de_entrada": "Receita: [Paciente n\u00e3o idoso] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18952,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Paciente idoso] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Encaminhar para ambulat\u00f3rio de ortopedia",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5057,
+                    "url": "",
+                    "nome": "Dipirona 1G",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5058,
+                    "url": "",
+                    "nome": "Prednisona 20mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos pela manh\u00e3 durante 3 dias",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19055,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18950,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Paciente",
+                    "passo_de_entrada_id": 18952,
+                    "passo_de_entrada": "Receita: [Paciente idoso] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18953,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Sinais Flog\u00edsticos",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9675,
+                    "url": "",
+                    "texto": "H\u00e1 sinais flog\u00edsticos? Edema, eritema, dor, calor e rubor?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18650,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_flogisticos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19056,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18949,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Dor",
+                    "passo_de_entrada_id": 18953,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Sinais Flog\u00edsticos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19057,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18953,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais Flog\u00edsticos",
+                    "passo_de_entrada_id": 18954,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Artralgia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19060,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18953,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais Flog\u00edsticos",
+                    "passo_de_entrada_id": 18957,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Artrite",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18954,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Artralgia",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9676,
+                    "url": "",
+                    "texto": "Osteoartrose?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18651,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "osteoartrose",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9677,
+                    "url": "",
+                    "texto": "[ARBOVIROSE]\n\nInstala\u00e7\u00e3o aguda, durante um processo viral, sem sinais de gravidade?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18652,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "arbovirose",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19057,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18953,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais Flog\u00edsticos",
+                    "passo_de_entrada_id": 18954,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Artralgia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19058,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18954,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artralgia",
+                    "passo_de_entrada_id": 18955,
+                    "passo_de_entrada": "Receita: [Osteoartrose] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19059,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18954,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artralgia",
+                    "passo_de_entrada_id": 18956,
+                    "passo_de_entrada": "Receita: [Arbovirose] Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18955,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Osteoartrose] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5059,
+                    "url": "",
+                    "nome": "Cetoprofeno 100 mg............ 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5060,
+                    "url": "",
+                    "nome": "Dipirona 1G",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                },
+                {
+                    "id": 5081,
+                    "url": "",
+                    "nome": "Ibuprofeno 600mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19058,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18954,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artralgia",
+                    "passo_de_entrada_id": 18955,
+                    "passo_de_entrada": "Receita: [Osteoartrose] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18956,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Arbovirose] Receita",
+            "descricao": "Retornar a emerg\u00eancia se n\u00e3o houver melhora com 72h ou houver piora importante dos sintomas.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Indicar repouso e estimular a ingesta h\u00eddrica",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5082,
+                    "url": "",
+                    "nome": "Paracetamol 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se dor ou febre",
+                    "ordem": 1
+                },
+                {
+                    "id": 5083,
+                    "url": "",
+                    "nome": "Loratadina 10mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se espirros/coriza",
+                    "ordem": 2
+                },
+                {
+                    "id": 5084,
+                    "url": "",
+                    "nome": "Dipirona 1g ............ 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 4,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19059,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18954,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artralgia",
+                    "passo_de_entrada_id": 18956,
+                    "passo_de_entrada": "Receita: [Arbovirose] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18957,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Artrite",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Tempo de instala&ccedil;&atilde;o da dor?</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9678,
+                    "url": "",
+                    "texto": "<= 6 semanas: Quadro agudo",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18653,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "menor_seis_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9679,
+                    "url": "",
+                    "texto": "> 6 semanas: Quadro cr\u00f4nico",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18654,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "maior_seis_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19060,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18953,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sinais Flog\u00edsticos",
+                    "passo_de_entrada_id": 18957,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Artrite",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19061,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18957,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artrite",
+                    "passo_de_entrada_id": 18958,
+                    "passo_de_entrada": "Receita: [Artrite] Quadro Cr\u00f4nico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19062,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18957,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artrite",
+                    "passo_de_entrada_id": 18959,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Artrite] Quadro Agudo/Subagudo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18958,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Artrite] Quadro Cr\u00f4nico",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para investiga\u00e7\u00e3o de doen\u00e7a autoimune",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5085,
+                    "url": "",
+                    "nome": "Dipirona 1G",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5086,
+                    "url": "",
+                    "nome": "Prednisona 20mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos pela manh\u00e3",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19061,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18957,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artrite",
+                    "passo_de_entrada_id": 18958,
+                    "passo_de_entrada": "Receita: [Artrite] Quadro Cr\u00f4nico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18959,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Artrite] Quadro Agudo/Subagudo",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9680,
+                    "url": "",
+                    "texto": "[Monoartrite aguda] Acometimento de 1 articula\u00e7\u00e3o?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18655,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "monoartrite_aguda",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9781,
+                    "url": "",
+                    "texto": "[Oligo e Poliartrite Aguda] Acometimento de 2 ou mais articula\u00e7\u00f5es?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18656,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "poliartrite_aguda",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19062,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18957,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Artrite",
+                    "passo_de_entrada_id": 18959,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Artrite] Quadro Agudo/Subagudo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19063,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18959,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite] Quadro Agudo/Subagudo",
+                    "passo_de_entrada_id": 18960,
+                    "passo_de_entrada": "Receita: [Poliartrite Aguda] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19064,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18959,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite] Quadro Agudo/Subagudo",
+                    "passo_de_entrada_id": 19041,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18960,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Poliartrite Aguda] Receita",
+            "descricao": "<p><u><strong>Discutir caso com chefe de equipe antes de prescrever tratamento.</strong></u></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para investiga\u00e7\u00e3o de doen\u00e7a autoimune",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5087,
+                    "url": "",
+                    "nome": "Dipirona 1G",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5088,
+                    "url": "",
+                    "nome": "Prednisona 20mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos pela manh\u00e3",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19063,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18959,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite] Quadro Agudo/Subagudo",
+                    "passo_de_entrada_id": 18960,
+                    "passo_de_entrada": "Receita: [Poliartrite Aguda] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19041,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Monoartrite Aguda",
+            "descricao": "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite S&eacute;ptica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Monoartrite abrupta associado a calor, edema e consider&aacute;vel dor a mobilidade passiva e ativa, n&atilde;o aliviando com o repouso. Pode haver hist&oacute;ria de&nbsp;febre com infec&ccedil;&atilde;o pr&eacute;via predisponente na pele, pulm&atilde;o ou bexiga.&nbsp; </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite Gotosa</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Geralmente acomete 1 articula&ccedil;&atilde;o (principalmente 1&ordf; metatarsofalangiana ou joelho), paciente com hist&oacute;ria de epis&oacute;dios pr&eacute;vios, ficando assintom&aacute;ticos entre as crises, com &aacute;cido &uacute;rico sabidamente elevado. Pode j&aacute; haver presen&ccedil;a de tofos gotosos.&nbsp;Dor &agrave; movimenta&ccedil;&atilde;o ativa e passiva, n&atilde;o aliviando com o repouso. </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite P&oacute;s Traum&aacute;tica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Desconforto ao movimento, aumento discreto de temperatura, dor piora com atividade, aliviando ao repouso (ativa &gt; passiva). Hist&oacute;rico de trauma / tor&ccedil;&atilde;o</span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9782,
+                    "url": "",
+                    "texto": "Artrite S\u00e9ptica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18657,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "artrite_septica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9783,
+                    "url": "",
+                    "texto": "Artrite Gotosa?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18658,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "artrite_gotosa",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 9784,
+                    "url": "",
+                    "texto": "Artrite P\u00f3s traum\u00e1tica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18659,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "artrite_pos_traumatica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19064,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18959,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite] Quadro Agudo/Subagudo",
+                    "passo_de_entrada_id": 19041,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19065,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19041,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "passo_de_entrada_id": 19042,
+                    "passo_de_entrada": "Tratamento: [Artrite S\u00e9ptica] Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19066,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19041,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "passo_de_entrada_id": 19043,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Artrite Gotosa] Idade Paciente",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19071,
+                    "url": "",
+                    "nome": "S22",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19041,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "passo_de_entrada_id": 19047,
+                    "passo_de_entrada": "Tratamento: [Artrite P\u00f3s Traum\u00e1tica] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19042,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Artrite S\u00e9ptica] Tratamento",
+            "descricao": "<p><span style=\"font-size:16px\">Encaminhar para o ortopedista da emerg&ecirc;ncia para tentativa de pun&ccedil;&atilde;o articular com cultura e Gram, citologia, bioqu&iacute;mica e&nbsp;pesquisa de cristais com microscopia de luz polarizada do l&iacute;quido sinovial.</span></p>\n\n<ul>\n\t<li><strong><span style=\"font-size:16px\">Solicitar </span> (via conduta complementar)&nbsp; <span style=\"font-size:16px\">rx da articula&ccedil;&atilde;o acometida</span></strong></li>\n</ul>\n\n<p><span style=\"font-size:16px\"><strong>Antibioticoterapia emp&iacute;rica:&nbsp;Oxacilina 2g endovenoso de 4/4h +&nbsp;Gentamicina 5mg/kg/dia (se paciente possuir&nbsp;comorbidades ou imunodepress&atilde;o)</strong></span><br />\n<br />\n<span style=\"font-size:16px\"><strong>Discutir a conduta com l&iacute;der local ou ortopedista.</strong></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:57:41.982379-03:00"
+            },
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Artrite S\u00e9ptica",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Artrite S\u00e9ptica",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Artrite S\u00e9ptica",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9815,
+                    "url": "",
+                    "medicamento": 42951,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IM AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19065,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19041,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "passo_de_entrada_id": 19042,
+                    "passo_de_entrada": "Tratamento: [Artrite S\u00e9ptica] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19043,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Artrite Gotosa] Idade Paciente",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9785,
+                    "url": "",
+                    "texto": "Paciente idoso ou com disfuns\u00e3o renal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18660,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "paciente_idoso_dois",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19066,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19041,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "passo_de_entrada_id": 19043,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Artrite Gotosa] Idade Paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19067,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19043,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite Gotosa] Idade Paciente",
+                    "passo_de_entrada_id": 19044,
+                    "passo_de_entrada": "Receita: [Paciente Idoso] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19068,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19043,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite Gotosa] Idade Paciente",
+                    "passo_de_entrada_id": 19045,
+                    "passo_de_entrada": "Receita: [N\u00e3o Idoso] Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19044,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Paciente Idoso] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para acompanhamento e redu\u00e7\u00e3o das crises",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5089,
+                    "url": "",
+                    "nome": "Prednisona 20mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 10,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos pela manh\u00e3",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19067,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19043,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite Gotosa] Idade Paciente",
+                    "passo_de_entrada_id": 19044,
+                    "passo_de_entrada": "Receita: [Paciente Idoso] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19069,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19044,
+                    "passo_de_saida": "Receita: [Paciente Idoso] Receita",
+                    "passo_de_entrada_id": 19046,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Artrite Gotosa] Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19045,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[N\u00e3o Idoso] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para acompanhamento e redu\u00e7\u00e3o das crises",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5090,
+                    "url": "",
+                    "nome": "Ibuprofeno 600mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19068,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19043,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Artrite Gotosa] Idade Paciente",
+                    "passo_de_entrada_id": 19045,
+                    "passo_de_entrada": "Receita: [N\u00e3o Idoso] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19070,
+                    "url": "",
+                    "nome": "S21",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19045,
+                    "passo_de_saida": "Receita: [N\u00e3o Idoso] Receita",
+                    "passo_de_entrada_id": 19046,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Artrite Gotosa] Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19046,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Artrite Gotosa] Orienta\u00e7\u00f5es",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>ORIENTA&Ccedil;&Otilde;ES</strong><br />\n<br />\n- Redu&ccedil;&atilde;o do peso<br />\n- Mudan&ccedil;a alimentar: optar por alimentos com baixo teor de purinas e gordura saturada. Reduzr ingest&atilde;o de refrigerantes&nbsp;&nbsp;<br />\n- Redu&ccedil;&atilde;o da ingest&atilde;o de &aacute;lcool<br />\n- Modificar as medica&ccedil;&otilde;es, quando poss&iacute;vel que aumentem a produ&ccedil;&atilde;o ou reduzem a excre&ccedil;&atilde;o do &aacute;cido &uacute;rico<br />\n- Tratamento correto das comorbidades preexistentes</span><br />\n&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19069,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19044,
+                    "passo_de_saida": "Receita: [Paciente Idoso] Receita",
+                    "passo_de_entrada_id": 19046,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Artrite Gotosa] Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19070,
+                    "url": "",
+                    "nome": "S21",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19045,
+                    "passo_de_saida": "Receita: [N\u00e3o Idoso] Receita",
+                    "passo_de_entrada_id": 19046,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Artrite Gotosa] Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19047,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Artrite P\u00f3s Traum\u00e1tica] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Solicitar avalia&ccedil;&atilde;o da ortopedia</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9816,
+                    "url": "",
+                    "medicamento": 42951,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IM AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9817,
+                    "url": "",
+                    "medicamento": 36811,
+                    "codigo": "",
+                    "nome": "DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19071,
+                    "url": "",
+                    "nome": "S22",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19041,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Monoartrite Aguda",
+                    "passo_de_entrada_id": 19047,
+                    "passo_de_entrada": "Tratamento: [Artrite P\u00f3s Traum\u00e1tica] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19048,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Trauma Simples Recente] Tratamento",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T16:02:42.205435-03:00"
+            },
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9818,
+                    "url": "",
+                    "medicamento": 42951,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IM AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9819,
+                    "url": "",
+                    "medicamento": 38008,
+                    "codigo": "",
+                    "nome": "DIPIRONA 1 G AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GR",
+                    "unidade_display": "GRAMA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19049,
+                    "url": "",
+                    "nome": "S23 (Trauma superficial sem fratura)",
+                    "descricao": "Trauma superficial sem fratura",
+                    "passo_de_saida_id": 18949,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Dor",
+                    "passo_de_entrada_id": 19048,
+                    "passo_de_entrada": "Tratamento: [Trauma Simples Recente] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19072,
+                    "url": "",
+                    "nome": "S24",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19048,
+                    "passo_de_saida": "Tratamento: [Trauma Simples Recente] Tratamento",
+                    "passo_de_entrada_id": 18945,
+                    "passo_de_entrada": "Receita: [Trauma simples recente] Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19049,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S23 (Trauma superficial sem fratura)",
+            "descricao": "Trauma superficial sem fratura",
+            "passo_de_saida_id": 18949,
+            "passo_de_saida": {
+                "id": 18949,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Dor",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:02:29.679416-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19048,
+            "passo_de_entrada": {
+                "id": 19048,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Trauma Simples Recente] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:02:42.205435-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18822,
+                "nome": "Trauma superficial sem fratura",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18648
+                ],
+                "argumentos": [
+                    "trauma_superficial_recente"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19050,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "-",
+            "passo_de_saida_id": 18946,
+            "passo_de_saida": {
+                "id": 18946,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Anamnese Completa",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Anamnese completa + exame f&iacute;sico do local da dor </span></strong></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18947,
+            "passo_de_entrada": {
+                "id": 18947,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19051,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "-",
+            "passo_de_saida_id": 18947,
+            "passo_de_saida": {
+                "id": 18947,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18948,
+            "passo_de_entrada": {
+                "id": 18948,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Apresenta Sinais de Alarme] Conduta",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Solicitar ultrassom da articula&ccedil;&atilde;o acometida e hemograma</span></strong>.<br />\n<span style=\"font-size:16px\">Ap&oacute;s realiza&ccedil;&atilde;o dos exames, encaminhar para o ortopedista da urg&ecirc;ncia para avalia&ccedil;&atilde;o de artrite s&eacute;ptica e poss&iacute;vel pun&ccedil;&atilde;o articular.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18823,
+                "nome": "Cont\u00e9m_sinais_de_alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    18645,
+                    18821
+                ],
+                "argumentos": [
+                    "sinais_de_alarme",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19052,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "-",
+            "passo_de_saida_id": 18947,
+            "passo_de_saida": {
+                "id": 18947,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18949,
+            "passo_de_entrada": {
+                "id": 18949,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Dor",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:02:29.679416-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18824,
+                "nome": "Sem_sinais_de_alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    18645,
+                    18821
+                ],
+                "argumentos": [
+                    "sinais_de_alarme",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19053,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "-",
+            "passo_de_saida_id": 18949,
+            "passo_de_saida": {
+                "id": 18949,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Dor",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:02:29.679416-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18950,
+            "passo_de_entrada": {
+                "id": 18950,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18825,
+                "nome": "Dor_periarticular_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18647
+                ],
+                "argumentos": [
+                    "dor_periarticular"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19054,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "-",
+            "passo_de_saida_id": 18950,
+            "passo_de_saida": {
+                "id": 18950,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18951,
+            "passo_de_entrada": {
+                "id": 18951,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Paciente n\u00e3o idoso] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de ortopedia"
+            },
+            "operacao": {
+                "id": 18826,
+                "nome": "Paciente_n\u00e3o_idoso",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18649
+                ],
+                "argumentos": [
+                    "paciente_idoso"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19055,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "-",
+            "passo_de_saida_id": 18950,
+            "passo_de_saida": {
+                "id": 18950,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18952,
+            "passo_de_entrada": {
+                "id": 18952,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Paciente idoso] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de ortopedia"
+            },
+            "operacao": {
+                "id": 18827,
+                "nome": "Paciente_idoso",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18649
+                ],
+                "argumentos": [
+                    "paciente_idoso"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19056,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "-",
+            "passo_de_saida_id": 18949,
+            "passo_de_saida": {
+                "id": 18949,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Dor",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:02:29.679416-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18953,
+            "passo_de_entrada": {
+                "id": 18953,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais Flog\u00edsticos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18828,
+                "nome": "Dor_no_local_da_articula\u00e7\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18646
+                ],
+                "argumentos": [
+                    "dor_local_articulacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19057,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "-",
+            "passo_de_saida_id": 18953,
+            "passo_de_saida": {
+                "id": 18953,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais Flog\u00edsticos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18954,
+            "passo_de_entrada": {
+                "id": 18954,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Artralgia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18829,
+                "nome": "N\u00e3o_apresenta_sinais_flogisticos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18650
+                ],
+                "argumentos": [
+                    "sinais_flogisticos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19058,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "-",
+            "passo_de_saida_id": 18954,
+            "passo_de_saida": {
+                "id": 18954,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Artralgia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18955,
+            "passo_de_entrada": {
+                "id": 18955,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Osteoartrose] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia"
+            },
+            "operacao": {
+                "id": 18830,
+                "nome": "Osteoartrose",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18651
+                ],
+                "argumentos": [
+                    "osteoartrose"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19059,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "-",
+            "passo_de_saida_id": 18954,
+            "passo_de_saida": {
+                "id": 18954,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Artralgia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18956,
+            "passo_de_entrada": {
+                "id": 18956,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Arbovirose] Receita",
+                "descricao": "Retornar a emerg\u00eancia se n\u00e3o houver melhora com 72h ou houver piora importante dos sintomas.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Indicar repouso e estimular a ingesta h\u00eddrica"
+            },
+            "operacao": {
+                "id": 18831,
+                "nome": "Arbovirose",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18652
+                ],
+                "argumentos": [
+                    "arbovirose"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19060,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "-",
+            "passo_de_saida_id": 18953,
+            "passo_de_saida": {
+                "id": 18953,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sinais Flog\u00edsticos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18957,
+            "passo_de_entrada": {
+                "id": 18957,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Artrite",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Tempo de instala&ccedil;&atilde;o da dor?</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18832,
+                "nome": "Cont\u00e9m_sinais_flogisticos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18650
+                ],
+                "argumentos": [
+                    "sinais_flogisticos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19061,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "-",
+            "passo_de_saida_id": 18957,
+            "passo_de_saida": {
+                "id": 18957,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Artrite",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Tempo de instala&ccedil;&atilde;o da dor?</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18958,
+            "passo_de_entrada": {
+                "id": 18958,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Artrite] Quadro Cr\u00f4nico",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para investiga\u00e7\u00e3o de doen\u00e7a autoimune"
+            },
+            "operacao": {
+                "id": 18833,
+                "nome": "Quadro_cr\u00f4nico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18654
+                ],
+                "argumentos": [
+                    "maior_seis_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19062,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "-",
+            "passo_de_saida_id": 18957,
+            "passo_de_saida": {
+                "id": 18957,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Artrite",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Tempo de instala&ccedil;&atilde;o da dor?</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18959,
+            "passo_de_entrada": {
+                "id": 18959,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Artrite] Quadro Agudo/Subagudo",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18834,
+                "nome": "Quadro_agudo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18653
+                ],
+                "argumentos": [
+                    "menor_seis_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19063,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14",
+            "descricao": "-",
+            "passo_de_saida_id": 18959,
+            "passo_de_saida": {
+                "id": 18959,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Artrite] Quadro Agudo/Subagudo",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18960,
+            "passo_de_entrada": {
+                "id": 18960,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Poliartrite Aguda] Receita",
+                "descricao": "<p><u><strong>Discutir caso com chefe de equipe antes de prescrever tratamento.</strong></u></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para investiga\u00e7\u00e3o de doen\u00e7a autoimune"
+            },
+            "operacao": {
+                "id": 18835,
+                "nome": "Poliartrite_aguda",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18656
+                ],
+                "argumentos": [
+                    "poliartrite_aguda"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19064,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15",
+            "descricao": "-",
+            "passo_de_saida_id": 18959,
+            "passo_de_saida": {
+                "id": 18959,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Artrite] Quadro Agudo/Subagudo",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19041,
+            "passo_de_entrada": {
+                "id": 19041,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Monoartrite Aguda",
+                "descricao": "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite S&eacute;ptica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Monoartrite abrupta associado a calor, edema e consider&aacute;vel dor a mobilidade passiva e ativa, n&atilde;o aliviando com o repouso. Pode haver hist&oacute;ria de&nbsp;febre com infec&ccedil;&atilde;o pr&eacute;via predisponente na pele, pulm&atilde;o ou bexiga.&nbsp; </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite Gotosa</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Geralmente acomete 1 articula&ccedil;&atilde;o (principalmente 1&ordf; metatarsofalangiana ou joelho), paciente com hist&oacute;ria de epis&oacute;dios pr&eacute;vios, ficando assintom&aacute;ticos entre as crises, com &aacute;cido &uacute;rico sabidamente elevado. Pode j&aacute; haver presen&ccedil;a de tofos gotosos.&nbsp;Dor &agrave; movimenta&ccedil;&atilde;o ativa e passiva, n&atilde;o aliviando com o repouso. </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite P&oacute;s Traum&aacute;tica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Desconforto ao movimento, aumento discreto de temperatura, dor piora com atividade, aliviando ao repouso (ativa &gt; passiva). Hist&oacute;rico de trauma / tor&ccedil;&atilde;o</span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18836,
+                "nome": "Monoartrite_aguda_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18655
+                ],
+                "argumentos": [
+                    "monoartrite_aguda"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19065,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16",
+            "descricao": "-",
+            "passo_de_saida_id": 19041,
+            "passo_de_saida": {
+                "id": 19041,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Monoartrite Aguda",
+                "descricao": "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite S&eacute;ptica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Monoartrite abrupta associado a calor, edema e consider&aacute;vel dor a mobilidade passiva e ativa, n&atilde;o aliviando com o repouso. Pode haver hist&oacute;ria de&nbsp;febre com infec&ccedil;&atilde;o pr&eacute;via predisponente na pele, pulm&atilde;o ou bexiga.&nbsp; </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite Gotosa</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Geralmente acomete 1 articula&ccedil;&atilde;o (principalmente 1&ordf; metatarsofalangiana ou joelho), paciente com hist&oacute;ria de epis&oacute;dios pr&eacute;vios, ficando assintom&aacute;ticos entre as crises, com &aacute;cido &uacute;rico sabidamente elevado. Pode j&aacute; haver presen&ccedil;a de tofos gotosos.&nbsp;Dor &agrave; movimenta&ccedil;&atilde;o ativa e passiva, n&atilde;o aliviando com o repouso. </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite P&oacute;s Traum&aacute;tica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Desconforto ao movimento, aumento discreto de temperatura, dor piora com atividade, aliviando ao repouso (ativa &gt; passiva). Hist&oacute;rico de trauma / tor&ccedil;&atilde;o</span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19042,
+            "passo_de_entrada": {
+                "id": 19042,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Artrite S\u00e9ptica] Tratamento",
+                "descricao": "<p><span style=\"font-size:16px\">Encaminhar para o ortopedista da emerg&ecirc;ncia para tentativa de pun&ccedil;&atilde;o articular com cultura e Gram, citologia, bioqu&iacute;mica e&nbsp;pesquisa de cristais com microscopia de luz polarizada do l&iacute;quido sinovial.</span></p>\n\n<ul>\n\t<li><strong><span style=\"font-size:16px\">Solicitar </span> (via conduta complementar)&nbsp; <span style=\"font-size:16px\">rx da articula&ccedil;&atilde;o acometida</span></strong></li>\n</ul>\n\n<p><span style=\"font-size:16px\"><strong>Antibioticoterapia emp&iacute;rica:&nbsp;Oxacilina 2g endovenoso de 4/4h +&nbsp;Gentamicina 5mg/kg/dia (se paciente possuir&nbsp;comorbidades ou imunodepress&atilde;o)</strong></span><br />\n<br />\n<span style=\"font-size:16px\"><strong>Discutir a conduta com l&iacute;der local ou ortopedista.</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:57:41.982379-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18837,
+                "nome": "Artrite_s\u00e9ptica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18657
+                ],
+                "argumentos": [
+                    "artrite_septica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19066,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17",
+            "descricao": "-",
+            "passo_de_saida_id": 19041,
+            "passo_de_saida": {
+                "id": 19041,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Monoartrite Aguda",
+                "descricao": "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite S&eacute;ptica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Monoartrite abrupta associado a calor, edema e consider&aacute;vel dor a mobilidade passiva e ativa, n&atilde;o aliviando com o repouso. Pode haver hist&oacute;ria de&nbsp;febre com infec&ccedil;&atilde;o pr&eacute;via predisponente na pele, pulm&atilde;o ou bexiga.&nbsp; </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite Gotosa</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Geralmente acomete 1 articula&ccedil;&atilde;o (principalmente 1&ordf; metatarsofalangiana ou joelho), paciente com hist&oacute;ria de epis&oacute;dios pr&eacute;vios, ficando assintom&aacute;ticos entre as crises, com &aacute;cido &uacute;rico sabidamente elevado. Pode j&aacute; haver presen&ccedil;a de tofos gotosos.&nbsp;Dor &agrave; movimenta&ccedil;&atilde;o ativa e passiva, n&atilde;o aliviando com o repouso. </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite P&oacute;s Traum&aacute;tica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Desconforto ao movimento, aumento discreto de temperatura, dor piora com atividade, aliviando ao repouso (ativa &gt; passiva). Hist&oacute;rico de trauma / tor&ccedil;&atilde;o</span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19043,
+            "passo_de_entrada": {
+                "id": 19043,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Artrite Gotosa] Idade Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18838,
+                "nome": "Artrite_gotosa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18658
+                ],
+                "argumentos": [
+                    "artrite_gotosa"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19067,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18",
+            "descricao": "-",
+            "passo_de_saida_id": 19043,
+            "passo_de_saida": {
+                "id": 19043,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Artrite Gotosa] Idade Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19044,
+            "passo_de_entrada": {
+                "id": 19044,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Paciente Idoso] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para acompanhamento e redu\u00e7\u00e3o das crises"
+            },
+            "operacao": {
+                "id": 18839,
+                "nome": "Paciente_idoso_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18660
+                ],
+                "argumentos": [
+                    "paciente_idoso_dois"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19068,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19",
+            "descricao": "-",
+            "passo_de_saida_id": 19043,
+            "passo_de_saida": {
+                "id": 19043,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Artrite Gotosa] Idade Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19045,
+            "passo_de_entrada": {
+                "id": 19045,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[N\u00e3o Idoso] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para acompanhamento e redu\u00e7\u00e3o das crises"
+            },
+            "operacao": {
+                "id": 18840,
+                "nome": "N\u00e3o_idoso",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18660
+                ],
+                "argumentos": [
+                    "paciente_idoso_dois"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19069,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20",
+            "descricao": "-",
+            "passo_de_saida_id": 19044,
+            "passo_de_saida": {
+                "id": 19044,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Paciente Idoso] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para acompanhamento e redu\u00e7\u00e3o das crises"
+            },
+            "passo_de_entrada_id": 19046,
+            "passo_de_entrada": {
+                "id": 19046,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Artrite Gotosa] Orienta\u00e7\u00f5es",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>ORIENTA&Ccedil;&Otilde;ES</strong><br />\n<br />\n- Redu&ccedil;&atilde;o do peso<br />\n- Mudan&ccedil;a alimentar: optar por alimentos com baixo teor de purinas e gordura saturada. Reduzr ingest&atilde;o de refrigerantes&nbsp;&nbsp;<br />\n- Redu&ccedil;&atilde;o da ingest&atilde;o de &aacute;lcool<br />\n- Modificar as medica&ccedil;&otilde;es, quando poss&iacute;vel que aumentem a produ&ccedil;&atilde;o ou reduzem a excre&ccedil;&atilde;o do &aacute;cido &uacute;rico<br />\n- Tratamento correto das comorbidades preexistentes</span><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19070,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S21",
+            "descricao": "-",
+            "passo_de_saida_id": 19045,
+            "passo_de_saida": {
+                "id": 19045,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[N\u00e3o Idoso] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Encaminhar para ambulat\u00f3rio de reumatologia para acompanhamento e redu\u00e7\u00e3o das crises"
+            },
+            "passo_de_entrada_id": 19046,
+            "passo_de_entrada": {
+                "id": 19046,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Artrite Gotosa] Orienta\u00e7\u00f5es",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>ORIENTA&Ccedil;&Otilde;ES</strong><br />\n<br />\n- Redu&ccedil;&atilde;o do peso<br />\n- Mudan&ccedil;a alimentar: optar por alimentos com baixo teor de purinas e gordura saturada. Reduzr ingest&atilde;o de refrigerantes&nbsp;&nbsp;<br />\n- Redu&ccedil;&atilde;o da ingest&atilde;o de &aacute;lcool<br />\n- Modificar as medica&ccedil;&otilde;es, quando poss&iacute;vel que aumentem a produ&ccedil;&atilde;o ou reduzem a excre&ccedil;&atilde;o do &aacute;cido &uacute;rico<br />\n- Tratamento correto das comorbidades preexistentes</span><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19071,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S22",
+            "descricao": "-",
+            "passo_de_saida_id": 19041,
+            "passo_de_saida": {
+                "id": 19041,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Monoartrite Aguda",
+                "descricao": "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite S&eacute;ptica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Monoartrite abrupta associado a calor, edema e consider&aacute;vel dor a mobilidade passiva e ativa, n&atilde;o aliviando com o repouso. Pode haver hist&oacute;ria de&nbsp;febre com infec&ccedil;&atilde;o pr&eacute;via predisponente na pele, pulm&atilde;o ou bexiga.&nbsp; </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite Gotosa</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Geralmente acomete 1 articula&ccedil;&atilde;o (principalmente 1&ordf; metatarsofalangiana ou joelho), paciente com hist&oacute;ria de epis&oacute;dios pr&eacute;vios, ficando assintom&aacute;ticos entre as crises, com &aacute;cido &uacute;rico sabidamente elevado. Pode j&aacute; haver presen&ccedil;a de tofos gotosos.&nbsp;Dor &agrave; movimenta&ccedil;&atilde;o ativa e passiva, n&atilde;o aliviando com o repouso. </span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong><span style=\"font-size:14px\">Artrite P&oacute;s Traum&aacute;tica</span></strong></td>\n\t\t\t<td><span style=\"font-size:14px\">Desconforto ao movimento, aumento discreto de temperatura, dor piora com atividade, aliviando ao repouso (ativa &gt; passiva). Hist&oacute;rico de trauma / tor&ccedil;&atilde;o</span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19047,
+            "passo_de_entrada": {
+                "id": 19047,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Artrite P\u00f3s Traum\u00e1tica] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Solicitar avalia&ccedil;&atilde;o da ortopedia</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18841,
+                "nome": "Artrite_P\u00f3s_Traum\u00e1tica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18659
+                ],
+                "argumentos": [
+                    "artrite_pos_traumatica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19072,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S24",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19048,
+            "passo_de_saida": {
+                "id": 19048,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Trauma Simples Recente] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:02:42.205435-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18945,
+            "passo_de_entrada": {
+                "id": 18945,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Trauma simples recente] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T16:02:55.451891-03:00"
+                },
+                "manter_prescricao": false,
+                "orientacao_medica": "Fazer compressa gelada por 15 minutos, 3 vezes ao dia."
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 18645,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sinais_de_alarme",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Rigidez ou dor que torna o movimento imposs\u00edvel",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Dor que fica implacavelmente pior ao longo de um per\u00edodo de dias ou semanas",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Articula\u00e7\u00e3o inflamada com febre associada ou altera\u00e7\u00e3o constitucional",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Dor severa em repouso ou durante a noite",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 18646,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dor_local_articulacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18647,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dor_periarticular",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18648,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "trauma_superficial_recente",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18649,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "paciente_idoso",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18650,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_flogisticos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18651,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "osteoartrose",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18652,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "arbovirose",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18653,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "menor_seis_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18654,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "maior_seis_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18655,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "monoartrite_aguda",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18656,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "poliartrite_aguda",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18657,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "artrite_septica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18658,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "artrite_gotosa",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18659,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "artrite_pos_traumatica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18660,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "paciente_idoso_dois",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18821,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

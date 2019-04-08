@@ -1,0 +1,2443 @@
+{
+    "id": 3421,
+    "url": "",
+    "codigo": "H027",
+    "nome": "Otalgia",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 281,
+    "versao": 9,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-11T15:07:08.177511-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-11T15:05:57.608509-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-11T15:07:08.177511-03:00"
+    },
+    "elementos": [
+        {
+            "id": 20501,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Enviar ao L\u00edder Local",
+            "descricao": "Enviar paciente ao l\u00edder local e aventar possibilidade de solicita\u00e7\u00e3o de tomografia computadorizada.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20531,
+                    "url": "",
+                    "nome": "S13 (sob suspeita de complicacao)",
+                    "descricao": "sob suspeita de complicacao",
+                    "passo_de_saida_id": 20512,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20501,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Enviar ao L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20502,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Anamnese e Exame Fisico",
+            "descricao": "<p style=\"text-align:center\"><span style=\"font-size:18px\"><u><strong>Anamnese completa:</strong></u></span><br />\n<br />\n<span style=\"font-size:16px\">- Idade do paciente<br />\n- Caracter&iacute;sticas da dor: tipo, intensidade, localiza&ccedil;&atilde;o, irradia&ccedil;&atilde;o, fatores agravantes e de al&iacute;vio<br />\n- Fatores predisponentes a otite (trauma, nata&ccedil;&atilde;o, resfriado recente, rinite)</span><br />\n<br />\n<span style=\"font-size:18px\"><u><strong>Exame f&iacute;sico:</strong></u></span><br />\n<br />\n<span style=\"font-size:16px\">- Inspe&ccedil;&atilde;o da orelha, das regi&otilde;es pr&eacute; e p&oacute;s-auriculares, e da regi&atilde;o cervical<br />\n- Palpa&ccedil;&atilde;o e mobiliza&ccedil;&atilde;o da orelha<br />\n- Otoscopia<br />\n- Inspe&ccedil;&otilde;es da orofaringe<br />\n- Palpa&ccedil;&atilde;o da articula&ccedil;&atilde;o temporomandibular</span></p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 20520,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20502,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Anamnese e Exame Fisico",
+                    "passo_de_entrada_id": 20503,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20503,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Sinais de Alarme",
+            "descricao": "Paciente exibe algum dos sinais de alarme a seguir?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-02-11T15:06:26.363265-03:00"
+            },
+            "perguntas": [
+                {
+                    "id": 10361,
+                    "url": "",
+                    "texto": "Sinais de Alarme",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20081,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sinais_de_alarme",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Idade Avan\u00e7ada",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Cefal\u00e9ia com \u00camese Associada",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Doen\u00e7a ou Sequela Neurol\u00f3gica Pr\u00e9via",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Cefal\u00e9ia Refrat\u00e1ria a Analgesia",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "\u00camese Incoerc\u00edvel",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Suspeita velada das complica\u00e7oes tipo mastoidite, abcesso, trombose do seio lateral, etc",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Altera\u00e7\u00e3o do N\u00edvel de Consci\u00eancia",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Abaulamento ou Hipersensibilidade de Mastoide Ipsilateral",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20520,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20502,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Anamnese e Exame Fisico",
+                    "passo_de_entrada_id": 20503,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20521,
+                    "url": "",
+                    "nome": "S2 (sinais de alarme >= 2)",
+                    "descricao": "com sinais de alarme",
+                    "passo_de_saida_id": 20503,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sinais de Alarme",
+                    "passo_de_entrada_id": 20504,
+                    "passo_de_entrada": "Tratamento: Tomografia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20522,
+                    "url": "",
+                    "nome": "S3 (sinais de alarme < 2)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 20503,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sinais de Alarme",
+                    "passo_de_entrada_id": 20506,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20504,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tomografia",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TC CRANIO/ORBITAS,SELA TURSICA",
+                    "exame": "34010068",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otalgia com sinais de alarme",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20521,
+                    "url": "",
+                    "nome": "S2 (sinais de alarme >= 2)",
+                    "descricao": "com sinais de alarme",
+                    "passo_de_saida_id": 20503,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sinais de Alarme",
+                    "passo_de_entrada_id": 20504,
+                    "passo_de_entrada": "Tratamento: Tomografia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20523,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20504,
+                    "passo_de_saida": "Tratamento: Tomografia",
+                    "passo_de_entrada_id": 20505,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20505,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com L\u00edder Local",
+            "descricao": "Discutir quadro do paciente com l\u00edder local para defini\u00e7\u00e3o de conduta.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20523,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20504,
+                    "passo_de_saida": "Tratamento: Tomografia",
+                    "passo_de_entrada_id": 20505,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20529,
+                    "url": "",
+                    "nome": "S11 (tratamento hospitalar)",
+                    "descricao": "tratamento hospitalar",
+                    "passo_de_saida_id": 20510,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Definir Tratamento",
+                    "passo_de_entrada_id": 20505,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20506,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar Quadro de Otalgia",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10362,
+                    "url": "",
+                    "texto": "Acometimento do Pavilh\u00e3o Auricular",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20082,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "acometimento_pavilhao_auricular",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10363,
+                    "url": "",
+                    "texto": "Acometimento do Conduto Auditivo (Otite Externa)\nAp\u00f3s banhos de piscina, mar ou manipula\u00e7\u00e3o do conduto auditivo externo. Otalgia, prurido, plenitude auricular, hipoacusia. Pode ocorrer otorreia.\n\nOtoscopia: eritema e edema do conduto auditivo externo",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20083,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_externa",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 10364,
+                    "url": "",
+                    "texto": "Acometimento do Ouvido M\u00e9dio - Otite M\u00e9dia\nOtalgia, otorreia, IVAS pr\u00e9via, plenitude aural, hipoacusia, zumbido, pode haver febre\n\nNa otoscopia h\u00e1 hiperemia, diminui\u00e7\u00e3o da transpar\u00eancia da membrana timp\u00e2nica, abaulamento da membrana.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20084,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_media",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20522,
+                    "url": "",
+                    "nome": "S3 (sinais de alarme < 2)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 20503,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sinais de Alarme",
+                    "passo_de_entrada_id": 20506,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20524,
+                    "url": "",
+                    "nome": "S5 (acometimento do pavilhao auricular)",
+                    "descricao": "acometimento do pavilhao auricular",
+                    "passo_de_saida_id": 20506,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "passo_de_entrada_id": 20507,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Acometimento do Pavilh\u00e3o Auricular] Tratamento Individualizado",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20530,
+                    "url": "",
+                    "nome": "S12 (otite media)",
+                    "descricao": "otite media",
+                    "passo_de_saida_id": 20506,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "passo_de_entrada_id": 20512,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20539,
+                    "url": "",
+                    "nome": "S6 (otite externa)",
+                    "descricao": "otite externa",
+                    "passo_de_saida_id": 20506,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "passo_de_entrada_id": 20508,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite Externa] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20507,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Acometimento do Pavilh\u00e3o Auricular] Tratamento Individualizado",
+            "descricao": "O tratamento ser\u00e1 individualizado, dependendo do tipo de lacera\u00e7\u00e3o, extens\u00e3o, se h\u00e1 infec\u00e7\u00e3o associada, necessidade de profilaxia de t\u00e9tano e raiva ou debridamento",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20524,
+                    "url": "",
+                    "nome": "S5 (acometimento do pavilhao auricular)",
+                    "descricao": "acometimento do pavilhao auricular",
+                    "passo_de_saida_id": 20506,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "passo_de_entrada_id": 20507,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Acometimento do Pavilh\u00e3o Auricular] Tratamento Individualizado",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20508,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Otite Externa] Conduta",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10365,
+                    "url": "",
+                    "texto": "Paciente idoso diab\u00e9tico mal controlado ou imunossuprimido com suspeita de otite externa malina, ou celulite de face e pavilh\u00e3o auricular ou abscesso de pavilh\u00e3o auricular e pesco\u00e7o ou envolvimento de pares cranianos?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20085,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_externa_criterios_decisao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20539,
+                    "url": "",
+                    "nome": "S6 (otite externa)",
+                    "descricao": "otite externa",
+                    "passo_de_saida_id": 20506,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "passo_de_entrada_id": 20508,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite Externa] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20525,
+                    "url": "",
+                    "nome": "S7 (criterios ausentes)",
+                    "descricao": "criterios ausentes",
+                    "passo_de_saida_id": 20508,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Conduta",
+                    "passo_de_entrada_id": 20518,
+                    "passo_de_entrada": "Receita: [Otite Externa] Orienta\u00e7\u00f5es e medica\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20526,
+                    "url": "",
+                    "nome": "S8 (criterios presentes)",
+                    "descricao": "criterios presentes",
+                    "passo_de_saida_id": 20508,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Conduta",
+                    "passo_de_entrada_id": 20509,
+                    "passo_de_entrada": "Tratamento: [Otite Externa] Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20509,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Otite Externa] Exames",
+            "descricao": "<p><strong><span style=\"color:null\"><span style=\"font-size:16px\">Discutir internamento hospitalar com l&iacute;der local</span></span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "CULTURA DA SECRECAO DO OUVIDO",
+                    "exame": "99100665",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otite Externa",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ANTIBIOGRAMA AUTOMATIZADO",
+                    "exame": "99100672",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otite Externa",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otite Externa",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otite Externa",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otite Externa",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PESQ DE ANTI-HIV-EIE P/UND D/SANG TOTAL",
+                    "exame": "27040224",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otite Externa",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TC DAS MASTOIDES OU OUVIDOS",
+                    "exame": "34010092",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Otite Externa",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20526,
+                    "url": "",
+                    "nome": "S8 (criterios presentes)",
+                    "descricao": "criterios presentes",
+                    "passo_de_saida_id": 20508,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Conduta",
+                    "passo_de_entrada_id": 20509,
+                    "passo_de_entrada": "Tratamento: [Otite Externa] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20527,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20509,
+                    "passo_de_saida": "Tratamento: [Otite Externa] Exames",
+                    "passo_de_entrada_id": 20510,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite Externa] Definir Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20510,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Otite Externa] Definir Tratamento",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10366,
+                    "url": "",
+                    "texto": "Tratamento Ambulatorial",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20086,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_externa_tratamento_ambulatorial",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10367,
+                    "url": "",
+                    "texto": "Tratamento Hospitalar",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20087,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_externa_tratamento_hospitalar",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20527,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20509,
+                    "passo_de_saida": "Tratamento: [Otite Externa] Exames",
+                    "passo_de_entrada_id": 20510,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite Externa] Definir Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20528,
+                    "url": "",
+                    "nome": "S10 (tratamento ambulatorial)",
+                    "descricao": "tratamento ambulatorial",
+                    "passo_de_saida_id": 20510,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Definir Tratamento",
+                    "passo_de_entrada_id": 20511,
+                    "passo_de_entrada": "Receita: [Otite Externa] Tratamento Ambulatorial",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20529,
+                    "url": "",
+                    "nome": "S11 (tratamento hospitalar)",
+                    "descricao": "tratamento hospitalar",
+                    "passo_de_saida_id": 20510,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Definir Tratamento",
+                    "passo_de_entrada_id": 20505,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20511,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Otite Externa] Tratamento Ambulatorial",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5501,
+                    "url": "",
+                    "nome": "Ciprofloxacino + hidrocortisona (2,0 + 10mg/ml)",
+                    "medicamento": null,
+                    "apresentacao": "GOTA",
+                    "via_acesso": 16,
+                    "quantidade_receita": 3,
+                    "quantidade_duracao": 6,
+                    "unidade_duracao": "SS",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "De 4 a 6 semanas",
+                    "ordem": 1
+                },
+                {
+                    "id": 5502,
+                    "url": "",
+                    "nome": "Dipirona 1g",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                },
+                {
+                    "id": 5503,
+                    "url": "",
+                    "nome": "Ibuprofeno 600mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                },
+                {
+                    "id": 5504,
+                    "url": "",
+                    "nome": "Ciprofloxacino 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 14,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20528,
+                    "url": "",
+                    "nome": "S10 (tratamento ambulatorial)",
+                    "descricao": "tratamento ambulatorial",
+                    "passo_de_saida_id": 20510,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Definir Tratamento",
+                    "passo_de_entrada_id": 20511,
+                    "passo_de_entrada": "Receita: [Otite Externa] Tratamento Ambulatorial",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20512,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10368,
+                    "url": "",
+                    "texto": "Suspeita de complica\u00e7\u00e3o?\n(Mastoidite, meningite, abscesso cerebral, trombose se seio venoso)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20088,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_media_suspeita_complicacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20530,
+                    "url": "",
+                    "nome": "S12 (otite media)",
+                    "descricao": "otite media",
+                    "passo_de_saida_id": 20506,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Quadro de Otalgia",
+                    "passo_de_entrada_id": 20512,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20531,
+                    "url": "",
+                    "nome": "S13 (sob suspeita de complicacao)",
+                    "descricao": "sob suspeita de complicacao",
+                    "passo_de_saida_id": 20512,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20501,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Enviar ao L\u00edder Local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20532,
+                    "url": "",
+                    "nome": "S14 (sem suspeita de complicacao)",
+                    "descricao": "sem suspeita de complicacao",
+                    "passo_de_saida_id": 20512,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20513,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Otite M\u00e9dia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20513,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar Otite M\u00e9dia",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10369,
+                    "url": "",
+                    "texto": "OTITE M\u00c9DIA AGUDA (OMA):",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20089,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_media_aguda",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10370,
+                    "url": "",
+                    "texto": "OTITE M\u00c9DIA CR\u00d4NICA",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20090,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_media_cronica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20532,
+                    "url": "",
+                    "nome": "S14 (sem suspeita de complicacao)",
+                    "descricao": "sem suspeita de complicacao",
+                    "passo_de_saida_id": 20512,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20513,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar Otite M\u00e9dia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20533,
+                    "url": "",
+                    "nome": "S15 (otite media aguda)",
+                    "descricao": "otite media aguda",
+                    "passo_de_saida_id": 20513,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Otite M\u00e9dia",
+                    "passo_de_entrada_id": 20514,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite M\u00e9dia Aguda] Sinais de gravidade",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20534,
+                    "url": "",
+                    "nome": "S16 (otite media cronica)",
+                    "descricao": "otite media cronica",
+                    "passo_de_saida_id": 20513,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Otite M\u00e9dia",
+                    "passo_de_entrada_id": 20519,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Otorrinolaringologista",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20514,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Otite M\u00e9dia Aguda] Sinais de gravidade",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10371,
+                    "url": "",
+                    "texto": "Paciente apresenta sinais de gravidade?\n- Otalgia moderada a severa, febre maior que 39\u00b0C e dura\u00e7\u00e3o maior que 48h",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 20091,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "otite_media_aguda_sinais_gravidade",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20533,
+                    "url": "",
+                    "nome": "S15 (otite media aguda)",
+                    "descricao": "otite media aguda",
+                    "passo_de_saida_id": 20513,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Otite M\u00e9dia",
+                    "passo_de_entrada_id": 20514,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Otite M\u00e9dia Aguda] Sinais de gravidade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20535,
+                    "url": "",
+                    "nome": "S17 (com sinais de gravidade)",
+                    "descricao": "com sinais de gravidade",
+                    "passo_de_saida_id": 20514,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia Aguda] Sinais de gravidade",
+                    "passo_de_entrada_id": 20516,
+                    "passo_de_entrada": "Receita: [Otite M\u00e9dia Aguda] Antibioticoterapia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20536,
+                    "url": "",
+                    "nome": "S18 (sem sinais de gravidade)",
+                    "descricao": "sem sinais de gravidade",
+                    "passo_de_saida_id": 20514,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia Aguda] Sinais de gravidade",
+                    "passo_de_entrada_id": 20515,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Otite M\u00e9dia Aguda] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20515,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Otite M\u00e9dia Aguda] Tratamento",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Reavalia&ccedil;&atilde;o com otorrinolaringologista com 48-72h ou procurar a emerg&ecirc;ncia se n&atilde;o houver melhora/piora do quadro.</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20536,
+                    "url": "",
+                    "nome": "S18 (sem sinais de gravidade)",
+                    "descricao": "sem sinais de gravidade",
+                    "passo_de_saida_id": 20514,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia Aguda] Sinais de gravidade",
+                    "passo_de_entrada_id": 20515,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Otite M\u00e9dia Aguda] Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20537,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20516,
+                    "passo_de_saida": "Receita: [Otite M\u00e9dia Aguda] Antibioticoterapia",
+                    "passo_de_entrada_id": 20515,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Otite M\u00e9dia Aguda] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20538,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20515,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Otite M\u00e9dia Aguda] Tratamento",
+                    "passo_de_entrada_id": 20517,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es p\u00f3s-alta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20516,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Otite M\u00e9dia Aguda] Antibioticoterapia",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5505,
+                    "url": "",
+                    "nome": "Amoxicilina+Clavulanato 875/125mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5506,
+                    "url": "",
+                    "nome": "Azitromicina 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 4,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "se paciente al\u00e9rgico a penicilina",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20535,
+                    "url": "",
+                    "nome": "S17 (com sinais de gravidade)",
+                    "descricao": "com sinais de gravidade",
+                    "passo_de_saida_id": 20514,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite M\u00e9dia Aguda] Sinais de gravidade",
+                    "passo_de_entrada_id": 20516,
+                    "passo_de_entrada": "Receita: [Otite M\u00e9dia Aguda] Antibioticoterapia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20537,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20516,
+                    "passo_de_saida": "Receita: [Otite M\u00e9dia Aguda] Antibioticoterapia",
+                    "passo_de_entrada_id": 20515,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Otite M\u00e9dia Aguda] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20517,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Orienta\u00e7\u00f5es p\u00f3s-alta",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Orienta&ccedil;&otilde;es p&oacute;s alta:</strong><br />\n<br />\n- N&atilde;o bloqueie o conduto auditivo com algod&atilde;o, n&atilde;o use cotonetes ou gotas otol&oacute;gicas<br />\n- Febre e dor pode permanecer por at&eacute; 48-72h<br />\n<br />\n<strong>Procurar a emerg&ecirc;ncia caso:</strong><br />\n- Ap&oacute;s 72h do tratamento, n&atilde;o apresentar melhor, mantiver otalgia intensa ou febre&nbsp;<br />\n- Apresentar dor de cabe&ccedil;a intensa ou dor de ouvido persistente<br />\n- Apresentar incha&ccedil;o atr&aacute;s ou ao redor do ouvido<br />\n- Ficar sonolento, com dor no pesco&ccedil;o ou n&atilde;o puder andar normalmente</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20538,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20515,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Otite M\u00e9dia Aguda] Tratamento",
+                    "passo_de_entrada_id": 20517,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es p\u00f3s-alta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20518,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Otite Externa] Orienta\u00e7\u00f5es e medica\u00e7\u00e3o",
+            "descricao": "Evitar a entrada de \u00e1gua no conduto externo durante o banho e esportes aqu\u00e1ticos, al\u00e9m de traumatismos pelo uso de hastes flex\u00edveis",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5507,
+                    "url": "",
+                    "nome": "Otosporin Gotas",
+                    "medicamento": null,
+                    "apresentacao": "GOTA",
+                    "via_acesso": 16,
+                    "quantidade_receita": 4,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5508,
+                    "url": "",
+                    "nome": "Ciprofloxacino gotas",
+                    "medicamento": null,
+                    "apresentacao": "GOTA",
+                    "via_acesso": 16,
+                    "quantidade_receita": 3,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                },
+                {
+                    "id": 5509,
+                    "url": "",
+                    "nome": "Ciprofloxacino 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                },
+                {
+                    "id": 5510,
+                    "url": "",
+                    "nome": "Nimesulida 100mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20525,
+                    "url": "",
+                    "nome": "S7 (criterios ausentes)",
+                    "descricao": "criterios ausentes",
+                    "passo_de_saida_id": 20508,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Otite Externa] Conduta",
+                    "passo_de_entrada_id": 20518,
+                    "passo_de_entrada": "Receita: [Otite Externa] Orienta\u00e7\u00f5es e medica\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20519,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Otorrinolaringologista",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Encaminhar ao Otorrinolaringologista</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20534,
+                    "url": "",
+                    "nome": "S16 (otite media cronica)",
+                    "descricao": "otite media cronica",
+                    "passo_de_saida_id": 20513,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar Otite M\u00e9dia",
+                    "passo_de_entrada_id": 20519,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Otorrinolaringologista",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20520,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20502,
+            "passo_de_saida": {
+                "id": 20502,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Anamnese e Exame Fisico",
+                "descricao": "<p style=\"text-align:center\"><span style=\"font-size:18px\"><u><strong>Anamnese completa:</strong></u></span><br />\n<br />\n<span style=\"font-size:16px\">- Idade do paciente<br />\n- Caracter&iacute;sticas da dor: tipo, intensidade, localiza&ccedil;&atilde;o, irradia&ccedil;&atilde;o, fatores agravantes e de al&iacute;vio<br />\n- Fatores predisponentes a otite (trauma, nata&ccedil;&atilde;o, resfriado recente, rinite)</span><br />\n<br />\n<span style=\"font-size:18px\"><u><strong>Exame f&iacute;sico:</strong></u></span><br />\n<br />\n<span style=\"font-size:16px\">- Inspe&ccedil;&atilde;o da orelha, das regi&otilde;es pr&eacute; e p&oacute;s-auriculares, e da regi&atilde;o cervical<br />\n- Palpa&ccedil;&atilde;o e mobiliza&ccedil;&atilde;o da orelha<br />\n- Otoscopia<br />\n- Inspe&ccedil;&otilde;es da orofaringe<br />\n- Palpa&ccedil;&atilde;o da articula&ccedil;&atilde;o temporomandibular</span></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20503,
+            "passo_de_entrada": {
+                "id": 20503,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sinais de Alarme",
+                "descricao": "Paciente exibe algum dos sinais de alarme a seguir?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-02-11T15:06:26.363265-03:00"
+                }
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20521,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sinais de alarme >= 2)",
+            "descricao": "com sinais de alarme",
+            "passo_de_saida_id": 20503,
+            "passo_de_saida": {
+                "id": 20503,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sinais de Alarme",
+                "descricao": "Paciente exibe algum dos sinais de alarme a seguir?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-02-11T15:06:26.363265-03:00"
+                }
+            },
+            "passo_de_entrada_id": 20504,
+            "passo_de_entrada": {
+                "id": 20504,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tomografia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20098,
+                "nome": "sinais de alarme >= 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    20081,
+                    20092
+                ],
+                "argumentos": [
+                    "sinais_de_alarme",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20522,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (sinais de alarme < 2)",
+            "descricao": "sem sinais de alarme",
+            "passo_de_saida_id": 20503,
+            "passo_de_saida": {
+                "id": 20503,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sinais de Alarme",
+                "descricao": "Paciente exibe algum dos sinais de alarme a seguir?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-02-11T15:06:26.363265-03:00"
+                }
+            },
+            "passo_de_entrada_id": 20506,
+            "passo_de_entrada": {
+                "id": 20506,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Quadro de Otalgia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20099,
+                "nome": "sinais de alarme < 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    20081,
+                    20092
+                ],
+                "argumentos": [
+                    "sinais_de_alarme",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20523,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20504,
+            "passo_de_saida": {
+                "id": 20504,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tomografia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20505,
+            "passo_de_entrada": {
+                "id": 20505,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com L\u00edder Local",
+                "descricao": "Discutir quadro do paciente com l\u00edder local para defini\u00e7\u00e3o de conduta.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20524,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (acometimento do pavilhao auricular)",
+            "descricao": "acometimento do pavilhao auricular",
+            "passo_de_saida_id": 20506,
+            "passo_de_saida": {
+                "id": 20506,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Quadro de Otalgia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20507,
+            "passo_de_entrada": {
+                "id": 20507,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Acometimento do Pavilh\u00e3o Auricular] Tratamento Individualizado",
+                "descricao": "O tratamento ser\u00e1 individualizado, dependendo do tipo de lacera\u00e7\u00e3o, extens\u00e3o, se h\u00e1 infec\u00e7\u00e3o associada, necessidade de profilaxia de t\u00e9tano e raiva ou debridamento",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20100,
+                "nome": "acometimento do pavilhao auricular",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    20082
+                ],
+                "argumentos": [
+                    "acometimento_pavilhao_auricular"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20525,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (criterios ausentes)",
+            "descricao": "criterios ausentes",
+            "passo_de_saida_id": 20508,
+            "passo_de_saida": {
+                "id": 20508,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite Externa] Conduta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20518,
+            "passo_de_entrada": {
+                "id": 20518,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Otite Externa] Orienta\u00e7\u00f5es e medica\u00e7\u00e3o",
+                "descricao": "Evitar a entrada de \u00e1gua no conduto externo durante o banho e esportes aqu\u00e1ticos, al\u00e9m de traumatismos pelo uso de hastes flex\u00edveis",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 20101,
+                "nome": "criterios ausentes",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    20085
+                ],
+                "argumentos": [
+                    "otite_externa_criterios_decisao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20526,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (criterios presentes)",
+            "descricao": "criterios presentes",
+            "passo_de_saida_id": 20508,
+            "passo_de_saida": {
+                "id": 20508,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite Externa] Conduta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20509,
+            "passo_de_entrada": {
+                "id": 20509,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Otite Externa] Exames",
+                "descricao": "<p><strong><span style=\"color:null\"><span style=\"font-size:16px\">Discutir internamento hospitalar com l&iacute;der local</span></span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20102,
+                "nome": "criterios presentes",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    20085
+                ],
+                "argumentos": [
+                    "otite_externa_criterios_decisao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20527,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20509,
+            "passo_de_saida": {
+                "id": 20509,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Otite Externa] Exames",
+                "descricao": "<p><strong><span style=\"color:null\"><span style=\"font-size:16px\">Discutir internamento hospitalar com l&iacute;der local</span></span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20510,
+            "passo_de_entrada": {
+                "id": 20510,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite Externa] Definir Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20528,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (tratamento ambulatorial)",
+            "descricao": "tratamento ambulatorial",
+            "passo_de_saida_id": 20510,
+            "passo_de_saida": {
+                "id": 20510,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite Externa] Definir Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20511,
+            "passo_de_entrada": {
+                "id": 20511,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Otite Externa] Tratamento Ambulatorial",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 20103,
+                "nome": "tratamento ambulatorial",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    20086,
+                    20094
+                ],
+                "argumentos": [
+                    "otite_externa_tratamento_ambulatorial",
+                    "otite tratamento nao hospitalar"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20529,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (tratamento hospitalar)",
+            "descricao": "tratamento hospitalar",
+            "passo_de_saida_id": 20510,
+            "passo_de_saida": {
+                "id": 20510,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite Externa] Definir Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20505,
+            "passo_de_entrada": {
+                "id": 20505,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com L\u00edder Local",
+                "descricao": "Discutir quadro do paciente com l\u00edder local para defini\u00e7\u00e3o de conduta.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20104,
+                "nome": "tratamento hospitalar",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    20087,
+                    20095
+                ],
+                "argumentos": [
+                    "otite_externa_tratamento_hospitalar",
+                    "otite tratamento nao ambulatorial"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20530,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (otite media)",
+            "descricao": "otite media",
+            "passo_de_saida_id": 20506,
+            "passo_de_saida": {
+                "id": 20506,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Quadro de Otalgia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20512,
+            "passo_de_entrada": {
+                "id": 20512,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20105,
+                "nome": "otite media",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    20084
+                ],
+                "argumentos": [
+                    "otite_media"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20531,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (sob suspeita de complicacao)",
+            "descricao": "sob suspeita de complicacao",
+            "passo_de_saida_id": 20512,
+            "passo_de_saida": {
+                "id": 20512,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20501,
+            "passo_de_entrada": {
+                "id": 20501,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Enviar ao L\u00edder Local",
+                "descricao": "Enviar paciente ao l\u00edder local e aventar possibilidade de solicita\u00e7\u00e3o de tomografia computadorizada.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20106,
+                "nome": "sob suspeita de complicacao",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    20088
+                ],
+                "argumentos": [
+                    "otite_media_suspeita_complicacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20532,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (sem suspeita de complicacao)",
+            "descricao": "sem suspeita de complicacao",
+            "passo_de_saida_id": 20512,
+            "passo_de_saida": {
+                "id": 20512,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite M\u00e9dia] Suspeita de Complica\u00e7\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20513,
+            "passo_de_entrada": {
+                "id": 20513,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Otite M\u00e9dia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20107,
+                "nome": "sem suspeita de complicacao",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    20088
+                ],
+                "argumentos": [
+                    "otite_media_suspeita_complicacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20533,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (otite media aguda)",
+            "descricao": "otite media aguda",
+            "passo_de_saida_id": 20513,
+            "passo_de_saida": {
+                "id": 20513,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Otite M\u00e9dia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20514,
+            "passo_de_entrada": {
+                "id": 20514,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Sinais de gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20108,
+                "nome": "otite media aguda",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    20089,
+                    20097
+                ],
+                "argumentos": [
+                    "otite_media_aguda",
+                    "otite media nao cronica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20534,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (otite media cronica)",
+            "descricao": "otite media cronica",
+            "passo_de_saida_id": 20513,
+            "passo_de_saida": {
+                "id": 20513,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Otite M\u00e9dia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20519,
+            "passo_de_entrada": {
+                "id": 20519,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Otorrinolaringologista",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Encaminhar ao Otorrinolaringologista</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20109,
+                "nome": "otite media cronica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    20090,
+                    20096
+                ],
+                "argumentos": [
+                    "otite_media_cronica",
+                    "otite media nao aguda"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20535,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (com sinais de gravidade)",
+            "descricao": "com sinais de gravidade",
+            "passo_de_saida_id": 20514,
+            "passo_de_saida": {
+                "id": 20514,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Sinais de gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20516,
+            "passo_de_entrada": {
+                "id": 20516,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Antibioticoterapia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 20110,
+                "nome": "com sinais de gravidade",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    20091
+                ],
+                "argumentos": [
+                    "otite_media_aguda_sinais_gravidade"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20536,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18 (sem sinais de gravidade)",
+            "descricao": "sem sinais de gravidade",
+            "passo_de_saida_id": 20514,
+            "passo_de_saida": {
+                "id": 20514,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Sinais de gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20515,
+            "passo_de_entrada": {
+                "id": 20515,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Tratamento",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Reavalia&ccedil;&atilde;o com otorrinolaringologista com 48-72h ou procurar a emerg&ecirc;ncia se n&atilde;o houver melhora/piora do quadro.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20111,
+                "nome": "sem sinais de gravidade",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    20091
+                ],
+                "argumentos": [
+                    "otite_media_aguda_sinais_gravidade"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20537,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20516,
+            "passo_de_saida": {
+                "id": 20516,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Antibioticoterapia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 20515,
+            "passo_de_entrada": {
+                "id": 20515,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Tratamento",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Reavalia&ccedil;&atilde;o com otorrinolaringologista com 48-72h ou procurar a emerg&ecirc;ncia se n&atilde;o houver melhora/piora do quadro.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20538,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20515,
+            "passo_de_saida": {
+                "id": 20515,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Otite M\u00e9dia Aguda] Tratamento",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Reavalia&ccedil;&atilde;o com otorrinolaringologista com 48-72h ou procurar a emerg&ecirc;ncia se n&atilde;o houver melhora/piora do quadro.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20517,
+            "passo_de_entrada": {
+                "id": 20517,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Orienta\u00e7\u00f5es p\u00f3s-alta",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Orienta&ccedil;&otilde;es p&oacute;s alta:</strong><br />\n<br />\n- N&atilde;o bloqueie o conduto auditivo com algod&atilde;o, n&atilde;o use cotonetes ou gotas otol&oacute;gicas<br />\n- Febre e dor pode permanecer por at&eacute; 48-72h<br />\n<br />\n<strong>Procurar a emerg&ecirc;ncia caso:</strong><br />\n- Ap&oacute;s 72h do tratamento, n&atilde;o apresentar melhor, mantiver otalgia intensa ou febre&nbsp;<br />\n- Apresentar dor de cabe&ccedil;a intensa ou dor de ouvido persistente<br />\n- Apresentar incha&ccedil;o atr&aacute;s ou ao redor do ouvido<br />\n- Ficar sonolento, com dor no pesco&ccedil;o ou n&atilde;o puder andar normalmente</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20539,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (otite externa)",
+            "descricao": "otite externa",
+            "passo_de_saida_id": 20506,
+            "passo_de_saida": {
+                "id": 20506,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar Quadro de Otalgia",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20508,
+            "passo_de_entrada": {
+                "id": 20508,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Otite Externa] Conduta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 20112,
+                "nome": "otite externa",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    20083
+                ],
+                "argumentos": [
+                    "otite_externa"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 20081,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sinais_de_alarme",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Idade Avan\u00e7ada",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Cefal\u00e9ia com \u00camese Associada",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Doen\u00e7a ou Sequela Neurol\u00f3gica Pr\u00e9via",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Cefal\u00e9ia Refrat\u00e1ria a Analgesia",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "\u00camese Incoerc\u00edvel",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Suspeita velada das complica\u00e7oes tipo mastoidite, abcesso, trombose do seio lateral, etc",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Altera\u00e7\u00e3o do N\u00edvel de Consci\u00eancia",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Abaulamento ou Hipersensibilidade de Mastoide Ipsilateral",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 20082,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "acometimento_pavilhao_auricular",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20083,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_externa",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20084,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_media",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20085,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_externa_criterios_decisao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20086,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_externa_tratamento_ambulatorial",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20087,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_externa_tratamento_hospitalar",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20088,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_media_suspeita_complicacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20089,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_media_aguda",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20090,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_media_cronica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20091,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "otite_media_aguda_sinais_gravidade",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 20092,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 20093,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 20094,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "otite tratamento nao hospitalar",
+            "descricao": "otite tratamento nao hospitalar",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                20087
+            ],
+            "argumentos": [
+                "otite_externa_tratamento_hospitalar"
+            ]
+        },
+        {
+            "id": 20095,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "otite tratamento nao ambulatorial",
+            "descricao": "otite tratamento nao ambulatorial",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                20086
+            ],
+            "argumentos": [
+                "otite_externa_tratamento_ambulatorial"
+            ]
+        },
+        {
+            "id": 20096,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "otite media nao aguda",
+            "descricao": "otite media nao aguda",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                20089
+            ],
+            "argumentos": [
+                "otite_media_aguda"
+            ]
+        },
+        {
+            "id": 20097,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "otite media nao cronica",
+            "descricao": "otite media nao cronica",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                20090
+            ],
+            "argumentos": [
+                "otite_media_cronica"
+            ]
+        }
+    ]
+}

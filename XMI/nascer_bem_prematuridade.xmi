@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="941" url="" name="[Nascer Bem] Prematuridade" code="NB_PREMA">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4741" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Fatores de Risco" description="Verificar presen&#xe7;a de fatores de risco" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Trabalho de Parto Prematuro Pr&#xe9;vio" url="" id="2041">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_trab_parto_prematuro_previo" id="3421" weight="1" value="false"/>
+    </questions>
+    <questions text="Gesta&#xe7;&#xe3;o M&#xfa;ltipla" url="" id="2042">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_gestacao_multipla" id="3422" weight="1" value="false"/>
+    </questions>
+    <questions text="Restri&#xe7;&#xe3;o de Crescimento Intrauterino" url="" id="2043">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_restricao_crescimento_intrauterino" id="3423" weight="1" value="false"/>
+    </questions>
+    <questions text="Hemorragias Pr&#xe9;-Parto" url="" id="2044">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_hemorragias_pre_parto" id="3424" weight="1" value="false"/>
+    </questions>
+    <questions text="Miscel&#xe2;nea - Incompet&#xea;ncia Istmocervical (IIC)" url="" id="2045">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_iic" id="3425" weight="1" value="false"/>
+    </questions>
+    <questions text="Malforma&#xe7;&#xf5;es Uterinas" url="" id="2046">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_malformacoes_uterinas" id="3426" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4742" type="Tratamento" type_verbose="Tratamento" url="" name="[Suspeita de IIC] Ultrassom" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.3">
+    <examination url="" exam_id="33010277" limb_side="" quantity="1" reason="Suspeita de IIC" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4743" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Sem Suspeita de IIC] Avaliar Idade Gestacional (1)" description="Avaliar se paciente est&#xe1; entre 14 e 24 semanas" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.13">
+    <questions text="Idade Gestacional > 14 e &lt; 24?" url="" id="2047">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_14_menor_24" id="3427" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4744" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade Gestacional (2)" description="Avaliar se idade gestacional entre 24 e 34 semanas." inputSequences="//@sequence.2" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Idade Gestacional > 24 e &lt; 34 semanas?" url="" id="2048">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_24_menor_34" id="3428" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="4745" type="Tratamento" type_verbose="Tratamento" url="" name="Ultrassom Morfol&#xf3;gico com medida de colo uterino" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.9">
+    <examination url="" exam_id="33010277" limb_side="" quantity="1" reason="Prematuridade" clinical_indication="Ultrassom Morfol&#xf3;gico com medida do colo uterino por via transvaginal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4746" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno do Exame (1)" description="Aguardar Retorno do Exame" inputSequences="//@sequence.3" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4747" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Ultrassom (1)" description="Avaliar resultado do ultrassom morfol&#xf3;gico" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Morfologia fetal alterada?" url="" id="2049">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="resultado_ultrassom_alterado_1" id="3429" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4748" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Cesariana" description="Encaminhar paciente para cesariana" isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4749" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Sem medidas preventivas" description="N&#xe3;o &#xe9; necess&#xe1;rio realizar nenhuma medida preventiva" isTerminal="true" inputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4750" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o: Cortic&#xf3;ide" description="Prescrever Corticoide, 2 ampolas IM 24/24 horas por 2 dias, se houver possibilidade de interven&#xe7;&#xe3;o nos pr&#xf3;ximos 7 dias" isTerminal="true" inputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="4751" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno do Exame (2)" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4752" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Ultrassom (2)" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Ultrassom Morfol&#xf3;gico > 25mm?" url="" id="2050">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ultrassom_maior_25mm" id="3430" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4753" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Manter paciente no Pr&#xe9;-Natal" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Manter paciente no acompanhamento Pr&amp;eacute;-Natal de baixo risco.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4754" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o" description="" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="861" url="" name="UTROGESTAN" med_code="503790804" presentation="CAPS" access="4" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tratamento 30 dias ou at&#xe9; reavalia&#xe7;&#xe3;o m&#xe9;dica."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4755" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Finalizar Protocolo" description="Finalizar Protocolo" isTerminal="true" inputSequences="//@sequence.7"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4756" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (iic)" description="com iic">
+    <operation name="com iic" Operator="affirmation" id="3431">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_iic" id="3425" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="4757" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem iic)" description="sem iic">
+    <operation name="sem iic" id="3432">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_iic" id="3425" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4758" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (menor que 14 ou maior que 24)" description="menor que 14 ou maior que 24">
+    <operation name="menor que 14 ou maior que 24" id="3433">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_14_menor_24" id="3427" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="4759" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="4760" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="4761" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (ultrassom alterado)" description="ultrassom alterado">
+    <operation name="ultrassom alterado" Operator="affirmation" id="3434">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resultado_ultrassom_alterado_1" id="3429" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="4762" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (ultrassom sem altera&#xe7;&#xf5;es)" description="ultrassom sem altera&#xe7;&#xf5;es">
+    <operation name="ultrassom sem altera&#xe7;&#xf5;es" id="3435">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="resultado_ultrassom_alterado_1" id="3429" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.3" id="4763" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (menor que 24 ou maior que 34)" description="menor que 24 ou maior que 34">
+    <operation name="menor que 24 ou maior que 34" id="3436">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_24_menor_34" id="3428" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.3" id="4764" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (entre 24 e 34 semanas)" description="entre 24 e 34 semanas">
+    <operation name="entre 24 e 34 semanas" Operator="affirmation" id="3437">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_24_menor_34" id="3428" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.4" id="4765" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="4766" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="4767" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (us morfologico > 25mm)" description="us morfologico > 25mm">
+    <operation name="us morfologico > 25mm" Operator="affirmation" id="3438">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ultrassom_maior_25mm" id="3430" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="4768" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (us morfologico &lt;= 25mm)" description="us morfologico &lt;= 25mm">
+    <operation name="us morfologico &lt;= 25mm" id="3439">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ultrassom_maior_25mm" id="3430" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="4769" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (entre 14 e 24)" description="S4 (entre 14 e 24)">
+    <operation name="S4 (entre 14 e 24)" Operator="affirmation" id="3440">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_14_menor_24" id="3427" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_trab_parto_prematuro_previo" id="3421" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_gestacao_multipla" id="3422" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_restricao_crescimento_intrauterino" id="3423" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_hemorragias_pre_parto" id="3424" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_iic" id="3425" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fator_risco_malformacoes_uterinas" id="3426" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_14_menor_24" id="3427" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_maior_24_menor_34" id="3428" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="resultado_ultrassom_alterado_1" id="3429" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ultrassom_maior_25mm" id="3430" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

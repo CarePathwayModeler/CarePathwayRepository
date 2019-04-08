@@ -1,0 +1,789 @@
+{
+    "id": 961,
+    "url": "",
+    "codigo": "VB_DIA_INSU",
+    "nome": "[Viver Bem] Diabetes - Insulinoterapia",
+    "repositorio_id": 541,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:32:58.130020-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:32:51.288677-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:32:58.130020-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4801,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Manter Hipoglicemiante?",
+            "descricao": "Avaliar necessidade de manter hipoglicemiante",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2061,
+                    "url": "",
+                    "texto": "Manter Hipoglicemiante?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3441,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "insulinoterapia_hipoglicemiante",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4809,
+                    "url": "",
+                    "nome": "S1 (com hipoglicemiante)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4801,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Manter Hipoglicemiante?",
+                    "passo_de_entrada_id": 4802,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Manter prescri\u00e7\u00e3o anterior",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4810,
+                    "url": "",
+                    "nome": "S2 (sem hipoglicemiante)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4801,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Manter Hipoglicemiante?",
+                    "passo_de_entrada_id": 4808,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Adicionar Insulina Basal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4802,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Manter prescri\u00e7\u00e3o anterior",
+            "descricao": "Manter prescri\u00e7\u00e3o efetuada anteriormente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4809,
+                    "url": "",
+                    "nome": "S1 (com hipoglicemiante)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4801,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Manter Hipoglicemiante?",
+                    "passo_de_entrada_id": 4802,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Manter prescri\u00e7\u00e3o anterior",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4816,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 4802,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Manter prescri\u00e7\u00e3o anterior",
+                    "passo_de_entrada_id": 4808,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Adicionar Insulina Basal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4803,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Titula\u00e7\u00e3o da Insulina Basal",
+            "descricao": "Regime fixo: Adicionar Dosagem Insulina +2 UI;\n\n \n\nRegime Ajust\u00e1vel:\n\n\u00b7 Se meta glic\u00eamica n\u00e3o alcan\u00e7ada:\n\no Glicemia em Jejum > 180 mg/dl: Aumentar dosagem Insulina em 20%;\n\no Glicemia em Jejum entre 140 - 180 mg/dl: Aumentar dosagem Insulina em 10%;\n\no Glicemia em Jejum entre 110 - 139 mg/dl: Aumentar dosagem Insulina em 2UI;\n\n\u00b7 Se Hipoglicemia:\n\no Glicemia < 70 mg/dl: Reduzir dosagem Insulina de 10 a 20%;\n\no Glicemia < 40 mg/dl: Reduzir dosagem Insulina de 20 a 40%;",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4811,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "",
+                    "passo_de_saida_id": 4808,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Adicionar Insulina Basal",
+                    "passo_de_entrada_id": 4803,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Titula\u00e7\u00e3o da Insulina Basal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4812,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "",
+                    "passo_de_saida_id": 4803,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Titula\u00e7\u00e3o da Insulina Basal",
+                    "passo_de_entrada_id": 4804,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar HbA1c",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4804,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar HbA1c",
+            "descricao": "Reavaliar taxa de HbA1c",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2062,
+                    "url": "",
+                    "texto": "Meta Terap\u00eautica Alcan\u00e7ada (HbA1c < 6.5%)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3442,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hba1c_menor_que_6_5",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4812,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "",
+                    "passo_de_saida_id": 4803,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Titula\u00e7\u00e3o da Insulina Basal",
+                    "passo_de_entrada_id": 4804,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar HbA1c",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4814,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "",
+                    "passo_de_saida_id": 4807,
+                    "passo_de_saida": "A\u00e7\u00e3o: Aprazamento de Retorno",
+                    "passo_de_entrada_id": 4804,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar HbA1c",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4813,
+                    "url": "",
+                    "nome": "S5 (HbA1c < 6.5)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4804,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar HbA1c",
+                    "passo_de_entrada_id": 4807,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Aprazamento de Retorno",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4815,
+                    "url": "",
+                    "nome": "S7 (HbA1c > 6.5)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4804,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar HbA1c",
+                    "passo_de_entrada_id": 4805,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Adicionar Insulina Prandial",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4805,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Adicionar Insulina Prandial",
+            "descricao": "Adiciona tratametno com Insulina Prandial\n\nM\u00e9dico ir\u00e1 escolher medica\u00e7\u00e3o (Insulina) de uma lista, adicionar posologia (dose, frequ\u00eancia e recomenda\u00e7\u00f5es de uso",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4815,
+                    "url": "",
+                    "nome": "S7 (HbA1c > 6.5)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4804,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar HbA1c",
+                    "passo_de_entrada_id": 4805,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Adicionar Insulina Prandial",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4817,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 4805,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Adicionar Insulina Prandial",
+                    "passo_de_entrada_id": 4806,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Titula\u00e7\u00e3o da Insulina Prandial",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4806,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Titula\u00e7\u00e3o da Insulina Prandial",
+            "descricao": "<p><span style=\"font-size:16px\"><u><strong>Titula&ccedil;&atilde;o da Insulina:</strong></u></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Se meta glic&ecirc;mica n&atilde;o alcan&ccedil;ada:</span>\n\n\t<ul>\n\t\t<li><span style=\"font-size:16px\">Glicemia P&oacute;s Prandial (GPP) &gt; 140 mg/dl: Aumentar dosagem Insulina em 10% ou em 1-2 UI;</span></li>\n\t</ul>\n\t</li>\n\t<li><span style=\"font-size:16px\">Se Hipoglicemia:</span>\n\t<ul>\n\t\t<li><span style=\"font-size:16px\">Glicemia &lt; 70 mg/dl: Reduzir dosagem Insulina de 10 a 20%;</span></li>\n\t\t<li><span style=\"font-size:16px\">Glicemia &lt; 40 mg/dl: Reduzir dosagem Insulina de 20 a 40%;</span></li>\n\t</ul>\n\t</li>\n</ul>\n\n<p><span style=\"font-size:20px\"><span style=\"color:#c0392b\"><u>Prescrever medica&ccedil;&atilde;o <strong>via Conduta Complementar</strong></u></span></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4817,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 4805,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Adicionar Insulina Prandial",
+                    "passo_de_entrada_id": 4806,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Titula\u00e7\u00e3o da Insulina Prandial",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4807,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Aprazamento de Retorno",
+            "descricao": "Aprazamento de retorno",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "Retorno mensal para acompanhamento",
+                "codigo_retorno": "1",
+                "tipo_profissional": "M",
+                "codigo_risco": "1"
+            }
+        },
+        {
+            "id": 4808,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Adicionar Insulina Basal",
+            "descricao": "Escolher medica\u00e7\u00e3o (Insulina) de uma lista, adicionar posologia (dose, frequ\u00eancia e recomenda\u00e7\u00f5es de uso)",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4810,
+                    "url": "",
+                    "nome": "S2 (sem hipoglicemiante)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4801,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Manter Hipoglicemiante?",
+                    "passo_de_entrada_id": 4808,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Adicionar Insulina Basal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4816,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 4802,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Manter prescri\u00e7\u00e3o anterior",
+                    "passo_de_entrada_id": 4808,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Adicionar Insulina Basal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4811,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "",
+                    "passo_de_saida_id": 4808,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Adicionar Insulina Basal",
+                    "passo_de_entrada_id": 4803,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Titula\u00e7\u00e3o da Insulina Basal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4809,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (com hipoglicemiante)",
+            "descricao": "",
+            "passo_de_saida_id": 4801,
+            "passo_de_saida": {
+                "id": 4801,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Manter Hipoglicemiante?",
+                "descricao": "Avaliar necessidade de manter hipoglicemiante",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4802,
+            "passo_de_entrada": {
+                "id": 4802,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Manter prescri\u00e7\u00e3o anterior",
+                "descricao": "Manter prescri\u00e7\u00e3o efetuada anteriormente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3445,
+                "nome": "com hipoglicemiante",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3441
+                ],
+                "argumentos": [
+                    "insulinoterapia_hipoglicemiante"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4810,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sem hipoglicemiante)",
+            "descricao": "",
+            "passo_de_saida_id": 4801,
+            "passo_de_saida": {
+                "id": 4801,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Manter Hipoglicemiante?",
+                "descricao": "Avaliar necessidade de manter hipoglicemiante",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4808,
+            "passo_de_entrada": {
+                "id": 4808,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Adicionar Insulina Basal",
+                "descricao": "Escolher medica\u00e7\u00e3o (Insulina) de uma lista, adicionar posologia (dose, frequ\u00eancia e recomenda\u00e7\u00f5es de uso)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3446,
+                "nome": "sem hipoglicemiante",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3441
+                ],
+                "argumentos": [
+                    "insulinoterapia_hipoglicemiante"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4811,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "",
+            "passo_de_saida_id": 4808,
+            "passo_de_saida": {
+                "id": 4808,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Adicionar Insulina Basal",
+                "descricao": "Escolher medica\u00e7\u00e3o (Insulina) de uma lista, adicionar posologia (dose, frequ\u00eancia e recomenda\u00e7\u00f5es de uso)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4803,
+            "passo_de_entrada": {
+                "id": 4803,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Titula\u00e7\u00e3o da Insulina Basal",
+                "descricao": "Regime fixo: Adicionar Dosagem Insulina +2 UI;\n\n \n\nRegime Ajust\u00e1vel:\n\n\u00b7 Se meta glic\u00eamica n\u00e3o alcan\u00e7ada:\n\no Glicemia em Jejum > 180 mg/dl: Aumentar dosagem Insulina em 20%;\n\no Glicemia em Jejum entre 140 - 180 mg/dl: Aumentar dosagem Insulina em 10%;\n\no Glicemia em Jejum entre 110 - 139 mg/dl: Aumentar dosagem Insulina em 2UI;\n\n\u00b7 Se Hipoglicemia:\n\no Glicemia < 70 mg/dl: Reduzir dosagem Insulina de 10 a 20%;\n\no Glicemia < 40 mg/dl: Reduzir dosagem Insulina de 20 a 40%;",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4812,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "",
+            "passo_de_saida_id": 4803,
+            "passo_de_saida": {
+                "id": 4803,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Titula\u00e7\u00e3o da Insulina Basal",
+                "descricao": "Regime fixo: Adicionar Dosagem Insulina +2 UI;\n\n \n\nRegime Ajust\u00e1vel:\n\n\u00b7 Se meta glic\u00eamica n\u00e3o alcan\u00e7ada:\n\no Glicemia em Jejum > 180 mg/dl: Aumentar dosagem Insulina em 20%;\n\no Glicemia em Jejum entre 140 - 180 mg/dl: Aumentar dosagem Insulina em 10%;\n\no Glicemia em Jejum entre 110 - 139 mg/dl: Aumentar dosagem Insulina em 2UI;\n\n\u00b7 Se Hipoglicemia:\n\no Glicemia < 70 mg/dl: Reduzir dosagem Insulina de 10 a 20%;\n\no Glicemia < 40 mg/dl: Reduzir dosagem Insulina de 20 a 40%;",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4804,
+            "passo_de_entrada": {
+                "id": 4804,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar HbA1c",
+                "descricao": "Reavaliar taxa de HbA1c",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4813,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (HbA1c < 6.5)",
+            "descricao": "",
+            "passo_de_saida_id": 4804,
+            "passo_de_saida": {
+                "id": 4804,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar HbA1c",
+                "descricao": "Reavaliar taxa de HbA1c",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4807,
+            "passo_de_entrada": {
+                "id": 4807,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aprazamento de Retorno",
+                "descricao": "Aprazamento de retorno",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": {
+                "id": 3447,
+                "nome": "HbA1c < 6.5",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3442
+                ],
+                "argumentos": [
+                    "hba1c_menor_que_6_5"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4814,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "",
+            "passo_de_saida_id": 4807,
+            "passo_de_saida": {
+                "id": 4807,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aprazamento de Retorno",
+                "descricao": "Aprazamento de retorno",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "passo_de_entrada_id": 4804,
+            "passo_de_entrada": {
+                "id": 4804,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar HbA1c",
+                "descricao": "Reavaliar taxa de HbA1c",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4815,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (HbA1c > 6.5)",
+            "descricao": "",
+            "passo_de_saida_id": 4804,
+            "passo_de_saida": {
+                "id": 4804,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar HbA1c",
+                "descricao": "Reavaliar taxa de HbA1c",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4805,
+            "passo_de_entrada": {
+                "id": 4805,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Adicionar Insulina Prandial",
+                "descricao": "Adiciona tratametno com Insulina Prandial\n\nM\u00e9dico ir\u00e1 escolher medica\u00e7\u00e3o (Insulina) de uma lista, adicionar posologia (dose, frequ\u00eancia e recomenda\u00e7\u00f5es de uso",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3448,
+                "nome": "HbA1c > 6.5",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3442
+                ],
+                "argumentos": [
+                    "hba1c_menor_que_6_5"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4816,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "",
+            "passo_de_saida_id": 4802,
+            "passo_de_saida": {
+                "id": 4802,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Manter prescri\u00e7\u00e3o anterior",
+                "descricao": "Manter prescri\u00e7\u00e3o efetuada anteriormente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4808,
+            "passo_de_entrada": {
+                "id": 4808,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Adicionar Insulina Basal",
+                "descricao": "Escolher medica\u00e7\u00e3o (Insulina) de uma lista, adicionar posologia (dose, frequ\u00eancia e recomenda\u00e7\u00f5es de uso)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4817,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "",
+            "passo_de_saida_id": 4805,
+            "passo_de_saida": {
+                "id": 4805,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Adicionar Insulina Prandial",
+                "descricao": "Adiciona tratametno com Insulina Prandial\n\nM\u00e9dico ir\u00e1 escolher medica\u00e7\u00e3o (Insulina) de uma lista, adicionar posologia (dose, frequ\u00eancia e recomenda\u00e7\u00f5es de uso",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4806,
+            "passo_de_entrada": {
+                "id": 4806,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Titula\u00e7\u00e3o da Insulina Prandial",
+                "descricao": "<p><span style=\"font-size:16px\"><u><strong>Titula&ccedil;&atilde;o da Insulina:</strong></u></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Se meta glic&ecirc;mica n&atilde;o alcan&ccedil;ada:</span>\n\n\t<ul>\n\t\t<li><span style=\"font-size:16px\">Glicemia P&oacute;s Prandial (GPP) &gt; 140 mg/dl: Aumentar dosagem Insulina em 10% ou em 1-2 UI;</span></li>\n\t</ul>\n\t</li>\n\t<li><span style=\"font-size:16px\">Se Hipoglicemia:</span>\n\t<ul>\n\t\t<li><span style=\"font-size:16px\">Glicemia &lt; 70 mg/dl: Reduzir dosagem Insulina de 10 a 20%;</span></li>\n\t\t<li><span style=\"font-size:16px\">Glicemia &lt; 40 mg/dl: Reduzir dosagem Insulina de 20 a 40%;</span></li>\n\t</ul>\n\t</li>\n</ul>\n\n<p><span style=\"font-size:20px\"><span style=\"color:#c0392b\"><u>Prescrever medica&ccedil;&atilde;o <strong>via Conduta Complementar</strong></u></span></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3441,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "insulinoterapia_hipoglicemiante",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3442,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hba1c_menor_que_6_5",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3443,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "10",
+            "peso": 1.0,
+            "valor": 10.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3444,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

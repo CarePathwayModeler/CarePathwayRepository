@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="890" url="" name="[Viver Bem] Tetraterapia Linha IECA" code="VB_TETRA_IECA">
+  <element xsi:type="pathwayMetamodel:Prescription" id="4253" type="Receita" type_verbose="Receita" url="" name="Tratamento com Clortalidona + Enalapril + (BCC) Anlodipino + Succinato de Metoprolol - I" description="Prescrever Clortalidona 12,5mg/dia + Enalapril 20mg 2x/dia + (BCC) Anlodipino 5 mg/dia + succinato de metoprolol 50mg 1x/dia" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="4254" type="Pausa" type_verbose="Pausa" url="" name="Retorno Semanal - I" description="Agendar retorno semanal do Paciente ap&#xf3;s Tratamento com Clortalidona + Enalapril + (BCC) Anlodipino + Succinato de Metoprolol" inputSequences="//@sequence.0" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4255" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Meta Press&#xf3;rica - I" description="Avalia&#xe7;&#xe3;o ap&#xf3;s retorno semanal do Tratamento com Clortalidona + Enalapril + (BCC) Anlodipino + Succinato de Metoprolol" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Atingiu meta press&#xf3;rica?" url="" id="1875">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_i" id="3150" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4256" type="Pausa" type_verbose="Pausa" url="" name="Retorno Semestral - I" description="Agendar retorno semestral do Paciente ap&#xf3;s avalia&#xe7;&#xe3;o de meta press&#xf3;rica" inputSequences="//@sequence.2" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4257" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Se Manteve Meta press&#xf3;rica - I" description="Avaliar se manteve meta press&#xf3;rica ap&#xf3;s retorno semestral" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Manteve meta press&#xf3;rica?" url="" id="1876">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_i" id="3151" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4258" type="Receita" type_verbose="Receita" url="" name="Prescrever &#xfa;ltima medica&#xe7;&#xe3;o - I" description="Prescrever medicamento utilizado por &#xfa;ltimo" inputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4259" type="Receita" type_verbose="Receita" url="" name="Tratamento com Clortalidona + Enalapril + (BCC) Anlodipino + Succinato de Metoprolol - II" description="**PRIMEIRO RETORNO&#xA;&#xA;Prescreve Clortalidona 12,5mg/dia + Enalapril 20mg 2x/dia + (BCC) Anlodipino 5mg/dia + succinato de metoprolol 100mg 24/24h" inputSequences="//@sequence.3" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="4260" type="Pausa" type_verbose="Pausa" url="" name="Retorno Semanal - II" description="Agendar retorno semanal do Paciente ap&#xf3;s Tratamento com Clortalidona 12,5mg/dia + Enalapril 20mg 2x/dia + (BCC) Anlodipino 5mg/dia + succinato de metoprolol 100mg 24/24h" inputSequences="//@sequence.6 //@sequence.7" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4261" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Meta Press&#xf3;rica - II" description="Avalia&#xe7;&#xe3;o ap&#xf3;s retorno semanal do Tratamento com Clortalidona + Enalapril + (BCC) Anlodipino + Succinato de Metoprolol" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Atingiu meta press&#xf3;rica?" url="" id="1877">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_ii" id="3152" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4262" type="Pausa" type_verbose="Pausa" url="" name="Retorno Semestral - II" description="Agendar retorno semestral do Paciente ap&#xf3;s avalia&#xe7;&#xe3;o de meta press&#xf3;rica" inputSequences="//@sequence.9 //@sequence.14" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4263" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Se Manteve Meta press&#xf3;rica - II" description="Avaliar se manteve meta press&#xf3;rica ap&#xf3;s retorno semestral" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Manteve meta press&#xf3;rica?" url="" id="1878">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_ii" id="3153" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4264" type="Receita" type_verbose="Receita" url="" name="Prescrever &#xfa;ltima medica&#xe7;&#xe3;o - II" description="Continua tomando a ultima medica&#xe7;&#xe3;o prescrita" inputSequences="//@sequence.12" outputSequences="//@sequence.14"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4266" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="4267" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4268" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Avaliar Meta Press&#xf3;rica I - Retorno Semestral I)" description="">
+    <operation name="atingiu_meta_pressorica" Operator="affirmation" id="3154">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_i" id="3150" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="4269" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Avaliar Meta Press&#xf3;rica I - Tratamento II)" description="">
+    <operation name="nao_atingiu_meta_pressorica" id="3155">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_i" id="3150" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="4270" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="4271" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Avaliar Se Manteve Meta Press&#xf3;rica I - Prescrever &#xda;ltimo Medicamento I)" description="">
+    <operation name="manteve_meta_pressorica" Operator="affirmation" id="3156">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_i" id="3151" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.4" id="4272" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Avaliar Se Manteve Meta Press&#xf3;rica I - Retorno Semanal II)" description="">
+    <operation name="nao_manteve_meta_pressorica" id="3157">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_i" id="3151" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="4273" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description=""/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="4274" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="4275" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Avaliar Meta Press&#xf3;rica II - Retorno Semestral II)" description="">
+    <operation name="atingiu_meta_pressorica_" Operator="affirmation" id="3158">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_ii" id="3152" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.8" id="4276" type="Sequencia" type_verbose="Sequencia" url="" name="S11 - (Avaliar Meta Press&#xf3;rica II - Encaminhar para Especialidade)" description="">
+    <operation name="nao_atingiu_meta_pressorica_" id="3159">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_ii" id="3152" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="4277" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description=""/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="4278" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (Avaliar Se Manteve Meta Press&#xf3;rica II - Prescrever &#xda;ltimo Medicamento II)" description="">
+    <operation name="manteve_meta_pressorica_" Operator="affirmation" id="3160">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_ii" id="3153" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.10" id="4279" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (Avaliar Se Manteve Meta Press&#xf3;rica II - Encaminhar para Especialidade)" description="">
+    <operation name="nao_manteve_meta_pressorica_" id="3161">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_ii" id="3153" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.11" id="4280" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description=""/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_i" id="3150" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_i" id="3151" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_meta_pressorica_ii" id="3152" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_tetra_manteve_meta_pressorica_ii" id="3153" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

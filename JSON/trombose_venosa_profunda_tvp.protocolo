@@ -1,0 +1,2228 @@
+{
+    "id": 3147,
+    "url": "",
+    "codigo": "H054",
+    "nome": "Trombose Venosa Profunda (TVP)",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 681,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:51:23.097918-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:51:14.494095-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:51:23.097918-03:00"
+    },
+    "elementos": [
+        {
+            "id": 18033,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Escore de Wells",
+            "descricao": "<p><strong>Suspeita cl&iacute;nica:</strong>&nbsp;Paciente com dor, edema e calor em membro inferior unilateral, panturrilha empastada.<br />\n<br />\n<strong>Fatores de risco:&nbsp;</strong>idade avan&ccedil;ada, epis&oacute;dio pr&eacute;vio, hist&oacute;ria familiar, cirurgia recente, trauma no membro, imobiliza&ccedil;&atilde;o, neoplasia, uso de anticoncepcionais orais, obesidade, gravidez/puerp&eacute;rio, tabagismo, HAS, ICC, s&iacute;ndorme nefr&oacute;tica, HPN, doen&ccedil;as mieloproliferativas, doen&ccedil;a infamat&oacute;ria intestinal.</p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9267,
+                    "url": "",
+                    "texto": "Avaliar quadro cl\u00ednico:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17742,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "escore_wells",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Diagn\u00f3stico diferencial alternativo mais prov\u00e1vel",
+                                "peso": -2.0
+                            },
+                            {
+                                "texto": "C\u00e2ncer em atividade (em tratamento nos \u00faltimos 6 meses)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Paralisia, paresia ou imobiliza\u00e7\u00e3o recente dos membros inferiores",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Acamado recentemente por no m\u00ednimo 3 dias ou cirurgia de grande porte nas \u00faltimas 12 semanas que necessitou de anestesia geral ou regional",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Incha\u00e7o em toda perna",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Incha\u00e7o na panturrilha maior que 3 cm de di\u00e2metro em rela\u00e7\u00e3o a perna normal",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Edema depress\u00edvel (cacifo) maior na perna afetada (unilateral)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Veias colaterais superficiais",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Parestesia ao longo da distribui\u00e7\u00e3o do sistema venoso profundo",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9268,
+                    "url": "",
+                    "texto": "Paciente taquic\u00e1rdico, taquipneico, referindo dispneia, com dor pleur\u00edtica? Com ou sem hipoxemia.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17743,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "tep",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 18068,
+                    "url": "",
+                    "nome": "S1 (protocolo TEP)",
+                    "descricao": "protocolo TEP",
+                    "passo_de_saida_id": 18033,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Escore de Wells",
+                    "passo_de_entrada_id": 18067,
+                    "passo_de_entrada": "Encaminhamento: Encaminhar protocolo de TEP",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18069,
+                    "url": "",
+                    "nome": "S2 (baixo risco)",
+                    "descricao": "TVP com baixo risco",
+                    "passo_de_saida_id": 18033,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Escore de Wells",
+                    "passo_de_entrada_id": 18034,
+                    "passo_de_entrada": "Tratamento: [Baixo Risco] Conduta 01",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18081,
+                    "url": "",
+                    "nome": "S14 (moderado ou alto risco)",
+                    "descricao": "moderado ou alto risco",
+                    "passo_de_saida_id": 18033,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Escore de Wells",
+                    "passo_de_entrada_id": 18064,
+                    "passo_de_entrada": "Tratamento: [Moderado ou alto risco] conduta 1",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18034,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Baixo Risco] Conduta 01",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "D' DIMERO",
+                    "exame": "28140110",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TVP com baixo risco",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18069,
+                    "url": "",
+                    "nome": "S2 (baixo risco)",
+                    "descricao": "TVP com baixo risco",
+                    "passo_de_saida_id": 18033,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Escore de Wells",
+                    "passo_de_entrada_id": 18034,
+                    "passo_de_entrada": "Tratamento: [Baixo Risco] Conduta 01",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18070,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18034,
+                    "passo_de_saida": "Tratamento: [Baixo Risco] Conduta 01",
+                    "passo_de_entrada_id": 18035,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar D-d\u00edmero 01",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18035,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar D-d\u00edmero 01",
+            "descricao": "Avaliar resultado do D-d\u00edmero",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9269,
+                    "url": "",
+                    "texto": "Avaliar resultado do D-d\u00edmero",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17744,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "d_dimero",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "D-d\u00edmero negativo (< 500 ng/mL)",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "D-d\u00edmero positivo (> 500 ng/mL)",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18070,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18034,
+                    "passo_de_saida": "Tratamento: [Baixo Risco] Conduta 01",
+                    "passo_de_entrada_id": 18035,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar D-d\u00edmero 01",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18071,
+                    "url": "",
+                    "nome": "S4 (D-d\u00edmero negativo)",
+                    "descricao": "D-d\u00edmero negativo",
+                    "passo_de_saida_id": 18035,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar D-d\u00edmero 01",
+                    "passo_de_entrada_id": 18036,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [D-d\u00edmero negativo] conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18072,
+                    "url": "",
+                    "nome": "S5 (D-d\u00edmero positivo)",
+                    "descricao": "D-d\u00edmero positivo",
+                    "passo_de_saida_id": 18035,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar D-d\u00edmero 01",
+                    "passo_de_entrada_id": 18037,
+                    "passo_de_entrada": "Tratamento: [D-d\u00edmero positivo] conduta 1",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18036,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[D-d\u00edmero negativo] conduta",
+            "descricao": "<p><strong>Excluir diagn&oacute;stico de TVP.</strong><br />\n<br />\n<strong>Investigar diagn&oacute;stico diferencial:</strong> trauma, edema por imobiliza&ccedil;&atilde;o, linfedema, insufici&ecirc;ncia venosa, cisto de baker, celulite, tromboflebite superficial, edema medicamentoso (uso do bloqueador canais de c&aacute;lcio), p&oacute;s safenectomia.<br />\n<br />\n<strong>Discutir com l&iacute;der local.</strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18071,
+                    "url": "",
+                    "nome": "S4 (D-d\u00edmero negativo)",
+                    "descricao": "D-d\u00edmero negativo",
+                    "passo_de_saida_id": 18035,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar D-d\u00edmero 01",
+                    "passo_de_entrada_id": 18036,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [D-d\u00edmero negativo] conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18074,
+                    "url": "",
+                    "nome": "S7 (US negativo)",
+                    "descricao": "US negativo",
+                    "passo_de_saida_id": 18038,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 01",
+                    "passo_de_entrada_id": 18036,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [D-d\u00edmero negativo] conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18083,
+                    "url": "",
+                    "nome": "S16 (Ultrassom negativo)",
+                    "descricao": "Ultrassom negativo",
+                    "passo_de_saida_id": 18065,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 02",
+                    "passo_de_entrada_id": 18036,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [D-d\u00edmero negativo] conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18037,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[D-d\u00edmero positivo] conduta 1",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Solicitar de acordo com o membro acometido:</strong></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro inferior unilateral. </span></li>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro superior unilateral.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18072,
+                    "url": "",
+                    "nome": "S5 (D-d\u00edmero positivo)",
+                    "descricao": "D-d\u00edmero positivo",
+                    "passo_de_saida_id": 18035,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar D-d\u00edmero 01",
+                    "passo_de_entrada_id": 18037,
+                    "passo_de_entrada": "Tratamento: [D-d\u00edmero positivo] conduta 1",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18073,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18037,
+                    "passo_de_saida": "Tratamento: [D-d\u00edmero positivo] conduta 1",
+                    "passo_de_entrada_id": 18038,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar US - 01",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18038,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar US - 01",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9270,
+                    "url": "",
+                    "texto": "Avaliar resultado da Ultrassom",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17745,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "res_us",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Negativo",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Positivo",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18073,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18037,
+                    "passo_de_saida": "Tratamento: [D-d\u00edmero positivo] conduta 1",
+                    "passo_de_entrada_id": 18038,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar US - 01",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18074,
+                    "url": "",
+                    "nome": "S7 (US negativo)",
+                    "descricao": "US negativo",
+                    "passo_de_saida_id": 18038,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 01",
+                    "passo_de_entrada_id": 18036,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [D-d\u00edmero negativo] conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18075,
+                    "url": "",
+                    "nome": "S8 (US Positivo)",
+                    "descricao": "US Positivo",
+                    "passo_de_saida_id": 18038,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 01",
+                    "passo_de_entrada_id": 18039,
+                    "passo_de_entrada": "Tratamento: [Us Positivo] Conduta 1",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18039,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Us Positivo] Conduta 1",
+            "descricao": "<p>- Confirmar diagn&oacute;stico de TVP e solicitar exames.&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de TVP de baixo risco com D-d\u00edmero e US positivo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de TVP de baixo risco com D-d\u00edmero e US positivo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de TVP de baixo risco com D-d\u00edmero e US positivo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de TVP de baixo risco com D-d\u00edmero e US positivo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de TVP de baixo risco com D-d\u00edmero e US positivo",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18075,
+                    "url": "",
+                    "nome": "S8 (US Positivo)",
+                    "descricao": "US Positivo",
+                    "passo_de_saida_id": 18038,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 01",
+                    "passo_de_entrada_id": 18039,
+                    "passo_de_entrada": "Tratamento: [Us Positivo] Conduta 1",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18084,
+                    "url": "",
+                    "nome": "S17 (Ultrassom positivo)",
+                    "descricao": "Ultrassom positivo",
+                    "passo_de_saida_id": 18065,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 02",
+                    "passo_de_entrada_id": 18039,
+                    "passo_de_entrada": "Tratamento: [Us Positivo] Conduta 1",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18076,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18039,
+                    "passo_de_saida": "Tratamento: [Us Positivo] Conduta 1",
+                    "passo_de_entrada_id": 18040,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar condi\u00e7\u00f5es do paciente",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18040,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar condi\u00e7\u00f5es do paciente",
+            "descricao": "<p><span style=\"font-size:20px\">Paciente com alguma dessas condi&ccedil;&otilde;es abaixo?</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9271,
+                    "url": "",
+                    "texto": "TVP maci\u00e7o (por exemplo, TVP iliofemoral, phlegmasia cerulea dolens)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17746,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "TVP_maci\u00e7o",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9272,
+                    "url": "",
+                    "texto": "Embolia pulmonar sintom\u00e1tica concomitante (TEP)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17747,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "embolia_pulmonar",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9273,
+                    "url": "",
+                    "texto": "Alto risco de sangramento com terapia anticoagulante?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17748,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_terapia_anticoagulante",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9274,
+                    "url": "",
+                    "texto": "Comorbidades ou outros fatores que justifiquem cuidados hospitalares?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17749,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "comorbidades",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18076,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18039,
+                    "passo_de_saida": "Tratamento: [Us Positivo] Conduta 1",
+                    "passo_de_entrada_id": 18040,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar condi\u00e7\u00f5es do paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18077,
+                    "url": "",
+                    "nome": "S10 (com condi\u00e7\u00f5es)",
+                    "descricao": "com condi\u00e7\u00f5es",
+                    "passo_de_saida_id": 18040,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar condi\u00e7\u00f5es do paciente",
+                    "passo_de_entrada_id": 18061,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18078,
+                    "url": "",
+                    "nome": "S11 (sem condi\u00e7\u00f5es)",
+                    "descricao": "sem condi\u00e7\u00f5es",
+                    "passo_de_saida_id": 18040,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar condi\u00e7\u00f5es do paciente",
+                    "passo_de_entrada_id": 18062,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18061,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "<p><span style=\"font-size:16px\">Discutir caso com l&iacute;der local para tratamento hospitalar.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18077,
+                    "url": "",
+                    "nome": "S10 (com condi\u00e7\u00f5es)",
+                    "descricao": "com condi\u00e7\u00f5es",
+                    "passo_de_saida_id": 18040,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar condi\u00e7\u00f5es do paciente",
+                    "passo_de_entrada_id": 18061,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18062,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9275,
+                    "url": "",
+                    "texto": "Paciente com alguma das contra-indica\u00e7\u00f5es \u00e0 anticoagula\u00e7\u00e3o abaixo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17750,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "contra_indicacoes_anticoagulante",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Hist\u00f3ria de hemorragia intracraniana, particularmente recente",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Trauma maior",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Di\u00e1tese hemorr\u00e1gica grave",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Sangramento ativo",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Cirurgia / procedimento de risco de sangramento recente, planejado ou de emerg\u00eancia",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18078,
+                    "url": "",
+                    "nome": "S11 (sem condi\u00e7\u00f5es)",
+                    "descricao": "sem condi\u00e7\u00f5es",
+                    "passo_de_saida_id": 18040,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar condi\u00e7\u00f5es do paciente",
+                    "passo_de_entrada_id": 18062,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18079,
+                    "url": "",
+                    "nome": "S12 (com contra-indica\u00e7\u00e3o)",
+                    "descricao": "com contra-indica\u00e7\u00e3o",
+                    "passo_de_saida_id": 18062,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18063,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18080,
+                    "url": "",
+                    "nome": "S13 (sem contra-indica\u00e7\u00f5es)",
+                    "descricao": "sem contra-indica\u00e7\u00f5es",
+                    "passo_de_saida_id": 18062,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18066,
+                    "passo_de_entrada": "Receita: Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18063,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "<p><span style=\"font-size:16px\">Discutir caso com l&iacute;der local.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18079,
+                    "url": "",
+                    "nome": "S12 (com contra-indica\u00e7\u00e3o)",
+                    "descricao": "com contra-indica\u00e7\u00e3o",
+                    "passo_de_saida_id": 18062,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18063,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18064,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Moderado ou alto risco] conduta 1",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Solicitar de acordo com o membro acometido:</strong></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro inferior unilateral. </span></li>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro superior unilateral.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18081,
+                    "url": "",
+                    "nome": "S14 (moderado ou alto risco)",
+                    "descricao": "moderado ou alto risco",
+                    "passo_de_saida_id": 18033,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Escore de Wells",
+                    "passo_de_entrada_id": 18064,
+                    "passo_de_entrada": "Tratamento: [Moderado ou alto risco] conduta 1",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18082,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18064,
+                    "passo_de_saida": "Tratamento: [Moderado ou alto risco] conduta 1",
+                    "passo_de_entrada_id": 18065,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar US - 02",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18065,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar US - 02",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9276,
+                    "url": "",
+                    "texto": "Avaliar resultado da Ultrassom",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17751,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "resultado_us",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Negativo",
+                                "peso": 0.0
+                            },
+                            {
+                                "texto": "Positivo",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18082,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18064,
+                    "passo_de_saida": "Tratamento: [Moderado ou alto risco] conduta 1",
+                    "passo_de_entrada_id": 18065,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar US - 02",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18083,
+                    "url": "",
+                    "nome": "S16 (Ultrassom negativo)",
+                    "descricao": "Ultrassom negativo",
+                    "passo_de_saida_id": 18065,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 02",
+                    "passo_de_entrada_id": 18036,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [D-d\u00edmero negativo] conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18084,
+                    "url": "",
+                    "nome": "S17 (Ultrassom positivo)",
+                    "descricao": "Ultrassom positivo",
+                    "passo_de_saida_id": 18065,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar US - 02",
+                    "passo_de_entrada_id": 18039,
+                    "passo_de_entrada": "Tratamento: [Us Positivo] Conduta 1",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18066,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita",
+            "descricao": "<p><strong>Se paciente est&aacute;vel hemodinamicamente, com baixo risco de sangramento, sem insufici&ecirc;ncia renal e com compreens&atilde;o do tratamento anticoagulante, realizar tratamento ambulatorial:</strong></p>\n\n<ul>\n\t<li>Xarelto 15mg, 01 comprimido, via oral de 12/12h por 21 dias. Ap&oacute;s os 21 dias, utilizar&nbsp;Xarelto 20mg, 01 comprimido ao dia, via oral&nbsp;(durante o per&iacute;odo que o vascular orientar) <strong>OU</strong></li>\n\t<li>Varfarina 5mg, 01 comprimido, via oral, 1x/dia (nos pacientes com Cl Cr &lt;30)</li>\n</ul>\n\n<p><u><strong>Marcar consulta com cirurgi&atilde;o vascular para avalia&ccedil;&atilde;o do tempo de tratamento e rastreios cl&iacute;nicos</strong></u></p>\n\n<p><strong>ATEN&Ccedil;&Atilde;O: SE PACIENTE OPTAR PELO USO DA VARFARINA, ORIENTAR REALIZAR EXAME DE TAP/INR COM 1 SEMANA PARA REAVALIA&Ccedil;&Atilde;O DA DOSE (META INR ENTRE 2 E 3).</strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4732,
+                    "url": "",
+                    "nome": "XARELTO 15MG COMP 1 UD",
+                    "medicamento": 171050,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 21,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 4733,
+                    "url": "",
+                    "nome": "XARELTO 20MG COMP 1 UD",
+                    "medicamento": 168803,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Ap\u00f3s os 21 dias, durante _____ dias",
+                    "ordem": 2
+                },
+                {
+                    "id": 4734,
+                    "url": "",
+                    "nome": "VARFARINA 5MG",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18080,
+                    "url": "",
+                    "nome": "S13 (sem contra-indica\u00e7\u00f5es)",
+                    "descricao": "sem contra-indica\u00e7\u00f5es",
+                    "passo_de_saida_id": 18062,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18066,
+                    "passo_de_entrada": "Receita: Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18067,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Encaminhar protocolo de TEP",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H055"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18068,
+                    "url": "",
+                    "nome": "S1 (protocolo TEP)",
+                    "descricao": "protocolo TEP",
+                    "passo_de_saida_id": 18033,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Escore de Wells",
+                    "passo_de_entrada_id": 18067,
+                    "passo_de_entrada": "Encaminhamento: Encaminhar protocolo de TEP",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18068,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (protocolo TEP)",
+            "descricao": "protocolo TEP",
+            "passo_de_saida_id": 18033,
+            "passo_de_saida": {
+                "id": 18033,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Escore de Wells",
+                "descricao": "<p><strong>Suspeita cl&iacute;nica:</strong>&nbsp;Paciente com dor, edema e calor em membro inferior unilateral, panturrilha empastada.<br />\n<br />\n<strong>Fatores de risco:&nbsp;</strong>idade avan&ccedil;ada, epis&oacute;dio pr&eacute;vio, hist&oacute;ria familiar, cirurgia recente, trauma no membro, imobiliza&ccedil;&atilde;o, neoplasia, uso de anticoncepcionais orais, obesidade, gravidez/puerp&eacute;rio, tabagismo, HAS, ICC, s&iacute;ndorme nefr&oacute;tica, HPN, doen&ccedil;as mieloproliferativas, doen&ccedil;a infamat&oacute;ria intestinal.</p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18067,
+            "passo_de_entrada": {
+                "id": 18067,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Encaminhar protocolo de TEP",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    701
+                ]
+            },
+            "operacao": {
+                "id": 17782,
+                "nome": "protocolo TEP",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17743
+                ],
+                "argumentos": [
+                    "tep"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18069,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (baixo risco)",
+            "descricao": "TVP com baixo risco",
+            "passo_de_saida_id": 18033,
+            "passo_de_saida": {
+                "id": 18033,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Escore de Wells",
+                "descricao": "<p><strong>Suspeita cl&iacute;nica:</strong>&nbsp;Paciente com dor, edema e calor em membro inferior unilateral, panturrilha empastada.<br />\n<br />\n<strong>Fatores de risco:&nbsp;</strong>idade avan&ccedil;ada, epis&oacute;dio pr&eacute;vio, hist&oacute;ria familiar, cirurgia recente, trauma no membro, imobiliza&ccedil;&atilde;o, neoplasia, uso de anticoncepcionais orais, obesidade, gravidez/puerp&eacute;rio, tabagismo, HAS, ICC, s&iacute;ndorme nefr&oacute;tica, HPN, doen&ccedil;as mieloproliferativas, doen&ccedil;a infamat&oacute;ria intestinal.</p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18034,
+            "passo_de_entrada": {
+                "id": 18034,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Baixo Risco] Conduta 01",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17783,
+                "nome": "baixo risco",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17781,
+                    17754
+                ],
+                "argumentos": [
+                    "wells_zero",
+                    "sem_tep"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18070,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "-",
+            "passo_de_saida_id": 18034,
+            "passo_de_saida": {
+                "id": 18034,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Baixo Risco] Conduta 01",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18035,
+            "passo_de_entrada": {
+                "id": 18035,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar D-d\u00edmero 01",
+                "descricao": "Avaliar resultado do D-d\u00edmero",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18071,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (D-d\u00edmero negativo)",
+            "descricao": "D-d\u00edmero negativo",
+            "passo_de_saida_id": 18035,
+            "passo_de_saida": {
+                "id": 18035,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar D-d\u00edmero 01",
+                "descricao": "Avaliar resultado do D-d\u00edmero",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18036,
+            "passo_de_entrada": {
+                "id": 18036,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[D-d\u00edmero negativo] conduta",
+                "descricao": "<p><strong>Excluir diagn&oacute;stico de TVP.</strong><br />\n<br />\n<strong>Investigar diagn&oacute;stico diferencial:</strong> trauma, edema por imobiliza&ccedil;&atilde;o, linfedema, insufici&ecirc;ncia venosa, cisto de baker, celulite, tromboflebite superficial, edema medicamentoso (uso do bloqueador canais de c&aacute;lcio), p&oacute;s safenectomia.<br />\n<br />\n<strong>Discutir com l&iacute;der local.</strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17784,
+                "nome": "D-d\u00edmero negativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17744,
+                    17752
+                ],
+                "argumentos": [
+                    "d_dimero",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18072,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (D-d\u00edmero positivo)",
+            "descricao": "D-d\u00edmero positivo",
+            "passo_de_saida_id": 18035,
+            "passo_de_saida": {
+                "id": 18035,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar D-d\u00edmero 01",
+                "descricao": "Avaliar resultado do D-d\u00edmero",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18037,
+            "passo_de_entrada": {
+                "id": 18037,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[D-d\u00edmero positivo] conduta 1",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Solicitar de acordo com o membro acometido:</strong></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro inferior unilateral. </span></li>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro superior unilateral.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17785,
+                "nome": "D-d\u00edmero positivo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17744,
+                    17752
+                ],
+                "argumentos": [
+                    "d_dimero",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18073,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "-",
+            "passo_de_saida_id": 18037,
+            "passo_de_saida": {
+                "id": 18037,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[D-d\u00edmero positivo] conduta 1",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Solicitar de acordo com o membro acometido:</strong></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro inferior unilateral. </span></li>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro superior unilateral.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18038,
+            "passo_de_entrada": {
+                "id": 18038,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US - 01",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18074,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (US negativo)",
+            "descricao": "US negativo",
+            "passo_de_saida_id": 18038,
+            "passo_de_saida": {
+                "id": 18038,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US - 01",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18036,
+            "passo_de_entrada": {
+                "id": 18036,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[D-d\u00edmero negativo] conduta",
+                "descricao": "<p><strong>Excluir diagn&oacute;stico de TVP.</strong><br />\n<br />\n<strong>Investigar diagn&oacute;stico diferencial:</strong> trauma, edema por imobiliza&ccedil;&atilde;o, linfedema, insufici&ecirc;ncia venosa, cisto de baker, celulite, tromboflebite superficial, edema medicamentoso (uso do bloqueador canais de c&aacute;lcio), p&oacute;s safenectomia.<br />\n<br />\n<strong>Discutir com l&iacute;der local.</strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17786,
+                "nome": "US negativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17745,
+                    17752
+                ],
+                "argumentos": [
+                    "res_us",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18075,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (US Positivo)",
+            "descricao": "US Positivo",
+            "passo_de_saida_id": 18038,
+            "passo_de_saida": {
+                "id": 18038,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US - 01",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18039,
+            "passo_de_entrada": {
+                "id": 18039,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Us Positivo] Conduta 1",
+                "descricao": "<p>- Confirmar diagn&oacute;stico de TVP e solicitar exames.&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17787,
+                "nome": "US Positivo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17745,
+                    17752
+                ],
+                "argumentos": [
+                    "res_us",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18076,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "-",
+            "passo_de_saida_id": 18039,
+            "passo_de_saida": {
+                "id": 18039,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Us Positivo] Conduta 1",
+                "descricao": "<p>- Confirmar diagn&oacute;stico de TVP e solicitar exames.&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18040,
+            "passo_de_entrada": {
+                "id": 18040,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar condi\u00e7\u00f5es do paciente",
+                "descricao": "<p><span style=\"font-size:20px\">Paciente com alguma dessas condi&ccedil;&otilde;es abaixo?</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18077,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (com condi\u00e7\u00f5es)",
+            "descricao": "com condi\u00e7\u00f5es",
+            "passo_de_saida_id": 18040,
+            "passo_de_saida": {
+                "id": 18040,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar condi\u00e7\u00f5es do paciente",
+                "descricao": "<p><span style=\"font-size:20px\">Paciente com alguma dessas condi&ccedil;&otilde;es abaixo?</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18061,
+            "passo_de_entrada": {
+                "id": 18061,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "<p><span style=\"font-size:16px\">Discutir caso com l&iacute;der local para tratamento hospitalar.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17788,
+                "nome": "com condi\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    17746,
+                    17747,
+                    17748,
+                    17749
+                ],
+                "argumentos": [
+                    "TVP_maci\u00e7o",
+                    "embolia_pulmonar",
+                    "risco_terapia_anticoagulante",
+                    "comorbidades"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18078,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (sem condi\u00e7\u00f5es)",
+            "descricao": "sem condi\u00e7\u00f5es",
+            "passo_de_saida_id": 18040,
+            "passo_de_saida": {
+                "id": 18040,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar condi\u00e7\u00f5es do paciente",
+                "descricao": "<p><span style=\"font-size:20px\">Paciente com alguma dessas condi&ccedil;&otilde;es abaixo?</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18062,
+            "passo_de_entrada": {
+                "id": 18062,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17789,
+                "nome": "sem condi\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17757,
+                    17758,
+                    17759,
+                    17760
+                ],
+                "argumentos": [
+                    "TVP_maci\u00e7o_nao",
+                    "embolia_pulmonar_nao",
+                    "risco_terapia_anticoagulante_nao",
+                    "comorbidades_nao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18079,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (com contra-indica\u00e7\u00e3o)",
+            "descricao": "com contra-indica\u00e7\u00e3o",
+            "passo_de_saida_id": 18062,
+            "passo_de_saida": {
+                "id": 18062,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18063,
+            "passo_de_entrada": {
+                "id": 18063,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "<p><span style=\"font-size:16px\">Discutir caso com l&iacute;der local.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17790,
+                "nome": "com contra-indica\u00e7\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    17750,
+                    17752
+                ],
+                "argumentos": [
+                    "contra_indicacoes_anticoagulante",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18080,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (sem contra-indica\u00e7\u00f5es)",
+            "descricao": "sem contra-indica\u00e7\u00f5es",
+            "passo_de_saida_id": 18062,
+            "passo_de_saida": {
+                "id": 18062,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar contra-indica\u00e7\u00e3o \u00e0 anticoagula\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18066,
+            "passo_de_entrada": {
+                "id": 18066,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita",
+                "descricao": "<p><strong>Se paciente est&aacute;vel hemodinamicamente, com baixo risco de sangramento, sem insufici&ecirc;ncia renal e com compreens&atilde;o do tratamento anticoagulante, realizar tratamento ambulatorial:</strong></p>\n\n<ul>\n\t<li>Xarelto 15mg, 01 comprimido, via oral de 12/12h por 21 dias. Ap&oacute;s os 21 dias, utilizar&nbsp;Xarelto 20mg, 01 comprimido ao dia, via oral&nbsp;(durante o per&iacute;odo que o vascular orientar) <strong>OU</strong></li>\n\t<li>Varfarina 5mg, 01 comprimido, via oral, 1x/dia (nos pacientes com Cl Cr &lt;30)</li>\n</ul>\n\n<p><u><strong>Marcar consulta com cirurgi&atilde;o vascular para avalia&ccedil;&atilde;o do tempo de tratamento e rastreios cl&iacute;nicos</strong></u></p>\n\n<p><strong>ATEN&Ccedil;&Atilde;O: SE PACIENTE OPTAR PELO USO DA VARFARINA, ORIENTAR REALIZAR EXAME DE TAP/INR COM 1 SEMANA PARA REAVALIA&Ccedil;&Atilde;O DA DOSE (META INR ENTRE 2 E 3).</strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17791,
+                "nome": "sem contra-indica\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17750,
+                    17752
+                ],
+                "argumentos": [
+                    "contra_indicacoes_anticoagulante",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18081,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (moderado ou alto risco)",
+            "descricao": "moderado ou alto risco",
+            "passo_de_saida_id": 18033,
+            "passo_de_saida": {
+                "id": 18033,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Escore de Wells",
+                "descricao": "<p><strong>Suspeita cl&iacute;nica:</strong>&nbsp;Paciente com dor, edema e calor em membro inferior unilateral, panturrilha empastada.<br />\n<br />\n<strong>Fatores de risco:&nbsp;</strong>idade avan&ccedil;ada, epis&oacute;dio pr&eacute;vio, hist&oacute;ria familiar, cirurgia recente, trauma no membro, imobiliza&ccedil;&atilde;o, neoplasia, uso de anticoncepcionais orais, obesidade, gravidez/puerp&eacute;rio, tabagismo, HAS, ICC, s&iacute;ndorme nefr&oacute;tica, HPN, doen&ccedil;as mieloproliferativas, doen&ccedil;a infamat&oacute;ria intestinal.</p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18064,
+            "passo_de_entrada": {
+                "id": 18064,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Moderado ou alto risco] conduta 1",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Solicitar de acordo com o membro acometido:</strong></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro inferior unilateral. </span></li>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro superior unilateral.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17792,
+                "nome": "moderado ou alto risco",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17754,
+                    17756
+                ],
+                "argumentos": [
+                    "sem_tep",
+                    "wells_maior_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18082,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15",
+            "descricao": "-",
+            "passo_de_saida_id": 18064,
+            "passo_de_saida": {
+                "id": 18064,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Moderado ou alto risco] conduta 1",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Solicitar de acordo com o membro acometido:</strong></span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro inferior unilateral. </span></li>\n\t<li><span style=\"font-size:16px\">US Doppler colorido venoso de membro superior unilateral.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18065,
+            "passo_de_entrada": {
+                "id": 18065,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US - 02",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18083,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (Ultrassom negativo)",
+            "descricao": "Ultrassom negativo",
+            "passo_de_saida_id": 18065,
+            "passo_de_saida": {
+                "id": 18065,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US - 02",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18036,
+            "passo_de_entrada": {
+                "id": 18036,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[D-d\u00edmero negativo] conduta",
+                "descricao": "<p><strong>Excluir diagn&oacute;stico de TVP.</strong><br />\n<br />\n<strong>Investigar diagn&oacute;stico diferencial:</strong> trauma, edema por imobiliza&ccedil;&atilde;o, linfedema, insufici&ecirc;ncia venosa, cisto de baker, celulite, tromboflebite superficial, edema medicamentoso (uso do bloqueador canais de c&aacute;lcio), p&oacute;s safenectomia.<br />\n<br />\n<strong>Discutir com l&iacute;der local.</strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17793,
+                "nome": "Ultrassom negativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17751,
+                    17752
+                ],
+                "argumentos": [
+                    "resultado_us",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18084,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (Ultrassom positivo)",
+            "descricao": "Ultrassom positivo",
+            "passo_de_saida_id": 18065,
+            "passo_de_saida": {
+                "id": 18065,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar US - 02",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18039,
+            "passo_de_entrada": {
+                "id": 18039,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Us Positivo] Conduta 1",
+                "descricao": "<p>- Confirmar diagn&oacute;stico de TVP e solicitar exames.&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17794,
+                "nome": "Ultrassom positivo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17751,
+                    17752
+                ],
+                "argumentos": [
+                    "resultado_us",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17742,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "escore_wells",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Diagn\u00f3stico diferencial alternativo mais prov\u00e1vel",
+                    "peso": -2.0
+                },
+                {
+                    "texto": "C\u00e2ncer em atividade (em tratamento nos \u00faltimos 6 meses)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Paralisia, paresia ou imobiliza\u00e7\u00e3o recente dos membros inferiores",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Acamado recentemente por no m\u00ednimo 3 dias ou cirurgia de grande porte nas \u00faltimas 12 semanas que necessitou de anestesia geral ou regional",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Incha\u00e7o em toda perna",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Incha\u00e7o na panturrilha maior que 3 cm de di\u00e2metro em rela\u00e7\u00e3o a perna normal",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Edema depress\u00edvel (cacifo) maior na perna afetada (unilateral)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Veias colaterais superficiais",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Parestesia ao longo da distribui\u00e7\u00e3o do sistema venoso profundo",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 17743,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "tep",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17744,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "d_dimero",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "D-d\u00edmero negativo (< 500 ng/mL)",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "D-d\u00edmero positivo (> 500 ng/mL)",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17745,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "res_us",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Negativo",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Positivo",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17746,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "TVP_maci\u00e7o",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17747,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "embolia_pulmonar",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17748,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_terapia_anticoagulante",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17749,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "comorbidades",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17750,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "contra_indicacoes_anticoagulante",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Hist\u00f3ria de hemorragia intracraniana, particularmente recente",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Trauma maior",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Di\u00e1tese hemorr\u00e1gica grave",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Sangramento ativo",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Cirurgia / procedimento de risco de sangramento recente, planejado ou de emerg\u00eancia",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 17751,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "resultado_us",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Negativo",
+                    "peso": 0.0
+                },
+                {
+                    "texto": "Positivo",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17752,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17753,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "0",
+            "peso": 1.0,
+            "valor": 0.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17754,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem_tep",
+            "descricao": "sem encaminhamento para tep",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17743
+            ],
+            "argumentos": [
+                "tep"
+            ]
+        },
+        {
+            "id": 17755,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "wells_menor_1",
+            "descricao": "TVP com baixo risco",
+            "visivel": false,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                17742,
+                17752
+            ],
+            "argumentos": [
+                "escore_wells",
+                "1"
+            ]
+        },
+        {
+            "id": 17756,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "wells_maior_1",
+            "descricao": "Wells maior que 1",
+            "visivel": true,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                17742,
+                17752
+            ],
+            "argumentos": [
+                "escore_wells",
+                "1"
+            ]
+        },
+        {
+            "id": 17757,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "TVP_maci\u00e7o_nao",
+            "descricao": "TVP_maci\u00e7o_nao",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17746
+            ],
+            "argumentos": [
+                "TVP_maci\u00e7o"
+            ]
+        },
+        {
+            "id": 17758,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "embolia_pulmonar_nao",
+            "descricao": "embolia_pulmonar_nao",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17747
+            ],
+            "argumentos": [
+                "embolia_pulmonar"
+            ]
+        },
+        {
+            "id": 17759,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "risco_terapia_anticoagulante_nao",
+            "descricao": "risco_terapia_anticoagulante_nao",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17748
+            ],
+            "argumentos": [
+                "risco_terapia_anticoagulante"
+            ]
+        },
+        {
+            "id": 17760,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "comorbidades_nao",
+            "descricao": "comorbidades_nao",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17749
+            ],
+            "argumentos": [
+                "comorbidades"
+            ]
+        },
+        {
+            "id": 17781,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "wells_zero",
+            "descricao": "escore de wells igual a 0",
+            "visivel": false,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17742,
+                17753
+            ],
+            "argumentos": [
+                "escore_wells",
+                "0"
+            ]
+        }
+    ]
+}

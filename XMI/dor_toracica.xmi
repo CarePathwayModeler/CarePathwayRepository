@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3381" url="" name="Dor Tor&#xe1;cica" code="H020">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20321" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Sinais Vitais" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.2">
+    <questions text="Paciente com dor tor&#xe1;cica importante e/ou taquidispneico e/ou com crepita&#xe7;&#xf5;es na ausculta pulmonar e/ou hipotenso e/ou com emerg&#xea;ncia hipertensiva e/ou arritimia?" url="" id="10301">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinais_vitais_graves" id="19921" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20322" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Cuidados Iniciais" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Passar caso com chefia local, solicitar avalia&amp;ccedil;&amp;atilde;o do cardiologista e encaminhar paciente para sala de cuidados / sala de parada.&lt;/span>&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20323" type="Tratamento" type_verbose="Tratamento" url="" name="[Sinais Vitais Cr&#xed;ticos] Exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Caracterizar a dor tor&amp;aacute;cica, checar sinais vitais e pulsos em MMSS e MMII.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Se ECG com supra de ST em pelo menos 2 deriva&amp;ccedil;&amp;otilde;es cont&amp;iacute;guas ou BRE novo, &lt;strong>encaminhar para hemodin&amp;acirc;mica em at&amp;eacute; 60min&lt;/strong>&lt;br />&#xA;Conduta conforme perfil cl&amp;iacute;nico e hemodin&amp;acirc;mico do paciente&lt;br />&#xA;&lt;br />&#xA;&lt;strong>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/strong>: ECG com plus minus, padr&amp;atilde;o de isquemia circunferencial e/ou padr&amp;atilde;o &amp;quot;the winter&amp;quot;, avaliar encaminhamento para cateterismo com urg&amp;ecirc;ncia.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.1">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Sinais Vitais Cr&#xed;ticos" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Sinais Vitais Cr&#xed;ticos" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Sinais Vitais Cr&#xed;ticos" clinical_indication="n/a"/>
+    <examination url="CK-MB (CREATINAFOSFOQUINASE-MB)" exam_id="28010566" limb_side="" quantity="1" reason="Sinais vitais cr&#xed;ticos" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20324" type="Tratamento" type_verbose="Tratamento" url="" name="[Dor Anginosa] Exame" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Realizar ECG e seguir para consult&amp;oacute;rio do cardiologista da emerg&amp;ecirc;ncia.&lt;/span>&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.4">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Suspeita Dor Anginosa" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20325" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Avalia&#xe7;&#xe3;o do ECG e exame f&#xed;sico" description="Checar PA e pulsos nos MMSS e pulsos de MMII, satura&#xe7;&#xe3;o O2 e ver ECG." inputSequences="//@sequence.4" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20326" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor Anginosa] Sindrome Coronariana Aguda?" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Avaliar probabilidade de S&amp;iacute;ndrome Coronariana Aguda&lt;/span>&lt;/p>" inputSequences="//@sequence.7" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Fatores de S&#xed;ndrome Coronariana" url="" id="10302">
+      <answers xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana" id="19922" weight="1" value="0.0">
+        <option description="Hipertens&#xe3;o" weight="1"/>
+        <option description="Dislipidemia" weight="1"/>
+        <option description="Tabagismo" weight="1"/>
+        <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+        <option description="Idade > 60 anos" weight="2"/>
+        <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+        <option description="DM" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20327" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[S&#xed;ndrome Coronariana Aguda] Baixo Risco - Avaliar ECG" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="ECG isqu&#xea;mico?" url="" id="10303">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_ecg_esquemico" id="19923" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20328" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[S&#xed;ndrome Coronariana Aguda] Risco Intermedi&#xe1;rio ou Alto - Avaliar ECG" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.19 //@sequence.20">
+    <questions text="ECG isqu&#xea;mico?" url="" id="10304">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_alto_ecg_isquemico" id="19924" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20329" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Baixo Risco] Avaliar Marcadores de Necrose Mioc&#xe1;rdica" description="" inputSequences="//@sequence.10" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Ecg isqu&#xea;mico e/ou marcadores  de necrose mioc&#xe1;rdicas positivos?" url="" id="10305">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica" id="19925" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20330" type="Tratamento" type_verbose="Tratamento" url="" name="[Baixo Risco] Marcadores de Necrose Positivos" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Internamento em UTI,&amp;nbsp;&lt;strong>medidas para SCA&amp;nbsp;&lt;/strong>e solicitar novos&lt;strong>&amp;nbsp;&lt;/strong>marcadores de necrose mioc&amp;aacute;rdica e novo ECG&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.11">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Suspeita de marcadores de necrose positivos" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Marcadores de necrose mioc&#xe1;rdica positivos" clinical_indication="n/a"/>
+    <examination url="CK-MB (CREATINAFOSFOQUINASE-MB)" exam_id="28010566" limb_side="" quantity="1" reason="Marcadores de necrose mioc&#xe1;rdica positivos" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20331" type="Tratamento" type_verbose="Tratamento" url="" name="[Baixo Risco] Marcadores de Necrose Negativos" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Se negativos, solicitar novo ECG e novos marcadores de necrose mioc&amp;aacute;rdica com 3 horas do &amp;uacute;ltimo exame.&lt;/span>&lt;/p>" inputSequences="//@sequence.12" outputSequences="//@sequence.14">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Suspeita de necrose mioc&#xe1;rdica" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Marcadores de necrose negativos" clinical_indication="n/a"/>
+    <examination url="CK-MB (CREATINAFOSFOQUINASE-MB)" exam_id="28010566" limb_side="" quantity="1" reason="Marcadores de necrose negativos" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20332" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor N&#xe3;o Anginosa] Sindrome Coronariana Aguda?" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.23 //@sequence.28">
+    <questions text="Fatores de S&#xed;ndrome Coronariana" url="" id="10306">
+      <answers xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana_dor_anginosa" id="19926" weight="1" value="0.0">
+        <option description="Hipertens&#xe3;o" weight="1"/>
+        <option description="Tabagismo" weight="1"/>
+        <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+        <option description="Dislipidemia" weight="1"/>
+        <option description="DM" weight="2"/>
+        <option description="Idade > 60 anos" weight="2"/>
+        <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20333" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Baixo Risco] ECG Isqu&#xea;mico" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.15 //@sequence.16">
+    <questions text="ECG com supra ST em mais de uma deriva&#xe7;&#xe3;o cont&#xed;gua ou BRE sabidamente novo?" url="" id="10307">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_com_supra" id="19927" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20334" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="ECG Isquemico - menos de 12h?" description="" inputSequences="//@sequence.15 //@sequence.21" outputSequences="//@sequence.17 //@sequence.18">
+    <questions text="Menos de 12h do &#xfa;ltimo epis&#xf3;dio de dor e/ou ainda com dor?" url="" id="10308">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_menos_de_12h" id="19928" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20335" type="Tratamento" type_verbose="Tratamento" url="" name="UTI + Medidas SCA e novos exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para Sala de Cuidados, &lt;strong>medidas para SCA&lt;/strong>, solicitar marcadores de necrose mioc&amp;aacute;rdica e novo ECG.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.16 //@sequence.18 //@sequence.22">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="ECG isqu&#xea;mico" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="ECG isqu&#xea;mico" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Dor tor&#xe1;cica - paciente isquemico" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20336" type="Tratamento" type_verbose="Tratamento" url="" name="UTI + medica&#xe7;&#xf5;es" description="&lt;p>Encaminhar para reanima&amp;ccedil;&amp;atilde;o, associar ao tratamento&lt;span style=&quot;font-size:16px&quot;>: AAS + cloridrogel se n&amp;atilde;o houver contraindica&amp;ccedil;&amp;otilde;es.&lt;/span>&lt;/p>&#xA;&#xA;&lt;div>&#xA;&lt;div>&#xA;&lt;div>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Encaminhar ao setor de hemodin&amp;acirc;mica em at&amp;eacute; 60 minutos da chegada no hospital. (Aventar possibilidade de tromb&amp;oacute;lise se n&amp;atilde;o houver disponibilidade).&lt;/span>&lt;/strong>&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>&#xA;&#xA;&lt;div class=&quot;box-footer&quot;>&amp;nbsp;&lt;/div>&#xA;&#xA;&lt;div class=&quot;col-md-12&quot;>&#xA;&lt;div class=&quot;box box-primary&quot;>&#xA;&lt;div class=&quot;box-footer&quot;>&amp;nbsp;&lt;/div>&#xA;&lt;/div>&#xA;&lt;/div>" isTerminal="true" inputSequences="//@sequence.17">
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="a" clinical_indication="a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20337" type="Tratamento" type_verbose="Tratamento" url="" name="[Alto Risco] ECG n&#xe3;o isqu&#xea;mico - Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Realizar &lt;strong>medidas para SCA, &lt;/strong>solicitar marcadores de necrose mioc&amp;aacute;rdica, ECG, raio x t&amp;oacute;rax e internamento em UTI devido a angina em paciente de intermedi&amp;aacute;rio/alto risco&lt;/span>.&lt;/p>" isTerminal="true" inputSequences="//@sequence.19">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Alto Risco" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Alto Risco" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="ECG n&#xe3;o isqu&#xea;mico" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20338" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Alto Risco] ECG Isqu&#xea;mico - Conduta" description="&lt;p>Realizar&amp;nbsp;&lt;strong>medidas para SCA&lt;/strong>&lt;br />&#xA;&lt;br />&#xA;Avaliar se ECG com supra ST em mais de uma deriva&amp;ccedil;&amp;atilde;o cont&amp;iacute;gua ou BRE sabidamente novo.&lt;br />&#xA;&lt;br />&#xA;ATEN&amp;Ccedil;&amp;Atilde;O: ECG com plus minus, padr&amp;atilde;o de isquemia circunferencial e/ou padr&amp;atilde;o &amp;quot;the winter&amp;quot;, avaliar encaminhamento para cateterismo com urg&amp;ecirc;ncia.&lt;/p>" inputSequences="//@sequence.20" outputSequences="//@sequence.21 //@sequence.22">
+    <questions text="ECG com supra ST em mais de uma deriva&#xe7;&#xe3;o cont&#xed;gua ou BRE sabidamente novo?" url="" id="10309">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alto_risco_ecg_com_supra_ST" id="19929" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20339" type="Tratamento" type_verbose="Tratamento" url="" name="[Dor n&#xe3;o anginosa - Alto Risco de SCA] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Solicitar ECG e marcadores de necrose mioc&amp;aacute;rdica e excluir outras causas de dor tor&amp;aacute;cica.&lt;/span>&lt;/p>" inputSequences="//@sequence.23" outputSequences="//@sequence.24">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Alto risco de SCA" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Alto risco de SCA" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20340" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor N&#xe3;o Anginosa - Alto Risco de SCA] Avaliar Marcadores de Necrose Mioc&#xe1;rdica" description="" inputSequences="//@sequence.24" outputSequences="//@sequence.25 //@sequence.26">
+    <questions text="Ecg isqu&#xea;mico e/ou marcadores de necrose mioc&#xe1;rdicas positivos?" url="" id="10310">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_anginosa_alto_risco_marcadores_positivos" id="19930" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20341" type="Tratamento" type_verbose="Tratamento" url="" name="UTI + Medidas SCA e novos exames (2)" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Internamento em UTI, &lt;strong>medidas para SCA&lt;/strong> e solicitar novos marcadores de necrose mioc&amp;aacute;rdica e novo ECG.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.25">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Marcadores de necrose mioc&#xe1;rdicas positivos" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Marcadores de necrose mioc&#xe1;rdicas positivos" clinical_indication="n/a"/>
+    <examination url="CK-MB (CREATINAFOSFOQUINASE-MB)" exam_id="28010566" limb_side="" quantity="1" reason="Marcadores de necrose mioc&#xe1;rdicas positivos" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20342" type="Tratamento" type_verbose="Tratamento" url="" name="Novo ECG e marcadores com 3h" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Solicitar novo ECG e novos marcadores de necrose mioc&amp;aacute;rdica com 3 horas do &amp;uacute;ltimo exame&lt;/span>&lt;/p>" inputSequences="//@sequence.26" outputSequences="//@sequence.27">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Avalia&#xe7;&#xe3;o paciente" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Repetir exames" clinical_indication="n/a"/>
+    <examination url="CK-MB (CREATINAFOSFOQUINASE-MB)" exam_id="28010566" limb_side="" quantity="1" reason="Repetir exames" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20343" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Procurar outras causas" description="Procurar outras causas da dor tor&#xe1;cica n&#xe3;o isqu&#xea;mica" inputSequences="//@sequence.27 //@sequence.28" outputSequences="//@sequence.29 //@sequence.30 //@sequence.31 //@sequence.32 //@sequence.33 //@sequence.34 //@sequence.35">
+    <questions text="Pneumonia: Tosse, febre, dor tor&#xe1;cica em pontada, de forte intensidade, ao tossir ou respirar profundamente" url="" id="10311">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_pneumonia" id="19931" weight="1" value="false"/>
+    </questions>
+    <questions text="TEP/Pneumot&#xf3;rax: Dispneia s&#xfa;bita, com dor tor&#xe1;cica em pontada, de forte &#xA;intensidade, ao tossir ou respirar profundamente, podendo haver hemoptise, taquipneia, taquicardia" url="" id="10312">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_tep_pneumotorax" id="19932" weight="1" value="false"/>
+    </questions>
+    <questions text="Dissec&#xe7;&#xe3;o: Dor tor&#xe1;cica s&#xfa;bita, lancinante, de forte intensidade, com irradia&#xe7;&#xe3;o para dorso. Diferen&#xe7;a de pulso nos membros superiores contralaterais ou diferen&#xe7;a entre os pulsos superiores/inferiores. Diferen&#xe7;a de 20mmHg na PAS dos membros superiores" url="" id="10313">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_disseccao" id="19933" weight="1" value="false"/>
+    </questions>
+    <questions text="Pericardite: Dor precordial s&#xfa;bita, cont&#xed;nua ou intermitente, que piora com a inspira&#xe7;&#xe3;o profunda e melhora com o tronco inclinado pra frente, piorando ao deitar." url="" id="10314">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_pericardite" id="19934" weight="1" value="false"/>
+    </questions>
+    <questions text="DRGE/Espasmo esofagiano: Paciente com dor tor&#xe1;cica em queima&#xe7;&#xe3;o, ou intensa em c&#xf3;lica, associada a azia, regurgita&#xe7;&#xe3;o e/ou sensa&#xe7;&#xe3;o de entalo" url="" id="10315">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_drge_espasmo_esofagiano" id="19935" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor m&#xfa;sculo-esquel&#xe9;tica: Dor que piora com a digitopress&#xe3;o na parede tor&#xe1;cica, com a movimenta&#xe7;&#xe3;o. Pode haver hist&#xf3;ria de trauma ou esfor&#xe7;o f&#xed;sico extenuante." url="" id="10316">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_cauasas_dor_musculo_esqueletica" id="19936" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor psicog&#xea;nica: Paciente jovem, sem comorbidades, com hist&#xf3;ria de s&#xed;ndrome do p&#xe2;nico, referindo dor tor&#xe1;cica difusa, imprecisa, com sensa&#xe7;&#xe3;o de morte. Diagn&#xf3;stico de exclus&#xe3;o" url="" id="10317">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_dor_psicogenica" id="19937" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="20344" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo de Pneumonia" description="Iniciar protocolo de pneumonia" isTerminal="true" inputSequences="//@sequence.29">
+    <pathways>H002</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20345" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com chefe local" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com chefia local&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.30 //@sequence.41 //@sequence.43"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20346" type="Tratamento" type_verbose="Tratamento" url="" name="[Cardiovascular] Exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Solicitar Raio x t&amp;oacute;rax, marcadores de necrose mioc&amp;aacute;rdica, ECG, ECOTT e discutir caso com chefia local.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.31 //@sequence.32">
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Risco Cardiovascular" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Risco Cardiovascular" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Suspeita cardiovascular" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20347" type="Receita" type_verbose="Receita" url="" name="[M&#xfa;sculo-Esquel&#xe9;tica] Receita" description="" isTerminal="true" inputSequences="//@sequence.40">
+    <item id="5461" url="" name="Cloridrato de Ciclobenzaprina 5mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5462" url="" name="Dipirona 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Se houver dor"/>
+    <item id="5463" url="" name="Nimesulida 100mg ........ 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5464" url="" name="Cetoprofeno 100 mg  ...................................... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar 1 comprimido de 12/12 hrs"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20348" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Tranquiliza&#xe7;&#xe3;o do Paciente" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Tranquilizar a paciente e orientar procura de tratamento psiqui&amp;aacute;trico e terapia.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para o psic&amp;oacute;logo.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.38"/>
+  <element xsi:type="pathwayMetamodel:Information" id="20349" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Baixo Risco] ECG n&#xe3;o isqu&#xea;mico, marcadores negativos" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Avaliar novas dosagens de marcadores de necrose mioc&amp;aacute;rdica/ECG a depender do paciente&lt;br />&#xA;&lt;br />&#xA;Avaliar alta com acompanhamento ambulatorial com cardiologista e investiga&amp;ccedil;&amp;atilde;o de angina por m&amp;eacute;todos n&amp;atilde;o invasivos&lt;/span>&lt;br />&#xA;&lt;br />&#xA;&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.36"/>
+  <element xsi:type="pathwayMetamodel:Information" id="20350" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhamento ao Gastroenterologista" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Encaminhar para o Gastroenterologista&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.33"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20351" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Baixo Risco] Avaliar marcadores de necrose mioc&#xe1;rdica" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.36 //@sequence.37">
+    <questions text="Ecg isqu&#xea;mico e/ou marcadores de necrose mioc&#xe1;rdicas positivos?" url="" id="10318">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica_segundo" id="19938" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20352" type="Tratamento" type_verbose="Tratamento" url="" name="[Baixo Risco] Marcadores de Necrose Positivos" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Se marcadores de necrose mioc&amp;aacute;rdica positivos, internamento em UTI,&amp;nbsp;&lt;strong>medidas para SCA&amp;nbsp;&lt;/strong>e solicitar novos&lt;strong>&amp;nbsp;&lt;/strong>marcadores de necrose mioc&amp;aacute;rdica e novo ECG&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.37">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Marcadores de necrose positivos" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Marcadores de necrose mioc&#xe1;rdica positivos" clinical_indication="n/a"/>
+    <examination url="CK-MB (CREATINAFOSFOQUINASE-MB)" exam_id="28010566" limb_side="" quantity="1" reason="Marcadores de necrose mioc&#xe1;rdica positivos" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20353" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Caracteriza&#xe7;&#xe3;o da Dor Tor&#xe1;cica" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Realizar a caracteriza&amp;ccedil;&amp;atilde;o da dor:&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>DOR TIPO A (definitivamente anginosa)&lt;/strong>: dor/desconforto retroesternal ou precordial, geralmente precipitada por esfor&amp;ccedil;o f&amp;iacute;sico, podendo irradiar para ombro, mand&amp;iacute;bula ou face interna do bra&amp;ccedil;o, com dura&amp;ccedil;&amp;atilde;o de alguns minutos, e aliviada com repouso ou nitrato em menos de 10 minutos.&lt;br />&#xA;&lt;br />&#xA;&lt;strong>DOR TIPO B (provavelmente anginosa)&lt;/strong>: tem a maioria dos sintomas t&amp;iacute;picos, mas n&amp;atilde;o tem todas as caracter&amp;iacute;sticas da dor definitivamente anginosa.&lt;br />&#xA;&lt;br />&#xA;&lt;strong>DOR TIPO C (provavelmente n&amp;atilde;o anginosa)&lt;/strong>: tem poucas caracter&amp;iacute;sticas da dor definitivamente anginosa. N&amp;atilde;o havendo, principalmente, a rela&amp;ccedil;&amp;atilde;o n&amp;iacute;tida com o esfor&amp;ccedil;o.&lt;br />&#xA;&lt;br />&#xA;&lt;strong>DOR TIPO D (definitivamente n&amp;atilde;o anginosa)&lt;/strong>: nenhuma caracter&amp;iacute;stica da dor anginosa, mesmo se localizada em regi&amp;atilde;o precordial ou retroesternal.&lt;/span>&lt;/p>" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.13">
+    <questions text="DOR TIPO A (definitivamente anginosa)?" url="" id="10319">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_A" id="19939" weight="1" value="false"/>
+    </questions>
+    <questions text="DOR TIPO B (provavelmente anginosa)?" url="" id="10320">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_B" id="19940" weight="1" value="false"/>
+    </questions>
+    <questions text="DOR TIPO C (provavelmente n&#xe3;o anginosa)?" url="" id="10321">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_C" id="19941" weight="1" value="false"/>
+    </questions>
+    <questions text="DOR TIPO D (definitivamente n&#xe3;o anginosa)?" url="" id="10322">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_D" id="19942" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20354" type="Tratamento" type_verbose="Tratamento" url="" name="[Baixo Risco] ECG n&#xe3;o isqu&#xea;mico" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Tratamento da dor via conduta complementar se necess&amp;aacute;rio. &lt;/span>&lt;/p>" inputSequences="//@sequence.8" outputSequences="//@sequence.10">
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="ECG n&#xe3;o isqu&#xea;mico" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="ECG n&#xe3;o isqu&#xea;mico" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20355" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor M&#xfa;sculo Esquel&#xe9;tica] Avaliar Exames" description="" inputSequences="//@sequence.39" outputSequences="//@sequence.40 //@sequence.41">
+    <questions text="Apresenta altera&#xe7;&#xe3;o nos exames (ECG e Raio X de T&#xf3;rax)?" url="" id="10323">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="musculo_esq_apresenta_alteracao" id="19943" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20356" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Dor psicog&#xea;nica] Avaliar exames" description="" inputSequences="//@sequence.42" outputSequences="//@sequence.38 //@sequence.43">
+    <questions text="Apresenta altera&#xe7;&#xf5;es nos exames de eletrocardiograma ou raio x de torax?" url="" id="10324">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_psicogenica_com_alteracoes" id="19944" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20357" type="Tratamento" type_verbose="Tratamento" url="" name="[Dor M&#xfa;sculo-Esquel&#xe9;tica] Exames" description="" inputSequences="//@sequence.34" outputSequences="//@sequence.39">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="dor m&#xfa;sculo-esquel&#xe9;tica" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="dor m&#xfa;sculo esquel&#xe9;tica" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20358" type="Tratamento" type_verbose="Tratamento" url="" name="[Dor psicog&#xea;nica] Exames" description="" inputSequences="//@sequence.35" outputSequences="//@sequence.42">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="dor psicog&#xea;nica" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Dor psicog&#xea;nica" clinical_indication="n/a"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="20359" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Sinais Vitais Criticos)" description="Sinais Vitais Criticos">
+    <operation name="Sinais Vitais Criticos" Operator="affirmation" id="19948">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_vitais_graves" id="19921" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="20360" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="Incondicional"/>
+  <sequence inputStep="//@element.32" outputStep="//@element.0" id="20361" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Sinais Vitais Normais)" description="Sinais Vitais Normais">
+    <operation name="Sinais Vitais Normais" id="19949">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais_vitais_graves" id="19921" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.32" id="20362" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (dor anginosa)" description="&lt;p>Dor anginosa&lt;/p>">
+    <operation name="Dor_tipo_A_ou_B" Operator="or" id="19950">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_A" id="19939" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_B" id="19940" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="20363" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="20364" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (baixo risco de sindrome coronariana aguda)" description="baixo risco de sindrome coronariana aguda">
+    <operation name="fatores de sindrome coronariana &lt;= 1" Operator="lessOrEqual" id="19951">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana" id="19922" weight="1" value="0.0">
+        <option description="Hipertens&#xe3;o" weight="1"/>
+        <option description="Dislipidemia" weight="1"/>
+        <option description="Tabagismo" weight="1"/>
+        <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+        <option description="Idade > 60 anos" weight="2"/>
+        <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+        <option description="DM" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19945" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="20365" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (risco alto de sindrome coronariana aguda)" description="risco alto de sindrome coronariana aguda">
+    <operation name="fatores de sindrome coronariana > 1" Operator="greaterThan" id="19952">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana" id="19922" weight="1" value="0.0">
+        <option description="Hipertens&#xe3;o" weight="1"/>
+        <option description="Dislipidemia" weight="1"/>
+        <option description="Tabagismo" weight="1"/>
+        <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+        <option description="Idade > 60 anos" weight="2"/>
+        <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+        <option description="DM" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19945" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="20366" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.33" outputStep="//@element.6" id="20367" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Baixo Risco ECG N&#xe3;o Isquemico)" description="Baixo Risco ECG N&#xe3;o Isquemico">
+    <operation name="ecg n&#xe3;o esquemico" id="19953">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_ecg_esquemico" id="19923" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.6" id="20368" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (Baixo Risco ECG Isquemico)" description="Baixo Risco ECG Isquemico">
+    <operation name="ECG isquemico" Operator="affirmation" id="19954">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_ecg_esquemico" id="19923" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.33" id="20369" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="20370" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (marcadores de necrose positivos)" description="marcadores de necrose positivos">
+    <operation name="marcadores de necrose positivos" Operator="affirmation" id="19955">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica" id="19925" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="20371" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (marcadores de necrose negativos)" description="marcadores de necrose negativos">
+    <operation name="marcadores de necrose negativos" id="19956">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica" id="19925" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.32" id="20372" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (dor nao anginosa)" description="dor nao anginosa">
+    <operation name="Dor_tipo_C_ou_D" Operator="or" id="19957">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_C" id="19941" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_D" id="19942" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.10" id="20373" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="Incondicional"/>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="20374" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (ECG com supra ST)" description="ECG com supra ST">
+    <operation name="ECG com supra ST" Operator="affirmation" id="19958">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_com_supra" id="19927" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="20375" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (ECG sem supra ST)" description="ECG sem supra ST">
+    <operation name="ECG sem supra ST" id="19959">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_com_supra" id="19927" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.13" id="20376" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (menos de 12h)" description="menos de 12h">
+    <operation name="menos de 12h" Operator="affirmation" id="19960">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_menos_de_12h" id="19928" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="20377" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (mais de 12h)" description="mais de 12h">
+    <operation name="mais de 12h" id="19961">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_menos_de_12h" id="19928" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.7" id="20378" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (ecg n&#xe3;o isqu&#xea;mico)" description="ecg n&#xe3;o isqu&#xea;mico">
+    <operation name="ecg n&#xe3;o isqu&#xea;mico" id="19962">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_alto_ecg_isquemico" id="19924" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.7" id="20379" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (ecg isqu&#xea;mico)" description="ecg isqu&#xea;mico">
+    <operation name="ecg isqu&#xea;mico" Operator="affirmation" id="19963">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="risco_alto_ecg_isquemico" id="19924" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.17" id="20380" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (ecg com supra st)" description="ecg com supra st">
+    <operation name="ecg com supra st" Operator="affirmation" id="19964">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alto_risco_ecg_com_supra_ST" id="19929" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.17" id="20381" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (ecg sem supra st)" description="ecg sem supra st">
+    <operation name="ecg sem supra st" id="19965">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alto_risco_ecg_com_supra_ST" id="19929" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.11" id="20382" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (risco m&#xe9;dio ou alto)" description="risco m&#xe9;dio ou alto">
+    <operation name="risco m&#xe9;dio ou alto" Operator="greaterOrEqual" id="19966">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana_dor_anginosa" id="19926" weight="1" value="0.0">
+        <option description="Hipertens&#xe3;o" weight="1"/>
+        <option description="Tabagismo" weight="1"/>
+        <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+        <option description="Dislipidemia" weight="1"/>
+        <option description="DM" weight="2"/>
+        <option description="Idade > 60 anos" weight="2"/>
+        <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19946" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="20383" type="Sequencia" type_verbose="Sequencia" url="" name="S27" description="Incondicional"/>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="20384" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (marcadores positivos)" description="marcadores positivos">
+    <operation name="marcadores positivos" Operator="affirmation" id="19967">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_anginosa_alto_risco_marcadores_positivos" id="19930" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.19" id="20385" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (marcadores negativos)" description="marcadores negativos">
+    <operation name="marcadores negativos" id="19968">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_anginosa_alto_risco_marcadores_positivos" id="19930" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.22" outputStep="//@element.21" id="20386" type="Sequencia" type_verbose="Sequencia" url="" name="S30" description="Incondicional"/>
+  <sequence inputStep="//@element.22" outputStep="//@element.11" id="20387" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (baixo risco de SCA)" description="baixo risco de SCA">
+    <operation name="baixo risco de SCA" Operator="lessOrEqual" id="19969">
+      <operand xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana_dor_anginosa" id="19926" weight="1" value="0.0">
+        <option description="Hipertens&#xe3;o" weight="1"/>
+        <option description="Tabagismo" weight="1"/>
+        <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+        <option description="Dislipidemia" weight="1"/>
+        <option description="DM" weight="2"/>
+        <option description="Idade > 60 anos" weight="2"/>
+        <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19945" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.22" id="20388" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (pneumonia)" description="pneumonia">
+    <operation name="pneumonia" Operator="affirmation" id="19970">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_pneumonia" id="19931" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.22" id="20389" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (tep/pneumotorax)" description="tep/pneumotorax">
+    <operation name="tep/pneumotorax" Operator="affirmation" id="19971">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_tep_pneumotorax" id="19932" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.22" id="20390" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (disseccao)" description="disseccao">
+    <operation name="disseccao" Operator="affirmation" id="19972">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_disseccao" id="19933" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.25" outputStep="//@element.22" id="20391" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (pericardite)" description="pericardite">
+    <operation name="pericardite" Operator="affirmation" id="19973">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_pericardite" id="19934" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.29" outputStep="//@element.22" id="20392" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (DRGE/espasmo esofagiano)" description="DRGE/espasmo esofagiano">
+    <operation name="DRGE/espasmo esofagiano" Operator="affirmation" id="19974">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_drge_espasmo_esofagiano" id="19935" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.36" outputStep="//@element.22" id="20393" type="Sequencia" type_verbose="Sequencia" url="" name="S38 (m&#xfa;sculo-esquel&#xe9;tica)" description="m&#xfa;sculo-esquel&#xe9;tica">
+    <operation name="m&#xfa;sculo-esquel&#xe9;tica" Operator="affirmation" id="19975">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_cauasas_dor_musculo_esqueletica" id="19936" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.37" outputStep="//@element.22" id="20394" type="Sequencia" type_verbose="Sequencia" url="" name="S39 (psicog&#xea;nica)" description="psicog&#xea;nica">
+    <operation name="psicog&#xea;nica" Operator="affirmation" id="19976">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_dor_psicogenica" id="19937" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.30" id="20395" type="Sequencia" type_verbose="Sequencia" url="" name="S41" description="-">
+    <operation name="indicadores_negativos" id="19977">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica_segundo" id="19938" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.30" id="20396" type="Sequencia" type_verbose="Sequencia" url="" name="s42" description="-">
+    <operation name="marcadores_positivos" Operator="affirmation" id="19978">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica_segundo" id="19938" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.35" id="20397" type="Sequencia" type_verbose="Sequencia" url="" name="S43 (sem altera&#xe7;&#xf5;es)" description="sem altera&#xe7;&#xf5;es">
+    <operation name="sem altera&#xe7;&#xe3;o nos exames" id="19979">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_psicogenica_com_alteracoes" id="19944" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.34" outputStep="//@element.36" id="20398" type="Sequencia" type_verbose="Sequencia" url="" name="S39" description="Incondicional"/>
+  <sequence inputStep="//@element.26" outputStep="//@element.34" id="20399" type="Sequencia" type_verbose="Sequencia" url="" name="S40 (sem altera&#xe7;&#xf5;es)" description="sem altera&#xe7;&#xf5;es">
+    <operation name="sem altera&#xe7;&#xf5;es" id="19980">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="musculo_esq_apresenta_alteracao" id="19943" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.24" outputStep="//@element.34" id="20400" type="Sequencia" type_verbose="Sequencia" url="" name="S41 (com altera&#xe7;&#xf5;es)" description="com altera&#xe7;&#xf5;es">
+    <operation name="com altera&#xe7;&#xf5;es" Operator="affirmation" id="19981">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="musculo_esq_apresenta_alteracao" id="19943" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.35" outputStep="//@element.37" id="20401" type="Sequencia" type_verbose="Sequencia" url="" name="S42" description="Incondicional"/>
+  <sequence inputStep="//@element.24" outputStep="//@element.35" id="20402" type="Sequencia" type_verbose="Sequencia" url="" name="S44 (sem altera&#xe7;&#xe3;o)" description="sem altera&#xe7;&#xe3;o nos exames">
+    <operation name="com altera&#xe7;&#xe3;o nos exames" Operator="affirmation" id="19982">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_psicogenica_com_alteracoes" id="19944" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Classificacao da Dor Toracica" Operator="addition" id="19947"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinais_vitais_graves" id="19921" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana" id="19922" weight="1" value="0.0">
+    <option description="Hipertens&#xe3;o" weight="1"/>
+    <option description="Dislipidemia" weight="1"/>
+    <option description="Tabagismo" weight="1"/>
+    <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+    <option description="Idade > 60 anos" weight="2"/>
+    <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+    <option description="DM" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_ecg_esquemico" id="19923" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_alto_ecg_isquemico" id="19924" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica" id="19925" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="fatores_sindrome_coronariana_dor_anginosa" id="19926" weight="1" value="0.0">
+    <option description="Hipertens&#xe3;o" weight="1"/>
+    <option description="Tabagismo" weight="1"/>
+    <option description="Hist&#xf3;ria familiar de doen&#xe7;a coron&#xe1;ria precoce em parentes de primeiro grau (homens &lt; 55 anos e mulheres &lt; 65 anos)" weight="1"/>
+    <option description="Dislipidemia" weight="1"/>
+    <option description="DM" weight="2"/>
+    <option description="Idade > 60 anos" weight="2"/>
+    <option description="Doen&#xe7;a ateroscler&#xf3;tica conhecida (DAC)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_com_supra" id="19927" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ecg_isquemico_menos_de_12h" id="19928" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alto_risco_ecg_com_supra_ST" id="19929" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_anginosa_alto_risco_marcadores_positivos" id="19930" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_pneumonia" id="19931" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_tep_pneumotorax" id="19932" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_disseccao" id="19933" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_pericardite" id="19934" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_drge_espasmo_esofagiano" id="19935" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_cauasas_dor_musculo_esqueletica" id="19936" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="outras_causas_dor_psicogenica" id="19937" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="baixo_risco_marcadores_de_necrose_miocardica_segundo" id="19938" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_A" id="19939" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_B" id="19940" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_C" id="19941" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_tipo_D" id="19942" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="musculo_esq_apresenta_alteracao" id="19943" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_psicogenica_com_alteracoes" id="19944" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="19945" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="19946" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3301" url="" name="IVAS" code="H009">
+  <element xsi:type="pathwayMetamodel:Referral" id="19861" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="Encaminhar para protocolo espec&#xed;fico de SEPSE" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19862" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Crit&#xe9;rios de Pneumonia" description="Avaliar Crit&#xe9;rios de Pneumonia" inputSequences="//@sequence.3" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Dispn&#xe9;ia?" url="" id="10081">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dispneia" id="19501" weight="4" value="false"/>
+    </questions>
+    <questions text="Dor pleur&#xed;tica?" url="" id="10082">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dor_pleuritica" id="19502" weight="3" value="false"/>
+    </questions>
+    <questions text="Tosse produtiva?" url="" id="10083">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_tosse_produtiva" id="19503" weight="1" value="false"/>
+    </questions>
+    <questions text="Calafrios?" url="" id="10084">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_calafrios" id="19504" weight="1" value="false"/>
+    </questions>
+    <questions text="Confus&#xe3;o recente?" url="" id="10085">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_confusao_recente" id="19505" weight="4" value="false"/>
+    </questions>
+    <questions text="Estertores Crepitantes?" url="" id="10086">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_estertores_crepantes" id="19506" weight="4" value="false"/>
+    </questions>
+    <questions text="Entrada recente?" url="" id="10087">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_entrada_recente" id="19507" weight="2" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="19863" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo Pneumonia" description="Encaminhamento para protocolo de pneumonia" isTerminal="true" inputSequences="//@sequence.5">
+    <pathways>H002</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19864" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Influenza: Riscos de Complica&#xe7;&#xf5;es" description="Avaliar presen&#xe7;a de riscos de complica&#xe7;&#xf5;es para influenza" inputSequences="//@sequence.4" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Gestante / Puerperas?" url="" id="10088">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_gestante" id="19508" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade > 60 anos?" url="" id="10089">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_idoso" id="19509" weight="1" value="false"/>
+    </questions>
+    <questions text="Pneumopatias?" url="" id="10090">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_pneumopatias" id="19510" weight="1" value="false"/>
+    </questions>
+    <questions text="ICC?" url="" id="10091">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_icc" id="19511" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;a renal cr&#xf4;nica?" url="" id="10092">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doenca_renal" id="19512" weight="1" value="false"/>
+    </questions>
+    <questions text="Cirrose Hep&#xe1;tica?" url="" id="10093">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_cirrose" id="19513" weight="1" value="false"/>
+    </questions>
+    <questions text="Neoplasias Hematol&#xf3;gicas?" url="" id="10094">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_neoplasias" id="19514" weight="1" value="false"/>
+    </questions>
+    <questions text="Diabetes?" url="" id="10095">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_diabetes" id="19515" weight="1" value="false"/>
+    </questions>
+    <questions text="Doen&#xe7;as Neurodegenerativas?" url="" id="10096">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doencas_neurodegen" id="19516" weight="1" value="false"/>
+    </questions>
+    <questions text="Obesidade M&#xf3;rbida (IMC > 40)?" url="" id="10097">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_obesidade_morbida" id="19517" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o?" url="" id="10098">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_imunossupressao" id="19518" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19865" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Sintomas Espec&#xed;ficos" description="Avaliar sintomas apresentados pelo paciente" inputSequences="//@sequence.6" outputSequences="//@sequence.4 //@sequence.9 //@sequence.10 //@sequence.13 //@sequence.21">
+    <questions text="Resfriado comum" url="" id="10099">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_resfriado" id="19519" weight="1" value="false"/>
+    </questions>
+    <questions text="Amigdalite / Tonsilite" url="" id="10100">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_amigdalite" id="19520" weight="1" value="false"/>
+    </questions>
+    <questions text="Rinossinusites" url="" id="10101">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_rinite" id="19521" weight="1" value="false"/>
+    </questions>
+    <questions text="Influenza" url="" id="10102">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_influenza" id="19522" weight="1" value="false"/>
+    </questions>
+    <questions text="Rinite" url="" id="10103">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rinite" id="19523" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19866" type="Tratamento" type_verbose="Tratamento" url="" name="Raio X + Medica&#xe7;&#xf5;es" description="Solicitar Raio X (Inclusive para gestantes)&#xA;+ Adicionar sintom&#xe1;ticos padr&#xe3;o via conduta complementar." inputSequences="//@sequence.7" outputSequences="//@sequence.20">
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Protocolo de Pneumonia" clinical_indication="Protocolo de Pneumonia"/>
+    <medication url="" med_id="149641" id="10161" name="TAMIFLU 75MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="10161" frequency="12" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19867" type="Receita" type_verbose="Receita" url="" name="Resfriado - Receita" description="Aten&#xe7;&#xe3;o! Caso n&#xe3;o apresente melhora dos sintomas por mais de 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es, retornar imediatamente a emerg&#xea;ncia." isTerminal="true" inputSequences="//@sequence.1">
+    <item id="5301" url="" name="Fexofenadina 120Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5302" url="" name="Loratadina 10Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="5303" url="" name="Solu&#xe7;&#xe3;o Salina" med_code="-1" presentation="-" access="2" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="2 jatos em cada narina de 6/6h"/>
+    <item id="5304" url="" name="Koide D Xarope ...... 1fr" med_code="-1" presentation="-" access="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 10ml de 8/8h"/>
+    <item id="5305" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5306" url="" name="Paracetamol 750Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5307" url="" name="Levodropropizina Xarope ...... 1fr" med_code="-1" presentation="-" access="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar 10ml de 8/8h"/>
+    <item id="5308" url="" name="Nimesulida 100Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5309" url="" name="Prednisona 20 mg ............. 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 1 comprimido pela manh&#xe3;"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19868" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Amigdalite (Centor Score)" description="Calculo do centor score para paciente com amigdalite" inputSequences="//@sequence.0" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="EDEMA / EXSUDATO AMIGDALIANO" url="" id="10104">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_edema" id="19524" weight="1" value="false"/>
+    </questions>
+    <questions text="ADENOPATIA CERVICAL ANTERIOR DOLOROSA" url="" id="10105">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_adenopatia" id="19525" weight="1" value="false"/>
+    </questions>
+    <questions text="Febre > 38&#xba;C" url="" id="10106">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_febre" id="19526" weight="1" value="false"/>
+    </questions>
+    <questions text="AUS&#xca;NCIA DE TOSSE" url="" id="10107">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_sem_tosse" id="19527" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19869" type="Receita" type_verbose="Receita" url="" name="Amigdalite - Receita" description="Receita para pacientes que n&#xe3;o apresentam sintomas do Centor Score" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="5310" url="" name="Cetoprofeno 100 mg ----------- 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5311" url="" name="Prednisona 20 mg ........... 1cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 02 cp de manh&#xe3; durante 5 dias"/>
+    <item id="5312" url="" name="Nimesulida 100mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5313" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5314" url="" name="Paracetamol 750Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19870" type="Receita" type_verbose="Receita" url="" name="Tratamento Rinite" description="Receita para paciente com rinite" isTerminal="true" inputSequences="//@sequence.21">
+    <item id="5315" url="" name="Prednisona 20Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2 comprimidos pela manh&#xe3;"/>
+    <item id="5316" url="" name="Fexofenadina 60mg + Pseudoefedrina 120mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5317" url="" name="Budesonida 50Mcg/dose ...... 1fr" med_code="-1" presentation="-" access="2" period="1" period_unit="MJ" frequency="1" frequency_unit="DD" orientations="Aplicar um jato em cada narina pela manh&#xe3; por 30 dias"/>
+    <item id="5318" url="" name="Solu&#xe7;&#xe3;o Salina" med_code="-1" presentation="-" access="2" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 2 jatos em cada narina de 6/6h"/>
+    <item id="5319" url="" name="Decongex Plus .... 1 cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19871" type="Receita" type_verbose="Receita" url="" name="Amigdalite - Receita (Bacteriana)" description="Receita (Sem Etiologia Bacteriana)" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="5320" url="" name="Nimesulida 100mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5321" url="" name="Prednisona 20Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2 comprimidos pela manh&#xe3;"/>
+    <item id="5322" url="" name="Paracetamol 750Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5323" url="" name="Azitromicina 500mg ...... 5cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="5324" url="" name="Amoxicilina/Clavulanato 875/125 ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5325" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5326" url="" name="Cetoprofeno 100 mg ......... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19872" type="Tratamento" type_verbose="Tratamento" url="" name="[Resfriado] Medicamentos" description="" inputSequences="//@sequence.8 //@sequence.9" outputSequences="//@sequence.1">
+    <medication url="" med_id="38008" id="10162" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10162" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4241,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="42951" id="10163" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10163" standard="null"/>
+    <medication url="" med_id="38008" id="10164" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10164" standard="null"/>
+    <medication url="" med_id="59609" id="10165" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10165" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:4242,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:5,&quot;codigo_principio_ativo&quot;:635}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19873" type="Receita" type_verbose="Receita" url="" name="Tratamento Rinite Viral ou Al&#xe9;rgica" description="Receita para paciente com rinite" isTerminal="true" inputSequences="//@sequence.18 //@sequence.24">
+    <item id="5327" url="" name="Cetoprofeno 100 mg ......... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="5328" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5329" url="" name="Paracetamol 750Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5330" url="" name="Prednisona 20Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2 comprimidos pela manh&#xe3;"/>
+    <item id="5331" url="" name="Fexofenadina 60mg + Pseudoefedrina 120mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5332" url="" name="Budesonida 50Mcg/dose ...... 1fr" med_code="-1" presentation="-" access="2" period="1" period_unit="MJ" frequency="1" frequency_unit="DD" orientations="Aplicar um jato em cada narina pela manh&#xe3; por 30 dias"/>
+    <item id="5333" url="" name="Solu&#xe7;&#xe3;o Salina" med_code="-1" presentation="-" access="2" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 2 jatos em cada narina de 6/6h"/>
+    <item id="5334" url="" name="Nimesulida 100 mg ........ 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19874" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Fatores agravantes para amigdalite" description="Aventar suspeitas de abcesso periamigdaliano" inputSequences="//@sequence.10" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Paciente com odinofagia acentuada e unilateral, piora da disfagia e da halitose, saliva&#xe7;&#xe3;o, altera&#xe7;&#xe3;o no timbre da voz e trismo. Ao exame com edema dos tecidos localizados superiormente e lateralmente &#xe0; am&#xed;gdala envolvida e deslocamento da &#xfa;vula?" url="" id="10108">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ivas_agravante_amigdalite" id="19528" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19875" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Ambulatorial - Amigdalite" description="Tratamento ambulatorial para amigdalite" inputSequences="//@sequence.14" outputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Information" id="19876" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir caso com l&#xed;der de equipe" description="&lt;p>Aten&amp;ccedil;&amp;atilde;o:&lt;br />&#xA;- Recomenda-se discutir o caso com o l&amp;iacute;der de equipe.&lt;br />&#xA;- Aventar possibilidade de parecer do otorrino.&lt;br />&#xA;- Aventar possibilidades de solicita&amp;ccedil;&amp;atilde;o de tomografias computadorizadas.&lt;/p>" isTerminal="true" inputSequences="//@sequence.16 //@sequence.17 //@sequence.20"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19877" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Complica&#xe7;&#xf5;es ou Tratamento Pr&#xe9;vio" description="Aventar suspeita de complica&#xe7;&#xe3;o orbit&#xe1;ria(celulite ou abscesso)!" inputSequences="//@sequence.13" outputSequences="//@sequence.17 //@sequence.22">
+    <questions text="Paciente com edema bipalpebral, quemose periorbit&#xe1;ria, diminui&#xe7;&#xe3;o da motricidade ocular, diminui&#xe7;&#xe3;o da acuidade visual?" url="" id="10109">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rino_suspeita_orbitaria" id="19529" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente com cefal&#xe9;ia de forte intensidade,sinais men&#xed;ngeos, convuls&#xf5;es e rebaixamento do n&#xed;vel de consci&#xea;ncia?" url="" id="10110">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rino_complicacao_intracraniana" id="19530" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente j&#xe1; tratando rinossinusite sem melhora ou com sintomas recorrentes (4 ou mais epis&#xf3;dios no ano)?" url="" id="10111">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rino_tratamento_anterior" id="19531" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19878" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar a Etiologia" description="Avaliar a etiologia viral ou bacteriana" inputSequences="//@sequence.23" outputSequences="//@sequence.18 //@sequence.19 //@sequence.24">
+    <questions text="VIRAL: sintomas leves, sem febre importante, manuten&#xe7;&#xe3;o estado geral" url="" id="10112">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_viral" id="19532" weight="1" value="false"/>
+    </questions>
+    <questions text="BACTERIANA: sintomas mais importantes, com febre e queda do estado geral" url="" id="10113">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_bacteriana" id="19533" weight="1" value="false"/>
+    </questions>
+    <questions text="AL&#xc9;RGICA: sintomas leves, sem febre importante por&#xe9;m com similaridade a eventos anteriores. Manuten&#xe7;&#xe3;o do estado geral" url="" id="10114">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_alergica" id="19534" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19879" type="Receita" type_verbose="Receita" url="" name="Tratamento Sinusite Bacteriana" description="" isTerminal="true" inputSequences="//@sequence.19">
+    <item id="5335" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5336" url="" name="Paracetamol 750Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+    <item id="5337" url="" name="Fexofenadina 60mg + pseudoefedrina 120mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5338" url="" name="Solu&#xe7;&#xe3;o Salina" med_code="-1" presentation="-" access="2" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Aplicar 2 jatos em cada narina de 6/6 horas"/>
+    <item id="5339" url="" name="Nimesulida 100mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5340" url="" name="Prednisona 20Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar 2 comprimidos pela manh&#xe3;"/>
+    <item id="5341" url="" name="Amoxicilina/Clavulanato 875/125 ...... 20cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="10" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5342" url="" name="Cetoprofeno 100mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19880" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA" description="" isInitial="true" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Confus&#xe3;o Mental" url="" id="10115">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="19535" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt; 100" url="" id="10116">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="19536" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 22" url="" id="10117">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="19537" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19881" type="Tratamento" type_verbose="Tratamento" url="" name="[Amigdalite] Medicamentos" description="" inputSequences="//@sequence.15" outputSequences="//@sequence.0">
+    <medication url="" med_id="108545" id="10166" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="10166" standard="null"/>
+    <medication url="" med_id="38008" id="10167" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10167" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4243,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="59609" id="10168" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10168" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4244,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19882" type="Tratamento" type_verbose="Tratamento" url="" name="[Rinossinusite] Medicamentos" description="" inputSequences="//@sequence.22" outputSequences="//@sequence.23">
+    <medication url="" med_id="38008" id="10169" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10169" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4245,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="108545" id="10170" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="10170" standard="null"/>
+    <medication url="" med_id="36811" id="10171" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10171" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:50,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;LENTO COM SF 0,9%&quot;,&quot;id&quot;:4246,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:819}"/>
+    <medication url="" med_id="59609" id="10172" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10172" standard="null"/>
+  </element>
+  <sequence inputStep="//@element.7" outputStep="//@element.20" id="19883" type="Sequencia" type_verbose="Sequencia" url="" name="S22" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.11" id="19884" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.19" id="19885" type="Sequencia" type_verbose="Sequencia" url="" name="S31 (quick sofa >= 2)" description="quick sofa >= 2">
+    <operation name="quick sofa >= 2" Operator="greaterOrEqual" id="19551">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="19542">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="19537" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="19535" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="19536" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19538" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.19" id="19886" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (quick sofa &lt; 2)" description="quick sofa &lt; 2">
+    <operation name="quick sofa &lt; 2" Operator="lessThan" id="19552">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="19542">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="19537" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="19535" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="19536" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19538" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.4" id="19887" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (Influenza)" description="Influenza">
+    <operation name="Influenza" Operator="affirmation" id="19553">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_influenza" id="19522" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="19888" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (1 ou mais criterios de pneumonia)" description="">
+    <operation name="criterios_pneumo_maior_igual_4" Operator="greaterOrEqual" id="19554">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Pneumonia" Operator="addition" id="19544">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dispneia" id="19501" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dor_pleuritica" id="19502" weight="3" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_tosse_produtiva" id="19503" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_calafrios" id="19504" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_confusao_recente" id="19505" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_estertores_crepantes" id="19506" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_entrada_recente" id="19507" weight="2" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="19540" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="19889" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (sem criterios de pneumonia)" description="">
+    <operation name="criterios_pneumo_menor_4" Operator="lessThan" id="19555">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Criterios Pneumonia" Operator="addition" id="19544">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dispneia" id="19501" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dor_pleuritica" id="19502" weight="3" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_tosse_produtiva" id="19503" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_calafrios" id="19504" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_confusao_recente" id="19505" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_estertores_crepantes" id="19506" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_entrada_recente" id="19507" weight="2" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="19540" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="19890" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (com complica&#xe7;&#xf5;es de Influenza)" description="com complica&#xe7;&#xf5;es de Influenza">
+    <operation name="Complicacoes Influenza >= 1" Operator="greaterOrEqual" id="19556">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Complicacoes Influenza" Operator="addition" id="19546">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_gestante" id="19508" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_idoso" id="19509" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_pneumopatias" id="19510" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_icc" id="19511" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doenca_renal" id="19512" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_cirrose" id="19513" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_neoplasias" id="19514" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_diabetes" id="19515" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doencas_neurodegen" id="19516" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_obesidade_morbida" id="19517" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_imunossupressao" id="19518" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19539" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.3" id="19891" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (sem complica&#xe7;&#xf5;es de Influenza)" description="sem complica&#xe7;&#xf5;es de Influenza">
+    <operation name="Complicacoes Influenza &lt; 1" Operator="lessThan" id="19557">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Complicacoes Influenza" Operator="addition" id="19546">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_gestante" id="19508" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_idoso" id="19509" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_pneumopatias" id="19510" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_icc" id="19511" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doenca_renal" id="19512" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_cirrose" id="19513" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_neoplasias" id="19514" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_diabetes" id="19515" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doencas_neurodegen" id="19516" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_obesidade_morbida" id="19517" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_imunossupressao" id="19518" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19539" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.4" id="19892" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Resfriado)" description="">
+    <operation name="Positivo para resfriado" Operator="affirmation" id="19558">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_resfriado" id="19519" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.4" id="19893" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Amigdalite)" description="">
+    <operation name="Positivo para Amigdalite" Operator="affirmation" id="19559">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_amigdalite" id="19520" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="19894" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (Centor Score &lt; 2)" description="Centor Score &lt; 2">
+    <operation name="Centor Score &lt; 2" Operator="lessThan" id="19560">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Centor Score" Operator="addition" id="19547">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_edema" id="19524" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_adenopatia" id="19525" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_febre" id="19526" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_sem_tosse" id="19527" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19538" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.7" id="19895" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Centor Score >= 2)" description="Centor Score >= 2">
+    <operation name="Centor Score >= 2" Operator="greaterOrEqual" id="19561">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Centor Score" Operator="addition" id="19547">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_edema" id="19524" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_adenopatia" id="19525" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_febre" id="19526" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_sem_tosse" id="19527" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19538" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.4" id="19896" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (Sinusite)" description="Positivo para rinite">
+    <operation name="Positivo para sinusite" Operator="affirmation" id="19562">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_rinite" id="19521" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="19897" type="Sequencia" type_verbose="Sequencia" url="" name="s17(complicacoes amigdalite)" description="">
+    <operation name="com_fatores_agravantes_amigdalite" Operator="affirmation" id="19563">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ivas_agravante_amigdalite" id="19528" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.13" id="19898" type="Sequencia" type_verbose="Sequencia" url="" name="s18(sem complicacoes amigdalite)" description="">
+    <operation name="sem_complicacoes_amigdalite" id="19564">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ivas_agravante_amigdalite" id="19528" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="19899" type="Sequencia" type_verbose="Sequencia" url="" name="s19(informatico lider de equipe)" description=""/>
+  <sequence inputStep="//@element.15" outputStep="//@element.16" id="19900" type="Sequencia" type_verbose="Sequencia" url="" name="s20(sinusite com complica&#xe7;&#xf5;es)" description="">
+    <operation name="Complica&#xe7;&#xf5;es (sinusite) >= 1" Operator="greaterOrEqual" id="19565">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Complica&#xe7;&#xf5;es (sinusite)" Operator="addition" id="19543">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_complicacao_intracraniana" id="19530" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_tratamento_anterior" id="19531" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_suspeita_orbitaria" id="19529" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19539" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.17" id="19901" type="Sequencia" type_verbose="Sequencia" url="" name="s26(viral)" description="">
+    <operation name="tratamento_viral" Operator="affirmation" id="19566">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_viral" id="19532" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.17" id="19902" type="Sequencia" type_verbose="Sequencia" url="" name="s26(bacteriana)" description="">
+    <operation name="tratamento_bacteriano" Operator="affirmation" id="19567">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_bacteriana" id="19533" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.5" id="19903" type="Sequencia" type_verbose="Sequencia" url="" name="s32" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.4" id="19904" type="Sequencia" type_verbose="Sequencia" url="" name="S28 (Rinite)" description="Rinite">
+    <operation name="Positivo para rinite" Operator="affirmation" id="19568">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rinite" id="19523" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.16" id="19905" type="Sequencia" type_verbose="Sequencia" url="" name="S34 (sinusite sem complica&#xe7;&#xf5;es)" description="sinusite sem complica&#xe7;&#xf5;es">
+    <operation name="Complica&#xe7;&#xf5;es (sinusite) &lt; 1" Operator="lessThan" id="19569">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Complica&#xe7;&#xf5;es (sinusite)" Operator="addition" id="19543">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_complicacao_intracraniana" id="19530" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_tratamento_anterior" id="19531" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_suspeita_orbitaria" id="19529" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19539" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.21" id="19906" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.17" id="19907" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (etiologia al&#xe9;rgica)" description="etiologia al&#xe9;rgica">
+    <operation name="etiologia al&#xe9;rgica" Operator="affirmation" id="19570">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_alergica" id="19534" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="Quick SOFA" Operator="addition" id="19542">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="19537" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="19535" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="19536" weight="1" value="false"/>
+  </operation>
+  <operation name="Complica&#xe7;&#xf5;es (sinusite)" Operator="addition" id="19543">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_complicacao_intracraniana" id="19530" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_tratamento_anterior" id="19531" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="rino_suspeita_orbitaria" id="19529" weight="1" value="false"/>
+  </operation>
+  <operation name="Criterios Pneumonia" Operator="addition" id="19544">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dispneia" id="19501" weight="4" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dor_pleuritica" id="19502" weight="3" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_tosse_produtiva" id="19503" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_calafrios" id="19504" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_confusao_recente" id="19505" weight="4" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_estertores_crepantes" id="19506" weight="4" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_entrada_recente" id="19507" weight="2" value="false"/>
+  </operation>
+  <operation name="Riscos Influenza" Operator="addition" id="19545"/>
+  <operation name="Complicacoes Influenza" Operator="addition" id="19546">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_gestante" id="19508" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_idoso" id="19509" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_pneumopatias" id="19510" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_icc" id="19511" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doenca_renal" id="19512" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_cirrose" id="19513" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_neoplasias" id="19514" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_diabetes" id="19515" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doencas_neurodegen" id="19516" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_obesidade_morbida" id="19517" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_imunossupressao" id="19518" weight="1" value="false"/>
+  </operation>
+  <operation name="Centor Score" Operator="addition" id="19547">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_edema" id="19524" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_adenopatia" id="19525" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_febre" id="19526" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_sem_tosse" id="19527" weight="1" value="false"/>
+  </operation>
+  <operation name="Otite Sintomas" Operator="addition" id="19548"/>
+  <operation name="somas_fatores_risco" Operator="addition" id="19549"/>
+  <operation name="Crit&#xe9;rios SIRS" Operator="addition" id="19550"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dispneia" id="19501" weight="4" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_dor_pleuritica" id="19502" weight="3" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_tosse_produtiva" id="19503" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_calafrios" id="19504" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_confusao_recente" id="19505" weight="4" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_estertores_crepantes" id="19506" weight="4" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_pneumonia_entrada_recente" id="19507" weight="2" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_gestante" id="19508" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_idoso" id="19509" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_pneumopatias" id="19510" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_icc" id="19511" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doenca_renal" id="19512" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_cirrose" id="19513" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_neoplasias" id="19514" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_diabetes" id="19515" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_doencas_neurodegen" id="19516" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_obesidade_morbida" id="19517" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="influenza_complicacoes_imunossupressao" id="19518" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_resfriado" id="19519" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_amigdalite" id="19520" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_rinite" id="19521" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_influenza" id="19522" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rinite" id="19523" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_edema" id="19524" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_adenopatia" id="19525" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_febre" id="19526" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="centor_score_sem_tosse" id="19527" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ivas_agravante_amigdalite" id="19528" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rino_suspeita_orbitaria" id="19529" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rino_complicacao_intracraniana" id="19530" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rino_tratamento_anterior" id="19531" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_viral" id="19532" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_bacteriana" id="19533" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rino_etiologia_alergica" id="19534" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="19535" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_menor_100" id="19536" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_maior_22" id="19537" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="19538" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="19539" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="19540" weight="1" value="4.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="19541" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

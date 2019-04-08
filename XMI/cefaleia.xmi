@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3401" url="" name="Cefal&#xe9;ia" code="H018">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20461" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Sintomas" description="ANAMNESE COMPLETA SOBRE CEFALEIA, PARA DIFERENCIAR SE CEFALIA PRIM&#xc1;RIA OU SECUND&#xc1;RIA&#xA;&#xA;Aten&#xe7;&#xe3;o:&#xA;Atentar para casos de retorno do paciente sem melhora da dor ap&#xf3;s medica&#xe7;&#xe3;o." isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.7">
+    <questions text="Queda do estado geral" url="" id="10341" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+    </questions>
+    <questions text="Febre" url="" id="10342" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+    </questions>
+    <questions text="Rigidez na nuca" url="" id="10343" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+    </questions>
+    <questions text="Rash cut&#xe2;neo" url="" id="10344" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupresso" url="" id="10345" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+    </questions>
+    <questions text="Portador de Neoplasia ou HIV" url="" id="10346" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+    </questions>
+    <questions text="D&#xe9;ficits Neurologicos Focais" url="" id="10347" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+    </questions>
+    <questions text="Convuls&#xf5;es" url="" id="10348" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+    </questions>
+    <questions text="V&#xf4;mitos" url="" id="10349" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+    </questions>
+    <questions text="S&#xed;ncope" url="" id="10350" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefaleia de inicio subito?" url="" id="10351">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+    </questions>
+    <questions text="Mudan&#xe7;a de padr&#xe3;o da cefaleia pr&#xe9;via ou cefaleia progressiva (intensidade, frequ&#xea;ncia ou dura&#xe7;&#xe3;o) ou cefaleia refrat&#xe1;ria" url="" id="10352">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente sem melhora da dor ap&#xf3;s medica&#xe7;&#xe3;o? (em caso de retorno de paciente sem melhora ap&#xf3;s medica&#xe7;&#xe3;o)." url="" id="10353" category="//@category.2">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_com_dor_apos_medicacao" id="20033" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20462" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Cefaleia Primaria] Classificar Cefaleia" description="Classificar tipo de cefaleia conforme sintomas apresentados" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.12 //@sequence.14">
+    <questions text="Enxaqueca: Cefaleia de forte intensidade, latejante/puls&#xe1;til, piorando com as atividades do dia a dia. Dura de 4 a 72 horas. Geralmente a dor &#xe9; unilateral. Sintomas associados: n&#xe1;useas e/ou v&#xf4;mitos, foto e fonofobia" url="" id="10354">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaria_enxaqueca" id="20034" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefaleia Tensional: Sensa&#xe7;&#xe3;o de aperto ou press&#xe3;o e, geralmente bilateral. Pode ser frontal, occipital ou holocraniana. Dor pode melhorar com atividades f&#xed;sicas. Costuma surgir no final da tarde. Relacionada com estresse f&#xed;sico, muscular ou emocional" url="" id="10355">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaria_tensional" id="20035" weight="1" value="false"/>
+    </questions>
+    <questions text="Cefaleia em Salvas: Unilateral, sempre do mesmo lado, de forte intensidade (excruciante), localizando-se em regi&#xe3;o orbital, supraorbital e/ou temporal. Associa&#xe7;&#xe3;o a sintomas auton&#xf4;micos ipsilaterais e dura&#xe7;&#xe3;o de 15 a 180 minutos" url="" id="10356">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaira_em_salvas" id="20036" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20463" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Enxaqueca] Dura&#xe7;&#xe3;o" description="Avalie a dura&#xe7;&#xe3;o do epis&#xf3;dio de enxaqueca do paciente" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Dor atual com dura&#xe7;&#xe3;o h&#xe1; mais de 72h?" url="" id="10357">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="enxaqueca_mais_de_72h" id="20037" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20464" type="Tratamento" type_verbose="Tratamento" url="" name="[Enxaqueca] Cefal&#xe9;ia Leve ou Moderada" description="Tratamento local para cefal&#xe9;ia leve ou moderada.&#xA;&#xA;Aten&#xe7;&#xe3;o:&#xA;Orientar o paciente para retornar ao consult&#xf3;rio caso a dor persista ap&#xf3;s a medica&#xe7;&#xe3;o." inputSequences="//@sequence.4" outputSequences="//@sequence.5">
+    <medication url="" med_id="38008" id="10481" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10481" standard="null"/>
+    <medication url="" med_id="41564" id="10482" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10482" standard="null"/>
+    <medication url="" med_id="39586" id="10483" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10483" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4421,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="42951" id="10484" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10484" standard="null"/>
+    <medication url="" med_id="40088" id="10485" name="DRAMIN B6  IM AMPL 1 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10485" standard="null"/>
+    <medication url="" med_id="38008" id="10504" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10504" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:8,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4429,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:6,&quot;codigo_principio_ativo&quot;:909}"/>
+    <medication url="" med_id="49581" id="10463" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10463" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4441,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="59609" id="10505" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10505" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:6,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4430,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:635}"/>
+    <medication url="" med_id="126122" id="10506" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10506" standard="{&quot;quantidade_dosagem&quot;:50,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Infusao ev&quot;,&quot;id&quot;:4431,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20465" type="Tratamento" type_verbose="Tratamento" url="" name="[Enxaqueca] Cefal&#xe9;ia Severa" description="Tratamento local para cefal&#xe9;ia severa.&#xA;&#xA;Aten&#xe7;&#xe3;o:&#xA;Orientar o paciente para retornar ao consult&#xf3;rio caso a dor persista ap&#xf3;s a medica&#xe7;&#xe3;o." inputSequences="//@sequence.3" outputSequences="//@sequence.6">
+    <medication url="" med_id="41564" id="10486" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10486" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4422,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="38008" id="10487" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10487" standard="null"/>
+    <medication url="" med_id="36811" id="10488" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10488" standard="null"/>
+    <medication url="" med_id="40088" id="10489" name="DRAMIN B6  IM AMPL 1 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10489" standard="null"/>
+    <medication url="" med_id="39586" id="10490" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10490" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:50,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4423,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="42951" id="10491" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10491" standard="null"/>
+    <medication url="" med_id="49581" id="10464" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10464" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4442,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:1646}"/>
+    <medication url="" med_id="59609" id="10507" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10507" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:6,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4432,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:635}"/>
+    <medication url="" med_id="34576" id="10465" name="AMPLICTIL 25 MG AMPL 5 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10465" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20466" type="Receita" type_verbose="Receita" url="" name="[Enxaqueca] Alta com Receita" description="ATEN&#xc7;&#xc3;O:&#xA;Se piora dos sintomas, retornar a emerg&#xea;ncia.&#xA;Recomenda-se agendamento de consulta ambulatorial com neurologista se os casos sejam frequentes." isTerminal="true" inputSequences="//@sequence.5 //@sequence.6 //@sequence.9">
+    <item id="5481" url="" name="Naproxeno 550Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12 horas se dor."/>
+    <item id="5482" url="" name="Ondansetrona 4Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar somente se n&#xe1;usea ou v&#xf4;mitos."/>
+    <item id="5483" url="" name="Dipirona 1g ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas se dor"/>
+    <item id="5484" url="" name="Dicloridrato de Meclozina 25Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8 horas se n&#xe1;usea ou v&#xf4;mito"/>
+    <item id="5485" url="" name="Succinato de Sumatriptana 50Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar em dose &#xfa;nica"/>
+    <item id="5486" url="" name="Tartarato de Ergotamina 2Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12 horas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20467" type="Tratamento" type_verbose="Tratamento" url="" name="[Enxaqueca] Tratamento Auxiliar" description="Caso n&#xe3;o haja melhora no tratamento inicial." inputSequences="//@sequence.7" outputSequences="//@sequence.8">
+    <medication url="" med_id="34576" id="10492" name="AMPLICTIL 25 MG AMPL 5 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10492" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20468" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Enxaqueca] Avaliar Melhora" description="Houve melhora?" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Resolvida a dor?" url="" id="10358">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_resolvida_2" id="20038" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20469" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der local" description="Recomenda-se discutir caso com l&#xed;der local e solicitar avalia&#xe7;&#xe3;o da neurologia" isTerminal="true" inputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20470" type="Tratamento" type_verbose="Tratamento" url="" name="[Cefal&#xe9;ia Secund&#xe1;ria] Exames" description="&lt;p>Exames para [Cefal&amp;eacute;ia Secund&amp;aacute;ria].&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.11">
+    <medication url="" med_id="38008" id="10493" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10493" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 500mg&quot;,&quot;id&quot;:4424,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:909}"/>
+    <medication url="" med_id="59609" id="10494" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10494" standard="{&quot;quantidade_dosagem&quot;:1000,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:10,&quot;administracao_diluicao&quot;:&quot;Lento&quot;,&quot;id&quot;:4425,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:871}"/>
+    <medication url="" med_id="41564" id="10495" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10495" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;1ml = 5 mg&quot;,&quot;id&quot;:4426,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:482}"/>
+    <medication url="" med_id="36811" id="10496" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10496" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:50,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;LENTO COM SF 0,9%&quot;,&quot;id&quot;:4427,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:819}"/>
+    <medication url="" med_id="36811" id="10497" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10497" standard="null"/>
+    <medication url="" med_id="40088" id="10498" name="DRAMIN B6  IM AMPL 1 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10498" standard="null"/>
+    <medication url="" med_id="39586" id="10499" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="10499" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:50,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;Inf.Lenta&quot;,&quot;id&quot;:4428,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:2346}"/>
+    <medication url="" med_id="42951" id="10500" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10500" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20471" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Cefal&#xe9;ia Secund&#xe1;ria] Avaliar caso com l&#xed;der local" description="&lt;p>&lt;strong>Discutir caso com chefia local&lt;/strong> e aventar possibilidade de solicita&amp;ccedil;&amp;atilde;o de tomografia computadorizada de cr&amp;acirc;nio sob os cuidados da pr&amp;oacute;pria chefia.&lt;/p>&#xA;&#xA;&lt;p>&lt;u>Aten&amp;ccedil;&amp;atilde;o: &lt;/u>&lt;br />&#xA;Recomenda-se discutir o caso com l&amp;iacute;der local. Avaliar necessidade de pun&amp;ccedil;&amp;atilde;o lombar.&lt;/p>" isTerminal="true" inputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20472" type="Tratamento" type_verbose="Tratamento" url="" name="[Cefal&#xe9;ia Tensional] Tratamento" description="[ATEN&#xc7;&#xc3;O]&#xA;Tranquilizar o paciente quanto a n&#xe3;o gravidade do quadro&#xA;&#xA;Orienta&#xe7;&#xe3;o de medidas educativas: sono regular, evitar bebidas alco&#xf3;licas, controle de estresse, lazer" inputSequences="//@sequence.12" outputSequences="//@sequence.13">
+    <medication url="" med_id="38008" id="10501" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10501" standard="null"/>
+    <medication url="" med_id="36811" id="10502" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10502" standard="null"/>
+    <medication url="" med_id="42951" id="10503" name="PROFENID 100MG IM AMPL 2 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="10503" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20473" type="Receita" type_verbose="Receita" url="" name="[Cefal&#xe9;ia Tensional] Alta com receita" description="ATEN&#xc7;&#xc3;O: &#xA;Se piora dos sintomas, retornar a emerg&#xea;ncia. &#xA;Recomenda-se agendamento de consulta ambulatorial com neurologista se os casos sejam frequentes." isTerminal="true" inputSequences="//@sequence.13">
+    <item id="5487" url="" name="Dipirona 1g ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas se dor"/>
+    <item id="5488" url="" name="Naproxeno 550Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="1" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12 horas se dor."/>
+    <item id="5489" url="" name="Ciclobenzaprina 10Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Tomar um comprimido a noite antes de deitar."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20474" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Cefal&#xe9;ia em Salvas] Orienta&#xe7;&#xf5;es" description="&lt;p>Aten&amp;ccedil;&amp;atilde;o:&lt;br />&#xA;Recomenda-se discutir caso com l&amp;iacute;der local.&lt;/p>&#xA;&#xA;&lt;p>Administrar oxig&amp;ecirc;nio a 100%, em m&amp;aacute;scara sem recircula&amp;ccedil;&amp;atilde;o, com fluxo de 10-12 l/min durante 20 minutos, ou sumatriptano 6mg por via subcut&amp;acirc;nea se dispon&amp;iacute;vel. Caso o paciente tenha utilizado algum medicamento vasoconstrictor,o sumatriptano deve ser evitado.&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;Ap&amp;oacute;s melhora do quadro &amp;aacute;lgico, orientar a evitar fatores desencadeantes (bebidas alco&amp;oacute;licas e subst&amp;acirc;ncias vol&amp;aacute;teis), at&amp;eacute; o final do per&amp;iacute;odo de crises.&lt;/p>" isTerminal="true" inputSequences="//@sequence.14"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="20475" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (1 ou mais sintomas)" description="1 ou mais sintomas">
+    <operation name="paciente_com_fatores_cefaleia_secundaria" Operator="or" id="20054">
+      <operand xsi:type="pathwayMetamodel:Operation" name="combincacao_estado_geral" Operator="greaterThan" id="20051">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_estado_geral" Operator="addition" id="20050">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sintomas_sistemicos_meior_igual_4" Operator="greaterOrEqual" id="20047">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_sistemicos" Operator="addition" id="20044">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="20040" weight="1" value="4.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="combinacao_sintomas_neurologicos" Operator="greaterOrEqual" id="20048">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_neuro" Operator="addition" id="20045">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="20476" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Sem sintomas)" description="Sem sintomas">
+    <operation name="paciente_sem_fatores_cefaleia_secundaria" Operator="and" id="20055">
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_combincacao_estado_geral" Operator="lessOrEqual" id="20052">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_estado_geral" Operator="addition" id="20050">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_sintomas_sistemicos" Operator="lessThan" id="20049">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_sistemicos" Operator="addition" id="20044">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="20040" weight="1" value="4.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_sintomas_neuro" Operator="lessThan" id="20046">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_neuro" Operator="addition" id="20045">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="paciente_nao_medicado" id="20053">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_com_dor_apos_medicacao" id="20033" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="20477" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Enxaqueca)" description="Enxaqueca">
+    <operation name="Enxaqueca" Operator="affirmation" id="20056">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaria_enxaqueca" id="20034" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="20478" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (mais de 72h)" description="mais de 72h">
+    <operation name="mais de 72h" Operator="affirmation" id="20057">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="enxaqueca_mais_de_72h" id="20037" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="20479" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (menos me 72h)" description="menos me 72h">
+    <operation name="menos me 72h" id="20058">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="enxaqueca_mais_de_72h" id="20037" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="20480" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="20481" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="20482" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (dor n&#xe3;o resolvida)" description="dor n&#xe3;o resolvida">
+    <operation name="paciente_dor_nao_resolvida" Operator="and" id="20059">
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_combincacao_estado_geral" Operator="lessOrEqual" id="20052">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_estado_geral" Operator="addition" id="20050">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_sintomas_sistemicos" Operator="lessThan" id="20049">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_sistemicos" Operator="addition" id="20044">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="20040" weight="1" value="4.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_sintomas_neuro" Operator="lessThan" id="20046">
+        <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_neuro" Operator="addition" id="20045">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_com_dor_apos_medicacao" id="20033" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="20483" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.7" id="20484" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (dor resolvida)" description="dor resolvida">
+    <operation name="dor resolvida" Operator="affirmation" id="20060">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_resolvida_2" id="20038" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="20485" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (dor n&#xe3;o resolvida)" description="dor n&#xe3;o resolvida">
+    <operation name="dor n&#xe3;o resolvida" id="20061">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_resolvida_2" id="20038" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="20486" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.1" id="20487" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (cefal&#xe9;ia tensional)" description="cefal&#xe9;ia tensional">
+    <operation name="cefal&#xe9;ia tensional" Operator="affirmation" id="20062">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaria_tensional" id="20035" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="20488" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="Incondicional"/>
+  <sequence inputStep="//@element.13" outputStep="//@element.1" id="20489" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (cefaleia em salvas)" description="cefaleia em salvas">
+    <operation name="cefaleia em salvas" Operator="affirmation" id="20063">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaira_em_salvas" id="20036" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <category name="Sintomas Sist&#xea;micos" question="//@element.0/@questions.0 //@element.0/@questions.1 //@element.0/@questions.2 //@element.0/@questions.3 //@element.0/@questions.4 //@element.0/@questions.5"/>
+  <category name="Sistemas Neurol&#xf3;gicos" question="//@element.0/@questions.6 //@element.0/@questions.7 //@element.0/@questions.8 //@element.0/@questions.9"/>
+  <category name="Retorno de Medica&#xe7;&#xe3;o" question="//@element.0/@questions.12"/>
+  <operation name="Sintomas Sistemicos" Operator="addition" id="20041">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+  </operation>
+  <operation name="Sistemas Neurologicos" Operator="addition" id="20042">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+  </operation>
+  <operation name="Sintomas Cefaleia" Operator="addition" id="20043">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_sintomas_sistemicos" Operator="addition" id="20044">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_sintomas_neuro" Operator="addition" id="20045">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+  </operation>
+  <operation name="not_sintomas_neuro" Operator="lessThan" id="20046">
+    <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_neuro" Operator="addition" id="20045">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+  </operation>
+  <operation name="sintomas_sistemicos_meior_igual_4" Operator="greaterOrEqual" id="20047">
+    <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_sistemicos" Operator="addition" id="20044">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="20040" weight="1" value="4.0"/>
+  </operation>
+  <operation name="combinacao_sintomas_neurologicos" Operator="greaterOrEqual" id="20048">
+    <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_neuro" Operator="addition" id="20045">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+  </operation>
+  <operation name="not_sintomas_sistemicos" Operator="lessThan" id="20049">
+    <operand xsi:type="pathwayMetamodel:Operation" name="soma_sintomas_sistemicos" Operator="addition" id="20044">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="20040" weight="1" value="4.0"/>
+  </operation>
+  <operation name="soma_estado_geral" Operator="addition" id="20050">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+  </operation>
+  <operation name="combincacao_estado_geral" Operator="greaterThan" id="20051">
+    <operand xsi:type="pathwayMetamodel:Operation" name="soma_estado_geral" Operator="addition" id="20050">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+  </operation>
+  <operation name="not_combincacao_estado_geral" Operator="lessOrEqual" id="20052">
+    <operand xsi:type="pathwayMetamodel:Operation" name="soma_estado_geral" Operator="addition" id="20050">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+  </operation>
+  <operation name="paciente_nao_medicado" id="20053">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_com_dor_apos_medicacao" id="20033" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_queda_estado_geral" id="20021" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_febre" id="20022" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rigidez_nuca" id="20023" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_rash_cutaneo" id="20024" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_imunossupresso" id="20025" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sistemicos_neoplasia_ou_hiv" id="20026" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_deficits_neurologicos_focais" id="20027" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_convulsoes" id="20028" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_vomitos" id="20029" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurologicos_sincope" id="20030" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_inicio_subito" id="20031" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mudanca_de_padrao_de_cefaleia" id="20032" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_com_dor_apos_medicacao" id="20033" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaria_enxaqueca" id="20034" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaria_tensional" id="20035" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="cefaleia_primaira_em_salvas" id="20036" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="enxaqueca_mais_de_72h" id="20037" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_resolvida_2" id="20038" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="20039" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="20040" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3124" url="" name="Laringite Pedi&#xe1;trico" code="H050">
+  <element xsi:type="pathwayMetamodel:Treatment" id="16797" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento inicial" description="&lt;p>&lt;strong>Paciente com tosse estridulosa e/ou roquid&amp;atilde;o + estridor&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Verificar satura&amp;ccedil;&amp;atilde;o (oximetria pulso).&lt;/li>&#xA;&#x9;&lt;li>Excluir presen&amp;ccedil;a de corpo estranho em vias a&amp;eacute;reas.&lt;/li>&#xA;&#x9;&lt;li>Prescrever:&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;ol>&#xA;&#x9;&lt;li>Decadron 0,6 mg/kg/dose (m&amp;aacute;x 10mg) EV ou IM&lt;/li>&#xA;&#x9;&lt;li>Aerosol&amp;nbsp;com Adrenalina - 3 a 5 ml PURO - 3x de 30 em 30 min&lt;/li>&#xA;&lt;/ol>" isInitial="true" outputSequences="//@sequence.0">
+    <procedure url="OXIMETRO DE PULSO" procedure="75130035" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16798" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar melhora" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Paciente melhorou?" url="" id="8869">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_1" id="16781" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="16799" type="Receita" type_verbose="Receita" url="" name="Alta" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>Dar alta com:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ol>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Dexametasona XPE - 1 FR - Dar ____ ml de 6/6h por 5 dias.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Aerosol com SF0,9% 5 ml + Pulmicort 0,25 mcg - 1 AMP - 12/12h por 5 dias&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Orientar paciente para aumentar oferta de l&amp;iacute;quidos e evitar estresse.&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ol>&#xA;&#xA;&lt;p>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.1 //@sequence.4">
+    <item id="4512" url="" name="DEXAMETASONA XPE ______ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ______ ml de 6/6h por 5 dias"/>
+    <item id="4513" url="" name="AEROSOL COM SF0,9% 5 ml + PULMICORT 0,25 mcg" med_code="-1" presentation="AMPL" access="20" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16800" type="Tratamento" type_verbose="Tratamento" url="" name="[Sem melhora] Tratamento" description="&lt;ul>&#xA;&#x9;&lt;li>Verificar satura&amp;ccedil;&amp;atilde;o O2 (Oximetria).&lt;/li>&#xA;&#x9;&lt;li>Manter observa&amp;ccedil;&amp;atilde;o.&lt;/li>&#xA;&#x9;&lt;li>Avaliar necessidade de M&amp;aacute;scara de Venturi com O2 umidificado - conforme satura&amp;ccedil;&amp;atilde;o.&lt;/li>&#xA;&#x9;&lt;li>Dieta zero.&amp;nbsp;&lt;/li>&#xA;&#x9;&lt;li>HV - SGF 1:1 lento (hidrata&amp;ccedil;&amp;atilde;o).&lt;/li>&#xA;&#x9;&lt;li>Aerosol com Adrenalina 3-5 ml - de 1/1h at&amp;eacute; melhora do quadro.&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.2" outputSequences="//@sequence.3">
+    <procedure url="OXIMETRIA NAO INVASIVA" procedure="20102054" quantity="1"/>
+    <procedure url="O2 C/MASCARA DE VENTURI/FACIAL" procedure="75010014" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16901" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar melhora" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Paciente melhorou?" url="" id="8870">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_2" id="16782" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16902" type="Tratamento" type_verbose="Tratamento" url="" name="[Sem melhora] Conduta" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;u>Passar caso com chefia&lt;/u> e solicitar exames.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.5">
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="laringite pedi&#xe1;trico sem melhora" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="laringite pedi&#xe1;trico sem melhora" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="laringite pedi&#xe1;trico sem melhora" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="laringite pedi&#xe1;trico sem melhora" clinical_indication="n/a"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="16903" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="16904" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (houve melhora)" description="houve melhora">
+    <operation name="houve melhora" Operator="affirmation" id="16783">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_1" id="16781" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="16905" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (n&#xe3;o houve melhora)" description="n&#xe3;o houve melhora">
+    <operation name="n&#xe3;o houve melhora" id="16784">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_1" id="16781" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="16906" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.4" id="16907" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Houve melhora)" description="Houve melhora">
+    <operation name="Houve melhora" Operator="affirmation" id="16785">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_2" id="16782" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="16908" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (N&#xe3;o houve melhora)" description="N&#xe3;o houve melhora">
+    <operation name="N&#xe3;o houve melhora" id="16786">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_2" id="16782" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_1" id="16781" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_2" id="16782" weight="1" value="true"/>
+</pathwayMetamodel:Pathway>

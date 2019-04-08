@@ -1,0 +1,2036 @@
+{
+    "id": 981,
+    "url": "",
+    "codigo": "MF_DISP(TEMP)",
+    "nome": "[Medico da Fam\u00edlia] Dispepsia",
+    "repositorio_id": 504,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-25T18:01:19.369010-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-25T18:01:00.029026-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-25T18:01:19.369010-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4901,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Sinais e Sintomas de Alerta",
+            "descricao": "Investigar sinais e sintomas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2121,
+                    "url": "",
+                    "texto": "Anemia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3521,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_anemia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2122,
+                    "url": "",
+                    "texto": "Perda de peso n\u00e3o intencional",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3522,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_perda_de_peso",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2123,
+                    "url": "",
+                    "texto": "Disfagia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3523,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_disfagia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2124,
+                    "url": "",
+                    "texto": "Massa abdominal palp\u00e1vel",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3524,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_massa_abdominal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2125,
+                    "url": "",
+                    "texto": "\u00camese importante e recorrente",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3525,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_emese",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2126,
+                    "url": "",
+                    "texto": "Hemat\u00eameses",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3526,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_hematemeses",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2127,
+                    "url": "",
+                    "texto": "Paciente com mais de 50 anos (?)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3527,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_maior_de_50_anos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2128,
+                    "url": "",
+                    "texto": "Melenas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3528,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_melenas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2129,
+                    "url": "",
+                    "texto": "Paciente apresenta antecedente de c\u00e2ncer g\u00e1strico na fam\u00edlia no primeiro grau?",
+                    "categoria": "Antecedente de C\u00e2ncer",
+                    "variavel": {
+                        "id": 3529,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "antecedente_cancer_gastrico",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4916,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4905,
+                    "passo_de_saida": "Receita: [Dispepsia Funcional] Tratamento N\u00e3o Farmacol\u00f3gico",
+                    "passo_de_entrada_id": 4901,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais e Sintomas de Alerta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4917,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondiconal",
+                    "passo_de_saida_id": 4906,
+                    "passo_de_saida": "Receita: [Dispepsia Org\u00e2nica] Tratamento Farmacol\u00f3gico",
+                    "passo_de_entrada_id": 4901,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais e Sintomas de Alerta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4918,
+                    "url": "",
+                    "nome": "S5 (sinais de alarme >= 1 ou antecedente de cancer)",
+                    "descricao": "sinais de alarme >= 1",
+                    "passo_de_saida_id": 4901,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais e Sintomas de Alerta",
+                    "passo_de_entrada_id": 4903,
+                    "passo_de_entrada": "Tratamento: Apoio Diagn\u00f3stico: Encoscopia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4919,
+                    "url": "",
+                    "nome": "S6 (sinais de alarme < 1)",
+                    "descricao": "sinais de alarme < 1",
+                    "passo_de_saida_id": 4901,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais e Sintomas de Alerta",
+                    "passo_de_entrada_id": 4907,
+                    "passo_de_entrada": "Processo: Retorno em 8 semanas",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4902,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Risco de Dispepsias Funcional e/ou Org\u00e2nica",
+            "descricao": "Avaliar fatores de risco para Dispepcia Org\u00e2nica",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2130,
+                    "url": "",
+                    "texto": "Uso cr\u00f4nico de AINES",
+                    "categoria": "Dispepsia Org\u00e2nica",
+                    "variavel": {
+                        "id": 3530,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_dispepcia_organica_uso_cronico_aines",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2131,
+                    "url": "",
+                    "texto": "Tabagismo",
+                    "categoria": "Dispepsia Org\u00e2nica",
+                    "variavel": {
+                        "id": 3531,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_dispepcia_organica_tabagismo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2132,
+                    "url": "",
+                    "texto": "Antecedente de ulcera",
+                    "categoria": "Dispepsia Org\u00e2nica",
+                    "variavel": {
+                        "id": 3532,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_dispepcia_organica_antecedente_ulcera",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2133,
+                    "url": "",
+                    "texto": "Antecedente de \u00falcera na fam\u00edlia",
+                    "categoria": "Dispepsia Org\u00e2nica",
+                    "variavel": {
+                        "id": 3533,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_dispepcia_organica_ulcera_familia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2134,
+                    "url": "",
+                    "texto": "Patologias cr\u00f4nicas",
+                    "categoria": "Dispepsia Org\u00e2nica",
+                    "variavel": {
+                        "id": 3534,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_dispepcia_organica_patologias_cronicas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2135,
+                    "url": "",
+                    "texto": "Infec\u00e7\u00e3o por Helicobacter Pylori",
+                    "categoria": "Dispepsia Org\u00e2nica",
+                    "variavel": {
+                        "id": 3535,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_dispepcia_organica_infeccap_helicobacter",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2136,
+                    "url": "",
+                    "texto": "Sintomas de longo tempo",
+                    "categoria": "Dispepsia Org\u00e2nica",
+                    "variavel": {
+                        "id": 3536,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_dispepcia_organica_longo_tempo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2137,
+                    "url": "",
+                    "texto": "Tabagismo",
+                    "categoria": "Dispepsia Funcional",
+                    "variavel": {
+                        "id": 3537,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dispepcia_funcional_tabagismo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2138,
+                    "url": "",
+                    "texto": "Transtorno psicol\u00f3gico ou psiqui\u00e1trico",
+                    "categoria": "Dispepsia Funcional",
+                    "variavel": {
+                        "id": 3538,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dispepcia_funcional_transtorno_psicologico",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4914,
+                    "url": "",
+                    "nome": "S1 (dispepsia funcional)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4902,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Risco de Dispepsias Funcional e/ou Org\u00e2nica",
+                    "passo_de_entrada_id": 4905,
+                    "passo_de_entrada": "Receita: [Dispepsia Funcional] Tratamento N\u00e3o Farmacol\u00f3gico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4915,
+                    "url": "",
+                    "nome": "S2 (dispepsia organica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4902,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Risco de Dispepsias Funcional e/ou Org\u00e2nica",
+                    "passo_de_entrada_id": 4906,
+                    "passo_de_entrada": "Receita: [Dispepsia Org\u00e2nica] Tratamento Farmacol\u00f3gico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4903,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Apoio Diagn\u00f3stico: Encoscopia",
+            "descricao": "Prescrever endoscopia para apoio diagn\u00f3stico do paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "23010037",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Dispepcia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4918,
+                    "url": "",
+                    "nome": "S5 (sinais de alarme >= 1 ou antecedente de cancer)",
+                    "descricao": "sinais de alarme >= 1",
+                    "passo_de_saida_id": 4901,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais e Sintomas de Alerta",
+                    "passo_de_entrada_id": 4903,
+                    "passo_de_entrada": "Tratamento: Apoio Diagn\u00f3stico: Encoscopia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4924,
+                    "url": "",
+                    "nome": "S11 (n\u00e3o h\u00e1 resposta ao tratamento)",
+                    "descricao": "n\u00e3o h\u00e1 resposta ao tratamento",
+                    "passo_de_saida_id": 4904,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta ao Tratamento",
+                    "passo_de_entrada_id": 4903,
+                    "passo_de_entrada": "Tratamento: Apoio Diagn\u00f3stico: Encoscopia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4921,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4903,
+                    "passo_de_saida": "Tratamento: Apoio Diagn\u00f3stico: Encoscopia",
+                    "passo_de_entrada_id": 4909,
+                    "passo_de_entrada": "Processo: Encaminhar ao Endocrinologista",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4904,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Resposta ao Tratamento",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2139,
+                    "url": "",
+                    "texto": "H\u00e1 resposta adequada ao tratamento farmacol\u00f3gico?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3539,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "resposta_adequada_ao_tratamento",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4922,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4908,
+                    "passo_de_saida": "Pausa: Aguardar Retorno",
+                    "passo_de_entrada_id": 4904,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta ao Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4923,
+                    "url": "",
+                    "nome": "S10 (h\u00e1 resposta ao tratamento)",
+                    "descricao": "h\u00e1 resposta ao tratamento",
+                    "passo_de_saida_id": 4904,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta ao Tratamento",
+                    "passo_de_entrada_id": 4910,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Decis\u00e3o de tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4924,
+                    "url": "",
+                    "nome": "S11 (n\u00e3o h\u00e1 resposta ao tratamento)",
+                    "descricao": "n\u00e3o h\u00e1 resposta ao tratamento",
+                    "passo_de_saida_id": 4904,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta ao Tratamento",
+                    "passo_de_entrada_id": 4903,
+                    "passo_de_entrada": "Tratamento: Apoio Diagn\u00f3stico: Encoscopia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4905,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Dispepsia Funcional] Tratamento N\u00e3o Farmacol\u00f3gico",
+            "descricao": "<ul dir=\"ltr\">\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Mapa di&aacute;rio de sintomas e refei&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">N&atilde;o fumar. </span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Evitar alimentos que causam desconforto e agravar os sintomas.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Restri&ccedil;&atilde;o de licor, AINEs, caf&eacute; e ch&aacute;.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Gest&atilde;o do stress.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4914,
+                    "url": "",
+                    "nome": "S1 (dispepsia funcional)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4902,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Risco de Dispepsias Funcional e/ou Org\u00e2nica",
+                    "passo_de_entrada_id": 4905,
+                    "passo_de_entrada": "Receita: [Dispepsia Funcional] Tratamento N\u00e3o Farmacol\u00f3gico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4916,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4905,
+                    "passo_de_saida": "Receita: [Dispepsia Funcional] Tratamento N\u00e3o Farmacol\u00f3gico",
+                    "passo_de_entrada_id": 4901,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais e Sintomas de Alerta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4906,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Dispepsia Org\u00e2nica] Tratamento Farmacol\u00f3gico",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 946,
+                    "url": "",
+                    "nome": "OMEPRAZOL",
+                    "medicamento": 7895296211390,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 60,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                },
+                {
+                    "id": 947,
+                    "url": "",
+                    "nome": "CLORIDRATO DE RANITIDINA",
+                    "medicamento": 7894916144025,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 60,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                },
+                {
+                    "id": 948,
+                    "url": "",
+                    "nome": "SUCRAFILM",
+                    "medicamento": 7894916500869,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 60,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4915,
+                    "url": "",
+                    "nome": "S2 (dispepsia organica)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4902,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Risco de Dispepsias Funcional e/ou Org\u00e2nica",
+                    "passo_de_entrada_id": 4906,
+                    "passo_de_entrada": "Receita: [Dispepsia Org\u00e2nica] Tratamento Farmacol\u00f3gico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4917,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondiconal",
+                    "passo_de_saida_id": 4906,
+                    "passo_de_saida": "Receita: [Dispepsia Org\u00e2nica] Tratamento Farmacol\u00f3gico",
+                    "passo_de_entrada_id": 4901,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais e Sintomas de Alerta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4907,
+            "type": "Processo",
+            "type_verbose": "Processo",
+            "url": "",
+            "nome": "Retorno em 8 semanas",
+            "descricao": "Agendar retorno para ap\u00f3s 8 semanas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "acoes": [
+                {
+                    "id": 141,
+                    "processo_id": 4907,
+                    "servico": "aprazamento",
+                    "servico_display": "Aprazamento",
+                    "descricao": "Retorno em 8 semanas",
+                    "entradas": {
+                        "orientacao": "Retornar em 8 semanas",
+                        "codigo_retorno": "5",
+                        "tipo_profissional": "M",
+                        "codigo_risco": "1"
+                    },
+                    "entradas_display": {
+                        "Orienta\u00e7\u00e3o": "Retornar em 8 semanas",
+                        "Tipo de retorno": "Bimestral",
+                        "Tipo de profissional": "M\u00e9dico",
+                        "Risco": "Risco Habitual"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4908,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Aguardar Retorno",
+            "descricao": "Aguardar retorno do paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4920,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4907,
+                    "passo_de_saida": "Processo: Retorno em 8 semanas",
+                    "passo_de_entrada_id": 4908,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4922,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4908,
+                    "passo_de_saida": "Pausa: Aguardar Retorno",
+                    "passo_de_entrada_id": 4904,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta ao Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4909,
+            "type": "Processo",
+            "type_verbose": "Processo",
+            "url": "",
+            "nome": "Encaminhar ao Endocrinologista",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "acoes": [
+                {
+                    "id": 142,
+                    "processo_id": 4909,
+                    "servico": "encaminhar_especialidade",
+                    "servico_display": "Encaminhamento Especialidade",
+                    "descricao": "Endocrinologista",
+                    "entradas": {
+                        "codigo_especialidade": "3"
+                    },
+                    "entradas_display": {
+                        "Especialidade": "ENDOCRINOLOGIA/METABOLOGIA"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4910,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Decis\u00e3o de tratamento",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2140,
+                    "url": "",
+                    "texto": "Mant\u00e9m tratamento atual?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3540,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "manter_tratamento",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4923,
+                    "url": "",
+                    "nome": "S10 (h\u00e1 resposta ao tratamento)",
+                    "descricao": "h\u00e1 resposta ao tratamento",
+                    "passo_de_saida_id": 4904,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta ao Tratamento",
+                    "passo_de_entrada_id": 4910,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Decis\u00e3o de tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4925,
+                    "url": "",
+                    "nome": "S12 (manter medica\u00e7\u00e3o)",
+                    "descricao": "manter medica\u00e7\u00e3o",
+                    "passo_de_saida_id": 4910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Decis\u00e3o de tratamento",
+                    "passo_de_entrada_id": 4912,
+                    "passo_de_entrada": "Receita: Manter \u00daltimo Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4926,
+                    "url": "",
+                    "nome": "S13 (n\u00e3o manter medica\u00e7\u00e3o)",
+                    "descricao": "n\u00e3o manter medica\u00e7\u00e3o",
+                    "passo_de_saida_id": 4910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Decis\u00e3o de tratamento",
+                    "passo_de_entrada_id": 4911,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Suspender Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4911,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Suspender Tratamento",
+            "descricao": "Suspender tratamento e liberar paciente.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4926,
+                    "url": "",
+                    "nome": "S13 (n\u00e3o manter medica\u00e7\u00e3o)",
+                    "descricao": "n\u00e3o manter medica\u00e7\u00e3o",
+                    "passo_de_saida_id": 4910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Decis\u00e3o de tratamento",
+                    "passo_de_entrada_id": 4911,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Suspender Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4912,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Manter \u00daltimo Tratamento",
+            "descricao": "<p>&nbsp;</p>\n\n<p dir=\"ltr\"><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Manter &uacute;ltimo tratamento. Se tratamento n&atilde;o farmacol&oacute;gico, fazer:</span></p>\n\n<ul dir=\"ltr\">\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Mapa di&aacute;rio de sintomas e refei&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">N&atilde;o fumar. </span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Evitar alimentos que causam desconforto e agravar os sintomas.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Restri&ccedil;&atilde;o de licor, AINEs, caf&eacute; e ch&aacute;.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Gest&atilde;o do stress.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": true,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4925,
+                    "url": "",
+                    "nome": "S12 (manter medica\u00e7\u00e3o)",
+                    "descricao": "manter medica\u00e7\u00e3o",
+                    "passo_de_saida_id": 4910,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Decis\u00e3o de tratamento",
+                    "passo_de_entrada_id": 4912,
+                    "passo_de_entrada": "Receita: Manter \u00daltimo Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4927,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4912,
+                    "passo_de_saida": "Receita: Manter \u00daltimo Tratamento",
+                    "passo_de_entrada_id": 4913,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Definir Necessidade de Retorno",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4913,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Definir Necessidade de Retorno",
+            "descricao": "Retorno a crit\u00e9rio m\u00e9dico.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4927,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4912,
+                    "passo_de_saida": "Receita: Manter \u00daltimo Tratamento",
+                    "passo_de_entrada_id": 4913,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Definir Necessidade de Retorno",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4914,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (dispepsia funcional)",
+            "descricao": "",
+            "passo_de_saida_id": 4902,
+            "passo_de_saida": {
+                "id": 4902,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Risco de Dispepsias Funcional e/ou Org\u00e2nica",
+                "descricao": "Avaliar fatores de risco para Dispepcia Org\u00e2nica",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4905,
+            "passo_de_entrada": {
+                "id": 4905,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Dispepsia Funcional] Tratamento N\u00e3o Farmacol\u00f3gico",
+                "descricao": "<ul dir=\"ltr\">\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Mapa di&aacute;rio de sintomas e refei&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">N&atilde;o fumar. </span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Evitar alimentos que causam desconforto e agravar os sintomas.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Restri&ccedil;&atilde;o de licor, AINEs, caf&eacute; e ch&aacute;.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Gest&atilde;o do stress.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3554,
+                "nome": "dispepsia funcional",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    3547,
+                    3545
+                ],
+                "argumentos": [
+                    "Fat Dispep Fun >= 1",
+                    "Fat Dispep Org < 1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4915,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (dispepsia organica)",
+            "descricao": "",
+            "passo_de_saida_id": 4902,
+            "passo_de_saida": {
+                "id": 4902,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Risco de Dispepsias Funcional e/ou Org\u00e2nica",
+                "descricao": "Avaliar fatores de risco para Dispepcia Org\u00e2nica",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4906,
+            "passo_de_entrada": {
+                "id": 4906,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Dispepsia Org\u00e2nica] Tratamento Farmacol\u00f3gico",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3555,
+                "nome": "dispepsia organica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    3548,
+                    3546
+                ],
+                "argumentos": [
+                    "Fat Dispep Org >= 1",
+                    "Fat Dispep Fun < 1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4916,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4905,
+            "passo_de_saida": {
+                "id": 4905,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Dispepsia Funcional] Tratamento N\u00e3o Farmacol\u00f3gico",
+                "descricao": "<ul dir=\"ltr\">\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Mapa di&aacute;rio de sintomas e refei&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">N&atilde;o fumar. </span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Evitar alimentos que causam desconforto e agravar os sintomas.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Restri&ccedil;&atilde;o de licor, AINEs, caf&eacute; e ch&aacute;.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Gest&atilde;o do stress.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4901,
+            "passo_de_entrada": {
+                "id": 4901,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais e Sintomas de Alerta",
+                "descricao": "Investigar sinais e sintomas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4917,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "Incondiconal",
+            "passo_de_saida_id": 4906,
+            "passo_de_saida": {
+                "id": 4906,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Dispepsia Org\u00e2nica] Tratamento Farmacol\u00f3gico",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4901,
+            "passo_de_entrada": {
+                "id": 4901,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais e Sintomas de Alerta",
+                "descricao": "Investigar sinais e sintomas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4918,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (sinais de alarme >= 1 ou antecedente de cancer)",
+            "descricao": "sinais de alarme >= 1",
+            "passo_de_saida_id": 4901,
+            "passo_de_saida": {
+                "id": 4901,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais e Sintomas de Alerta",
+                "descricao": "Investigar sinais e sintomas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4903,
+            "passo_de_entrada": {
+                "id": 4903,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Apoio Diagn\u00f3stico: Encoscopia",
+                "descricao": "Prescrever endoscopia para apoio diagn\u00f3stico do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3556,
+                "nome": "sinais de alarme >= 1 ou antecedente de cancer",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    3549,
+                    3529
+                ],
+                "argumentos": [
+                    "Sintomas de Alarme >= 1",
+                    "antecedente_cancer_gastrico"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4919,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (sinais de alarme < 1)",
+            "descricao": "sinais de alarme < 1",
+            "passo_de_saida_id": 4901,
+            "passo_de_saida": {
+                "id": 4901,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais e Sintomas de Alerta",
+                "descricao": "Investigar sinais e sintomas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4907,
+            "passo_de_entrada": {
+                "id": 4907,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno em 8 semanas",
+                "descricao": "Agendar retorno para ap\u00f3s 8 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3557,
+                "nome": "Sinais de Alarme < 1 e sem antecedente de cancer",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    3550,
+                    3551
+                ],
+                "argumentos": [
+                    "Sintomas de Alarme < 1",
+                    "Sem antecedente de cancer"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4920,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4907,
+            "passo_de_saida": {
+                "id": 4907,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Retorno em 8 semanas",
+                "descricao": "Agendar retorno para ap\u00f3s 8 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4908,
+            "passo_de_entrada": {
+                "id": 4908,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno",
+                "descricao": "Aguardar retorno do paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4921,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4903,
+            "passo_de_saida": {
+                "id": 4903,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Apoio Diagn\u00f3stico: Encoscopia",
+                "descricao": "Prescrever endoscopia para apoio diagn\u00f3stico do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4909,
+            "passo_de_entrada": {
+                "id": 4909,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Encaminhar ao Endocrinologista",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4922,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4908,
+            "passo_de_saida": {
+                "id": 4908,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno",
+                "descricao": "Aguardar retorno do paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4904,
+            "passo_de_entrada": {
+                "id": 4904,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta ao Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4923,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (h\u00e1 resposta ao tratamento)",
+            "descricao": "h\u00e1 resposta ao tratamento",
+            "passo_de_saida_id": 4904,
+            "passo_de_saida": {
+                "id": 4904,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta ao Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4910,
+            "passo_de_entrada": {
+                "id": 4910,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Decis\u00e3o de tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3558,
+                "nome": "h\u00e1 resposta ao tratamento",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3539
+                ],
+                "argumentos": [
+                    "resposta_adequada_ao_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4924,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (n\u00e3o h\u00e1 resposta ao tratamento)",
+            "descricao": "n\u00e3o h\u00e1 resposta ao tratamento",
+            "passo_de_saida_id": 4904,
+            "passo_de_saida": {
+                "id": 4904,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta ao Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4903,
+            "passo_de_entrada": {
+                "id": 4903,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Apoio Diagn\u00f3stico: Encoscopia",
+                "descricao": "Prescrever endoscopia para apoio diagn\u00f3stico do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3559,
+                "nome": "n\u00e3o h\u00e1 resposta ao tratamento",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3539
+                ],
+                "argumentos": [
+                    "resposta_adequada_ao_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4925,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (manter medica\u00e7\u00e3o)",
+            "descricao": "manter medica\u00e7\u00e3o",
+            "passo_de_saida_id": 4910,
+            "passo_de_saida": {
+                "id": 4910,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Decis\u00e3o de tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4912,
+            "passo_de_entrada": {
+                "id": 4912,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter \u00daltimo Tratamento",
+                "descricao": "<p>&nbsp;</p>\n\n<p dir=\"ltr\"><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Manter &uacute;ltimo tratamento. Se tratamento n&atilde;o farmacol&oacute;gico, fazer:</span></p>\n\n<ul dir=\"ltr\">\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Mapa di&aacute;rio de sintomas e refei&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">N&atilde;o fumar. </span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Evitar alimentos que causam desconforto e agravar os sintomas.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Restri&ccedil;&atilde;o de licor, AINEs, caf&eacute; e ch&aacute;.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Gest&atilde;o do stress.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3560,
+                "nome": "manter medica\u00e7\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3540
+                ],
+                "argumentos": [
+                    "manter_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4926,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (n\u00e3o manter medica\u00e7\u00e3o)",
+            "descricao": "n\u00e3o manter medica\u00e7\u00e3o",
+            "passo_de_saida_id": 4910,
+            "passo_de_saida": {
+                "id": 4910,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Decis\u00e3o de tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4911,
+            "passo_de_entrada": {
+                "id": 4911,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Suspender Tratamento",
+                "descricao": "Suspender tratamento e liberar paciente.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3561,
+                "nome": "n\u00e3o manter medica\u00e7\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3540
+                ],
+                "argumentos": [
+                    "manter_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4927,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4912,
+            "passo_de_saida": {
+                "id": 4912,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter \u00daltimo Tratamento",
+                "descricao": "<p>&nbsp;</p>\n\n<p dir=\"ltr\"><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Manter &uacute;ltimo tratamento. Se tratamento n&atilde;o farmacol&oacute;gico, fazer:</span></p>\n\n<ul dir=\"ltr\">\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Mapa di&aacute;rio de sintomas e refei&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">N&atilde;o fumar. </span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Evitar alimentos que causam desconforto e agravar os sintomas.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Restri&ccedil;&atilde;o de licor, AINEs, caf&eacute; e ch&aacute;.</span></li>\n\t<li><span style=\"background-color:transparent; color:#000000; font-family:Calibri; font-size:12pt\">Gest&atilde;o do stress.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4913,
+            "passo_de_entrada": {
+                "id": 4913,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Definir Necessidade de Retorno",
+                "descricao": "Retorno a crit\u00e9rio m\u00e9dico.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3521,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_anemia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3522,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_perda_de_peso",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3523,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_disfagia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3524,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_massa_abdominal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3525,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_emese",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3526,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_hematemeses",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3527,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_maior_de_50_anos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3528,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_melenas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3529,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "antecedente_cancer_gastrico",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3530,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_dispepcia_organica_uso_cronico_aines",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3531,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_dispepcia_organica_tabagismo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3532,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_dispepcia_organica_antecedente_ulcera",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3533,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_dispepcia_organica_ulcera_familia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3534,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_dispepcia_organica_patologias_cronicas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3535,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_dispepcia_organica_infeccap_helicobacter",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3536,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_dispepcia_organica_longo_tempo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3537,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dispepcia_funcional_tabagismo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3538,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dispepcia_funcional_transtorno_psicologico",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3539,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "resposta_adequada_ao_tratamento",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3540,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "manter_tratamento",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3541,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3542,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sintomas de Alarme",
+            "descricao": "Sintomas de Alarme",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                3521,
+                3522,
+                3523,
+                3524,
+                3525,
+                3526,
+                3527,
+                3528
+            ],
+            "argumentos": [
+                "sintomas_anemia",
+                "sintomas_perda_de_peso",
+                "sintomas_disfagia",
+                "sintomas_massa_abdominal",
+                "sintomas_emese",
+                "sintomas_hematemeses",
+                "sintomas_maior_de_50_anos",
+                "sintomas_melenas"
+            ]
+        },
+        {
+            "id": 3543,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Fatores Dispspsia Funcional",
+            "descricao": "Fatores Dispspsia Funcional",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                3537,
+                3538
+            ],
+            "argumentos": [
+                "dispepcia_funcional_tabagismo",
+                "dispepcia_funcional_transtorno_psicologico"
+            ]
+        },
+        {
+            "id": 3544,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Fatores Dispspsia Organica",
+            "descricao": "Fatores Dispspsia Organica",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                3530,
+                3531,
+                3532,
+                3533,
+                3534,
+                3535,
+                3536
+            ],
+            "argumentos": [
+                "risco_dispepcia_organica_uso_cronico_aines",
+                "risco_dispepcia_organica_tabagismo",
+                "risco_dispepcia_organica_antecedente_ulcera",
+                "risco_dispepcia_organica_ulcera_familia",
+                "risco_dispepcia_organica_patologias_cronicas",
+                "risco_dispepcia_organica_infeccap_helicobacter",
+                "risco_dispepcia_organica_longo_tempo"
+            ]
+        },
+        {
+            "id": 3545,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Fat Dispep Org < 1",
+            "descricao": "Fat Dispep Org < 1",
+            "visivel": true,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                3544,
+                3541
+            ],
+            "argumentos": [
+                "Fatores Dispspsia Organica",
+                "1"
+            ]
+        },
+        {
+            "id": 3546,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Fat Dispep Fun < 1",
+            "descricao": "Fat Dispep Fun < 1",
+            "visivel": true,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                3543,
+                3541
+            ],
+            "argumentos": [
+                "Fatores Dispspsia Funcional",
+                "1"
+            ]
+        },
+        {
+            "id": 3547,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Fat Dispep Fun >= 1",
+            "descricao": "Fat Dispep Fun >= 1",
+            "visivel": true,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                3543,
+                3541
+            ],
+            "argumentos": [
+                "Fatores Dispspsia Funcional",
+                "1"
+            ]
+        },
+        {
+            "id": 3548,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Fat Dispep Org >= 1",
+            "descricao": "Fat Dispep Org >= 1",
+            "visivel": true,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                3544,
+                3541
+            ],
+            "argumentos": [
+                "Fatores Dispspsia Organica",
+                "1"
+            ]
+        },
+        {
+            "id": 3549,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sintomas de Alarme >= 1",
+            "descricao": "Sintomas de Alarme >= 1",
+            "visivel": true,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                3542,
+                3541
+            ],
+            "argumentos": [
+                "Sintomas de Alarme",
+                "1"
+            ]
+        },
+        {
+            "id": 3550,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sintomas de Alarme < 1",
+            "descricao": "Sintomas de Alarme < 1",
+            "visivel": true,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                3542,
+                3541
+            ],
+            "argumentos": [
+                "Sintomas de Alarme",
+                "1"
+            ]
+        },
+        {
+            "id": 3551,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sem antecedente de cancer",
+            "descricao": "Sem antecedente de cancer",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                3529
+            ],
+            "argumentos": [
+                "antecedente_cancer_gastrico"
+            ]
+        },
+        {
+            "id": 3552,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Tratamento N\u00e3o Farmacologico",
+            "descricao": "Tratamento N\u00e3o Farmacologico",
+            "visivel": true,
+            "operador": "afirmativo",
+            "operador_display": "Afirmativo",
+            "argumentos_ids": [
+                3547
+            ],
+            "argumentos": [
+                "Fat Dispep Fun >= 1"
+            ]
+        },
+        {
+            "id": 3553,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Tratamento Farmacologico",
+            "descricao": "Tratamento Farmacologico",
+            "visivel": true,
+            "operador": "afirmativo",
+            "operador_display": "Afirmativo",
+            "argumentos_ids": [
+                3548
+            ],
+            "argumentos": [
+                "Fat Dispep Org >= 1"
+            ]
+        }
+    ]
+}

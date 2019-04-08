@@ -1,0 +1,2291 @@
+{
+    "id": 661,
+    "url": "",
+    "codigo": "itu_ep_02",
+    "nome": "ITU Epis\u00f3dio 2 ou Retorno",
+    "repositorio_id": 301,
+    "versao": 2,
+    "ultima_auditoria": null,
+    "criado_por": null,
+    "finalizado_por": null,
+    "elementos": [
+        {
+            "id": 3441,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Informar Tipo do Atendimento",
+            "descricao": "Informe o tipo do atendimento do paciente.",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1561,
+                    "url": "",
+                    "texto": "Consulta de Retorno?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2561,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "consula_retorno",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 3458,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Tipo do Atendimento",
+                    "passo_de_entrada_id": 3442,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3459,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "",
+                    "passo_de_saida_id": 3441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Tipo do Atendimento",
+                    "passo_de_entrada_id": 3451,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resultado de Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3442,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Resultado de Exames [Retorno]",
+            "descricao": "Verifique o resultados dos exames da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1562,
+                    "url": "",
+                    "texto": "Houve altera\u00e7\u00e3o no exame de sum\u00e1rio de urina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2562,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sumario_urina_alterado_retorno",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1563,
+                    "url": "",
+                    "texto": "Houve altera\u00e7\u00e3o no exame de Urocultura?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2563,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "urocultura_alterada_retorno",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3458,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Tipo do Atendimento",
+                    "passo_de_entrada_id": 3442,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3460,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "",
+                    "passo_de_saida_id": 3442,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "passo_de_entrada_id": 3444,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3461,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "",
+                    "passo_de_saida_id": 3442,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "passo_de_entrada_id": 3443,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3468,
+                    "url": "",
+                    "nome": "s3",
+                    "descricao": "",
+                    "passo_de_saida_id": 3442,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "passo_de_entrada_id": 3445,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Epis\u00f3dio Tratado",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3443,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+            "descricao": "Verifique se a paciente apresenta queixas urin\u00e1rias para seguir com o tratamento",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1564,
+                    "url": "",
+                    "texto": "Polaci\u00faria",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2564,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queixas_ep2_polaciuria",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1565,
+                    "url": "",
+                    "texto": "Urg\u00eancia Miccional",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2565,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queixas_ep2_urgencia_miccional",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1566,
+                    "url": "",
+                    "texto": "Hemat\u00faria",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2566,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queixas_ep2_hematuria",
+                        "peso": 2.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1567,
+                    "url": "",
+                    "texto": "Febre",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2567,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queixas_ep2_febre",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1568,
+                    "url": "",
+                    "texto": "Dis\u00faria",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2568,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queixas_ep2_disuria",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1569,
+                    "url": "",
+                    "texto": "Dor Lombar",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2569,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quexas_ep02_dor_lombar",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1570,
+                    "url": "",
+                    "texto": "Calafrios",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2570,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queixas_ep2_calafrios",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1571,
+                    "url": "",
+                    "texto": "Urina escura com odor f\u00e9tido",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2571,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queixas_ep2_urina_escura",
+                        "peso": 2.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3461,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "",
+                    "passo_de_saida_id": 3442,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "passo_de_entrada_id": 3443,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3462,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "",
+                    "passo_de_saida_id": 3451,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames",
+                    "passo_de_entrada_id": 3443,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3464,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "",
+                    "passo_de_saida_id": 3443,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "passo_de_entrada_id": 3447,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Sem Tratamento Espec\u00edfico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3465,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3443,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "passo_de_entrada_id": 3448,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3444,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+            "descricao": ".",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3460,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "",
+                    "passo_de_saida_id": 3442,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "passo_de_entrada_id": 3444,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3469,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "",
+                    "passo_de_saida_id": 3451,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames",
+                    "passo_de_entrada_id": 3444,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3463,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3444,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                    "passo_de_entrada_id": 3446,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Realizar Aprazamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3445,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Epis\u00f3dio Tratado",
+            "descricao": "Epis\u00f3dio Tratado",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 3468,
+                    "url": "",
+                    "nome": "s3",
+                    "descricao": "",
+                    "passo_de_saida_id": 3442,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames [Retorno]",
+                    "passo_de_entrada_id": 3445,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Epis\u00f3dio Tratado",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3446,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Realizar Aprazamento",
+            "descricao": ".",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "Gerar Aprazamento de retorno MENSAL para m\u00e9dico ou enfermeiro com risco habitual.",
+                "codigo_retorno": "1",
+                "tipo_profissional": "M",
+                "codigo_risco": "1"
+            }
+        },
+        {
+            "id": 3447,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sem Tratamento Espec\u00edfico",
+            "descricao": "Sem tratamento espec\u00edfico para essa situa\u00e7\u00e3o.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 3464,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "",
+                    "passo_de_saida_id": 3443,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "passo_de_entrada_id": 3447,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Sem Tratamento Espec\u00edfico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3448,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Nitrofurantoina",
+            "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a Nitrofurantoina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1572,
+                    "url": "",
+                    "texto": "Paciente possui alergia a nitrofurantoina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2572,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_nitrofurantoiona_ep2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 621,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Nitrofurantoina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3465,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3443,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "passo_de_entrada_id": 3448,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3466,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 3448,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3449,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3470,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "",
+                    "passo_de_saida_id": 3448,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3452,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3449,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+            "descricao": "..",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 681,
+                    "url": "",
+                    "nome": "NITROFURANTOINA",
+                    "medicamento": 7896112166221,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3466,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 3448,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3449,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3450,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+            "descricao": "..",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3474,
+                    "url": "",
+                    "nome": "s17",
+                    "descricao": "",
+                    "passo_de_saida_id": 3456,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3450,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3451,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Resultado de Exames",
+            "descricao": "Verifique o resultados dos exames da paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1573,
+                    "url": "",
+                    "texto": "Houve altera\u00e7\u00e3o no exame de sum\u00e1rio de urina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2573,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sumario_urina_alterado_ep2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1574,
+                    "url": "",
+                    "texto": "Houve altera\u00e7\u00e3o no exame de Urocultura?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2574,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "urocutura_alterada_ep02",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3459,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "",
+                    "passo_de_saida_id": 3441,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Tipo do Atendimento",
+                    "passo_de_entrada_id": 3451,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resultado de Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3462,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "",
+                    "passo_de_saida_id": 3451,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames",
+                    "passo_de_entrada_id": 3443,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3469,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "",
+                    "passo_de_saida_id": 3451,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resultado de Exames",
+                    "passo_de_entrada_id": 3444,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3452,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Cefalexina",
+            "descricao": "Verifique se a paciente apresenta alergia ou resist\u00eancia (tratamento pr\u00e9vio) a cefalexina.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1575,
+                    "url": "",
+                    "texto": "Paciente possui alergia a cefalexina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2575,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_cefalexina_ep2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 622,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Cefalexina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3470,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "",
+                    "passo_de_saida_id": 3448,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3452,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3467,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 3452,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3454,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3471,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 3452,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3453,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3453,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+            "descricao": "..",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 682,
+                    "url": "",
+                    "nome": "CEFALEXINA",
+                    "medicamento": 7896004704692,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3471,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 3452,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3453,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3454,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Amoxicilina",
+            "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a amoxicilina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1576,
+                    "url": "",
+                    "texto": "Paciente possui alergia a amoxicilina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2576,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_amoxicilina_ep2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 623,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Amoxicilina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3467,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 3452,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3454,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3472,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "",
+                    "passo_de_saida_id": 3454,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3455,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3473,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "",
+                    "passo_de_saida_id": 3454,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3456,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3455,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+            "descricao": "..",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 683,
+                    "url": "",
+                    "nome": "AMOXICILINA",
+                    "medicamento": 7891317001636,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 8/8 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3472,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "",
+                    "passo_de_saida_id": 3454,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3455,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3456,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Fosfomicina",
+            "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a fosfomicina.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1577,
+                    "url": "",
+                    "texto": "Paciente possui alergia a fosfomicina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2577,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_fosfomicina_ep2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 624,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Fosfomicina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3473,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "",
+                    "passo_de_saida_id": 3454,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3456,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3474,
+                    "url": "",
+                    "nome": "s17",
+                    "descricao": "",
+                    "passo_de_saida_id": 3456,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3450,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3475,
+                    "url": "",
+                    "nome": "s18",
+                    "descricao": "",
+                    "passo_de_saida_id": 3456,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3457,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3457,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+            "descricao": "..",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 684,
+                    "url": "",
+                    "nome": "AMPICILINA",
+                    "medicamento": 7896004715759,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6 horas"
+                },
+                {
+                    "id": 701,
+                    "url": "",
+                    "nome": "AMOXICILINA+CLAV POTASSIO",
+                    "medicamento": 7896004703411,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3475,
+                    "url": "",
+                    "nome": "s18",
+                    "descricao": "",
+                    "passo_de_saida_id": 3456,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3457,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3458,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s1",
+            "descricao": "",
+            "passo_de_saida_id": 3441,
+            "passo_de_saida": {
+                "id": 3441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Informar Tipo do Atendimento",
+                "descricao": "Informe o tipo do atendimento do paciente.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3442,
+            "passo_de_entrada": {
+                "id": 3442,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado de Exames [Retorno]",
+                "descricao": "Verifique o resultados dos exames da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2584,
+                "nome": "paciente_consulta_de_retorno",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2561
+                ],
+                "argumentos": [
+                    "consula_retorno"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3459,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s2",
+            "descricao": "",
+            "passo_de_saida_id": 3441,
+            "passo_de_saida": {
+                "id": 3441,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Informar Tipo do Atendimento",
+                "descricao": "Informe o tipo do atendimento do paciente.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3451,
+            "passo_de_entrada": {
+                "id": 3451,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado de Exames",
+                "descricao": "Verifique o resultados dos exames da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2585,
+                "nome": "paciente_segundo_ep",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2561
+                ],
+                "argumentos": [
+                    "consula_retorno"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3460,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s4",
+            "descricao": "",
+            "passo_de_saida_id": 3442,
+            "passo_de_saida": {
+                "id": 3442,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado de Exames [Retorno]",
+                "descricao": "Verifique o resultados dos exames da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3444,
+            "passo_de_entrada": {
+                "id": 3444,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                "descricao": ".",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2586,
+                "nome": "paciente_com_alteracao_urocultura_retorno",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2563
+                ],
+                "argumentos": [
+                    "urocultura_alterada_retorno"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3461,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s5",
+            "descricao": "",
+            "passo_de_saida_id": 3442,
+            "passo_de_saida": {
+                "id": 3442,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado de Exames [Retorno]",
+                "descricao": "Verifique o resultados dos exames da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3443,
+            "passo_de_entrada": {
+                "id": 3443,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                "descricao": "Verifique se a paciente apresenta queixas urin\u00e1rias para seguir com o tratamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2587,
+                "nome": "paciente_com_sumario_urina_alterado_retorno",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    2579,
+                    2562
+                ],
+                "argumentos": [
+                    "not_urocultura_alterada_retorno",
+                    "sumario_urina_alterado_retorno"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3462,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s6",
+            "descricao": "",
+            "passo_de_saida_id": 3451,
+            "passo_de_saida": {
+                "id": 3451,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado de Exames",
+                "descricao": "Verifique o resultados dos exames da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3443,
+            "passo_de_entrada": {
+                "id": 3443,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                "descricao": "Verifique se a paciente apresenta queixas urin\u00e1rias para seguir com o tratamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2588,
+                "nome": "paciente_sem_alteracoes_urocultura_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2574
+                ],
+                "argumentos": [
+                    "urocutura_alterada_ep02"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3463,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s8",
+            "descricao": "",
+            "passo_de_saida_id": 3444,
+            "passo_de_saida": {
+                "id": 3444,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                "descricao": ".",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3446,
+            "passo_de_entrada": {
+                "id": 3446,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar Aprazamento",
+                "descricao": ".",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3464,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s9",
+            "descricao": "",
+            "passo_de_saida_id": 3443,
+            "passo_de_saida": {
+                "id": 3443,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                "descricao": "Verifique se a paciente apresenta queixas urin\u00e1rias para seguir com o tratamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3447,
+            "passo_de_entrada": {
+                "id": 3447,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Sem Tratamento Espec\u00edfico",
+                "descricao": "Sem tratamento espec\u00edfico para essa situa\u00e7\u00e3o.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2589,
+                "nome": "soma_queixas_ep2_menor_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    2583,
+                    2578
+                ],
+                "argumentos": [
+                    "somatorio_queixas_urinarias_ep2",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3465,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s10",
+            "descricao": "",
+            "passo_de_saida_id": 3443,
+            "passo_de_saida": {
+                "id": 3443,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Realizar Avalia\u00e7\u00e3o de Queixas Urin\u00e1rias",
+                "descricao": "Verifique se a paciente apresenta queixas urin\u00e1rias para seguir com o tratamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3448,
+            "passo_de_entrada": {
+                "id": 3448,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Nitrofurantoina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2590,
+                "nome": "soma_queixas_ep2_maior_igual_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    2583,
+                    2578
+                ],
+                "argumentos": [
+                    "somatorio_queixas_urinarias_ep2",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3466,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s12",
+            "descricao": "",
+            "passo_de_saida_id": 3448,
+            "passo_de_saida": {
+                "id": 3448,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Nitrofurantoina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3449,
+            "passo_de_entrada": {
+                "id": 3449,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                "descricao": "..",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2591,
+                "nome": "paciente_sem_alergia_nitrofurantoina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2572
+                ],
+                "argumentos": [
+                    "alergia_nitrofurantoiona_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3467,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s14",
+            "descricao": "",
+            "passo_de_saida_id": 3452,
+            "passo_de_saida": {
+                "id": 3452,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Cefalexina",
+                "descricao": "Verifique se a paciente apresenta alergia ou resist\u00eancia (tratamento pr\u00e9vio) a cefalexina.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3454,
+            "passo_de_entrada": {
+                "id": 3454,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Amoxicilina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2592,
+                "nome": "paciente_com_alergia_cefalexina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2575
+                ],
+                "argumentos": [
+                    "alergia_cefalexina_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3468,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s3",
+            "descricao": "",
+            "passo_de_saida_id": 3442,
+            "passo_de_saida": {
+                "id": 3442,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado de Exames [Retorno]",
+                "descricao": "Verifique o resultados dos exames da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3445,
+            "passo_de_entrada": {
+                "id": 3445,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Epis\u00f3dio Tratado",
+                "descricao": "Epis\u00f3dio Tratado",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2593,
+                "nome": "sem_alteracoes_exames_retorno",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    2580,
+                    2579
+                ],
+                "argumentos": [
+                    "not_sumario_urina_alterado_retorno",
+                    "not_urocultura_alterada_retorno"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3469,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s7",
+            "descricao": "",
+            "passo_de_saida_id": 3451,
+            "passo_de_saida": {
+                "id": 3451,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resultado de Exames",
+                "descricao": "Verifique o resultados dos exames da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3444,
+            "passo_de_entrada": {
+                "id": 3444,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Baseado no Antibiograma",
+                "descricao": ".",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2594,
+                "nome": "paciente_com_urocultura_alterada_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2574
+                ],
+                "argumentos": [
+                    "urocutura_alterada_ep02"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3470,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s11",
+            "descricao": "",
+            "passo_de_saida_id": 3448,
+            "passo_de_saida": {
+                "id": 3448,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Nitrofurantoina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3452,
+            "passo_de_entrada": {
+                "id": 3452,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Cefalexina",
+                "descricao": "Verifique se a paciente apresenta alergia ou resist\u00eancia (tratamento pr\u00e9vio) a cefalexina.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2595,
+                "nome": "paciente_com_alergia_nitrofurantoina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2572
+                ],
+                "argumentos": [
+                    "alergia_nitrofurantoiona_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3471,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s13",
+            "descricao": "",
+            "passo_de_saida_id": 3452,
+            "passo_de_saida": {
+                "id": 3452,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Cefalexina",
+                "descricao": "Verifique se a paciente apresenta alergia ou resist\u00eancia (tratamento pr\u00e9vio) a cefalexina.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3453,
+            "passo_de_entrada": {
+                "id": 3453,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                "descricao": "..",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2596,
+                "nome": "paciente_sem_alergia_cefalexina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2575
+                ],
+                "argumentos": [
+                    "alergia_cefalexina_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3472,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s15",
+            "descricao": "",
+            "passo_de_saida_id": 3454,
+            "passo_de_saida": {
+                "id": 3454,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Amoxicilina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3455,
+            "passo_de_entrada": {
+                "id": 3455,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                "descricao": "..",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2597,
+                "nome": "paciente_sem_alergia_amoxicilina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2576
+                ],
+                "argumentos": [
+                    "alergia_amoxicilina_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3473,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s16",
+            "descricao": "",
+            "passo_de_saida_id": 3454,
+            "passo_de_saida": {
+                "id": 3454,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Amoxicilina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3456,
+            "passo_de_entrada": {
+                "id": 3456,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Fosfomicina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a fosfomicina.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2598,
+                "nome": "paciente_com_alergia_amoxicilina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2576
+                ],
+                "argumentos": [
+                    "alergia_amoxicilina_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3474,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s17",
+            "descricao": "",
+            "passo_de_saida_id": 3456,
+            "passo_de_saida": {
+                "id": 3456,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Fosfomicina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a fosfomicina.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3450,
+            "passo_de_entrada": {
+                "id": 3450,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                "descricao": "..",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2599,
+                "nome": "paciente_sem_alergia_fosfomicina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2577
+                ],
+                "argumentos": [
+                    "alergia_fosfomicina_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3475,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s18",
+            "descricao": "",
+            "passo_de_saida_id": 3456,
+            "passo_de_saida": {
+                "id": 3456,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Fosfomicina",
+                "descricao": "Verifique se a paciente possui alergia ou resist\u00eancia (tratamento pr\u00e9vio) a fosfomicina.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3457,
+            "passo_de_entrada": {
+                "id": 3457,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                "descricao": "..",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2600,
+                "nome": "paciente_com_alergia_fosfomicina_ep2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2577
+                ],
+                "argumentos": [
+                    "alergia_fosfomicina_ep2"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 2561,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "consula_retorno",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2562,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sumario_urina_alterado_retorno",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2563,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "urocultura_alterada_retorno",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2564,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queixas_ep2_polaciuria",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2565,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queixas_ep2_urgencia_miccional",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2566,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queixas_ep2_hematuria",
+            "peso": 2.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2567,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queixas_ep2_febre",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2568,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queixas_ep2_disuria",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2569,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quexas_ep02_dor_lombar",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2570,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queixas_ep2_calafrios",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2571,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queixas_ep2_urina_escura",
+            "peso": 2.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2572,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_nitrofurantoiona_ep2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 621,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Nitrofurantoina"
+            }
+        },
+        {
+            "id": 2573,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sumario_urina_alterado_ep2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2574,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "urocutura_alterada_ep02",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2575,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_cefalexina_ep2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 622,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Cefalexina"
+            }
+        },
+        {
+            "id": 2576,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_amoxicilina_ep2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 623,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Amoxicilina"
+            }
+        },
+        {
+            "id": 2577,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_fosfomicina_ep2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 624,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Fosfomicina"
+            }
+        },
+        {
+            "id": 2578,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 2579,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "not_urocultura_alterada_retorno",
+            "descricao": "",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                2563
+            ],
+            "argumentos": [
+                "urocultura_alterada_retorno"
+            ]
+        },
+        {
+            "id": 2580,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "not_sumario_urina_alterado_retorno",
+            "descricao": "",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                2562
+            ],
+            "argumentos": [
+                "sumario_urina_alterado_retorno"
+            ]
+        },
+        {
+            "id": 2581,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "not_urocutura_alterada_ep02",
+            "descricao": "",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                2574
+            ],
+            "argumentos": [
+                "urocutura_alterada_ep02"
+            ]
+        },
+        {
+            "id": 2582,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "not_sumario_urina_alterado_ep2",
+            "descricao": "",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                2573
+            ],
+            "argumentos": [
+                "sumario_urina_alterado_ep2"
+            ]
+        },
+        {
+            "id": 2583,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "somatorio_queixas_urinarias_ep2",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                2568,
+                2569,
+                2570,
+                2571,
+                2564,
+                2565,
+                2566,
+                2567
+            ],
+            "argumentos": [
+                "queixas_ep2_disuria",
+                "quexas_ep02_dor_lombar",
+                "queixas_ep2_calafrios",
+                "queixas_ep2_urina_escura",
+                "queixas_ep2_polaciuria",
+                "queixas_ep2_urgencia_miccional",
+                "queixas_ep2_hematuria",
+                "queixas_ep2_febre"
+            ]
+        }
+    ]
+}

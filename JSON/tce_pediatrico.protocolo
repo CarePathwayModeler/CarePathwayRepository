@@ -1,0 +1,2235 @@
+{
+    "id": 3107,
+    "url": "",
+    "codigo": "H034",
+    "nome": "TCE Pedi\u00e1trico",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 362,
+    "versao": 9,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:32:24.294178-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:32:15.267731-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:32:26.667266-03:00"
+    },
+    "elementos": [
+        {
+            "id": 16893,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar quadro de TCE",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8884,
+                    "url": "",
+                    "texto": "Glasgow",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16768,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "quadro_tce",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Leve e Moderado (Glasgow > 8)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Grave (Glasgow < 8)",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17027,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16893,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar quadro de TCE",
+                    "passo_de_entrada_id": 16894,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17042,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16893,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar quadro de TCE",
+                    "passo_de_entrada_id": 17024,
+                    "passo_de_entrada": "Tratamento: [TCE Grave] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16894,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[TCE Leve ou Moderado] Idade do Paciente",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8885,
+                    "url": "",
+                    "texto": "< 3 meses",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16769,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "menor_tres_meses",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8886,
+                    "url": "",
+                    "texto": "3 meses - 2 anos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16770,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "entre_tres_meses_dois_anos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8887,
+                    "url": "",
+                    "texto": "> 2 anos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16771,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "maior_dois_anos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17027,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16893,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar quadro de TCE",
+                    "passo_de_entrada_id": 16894,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17028,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16894,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "passo_de_entrada_id": 16895,
+                    "passo_de_entrada": "Tratamento: [< 3 meses] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17032,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16894,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "passo_de_entrada_id": 16899,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [3 meses - 2 anos] Verificar Sinais de Alarme",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17038,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16894,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "passo_de_entrada_id": 17023,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [> 2 anos] Verificar Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16895,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[< 3 meses] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Solicitar exames:</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar a possibilidade de USG TF preferencialmente; se n&atilde;o for poss&iacute;vel, solicitar TC cr&acirc;nio sem contraste.</span></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TC CRANIO/ORBITAS,SELA TURSICA",
+                    "exame": "34010068",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE Leve ou moderado",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "US DOPPLER COLOR TRANSCRANIANO OU TRANSFONTAN",
+                    "exame": "33010412",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17028,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16894,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "passo_de_entrada_id": 16895,
+                    "passo_de_entrada": "Tratamento: [< 3 meses] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17029,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16895,
+                    "passo_de_saida": "Tratamento: [< 3 meses] Conduta",
+                    "passo_de_entrada_id": 16896,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resultados Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16896,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Resultados Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8888,
+                    "url": "",
+                    "texto": "Existe altera\u00e7\u00e3o na TC Cr\u00e2nio ou no Ultra-som?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16772,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alteracao_tc_cranio",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17029,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16895,
+                    "passo_de_saida": "Tratamento: [< 3 meses] Conduta",
+                    "passo_de_entrada_id": 16896,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resultados Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17041,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17022,
+                    "passo_de_saida": "Tratamento: Solicitar Exames",
+                    "passo_de_entrada_id": 16896,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resultados Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17030,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16896,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resultados Exames",
+                    "passo_de_entrada_id": 16897,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Altera\u00e7\u00e3o no TC] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17031,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16896,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resultados Exames",
+                    "passo_de_entrada_id": 16898,
+                    "passo_de_entrada": "Receita: [Alta] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16897,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Altera\u00e7\u00e3o no TC] Conduta",
+            "descricao": "<p><strong><span style=\"font-size:16px\">- Dieta zero</span></strong>;</p>\n\n<p><strong><span style=\"font-size:16px\">- Monitorizar paciente - observa&ccedil;&atilde;o rigorosa;</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Contactar sobre-aviso da neurocirurgia imediatamente.</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Passar caso para chefia local.</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17030,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16896,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resultados Exames",
+                    "passo_de_entrada_id": 16897,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Altera\u00e7\u00e3o no TC] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16898,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Alta] Conduta",
+            "descricao": "- Compressa com gelo, 3x ao dia",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Dar alta ao paciente com orienta\u00e7\u00f5es de sinais de alarme:\n\n- Sonol\u00eancia excessiva\n- Convuls\u00e3o\n- Altera\u00e7\u00e3o de comportamento\n- V\u00f4mitos excessivos",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4551,
+                    "url": "",
+                    "nome": "Dipirona Solu\u00e7\u00e3o 50mg/ml  _____ 1 Fr.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ ml de 6/6h se dor ou febre.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4552,
+                    "url": "",
+                    "nome": "Paracetamol Gotas _____ 1 Fr.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ gotas de 6/6h se dor ou febre.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4553,
+                    "url": "",
+                    "nome": "Orienta\u00e7\u00f5es p\u00f3s-sutura: SF 0,9% _____ 1 Fr.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 18,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Deixar curativo coberto por 48h. Realizar limpeza com soro 2x ao dia. Retirar os pontos ap\u00f3s 10 dias. Revisar esquema vacinal antitet\u00e2nico.",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17031,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16896,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resultados Exames",
+                    "passo_de_entrada_id": 16898,
+                    "passo_de_entrada": "Receita: [Alta] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17035,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17021,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                    "passo_de_entrada_id": 16898,
+                    "passo_de_entrada": "Receita: [Alta] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17044,
+                    "url": "",
+                    "nome": "S18 (sem necessidade de observa\u00e7\u00e3o)",
+                    "descricao": "sem necessidade de observa\u00e7\u00e3o",
+                    "passo_de_saida_id": 17026,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 16898,
+                    "passo_de_entrada": "Receita: [Alta] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16899,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[3 meses - 2 anos] Verificar Sinais de Alarme",
+            "descricao": "<p><span style=\"font-size:16px\">O paciente possui sinais de alarme?</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8889,
+                    "url": "",
+                    "texto": "O paciente possui Sinais de Alarme?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16773,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sinais_de_alarme_tres_meses_dois_anos",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Mecanismo alto impacto",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "V\u00f4mitos + 3x",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Queda > 1m",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Glasgow < 14",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Altera\u00e7\u00e3o de consci\u00eancia",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Fratura palp\u00e1vel ou crepita\u00e7\u00e3o",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Sinal guaxinim e/ou Battle",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "S\u00edncope",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Irritabilidade importante",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17032,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16894,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "passo_de_entrada_id": 16899,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [3 meses - 2 anos] Verificar Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17033,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16899,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [3 meses - 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17026,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17037,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16899,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [3 meses - 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17022,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16900,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Sem Sinais de Alarme] Conduta",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Observa&ccedil;&atilde;o de 6 horas em jejum na emerg&ecirc;ncia</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17045,
+                    "url": "",
+                    "nome": "S19 (necessita observa\u00e7\u00e3o)",
+                    "descricao": "necessita observa\u00e7\u00e3o",
+                    "passo_de_saida_id": 17026,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 16900,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Sem Sinais de Alarme] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17034,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16900,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Sem Sinais de Alarme] Conduta",
+                    "passo_de_entrada_id": 17021,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17021,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8890,
+                    "url": "",
+                    "texto": "Intercorr\u00eancias no per\u00edodo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16774,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "houve_intercorrencias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17034,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16900,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Sem Sinais de Alarme] Conduta",
+                    "passo_de_entrada_id": 17021,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17035,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17021,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                    "passo_de_entrada_id": 16898,
+                    "passo_de_entrada": "Receita: [Alta] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17036,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17021,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                    "passo_de_entrada_id": 17022,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17022,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Exames",
+            "descricao": "<p><strong><span style=\"font-size:16px\">- Comunicar chefia;</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Deixar paciente em jejum</span></strong>;</p>\n\n<p><strong><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o e observa&ccedil;&atilde;o rigorosa.</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:16px\">Prescrever:</span></p>\n\n<p><span style=\"font-size:16px\">- Dipirona 20 mg/kg/dose EV 6/6h dilu&iacute;do em AD -&nbsp; SN</span></p>\n\n<p><span style=\"font-size:16px\">- Profenid 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>\n\n<p><span style=\"font-size:16px\">- Tramal 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TC CRANIO/ORBITAS,SELA TURSICA",
+                    "exame": "34010068",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17036,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17021,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                    "passo_de_entrada_id": 17022,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17037,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16899,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [3 meses - 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17022,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17039,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17023,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [> 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17022,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17041,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17022,
+                    "passo_de_saida": "Tratamento: Solicitar Exames",
+                    "passo_de_entrada_id": 16896,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resultados Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17023,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[> 2 anos] Verificar Sinais de Alarme",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8891,
+                    "url": "",
+                    "texto": "O paciente possui sinais de alarme?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16775,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sinais_alarme_maior_dois_anos",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Mecanismo alto impacto",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "S\u00edncope",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Cefal\u00e9ia refrat\u00e1ria ao uso opi\u00f3ides",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Glasgow < 14",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Altera\u00e7\u00e3o de consci\u00eancia",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Hemot\u00edmpano",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "+ 4 v\u00f4mitos",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Sa\u00edda LCR nasal",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Sinal guaxinim ou battle",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Queda > 1,5m",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17038,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16894,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [TCE Leve ou Moderado] Idade do Paciente",
+                    "passo_de_entrada_id": 17023,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [> 2 anos] Verificar Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17039,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17023,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [> 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17022,
+                    "passo_de_entrada": "Tratamento: Solicitar Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17040,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17023,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [> 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17026,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17024,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[TCE Grave] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Sala de cuidados imediatamente</span></p>\n\n<p><span style=\"font-size:16px\">1) Iniciar avalia&ccedil;&atilde;o Pals (C-A-B):</span></p>\n\n<p><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o (FC+PA+FR+ SatO&sup2;) + pun&ccedil;&atilde;o com jelco calibroso</span></p>\n\n<p><span style=\"font-size:16px\">- IOT + Prote&ccedil;&atilde;o cervical</span></p>\n\n<p><span style=\"font-size:16px\">- VM / Se sinais HIC iniciar hiperventila&ccedil;&atilde;o</span></p>\n\n<p><span style=\"font-size:16px\">Outras medidas:</span></p>\n\n<p><span style=\"font-size:16px\">2) Controle DX</span></p>\n\n<p><span style=\"font-size:16px\">3) Controle temperatura</span></p>\n\n<p><span style=\"font-size:16px\">4) Decadron 0,6 mg/kg/dose EV</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TC CRANIO/ORBITAS,SELA TURSICA",
+                    "exame": "34010068",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE Grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TC COLUNA CERVICAL,DORSAL",
+                    "exame": "34010033",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GLICOSE  (SANGUE)",
+                    "exame": "28010973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CALCIO (SANGUE)",
+                    "exame": "28010329",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "TCE grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 641,
+                    "url": "",
+                    "medicamento": 36811,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 501,
+                        "codigo_produto": 1274,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "AMPL     10.00MG/2,5ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 1.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 4,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 819,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 8,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17042,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16893,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar quadro de TCE",
+                    "passo_de_entrada_id": 17024,
+                    "passo_de_entrada": "Tratamento: [TCE Grave] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17043,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17024,
+                    "passo_de_saida": "Tratamento: [TCE Grave] Conduta",
+                    "passo_de_entrada_id": 17025,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [TCE Grave] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17025,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[TCE Grave] Conduta",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Comunicar UTI e neurocirurgi&atilde;o de sobreaviso</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17043,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17024,
+                    "passo_de_saida": "Tratamento: [TCE Grave] Conduta",
+                    "passo_de_entrada_id": 17025,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [TCE Grave] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17026,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Necessita Observa\u00e7\u00e3o?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8892,
+                    "url": "",
+                    "texto": "Paciente necessita observa\u00e7\u00e3o na emerg\u00eancia?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16776,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "necessita_observacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17033,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16899,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [3 meses - 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17026,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17040,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17023,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [> 2 anos] Verificar Sinais de Alarme",
+                    "passo_de_entrada_id": 17026,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17044,
+                    "url": "",
+                    "nome": "S18 (sem necessidade de observa\u00e7\u00e3o)",
+                    "descricao": "sem necessidade de observa\u00e7\u00e3o",
+                    "passo_de_saida_id": 17026,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 16898,
+                    "passo_de_entrada": "Receita: [Alta] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17045,
+                    "url": "",
+                    "nome": "S19 (necessita observa\u00e7\u00e3o)",
+                    "descricao": "necessita observa\u00e7\u00e3o",
+                    "passo_de_saida_id": 17026,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Necessita Observa\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 16900,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Sem Sinais de Alarme] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17027,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "-",
+            "passo_de_saida_id": 16893,
+            "passo_de_saida": {
+                "id": 16893,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar quadro de TCE",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16894,
+            "passo_de_entrada": {
+                "id": 16894,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[TCE Leve ou Moderado] Idade do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16779,
+                "nome": "TCE_leve_ou_moderado",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16768,
+                    16778
+                ],
+                "argumentos": [
+                    "quadro_tce",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17028,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "-",
+            "passo_de_saida_id": 16894,
+            "passo_de_saida": {
+                "id": 16894,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[TCE Leve ou Moderado] Idade do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16895,
+            "passo_de_entrada": {
+                "id": 16895,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[< 3 meses] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Solicitar exames:</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar a possibilidade de USG TF preferencialmente; se n&atilde;o for poss&iacute;vel, solicitar TC cr&acirc;nio sem contraste.</span></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16780,
+                "nome": "Menor_3_meses",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16769
+                ],
+                "argumentos": [
+                    "menor_tres_meses"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17029,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "-",
+            "passo_de_saida_id": 16895,
+            "passo_de_saida": {
+                "id": 16895,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[< 3 meses] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Solicitar exames:</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar a possibilidade de USG TF preferencialmente; se n&atilde;o for poss&iacute;vel, solicitar TC cr&acirc;nio sem contraste.</span></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16896,
+            "passo_de_entrada": {
+                "id": 16896,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resultados Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17030,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "-",
+            "passo_de_saida_id": 16896,
+            "passo_de_saida": {
+                "id": 16896,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resultados Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16897,
+            "passo_de_entrada": {
+                "id": 16897,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Altera\u00e7\u00e3o no TC] Conduta",
+                "descricao": "<p><strong><span style=\"font-size:16px\">- Dieta zero</span></strong>;</p>\n\n<p><strong><span style=\"font-size:16px\">- Monitorizar paciente - observa&ccedil;&atilde;o rigorosa;</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Contactar sobre-aviso da neurocirurgia imediatamente.</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Passar caso para chefia local.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16861,
+                "nome": "Existe_altera\u00e7\u00e3o_no_TC",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16772
+                ],
+                "argumentos": [
+                    "alteracao_tc_cranio"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17031,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "-",
+            "passo_de_saida_id": 16896,
+            "passo_de_saida": {
+                "id": 16896,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resultados Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16898,
+            "passo_de_entrada": {
+                "id": 16898,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Alta] Conduta",
+                "descricao": "- Compressa com gelo, 3x ao dia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Dar alta ao paciente com orienta\u00e7\u00f5es de sinais de alarme:\n\n- Sonol\u00eancia excessiva\n- Convuls\u00e3o\n- Altera\u00e7\u00e3o de comportamento\n- V\u00f4mitos excessivos"
+            },
+            "operacao": {
+                "id": 16862,
+                "nome": "Sem_altera\u00e7\u00e3o_TC",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16772
+                ],
+                "argumentos": [
+                    "alteracao_tc_cranio"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17032,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "-",
+            "passo_de_saida_id": 16894,
+            "passo_de_saida": {
+                "id": 16894,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[TCE Leve ou Moderado] Idade do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16899,
+            "passo_de_entrada": {
+                "id": 16899,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[3 meses - 2 anos] Verificar Sinais de Alarme",
+                "descricao": "<p><span style=\"font-size:16px\">O paciente possui sinais de alarme?</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16863,
+                "nome": "3_meses_a_2_anos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16770
+                ],
+                "argumentos": [
+                    "entre_tres_meses_dois_anos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17033,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "-",
+            "passo_de_saida_id": 16899,
+            "passo_de_saida": {
+                "id": 16899,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[3 meses - 2 anos] Verificar Sinais de Alarme",
+                "descricao": "<p><span style=\"font-size:16px\">O paciente possui sinais de alarme?</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17026,
+            "passo_de_entrada": {
+                "id": 17026,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Necessita Observa\u00e7\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16864,
+                "nome": "Sem_sinais_de_alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    16773,
+                    16778
+                ],
+                "argumentos": [
+                    "sinais_de_alarme_tres_meses_dois_anos",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17034,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "-",
+            "passo_de_saida_id": 16900,
+            "passo_de_saida": {
+                "id": 16900,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Sem Sinais de Alarme] Conduta",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Observa&ccedil;&atilde;o de 6 horas em jejum na emerg&ecirc;ncia</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17021,
+            "passo_de_entrada": {
+                "id": 17021,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17035,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "-",
+            "passo_de_saida_id": 17021,
+            "passo_de_saida": {
+                "id": 17021,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16898,
+            "passo_de_entrada": {
+                "id": 16898,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Alta] Conduta",
+                "descricao": "- Compressa com gelo, 3x ao dia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Dar alta ao paciente com orienta\u00e7\u00f5es de sinais de alarme:\n\n- Sonol\u00eancia excessiva\n- Convuls\u00e3o\n- Altera\u00e7\u00e3o de comportamento\n- V\u00f4mitos excessivos"
+            },
+            "operacao": {
+                "id": 16865,
+                "nome": "Sem_intercorr\u00eancias",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16774
+                ],
+                "argumentos": [
+                    "houve_intercorrencias"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17036,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "-",
+            "passo_de_saida_id": 17021,
+            "passo_de_saida": {
+                "id": 17021,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Sem Sinais de Alarme] Verificar Intercorr\u00eancias",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17022,
+            "passo_de_entrada": {
+                "id": 17022,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Exames",
+                "descricao": "<p><strong><span style=\"font-size:16px\">- Comunicar chefia;</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Deixar paciente em jejum</span></strong>;</p>\n\n<p><strong><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o e observa&ccedil;&atilde;o rigorosa.</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:16px\">Prescrever:</span></p>\n\n<p><span style=\"font-size:16px\">- Dipirona 20 mg/kg/dose EV 6/6h dilu&iacute;do em AD -&nbsp; SN</span></p>\n\n<p><span style=\"font-size:16px\">- Profenid 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>\n\n<p><span style=\"font-size:16px\">- Tramal 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16866,
+                "nome": "Houve_intercorr\u00eancias",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16774
+                ],
+                "argumentos": [
+                    "houve_intercorrencias"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17037,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "-",
+            "passo_de_saida_id": 16899,
+            "passo_de_saida": {
+                "id": 16899,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[3 meses - 2 anos] Verificar Sinais de Alarme",
+                "descricao": "<p><span style=\"font-size:16px\">O paciente possui sinais de alarme?</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17022,
+            "passo_de_entrada": {
+                "id": 17022,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Exames",
+                "descricao": "<p><strong><span style=\"font-size:16px\">- Comunicar chefia;</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Deixar paciente em jejum</span></strong>;</p>\n\n<p><strong><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o e observa&ccedil;&atilde;o rigorosa.</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:16px\">Prescrever:</span></p>\n\n<p><span style=\"font-size:16px\">- Dipirona 20 mg/kg/dose EV 6/6h dilu&iacute;do em AD -&nbsp; SN</span></p>\n\n<p><span style=\"font-size:16px\">- Profenid 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>\n\n<p><span style=\"font-size:16px\">- Tramal 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16867,
+                "nome": "Com_sinais_de_alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    16773,
+                    16778
+                ],
+                "argumentos": [
+                    "sinais_de_alarme_tres_meses_dois_anos",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17038,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "-",
+            "passo_de_saida_id": 16894,
+            "passo_de_saida": {
+                "id": 16894,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[TCE Leve ou Moderado] Idade do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17023,
+            "passo_de_entrada": {
+                "id": 17023,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[> 2 anos] Verificar Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16868,
+                "nome": "Maior_que_2_anos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16771
+                ],
+                "argumentos": [
+                    "maior_dois_anos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17039,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "-",
+            "passo_de_saida_id": 17023,
+            "passo_de_saida": {
+                "id": 17023,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[> 2 anos] Verificar Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17022,
+            "passo_de_entrada": {
+                "id": 17022,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Exames",
+                "descricao": "<p><strong><span style=\"font-size:16px\">- Comunicar chefia;</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Deixar paciente em jejum</span></strong>;</p>\n\n<p><strong><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o e observa&ccedil;&atilde;o rigorosa.</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:16px\">Prescrever:</span></p>\n\n<p><span style=\"font-size:16px\">- Dipirona 20 mg/kg/dose EV 6/6h dilu&iacute;do em AD -&nbsp; SN</span></p>\n\n<p><span style=\"font-size:16px\">- Profenid 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>\n\n<p><span style=\"font-size:16px\">- Tramal 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16869,
+                "nome": "Cont\u00e9m_sinais_de_alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    16775,
+                    16778
+                ],
+                "argumentos": [
+                    "sinais_alarme_maior_dois_anos",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17040,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14",
+            "descricao": "-",
+            "passo_de_saida_id": 17023,
+            "passo_de_saida": {
+                "id": 17023,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[> 2 anos] Verificar Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17026,
+            "passo_de_entrada": {
+                "id": 17026,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Necessita Observa\u00e7\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16870,
+                "nome": "Sem_sinais_de_alarme_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    16775,
+                    16778
+                ],
+                "argumentos": [
+                    "sinais_alarme_maior_dois_anos",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17041,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15",
+            "descricao": "-",
+            "passo_de_saida_id": 17022,
+            "passo_de_saida": {
+                "id": 17022,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Exames",
+                "descricao": "<p><strong><span style=\"font-size:16px\">- Comunicar chefia;</span></strong></p>\n\n<p><strong><span style=\"font-size:16px\">- Deixar paciente em jejum</span></strong>;</p>\n\n<p><strong><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o e observa&ccedil;&atilde;o rigorosa.</span></strong></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:16px\">Prescrever:</span></p>\n\n<p><span style=\"font-size:16px\">- Dipirona 20 mg/kg/dose EV 6/6h dilu&iacute;do em AD -&nbsp; SN</span></p>\n\n<p><span style=\"font-size:16px\">- Profenid 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>\n\n<p><span style=\"font-size:16px\">- Tramal 1 mg/kg/dose EV 8/8h dilu&iacute;do em SF0,9% - SN</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16896,
+            "passo_de_entrada": {
+                "id": 16896,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resultados Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17042,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16",
+            "descricao": "-",
+            "passo_de_saida_id": 16893,
+            "passo_de_saida": {
+                "id": 16893,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar quadro de TCE",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17024,
+            "passo_de_entrada": {
+                "id": 17024,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[TCE Grave] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Sala de cuidados imediatamente</span></p>\n\n<p><span style=\"font-size:16px\">1) Iniciar avalia&ccedil;&atilde;o Pals (C-A-B):</span></p>\n\n<p><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o (FC+PA+FR+ SatO&sup2;) + pun&ccedil;&atilde;o com jelco calibroso</span></p>\n\n<p><span style=\"font-size:16px\">- IOT + Prote&ccedil;&atilde;o cervical</span></p>\n\n<p><span style=\"font-size:16px\">- VM / Se sinais HIC iniciar hiperventila&ccedil;&atilde;o</span></p>\n\n<p><span style=\"font-size:16px\">Outras medidas:</span></p>\n\n<p><span style=\"font-size:16px\">2) Controle DX</span></p>\n\n<p><span style=\"font-size:16px\">3) Controle temperatura</span></p>\n\n<p><span style=\"font-size:16px\">4) Decadron 0,6 mg/kg/dose EV</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16871,
+                "nome": "TCE_grave",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16768,
+                    16777
+                ],
+                "argumentos": [
+                    "quadro_tce",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17043,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17",
+            "descricao": "-",
+            "passo_de_saida_id": 17024,
+            "passo_de_saida": {
+                "id": 17024,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[TCE Grave] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Sala de cuidados imediatamente</span></p>\n\n<p><span style=\"font-size:16px\">1) Iniciar avalia&ccedil;&atilde;o Pals (C-A-B):</span></p>\n\n<p><span style=\"font-size:16px\">- Monitoriza&ccedil;&atilde;o (FC+PA+FR+ SatO&sup2;) + pun&ccedil;&atilde;o com jelco calibroso</span></p>\n\n<p><span style=\"font-size:16px\">- IOT + Prote&ccedil;&atilde;o cervical</span></p>\n\n<p><span style=\"font-size:16px\">- VM / Se sinais HIC iniciar hiperventila&ccedil;&atilde;o</span></p>\n\n<p><span style=\"font-size:16px\">Outras medidas:</span></p>\n\n<p><span style=\"font-size:16px\">2) Controle DX</span></p>\n\n<p><span style=\"font-size:16px\">3) Controle temperatura</span></p>\n\n<p><span style=\"font-size:16px\">4) Decadron 0,6 mg/kg/dose EV</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17025,
+            "passo_de_entrada": {
+                "id": 17025,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[TCE Grave] Conduta",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Comunicar UTI e neurocirurgi&atilde;o de sobreaviso</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17044,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18 (sem necessidade de observa\u00e7\u00e3o)",
+            "descricao": "sem necessidade de observa\u00e7\u00e3o",
+            "passo_de_saida_id": 17026,
+            "passo_de_saida": {
+                "id": 17026,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Necessita Observa\u00e7\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16898,
+            "passo_de_entrada": {
+                "id": 16898,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Alta] Conduta",
+                "descricao": "- Compressa com gelo, 3x ao dia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Dar alta ao paciente com orienta\u00e7\u00f5es de sinais de alarme:\n\n- Sonol\u00eancia excessiva\n- Convuls\u00e3o\n- Altera\u00e7\u00e3o de comportamento\n- V\u00f4mitos excessivos"
+            },
+            "operacao": {
+                "id": 16872,
+                "nome": "sem necessidade de observa\u00e7\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16776
+                ],
+                "argumentos": [
+                    "necessita_observacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17045,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19 (necessita observa\u00e7\u00e3o)",
+            "descricao": "necessita observa\u00e7\u00e3o",
+            "passo_de_saida_id": 17026,
+            "passo_de_saida": {
+                "id": 17026,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Necessita Observa\u00e7\u00e3o?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16900,
+            "passo_de_entrada": {
+                "id": 16900,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Sem Sinais de Alarme] Conduta",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Observa&ccedil;&atilde;o de 6 horas em jejum na emerg&ecirc;ncia</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16873,
+                "nome": "necessita observa\u00e7\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16776
+                ],
+                "argumentos": [
+                    "necessita_observacao"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16768,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "quadro_tce",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Leve e Moderado (Glasgow > 8)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Grave (Glasgow < 8)",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16769,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "menor_tres_meses",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16770,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "entre_tres_meses_dois_anos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16771,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "maior_dois_anos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16772,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alteracao_tc_cranio",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16773,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sinais_de_alarme_tres_meses_dois_anos",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Mecanismo alto impacto",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "V\u00f4mitos + 3x",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Queda > 1m",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Glasgow < 14",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Altera\u00e7\u00e3o de consci\u00eancia",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Fratura palp\u00e1vel ou crepita\u00e7\u00e3o",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Sinal guaxinim e/ou Battle",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "S\u00edncope",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Irritabilidade importante",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 16774,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "houve_intercorrencias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16775,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sinais_alarme_maior_dois_anos",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Mecanismo alto impacto",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "S\u00edncope",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Cefal\u00e9ia refrat\u00e1ria ao uso opi\u00f3ides",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Glasgow < 14",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Altera\u00e7\u00e3o de consci\u00eancia",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Hemot\u00edmpano",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "+ 4 v\u00f4mitos",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Sa\u00edda LCR nasal",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Sinal guaxinim ou battle",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Queda > 1,5m",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 16776,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "necessita_observacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16777,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16778,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3140" url="" name="DPOC" code="H046">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17629" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Estado do Paciente" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Estado do paciente" url="" id="9100">
+      <answers xsi:type="pathwayMetamodel:Choice" name="estado" id="17380" weight="1" value="0.0">
+        <option description="Est&#xe1;vel" weight="1"/>
+        <option description="Inst&#xe1;vel" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17630" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Crit&#xe9;rios SEPSE" description="" isInitial="true" outputSequences="//@sequence.1 //@sequence.3">
+    <questions text="Quick SOFA" url="" id="9101">
+      <answers xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="17381" weight="1" value="0.0">
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+        <option description="FR > 22" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17631" type="Tratamento" type_verbose="Tratamento" url="" name="Encaminhar ao Eixo Vermelho" description="&lt;p>&lt;strong>&lt;span style=&quot;color:#e74c3c&quot;>ENCAMINHAR AO EIXO VERMELHO.&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>Iniciar ATB na primeira hora, coleta de culturas, ressuscita&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica, monitoriza&amp;ccedil;&amp;atilde;o&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <procedure url="MONITORIZACAO HEMODINAMICA INVASIVA (POR 12 HORAS)" procedure="14010046" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="17632" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo de SEPSE" description="" isTerminal="true" inputSequences="//@sequence.2">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17633" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classifica&#xe7;&#xe3;o da Exacerba&#xe7;&#xe3;o + Exame F&#xed;sico" description="&lt;p>Classificar exacerba&amp;ccedil;&amp;atilde;o entre leve, moderada ou grave, checar sinais vitais, exame f&amp;iacute;sico e oximetria. Investigar fatores precipitantes.&lt;/p>" inputSequences="//@sequence.5 //@sequence.9" outputSequences="//@sequence.0 //@sequence.13">
+    <questions text="Piora da dispn&#xe9;ia" url="" id="9102" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+    </questions>
+    <questions text="Aumento da expectora&#xe7;&#xe3;o" url="" id="9103" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+    </questions>
+    <questions text="Escarro que se torna purulento" url="" id="9104" category="//@category.0">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+    </questions>
+    <questions text="Infec&#xe7;&#xe3;o das Vias A&#xe9;reas Superiores (IVAS)" url="" id="9105" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_ivas" id="17385" weight="1" value="false"/>
+    </questions>
+    <questions text="Febre Sem Causa Aparente" url="" id="9106" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_febre_sem_causa_aparente" id="17386" weight="1" value="false"/>
+    </questions>
+    <questions text="Sibilos" url="" id="9107" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_sibilis" id="17387" weight="1" value="false"/>
+    </questions>
+    <questions text="Aumento da Tosse" url="" id="9108" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_aumento_da_tosse" id="17388" weight="1" value="false"/>
+    </questions>
+    <questions text="Taquipneia" url="" id="9109" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquipneia" id="17389" weight="1" value="false"/>
+    </questions>
+    <questions text="Taquicardia" url="" id="9110" category="//@category.1">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquicardia" id="17390" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17634" type="Tratamento" type_verbose="Tratamento" url="" name="Paciente Inst&#xe1;vel ou Grave" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;span style=&quot;font-family:Arial,Helvetica,sans-serif&quot;>Paciente deve ser encaminhado ao Eixo Vermelho.&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;span style=&quot;font-family:Arial,Helvetica,sans-serif&quot;>Se n&amp;atilde;o houver defini&amp;ccedil;&amp;atilde;o da causa da descompensa&amp;ccedil;&amp;atilde;o, solicitar D D&amp;iacute;mero, Troponina e PRO-BNP.&lt;/span>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;span style=&quot;font-family:Arial,Helvetica,sans-serif&quot;>Avaliar intuba&amp;ccedil;&amp;atilde;o orotraqueal&lt;strong>.&lt;/strong>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0 //@sequence.4 //@sequence.11">
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="GLICEMIA P/ FITA" exam_id="99011973" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="DPOC" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17635" type="Tratamento" type_verbose="Tratamento" url="" name="Paciente Est&#xe1;vel" description="&lt;p>Para diagn&amp;oacute;sticos diferenciais, &lt;u>&lt;strong>se necess&amp;aacute;rio&lt;/strong>&lt;/u>, solicitar: troponina, ckmb massa (s&amp;iacute;ndrome coronariana aguda), d-d&amp;iacute;mero (TEP).&lt;br />&#xA;&lt;br />&#xA;&lt;u>&lt;strong>J&amp;aacute; realizar as medica&amp;ccedil;&amp;otilde;es:&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Berotec 10 gotas + atrovent 30 gotas + 3ml soro fisiol&amp;oacute;gico 3ml (3x seguidas com intervalo de 20min)&lt;/li>&#xA;&#x9;&lt;li>Cateter O2 (1-3 litros) se satura&amp;ccedil;&amp;atilde;o de oxig&amp;ecirc;nio &amp;lt; 90%&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;br />&#xA;&lt;span style=&quot;color:null&quot;>&lt;strong>OBS: REAVALIAR AP&amp;Oacute;S 1 HORA&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.13" outputSequences="//@sequence.6">
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="GLICEMIA P/ FITA" exam_id="99011973" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="DPOC com exacerba&#xe7;&#xe3;o grave" clinical_indication="n/a"/>
+    <medication url="" med_id="35173" id="9037" name="BEROTEC GOTAS FRAS 20 ML" brand="" unit="GT" access="20" daily_dosage="10" cycles="1" treatement_time="9037" standard="null"/>
+    <medication url="" med_id="35254" id="9038" name="ATROVENT SOLUCAO FRAS 20 ML" brand="" unit="GT" access="20" daily_dosage="30" cycles="1" treatement_time="9038" standard="null"/>
+    <medication url="" med_id="36390" id="9039" name="HIDROCORTISONA 100 MG FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="3" cycles="1" treatement_time="9039" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml AD&quot;,&quot;id&quot;:3772,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:1309}"/>
+    <procedure url="O2 UMIDO C/ CATETER NASAL" procedure="75010001" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17636" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resposta" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Resposta &#xe0; medica&#xe7;&#xe3;o" url="" id="9111">
+      <answers xsi:type="pathwayMetamodel:Choice" name="resposta_a_medicacao" id="17391" weight="1" value="0.0">
+        <option description="Resposta r&#xe1;pida &#xe0;s medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Pouca melhora com tratamento inicial" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17637" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resultados dos Exames" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Houve altera&#xe7;&#xe3;o nos exames?" url="" id="9112">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="17392" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17638" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Permanece Est&#xe1;vel?" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Paciente permanece est&#xe1;vel?" url="" id="9113">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="permanece_estavel" id="17393" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17639" type="Receita" type_verbose="Receita" url="" name="Receita (Paciente com resposta r&#xe1;pida)" description="&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;color:null&quot;>&lt;span style=&quot;font-size:16px&quot;>Orientar vacina&amp;ccedil;&amp;atilde;o contra influenza anualmente e anti-pneumoc&amp;oacute;cica com refor&amp;ccedil;o ap&amp;oacute;s 5 anos.&lt;/span>&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;color:null&quot;>&lt;span style=&quot;font-size:16px&quot;>Orientar paciente para retornar a&amp;nbsp;emerg&amp;ecirc;ncia se n&amp;atilde;o houver melhora ou ocorrer piora dos sintomas.&lt;/span>&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;h2>&lt;strong>&lt;u>&lt;span style=&quot;font-size:16px&quot;>Orienta&amp;ccedil;&amp;otilde;es para prescri&amp;ccedil;&amp;atilde;o de medicamentos:&lt;/span>&lt;/u>&lt;/strong>&lt;/h2>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>Pacientes com exacerba&amp;ccedil;&amp;atilde;o leve:&lt;/strong>&amp;nbsp;n&amp;atilde;o prescrever antibioticoterapia.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>Paciente com exacerba&amp;ccedil;&amp;atilde;o moderada ou grave:&lt;/strong>&amp;nbsp;prescrever antibioticoterapia.&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>Pacientes de Baixo Risco&lt;/strong> (1 exacerba&amp;ccedil;&amp;atilde;o/ano, sem hospitaliza&amp;ccedil;&amp;atilde;o): Azitromicina 500mg, 01 comprimido, via oral, 24/24h por 05 dias&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Prescrever Amoxicilina/Clavulonato 875/125mg&amp;nbsp;&lt;strong>ou&amp;nbsp;&lt;/strong>Levofloxacino 750mg&amp;nbsp;&lt;u>&lt;strong>SE:&lt;/strong>&lt;/u>&lt;/span>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Idade acima de 65 anos&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Dispneia grave&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Comorbidade significativa&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Mais de 4 exacerba&amp;ccedil;&amp;otilde;es/ano&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Hospitaliza&amp;ccedil;&amp;atilde;o por exacerba&amp;ccedil;&amp;atilde;o no &amp;uacute;ltimo ano&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Uso de corticoide sist&amp;ecirc;mico nos &amp;uacute;ltimos tr&amp;ecirc;s meses&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Uso de antibi&amp;oacute;ticos nos 15 dias pr&amp;eacute;vios&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>Desnutri&amp;ccedil;&amp;atilde;o&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.10">
+    <item id="4638" url="" name="Fumarato de formoterol + budesonida inalat&#xf3;rio (6/100 mcg/dose)" med_code="-1" presentation="DOSE" access="20" quantity="2" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4639" url="" name="PREDNISONA 20 MG COMP 1 UD" med_code="35742" presentation="COMP" access="1" quantity="2" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="4640" url="" name="Sulfato de salbutamol aerossol (100mcg/dose) aerossol" med_code="-1" presentation="DOSE" access="20" quantity="2" period="1" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Apenas se crises de falta de ar"/>
+    <item id="4641" url="" name="Azitromicina 500mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="4642" url="" name="Amoxicilina/Clavulanato 875/125mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4643" url="" name="Levofloxacino 750mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17640" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento (Paciente estabilizado)" description="&lt;ul>&#xA;&#x9;&lt;li>Avaliar exames&lt;/li>&#xA;&#x9;&lt;li>Realizar VNI&lt;/li>&#xA;&#x9;&lt;li>Berotec 10 gotas + atrovent 30 gotas + 3ml soro fisiol&amp;oacute;gico 3ml de 1/1h&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;u>Tratar poss&amp;iacute;veis diagn&amp;oacute;sticos diferenciais, a&amp;nbsp;depender do resultado dos exames&lt;/u>&lt;br />&#xA;&lt;br />&#xA;&lt;strong>Discutir com o l&amp;iacute;der local internamento hospitalar&lt;/strong>&lt;br />&#xA;&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.12">
+    <medication url="" med_id="35173" id="9040" name="BEROTEC GOTAS FRAS 20 ML" brand="" unit="GT" access="20" daily_dosage="10" cycles="1" treatement_time="9040" frequency="1" standard="null"/>
+    <medication url="" med_id="35254" id="9041" name="ATROVENT SOLUCAO FRAS 20 ML" brand="" unit="GT" access="20" daily_dosage="30" cycles="1" treatement_time="9041" frequency="1" standard="null"/>
+    <medication url="" med_id="43770" id="9042" name="SORO FISIOLOGICO 0,9% - 1 ML" brand="" unit="ML" access="20" daily_dosage="3" cycles="1" treatement_time="9042" frequency="1" standard="null"/>
+    <medication url="" med_id="36390" id="9043" name="HIDROCORTISONA 100 MG FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="3" cycles="1" treatement_time="9043" standard="{&quot;quantidade_dosagem&quot;:100,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml AD&quot;,&quot;id&quot;:3773,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:4,&quot;codigo_principio_ativo&quot;:1309}"/>
+    <medication url="" med_id="118588" id="9044" name="TAVANIC 500MG FRAP 100 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9044" standard="null"/>
+  </element>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="17641" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (Exacerba&#xe7;&#xe3;o Grave)" description="Exacerba&#xe7;&#xe3;o Grave">
+    <operation name="Com exacerba&#xe7;&#xe3;o grave" Operator="affirmation" id="17406">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Exacerba&#xe7;&#xe3;o Grave" Operator="equal" id="17403">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Carinais" Operator="addition" id="17397">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="17396" weight="1" value="3.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="17642" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Quick Sofa >= 2)" description="Quick Sofa >= 2">
+    <operation name="Quick Sofa >= 2" Operator="greaterOrEqual" id="17407">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="17381" weight="1" value="0.0">
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+        <option description="FR > 22" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17394" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="17643" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.1" id="17644" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Quick Sofa &lt; 2)" description="Quick Sofa &lt; 2">
+    <operation name="Quick Sofa &lt; 2" Operator="lessThan" id="17408">
+      <operand xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="17381" weight="1" value="0.0">
+        <option description="Confus&#xe3;o Mental" weight="1"/>
+        <option description="PAS &lt; 100" weight="1"/>
+        <option description="FR > 22" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17394" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="17645" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Inst&#xe1;vel ou Exacerba&#xe7;&#xe3;o Grave)" description="Inst&#xe1;vel ou Exacerba&#xe7;&#xe3;o Grave">
+    <operation name="Inst&#xe1;vel" Operator="equal" id="17409">
+      <operand xsi:type="pathwayMetamodel:Choice" name="estado" id="17380" weight="1" value="0.0">
+        <option description="Est&#xe1;vel" weight="1"/>
+        <option description="Inst&#xe1;vel" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17394" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="17646" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Paciente Est&#xe1;vel)" description="Paciente Est&#xe1;vel">
+    <operation name="Est&#xe1;vel" Operator="equal" id="17410">
+      <operand xsi:type="pathwayMetamodel:Choice" name="estado" id="17380" weight="1" value="0.0">
+        <option description="Est&#xe1;vel" weight="1"/>
+        <option description="Inst&#xe1;vel" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="17647" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="17648" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Resposta r&#xe1;pida)" description="Resposta r&#xe1;pida">
+    <operation name="Resposta r&#xe1;pida" Operator="equal" id="17411">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_a_medicacao" id="17391" weight="1" value="0.0">
+        <option description="Resposta r&#xe1;pida &#xe0;s medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Pouca melhora com tratamento inicial" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="17649" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (Pouca melhora)" description="Pouca melhora">
+    <operation name="Pouca melhora" Operator="equal" id="17412">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_a_medicacao" id="17391" weight="1" value="0.0">
+        <option description="Resposta r&#xe1;pida &#xe0;s medica&#xe7;&#xf5;es" weight="1"/>
+        <option description="Pouca melhora com tratamento inicial" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17394" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.8" id="17650" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Houve altera&#xe7;&#xf5;es)" description="Houve altera&#xe7;&#xf5;es">
+    <operation name="Houve altera&#xe7;&#xf5;es" Operator="affirmation" id="17413">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="17392" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="17651" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (N&#xe3;o houve altera&#xe7;&#xf5;es)" description="N&#xe3;o houve altera&#xe7;&#xf5;es">
+    <operation name="N&#xe3;o houve altera&#xe7;&#xf5;es" id="17414">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="17392" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.9" id="17652" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (Paciente inst&#xe1;vel)" description="Paciente inst&#xe1;vel">
+    <operation name="Paciente inst&#xe1;vel" id="17415">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="permanece_estavel" id="17393" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="17653" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Permanece est&#xe1;vel)" description="Permanece est&#xe1;vel">
+    <operation name="Permanece est&#xe1;vel" Operator="affirmation" id="17416">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="permanece_estavel" id="17393" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="17654" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (sem exacerba&#xe7;&#xe3;o grave)" description="sem exacerba&#xe7;&#xe3;o grave">
+    <operation name="sem exacerba&#xe7;&#xe3;o grave" id="17417">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Exacerba&#xe7;&#xe3;o Grave" Operator="equal" id="17403">
+        <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Carinais" Operator="addition" id="17397">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="17396" weight="1" value="3.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <category name="Crit&#xe9;rios Cardinais" question="//@element.4/@questions.0 //@element.4/@questions.1 //@element.4/@questions.2"/>
+  <category name="Achados Adicionais" question="//@element.4/@questions.3 //@element.4/@questions.4 //@element.4/@questions.5 //@element.4/@questions.6 //@element.4/@questions.7 //@element.4/@questions.8"/>
+  <operation name="Crit&#xe9;rios Carinais" Operator="addition" id="17397">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+  </operation>
+  <operation name="Achados Adicionais" Operator="addition" id="17398">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_ivas" id="17385" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_febre_sem_causa_aparente" id="17386" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_sibilis" id="17387" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_aumento_da_tosse" id="17388" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquipneia" id="17389" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquicardia" id="17390" weight="1" value="false"/>
+  </operation>
+  <operation name="Crit&#xe9;rios Carinais == 1" Operator="equal" id="17399">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Carinais" Operator="addition" id="17397">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Achados Adicionais == 1" Operator="equal" id="17400">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Achados Adicionais" Operator="addition" id="17398">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_ivas" id="17385" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_febre_sem_causa_aparente" id="17386" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_sibilis" id="17387" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_aumento_da_tosse" id="17388" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquipneia" id="17389" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquicardia" id="17390" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Exacerba&#xe7;&#xe3;o Leve" Operator="and" id="17401">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Carinais == 1" Operator="equal" id="17399">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Carinais" Operator="addition" id="17397">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="Achados Adicionais == 1" Operator="equal" id="17400">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Achados Adicionais" Operator="addition" id="17398">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_ivas" id="17385" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_febre_sem_causa_aparente" id="17386" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_sibilis" id="17387" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_aumento_da_tosse" id="17388" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquipneia" id="17389" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquicardia" id="17390" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+    </operand>
+  </operation>
+  <operation name="Exacerba&#xe7;&#xe3;o Moderada" Operator="equal" id="17402">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Carinais" Operator="addition" id="17397">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17394" weight="1" value="2.0"/>
+  </operation>
+  <operation name="Exacerba&#xe7;&#xe3;o Grave" Operator="equal" id="17403">
+    <operand xsi:type="pathwayMetamodel:Operation" name="Crit&#xe9;rios Carinais" Operator="addition" id="17397">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="17396" weight="1" value="3.0"/>
+  </operation>
+  <operation name="Paciente Est&#xe1;vel" Operator="equal" id="17404">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+  </operation>
+  <operation name="Paciente Inst&#xe1;vel" Operator="equal" id="17405">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17394" weight="1" value="2.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="estado" id="17380" weight="1" value="0.0">
+    <option description="Est&#xe1;vel" weight="1"/>
+    <option description="Inst&#xe1;vel" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="quick_sofa" id="17381" weight="1" value="0.0">
+    <option description="Confus&#xe3;o Mental" weight="1"/>
+    <option description="PAS &lt; 100" weight="1"/>
+    <option description="FR > 22" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_piora_dispneia" id="17382" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_aumento_expectoracao" id="17383" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="criterios_cardinais_escarro_purulento" id="17384" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_ivas" id="17385" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_febre_sem_causa_aparente" id="17386" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_sibilis" id="17387" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_aumento_da_tosse" id="17388" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquipneia" id="17389" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="achados_adicionais_taquicardia" id="17390" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="resposta_a_medicacao" id="17391" weight="1" value="0.0">
+    <option description="Resposta r&#xe1;pida &#xe0;s medica&#xe7;&#xf5;es" weight="1"/>
+    <option description="Pouca melhora com tratamento inicial" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="exames_alterados" id="17392" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="permanece_estavel" id="17393" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="17394" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17395" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="17396" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

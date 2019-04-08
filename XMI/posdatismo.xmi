@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3112" url="" name="Posdatismo" code="H043">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17286" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Comorbidades?" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="S&#xed;ndromes hipertensivas" url="" id="8957">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_sindromes_hipertensivas" id="17061" weight="1" value="false"/>
+    </questions>
+    <questions text="DM/DMG" url="" id="8958">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dm_dmg" id="17062" weight="1" value="false"/>
+    </questions>
+    <questions text="HIV" url="" id="8959">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_hiv" id="17063" weight="1" value="false"/>
+    </questions>
+    <questions text="Placenta pr&#xe9;via" url="" id="8960">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_placenta_previa" id="17064" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17287" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com l&#xed;der local" description="Avaliar interna&#xe7;&#xe3;o com l&#xed;der local" isTerminal="true" inputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17288" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade Gestacional" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Idade Gestacional" url="" id="8981">
+      <answers xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="17065" weight="1" value="0.0">
+        <option description="40 semanas a 40 semanas e 6 dias" weight="1"/>
+        <option description="Maior ou igual a 41 semanas" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17289" type="Tratamento" type_verbose="Tratamento" url="" name="[At&#xe9; 40s e 6d] Exames" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.4">
+    <examination url="TOCOCARDIOGRAFIA ANTEPARTO" exam_id="45010072" limb_side="" quantity="1" reason="Posdatismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17290" type="Tratamento" type_verbose="Tratamento" url="" name="[Mais de 41s] Exames" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.11">
+    <examination url="TOCOCARDIOGRAFIA ANTEPARTO" exam_id="45010072" limb_side="" quantity="1" reason="Posdatismo" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="Posdatismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17291" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="CTG reativa? (1)" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Cardiotocografia reativa?" url="" id="8982">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_1" id="17066" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17292" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Retorno em 48h" description="Retorno em 48h para repetir cardiotocografia." isTerminal="true" inputSequences="//@sequence.5 //@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17293" type="Tratamento" type_verbose="Tratamento" url="" name="Reanima&#xe7;&#xe3;o (1)" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <medication url="" med_id="43800" id="9007" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="9007" standard="null"/>
+    <procedure url="O2" procedure="75010011" quantity="1"/>
+    <procedure url="DECUBITO LATERAL ESQUERDO" procedure="75130055" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17294" type="Tratamento" type_verbose="Tratamento" url="" name="Cardiotocografia (1)" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8">
+    <examination url="TOCOCARDIOGRAFIA ANTEPARTO" exam_id="45010072" limb_side="" quantity="1" reason="Posdatismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17295" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="CTG Reativa? (2)" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Cardiotocograia reativa?" url="" id="8983">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_2" id="17067" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17296" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Avaliar Resolu&#xe7;&#xe3;o Imediata da Gesta&#xe7;&#xe3;o" description="Avaliar com l&#xed;der local resolu&#xe7;&#xe3;o imediata da gesta&#xe7;&#xe3;o." isTerminal="true" inputSequences="//@sequence.10 //@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17297" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="CTG reativa? (3)" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.17">
+    <questions text="Cardiotocografia reativa?" url="" id="8984">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_3" id="17068" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17298" type="Tratamento" type_verbose="Tratamento" url="" name="Reanima&#xe7;&#xe3;o (2)" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.13">
+    <medication url="" med_id="43800" id="9008" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="ML" access="6" daily_dosage="500" cycles="1" treatement_time="9008" standard="null"/>
+    <procedure url="O2" procedure="75010011" quantity="1"/>
+    <procedure url="DECUBITO LATERAL ESQUERDO" procedure="75130055" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17299" type="Tratamento" type_verbose="Tratamento" url="" name="Cardiotocografia (2)" description="" inputSequences="//@sequence.13" outputSequences="//@sequence.14"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17300" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="CTG Reativa? (4)" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.15 //@sequence.16">
+    <questions text="Cardiotocografia reativa?" url="" id="8985">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_4" id="17069" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17301" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Indu&#xe7;&#xe3;o do parto" description="Realizar indu&#xe7;&#xe3;o do trabalho de parto" isTerminal="true" inputSequences="//@sequence.15 //@sequence.20 //@sequence.25"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17302" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Ultrassom" description="" inputSequences="//@sequence.17" outputSequences="//@sequence.18 //@sequence.19">
+    <questions text="L.A. normal (ILA > 50mm ou maior bols&#xe3;o de 20 - 80mm)?" url="" id="8986">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="LA_normal" id="17070" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17303" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Peso (1)" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Peso entre 3000 e 4500gr?" url="" id="8987">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="peso_3000_a_4000_gr" id="17071" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17304" type="Tratamento" type_verbose="Tratamento" url="" name="US Obstetrica com Doppler" description="" inputSequences="//@sequence.19 //@sequence.27" outputSequences="//@sequence.22">
+    <examination url="US OBSTETRICA C/ DOPPLER" exam_id="33010293" limb_side="" quantity="1" reason="Posdatismo" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17305" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar US com Doppler" description="" inputSequences="//@sequence.22" outputSequences="//@sequence.23 //@sequence.24">
+    <questions text="US com doppler colorido alterada?" url="" id="8988">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="us_doppler_alterada" id="17072" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17306" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Peso (2)" description="" inputSequences="//@sequence.24" outputSequences="//@sequence.25 //@sequence.26">
+    <questions text="Peso entre 2500gr e 4500gr?" url="" id="8989">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="peso_entre_2500_4500gr" id="17073" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17307" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Avaliar Ces&#xe1;rea com L&#xed;der Local" description="Passar com l&#xed;der local possibilidade de parto cesareano" isTerminal="true" inputSequences="//@sequence.26 //@sequence.28"/>
+  <element xsi:type="pathwayMetamodel:Information" id="17308" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Avaliar Resolu&#xe7;&#xe3;o da Gesta&#xe7;&#xe3;o" description="Avaliar resolu&#xe7;&#xe3;o da gesta&#xe7;&#xe3;o com l&#xed;der local" isTerminal="true" inputSequences="//@sequence.23"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17309" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Peso (3)" description="" inputSequences="//@sequence.21" outputSequences="//@sequence.27 //@sequence.28">
+    <questions text="Peso do Feto" url="" id="8990">
+      <answers xsi:type="pathwayMetamodel:Choice" name="peso_feto" id="17074" weight="1" value="0.0">
+        <option description="&lt; 3000gr" weight="5"/>
+        <option description="> 4500gr" weight="10"/>
+      </answers>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17310" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com comorbidades)" description="com comorbidades">
+    <operation name="comorbidades >= 1" Operator="greaterOrEqual" id="17080">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Comorbidades" Operator="addition" id="17079">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_sindromes_hipertensivas" id="17061" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dm_dmg" id="17062" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_hiv" id="17063" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_placenta_previa" id="17064" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17075" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17311" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem comorbidades)" description="sem comorbidades">
+    <operation name="comorbidades &lt; 1" Operator="lessThan" id="17081">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Comorbidades" Operator="addition" id="17079">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_sindromes_hipertensivas" id="17061" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dm_dmg" id="17062" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_hiv" id="17063" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_placenta_previa" id="17064" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17075" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="17312" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (at&#xe9; 40s e 6d)" description="at&#xe9; 40s e 6d">
+    <operation name="at&#xe9; 40s e 6d" Operator="equal" id="17082">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="17065" weight="1" value="0.0">
+        <option description="40 semanas a 40 semanas e 6 dias" weight="1"/>
+        <option description="Maior ou igual a 41 semanas" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17075" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="17313" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (mais de 41s)" description="mais de 41s">
+    <operation name="mais de 41s" Operator="equal" id="17083">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="17065" weight="1" value="0.0">
+        <option description="40 semanas a 40 semanas e 6 dias" weight="1"/>
+        <option description="Maior ou igual a 41 semanas" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17076" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="17314" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="17315" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (ctg reativa)" description="ctg reativa">
+    <operation name="ctg reativa" Operator="affirmation" id="17084">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_1" id="17066" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="17316" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (ctg n&#xe3;o reativa)" description="ctg n&#xe3;o reativa">
+    <operation name="ctg n&#xe3;o reativa" id="17085">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_1" id="17066" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="17317" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="17318" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.9" id="17319" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (ctg reativa)" description="ctg reativa">
+    <operation name="ctg reativa (2)" Operator="affirmation" id="17086">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_2" id="17067" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="17320" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (ctg n&#xe3;o reativa)" description="ctg n&#xe3;o reativa">
+    <operation name="ctg n&#xe3;o reativa (2)" id="17087">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_2" id="17067" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.4" id="17321" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.11" id="17322" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (ctg n&#xe3;o reativa)" description="ctg n&#xe3;o reativa">
+    <operation name="ctg n&#xe3;o reativa (3)" id="17088">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_3" id="17068" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="17323" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="Incondicional"/>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="17324" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="Incondicional"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="17325" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (ctg reativa)" description="ctg reativa">
+    <operation name="ctg reativa (4)" Operator="affirmation" id="17089">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_4" id="17069" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.14" id="17326" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (ctg n&#xe3;o reativa)" description="ctg n&#xe3;o reativa">
+    <operation name="ctg n&#xe3;o reativa (4)" id="17090">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_4" id="17069" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.11" id="17327" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (ctg reativa)" description="ctg reativa">
+    <operation name="ctg reativa (3)" Operator="affirmation" id="17091">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_3" id="17068" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.16" id="17328" type="Sequencia" type_verbose="Sequencia" url="" name="S19 (us normal)" description="us normal">
+    <operation name="us normal" Operator="affirmation" id="17092">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="LA_normal" id="17070" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.16" id="17329" type="Sequencia" type_verbose="Sequencia" url="" name="S20 (us alterada)" description="us alterada">
+    <operation name="us alterada" id="17093">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="LA_normal" id="17070" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.17" id="17330" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (peso de 3 a 4kg)" description="peso de 3 a 4kg">
+    <operation name="peso de 3 a 4kg" Operator="affirmation" id="17094">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="peso_3000_a_4000_gr" id="17071" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.23" outputStep="//@element.17" id="17331" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (peso &lt; 3 ou > 4 kg)" description="peso &lt; 3 ou > 4 kg">
+    <operation name="peso &lt; 3 ou > 4 kg" id="17095">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="peso_3000_a_4000_gr" id="17071" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.19" outputStep="//@element.18" id="17332" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <sequence inputStep="//@element.22" outputStep="//@element.19" id="17333" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (us doppler alterada)" description="us doppler alterada">
+    <operation name="us doppler alterada" Operator="affirmation" id="17096">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="us_doppler_alterada" id="17072" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.20" outputStep="//@element.19" id="17334" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (us doppler normal)" description="us doppler normal">
+    <operation name="us doppler normal" id="17097">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="us_doppler_alterada" id="17072" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.20" id="17335" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (peso entre 2500 e 4500gr)" description="peso entre 2500 e 4500gr">
+    <operation name="peso entre 2500 e 4500gr" Operator="affirmation" id="17098">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="peso_entre_2500_4500gr" id="17073" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.20" id="17336" type="Sequencia" type_verbose="Sequencia" url="" name="S27(peso &lt; 2500 ou > 4500gr)" description="peso &lt; 2500 ou > 4500gr">
+    <operation name="peso &lt; 2500 ou > 4500gr" id="17099">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="peso_entre_2500_4500gr" id="17073" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.23" id="17337" type="Sequencia" type_verbose="Sequencia" url="" name="S28" description="-">
+    <operation name="Peso &lt; 3000gr" Operator="equal" id="17100">
+      <operand xsi:type="pathwayMetamodel:Choice" name="peso_feto" id="17074" weight="1" value="0.0">
+        <option description="&lt; 3000gr" weight="5"/>
+        <option description="> 4500gr" weight="10"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="17077" weight="1" value="5.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.21" outputStep="//@element.23" id="17338" type="Sequencia" type_verbose="Sequencia" url="" name="S29" description="-">
+    <operation name="Peso > 4500gr" Operator="equal" id="17101">
+      <operand xsi:type="pathwayMetamodel:Choice" name="peso_feto" id="17074" weight="1" value="0.0">
+        <option description="&lt; 3000gr" weight="5"/>
+        <option description="> 4500gr" weight="10"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="10" id="17078" weight="1" value="10.0"/>
+    </operation>
+  </sequence>
+  <operation name="Comorbidades" Operator="addition" id="17079">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_sindromes_hipertensivas" id="17061" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dm_dmg" id="17062" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_hiv" id="17063" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_placenta_previa" id="17064" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_sindromes_hipertensivas" id="17061" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_dm_dmg" id="17062" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_hiv" id="17063" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comorbidades_placenta_previa" id="17064" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="idade_gestacional" id="17065" weight="1" value="0.0">
+    <option description="40 semanas a 40 semanas e 6 dias" weight="1"/>
+    <option description="Maior ou igual a 41 semanas" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_1" id="17066" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_2" id="17067" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_3" id="17068" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ctg_reativa_4" id="17069" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="LA_normal" id="17070" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="peso_3000_a_4000_gr" id="17071" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="us_doppler_alterada" id="17072" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="peso_entre_2500_4500gr" id="17073" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="peso_feto" id="17074" weight="1" value="0.0">
+    <option description="&lt; 3000gr" weight="5"/>
+    <option description="> 4500gr" weight="10"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17075" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="17076" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="17077" weight="1" value="5.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="10" id="17078" weight="1" value="10.0"/>
+</pathwayMetamodel:Pathway>

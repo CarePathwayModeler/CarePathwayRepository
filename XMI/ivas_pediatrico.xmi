@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3126" url="" name="IVAS Pedi&#xe1;trico" code="H026">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16931" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Comorbidades" description="" inputSequences="//@sequence.11 //@sequence.13" outputSequences="//@sequence.0">
+    <questions text="O paciente apresenta comorbidades?" url="" id="8875">
+      <answers xsi:type="pathwayMetamodel:Choice" name="comorbidades" id="16803" weight="1" value="0.0">
+        <option description="Neoplasia" weight="1"/>
+        <option description="Imunossupress&#xe3;o" weight="1"/>
+        <option description="Sd Gen&#xe9;tica" weight="1"/>
+        <option description="Encefalopata" weight="1"/>
+        <option description="Interna&#xe7;&#xe3;o &lt; 30 dias" weight="1"/>
+        <option description="&lt; 2 meses" weight="1"/>
+        <option description="Cardiopatia" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16932" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Sinais de Alarme" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2 //@sequence.3">
+    <questions text="O Paciente apresenta sinais de alarme?" url="" id="8876">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16804" weight="1" value="0.0">
+        <option description="Taquipn&#xe9;ia" weight="1"/>
+        <option description="Dispn&#xe9;ia" weight="1"/>
+        <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+        <option description="Bradicardia" weight="1"/>
+        <option description="Taquicardia" weight="1"/>
+        <option description="Queda do Estado Geral" weight="1"/>
+        <option description="Toxemia" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16933" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Raio X do T&#xf3;rax" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.5">
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Suspeita de IVAS Ped&#xe1;trico" clinical_indication="Suspeita de IVAS Ped&#xe1;trico"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="16934" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Retorno 48h" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Orientar retorno do paciente em 48h para reavalia&amp;ccedil;&amp;atilde;o devido a comorbidades.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16935" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resultados" description="Avaliar Resultado do Raio X" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Exame apresenta altera&#xe7;&#xf5;es?" url="" id="8877">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="16805" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="16936" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com chefia" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Discutir caso com l&amp;iacute;der local.&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16937" type="Tratamento" type_verbose="Tratamento" url="" name="Conduta" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>- Solicitar triagem infecciosa laboratorial.&lt;br />&#xA;- Medicar com sintom&amp;aacute;ticos conforme a queixa do paciente.&lt;/span>&lt;/p>" inputSequences="//@sequence.7" outputSequences="//@sequence.8">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="IVAS pediatrico" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="IVAS pediatrico" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="IVAS pediatrico" clinical_indication="N/A"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16938" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar necessidade de ATB" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Paciente necessita de Antibi&#xf3;ticoterapia?" url="" id="8878">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="16806" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="16939" type="Receita" type_verbose="Receita" url="" name="Alta com sintom&#xe1;ticos e Retorno em 48 horas" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.4">
+    <item id="4517" url="" name="Dipirona solu&#xe7;&#xe3;o 50mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 6/6h, se dor ou febre superior a 37,8&#xba;C"/>
+    <item id="4518" url="" name="Aerosol SF0,9% _____ 1 Fr." med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Inala&#xe7;&#xe3;o com 5ml de 6/6h por 5 dias."/>
+    <item id="4519" url="" name="Desloratadina solu&#xe7;&#xe3;o _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML 1 vez ao dia por 10 dias"/>
+    <item id="4520" url="" name="Fexofenadina 6mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 10 dias"/>
+    <item id="4561" url="" name="Aerosol com SF0,9% (5ml) + Pulmicort 0,25mg/ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer _____ ML de 12/12h por 5 dias"/>
+    <item id="4562" url="" name="Acebrofilina Xpe 25mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 5 dias"/>
+    <item id="4563" url="" name="Levodropropizina Xpe 30mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 5 dias"/>
+    <item id="4564" url="" name="Lavagem nasal SF0,9% 3ml" med_code="-1" presentation="-" access="2" quantity="1" period="5" period_unit="DD" frequency="6" frequency_unit="DD" orientations="Aplicar de 6 a 8 vezes/dia"/>
+    <item id="4565" url="" name="Hidroxizina Xpe _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+    <item id="4566" url="" name="Hedera Helix _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16940" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Presen&#xe7;a de febre" description="" isInitial="true" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Paciente com febre (> 37,8&#xba;) ?" url="" id="8879">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_febre" id="16807" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="16941" type="Receita" type_verbose="Receita" url="" name="Alta com sintom&#xe1;ticos" description="" isTerminal="true" inputSequences="//@sequence.2 //@sequence.10">
+    <item id="4567" url="" name="Dipirona solu&#xe7;&#xe3;o 50mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 6/6h, se dor ou febre superior a 37,8&#xba;C"/>
+    <item id="4568" url="" name="Aerosol SF0,9% _____ Inala&#xe7;&#xe3;o de 5ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="De 6/6h por 5 dias"/>
+    <item id="4569" url="" name="Desloratadina solu&#xe7;&#xe3;o _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML 1 vez ao dia por 10 dias"/>
+    <item id="4570" url="" name="Fexofenadina 6mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 10 dias"/>
+    <item id="4571" url="" name="Aerosol com SF0,9% (5ml) + Pulmicort 0,25mg/ml" med_code="-1" presentation="-" access="2" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Fazer _____ ML de 12/12h por 5 dias"/>
+    <item id="4572" url="" name="Acebrofilina Xpe 25mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 12/12h por 5 dias"/>
+    <item id="4573" url="" name="Levodropropizina Xpe 30mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 5 dias"/>
+    <item id="4574" url="" name="Lavagem nasal SF0,9% 3ml" med_code="-1" presentation="-" access="2" quantity="1" period="5" period_unit="DD" frequency="6" frequency_unit="DD" orientations="Aplicar de 6 a 8 vezes/dia"/>
+    <item id="4575" url="" name="Hidroxizina Xpe _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+    <item id="4576" url="" name="Hedera Helix _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ML de 8/8h por 10 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16942" type="Tratamento" type_verbose="Tratamento" url="" name="[Paciente com Febre] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Meios f&amp;iacute;sicos para hipertemia&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Ministrar medicamentos:&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Dipirona 1g Ampola 2ml (1ml = 500mg) dilu&amp;iacute;da em agua destilada. EV.&lt;/li>&#xA;&#x9;&lt;li>Paracetamol Gotas. Frasco 10ml. Dar ___ gotas.&lt;/li>&#xA;&#x9;&lt;li>Profenid 100mg/ml EV.&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.12" outputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="16943" type="Receita" type_verbose="Receita" url="" name="Receita" description="" isTerminal="true" inputSequences="//@sequence.9">
+    <item id="4577" url="" name="Amoxicilina + Clavulanato 400+57 mg/ml ___________ FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ ml de 12/12h por 10 dias (conservar na geladeira)."/>
+    <item id="4578" url="" name="Ceftriaxona 1g ________________________fr" med_code="-1" presentation="-" access="5" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 ampola IM, 1x por dia por 3 dias. Reavaliar ap&#xf3;s 48h."/>
+    <item id="4579" url="" name="Azitromicina 900mg ___ Fr" med_code="-1" presentation="-" access="5" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ ml 1x por dia por 5 dias."/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="16944" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="16945" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sinais de alarme >= 1)" description="sinais de alarme >= 1">
+    <operation name="sinais de alarme >= 1.0" Operator="greaterOrEqual" id="16813">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16804" weight="1" value="0.0">
+        <option description="Taquipn&#xe9;ia" weight="1"/>
+        <option description="Dispn&#xe9;ia" weight="1"/>
+        <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+        <option description="Bradicardia" weight="1"/>
+        <option description="Taquicardia" weight="1"/>
+        <option description="Queda do Estado Geral" weight="1"/>
+        <option description="Toxemia" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.1" id="16946" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (sinais de alarme &lt; 1 &amp; sem comorbidades)" description="sinais de alarme &lt; 1 &amp; sem comorbidades">
+    <operation name="sinais de alarme &lt; 1 &amp; sem comorbidades" Operator="and" id="16814">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sinais de alarme &lt; 1" Operator="lessThan" id="16809">
+        <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16804" weight="1" value="0.0">
+          <option description="Taquipn&#xe9;ia" weight="1"/>
+          <option description="Dispn&#xe9;ia" weight="1"/>
+          <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+          <option description="Bradicardia" weight="1"/>
+          <option description="Taquicardia" weight="1"/>
+          <option description="Queda do Estado Geral" weight="1"/>
+          <option description="Toxemia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="comorbidades_&lt;_1" Operator="lessThan" id="16810">
+        <operand xsi:type="pathwayMetamodel:Choice" name="comorbidades" id="16803" weight="1" value="0.0">
+          <option description="Neoplasia" weight="1"/>
+          <option description="Imunossupress&#xe3;o" weight="1"/>
+          <option description="Sd Gen&#xe9;tica" weight="1"/>
+          <option description="Encefalopata" weight="1"/>
+          <option description="Interna&#xe7;&#xe3;o &lt; 30 dias" weight="1"/>
+          <option description="&lt; 2 meses" weight="1"/>
+          <option description="Cardiopatia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.1" id="16947" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (sinais de alarme &lt; 1 &amp; com comorbidades)" description="sinais de alarme &lt; 1 &amp; com comorbidades">
+    <operation name="sinais de alarme &lt; 1 &amp; com comorbidades" Operator="and" id="16815">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sinais de alarme &lt; 1" Operator="lessThan" id="16809">
+        <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16804" weight="1" value="0.0">
+          <option description="Taquipn&#xe9;ia" weight="1"/>
+          <option description="Dispn&#xe9;ia" weight="1"/>
+          <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+          <option description="Bradicardia" weight="1"/>
+          <option description="Taquicardia" weight="1"/>
+          <option description="Queda do Estado Geral" weight="1"/>
+          <option description="Toxemia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="comorbidades_>=_1" Operator="greaterOrEqual" id="16811">
+        <operand xsi:type="pathwayMetamodel:Choice" name="comorbidades" id="16803" weight="1" value="0.0">
+          <option description="Neoplasia" weight="1"/>
+          <option description="Imunossupress&#xe3;o" weight="1"/>
+          <option description="Sd Gen&#xe9;tica" weight="1"/>
+          <option description="Encefalopata" weight="1"/>
+          <option description="Interna&#xe7;&#xe3;o &lt; 30 dias" weight="1"/>
+          <option description="&lt; 2 meses" weight="1"/>
+          <option description="Cardiopatia" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="16948" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="16949" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="16950" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (sem altera&#xe7;&#xf5;es)" description="sem altera&#xe7;&#xf5;es">
+    <operation name="sem altera&#xe7;&#xf5;es" id="16816">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="16805" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="16951" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (com altera&#xe7;&#xf5;es)" description="com altera&#xe7;&#xf5;es">
+    <operation name="com altera&#xe7;&#xf5;es" Operator="affirmation" id="16817">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="16805" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="16952" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="Incondicional"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.7" id="16953" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (necessita ATB)" description="necessita ATB">
+    <operation name="necessita ATB" Operator="affirmation" id="16818">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="16806" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.7" id="16954" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (n&#xe3;o necessita ATB)" description="n&#xe3;o necessita ATB">
+    <operation name="n&#xe3;o necessita ATB" id="16819">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="16806" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.9" id="16955" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="-">
+    <operation name="Paciente_sem_febre" id="16820">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_febre" id="16807" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="16956" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-">
+    <operation name="Paciente_com_febre" Operator="affirmation" id="16821">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_febre" id="16807" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.11" id="16957" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-"/>
+  <operation name="sinais de alarme &lt; 1" Operator="lessThan" id="16809">
+    <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16804" weight="1" value="0.0">
+      <option description="Taquipn&#xe9;ia" weight="1"/>
+      <option description="Dispn&#xe9;ia" weight="1"/>
+      <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+      <option description="Bradicardia" weight="1"/>
+      <option description="Taquicardia" weight="1"/>
+      <option description="Queda do Estado Geral" weight="1"/>
+      <option description="Toxemia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+  </operation>
+  <operation name="comorbidades_&lt;_1" Operator="lessThan" id="16810">
+    <operand xsi:type="pathwayMetamodel:Choice" name="comorbidades" id="16803" weight="1" value="0.0">
+      <option description="Neoplasia" weight="1"/>
+      <option description="Imunossupress&#xe3;o" weight="1"/>
+      <option description="Sd Gen&#xe9;tica" weight="1"/>
+      <option description="Encefalopata" weight="1"/>
+      <option description="Interna&#xe7;&#xe3;o &lt; 30 dias" weight="1"/>
+      <option description="&lt; 2 meses" weight="1"/>
+      <option description="Cardiopatia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+  </operation>
+  <operation name="comorbidades_>=_1" Operator="greaterOrEqual" id="16811">
+    <operand xsi:type="pathwayMetamodel:Choice" name="comorbidades" id="16803" weight="1" value="0.0">
+      <option description="Neoplasia" weight="1"/>
+      <option description="Imunossupress&#xe3;o" weight="1"/>
+      <option description="Sd Gen&#xe9;tica" weight="1"/>
+      <option description="Encefalopata" weight="1"/>
+      <option description="Interna&#xe7;&#xe3;o &lt; 30 dias" weight="1"/>
+      <option description="&lt; 2 meses" weight="1"/>
+      <option description="Cardiopatia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+  </operation>
+  <operation name="sinais de alarme >= UM" Operator="greaterOrEqual" id="16812">
+    <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16804" weight="1" value="0.0">
+      <option description="Taquipn&#xe9;ia" weight="1"/>
+      <option description="Dispn&#xe9;ia" weight="1"/>
+      <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+      <option description="Bradicardia" weight="1"/>
+      <option description="Taquicardia" weight="1"/>
+      <option description="Queda do Estado Geral" weight="1"/>
+      <option description="Toxemia" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="comorbidades" id="16803" weight="1" value="0.0">
+    <option description="Neoplasia" weight="1"/>
+    <option description="Imunossupress&#xe3;o" weight="1"/>
+    <option description="Sd Gen&#xe9;tica" weight="1"/>
+    <option description="Encefalopata" weight="1"/>
+    <option description="Interna&#xe7;&#xe3;o &lt; 30 dias" weight="1"/>
+    <option description="&lt; 2 meses" weight="1"/>
+    <option description="Cardiopatia" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16804" weight="1" value="0.0">
+    <option description="Taquipn&#xe9;ia" weight="1"/>
+    <option description="Dispn&#xe9;ia" weight="1"/>
+    <option description="Hiposatura&#xe7;&#xe3;o &lt; 90%" weight="1"/>
+    <option description="Bradicardia" weight="1"/>
+    <option description="Taquicardia" weight="1"/>
+    <option description="Queda do Estado Geral" weight="1"/>
+    <option description="Toxemia" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alteracoes_raio_x" id="16805" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="necessita_atb" id="16806" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_febre" id="16807" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="16808" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

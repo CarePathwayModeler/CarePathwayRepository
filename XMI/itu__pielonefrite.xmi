@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3265" url="" name="ITU - Pielonefrite" code="H007">
+  <element xsi:type="pathwayMetamodel:Treatment" id="18901" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Exames" description="Solicite exames para melhor defini&#xe7;&#xe3;o do tratamento do paciente.&#xA;&#xA;ADICIONAR EXAME DE IMAGEM" inputSequences="//@sequence.5" outputSequences="//@sequence.0">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="Protocolo de Pielonefrite"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="Protocolo de Pielonefrite"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="Protocolo de Pielonefrite"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="Protocolo de Pielonefrite"/>
+    <examination url="US APARELHO URINARIO (RINS E BEXIGA)" exam_id="33010030" limb_side="" quantity="1" reason="Protocolo de Pielonefrite" clinical_indication="Protocolo de Pielonefrite"/>
+    <medication url="" med_id="43290" id="9676" name="RINGER C/LACTATO 500ML TUBO 500 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9676" standard="null"/>
+    <medication url="" med_id="43800" id="9677" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9677" standard="null"/>
+    <medication url="" med_id="36064" id="9678" name="BUSCOPAN COMPOSTO AMPL 5 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9678" standard="null"/>
+    <medication url="" med_id="36161" id="9679" name="BUSCOPAN SIMPLES AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9679" standard="null"/>
+    <medication url="" med_id="49581" id="9680" name="PLASIL AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9680" standard="null"/>
+    <medication url="" med_id="41564" id="9781" name="PLAMET 10MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9781" standard="null"/>
+    <medication url="" med_id="126122" id="9782" name="DRAMIN B6 DL IV AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9782" standard="null"/>
+    <medication url="" med_id="39586" id="9783" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9783" standard="null"/>
+    <medication url="" med_id="59765" id="9784" name="TRAMAL 50MG AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9784" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18902" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resultados dos Exames" description="Avaliar resultado dos exames de sangue e imagem solicitados" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="1) PACIENTES EST&#xc1;VEIS, SEM COMORBIDADES, SEM COMPLICA&#xc7;&#xd5;ES NO EXAME DE IMAGEM - ACOMPANHAMENTO AMBULATORIAL COM ANTIBIOTICOTERAPIA VIA ORAL" url="" id="9594">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pielonefrite_sintomas_1" id="18568" weight="1" value="false"/>
+    </questions>
+    <questions text="2) PACIENTES COM ALTERA&#xc7;&#xc3;O DA FUN&#xc7;&#xc3;O RENAL, UROPATIA OBSTRUTIVA NO EXAME DE IMAGEM, ABSCESSO, IMUNOSSUPRESS&#xc3;O, GESTANTE, SEXO MASCULINO, IDOSO, DIFICULDADE MANTER HIDRATA&#xc7;&#xc3;O VIA ORAL, D&#xda;VIDA QUANTO &#xc0; ADES&#xc3;O DO PACIENTE AO TRATAMENTO" url="" id="9595">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pielonefrite_sintomas_2" id="18569" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="18903" type="Receita" type_verbose="Receita" url="" name="Receita - Tratamento em casa" description="Aten&#xe7;&#xe3;o: &#xA;Caso n&#xe3;o apresente melhora dos sintomas por mais de 3 dias ap&#xf3;s in&#xed;cio das medica&#xe7;&#xf5;es, retornar imediatamente a emerg&#xea;ncia.&#xA;Retornar Ap&#xf3;s 4 Dias Com Resultado De Urinocultura." isTerminal="true" inputSequences="//@sequence.1">
+    <item id="5024" url="" name="Ciprofloxacino 500Mg ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5025" url="" name="Levofloxacino 500Mg ...... 14cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+    <item id="5026" url="" name="Buscopan Composto ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h se dor abdominal"/>
+    <item id="5027" url="" name="Paco 30Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h se dor intensa"/>
+    <item id="5028" url="" name="Tramadol 50Mg ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h se dor intensa"/>
+    <item id="5029" url="" name="Bromoprida 10Mg ...... 1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h se nauseas ou vomitos"/>
+    <item id="5030" url="" name="Amoxicilina/Clavulanato 875/125 ...... 28cp" med_code="-1" presentation="COMP" access="1" quantity="1" period="14" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar um comprimido de 12/12h"/>
+    <item id="5031" url="" name="Dipirona 1G ......1cx" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6h se dor ou febre"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18904" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir Tratamento com L&#xed;der Local" description="&lt;p>&lt;u>&lt;strong>Aten&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>Recomenda-se encaminhar para l&amp;iacute;der local! Aventar possibilidade de interna&amp;ccedil;&amp;atilde;o. Solicitar avalia&amp;ccedil;&amp;atilde;o da urologia caso apresente uropatia obstrutiva ou abscesso no exame de imagem.&lt;/p>" isTerminal="true" inputSequences="//@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18905" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quick SOFA" description="" isInitial="true" outputSequences="//@sequence.3 //@sequence.5">
+    <questions text="Confus&#xe3;o Mental" url="" id="9596">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18570" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt; 100" url="" id="9597">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="18571" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 22" url="" id="9598">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="18572" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18906" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Eixo Vermelho" description="Encaminhar paciente ao eixo vermelho" inputSequences="//@sequence.3" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="18907" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo SEPSE" description="Encaminhar paciente ao protocolo de SEPSE" isTerminal="true" inputSequences="//@sequence.4">
+    <pathways>H012</pathways>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="18908" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="18909" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (caso 1)" description="">
+    <operation name="Caso 1" Operator="affirmation" id="18577">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pielonefrite_sintomas_1" id="18568" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="18910" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (caso 2)" description="">
+    <operation name="Caso 2" Operator="affirmation" id="18578">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pielonefrite_sintomas_2" id="18569" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="18911" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (quick sofa >= 2)" description="quick sofa >= 2">
+    <operation name="Quick Sofa >= 2" Operator="greaterOrEqual" id="18579">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="18576">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18570" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="18571" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="18572" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="18574" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="18912" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.4" id="18913" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (quick sofa &lt; 2)" description="quick sofa &lt; 2">
+    <operation name="Quick Sofa &lt; 2" Operator="lessThan" id="18580">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Quick SOFA" Operator="addition" id="18576">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18570" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="18571" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="18572" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="18574" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <operation name="Criterios Internacao" Operator="addition" id="18575"/>
+  <operation name="Quick SOFA" Operator="addition" id="18576">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18570" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="18571" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="18572" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pielonefrite_sintomas_1" id="18568" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pielonefrite_sintomas_2" id="18569" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_confusao_mental" id="18570" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_pas_baixa" id="18571" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quick_sofa_fr_alta" id="18572" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="18573" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="18574" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

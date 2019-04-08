@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3118" url="" name="Hipertens&#xe3;o Arterial Sist&#xea;mica" code="H044">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17555" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Anamnese + Exame F&#xed;sico" description="Anamnese completa e exame f&#xed;sico." isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="PA acentuadamente alta? (PAS >= 180 e PAD >= 120  mmHg)" url="" id="9121">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pa_alta" id="17339" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17556" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Apresenta Les&#xe3;o?" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Paciente com les&#xe3;o de &#xf3;rg&#xe3;o-alvo?" url="" id="9122">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="lesao_orgao_alvo" id="17340" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17557" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Hipertens&#xe3;o" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.3 //@sequence.4">
+    <questions text="Emerg&#xea;ncia Hipertensiva: Paciente com les&#xe3;o aguda de &#xf3;rg&#xe3;os-alvo e risco iminente de morte. Ex: encefalopatia hipertensiva, AVC, dissec&#xe7;&#xe3;o aorta, edema agudo de pulm&#xe3;o, s&#xed;ndrome coronariana aguda, crise de feocromocitoma, pr&#xe9;-ecl&#xe2;mpsia." url="" id="9123">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="emergencia_hipertensiva" id="17421" weight="1" value="false"/>
+    </questions>
+    <questions text="Urg&#xea;ncia Hipertensiva: Paciente com risco potencial de les&#xe3;o aguda de &#xf3;rg&#xe3;os-alvo. Ex: com alguma les&#xe3;o pr&#xe9;via de &#xf3;rg&#xe3;o-alvo (IAM, AVC ou ICC) apresentando, portanto, maior risco de novas complica&#xe7;&#xf5;es em curto prazo na vig&#xea;ncia de PA acentuadamente alta." url="" id="9124">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_hipertensiva" id="17422" weight="1" value="false"/>
+    </questions>
+    <questions text="Pseudocrise Hipertensiva: O aumento da PA &#xe9; desencadeado por dor (c&#xf3;licas, cefaleias, fibromialgia), ansiedade e/ou abandono do tratamento anti-hipertensivo." url="" id="9125">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pseudocrise_hipertensiva" id="17423" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17558" type="Tratamento" type_verbose="Tratamento" url="" name="Emerg&#xea;ncia Hipertensiva" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>Discutir caso com l&amp;iacute;der local&lt;br />&#xA;Encaminhar para sala de cuidados, iniciar anti-hipertensivo parenteral, diferenciar e tratar conforme a causa da emerg&amp;ecirc;ncia hipertensiva e internamento em UTI&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>Se suspeita de AVC&lt;/strong>, solicitar tomografia de cr&amp;acirc;nio sem contraste, avalia&amp;ccedil;&amp;atilde;o da neurologia. Diminuir em 15% a PA nas primeiras 24h, alcan&amp;ccedil;ando 160x100 mmHg (evitar PA inferior a este valor)&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>Se suspeita de pr&amp;eacute;-ecl&amp;acirc;mpsia&lt;/strong>, solicitar tamb&amp;eacute;m LDH, TGO, TGP, bilirrubinas&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.2 //@sequence.5">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Emerg&#xea;ncia hipertensiva" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17559" type="Tratamento" type_verbose="Tratamento" url="" name="Urg&#xea;ncia Hipertensiva" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>Avaliar solicita&amp;ccedil;&amp;atilde;o de exames complementares conforme a comorbidade pr&amp;eacute;via do paciente e sintomas atuais associados.&amp;nbsp;&lt;br />&#xA;&lt;br />&#xA;Realizar tratamento anti-hipertensivo via oral com captopril ou clonidina (se disfun&amp;ccedil;&amp;atilde;o renal). Reavaliar PA ap&amp;oacute;s 1 hora, com objetivo PA &amp;lt;= 160x100&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>Caso paciente apresente disfun&amp;ccedil;&amp;atilde;o renal, discutir caso com chefe local para prescri&amp;ccedil;&amp;atilde;o de Clonidina.&lt;br />&#xA;&lt;br />&#xA;Se paciente assintom&amp;aacute;tico, est&amp;aacute;vel, ajustar prescri&amp;ccedil;&amp;atilde;o de anti-hipertensivos de uso em domic&amp;iacute;lio, marcar consulta ambulatorial com cardiologista e procurar a emerg&amp;ecirc;ncia caso nova crise hipertensiva&lt;/span>&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.11">
+    <medication url="" med_id="36560" id="9070" name="CAPOTEN 25 MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="9070" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17560" type="Tratamento" type_verbose="Tratamento" url="" name="Pseudocrise Hipertensiva" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>Tratar a causa de base do aumento da PA&lt;/strong>&lt;br />&#xA;&lt;br />&#xA;Realizar nova avalia&amp;ccedil;&amp;atilde;o da PA ap&amp;oacute;s 1 hora&lt;br />&#xA;&lt;br />&#xA;Se paciente assintom&amp;aacute;tico, est&amp;aacute;vel, marcar consulta ambulatorial com cl&amp;iacute;nico geral para pesquisa de diagn&amp;oacute;sticos diferenciais ou procurar cardiologista em caso de abandono do tratamento ou otimiza&amp;ccedil;&amp;atilde;o terap&amp;ecirc;utica nos pacientes hipertensos pr&amp;eacute;vios&lt;/span>&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.12">
+    <medication url="" med_id="38075" id="9071" name="DIAZEPAN 10 MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9071" standard="null"/>
+    <medication url="" med_id="38008" id="9072" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9072" standard="null"/>
+    <medication url="" med_id="59609" id="9073" name="PROFENID 100MG IV FRAP 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9073" standard="null"/>
+    <medication url="" med_id="39586" id="9074" name="TRAMAL 100MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9074" standard="null"/>
+    <medication url="" med_id="38121" id="9075" name="DIAZEPAN 5 MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="9075" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17661" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar Epis&#xf3;dio" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <questions text="Epis&#xf3;dio de crise hipertensiva" url="" id="9126">
+      <answers xsi:type="pathwayMetamodel:Choice" name="episodio_has" id="17424" weight="1" value="0.0">
+        <option description="Primeiro epis&#xf3;dio" weight="1"/>
+        <option description="Paciente j&#xe1; hipertenso previamente" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17662" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Apresenta Sintomas Associados?" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9 //@sequence.10">
+    <questions text="Paciente com algum sintoma associado? Dor tor&#xe1;cica? Dispneia? Cefaleia importante? Dor abdominal? Tontura?" url="" id="9127">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_associados" id="17425" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17663" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Mudan&#xe7;a de Estilo de Vida + Cardiologista" description="&lt;h3>&lt;span style=&quot;font-size:14px&quot;>Orienta&amp;ccedil;&amp;otilde;es quanto a mudan&amp;ccedil;a de estilo de vida (perda de peso, abandono do tabagismo, alimenta&amp;ccedil;&amp;atilde;o hiposs&amp;oacute;dica)&lt;br />&#xA;&lt;br />&#xA;&lt;strong>Agendar consulta ambulatorial com cardiologista.&lt;/strong>&lt;/span>&lt;/h3>" isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Information" id="17664" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Ajuste da Terapia Hipertensiva" description="&lt;p>Realizar ajuste de terapia anti-hipertensiva e orienta&amp;ccedil;&amp;otilde;es de mudan&amp;ccedil;a de vida&lt;br />&#xA;&lt;br />&#xA;Agendar consulta ambulatorial com cardiologista.&lt;/p>" isTerminal="true" inputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Information" id="17665" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhamentos" description="&lt;p>Encaminhar paciente ao protocolo adequado.&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Dor tor&amp;aacute;cica&lt;/li>&#xA;&#x9;&lt;li>Dispneia&lt;/li>&#xA;&#x9;&lt;li>Cefaleia importante&lt;/li>&#xA;&#x9;&lt;li>Dor abdominal&lt;/li>&#xA;&#x9;&lt;li>Tontura&lt;/li>&#xA;&#x9;&lt;li>Outros&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17666" type="Receita" type_verbose="Receita" url="" name="[Receita] Urg&#xea;ncia Hipertensiva" description="" isTerminal="true" inputSequences="//@sequence.11">
+    <item id="4616" url="" name="Captopril 25mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="4617" url="" name="Losartan 50mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17667" type="Receita" type_verbose="Receita" url="" name="[Receita] Pseudocrise Hipertensiva" description="" isTerminal="true" inputSequences="//@sequence.12">
+    <item id="4618" url="" name="Cetoprofeno 100mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+    <item id="4619" url="" name="Paracetamol 750mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Enquanto durarem os sintomas"/>
+    <item id="4620" url="" name="Valeriane 50mg" med_code="-1" presentation="COMP" access="1" quantity="1" period="5" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17668" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (PA acentuadamente alta)" description="PA acentuadamente alta">
+    <operation name="PA acentuadamente alta" Operator="affirmation" id="17431">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pa_alta" id="17339" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17669" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (PA normal)" description="PA normal">
+    <operation name="PA normal" id="17432">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pa_alta" id="17339" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="17670" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (emergencia hipertensiva)" description="emergencia hipertensiva">
+    <operation name="emergencia hipertensiva" Operator="affirmation" id="17433">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="emergencia_hipertensiva" id="17421" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="17671" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (urgencia hipertensiva)" description="urgencia hipertensiva">
+    <operation name="urgencia hipertensiva" Operator="affirmation" id="17434">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_hipertensiva" id="17422" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="17672" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (pseudocrise hipertensiva)" description="pseudocrise hipertensiva">
+    <operation name="pseudocrise hipertensiva" Operator="affirmation" id="17435">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="pseudocrise_hipertensiva" id="17423" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="17673" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (com les&#xe3;o em orgao ativo)" description="Com les&#xe3;o aguda em &#xf3;rg&#xe3;o alvo">
+    <operation name="com les&#xe3;o em orgao ativo" Operator="affirmation" id="17436">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="lesao_orgao_alvo" id="17340" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="17674" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (sem les&#xe3;o em orgao ativo)" description="sem les&#xe3;o em orgao ativo">
+    <operation name="sem les&#xe3;o em orgao ativo" id="17437">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="lesao_orgao_alvo" id="17340" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="17675" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.7" id="17676" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (apresenta sintomas associados)" description="apresenta sintomas associados">
+    <operation name="apresenta sintomas associados" Operator="affirmation" id="17438">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_associados" id="17425" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="17677" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (primeiro episodio, sem sintomas associados)" description="primeiro episodio, sem sintomas associados">
+    <operation name="primeiro episodio, sem sintomas associados" Operator="and" id="17439">
+      <operand xsi:type="pathwayMetamodel:Operation" name="primeiro episodio" Operator="equal" id="17428">
+        <operand xsi:type="pathwayMetamodel:Choice" name="episodio_has" id="17424" weight="1" value="0.0">
+          <option description="Primeiro epis&#xf3;dio" weight="1"/>
+          <option description="Paciente j&#xe1; hipertenso previamente" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17426" weight="1" value="1.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem sintomas associados" id="17430">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_associados" id="17425" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="17678" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (previamente diagnosticado, sem sintomas associados)" description="previamente diagnosticado, sem sintomas associados">
+    <operation name="previamente diagnosticado, sem sintomas associados" Operator="and" id="17440">
+      <operand xsi:type="pathwayMetamodel:Operation" name="previamente diagnosticado" Operator="equal" id="17429">
+        <operand xsi:type="pathwayMetamodel:Choice" name="episodio_has" id="17424" weight="1" value="0.0">
+          <option description="Primeiro epis&#xf3;dio" weight="1"/>
+          <option description="Paciente j&#xe1; hipertenso previamente" weight="2"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17427" weight="1" value="2.0"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem sintomas associados" id="17430">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_associados" id="17425" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.4" id="17679" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="-"/>
+  <sequence inputStep="//@element.12" outputStep="//@element.5" id="17680" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-"/>
+  <operation name="primeiro episodio" Operator="equal" id="17428">
+    <operand xsi:type="pathwayMetamodel:Choice" name="episodio_has" id="17424" weight="1" value="0.0">
+      <option description="Primeiro epis&#xf3;dio" weight="1"/>
+      <option description="Paciente j&#xe1; hipertenso previamente" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17426" weight="1" value="1.0"/>
+  </operation>
+  <operation name="previamente diagnosticado" Operator="equal" id="17429">
+    <operand xsi:type="pathwayMetamodel:Choice" name="episodio_has" id="17424" weight="1" value="0.0">
+      <option description="Primeiro epis&#xf3;dio" weight="1"/>
+      <option description="Paciente j&#xe1; hipertenso previamente" weight="2"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17427" weight="1" value="2.0"/>
+  </operation>
+  <operation name="sem sintomas associados" id="17430">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_associados" id="17425" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pa_alta" id="17339" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="lesao_orgao_alvo" id="17340" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="emergencia_hipertensiva" id="17421" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="urgencia_hipertensiva" id="17422" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pseudocrise_hipertensiva" id="17423" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="episodio_has" id="17424" weight="1" value="0.0">
+    <option description="Primeiro epis&#xf3;dio" weight="1"/>
+    <option description="Paciente j&#xe1; hipertenso previamente" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_associados" id="17425" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17426" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="17427" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

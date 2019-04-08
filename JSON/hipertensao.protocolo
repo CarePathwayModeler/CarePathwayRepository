@@ -1,0 +1,4525 @@
+{
+    "id": 642,
+    "url": "",
+    "codigo": "HIP",
+    "nome": "Hipertens\u00e3o",
+    "repositorio_id": 326,
+    "versao": 2,
+    "ultima_auditoria": null,
+    "criado_por": null,
+    "finalizado_por": null,
+    "elementos": [
+        {
+            "id": 3341,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reconhecer Press\u00e3o Arterial Alterada [Fluxo 01]",
+            "descricao": "Verifique a press\u00e3o arterial da paciente.",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1500,
+                    "url": "",
+                    "texto": "PAS >= 140 ou PAD >= 90?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2437,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_pas_pad",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 3376,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3341,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 01]",
+                    "passo_de_entrada_id": 3342,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Identificar Epis\u00f3dio [Fluxo 1]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3377,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "",
+                    "passo_de_saida_id": 3341,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 01]",
+                    "passo_de_entrada_id": 3353,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3342,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Identificar Epis\u00f3dio [Fluxo 1]",
+            "descricao": "Verifique o epis\u00f3dio de hipertens\u00e3o da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1541,
+                    "url": "",
+                    "texto": "Primeiro Epis\u00f3dio?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2438,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_primeiro_ep_fluxo_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3376,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3341,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 01]",
+                    "passo_de_entrada_id": 3342,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Identificar Epis\u00f3dio [Fluxo 1]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3378,
+                    "url": "",
+                    "nome": "s3",
+                    "descricao": "",
+                    "passo_de_saida_id": 3342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar Epis\u00f3dio [Fluxo 1]",
+                    "passo_de_entrada_id": 3344,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3379,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "",
+                    "passo_de_saida_id": 3342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar Epis\u00f3dio [Fluxo 1]",
+                    "passo_de_entrada_id": 3343,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3343,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+            "descricao": "Analise o resultado dos exames de pr\u00e9-ecl\u00e2npsia para seguir com o protocolo.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1542,
+                    "url": "",
+                    "texto": "Exames pr\u00e9-ecl\u00e2mpsia alterados?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2439,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_exames_alterados_fluxo_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3379,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "",
+                    "passo_de_saida_id": 3342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar Epis\u00f3dio [Fluxo 1]",
+                    "passo_de_entrada_id": 3343,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3380,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "",
+                    "passo_de_saida_id": 3343,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                    "passo_de_entrada_id": 3344,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3381,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "",
+                    "passo_de_saida_id": 3343,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                    "passo_de_entrada_id": 3345,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3344,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+            "descricao": "Verifique a idade gestacional da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1543,
+                    "url": "",
+                    "texto": "IG acima de 20 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2440,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_ig_12_36_fluxo_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3378,
+                    "url": "",
+                    "nome": "s3",
+                    "descricao": "",
+                    "passo_de_saida_id": 3342,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar Epis\u00f3dio [Fluxo 1]",
+                    "passo_de_entrada_id": 3344,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3380,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "",
+                    "passo_de_saida_id": 3343,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                    "passo_de_entrada_id": 3344,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3385,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3344,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "passo_de_entrada_id": 3348,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de AAS",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3386,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "",
+                    "passo_de_saida_id": 3344,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "passo_de_entrada_id": 3349,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3345,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+            "descricao": "Verifique se h\u00e1 necessidade de encaminhar paciente para a emerg\u00eancia?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1544,
+                    "url": "",
+                    "texto": "H\u00e1 necessidade de encaminhar paciente para a emerg\u00eancia?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2501,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_necessita_emergencia_fluxo_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3381,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "",
+                    "passo_de_saida_id": 3343,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                    "passo_de_entrada_id": 3345,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3382,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "",
+                    "passo_de_saida_id": 3345,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+                    "passo_de_entrada_id": 3346,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar para emerg\u00eancia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3383,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3345,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+                    "passo_de_entrada_id": 3347,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Gerar aprazamento de retorno quinzenal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3346,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar para emerg\u00eancia",
+            "descricao": "Encaminhar paciente para emerg\u00eancia.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_nascer_bem",
+            "entradas": {
+                "codigo_tipo": "2",
+                "observacao": "Paciente necessita de cuidados na emerg\u00eancia."
+            }
+        },
+        {
+            "id": 3347,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Gerar aprazamento de retorno quinzenal",
+            "descricao": "Gerar aprazamento de retorno quinzenal para m\u00e9dico",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "aprazamento de retorno QUINZENAL para m\u00e9dico",
+                "codigo_retorno": "2",
+                "tipo_profissional": "M",
+                "codigo_risco": "1"
+            }
+        },
+        {
+            "id": 3348,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de AAS",
+            "descricao": "Prescrever AAS para a paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3385,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3344,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "passo_de_entrada_id": 3348,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de AAS",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3387,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 3348,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de AAS",
+                    "passo_de_entrada_id": 3349,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3349,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+            "descricao": "Solicite o pacote de exames pr\u00e9-eclampsia",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28011368",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010655",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28130588",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "40322483",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "27040380",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010175",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3386,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "",
+                    "passo_de_saida_id": 3344,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                    "passo_de_entrada_id": 3349,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3387,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 3348,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de AAS",
+                    "passo_de_entrada_id": 3349,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3388,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 3349,
+                    "passo_de_saida": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                    "passo_de_entrada_id": 3350,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3350,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+            "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1545,
+                    "url": "",
+                    "texto": "H\u00e1 necessidade de prescri\u00e7\u00e3o adicional?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2502,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_prescricao_adicional_fluxo_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3388,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 3349,
+                    "passo_de_saida": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                    "passo_de_entrada_id": 3350,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3389,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 3350,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                    "passo_de_entrada_id": 3351,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3390,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "",
+                    "passo_de_saida_id": 3350,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                    "passo_de_entrada_id": 3374,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3351,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+            "descricao": "IMPORTANTE: \nPara os casos em que seja necess\u00e1rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at\u00e9 o fim e realizar a prescri\u00e7\u00e3o adicional ao retornar ao prontu\u00e1rio do Nascer Bem.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 3389,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 3350,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                    "passo_de_entrada_id": 3351,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3391,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "",
+                    "passo_de_saida_id": 3351,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                    "passo_de_entrada_id": 3374,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3352,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Gerar Aprazamento de retorno mensal",
+            "descricao": "Gerar aprazamento de retorno mensal para m\u00e9dico ou enfermeiro",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "aprazamento de retorno MENSAL para m\u00e9dico ou enfermeiro",
+                "codigo_retorno": "1",
+                "tipo_profissional": "M",
+                "codigo_risco": "1"
+            }
+        },
+        {
+            "id": 3353,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+            "descricao": "PAS entre 141 e 160 ou PAS entre 100 e 110?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1546,
+                    "url": "",
+                    "texto": "PAS entre 141 e 160 ou PAD entre 100 e 110?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2503,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_pas_pad_alterado_fluxo_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3377,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "",
+                    "passo_de_saida_id": 3341,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 01]",
+                    "passo_de_entrada_id": 3353,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3393,
+                    "url": "",
+                    "nome": "s18",
+                    "descricao": "",
+                    "passo_de_saida_id": 3353,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                    "passo_de_entrada_id": 3354,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Identificar Episodio [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3394,
+                    "url": "",
+                    "nome": "s19",
+                    "descricao": "",
+                    "passo_de_saida_id": 3353,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                    "passo_de_entrada_id": 3355,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar para urg\u00eancia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3354,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Identificar Episodio [Fluxo 2]",
+            "descricao": "Verifique o episodio de hipertens\u00e3o da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1547,
+                    "url": "",
+                    "texto": "Primeiro Epis\u00f3dio?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2504,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_primeiro_episodio_fluxo_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3393,
+                    "url": "",
+                    "nome": "s18",
+                    "descricao": "",
+                    "passo_de_saida_id": 3353,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                    "passo_de_entrada_id": 3354,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Identificar Episodio [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3396,
+                    "url": "",
+                    "nome": "s21",
+                    "descricao": "",
+                    "passo_de_saida_id": 3354,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar Episodio [Fluxo 2]",
+                    "passo_de_entrada_id": 3357,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar para Cardiologista",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3397,
+                    "url": "",
+                    "nome": "s22",
+                    "descricao": "",
+                    "passo_de_saida_id": 3354,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar Episodio [Fluxo 2]",
+                    "passo_de_entrada_id": 3356,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3355,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar para urg\u00eancia",
+            "descricao": "Gerar encaminhamento de urg\u00eancia com diagn\u00f3stico de pr\u00e9-ecl\u00e2mpsia com gravidade",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_nascer_bem",
+            "entradas": {
+                "codigo_tipo": "2",
+                "observacao": "Paciente com diagn\u00f3stico de pr\u00e9-ecl\u00e2mpsia com gravidade"
+            }
+        },
+        {
+            "id": 3356,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+            "descricao": "Verifique o resultado dos exames de pr\u00e9-eclampsia",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1548,
+                    "url": "",
+                    "texto": "Exames pr\u00e9-ecl\u00e2mpsia alterados?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2505,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_exames_pre_eclampsia_alterados_fluxo_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3397,
+                    "url": "",
+                    "nome": "s22",
+                    "descricao": "",
+                    "passo_de_saida_id": 3354,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar Episodio [Fluxo 2]",
+                    "passo_de_entrada_id": 3356,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3398,
+                    "url": "",
+                    "nome": "s23",
+                    "descricao": "",
+                    "passo_de_saida_id": 3356,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+                    "passo_de_entrada_id": 3355,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar para urg\u00eancia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3399,
+                    "url": "",
+                    "nome": "s24",
+                    "descricao": "",
+                    "passo_de_saida_id": 3356,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+                    "passo_de_entrada_id": 3357,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar para Cardiologista",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3357,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar para Cardiologista",
+            "descricao": "Gerar encaminhamento para cardiologista",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "2"
+            }
+        },
+        {
+            "id": 3358,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar para Nutricionista",
+            "descricao": "Gerar encaminhamento para nutricionaista",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "130"
+            }
+        },
+        {
+            "id": 3359,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Gerar aprazamento de retorno quinzenal [Fluxo 2]",
+            "descricao": "Gerar aprazamento de retorno quinzenal para m\u00e9dico",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "aprazamento de retorno QUINZENAL para m\u00e9dico",
+                "codigo_retorno": "2",
+                "tipo_profissional": "M",
+                "codigo_risco": "1"
+            }
+        },
+        {
+            "id": 3360,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+            "descricao": "Avalie os crit\u00e9rios para definir o tratamento adequado para a paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1549,
+                    "url": "",
+                    "texto": "Primeiro Epis\u00f3dio ou HAS Controlado?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2506,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_criterios_ep01_has_controlado",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1550,
+                    "url": "",
+                    "texto": "Segundo Epis\u00f3dio?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2507,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_criterios_ep02",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1551,
+                    "url": "",
+                    "texto": "Terceiro Epis\u00f3dio?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2508,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_criterios_ep03",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1552,
+                    "url": "",
+                    "texto": "Quarto Epis\u00f3dio?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2509,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_criterios_ep04",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1553,
+                    "url": "",
+                    "texto": "A partir do Quinto Epis\u00f3dio",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2510,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_criterios_ep05_ou_superior",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3403,
+                    "url": "",
+                    "nome": "s28",
+                    "descricao": "",
+                    "passo_de_saida_id": 3375,
+                    "passo_de_saida": "A\u00e7\u00e3o: Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO [Fluxo 2]",
+                    "passo_de_entrada_id": 3360,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3404,
+                    "url": "",
+                    "nome": "s29",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3361,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3405,
+                    "url": "",
+                    "nome": "s30",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3362,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3406,
+                    "url": "",
+                    "nome": "s31",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3363,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3407,
+                    "url": "",
+                    "nome": "s32",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3364,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 10mg",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3408,
+                    "url": "",
+                    "nome": "s33",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3365,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 20mg",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3361,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+            "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 650,
+                    "url": "",
+                    "nome": "METILDOPA",
+                    "medicamento": 7896181906193,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 8/8 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3404,
+                    "url": "",
+                    "nome": "s29",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3361,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3409,
+                    "url": "",
+                    "nome": "s34",
+                    "descricao": "",
+                    "passo_de_saida_id": 3361,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3362,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+            "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 651,
+                    "url": "",
+                    "nome": "METILDOPA",
+                    "medicamento": 7896181906193,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3405,
+                    "url": "",
+                    "nome": "s30",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3362,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3410,
+                    "url": "",
+                    "nome": "s35",
+                    "descricao": "",
+                    "passo_de_saida_id": 3362,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3363,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+            "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 668,
+                    "url": "",
+                    "nome": "METILDOPA",
+                    "medicamento": 7896181904793,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar: 01 comprimido de 06/06 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3406,
+                    "url": "",
+                    "nome": "s31",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3363,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3411,
+                    "url": "",
+                    "nome": "s36",
+                    "descricao": "",
+                    "passo_de_saida_id": 3363,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3364,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 10mg",
+            "descricao": "Gerar prescri\u00e7\u00e3o de metildopa e nifedipina 10 mg\n\nAten\u00e7\u00e3o:\nNo caso de retorno as quantidades de METILDOPA ser\u00e3o alteradas:\n- Metildopa 500mg / Posologia: 01 comprimido de 08/08horas.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 652,
+                    "url": "",
+                    "nome": "METILDOPA",
+                    "medicamento": 7896181906193,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3407,
+                    "url": "",
+                    "nome": "s32",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3364,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 10mg",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3412,
+                    "url": "",
+                    "nome": "s37",
+                    "descricao": "",
+                    "passo_de_saida_id": 3364,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 10mg",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3365,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 20mg",
+            "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 500 mg 6/6 h e nifedipina 20 mg12/12h",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 653,
+                    "url": "",
+                    "nome": "METILDOPA",
+                    "medicamento": 7896181906193,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6 horas"
+                },
+                {
+                    "id": 654,
+                    "url": "",
+                    "nome": "NIFELAT",
+                    "medicamento": 7896181904281,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3408,
+                    "url": "",
+                    "nome": "s33",
+                    "descricao": "",
+                    "passo_de_saida_id": 3360,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3365,
+                    "passo_de_entrada": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 20mg",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3413,
+                    "url": "",
+                    "nome": "s38",
+                    "descricao": "",
+                    "passo_de_saida_id": 3365,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 20mg",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3366,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+            "descricao": "Verifique a idade gestacional da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1554,
+                    "url": "",
+                    "texto": "IG acima de 20 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2511,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_ig_12_36_fluxo_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3409,
+                    "url": "",
+                    "nome": "s34",
+                    "descricao": "",
+                    "passo_de_saida_id": 3361,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3410,
+                    "url": "",
+                    "nome": "s35",
+                    "descricao": "",
+                    "passo_de_saida_id": 3362,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3411,
+                    "url": "",
+                    "nome": "s36",
+                    "descricao": "",
+                    "passo_de_saida_id": 3363,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3412,
+                    "url": "",
+                    "nome": "s37",
+                    "descricao": "",
+                    "passo_de_saida_id": 3364,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 10mg",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3413,
+                    "url": "",
+                    "nome": "s38",
+                    "descricao": "",
+                    "passo_de_saida_id": 3365,
+                    "passo_de_saida": "Receita: Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 20mg",
+                    "passo_de_entrada_id": 3366,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3414,
+                    "url": "",
+                    "nome": "s39",
+                    "descricao": "",
+                    "passo_de_saida_id": 3366,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "passo_de_entrada_id": 3367,
+                    "passo_de_entrada": "Receita: Adicionar AAS na prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3420,
+                    "url": "",
+                    "nome": "s45",
+                    "descricao": "",
+                    "passo_de_saida_id": 3366,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3367,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Adicionar AAS na prescri\u00e7\u00e3o",
+            "descricao": "Adicionar AAS na prescri\u00e7\u00e3o da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3414,
+                    "url": "",
+                    "nome": "s39",
+                    "descricao": "",
+                    "passo_de_saida_id": 3366,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "passo_de_entrada_id": 3367,
+                    "passo_de_entrada": "Receita: Adicionar AAS na prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3415,
+                    "url": "",
+                    "nome": "s40",
+                    "descricao": "",
+                    "passo_de_saida_id": 3367,
+                    "passo_de_saida": "Receita: Adicionar AAS na prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3368,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3368,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+            "descricao": "verifique a idade gestacional da paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1555,
+                    "url": "",
+                    "texto": "IG entre 24 e 36 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2512,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_ig_24_36_fluxo_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3415,
+                    "url": "",
+                    "nome": "s40",
+                    "descricao": "",
+                    "passo_de_saida_id": 3367,
+                    "passo_de_saida": "Receita: Adicionar AAS na prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3368,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3416,
+                    "url": "",
+                    "nome": "s41",
+                    "descricao": "",
+                    "passo_de_saida_id": 3368,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                    "passo_de_entrada_id": 3369,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar indica\u00e7\u00e3o de corticoide",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3417,
+                    "url": "",
+                    "nome": "s42",
+                    "descricao": "",
+                    "passo_de_saida_id": 3368,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3369,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar indica\u00e7\u00e3o de corticoide",
+            "descricao": "Paciente apresenta indica\u00e7\u00e3o de corticoide?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1556,
+                    "url": "",
+                    "texto": "Paciente tem indica\u00e7\u00e3o de corticoide?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2513,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_indicacao_corticoide",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3416,
+                    "url": "",
+                    "nome": "s41",
+                    "descricao": "",
+                    "passo_de_saida_id": 3368,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                    "passo_de_entrada_id": 3369,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar indica\u00e7\u00e3o de corticoide",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3418,
+                    "url": "",
+                    "nome": "s43",
+                    "descricao": "",
+                    "passo_de_saida_id": 3369,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar indica\u00e7\u00e3o de corticoide",
+                    "passo_de_entrada_id": 3373,
+                    "passo_de_entrada": "Receita: Adicionar betametasona na prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3424,
+                    "url": "",
+                    "nome": "s49",
+                    "descricao": "",
+                    "passo_de_saida_id": 3369,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar indica\u00e7\u00e3o de corticoide",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3370,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+            "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1557,
+                    "url": "",
+                    "texto": "H\u00e1 necessidade de prescri\u00e7\u00e3o adicional?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2514,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "hiper_precricao_adicional_fluxo_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3417,
+                    "url": "",
+                    "nome": "s42",
+                    "descricao": "",
+                    "passo_de_saida_id": 3368,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3419,
+                    "url": "",
+                    "nome": "s44",
+                    "descricao": "",
+                    "passo_de_saida_id": 3373,
+                    "passo_de_saida": "Receita: Adicionar betametasona na prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3420,
+                    "url": "",
+                    "nome": "s45",
+                    "descricao": "",
+                    "passo_de_saida_id": 3366,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3424,
+                    "url": "",
+                    "nome": "s49",
+                    "descricao": "",
+                    "passo_de_saida_id": 3369,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar indica\u00e7\u00e3o de corticoide",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3421,
+                    "url": "",
+                    "nome": "s46",
+                    "descricao": "",
+                    "passo_de_saida_id": 3370,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "passo_de_entrada_id": 3371,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3423,
+                    "url": "",
+                    "nome": "s48",
+                    "descricao": "",
+                    "passo_de_saida_id": 3370,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "passo_de_entrada_id": 3372,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia + US com Doppler e Cardiograma",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3371,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+            "descricao": "IMPORTANTE:\nPara os casos em que seja necess\u00e1rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at\u00e9 o fim  e realizar a prescri\u00e7\u00e3o adicional ao retornar ao prontu\u00e1rio do Nascer Bem.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 3421,
+                    "url": "",
+                    "nome": "s46",
+                    "descricao": "",
+                    "passo_de_saida_id": 3370,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "passo_de_entrada_id": 3371,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3422,
+                    "url": "",
+                    "nome": "s47",
+                    "descricao": "",
+                    "passo_de_saida_id": 3371,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                    "passo_de_entrada_id": 3372,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia + US com Doppler e Cardiograma",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3372,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Pacote de Exames Pr\u00e9-Eclampsia + US com Doppler e Cardiograma",
+            "descricao": "Solicitar pacote de exames para a paciente.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28011368",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010655",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28130588",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "40322483",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "27040380",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010175",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "40901424",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "80057101",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Hipertens\u00e3o",
+                    "indicacao_clinica": "Protocolo de Hipertens\u00e3o",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3422,
+                    "url": "",
+                    "nome": "s47",
+                    "descricao": "",
+                    "passo_de_saida_id": 3371,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                    "passo_de_entrada_id": 3372,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia + US com Doppler e Cardiograma",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3423,
+                    "url": "",
+                    "nome": "s48",
+                    "descricao": "",
+                    "passo_de_saida_id": 3370,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "passo_de_entrada_id": 3372,
+                    "passo_de_entrada": "Tratamento: Solicitar Pacote de Exames Pr\u00e9-Eclampsia + US com Doppler e Cardiograma",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3373,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Adicionar betametasona na prescri\u00e7\u00e3o",
+            "descricao": "Adicionar betametasona na prescri\u00e7\u00e3o. Definir o codigo do medicamento correto para inserir na prescri\u00e7\u00e3o.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3418,
+                    "url": "",
+                    "nome": "s43",
+                    "descricao": "",
+                    "passo_de_saida_id": 3369,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar indica\u00e7\u00e3o de corticoide",
+                    "passo_de_entrada_id": 3373,
+                    "passo_de_entrada": "Receita: Adicionar betametasona na prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3419,
+                    "url": "",
+                    "nome": "s44",
+                    "descricao": "",
+                    "passo_de_saida_id": 3373,
+                    "passo_de_saida": "Receita: Adicionar betametasona na prescri\u00e7\u00e3o",
+                    "passo_de_entrada_id": 3370,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3374,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+            "descricao": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_guia_controle",
+            "entradas": {
+                "tipo_controle": "1"
+            }
+        },
+        {
+            "id": 3375,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO [Fluxo 2]",
+            "descricao": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_guia_controle",
+            "entradas": {
+                "tipo_controle": "1"
+            }
+        },
+        {
+            "id": 3376,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s1",
+            "descricao": "",
+            "passo_de_saida_id": 3341,
+            "passo_de_saida": {
+                "id": 3341,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reconhecer Press\u00e3o Arterial Alterada [Fluxo 01]",
+                "descricao": "Verifique a press\u00e3o arterial da paciente.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3342,
+            "passo_de_entrada": {
+                "id": 3342,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar Epis\u00f3dio [Fluxo 1]",
+                "descricao": "Verifique o epis\u00f3dio de hipertens\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2515,
+                "nome": "PAS_maior_igual_130_ou_PAD_maior_igual_90",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2437
+                ],
+                "argumentos": [
+                    "hiper_pas_pad"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3377,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s2",
+            "descricao": "",
+            "passo_de_saida_id": 3341,
+            "passo_de_saida": {
+                "id": 3341,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reconhecer Press\u00e3o Arterial Alterada [Fluxo 01]",
+                "descricao": "Verifique a press\u00e3o arterial da paciente.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3353,
+            "passo_de_entrada": {
+                "id": 3353,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                "descricao": "PAS entre 141 e 160 ou PAS entre 100 e 110?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2516,
+                "nome": "PAS_menor_130_ou_PAD_menor_90",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2437
+                ],
+                "argumentos": [
+                    "hiper_pas_pad"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3378,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s3",
+            "descricao": "",
+            "passo_de_saida_id": 3342,
+            "passo_de_saida": {
+                "id": 3342,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar Epis\u00f3dio [Fluxo 1]",
+                "descricao": "Verifique o epis\u00f3dio de hipertens\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3344,
+            "passo_de_entrada": {
+                "id": 3344,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2517,
+                "nome": "primeiro_episodio_fluxo_01",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2438
+                ],
+                "argumentos": [
+                    "hiper_primeiro_ep_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3379,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s4",
+            "descricao": "",
+            "passo_de_saida_id": 3342,
+            "passo_de_saida": {
+                "id": 3342,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar Epis\u00f3dio [Fluxo 1]",
+                "descricao": "Verifique o epis\u00f3dio de hipertens\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3343,
+            "passo_de_entrada": {
+                "id": 3343,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                "descricao": "Analise o resultado dos exames de pr\u00e9-ecl\u00e2npsia para seguir com o protocolo.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2518,
+                "nome": "segundo_episodio_ou_superior",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2438
+                ],
+                "argumentos": [
+                    "hiper_primeiro_ep_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3380,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s5",
+            "descricao": "",
+            "passo_de_saida_id": 3343,
+            "passo_de_saida": {
+                "id": 3343,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                "descricao": "Analise o resultado dos exames de pr\u00e9-ecl\u00e2npsia para seguir com o protocolo.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3344,
+            "passo_de_entrada": {
+                "id": 3344,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2519,
+                "nome": "sem_alteracao_exames_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2439
+                ],
+                "argumentos": [
+                    "hiper_exames_alterados_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3381,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s6",
+            "descricao": "",
+            "passo_de_saida_id": 3343,
+            "passo_de_saida": {
+                "id": 3343,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 1]",
+                "descricao": "Analise o resultado dos exames de pr\u00e9-ecl\u00e2npsia para seguir com o protocolo.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3345,
+            "passo_de_entrada": {
+                "id": 3345,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+                "descricao": "Verifique se h\u00e1 necessidade de encaminhar paciente para a emerg\u00eancia?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2520,
+                "nome": "exames_alterados_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2439
+                ],
+                "argumentos": [
+                    "hiper_exames_alterados_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3382,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s7",
+            "descricao": "",
+            "passo_de_saida_id": 3345,
+            "passo_de_saida": {
+                "id": 3345,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+                "descricao": "Verifique se h\u00e1 necessidade de encaminhar paciente para a emerg\u00eancia?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3346,
+            "passo_de_entrada": {
+                "id": 3346,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para emerg\u00eancia",
+                "descricao": "Encaminhar paciente para emerg\u00eancia.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 64,
+                "servico": "Encaminhamento Nascer Bem"
+            },
+            "operacao": {
+                "id": 2521,
+                "nome": "paciente_necessita_emergencia_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2501
+                ],
+                "argumentos": [
+                    "hiper_necessita_emergencia_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3383,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s8",
+            "descricao": "",
+            "passo_de_saida_id": 3345,
+            "passo_de_saida": {
+                "id": 3345,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Encaminhamento para Emerg\u00eancia",
+                "descricao": "Verifique se h\u00e1 necessidade de encaminhar paciente para a emerg\u00eancia?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3347,
+            "passo_de_entrada": {
+                "id": 3347,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar aprazamento de retorno quinzenal",
+                "descricao": "Gerar aprazamento de retorno quinzenal para m\u00e9dico",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": {
+                "id": 2522,
+                "nome": "paciente_nao_necessita_emergencia_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2501
+                ],
+                "argumentos": [
+                    "hiper_necessita_emergencia_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3384,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s9",
+            "descricao": "",
+            "passo_de_saida_id": 3346,
+            "passo_de_saida": {
+                "id": 3346,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para emerg\u00eancia",
+                "descricao": "Encaminhar paciente para emerg\u00eancia.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 64,
+                "servico": "Encaminhamento Nascer Bem"
+            },
+            "passo_de_entrada_id": 3347,
+            "passo_de_entrada": {
+                "id": 3347,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar aprazamento de retorno quinzenal",
+                "descricao": "Gerar aprazamento de retorno quinzenal para m\u00e9dico",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3385,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s10",
+            "descricao": "",
+            "passo_de_saida_id": 3344,
+            "passo_de_saida": {
+                "id": 3344,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3348,
+            "passo_de_entrada": {
+                "id": 3348,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de AAS",
+                "descricao": "Prescrever AAS para a paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2523,
+                "nome": "idade_gestacional_entre_12_36_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2440
+                ],
+                "argumentos": [
+                    "hiper_ig_12_36_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3386,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s11",
+            "descricao": "",
+            "passo_de_saida_id": 3344,
+            "passo_de_saida": {
+                "id": 3344,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 1]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3349,
+            "passo_de_entrada": {
+                "id": 3349,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                "descricao": "Solicite o pacote de exames pr\u00e9-eclampsia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2524,
+                "nome": "idade_gestacional_fora_intervalo_12_36_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2440
+                ],
+                "argumentos": [
+                    "hiper_ig_12_36_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3387,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s12",
+            "descricao": "",
+            "passo_de_saida_id": 3348,
+            "passo_de_saida": {
+                "id": 3348,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de AAS",
+                "descricao": "Prescrever AAS para a paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3349,
+            "passo_de_entrada": {
+                "id": 3349,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                "descricao": "Solicite o pacote de exames pr\u00e9-eclampsia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3388,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s13",
+            "descricao": "",
+            "passo_de_saida_id": 3349,
+            "passo_de_saida": {
+                "id": 3349,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Pacote de Exames Pr\u00e9-Eclampsia",
+                "descricao": "Solicite o pacote de exames pr\u00e9-eclampsia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3350,
+            "passo_de_entrada": {
+                "id": 3350,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3389,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s14",
+            "descricao": "",
+            "passo_de_saida_id": 3350,
+            "passo_de_saida": {
+                "id": 3350,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3351,
+            "passo_de_entrada": {
+                "id": 3351,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                "descricao": "IMPORTANTE: \nPara os casos em que seja necess\u00e1rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at\u00e9 o fim e realizar a prescri\u00e7\u00e3o adicional ao retornar ao prontu\u00e1rio do Nascer Bem.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2525,
+                "nome": "com_prescricao_adicional_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2502
+                ],
+                "argumentos": [
+                    "hiper_prescricao_adicional_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3390,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s15",
+            "descricao": "",
+            "passo_de_saida_id": 3350,
+            "passo_de_saida": {
+                "id": 3350,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3374,
+            "passo_de_entrada": {
+                "id": 3374,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "descricao": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "operacao": {
+                "id": 2526,
+                "nome": "sem_prescricao_adicional_fluxo_1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2502
+                ],
+                "argumentos": [
+                    "hiper_prescricao_adicional_fluxo_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3391,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s16",
+            "descricao": "",
+            "passo_de_saida_id": 3351,
+            "passo_de_saida": {
+                "id": 3351,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                "descricao": "IMPORTANTE: \nPara os casos em que seja necess\u00e1rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at\u00e9 o fim e realizar a prescri\u00e7\u00e3o adicional ao retornar ao prontu\u00e1rio do Nascer Bem.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3374,
+            "passo_de_entrada": {
+                "id": 3374,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "descricao": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3392,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s17",
+            "descricao": "",
+            "passo_de_saida_id": 3374,
+            "passo_de_saida": {
+                "id": 3374,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "descricao": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "passo_de_entrada_id": 3352,
+            "passo_de_entrada": {
+                "id": 3352,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar Aprazamento de retorno mensal",
+                "descricao": "Gerar aprazamento de retorno mensal para m\u00e9dico ou enfermeiro",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3393,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s18",
+            "descricao": "",
+            "passo_de_saida_id": 3353,
+            "passo_de_saida": {
+                "id": 3353,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                "descricao": "PAS entre 141 e 160 ou PAS entre 100 e 110?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3354,
+            "passo_de_entrada": {
+                "id": 3354,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar Episodio [Fluxo 2]",
+                "descricao": "Verifique o episodio de hipertens\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2527,
+                "nome": "pas_pad_alterado_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2503
+                ],
+                "argumentos": [
+                    "hiper_pas_pad_alterado_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3394,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s19",
+            "descricao": "",
+            "passo_de_saida_id": 3353,
+            "passo_de_saida": {
+                "id": 3353,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reconhecer Press\u00e3o Arterial Alterada [Fluxo 02]",
+                "descricao": "PAS entre 141 e 160 ou PAS entre 100 e 110?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3355,
+            "passo_de_entrada": {
+                "id": 3355,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para urg\u00eancia",
+                "descricao": "Gerar encaminhamento de urg\u00eancia com diagn\u00f3stico de pr\u00e9-ecl\u00e2mpsia com gravidade",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 64,
+                "servico": "Encaminhamento Nascer Bem"
+            },
+            "operacao": {
+                "id": 2528,
+                "nome": "pas_maior_160_pad_maior_110",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2503
+                ],
+                "argumentos": [
+                    "hiper_pas_pad_alterado_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3395,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s20",
+            "descricao": "",
+            "passo_de_saida_id": 3355,
+            "passo_de_saida": {
+                "id": 3355,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para urg\u00eancia",
+                "descricao": "Gerar encaminhamento de urg\u00eancia com diagn\u00f3stico de pr\u00e9-ecl\u00e2mpsia com gravidade",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 64,
+                "servico": "Encaminhamento Nascer Bem"
+            },
+            "passo_de_entrada_id": 3357,
+            "passo_de_entrada": {
+                "id": 3357,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Cardiologista",
+                "descricao": "Gerar encaminhamento para cardiologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3396,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s21",
+            "descricao": "",
+            "passo_de_saida_id": 3354,
+            "passo_de_saida": {
+                "id": 3354,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar Episodio [Fluxo 2]",
+                "descricao": "Verifique o episodio de hipertens\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3357,
+            "passo_de_entrada": {
+                "id": 3357,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Cardiologista",
+                "descricao": "Gerar encaminhamento para cardiologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": {
+                "id": 2529,
+                "nome": "primeiro_ep_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2504
+                ],
+                "argumentos": [
+                    "hiper_primeiro_episodio_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3397,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s22",
+            "descricao": "",
+            "passo_de_saida_id": 3354,
+            "passo_de_saida": {
+                "id": 3354,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar Episodio [Fluxo 2]",
+                "descricao": "Verifique o episodio de hipertens\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3356,
+            "passo_de_entrada": {
+                "id": 3356,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+                "descricao": "Verifique o resultado dos exames de pr\u00e9-eclampsia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2530,
+                "nome": "segundo_ep_ou_posterior_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2504
+                ],
+                "argumentos": [
+                    "hiper_primeiro_episodio_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3398,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s23",
+            "descricao": "",
+            "passo_de_saida_id": 3356,
+            "passo_de_saida": {
+                "id": 3356,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+                "descricao": "Verifique o resultado dos exames de pr\u00e9-eclampsia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3355,
+            "passo_de_entrada": {
+                "id": 3355,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para urg\u00eancia",
+                "descricao": "Gerar encaminhamento de urg\u00eancia com diagn\u00f3stico de pr\u00e9-ecl\u00e2mpsia com gravidade",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 64,
+                "servico": "Encaminhamento Nascer Bem"
+            },
+            "operacao": {
+                "id": 2531,
+                "nome": "exames_alterados_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2505
+                ],
+                "argumentos": [
+                    "hiper_exames_pre_eclampsia_alterados_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3399,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s24",
+            "descricao": "",
+            "passo_de_saida_id": 3356,
+            "passo_de_saida": {
+                "id": 3356,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Resutados de Exames Pr\u00e9-Eclampsia [Fluxo 2]",
+                "descricao": "Verifique o resultado dos exames de pr\u00e9-eclampsia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3357,
+            "passo_de_entrada": {
+                "id": 3357,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Cardiologista",
+                "descricao": "Gerar encaminhamento para cardiologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": {
+                "id": 2532,
+                "nome": "sem_lateracao_exames_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2505
+                ],
+                "argumentos": [
+                    "hiper_exames_pre_eclampsia_alterados_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3400,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s25",
+            "descricao": "",
+            "passo_de_saida_id": 3357,
+            "passo_de_saida": {
+                "id": 3357,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Cardiologista",
+                "descricao": "Gerar encaminhamento para cardiologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3358,
+            "passo_de_entrada": {
+                "id": 3358,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Nutricionista",
+                "descricao": "Gerar encaminhamento para nutricionaista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3401,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s26",
+            "descricao": "",
+            "passo_de_saida_id": 3358,
+            "passo_de_saida": {
+                "id": 3358,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Nutricionista",
+                "descricao": "Gerar encaminhamento para nutricionaista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3359,
+            "passo_de_entrada": {
+                "id": 3359,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar aprazamento de retorno quinzenal [Fluxo 2]",
+                "descricao": "Gerar aprazamento de retorno quinzenal para m\u00e9dico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3402,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s27",
+            "descricao": "",
+            "passo_de_saida_id": 3359,
+            "passo_de_saida": {
+                "id": 3359,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar aprazamento de retorno quinzenal [Fluxo 2]",
+                "descricao": "Gerar aprazamento de retorno quinzenal para m\u00e9dico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "passo_de_entrada_id": 3375,
+            "passo_de_entrada": {
+                "id": 3375,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO [Fluxo 2]",
+                "descricao": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3403,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s28",
+            "descricao": "",
+            "passo_de_saida_id": 3375,
+            "passo_de_saida": {
+                "id": 3375,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO [Fluxo 2]",
+                "descricao": "Gerar impress\u00e3o de CONTROLE PRESS\u00d3RICO",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "passo_de_entrada_id": 3360,
+            "passo_de_entrada": {
+                "id": 3360,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                "descricao": "Avalie os crit\u00e9rios para definir o tratamento adequado para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3404,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s29",
+            "descricao": "",
+            "passo_de_saida_id": 3360,
+            "passo_de_saida": {
+                "id": 3360,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                "descricao": "Avalie os crit\u00e9rios para definir o tratamento adequado para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3361,
+            "passo_de_entrada": {
+                "id": 3361,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2533,
+                "nome": "criterio_ep_1_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2506
+                ],
+                "argumentos": [
+                    "hiper_criterios_ep01_has_controlado"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3405,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s30",
+            "descricao": "",
+            "passo_de_saida_id": 3360,
+            "passo_de_saida": {
+                "id": 3360,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                "descricao": "Avalie os crit\u00e9rios para definir o tratamento adequado para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3362,
+            "passo_de_entrada": {
+                "id": 3362,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2534,
+                "nome": "criterio_ep_2_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2507
+                ],
+                "argumentos": [
+                    "hiper_criterios_ep02"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3406,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s31",
+            "descricao": "",
+            "passo_de_saida_id": 3360,
+            "passo_de_saida": {
+                "id": 3360,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                "descricao": "Avalie os crit\u00e9rios para definir o tratamento adequado para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3363,
+            "passo_de_entrada": {
+                "id": 3363,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2535,
+                "nome": "criterio_ep_3_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2508
+                ],
+                "argumentos": [
+                    "hiper_criterios_ep03"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3407,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s32",
+            "descricao": "",
+            "passo_de_saida_id": 3360,
+            "passo_de_saida": {
+                "id": 3360,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                "descricao": "Avalie os crit\u00e9rios para definir o tratamento adequado para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3364,
+            "passo_de_entrada": {
+                "id": 3364,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 10mg",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa e nifedipina 10 mg\n\nAten\u00e7\u00e3o:\nNo caso de retorno as quantidades de METILDOPA ser\u00e3o alteradas:\n- Metildopa 500mg / Posologia: 01 comprimido de 08/08horas.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2536,
+                "nome": "criterio_ep_4_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2509
+                ],
+                "argumentos": [
+                    "hiper_criterios_ep04"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3408,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s33",
+            "descricao": "",
+            "passo_de_saida_id": 3360,
+            "passo_de_saida": {
+                "id": 3360,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar crit\u00e9rios para prescri\u00e7\u00e3o",
+                "descricao": "Avalie os crit\u00e9rios para definir o tratamento adequado para a paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3365,
+            "passo_de_entrada": {
+                "id": 3365,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 20mg",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 500 mg 6/6 h e nifedipina 20 mg12/12h",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2537,
+                "nome": "criterio_ep_5_superior_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2510
+                ],
+                "argumentos": [
+                    "hiper_criterios_ep05_ou_superior"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3409,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s34",
+            "descricao": "",
+            "passo_de_saida_id": 3361,
+            "passo_de_saida": {
+                "id": 3361,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 250 8/8",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3366,
+            "passo_de_entrada": {
+                "id": 3366,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3410,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s35",
+            "descricao": "",
+            "passo_de_saida_id": 3362,
+            "passo_de_saida": {
+                "id": 3362,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 250 6/6",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3366,
+            "passo_de_entrada": {
+                "id": 3366,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3411,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s36",
+            "descricao": "",
+            "passo_de_saida_id": 3363,
+            "passo_de_saida": {
+                "id": 3363,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 500 6/6",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3366,
+            "passo_de_entrada": {
+                "id": 3366,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3412,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s37",
+            "descricao": "",
+            "passo_de_saida_id": 3364,
+            "passo_de_saida": {
+                "id": 3364,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 10mg",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa e nifedipina 10 mg\n\nAten\u00e7\u00e3o:\nNo caso de retorno as quantidades de METILDOPA ser\u00e3o alteradas:\n- Metildopa 500mg / Posologia: 01 comprimido de 08/08horas.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3366,
+            "passo_de_entrada": {
+                "id": 3366,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3413,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s38",
+            "descricao": "",
+            "passo_de_saida_id": 3365,
+            "passo_de_saida": {
+                "id": 3365,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Gerar prescri\u00e7\u00e3o de metildopa + nifedipina 20mg",
+                "descricao": "Gerar prescri\u00e7\u00e3o de metildopa 500 mg 6/6 h e nifedipina 20 mg12/12h",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3366,
+            "passo_de_entrada": {
+                "id": 3366,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3414,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s39",
+            "descricao": "",
+            "passo_de_saida_id": 3366,
+            "passo_de_saida": {
+                "id": 3366,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3367,
+            "passo_de_entrada": {
+                "id": 3367,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Adicionar AAS na prescri\u00e7\u00e3o",
+                "descricao": "Adicionar AAS na prescri\u00e7\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2538,
+                "nome": "idade_gestacional_entre_12_36_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2511
+                ],
+                "argumentos": [
+                    "hiper_ig_12_36_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3415,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s40",
+            "descricao": "",
+            "passo_de_saida_id": 3367,
+            "passo_de_saida": {
+                "id": 3367,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Adicionar AAS na prescri\u00e7\u00e3o",
+                "descricao": "Adicionar AAS na prescri\u00e7\u00e3o da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3368,
+            "passo_de_entrada": {
+                "id": 3368,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                "descricao": "verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3416,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s41",
+            "descricao": "",
+            "passo_de_saida_id": 3368,
+            "passo_de_saida": {
+                "id": 3368,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                "descricao": "verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3369,
+            "passo_de_entrada": {
+                "id": 3369,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar indica\u00e7\u00e3o de corticoide",
+                "descricao": "Paciente apresenta indica\u00e7\u00e3o de corticoide?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2539,
+                "nome": "idade_gestacional_entre_24_36_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2512
+                ],
+                "argumentos": [
+                    "hiper_ig_24_36_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3417,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s42",
+            "descricao": "",
+            "passo_de_saida_id": 3368,
+            "passo_de_saida": {
+                "id": 3368,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [24 / 36] [Fluxo 2]",
+                "descricao": "verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3370,
+            "passo_de_entrada": {
+                "id": 3370,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2540,
+                "nome": "idade_gestacional_fora_intervalo_24_36_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2512
+                ],
+                "argumentos": [
+                    "hiper_ig_24_36_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3418,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s43",
+            "descricao": "",
+            "passo_de_saida_id": 3369,
+            "passo_de_saida": {
+                "id": 3369,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar indica\u00e7\u00e3o de corticoide",
+                "descricao": "Paciente apresenta indica\u00e7\u00e3o de corticoide?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3373,
+            "passo_de_entrada": {
+                "id": 3373,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Adicionar betametasona na prescri\u00e7\u00e3o",
+                "descricao": "Adicionar betametasona na prescri\u00e7\u00e3o. Definir o codigo do medicamento correto para inserir na prescri\u00e7\u00e3o.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2541,
+                "nome": "pacitente_com_indicacao_corticoide_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2513
+                ],
+                "argumentos": [
+                    "hiper_indicacao_corticoide"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3419,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s44",
+            "descricao": "",
+            "passo_de_saida_id": 3373,
+            "passo_de_saida": {
+                "id": 3373,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Adicionar betametasona na prescri\u00e7\u00e3o",
+                "descricao": "Adicionar betametasona na prescri\u00e7\u00e3o. Definir o codigo do medicamento correto para inserir na prescri\u00e7\u00e3o.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3370,
+            "passo_de_entrada": {
+                "id": 3370,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3420,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s45",
+            "descricao": "",
+            "passo_de_saida_id": 3366,
+            "passo_de_saida": {
+                "id": 3366,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Idade Gestacional [ > 20 semanas] [Fluxo 2]",
+                "descricao": "Verifique a idade gestacional da paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3370,
+            "passo_de_entrada": {
+                "id": 3370,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2542,
+                "nome": "idade_gestacional_fora_intervalo_12_36",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2511
+                ],
+                "argumentos": [
+                    "hiper_ig_12_36_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3421,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s46",
+            "descricao": "",
+            "passo_de_saida_id": 3370,
+            "passo_de_saida": {
+                "id": 3370,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3371,
+            "passo_de_entrada": {
+                "id": 3371,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                "descricao": "IMPORTANTE:\nPara os casos em que seja necess\u00e1rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at\u00e9 o fim  e realizar a prescri\u00e7\u00e3o adicional ao retornar ao prontu\u00e1rio do Nascer Bem.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2543,
+                "nome": "com_prescricao_adicional_fluxo2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2514
+                ],
+                "argumentos": [
+                    "hiper_precricao_adicional_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3422,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s47",
+            "descricao": "",
+            "passo_de_saida_id": 3371,
+            "passo_de_saida": {
+                "id": 3371,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Inserir prescri\u00e7\u00e3o adicional no Nascer Bem",
+                "descricao": "IMPORTANTE:\nPara os casos em que seja necess\u00e1rio prescrever tratamentos adicionais, seguir o fluxo do protocolo at\u00e9 o fim  e realizar a prescri\u00e7\u00e3o adicional ao retornar ao prontu\u00e1rio do Nascer Bem.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3372,
+            "passo_de_entrada": {
+                "id": 3372,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Pacote de Exames Pr\u00e9-Eclampsia + US com Doppler e Cardiograma",
+                "descricao": "Solicitar pacote de exames para a paciente.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3423,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s48",
+            "descricao": "",
+            "passo_de_saida_id": 3370,
+            "passo_de_saida": {
+                "id": 3370,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3372,
+            "passo_de_entrada": {
+                "id": 3372,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Pacote de Exames Pr\u00e9-Eclampsia + US com Doppler e Cardiograma",
+                "descricao": "Solicitar pacote de exames para a paciente.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2544,
+                "nome": "sem_prescricao_adicional_fluxo2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2514
+                ],
+                "argumentos": [
+                    "hiper_precricao_adicional_fluxo_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3424,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s49",
+            "descricao": "",
+            "passo_de_saida_id": 3369,
+            "passo_de_saida": {
+                "id": 3369,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar indica\u00e7\u00e3o de corticoide",
+                "descricao": "Paciente apresenta indica\u00e7\u00e3o de corticoide?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3370,
+            "passo_de_entrada": {
+                "id": 3370,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Necessidade de Prescri\u00e7\u00e3o Adicional [Fluxo 2]",
+                "descricao": "Verifique se h\u00e1 necessidade de prescri\u00e7\u00e3o adicional para individualizar o tratamento da paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2545,
+                "nome": "sem_indicacao_corticoide_fluxo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2513
+                ],
+                "argumentos": [
+                    "hiper_indicacao_corticoide"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 2437,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_pas_pad",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2438,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_primeiro_ep_fluxo_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2439,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_exames_alterados_fluxo_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2440,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_ig_12_36_fluxo_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2501,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_necessita_emergencia_fluxo_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2502,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_prescricao_adicional_fluxo_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2503,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_pas_pad_alterado_fluxo_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2504,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_primeiro_episodio_fluxo_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2505,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_exames_pre_eclampsia_alterados_fluxo_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2506,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_criterios_ep01_has_controlado",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2507,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_criterios_ep02",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2508,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_criterios_ep03",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2509,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_criterios_ep04",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2510,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_criterios_ep05_ou_superior",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2511,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_ig_12_36_fluxo_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2512,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_ig_24_36_fluxo_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2513,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_indicacao_corticoide",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2514,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "hiper_precricao_adicional_fluxo_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

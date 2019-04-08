@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3103" url="" name="Verifica SEPSE" code="H011">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16648" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Varificar crit&#xe9;rios para SEPSE [qSOFA]" description="Calcule o indice qSOFA para o paciente." isInitial="true" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions text="Escala de Glasgow (GCS) &lt;= 14?" url="" id="8758">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_glasgow" id="16523" weight="1" value="false"/>
+    </questions>
+    <questions text="FR >= 22?" url="" id="8759">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_fr" id="16524" weight="1" value="false"/>
+    </questions>
+    <questions text="PAS &lt;= 100?" url="" id="8760">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_pas" id="16525" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16649" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar crit&#xe9;rios SIRS" description="Verifique os crit&#xe9;rios de SIRS do paciente" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="TAX &lt; 35&#xba;c ou > 37,8&#xba;c?" url="" id="8761">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_tax" id="16526" weight="1" value="false"/>
+    </questions>
+    <questions text="FR > 20 ipm?" url="" id="8762">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fr" id="16527" weight="1" value="false"/>
+    </questions>
+    <questions text="FC >100 bpm?" url="" id="8763">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fc" id="16528" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="16650" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhar para tratamento de SEPSE" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala qSOFA. Encaminhar ao protocolo de tratamento de SEPSE para seguir com o tratamento do paciente." isTerminal="true" inputSequences="//@sequence.0">
+    <pathways>H012</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="16651" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhar para tratamento de SIRS" description="Paciente preencheu crit&#xe9;rios de gravidade segundo escala SIRS. Encaminhar ao protocolo de tratamento de SIRS para seguir com o tratamento do paciente." isTerminal="true" inputSequences="//@sequence.1 //@sequence.3">
+    <pathways>H013</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="16652" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Seguir tratamento vigente" description="Paciente n&#xe3;o apresentou &#xed;ndice de gravidade segundo crit&#xe9;rios estudados neste momento. Dar continuidade ao protocolo vigente." isTerminal="true" inputSequences="//@sequence.4">
+    <pathways>H002</pathways>
+    <pathways>H003</pathways>
+    <pathways>H008</pathways>
+    <pathways>H007</pathways>
+    <pathways>H009</pathways>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="16653" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description="">
+    <operation name="qsofa_maior_igual_dois" Operator="greaterOrEqual" id="16533">
+      <operand xsi:type="pathwayMetamodel:Operation" name="ver_sepse_soma_qsofa" Operator="addition" id="16531">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_glasgow" id="16523" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_fr" id="16524" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_pas" id="16525" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16530" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="16654" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="">
+    <operation name="qsofa_igual_um" Operator="equal" id="16534">
+      <operand xsi:type="pathwayMetamodel:Operation" name="ver_sepse_soma_qsofa" Operator="addition" id="16531">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_glasgow" id="16523" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_fr" id="16524" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_pas" id="16525" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16529" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="16655" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="">
+    <operation name="qsofa_zero" Operator="lessThan" id="16535">
+      <operand xsi:type="pathwayMetamodel:Operation" name="ver_sepse_soma_qsofa" Operator="addition" id="16531">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_glasgow" id="16523" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_fr" id="16524" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_pas" id="16525" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16529" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="16656" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="">
+    <operation name="criterios_sirs_maior_igual_dois" Operator="greaterOrEqual" id="16536">
+      <operand xsi:type="pathwayMetamodel:Operation" name="ver_sepse_soma_sirs" Operator="addition" id="16532">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_tax" id="16526" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fr" id="16527" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fc" id="16528" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16530" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="16657" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="">
+    <operation name="criterios_sirs_menor_dois" Operator="lessThan" id="16537">
+      <operand xsi:type="pathwayMetamodel:Operation" name="ver_sepse_soma_sirs" Operator="addition" id="16532">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_tax" id="16526" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fr" id="16527" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fc" id="16528" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16530" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <operation name="ver_sepse_soma_qsofa" Operator="addition" id="16531">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_glasgow" id="16523" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_fr" id="16524" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_pas" id="16525" weight="1" value="false"/>
+  </operation>
+  <operation name="ver_sepse_soma_sirs" Operator="addition" id="16532">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_tax" id="16526" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fr" id="16527" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fc" id="16528" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_glasgow" id="16523" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_fr" id="16524" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_pas" id="16525" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_tax" id="16526" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fr" id="16527" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ver_sepse_sirs_fc" id="16528" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="16529" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="16530" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

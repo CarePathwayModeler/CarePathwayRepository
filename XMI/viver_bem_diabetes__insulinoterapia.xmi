@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="961" url="" name="[Viver Bem] Diabetes - Insulinoterapia" code="VB_DIA_INSU">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4801" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Manter Hipoglicemiante?" description="Avaliar necessidade de manter hipoglicemiante" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Manter Hipoglicemiante?" url="" id="2061">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="insulinoterapia_hipoglicemiante" id="3441" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4802" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Manter prescri&#xe7;&#xe3;o anterior" description="Manter prescri&#xe7;&#xe3;o efetuada anteriormente" inputSequences="//@sequence.0" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4803" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Titula&#xe7;&#xe3;o da Insulina Basal" description="Regime fixo: Adicionar Dosagem Insulina +2 UI;&#xA;&#xA; &#xA;&#xA;Regime Ajust&#xe1;vel:&#xA;&#xA;&#xb7; Se meta glic&#xea;mica n&#xe3;o alcan&#xe7;ada:&#xA;&#xA;o Glicemia em Jejum > 180 mg/dl: Aumentar dosagem Insulina em 20%;&#xA;&#xA;o Glicemia em Jejum entre 140 - 180 mg/dl: Aumentar dosagem Insulina em 10%;&#xA;&#xA;o Glicemia em Jejum entre 110 - 139 mg/dl: Aumentar dosagem Insulina em 2UI;&#xA;&#xA;&#xb7; Se Hipoglicemia:&#xA;&#xA;o Glicemia &lt; 70 mg/dl: Reduzir dosagem Insulina de 10 a 20%;&#xA;&#xA;o Glicemia &lt; 40 mg/dl: Reduzir dosagem Insulina de 20 a 40%;" inputSequences="//@sequence.2" outputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4804" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar HbA1c" description="Reavaliar taxa de HbA1c" inputSequences="//@sequence.3 //@sequence.5" outputSequences="//@sequence.4 //@sequence.6">
+    <questions text="Meta Terap&#xea;utica Alcan&#xe7;ada (HbA1c &lt; 6.5%)?" url="" id="2062">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_que_6_5" id="3442" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4805" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Adicionar Insulina Prandial" description="Adiciona tratametno com Insulina Prandial&#xA;&#xA;M&#xe9;dico ir&#xe1; escolher medica&#xe7;&#xe3;o (Insulina) de uma lista, adicionar posologia (dose, frequ&#xea;ncia e recomenda&#xe7;&#xf5;es de uso" inputSequences="//@sequence.6" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4806" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Titula&#xe7;&#xe3;o da Insulina Prandial" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>Titula&amp;ccedil;&amp;atilde;o da Insulina:&lt;/strong>&lt;/u>&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Se meta glic&amp;ecirc;mica n&amp;atilde;o alcan&amp;ccedil;ada:&lt;/span>&#xA;&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Glicemia P&amp;oacute;s Prandial (GPP) &amp;gt; 140 mg/dl: Aumentar dosagem Insulina em 10% ou em 1-2 UI;&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Se Hipoglicemia:&lt;/span>&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Glicemia &amp;lt; 70 mg/dl: Reduzir dosagem Insulina de 10 a 20%;&lt;/span>&lt;/li>&#xA;&#x9;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Glicemia &amp;lt; 40 mg/dl: Reduzir dosagem Insulina de 20 a 40%;&lt;/span>&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;span style=&quot;color:#c0392b&quot;>&lt;u>Prescrever medica&amp;ccedil;&amp;atilde;o &lt;strong>via Conduta Complementar&lt;/strong>&lt;/u>&lt;/span>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Information" id="4808" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Adicionar Insulina Basal" description="Escolher medica&#xe7;&#xe3;o (Insulina) de uma lista, adicionar posologia (dose, frequ&#xea;ncia e recomenda&#xe7;&#xf5;es de uso)" inputSequences="//@sequence.1 //@sequence.7" outputSequences="//@sequence.2"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4809" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com hipoglicemiante)" description="">
+    <operation name="com hipoglicemiante" Operator="affirmation" id="3445">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="insulinoterapia_hipoglicemiante" id="3441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="4810" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem hipoglicemiante)" description="">
+    <operation name="sem hipoglicemiante" id="3446">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="insulinoterapia_hipoglicemiante" id="3441" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.6" id="4811" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4812" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description=""/>
+  <sequence outputStep="//@element.3" id="4813" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (HbA1c &lt; 6.5)" description="">
+    <operation name="HbA1c &lt; 6.5" Operator="affirmation" id="3447">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_que_6_5" id="3442" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" id="4814" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description=""/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="4815" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (HbA1c > 6.5)" description="">
+    <operation name="HbA1c > 6.5" id="3448">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_que_6_5" id="3442" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="4816" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="4817" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description=""/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="insulinoterapia_hipoglicemiante" id="3441" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_que_6_5" id="3442" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="10" id="3443" weight="1" value="10.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="3444" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

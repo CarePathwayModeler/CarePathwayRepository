@@ -1,0 +1,1538 @@
+{
+    "id": 941,
+    "url": "",
+    "codigo": "NB_PREMA",
+    "nome": "[Nascer Bem] Prematuridade",
+    "repositorio_id": 502,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:24:47.822522-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:24:43.609681-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:24:47.822522-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4741,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Fatores de Risco",
+            "descricao": "Verificar presen\u00e7a de fatores de risco",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2041,
+                    "url": "",
+                    "texto": "Trabalho de Parto Prematuro Pr\u00e9vio",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3421,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fator_risco_trab_parto_prematuro_previo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2042,
+                    "url": "",
+                    "texto": "Gesta\u00e7\u00e3o M\u00faltipla",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3422,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fator_risco_gestacao_multipla",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2043,
+                    "url": "",
+                    "texto": "Restri\u00e7\u00e3o de Crescimento Intrauterino",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3423,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fator_risco_restricao_crescimento_intrauterino",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2044,
+                    "url": "",
+                    "texto": "Hemorragias Pr\u00e9-Parto",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3424,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fator_risco_hemorragias_pre_parto",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2045,
+                    "url": "",
+                    "texto": "Miscel\u00e2nea - Incompet\u00eancia Istmocervical (IIC)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3425,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fator_risco_iic",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2046,
+                    "url": "",
+                    "texto": "Malforma\u00e7\u00f5es Uterinas",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3426,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fator_risco_malformacoes_uterinas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4756,
+                    "url": "",
+                    "nome": "S1 (iic)",
+                    "descricao": "com iic",
+                    "passo_de_saida_id": 4741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores de Risco",
+                    "passo_de_entrada_id": 4742,
+                    "passo_de_entrada": "Tratamento: [Suspeita de IIC] Ultrassom",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4757,
+                    "url": "",
+                    "nome": "S2 (sem iic)",
+                    "descricao": "sem iic",
+                    "passo_de_saida_id": 4741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores de Risco",
+                    "passo_de_entrada_id": 4743,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4742,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Suspeita de IIC] Ultrassom",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "33010277",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de IIC",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4756,
+                    "url": "",
+                    "nome": "S1 (iic)",
+                    "descricao": "com iic",
+                    "passo_de_saida_id": 4741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores de Risco",
+                    "passo_de_entrada_id": 4742,
+                    "passo_de_entrada": "Tratamento: [Suspeita de IIC] Ultrassom",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4759,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4742,
+                    "passo_de_saida": "Tratamento: [Suspeita de IIC] Ultrassom",
+                    "passo_de_entrada_id": 4746,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno do Exame (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4743,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+            "descricao": "Avaliar se paciente est\u00e1 entre 14 e 24 semanas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2047,
+                    "url": "",
+                    "texto": "Idade Gestacional > 14 e < 24?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3427,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_maior_14_menor_24",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4757,
+                    "url": "",
+                    "nome": "S2 (sem iic)",
+                    "descricao": "sem iic",
+                    "passo_de_saida_id": 4741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores de Risco",
+                    "passo_de_entrada_id": 4743,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4758,
+                    "url": "",
+                    "nome": "S3 (menor que 14 ou maior que 24)",
+                    "descricao": "menor que 14 ou maior que 24",
+                    "passo_de_saida_id": 4743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                    "passo_de_entrada_id": 4744,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (2)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4769,
+                    "url": "",
+                    "nome": "S4 (entre 14 e 24)",
+                    "descricao": "S4 (entre 14 e 24)",
+                    "passo_de_saida_id": 4743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                    "passo_de_entrada_id": 4745,
+                    "passo_de_entrada": "Tratamento: Ultrassom Morfol\u00f3gico com medida de colo uterino",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4744,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Idade Gestacional (2)",
+            "descricao": "Avaliar se idade gestacional entre 24 e 34 semanas.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2048,
+                    "url": "",
+                    "texto": "Idade Gestacional > 24 e < 34 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3428,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_maior_24_menor_34",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4758,
+                    "url": "",
+                    "nome": "S3 (menor que 14 ou maior que 24)",
+                    "descricao": "menor que 14 ou maior que 24",
+                    "passo_de_saida_id": 4743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                    "passo_de_entrada_id": 4744,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4763,
+                    "url": "",
+                    "nome": "S9 (menor que 24 ou maior que 34)",
+                    "descricao": "menor que 24 ou maior que 34",
+                    "passo_de_saida_id": 4744,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4755,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Finalizar Protocolo",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4764,
+                    "url": "",
+                    "nome": "S10 (entre 24 e 34 semanas)",
+                    "descricao": "entre 24 e 34 semanas",
+                    "passo_de_saida_id": 4744,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4750,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o: Cortic\u00f3ide",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4745,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Ultrassom Morfol\u00f3gico com medida de colo uterino",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "33010277",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Prematuridade",
+                    "indicacao_clinica": "Ultrassom Morfol\u00f3gico com medida do colo uterino por via transvaginal",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4769,
+                    "url": "",
+                    "nome": "S4 (entre 14 e 24)",
+                    "descricao": "S4 (entre 14 e 24)",
+                    "passo_de_saida_id": 4743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                    "passo_de_entrada_id": 4745,
+                    "passo_de_entrada": "Tratamento: Ultrassom Morfol\u00f3gico com medida de colo uterino",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4765,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4745,
+                    "passo_de_saida": "Tratamento: Ultrassom Morfol\u00f3gico com medida de colo uterino",
+                    "passo_de_entrada_id": 4751,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno do Exame (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4746,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Aguardar Retorno do Exame (1)",
+            "descricao": "Aguardar Retorno do Exame",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4759,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4742,
+                    "passo_de_saida": "Tratamento: [Suspeita de IIC] Ultrassom",
+                    "passo_de_entrada_id": 4746,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno do Exame (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4760,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4746,
+                    "passo_de_saida": "Pausa: Aguardar Retorno do Exame (1)",
+                    "passo_de_entrada_id": 4747,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Ultrassom (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4747,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Ultrassom (1)",
+            "descricao": "Avaliar resultado do ultrassom morfol\u00f3gico",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2049,
+                    "url": "",
+                    "texto": "Morfologia fetal alterada?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3429,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "resultado_ultrassom_alterado_1",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4760,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4746,
+                    "passo_de_saida": "Pausa: Aguardar Retorno do Exame (1)",
+                    "passo_de_entrada_id": 4747,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Ultrassom (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4761,
+                    "url": "",
+                    "nome": "S7 (ultrassom alterado)",
+                    "descricao": "ultrassom alterado",
+                    "passo_de_saida_id": 4747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (1)",
+                    "passo_de_entrada_id": 4749,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Sem medidas preventivas",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4762,
+                    "url": "",
+                    "nome": "S8 (ultrassom sem altera\u00e7\u00f5es)",
+                    "descricao": "ultrassom sem altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 4747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (1)",
+                    "passo_de_entrada_id": 4748,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Cesariana",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4748,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Cesariana",
+            "descricao": "Encaminhar paciente para cesariana",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4762,
+                    "url": "",
+                    "nome": "S8 (ultrassom sem altera\u00e7\u00f5es)",
+                    "descricao": "ultrassom sem altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 4747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (1)",
+                    "passo_de_entrada_id": 4748,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Cesariana",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4749,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sem medidas preventivas",
+            "descricao": "N\u00e3o \u00e9 necess\u00e1rio realizar nenhuma medida preventiva",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4761,
+                    "url": "",
+                    "nome": "S7 (ultrassom alterado)",
+                    "descricao": "ultrassom alterado",
+                    "passo_de_saida_id": 4747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (1)",
+                    "passo_de_entrada_id": 4749,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Sem medidas preventivas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4750,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o: Cortic\u00f3ide",
+            "descricao": "Prescrever Corticoide, 2 ampolas IM 24/24 horas por 2 dias, se houver possibilidade de interven\u00e7\u00e3o nos pr\u00f3ximos 7 dias",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4764,
+                    "url": "",
+                    "nome": "S10 (entre 24 e 34 semanas)",
+                    "descricao": "entre 24 e 34 semanas",
+                    "passo_de_saida_id": 4744,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4750,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o: Cortic\u00f3ide",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4751,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Aguardar Retorno do Exame (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4765,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4745,
+                    "passo_de_saida": "Tratamento: Ultrassom Morfol\u00f3gico com medida de colo uterino",
+                    "passo_de_entrada_id": 4751,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno do Exame (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4766,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4751,
+                    "passo_de_saida": "Pausa: Aguardar Retorno do Exame (2)",
+                    "passo_de_entrada_id": 4752,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Ultrassom (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4752,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Ultrassom (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2050,
+                    "url": "",
+                    "texto": "Ultrassom Morfol\u00f3gico > 25mm?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3430,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ultrassom_maior_25mm",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4766,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4751,
+                    "passo_de_saida": "Pausa: Aguardar Retorno do Exame (2)",
+                    "passo_de_entrada_id": 4752,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Ultrassom (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4767,
+                    "url": "",
+                    "nome": "S13 (us morfologico > 25mm)",
+                    "descricao": "us morfologico > 25mm",
+                    "passo_de_saida_id": 4752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (2)",
+                    "passo_de_entrada_id": 4753,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Manter paciente no Pr\u00e9-Natal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4768,
+                    "url": "",
+                    "nome": "S14 (us morfologico <= 25mm)",
+                    "descricao": "us morfologico <= 25mm",
+                    "passo_de_saida_id": 4752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (2)",
+                    "passo_de_entrada_id": 4754,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4753,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Manter paciente no Pr\u00e9-Natal",
+            "descricao": "<p><span style=\"font-size:16px\">Manter paciente no acompanhamento Pr&eacute;-Natal de baixo risco.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4767,
+                    "url": "",
+                    "nome": "S13 (us morfologico > 25mm)",
+                    "descricao": "us morfologico > 25mm",
+                    "passo_de_saida_id": 4752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (2)",
+                    "passo_de_entrada_id": 4753,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Manter paciente no Pr\u00e9-Natal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4754,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 861,
+                    "url": "",
+                    "nome": "UTROGESTAN",
+                    "medicamento": 7898948648148,
+                    "apresentacao": "CAPS",
+                    "via_acesso": 4,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 30,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tratamento 30 dias ou at\u00e9 reavalia\u00e7\u00e3o m\u00e9dica."
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4768,
+                    "url": "",
+                    "nome": "S14 (us morfologico <= 25mm)",
+                    "descricao": "us morfologico <= 25mm",
+                    "passo_de_saida_id": 4752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Ultrassom (2)",
+                    "passo_de_entrada_id": 4754,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4755,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Finalizar Protocolo",
+            "descricao": "Finalizar Protocolo",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4763,
+                    "url": "",
+                    "nome": "S9 (menor que 24 ou maior que 34)",
+                    "descricao": "menor que 24 ou maior que 34",
+                    "passo_de_saida_id": 4744,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4755,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Finalizar Protocolo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4756,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (iic)",
+            "descricao": "com iic",
+            "passo_de_saida_id": 4741,
+            "passo_de_saida": {
+                "id": 4741,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores de Risco",
+                "descricao": "Verificar presen\u00e7a de fatores de risco",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4742,
+            "passo_de_entrada": {
+                "id": 4742,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Suspeita de IIC] Ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3431,
+                "nome": "com iic",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3425
+                ],
+                "argumentos": [
+                    "fator_risco_iic"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4757,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sem iic)",
+            "descricao": "sem iic",
+            "passo_de_saida_id": 4741,
+            "passo_de_saida": {
+                "id": 4741,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores de Risco",
+                "descricao": "Verificar presen\u00e7a de fatores de risco",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4743,
+            "passo_de_entrada": {
+                "id": 4743,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                "descricao": "Avaliar se paciente est\u00e1 entre 14 e 24 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3432,
+                "nome": "sem iic",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3425
+                ],
+                "argumentos": [
+                    "fator_risco_iic"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4758,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (menor que 14 ou maior que 24)",
+            "descricao": "menor que 14 ou maior que 24",
+            "passo_de_saida_id": 4743,
+            "passo_de_saida": {
+                "id": 4743,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                "descricao": "Avaliar se paciente est\u00e1 entre 14 e 24 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4744,
+            "passo_de_entrada": {
+                "id": 4744,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional (2)",
+                "descricao": "Avaliar se idade gestacional entre 24 e 34 semanas.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3433,
+                "nome": "menor que 14 ou maior que 24",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3427
+                ],
+                "argumentos": [
+                    "idade_gestacional_maior_14_menor_24"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4759,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4742,
+            "passo_de_saida": {
+                "id": 4742,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Suspeita de IIC] Ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4746,
+            "passo_de_entrada": {
+                "id": 4746,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno do Exame (1)",
+                "descricao": "Aguardar Retorno do Exame",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4760,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4746,
+            "passo_de_saida": {
+                "id": 4746,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno do Exame (1)",
+                "descricao": "Aguardar Retorno do Exame",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4747,
+            "passo_de_entrada": {
+                "id": 4747,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom (1)",
+                "descricao": "Avaliar resultado do ultrassom morfol\u00f3gico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4761,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (ultrassom alterado)",
+            "descricao": "ultrassom alterado",
+            "passo_de_saida_id": 4747,
+            "passo_de_saida": {
+                "id": 4747,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom (1)",
+                "descricao": "Avaliar resultado do ultrassom morfol\u00f3gico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4749,
+            "passo_de_entrada": {
+                "id": 4749,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Sem medidas preventivas",
+                "descricao": "N\u00e3o \u00e9 necess\u00e1rio realizar nenhuma medida preventiva",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3434,
+                "nome": "ultrassom alterado",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3429
+                ],
+                "argumentos": [
+                    "resultado_ultrassom_alterado_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4762,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (ultrassom sem altera\u00e7\u00f5es)",
+            "descricao": "ultrassom sem altera\u00e7\u00f5es",
+            "passo_de_saida_id": 4747,
+            "passo_de_saida": {
+                "id": 4747,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom (1)",
+                "descricao": "Avaliar resultado do ultrassom morfol\u00f3gico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4748,
+            "passo_de_entrada": {
+                "id": 4748,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Cesariana",
+                "descricao": "Encaminhar paciente para cesariana",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3435,
+                "nome": "ultrassom sem altera\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3429
+                ],
+                "argumentos": [
+                    "resultado_ultrassom_alterado_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4763,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (menor que 24 ou maior que 34)",
+            "descricao": "menor que 24 ou maior que 34",
+            "passo_de_saida_id": 4744,
+            "passo_de_saida": {
+                "id": 4744,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional (2)",
+                "descricao": "Avaliar se idade gestacional entre 24 e 34 semanas.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4755,
+            "passo_de_entrada": {
+                "id": 4755,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Finalizar Protocolo",
+                "descricao": "Finalizar Protocolo",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3436,
+                "nome": "menor que 24 ou maior que 34",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3428
+                ],
+                "argumentos": [
+                    "idade_gestacional_maior_24_menor_34"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4764,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (entre 24 e 34 semanas)",
+            "descricao": "entre 24 e 34 semanas",
+            "passo_de_saida_id": 4744,
+            "passo_de_saida": {
+                "id": 4744,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional (2)",
+                "descricao": "Avaliar se idade gestacional entre 24 e 34 semanas.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4750,
+            "passo_de_entrada": {
+                "id": 4750,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o: Cortic\u00f3ide",
+                "descricao": "Prescrever Corticoide, 2 ampolas IM 24/24 horas por 2 dias, se houver possibilidade de interven\u00e7\u00e3o nos pr\u00f3ximos 7 dias",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3437,
+                "nome": "entre 24 e 34 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3428
+                ],
+                "argumentos": [
+                    "idade_gestacional_maior_24_menor_34"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4765,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4745,
+            "passo_de_saida": {
+                "id": 4745,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Ultrassom Morfol\u00f3gico com medida de colo uterino",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4751,
+            "passo_de_entrada": {
+                "id": 4751,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno do Exame (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4766,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4751,
+            "passo_de_saida": {
+                "id": 4751,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno do Exame (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4752,
+            "passo_de_entrada": {
+                "id": 4752,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4767,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (us morfologico > 25mm)",
+            "descricao": "us morfologico > 25mm",
+            "passo_de_saida_id": 4752,
+            "passo_de_saida": {
+                "id": 4752,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4753,
+            "passo_de_entrada": {
+                "id": 4753,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Manter paciente no Pr\u00e9-Natal",
+                "descricao": "<p><span style=\"font-size:16px\">Manter paciente no acompanhamento Pr&eacute;-Natal de baixo risco.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3438,
+                "nome": "us morfologico > 25mm",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3430
+                ],
+                "argumentos": [
+                    "ultrassom_maior_25mm"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4768,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (us morfologico <= 25mm)",
+            "descricao": "us morfologico <= 25mm",
+            "passo_de_saida_id": 4752,
+            "passo_de_saida": {
+                "id": 4752,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Ultrassom (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4754,
+            "passo_de_entrada": {
+                "id": 4754,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3439,
+                "nome": "us morfologico <= 25mm",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3430
+                ],
+                "argumentos": [
+                    "ultrassom_maior_25mm"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4769,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (entre 14 e 24)",
+            "descricao": "S4 (entre 14 e 24)",
+            "passo_de_saida_id": 4743,
+            "passo_de_saida": {
+                "id": 4743,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Sem Suspeita de IIC] Avaliar Idade Gestacional (1)",
+                "descricao": "Avaliar se paciente est\u00e1 entre 14 e 24 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4745,
+            "passo_de_entrada": {
+                "id": 4745,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Ultrassom Morfol\u00f3gico com medida de colo uterino",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3440,
+                "nome": "S4 (entre 14 e 24)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3427
+                ],
+                "argumentos": [
+                    "idade_gestacional_maior_14_menor_24"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3421,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fator_risco_trab_parto_prematuro_previo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3422,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fator_risco_gestacao_multipla",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3423,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fator_risco_restricao_crescimento_intrauterino",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3424,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fator_risco_hemorragias_pre_parto",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3425,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fator_risco_iic",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3426,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fator_risco_malformacoes_uterinas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3427,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_maior_14_menor_24",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3428,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_maior_24_menor_34",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3429,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "resultado_ultrassom_alterado_1",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3430,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ultrassom_maior_25mm",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

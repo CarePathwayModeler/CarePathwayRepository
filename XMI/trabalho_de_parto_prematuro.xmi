@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3106" url="" name="Trabalho de Parto Prematuro" code="H030">
+  <element xsi:type="pathwayMetamodel:Treatment" id="16870" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Exames Iniciais" description="&lt;p>Observa&amp;ccedil;&amp;otilde;es: Solicitar Tococardiografia apenas se IG &amp;gt;= 28 semanas.&lt;/p>" isInitial="true" outputSequences="//@sequence.0">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Trabalho de Parto Prematuro" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="Trabalho de Parto Prematuro" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Trabalho de Parto Prematuro" clinical_indication="n/a"/>
+    <examination url="US OBSTETRICA" exam_id="33010110" limb_side="" quantity="1" reason="Trabalho de Parto Prematuro" clinical_indication="n/a"/>
+    <examination url="TOCOCARDIOGRAFIA ANTEPARTO" exam_id="45010072" limb_side="" quantity="1" reason="Trabalho de Parto Prematuro" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16871" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade Gestacional" description="&lt;p>Avaliar Idade Gestacional da paciente.&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2 //@sequence.3">
+    <questions text="IG &lt; 24 semanas" url="" id="8859">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="IG_menor_24_semanas" id="16756" weight="1" value="false"/>
+    </questions>
+    <questions text="IG >= 24 e &lt; 34 semanas" url="" id="8860">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_que_24_e_menor_que_34_semanas" id="16757" weight="1" value="false"/>
+    </questions>
+    <questions text="IG >= 34 semanas" url="" id="8881">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_ou_igual_a_34_semanas" id="16758" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="16872" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[IG &lt; 24 Semanas] Conduta Individualizada" description="Conduta individualizada para paciente com idade gestacional inferior a 24 semanas." isTerminal="true" inputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16873" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[IG >= 24 e &lt; 34] Avaliar Dilata&#xe7;&#xe3;o do Colo" description="Avaliar dilata&#xe7;&#xe3;o do colo do &#xfa;tero da paciente" inputSequences="//@sequence.2" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Dilata&#xe7;&#xe3;o >= 3cm?" url="" id="8882">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dilatacao_maior_igual_3_cm" id="16759" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="16874" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Orienta&#xe7;&#xf5;es" description="Solicitar Internamento e assist&#xea;ncia ao parto." isTerminal="true" inputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16875" type="Tratamento" type_verbose="Tratamento" url="" name="[Dilata&#xe7;&#xe3;o >= 3cm] Tratamento" description="&lt;p>&lt;u>&lt;strong>Orienta&amp;ccedil;&amp;otilde;es&lt;/strong>&lt;/u>:&lt;br />&#xA;Solicitar Internamento da paciente.&lt;br />&#xA;Se falha na toc&amp;oacute;lise, suspender Nifedipina (Adalat) e iniciar Sulfato de Magn&amp;eacute;sio para neuroprote&amp;ccedil;&amp;atilde;o fetal entre 24 e 32 semanas.&lt;br />&#xA;Dose de ataque da Ampicilina 2g EV.&amp;nbsp;&lt;br />&#xA;Dose de manuten&amp;ccedil;&amp;atilde;o da Ampicilina 1g EV de 6/6h.&lt;br />&#xA;&lt;br />&#xA;Dose de ataque do Nifedipino (ADALAT) 1 comprimido via oral de 20 em 20 minutos, 4 DOSES.&lt;br />&#xA;Dose de manuten&amp;ccedil;&amp;atilde;o do Nifedipino (ADALAT) 1 comprimido via oral de 8/8h.&lt;br />&#xA;&lt;br />&#xA;N&amp;Atilde;O ASSOCIAR SULFATO DE MAGN&amp;Eacute;SIO E NIFEDIPINO (ADALAT)&lt;/p>" isTerminal="true" inputSequences="//@sequence.5">
+    <medication url="" med_id="36145" id="8955" name="ADALAT 20 MG COMP 1 UD" brand="" unit="DS" access="1" daily_dosage="1" cycles="1" treatement_time="8955" standard="null"/>
+    <medication url="" med_id="37150" id="8956" name="CELESTONE SOLUSPAN AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="8956" frequency="24" standard="null"/>
+    <medication url="" med_id="36145" id="8957" name="ADALAT 20 MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="8957" frequency="8" standard="null"/>
+    <medication url="" med_id="75116" id="8958" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="8958" standard="null"/>
+    <medication url="" med_id="75116" id="8959" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="8959" frequency="6" standard="null"/>
+    <medication url="" med_id="35203" id="8960" name="BRICANYL AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="5" cycles="1" treatement_time="8960" standard="{&quot;quantidade_dosagem&quot;:5,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;EV INTERMITENTE COM SF 0,9%&quot;,&quot;id&quot;:3744,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:2259}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16876" type="Tratamento" type_verbose="Tratamento" url="" name="[IG >= 34 semanas] Prescri&#xe7;&#xe3;o" description="&lt;p>&lt;strong>Orienta&amp;ccedil;&amp;otilde;es&lt;/strong>:&lt;br />&#xA;Se pacientes al&amp;eacute;rgicos a Ampicilina, fazer clindamicina 900mg de 8/8h.&amp;nbsp;&lt;br />&#xA;Dose de ataque da Ampicilina 2g EV.&amp;nbsp;&lt;br />&#xA;Dose de manuten&amp;ccedil;&amp;atilde;o da Ampicilina 1g EV de 6/6h.&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.4">
+    <medication url="" med_id="75116" id="8961" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="UD" access="1" daily_dosage="2" cycles="1" treatement_time="8961" standard="null"/>
+    <medication url="" med_id="75116" id="8962" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="8962" frequency="6" standard="null"/>
+    <medication url="" med_id="37150" id="8963" name="CELESTONE SOLUSPAN AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="8963" standard="null"/>
+    <medication url="" med_id="38822" id="8964" name="DALACIN 300 MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="3" cycles="1" treatement_time="8964" standard="{&quot;quantidade_dosagem&quot;:300,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:2,&quot;administracao_diluicao&quot;:&quot;SF 0,9%&quot;,&quot;id&quot;:3745,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:2,&quot;codigo_principio_ativo&quot;:2532}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16877" type="Tratamento" type_verbose="Tratamento" url="" name="[Dilata&#xe7;&#xe3;o &lt; 3cm] Tratamento" description="&lt;p>&lt;u>&lt;strong>Orienta&amp;ccedil;&amp;otilde;es&lt;/strong>&lt;/u>:&lt;br />&#xA;Solicitar Internamento da paciente.&lt;br />&#xA;Se falha na toc&amp;oacute;lise, suspender Nifedipina (Adalat) e iniciar Sulfato de Magn&amp;eacute;sio para neuroprote&amp;ccedil;&amp;atilde;o fetal entre 24 e 32 semanas.&lt;/p>&#xA;&#xA;&lt;p>Dose de ataque do Nifedipino (ADALAT) 1 comprimido via oral de 20 em 20 minutos, &lt;strong>4 DOSES&lt;/strong>.&lt;br />&#xA;Dose de manuten&amp;ccedil;&amp;atilde;o do Nifedipino (ADALAT) 1 comprimido via oral de 8/8h.&lt;br />&#xA;&lt;br />&#xA;N&amp;Atilde;O ASSOCIAR SULFATO DE MAGN&amp;Eacute;SIO E NIFEDIPINO (ADALAT)&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <medication url="" med_id="36145" id="8965" name="ADALAT 20 MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="8965" standard="null"/>
+    <medication url="" med_id="36145" id="8966" name="ADALAT 20 MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="8966" frequency="8" standard="null"/>
+    <medication url="" med_id="37150" id="8967" name="CELESTONE SOLUSPAN AMPL 1 ML" brand="" unit="MG" access="5" daily_dosage="12" cycles="1" treatement_time="8967" frequency="24" standard="null"/>
+    <medication url="" med_id="35203" id="8968" name="BRICANYL AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="5" cycles="1" treatement_time="8968" standard="{&quot;quantidade_dosagem&quot;:5,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;EV INTERMITENTE COM SF 0,9%&quot;,&quot;id&quot;:3746,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:2259}"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16878" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Trabalho de parto prematuro Inibido" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.10">
+    <questions text="Trabalho de parto prematuro Inibido?" url="" id="8883">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_prematuro_inibido" id="16760" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="16879" type="Receita" type_verbose="Receita" url="" name="[Receita] Trab. de Parto Prematuro Inibido" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9">
+    <item id="4549" url="" name="CELESTONE SOLUSPAN AMPL 1 ML" med_code="37150" presentation="AMPL" access="5" quantity="2" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Aplicar ap&#xf3;s 24h da primeira dose."/>
+    <item id="4550" url="" name="ADALAT 20 MG COMP 1 UD" med_code="36145" presentation="COMP" access="1" quantity="1" period="2" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="16880" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Pr&#xe9;-Natal de Alto Risco" description="Encaminhamento ao pr&#xe9;-natal de alto risco." isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16881" type="Tratamento" type_verbose="Tratamento" url="" name="Internamento" description="&lt;p>&lt;u>&lt;strong>Observa&amp;ccedil;&amp;otilde;es:&lt;/strong>&lt;/u>&lt;br />&#xA;Suspender Nifedipino e Iniciar Sulfato de Magn&amp;eacute;sio entre 24 e 32 semanas para neuroprote&amp;ccedil;&amp;atilde;o fetal.&lt;/p>&#xA;&#xA;&lt;p>Iniciar profilaxia para GBS.&lt;/p>" isTerminal="true" inputSequences="//@sequence.10">
+    <admission url="ADMISSION" admission="45990000" reason="Paciente em trabalho de parto prematuro" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="16882" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="16883" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (IG &lt; 24)" description="IG &lt; 24">
+    <operation name="IG &lt; 24" Operator="affirmation" id="16761">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="IG_menor_24_semanas" id="16756" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="16884" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (IG >= 24 e &lt; 34)" description="IG >= 24 e &lt; 34">
+    <operation name="IG >= 24 e &lt; 34" Operator="affirmation" id="16762">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_que_24_e_menor_que_34_semanas" id="16757" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="16885" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (IG >= 34)" description="IG >= 34">
+    <operation name="IG >= 34" Operator="affirmation" id="16763">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_ou_igual_a_34_semanas" id="16758" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="16886" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="16887" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (dilata&#xe7;&#xe3;o >= 3cm)" description="dilata&#xe7;&#xe3;o >= 3cm">
+    <operation name="dilata&#xe7;&#xe3;o >= 3cm" Operator="affirmation" id="16764">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dilatacao_maior_igual_3_cm" id="16759" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.3" id="16888" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (dilata&#xe7;&#xe3;o &lt; 3cm)" description="dilata&#xe7;&#xe3;o &lt; 3cm">
+    <operation name="dilata&#xe7;&#xe3;o &lt; 3cm" id="16765">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dilatacao_maior_igual_3_cm" id="16759" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="16889" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="16890" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (trab. parto prematuro inibido)" description="trab. parto prematuro inibido">
+    <operation name="trab. parto prematuro inibido" Operator="affirmation" id="16766">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_prematuro_inibido" id="16760" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="16891" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="16892" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (trab. parto prematuro n&#xe3;o inibido)" description="trab. parto prematuro n&#xe3;o inibido">
+    <operation name="trab. parto prematuro n&#xe3;o inibido" id="16767">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_prematuro_inibido" id="16760" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="IG_menor_24_semanas" id="16756" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_que_24_e_menor_que_34_semanas" id="16757" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_ou_igual_a_34_semanas" id="16758" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dilatacao_maior_igual_3_cm" id="16759" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trabalho_de_parto_prematuro_inibido" id="16760" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

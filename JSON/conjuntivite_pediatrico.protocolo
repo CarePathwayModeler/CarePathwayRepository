@@ -1,0 +1,1050 @@
+{
+    "id": 3221,
+    "url": "",
+    "codigo": "H058",
+    "nome": "Conjuntivite Pedi\u00e1trico",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 761,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T09:37:58.659401-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T09:23:15.819916-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T09:37:58.659401-03:00"
+    },
+    "elementos": [
+        {
+            "id": 18593,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Hiperemia Conjuntival",
+            "descricao": "Paciente com hiperemia conjuntival associada a secre\u00e7\u00e3o mucopurulenta",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:27:56.867813-03:00"
+            },
+            "perguntas": [
+                {
+                    "id": 9501,
+                    "url": "",
+                    "texto": "Tipo de secre\u00e7\u00e3o:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18297,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "hiperemia_conjuntival",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Somente ao acordar, se torna aquosa ao longo do dia",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Persistente durante o dia",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Sem secre\u00e7\u00e3o, apenas irrita\u00e7\u00e3o",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 18601,
+                    "url": "",
+                    "nome": "S1 (Hiperemia Persistente)",
+                    "descricao": "Hiperemia Persistente",
+                    "passo_de_saida_id": 18593,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Hiperemia Conjuntival",
+                    "passo_de_entrada_id": 18594,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conjuntivite Bacteriana",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18602,
+                    "url": "",
+                    "nome": "S2 (Hiperemia Ao Acordar)",
+                    "descricao": "Hiperemia Ao Acordar",
+                    "passo_de_saida_id": 18593,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Hiperemia Conjuntival",
+                    "passo_de_entrada_id": 18596,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Sintomas",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18622,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18593,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Hiperemia Conjuntival",
+                    "passo_de_entrada_id": 18621,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Irrita\u00e7\u00e3o Ocular",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T09:33:59.964700-03:00"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 18594,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Conjuntivite Bacteriana",
+            "descricao": "Hip\u00f3tese Diag\u00f3stica: Conjuntivite Bacteriana",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18601,
+                    "url": "",
+                    "nome": "S1 (Hiperemia Persistente)",
+                    "descricao": "Hiperemia Persistente",
+                    "passo_de_saida_id": 18593,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Hiperemia Conjuntival",
+                    "passo_de_entrada_id": 18594,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conjuntivite Bacteriana",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18603,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18594,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conjuntivite Bacteriana",
+                    "passo_de_entrada_id": 18595,
+                    "passo_de_entrada": "Receita: Conjuntivite Bacteriana: Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18595,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Conjuntivite Bacteriana: Receita",
+            "descricao": "<ul>\n\t<li>Emitir atestado de 7 dias para paciente.</li>\n\t<li>Orientar retorno se n&atilde;o houver melhora em 72h.</li>\n\t<li>Considerar avalia&ccedil;&atilde;o com oftalmologista se persist&ecirc;ncia do caso.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4937,
+                    "url": "",
+                    "nome": "TOBREX\u00ae COL\u00cdRIO ........ 1 FRASCO",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 16,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 01 gota em cada olho de 06/06h durante 07 dias.",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18603,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18594,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conjuntivite Bacteriana",
+                    "passo_de_entrada_id": 18595,
+                    "passo_de_entrada": "Receita: Conjuntivite Bacteriana: Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18596,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Sintomas",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9502,
+                    "url": "",
+                    "texto": "Sintomas apresentados:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18298,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sintomas",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Prurido + Hist\u00f3rico de Rinite/Alergia",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Sensa\u00e7\u00e3o de queima\u00e7\u00e3o ou areia nos olhos (Em 90% dos casos h\u00e1 presen\u00e7a de linfonodomegalia Pr\u00e9-Auricular)",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18602,
+                    "url": "",
+                    "nome": "S2 (Hiperemia Ao Acordar)",
+                    "descricao": "Hiperemia Ao Acordar",
+                    "passo_de_saida_id": 18593,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Hiperemia Conjuntival",
+                    "passo_de_entrada_id": 18596,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Sintomas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18604,
+                    "url": "",
+                    "nome": "S4 (Sint. Conjuntivite Al\u00e9rgica)",
+                    "descricao": "Sint. Conjuntivite Al\u00e9rgica",
+                    "passo_de_saida_id": 18596,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas",
+                    "passo_de_entrada_id": 18599,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conjuntivite Al\u00e9rgica",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18605,
+                    "url": "",
+                    "nome": "S5 (Sint. Conjuntivite Viral)",
+                    "descricao": "Sint. Conjuntivite Viral",
+                    "passo_de_saida_id": 18596,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas",
+                    "passo_de_entrada_id": 18597,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conjuntivite Viral",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18597,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Conjuntivite Viral",
+            "descricao": "Hip\u00f3tese Diagn\u00f3stica: Conjuntivite Viral",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18605,
+                    "url": "",
+                    "nome": "S5 (Sint. Conjuntivite Viral)",
+                    "descricao": "Sint. Conjuntivite Viral",
+                    "passo_de_saida_id": 18596,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas",
+                    "passo_de_entrada_id": 18597,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conjuntivite Viral",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18606,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18597,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conjuntivite Viral",
+                    "passo_de_entrada_id": 18598,
+                    "passo_de_entrada": "Receita: Conjuntivite Viral: Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18598,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Conjuntivite Viral: Receita",
+            "descricao": "<ul>\n\t<li>Emitir atestado de 7 dias para paciente.</li>\n\t<li>Orientar retorno se n&atilde;o houver melhora em 72h.</li>\n\t<li>Considerar avalia&ccedil;&atilde;o com oftalmologista se persist&ecirc;ncia do caso ou suspeito de pseudomembrana.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Orienta\u00e7\u00e3o: Aplicar compressas frias com Soro Fisiol\u00f3gico 0,9% 3 vezes ao dia.",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4938,
+                    "url": "",
+                    "nome": "FRESH TEARS\u00ae Col\u00edrio ..... 1 Frasco",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 16,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 01 gota em cada olho de 04/04h durante 07 dias.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4939,
+                    "url": "",
+                    "nome": "SYSTANE\u00ae Col\u00edrio ..... 1 Frasco",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 16,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 01 gota em cada olho de 04/04h durante 07 dias.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4940,
+                    "url": "",
+                    "nome": "OPTIVE\u00ae Col\u00edrio ..... 1 Frasco",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 16,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 01 gota em cada olho de 04/04h durante 07 dias.",
+                    "ordem": 3
+                },
+                {
+                    "id": 4941,
+                    "url": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 250 ML TUBO 250 ML",
+                    "medicamento": 43796,
+                    "apresentacao": "-",
+                    "via_acesso": 16,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Compressas frias 3x ao dia com soro durante 07 dias.",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18606,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18597,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conjuntivite Viral",
+                    "passo_de_entrada_id": 18598,
+                    "passo_de_entrada": "Receita: Conjuntivite Viral: Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18599,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Conjuntivite Al\u00e9rgica",
+            "descricao": "Hip\u00f3tese Diagn\u00f3stica: Conjuntivite Al\u00e9rgica",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18604,
+                    "url": "",
+                    "nome": "S4 (Sint. Conjuntivite Al\u00e9rgica)",
+                    "descricao": "Sint. Conjuntivite Al\u00e9rgica",
+                    "passo_de_saida_id": 18596,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas",
+                    "passo_de_entrada_id": 18599,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Conjuntivite Al\u00e9rgica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18607,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18599,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conjuntivite Al\u00e9rgica",
+                    "passo_de_entrada_id": 18600,
+                    "passo_de_entrada": "Receita: Conjuntivite Al\u00e9rgica: Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18600,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Conjuntivite Al\u00e9rgica: Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Orienta\u00e7\u00e3o: Compressas frias 3x ao dia com Soro Fisiol\u00f3gico 0,9% ou com \u00e1gua filtrada.",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4942,
+                    "url": "",
+                    "nome": "Octifen\u00ae Col\u00edrio ..... 1 Frasco",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 17,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 01 gota em cada olho, 3 vezes ao dia. \nDe 5 a 7 dias.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4943,
+                    "url": "",
+                    "nome": "Patanol\u00ae Col\u00edrio ..... 1 Frasco",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 16,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 01 gota em cada olho, 01 vez ao dia. \nDe 5 a 7 dias.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4944,
+                    "url": "",
+                    "nome": "Hidroxizine Xarope ..... 1 Frasco",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar ____ ml de 8/8h por 5 dias.",
+                    "ordem": 3
+                },
+                {
+                    "id": 4945,
+                    "url": "",
+                    "nome": "Desloratadina ...... 1 Frasco",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar ____ ml de 1x ao dia por 5 dias.",
+                    "ordem": 4
+                },
+                {
+                    "id": 4946,
+                    "url": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 250 ML TUBO 250 ML",
+                    "medicamento": 43796,
+                    "apresentacao": "-",
+                    "via_acesso": 16,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Compressas frias com soro 3x ao dia durante 7 dias.",
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18607,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18599,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Conjuntivite Al\u00e9rgica",
+                    "passo_de_entrada_id": 18600,
+                    "passo_de_entrada": "Receita: Conjuntivite Al\u00e9rgica: Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18601,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (Hiperemia Persistente)",
+            "descricao": "Hiperemia Persistente",
+            "passo_de_saida_id": 18593,
+            "passo_de_saida": {
+                "id": 18593,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Hiperemia Conjuntival",
+                "descricao": "Paciente com hiperemia conjuntival associada a secre\u00e7\u00e3o mucopurulenta",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:27:56.867813-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18594,
+            "passo_de_entrada": {
+                "id": 18594,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conjuntivite Bacteriana",
+                "descricao": "Hip\u00f3tese Diag\u00f3stica: Conjuntivite Bacteriana",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18301,
+                "nome": "Hiperemia Persistente",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18297,
+                    18300
+                ],
+                "argumentos": [
+                    "hiperemia_conjuntival",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18602,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (Hiperemia Ao Acordar)",
+            "descricao": "Hiperemia Ao Acordar",
+            "passo_de_saida_id": 18593,
+            "passo_de_saida": {
+                "id": 18593,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Hiperemia Conjuntival",
+                "descricao": "Paciente com hiperemia conjuntival associada a secre\u00e7\u00e3o mucopurulenta",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:27:56.867813-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18596,
+            "passo_de_entrada": {
+                "id": 18596,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18302,
+                "nome": "Hiperemia Ao Acordar",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18297,
+                    18299
+                ],
+                "argumentos": [
+                    "hiperemia_conjuntival",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18603,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18594,
+            "passo_de_saida": {
+                "id": 18594,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conjuntivite Bacteriana",
+                "descricao": "Hip\u00f3tese Diag\u00f3stica: Conjuntivite Bacteriana",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18595,
+            "passo_de_entrada": {
+                "id": 18595,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Conjuntivite Bacteriana: Receita",
+                "descricao": "<ul>\n\t<li>Emitir atestado de 7 dias para paciente.</li>\n\t<li>Orientar retorno se n&atilde;o houver melhora em 72h.</li>\n\t<li>Considerar avalia&ccedil;&atilde;o com oftalmologista se persist&ecirc;ncia do caso.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18604,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Sint. Conjuntivite Al\u00e9rgica)",
+            "descricao": "Sint. Conjuntivite Al\u00e9rgica",
+            "passo_de_saida_id": 18596,
+            "passo_de_saida": {
+                "id": 18596,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18599,
+            "passo_de_entrada": {
+                "id": 18599,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conjuntivite Al\u00e9rgica",
+                "descricao": "Hip\u00f3tese Diagn\u00f3stica: Conjuntivite Al\u00e9rgica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18303,
+                "nome": "Sint. Conjuntivite Al\u00e9rgica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18298,
+                    18299
+                ],
+                "argumentos": [
+                    "sintomas",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18605,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Sint. Conjuntivite Viral)",
+            "descricao": "Sint. Conjuntivite Viral",
+            "passo_de_saida_id": 18596,
+            "passo_de_saida": {
+                "id": 18596,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18597,
+            "passo_de_entrada": {
+                "id": 18597,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conjuntivite Viral",
+                "descricao": "Hip\u00f3tese Diagn\u00f3stica: Conjuntivite Viral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18304,
+                "nome": "Sint. Conjuntivite Viral",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18298,
+                    18300
+                ],
+                "argumentos": [
+                    "sintomas",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18606,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18597,
+            "passo_de_saida": {
+                "id": 18597,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conjuntivite Viral",
+                "descricao": "Hip\u00f3tese Diagn\u00f3stica: Conjuntivite Viral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18598,
+            "passo_de_entrada": {
+                "id": 18598,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Conjuntivite Viral: Receita",
+                "descricao": "<ul>\n\t<li>Emitir atestado de 7 dias para paciente.</li>\n\t<li>Orientar retorno se n&atilde;o houver melhora em 72h.</li>\n\t<li>Considerar avalia&ccedil;&atilde;o com oftalmologista se persist&ecirc;ncia do caso ou suspeito de pseudomembrana.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Orienta\u00e7\u00e3o: Aplicar compressas frias com Soro Fisiol\u00f3gico 0,9% 3 vezes ao dia."
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18607,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18599,
+            "passo_de_saida": {
+                "id": 18599,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Conjuntivite Al\u00e9rgica",
+                "descricao": "Hip\u00f3tese Diagn\u00f3stica: Conjuntivite Al\u00e9rgica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18600,
+            "passo_de_entrada": {
+                "id": 18600,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Conjuntivite Al\u00e9rgica: Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Orienta\u00e7\u00e3o: Compressas frias 3x ao dia com Soro Fisiol\u00f3gico 0,9% ou com \u00e1gua filtrada."
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18621,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Irrita\u00e7\u00e3o Ocular",
+            "descricao": "<p><span style=\"font-size:16px\">Hip&oacute;tese Diagn&oacute;stica: Corpo Estranho? Uve&iacute;te?&nbsp;</span></p>\n\n<p><span style=\"font-size:16px\">Encaminhar para avalia&ccedil;&atilde;o com oftalmologista.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:32:44.752668-03:00"
+            },
+            "sequencias_de_entrada": [
+                {
+                    "id": 18622,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 18593,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Hiperemia Conjuntival",
+                    "passo_de_entrada_id": 18621,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Irrita\u00e7\u00e3o Ocular",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T09:33:59.964700-03:00"
+                    }
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18622,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "-",
+            "passo_de_saida_id": 18593,
+            "passo_de_saida": {
+                "id": 18593,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Hiperemia Conjuntival",
+                "descricao": "Paciente com hiperemia conjuntival associada a secre\u00e7\u00e3o mucopurulenta",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:27:56.867813-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18621,
+            "passo_de_entrada": {
+                "id": 18621,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Irrita\u00e7\u00e3o Ocular",
+                "descricao": "<p><span style=\"font-size:16px\">Hip&oacute;tese Diagn&oacute;stica: Corpo Estranho? Uve&iacute;te?&nbsp;</span></p>\n\n<p><span style=\"font-size:16px\">Encaminhar para avalia&ccedil;&atilde;o com oftalmologista.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:32:44.752668-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18306,
+                "nome": "Irrita\u00e7\u00e3o ocular",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    18297,
+                    18305
+                ],
+                "argumentos": [
+                    "hiperemia_conjuntival",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:33:59.964700-03:00"
+            }
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 18297,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "hiperemia_conjuntival",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Somente ao acordar, se torna aquosa ao longo do dia",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Persistente durante o dia",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Sem secre\u00e7\u00e3o, apenas irrita\u00e7\u00e3o",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 18298,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sintomas",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Prurido + Hist\u00f3rico de Rinite/Alergia",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Sensa\u00e7\u00e3o de queima\u00e7\u00e3o ou areia nos olhos (Em 90% dos casos h\u00e1 presen\u00e7a de linfonodomegalia Pr\u00e9-Auricular)",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 18299,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18300,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18305,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

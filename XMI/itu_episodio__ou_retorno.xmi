@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="661" url="" name="ITU Epis&#xf3;dio 2 ou Retorno" code="itu_ep_02">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3441" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Informar Tipo do Atendimento" description="Informe o tipo do atendimento do paciente." isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Consulta de Retorno?" url="" id="1561">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="consula_retorno" id="2561" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3442" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Resultado de Exames [Retorno]" description="Verifique o resultados dos exames da paciente" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.3 //@sequence.10">
+    <questions text="Houve altera&#xe7;&#xe3;o no exame de sum&#xe1;rio de urina?" url="" id="1562">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_retorno" id="2562" weight="1" value="false"/>
+    </questions>
+    <questions text="Houve altera&#xe7;&#xe3;o no exame de Urocultura?" url="" id="1563">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="urocultura_alterada_retorno" id="2563" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3443" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Realizar Avalia&#xe7;&#xe3;o de Queixas Urin&#xe1;rias" description="Verifique se a paciente apresenta queixas urin&#xe1;rias para seguir com o tratamento" inputSequences="//@sequence.3 //@sequence.4" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Polaci&#xfa;ria" url="" id="1564">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_polaciuria" id="2564" weight="1" value="false"/>
+    </questions>
+    <questions text="Urg&#xea;ncia Miccional" url="" id="1565">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urgencia_miccional" id="2565" weight="1" value="false"/>
+    </questions>
+    <questions text="Hemat&#xfa;ria" url="" id="1566">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_hematuria" id="2566" weight="2" value="false"/>
+    </questions>
+    <questions text="Febre" url="" id="1567">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_febre" id="2567" weight="1" value="false"/>
+    </questions>
+    <questions text="Dis&#xfa;ria" url="" id="1568">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_disuria" id="2568" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor Lombar" url="" id="1569">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quexas_ep02_dor_lombar" id="2569" weight="1" value="false"/>
+    </questions>
+    <questions text="Calafrios" url="" id="1570">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_calafrios" id="2570" weight="1" value="false"/>
+    </questions>
+    <questions text="Urina escura com odor f&#xe9;tido" url="" id="1571">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urina_escura" id="2571" weight="2" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3444" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Baseado no Antibiograma" description="." inputSequences="//@sequence.2 //@sequence.11" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Information" id="3445" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Epis&#xf3;dio Tratado" description="Epis&#xf3;dio Tratado" isTerminal="true" inputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Information" id="3447" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Sem Tratamento Espec&#xed;fico" description="Sem tratamento espec&#xed;fico para essa situa&#xe7;&#xe3;o." isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3448" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Nitrofurantoina" description="Verifique se a paciente possui alergia ou resist&#xea;ncia (tratamento pr&#xe9;vio) a Nitrofurantoina" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.12">
+    <questions text="Paciente possui alergia a nitrofurantoina?" url="" id="1572">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoiona_ep2" id="2572" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3449" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Nitrofurantoina" description=".." isTerminal="true" inputSequences="//@sequence.8">
+    <item id="681" url="" name="NITROFURANTOINA" med_code="1962276173" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3450" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Fosfomicina" description=".." isTerminal="true" inputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3451" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Resultado de Exames" description="Verifique o resultados dos exames da paciente." inputSequences="//@sequence.1" outputSequences="//@sequence.4 //@sequence.11">
+    <questions text="Houve altera&#xe7;&#xe3;o no exame de sum&#xe1;rio de urina?" url="" id="1573">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_ep2" id="2573" weight="1" value="false"/>
+    </questions>
+    <questions text="Houve altera&#xe7;&#xe3;o no exame de Urocultura?" url="" id="1574">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="urocutura_alterada_ep02" id="2574" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3452" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Cefalexina" description="Verifique se a paciente apresenta alergia ou resist&#xea;ncia (tratamento pr&#xe9;vio) a cefalexina." inputSequences="//@sequence.12" outputSequences="//@sequence.9 //@sequence.13">
+    <questions text="Paciente possui alergia a cefalexina?" url="" id="1575">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina_ep2" id="2575" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3453" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Cefalexina" description=".." isTerminal="true" inputSequences="//@sequence.13">
+    <item id="682" url="" name="CEFALEXINA" med_code="1854814644" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3454" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Amoxicilina" description="Verifique se a paciente possui alergia ou resist&#xea;ncia (tratamento pr&#xe9;vio) a amoxicilina" inputSequences="//@sequence.9" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Paciente possui alergia a amoxicilina?" url="" id="1576">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina_ep2" id="2576" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3455" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Amoxicilina" description=".." isTerminal="true" inputSequences="//@sequence.14">
+    <item id="683" url="" name="AMOXICILINA" med_code="1462078884" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Tomar um comprimido de 8/8 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3456" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Fosfomicina" description="Verifique se a paciente possui alergia ou resist&#xea;ncia (tratamento pr&#xe9;vio) a fosfomicina." inputSequences="//@sequence.15" outputSequences="//@sequence.16 //@sequence.17">
+    <questions text="Paciente possui alergia a fosfomicina?" url="" id="1577">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina_ep2" id="2577" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3457" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Alternativo" description=".." inputSequences="//@sequence.17">
+    <item id="684" url="" name="AMPICILINA" med_code="1854825711" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 6/6 horas"/>
+    <item id="701" url="" name="AMOXICILINA+CLAV POTASSIO" med_code="1854813363" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="3458" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description="">
+    <operation name="paciente_consulta_de_retorno" Operator="affirmation" id="2584">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="consula_retorno" id="2561" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="3459" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="">
+    <operation name="paciente_segundo_ep" id="2585">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="consula_retorno" id="2561" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="3460" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="">
+    <operation name="paciente_com_alteracao_urocultura_retorno" Operator="affirmation" id="2586">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="urocultura_alterada_retorno" id="2563" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="3461" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="">
+    <operation name="paciente_com_sumario_urina_alterado_retorno" Operator="and" id="2587">
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_urocultura_alterada_retorno" id="2579">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="urocultura_alterada_retorno" id="2563" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_retorno" id="2562" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.9" id="3462" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description="">
+    <operation name="paciente_sem_alteracoes_urocultura_ep2" id="2588">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="urocutura_alterada_ep02" id="2574" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.3" id="3463" type="Sequencia" type_verbose="Sequencia" url="" name="s8" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="3464" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="">
+    <operation name="soma_queixas_ep2_menor_2" Operator="lessThan" id="2589">
+      <operand xsi:type="pathwayMetamodel:Operation" name="somatorio_queixas_urinarias_ep2" Operator="addition" id="2583">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_disuria" id="2568" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quexas_ep02_dor_lombar" id="2569" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_calafrios" id="2570" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urina_escura" id="2571" weight="2" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_polaciuria" id="2564" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urgencia_miccional" id="2565" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_hematuria" id="2566" weight="2" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_febre" id="2567" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="2578" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="3465" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="">
+    <operation name="soma_queixas_ep2_maior_igual_2" Operator="greaterOrEqual" id="2590">
+      <operand xsi:type="pathwayMetamodel:Operation" name="somatorio_queixas_urinarias_ep2" Operator="addition" id="2583">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_disuria" id="2568" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="quexas_ep02_dor_lombar" id="2569" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_calafrios" id="2570" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urina_escura" id="2571" weight="2" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_polaciuria" id="2564" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urgencia_miccional" id="2565" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_hematuria" id="2566" weight="2" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_febre" id="2567" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="2578" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="3466" type="Sequencia" type_verbose="Sequencia" url="" name="s12" description="">
+    <operation name="paciente_sem_alergia_nitrofurantoina_ep2" id="2591">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoiona_ep2" id="2572" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="3467" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description="">
+    <operation name="paciente_com_alergia_cefalexina_ep2" Operator="affirmation" id="2592">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina_ep2" id="2575" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="3468" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="">
+    <operation name="sem_alteracoes_exames_retorno" Operator="and" id="2593">
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_sumario_urina_alterado_retorno" id="2580">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_retorno" id="2562" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="not_urocultura_alterada_retorno" id="2579">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="urocultura_alterada_retorno" id="2563" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.9" id="3469" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="">
+    <operation name="paciente_com_urocultura_alterada_ep2" Operator="affirmation" id="2594">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="urocutura_alterada_ep02" id="2574" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.6" id="3470" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description="">
+    <operation name="paciente_com_alergia_nitrofurantoina_ep2" Operator="affirmation" id="2595">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoiona_ep2" id="2572" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="3471" type="Sequencia" type_verbose="Sequencia" url="" name="s13" description="">
+    <operation name="paciente_sem_alergia_cefalexina_ep2" id="2596">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina_ep2" id="2575" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="3472" type="Sequencia" type_verbose="Sequencia" url="" name="s15" description="">
+    <operation name="paciente_sem_alergia_amoxicilina_ep2" id="2597">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina_ep2" id="2576" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.12" id="3473" type="Sequencia" type_verbose="Sequencia" url="" name="s16" description="">
+    <operation name="paciente_com_alergia_amoxicilina_ep2" Operator="affirmation" id="2598">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina_ep2" id="2576" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.14" id="3474" type="Sequencia" type_verbose="Sequencia" url="" name="s17" description="">
+    <operation name="paciente_sem_alergia_fosfomicina_ep2" id="2599">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina_ep2" id="2577" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.14" id="3475" type="Sequencia" type_verbose="Sequencia" url="" name="s18" description="">
+    <operation name="paciente_com_alergia_fosfomicina_ep2" Operator="affirmation" id="2600">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina_ep2" id="2577" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="not_urocultura_alterada_retorno" id="2579">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="urocultura_alterada_retorno" id="2563" weight="1" value="false"/>
+  </operation>
+  <operation name="not_sumario_urina_alterado_retorno" id="2580">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_retorno" id="2562" weight="1" value="false"/>
+  </operation>
+  <operation name="not_urocutura_alterada_ep02" id="2581">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="urocutura_alterada_ep02" id="2574" weight="1" value="false"/>
+  </operation>
+  <operation name="not_sumario_urina_alterado_ep2" id="2582">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_ep2" id="2573" weight="1" value="false"/>
+  </operation>
+  <operation name="somatorio_queixas_urinarias_ep2" Operator="addition" id="2583">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_disuria" id="2568" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="quexas_ep02_dor_lombar" id="2569" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_calafrios" id="2570" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urina_escura" id="2571" weight="2" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_polaciuria" id="2564" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urgencia_miccional" id="2565" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_hematuria" id="2566" weight="2" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_febre" id="2567" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="consula_retorno" id="2561" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_retorno" id="2562" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="urocultura_alterada_retorno" id="2563" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_polaciuria" id="2564" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urgencia_miccional" id="2565" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_hematuria" id="2566" weight="2" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_febre" id="2567" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_disuria" id="2568" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quexas_ep02_dor_lombar" id="2569" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_calafrios" id="2570" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="queixas_ep2_urina_escura" id="2571" weight="2" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoiona_ep2" id="2572" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sumario_urina_alterado_ep2" id="2573" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="urocutura_alterada_ep02" id="2574" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina_ep2" id="2575" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina_ep2" id="2576" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina_ep2" id="2577" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="2578" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

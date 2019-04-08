@@ -1,0 +1,1492 @@
+{
+    "id": 894,
+    "url": "",
+    "codigo": "VB_MONO_IECA",
+    "nome": "[Viver Bem] Monoterapia Linha IECA",
+    "repositorio_id": 513,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:54:10.273791-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:54:10.273791-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:17.937094-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4336,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Retorno Mensal - I",
+            "descricao": "<p>Aguardar retorno mensal com Paciente</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4446,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "-",
+                    "passo_de_saida_id": 4429,
+                    "passo_de_saida": "Processo: Realizar Retorno Mensal - I",
+                    "passo_de_entrada_id": 4336,
+                    "passo_de_entrada": "Pausa: Retorno Mensal - I",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4431,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "",
+                    "passo_de_saida_id": 4336,
+                    "passo_de_saida": "Pausa: Retorno Mensal - I",
+                    "passo_de_entrada_id": 4337,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - I",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4337,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Meta Press\u00f3rica - I",
+            "descricao": "Primeira avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 10mg 2Xdia",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1941,
+                    "url": "",
+                    "texto": "Atingiu meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3168,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ieca_mono_meta_pressorica_i",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4431,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "",
+                    "passo_de_saida_id": 4336,
+                    "passo_de_saida": "Pausa: Retorno Mensal - I",
+                    "passo_de_entrada_id": 4337,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - I",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4432,
+                    "url": "",
+                    "nome": "S3 (Avaliar meta Press\u00f3rica I - Retorno Semestral I)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4337,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - I",
+                    "passo_de_entrada_id": 4338,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - I",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4433,
+                    "url": "",
+                    "nome": "S4 (Avaliar meta Press\u00f3rica I - Tratamento com Enalapril II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4337,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - I",
+                    "passo_de_entrada_id": 4421,
+                    "passo_de_entrada": "Receita: Tratamento com Enalapril - II",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4338,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Retorno Semestral - I",
+            "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4432,
+                    "url": "",
+                    "nome": "S3 (Avaliar meta Press\u00f3rica I - Retorno Semestral I)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4337,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - I",
+                    "passo_de_entrada_id": 4338,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - I",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4437,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 4340,
+                    "passo_de_saida": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - I",
+                    "passo_de_entrada_id": 4338,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - I",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4434,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "",
+                    "passo_de_saida_id": 4338,
+                    "passo_de_saida": "Pausa: Retorno Semestral - I",
+                    "passo_de_entrada_id": 4339,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - I",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4339,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Se Manteve Meta press\u00f3rica - I",
+            "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1942,
+                    "url": "",
+                    "texto": "Manteve meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3169,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ieca_mono_manteve_meta_pressorica_i",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4434,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "",
+                    "passo_de_saida_id": 4338,
+                    "passo_de_saida": "Pausa: Retorno Semestral - I",
+                    "passo_de_entrada_id": 4339,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - I",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4435,
+                    "url": "",
+                    "nome": "S6 (Avaliar Se Manteve Meta press\u00f3rica I - Prescrever \u00faltima medica\u00e7\u00e3o I)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4339,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - I",
+                    "passo_de_entrada_id": 4340,
+                    "passo_de_entrada": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - I",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4436,
+                    "url": "",
+                    "nome": "S7 (Avaliar Se Manteve Meta press\u00f3rica I - Tratamento com Enalapril - II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4339,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - I",
+                    "passo_de_entrada_id": 4421,
+                    "passo_de_entrada": "Receita: Tratamento com Enalapril - II",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4340,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescrever \u00faltima medica\u00e7\u00e3o - I",
+            "descricao": "Continuar tomando a \u00faltima medica\u00e7\u00e3o prescrita",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": true,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4435,
+                    "url": "",
+                    "nome": "S6 (Avaliar Se Manteve Meta press\u00f3rica I - Prescrever \u00faltima medica\u00e7\u00e3o I)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4339,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - I",
+                    "passo_de_entrada_id": 4340,
+                    "passo_de_entrada": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - I",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4437,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 4340,
+                    "passo_de_saida": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - I",
+                    "passo_de_entrada_id": 4338,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - I",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4421,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento com Enalapril - II",
+            "descricao": "Enalapril 20mg 2Xdia",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4433,
+                    "url": "",
+                    "nome": "S4 (Avaliar meta Press\u00f3rica I - Tratamento com Enalapril II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4337,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - I",
+                    "passo_de_entrada_id": 4421,
+                    "passo_de_entrada": "Receita: Tratamento com Enalapril - II",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4436,
+                    "url": "",
+                    "nome": "S7 (Avaliar Se Manteve Meta press\u00f3rica I - Tratamento com Enalapril - II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4339,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - I",
+                    "passo_de_entrada_id": 4421,
+                    "passo_de_entrada": "Receita: Tratamento com Enalapril - II",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4438,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 4421,
+                    "passo_de_saida": "Receita: Tratamento com Enalapril - II",
+                    "passo_de_entrada_id": 4422,
+                    "passo_de_entrada": "Pausa: Retorno Mensal - II",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4422,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Retorno Mensal - II",
+            "descricao": "Agendar retorno mensal do paciente, ap\u00f3s tratamento com Enalapril 20mg 2x / dia",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4438,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 4421,
+                    "passo_de_saida": "Receita: Tratamento com Enalapril - II",
+                    "passo_de_entrada_id": 4422,
+                    "passo_de_entrada": "Pausa: Retorno Mensal - II",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4439,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "",
+                    "passo_de_saida_id": 4422,
+                    "passo_de_saida": "Pausa: Retorno Mensal - II",
+                    "passo_de_entrada_id": 4423,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - II",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4423,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Meta Press\u00f3rica - II",
+            "descricao": "Segunda avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 20mg 2Xdia",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1943,
+                    "url": "",
+                    "texto": "Atingiu meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3170,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ieca_mono_meta_pressorica_ii",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4439,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "",
+                    "passo_de_saida_id": 4422,
+                    "passo_de_saida": "Pausa: Retorno Mensal - II",
+                    "passo_de_entrada_id": 4423,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - II",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4440,
+                    "url": "",
+                    "nome": "S11 (Avaliar Meta press\u00f3rica II - Retorno Semestral II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4423,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - II",
+                    "passo_de_entrada_id": 4424,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - II",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4441,
+                    "url": "",
+                    "nome": "S12 (Avaliar Meta press\u00f3rica II - Prescrever Duploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4423,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - II",
+                    "passo_de_entrada_id": 4427,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Duploterapia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4424,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Retorno Semestral - II",
+            "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4440,
+                    "url": "",
+                    "nome": "S11 (Avaliar Meta press\u00f3rica II - Retorno Semestral II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4423,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - II",
+                    "passo_de_entrada_id": 4424,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - II",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4445,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "",
+                    "passo_de_saida_id": 4426,
+                    "passo_de_saida": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - II",
+                    "passo_de_entrada_id": 4424,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - II",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4442,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "",
+                    "passo_de_saida_id": 4424,
+                    "passo_de_saida": "Pausa: Retorno Semestral - II",
+                    "passo_de_entrada_id": 4425,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - II",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4425,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Se Manteve Meta press\u00f3rica - II",
+            "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s segundo retorno semestral",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1944,
+                    "url": "",
+                    "texto": "Manteve meta press\u00f3rica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3171,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ieca_mono_manteve_meta_pressorica_ii",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4442,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "",
+                    "passo_de_saida_id": 4424,
+                    "passo_de_saida": "Pausa: Retorno Semestral - II",
+                    "passo_de_entrada_id": 4425,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - II",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4443,
+                    "url": "",
+                    "nome": "S14 (Avaliar Se Manteve Meta press\u00f3rica II - Prescrever \u00faltima medica\u00e7\u00e3o - II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4425,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - II",
+                    "passo_de_entrada_id": 4426,
+                    "passo_de_entrada": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - II",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4444,
+                    "url": "",
+                    "nome": "S15 (Avaliar Se Manteve Meta press\u00f3rica II -  Prescrever Duploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4425,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - II",
+                    "passo_de_entrada_id": 4427,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Duploterapia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4426,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescrever \u00faltima medica\u00e7\u00e3o - II",
+            "descricao": "Continua tomando a ultima medica\u00e7\u00e3o prescrita",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": true,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4443,
+                    "url": "",
+                    "nome": "S14 (Avaliar Se Manteve Meta press\u00f3rica II - Prescrever \u00faltima medica\u00e7\u00e3o - II)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4425,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - II",
+                    "passo_de_entrada_id": 4426,
+                    "passo_de_entrada": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - II",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4445,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "",
+                    "passo_de_saida_id": 4426,
+                    "passo_de_saida": "Receita: Prescrever \u00faltima medica\u00e7\u00e3o - II",
+                    "passo_de_entrada_id": 4424,
+                    "passo_de_entrada": "Pausa: Retorno Semestral - II",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4427,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Prescrever Duploterapia",
+            "descricao": "Encaminhar paciente para duploterapia",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_DUPLO_IECA"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4441,
+                    "url": "",
+                    "nome": "S12 (Avaliar Meta press\u00f3rica II - Prescrever Duploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4423,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Meta Press\u00f3rica - II",
+                    "passo_de_entrada_id": 4427,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Duploterapia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4444,
+                    "url": "",
+                    "nome": "S15 (Avaliar Se Manteve Meta press\u00f3rica II -  Prescrever Duploterapia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4425,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Se Manteve Meta press\u00f3rica - II",
+                    "passo_de_entrada_id": 4427,
+                    "passo_de_entrada": "Encaminhamento: Prescrever Duploterapia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4428,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento com Enalapril - I",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4430,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 4428,
+                    "passo_de_saida": "Receita: Tratamento com Enalapril - I",
+                    "passo_de_entrada_id": 4429,
+                    "passo_de_entrada": "Processo: Realizar Retorno Mensal - I",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4429,
+            "type": "Processo",
+            "type_verbose": "Processo",
+            "url": "",
+            "nome": "Realizar Retorno Mensal - I",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "acoes": [
+                {
+                    "id": 68,
+                    "processo_id": 4429,
+                    "servico": "aprazamento",
+                    "servico_display": "Aprazamento",
+                    "descricao": "Agendar Consulta de Retorno",
+                    "entradas": {
+                        "orientacao": "Retorno mensal, ou se houver agravamento de sintomas",
+                        "codigo_retorno": "1",
+                        "tipo_profissional": "M",
+                        "codigo_risco": "1"
+                    },
+                    "entradas_display": {
+                        "Orienta\u00e7\u00e3o": "Retorno mensal, ou se houver agravamento de sintomas",
+                        "Tipo de retorno": "Mensal",
+                        "Tipo de profissional": "M\u00e9dico",
+                        "Risco": "Risco Habitual"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4430,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "",
+            "passo_de_saida_id": 4428,
+            "passo_de_saida": {
+                "id": 4428,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento com Enalapril - I",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4429,
+            "passo_de_entrada": {
+                "id": 4429,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Realizar Retorno Mensal - I",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4431,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "",
+            "passo_de_saida_id": 4336,
+            "passo_de_saida": {
+                "id": 4336,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Mensal - I",
+                "descricao": "<p>Aguardar retorno mensal com Paciente</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4337,
+            "passo_de_entrada": {
+                "id": 4337,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica - I",
+                "descricao": "Primeira avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 10mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4432,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (Avaliar meta Press\u00f3rica I - Retorno Semestral I)",
+            "descricao": "",
+            "passo_de_saida_id": 4337,
+            "passo_de_saida": {
+                "id": 4337,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica - I",
+                "descricao": "Primeira avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 10mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4338,
+            "passo_de_entrada": {
+                "id": 4338,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral - I",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3172,
+                "nome": "atingiu_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3168
+                ],
+                "argumentos": [
+                    "ieca_mono_meta_pressorica_i"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4433,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Avaliar meta Press\u00f3rica I - Tratamento com Enalapril II)",
+            "descricao": "",
+            "passo_de_saida_id": 4337,
+            "passo_de_saida": {
+                "id": 4337,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica - I",
+                "descricao": "Primeira avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 10mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4421,
+            "passo_de_entrada": {
+                "id": 4421,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento com Enalapril - II",
+                "descricao": "Enalapril 20mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3173,
+                "nome": "nao_atingiu_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3168
+                ],
+                "argumentos": [
+                    "ieca_mono_meta_pressorica_i"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4434,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "",
+            "passo_de_saida_id": 4338,
+            "passo_de_saida": {
+                "id": 4338,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral - I",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4339,
+            "passo_de_entrada": {
+                "id": 4339,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica - I",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4435,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Avaliar Se Manteve Meta press\u00f3rica I - Prescrever \u00faltima medica\u00e7\u00e3o I)",
+            "descricao": "",
+            "passo_de_saida_id": 4339,
+            "passo_de_saida": {
+                "id": 4339,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica - I",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4340,
+            "passo_de_entrada": {
+                "id": 4340,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever \u00faltima medica\u00e7\u00e3o - I",
+                "descricao": "Continuar tomando a \u00faltima medica\u00e7\u00e3o prescrita",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3174,
+                "nome": "manteve_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3169
+                ],
+                "argumentos": [
+                    "ieca_mono_manteve_meta_pressorica_i"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4436,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (Avaliar Se Manteve Meta press\u00f3rica I - Tratamento com Enalapril - II)",
+            "descricao": "",
+            "passo_de_saida_id": 4339,
+            "passo_de_saida": {
+                "id": 4339,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica - I",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4421,
+            "passo_de_entrada": {
+                "id": 4421,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento com Enalapril - II",
+                "descricao": "Enalapril 20mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3175,
+                "nome": "nao_manteve_meta_pressorica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3169
+                ],
+                "argumentos": [
+                    "ieca_mono_manteve_meta_pressorica_i"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4437,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "",
+            "passo_de_saida_id": 4340,
+            "passo_de_saida": {
+                "id": 4340,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever \u00faltima medica\u00e7\u00e3o - I",
+                "descricao": "Continuar tomando a \u00faltima medica\u00e7\u00e3o prescrita",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4338,
+            "passo_de_entrada": {
+                "id": 4338,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral - I",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4438,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "",
+            "passo_de_saida_id": 4421,
+            "passo_de_saida": {
+                "id": 4421,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento com Enalapril - II",
+                "descricao": "Enalapril 20mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4422,
+            "passo_de_entrada": {
+                "id": 4422,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Mensal - II",
+                "descricao": "Agendar retorno mensal do paciente, ap\u00f3s tratamento com Enalapril 20mg 2x / dia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4439,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "",
+            "passo_de_saida_id": 4422,
+            "passo_de_saida": {
+                "id": 4422,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Mensal - II",
+                "descricao": "Agendar retorno mensal do paciente, ap\u00f3s tratamento com Enalapril 20mg 2x / dia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4423,
+            "passo_de_entrada": {
+                "id": 4423,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica - II",
+                "descricao": "Segunda avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 20mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4440,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (Avaliar Meta press\u00f3rica II - Retorno Semestral II)",
+            "descricao": "",
+            "passo_de_saida_id": 4423,
+            "passo_de_saida": {
+                "id": 4423,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica - II",
+                "descricao": "Segunda avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 20mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4424,
+            "passo_de_entrada": {
+                "id": 4424,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral - II",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3176,
+                "nome": "atingiu_meta_pressorica__",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3170
+                ],
+                "argumentos": [
+                    "ieca_mono_meta_pressorica_ii"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4441,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (Avaliar Meta press\u00f3rica II - Prescrever Duploterapia)",
+            "descricao": "",
+            "passo_de_saida_id": 4423,
+            "passo_de_saida": {
+                "id": 4423,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Meta Press\u00f3rica - II",
+                "descricao": "Segunda avalia\u00e7\u00e3o ap\u00f3s Tratamento com Enalapril 20mg 2Xdia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4427,
+            "passo_de_entrada": {
+                "id": 4427,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Prescrever Duploterapia",
+                "descricao": "Encaminhar paciente para duploterapia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    510
+                ]
+            },
+            "operacao": {
+                "id": 3177,
+                "nome": "nao_atingiu_meta_pressorica_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3170
+                ],
+                "argumentos": [
+                    "ieca_mono_meta_pressorica_ii"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4442,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "",
+            "passo_de_saida_id": 4424,
+            "passo_de_saida": {
+                "id": 4424,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral - II",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4425,
+            "passo_de_entrada": {
+                "id": 4425,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica - II",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s segundo retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4443,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (Avaliar Se Manteve Meta press\u00f3rica II - Prescrever \u00faltima medica\u00e7\u00e3o - II)",
+            "descricao": "",
+            "passo_de_saida_id": 4425,
+            "passo_de_saida": {
+                "id": 4425,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica - II",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s segundo retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4426,
+            "passo_de_entrada": {
+                "id": 4426,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever \u00faltima medica\u00e7\u00e3o - II",
+                "descricao": "Continua tomando a ultima medica\u00e7\u00e3o prescrita",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3178,
+                "nome": "manteve_meta_pressorica_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3171
+                ],
+                "argumentos": [
+                    "ieca_mono_manteve_meta_pressorica_ii"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4444,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (Avaliar Se Manteve Meta press\u00f3rica II -  Prescrever Duploterapia)",
+            "descricao": "",
+            "passo_de_saida_id": 4425,
+            "passo_de_saida": {
+                "id": 4425,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Se Manteve Meta press\u00f3rica - II",
+                "descricao": "Avaliar se manteve meta press\u00f3rica ap\u00f3s segundo retorno semestral",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4427,
+            "passo_de_entrada": {
+                "id": 4427,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Prescrever Duploterapia",
+                "descricao": "Encaminhar paciente para duploterapia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    510
+                ]
+            },
+            "operacao": {
+                "id": 3179,
+                "nome": "nao_manteve_meta_pressorica_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3171
+                ],
+                "argumentos": [
+                    "ieca_mono_manteve_meta_pressorica_ii"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4445,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16",
+            "descricao": "",
+            "passo_de_saida_id": 4426,
+            "passo_de_saida": {
+                "id": 4426,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever \u00faltima medica\u00e7\u00e3o - II",
+                "descricao": "Continua tomando a ultima medica\u00e7\u00e3o prescrita",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4424,
+            "passo_de_entrada": {
+                "id": 4424,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Semestral - II",
+                "descricao": "Agendar retorno semestral do Paciente ap\u00f3s avalia\u00e7\u00e3o de meta press\u00f3rica",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4446,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17",
+            "descricao": "-",
+            "passo_de_saida_id": 4429,
+            "passo_de_saida": {
+                "id": 4429,
+                "type": "Processo",
+                "type_verbose": "Processo",
+                "url": "",
+                "nome": "Realizar Retorno Mensal - I",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4336,
+            "passo_de_entrada": {
+                "id": 4336,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Retorno Mensal - I",
+                "descricao": "<p>Aguardar retorno mensal com Paciente</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3168,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ieca_mono_meta_pressorica_i",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3169,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ieca_mono_manteve_meta_pressorica_i",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3170,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ieca_mono_meta_pressorica_ii",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3171,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ieca_mono_manteve_meta_pressorica_ii",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

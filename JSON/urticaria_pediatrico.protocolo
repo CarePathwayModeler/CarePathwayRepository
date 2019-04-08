@@ -1,0 +1,1827 @@
+{
+    "id": 3361,
+    "url": "",
+    "codigo": "H040",
+    "nome": "Urtic\u00e1ria Pedi\u00e1trico",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 462,
+    "versao": 5,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-04T14:46:59.180421-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-04T14:21:52.583625-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-04T14:46:59.180421-03:00"
+    },
+    "elementos": [
+        {
+            "id": 20261,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Sintomas",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10261,
+                    "url": "",
+                    "texto": "Qual sintoma o paciente apresenta?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19841,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sintoma_paciente",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Placas Urticariformes",
+                                "peso": 5.0
+                            },
+                            {
+                                "texto": "Angioedema",
+                                "peso": 10.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 20273,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20261,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sintomas",
+                    "passo_de_entrada_id": 20262,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20274,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20261,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sintomas",
+                    "passo_de_entrada_id": 20263,
+                    "passo_de_entrada": "Tratamento: [Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20262,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10262,
+                    "url": "",
+                    "texto": "\u00c9 associado \u00e0 sinais de in\u00edcio s\u00fabito?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19842,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sinais_inicio_subito",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Dor abdominal ou tor\u00e1cica",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Sintomas gastro intestinais (diarr\u00e9ia, disfagia, n\u00e1usea/v\u00f4mitos)",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Cianose, m\u00e1 perfus\u00e3o, hipotens\u00e3o, taquicardia",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "S\u00edncope, confus\u00e3o mental, vertigem",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Sintomas respirat\u00f3rios (dispn\u00e9ia, estridor, sibil\u00e2ncia, taquipn\u00e9ia, tosse de in\u00edcio s\u00fabito)",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20273,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20261,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sintomas",
+                    "passo_de_entrada_id": 20262,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20275,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                    "passo_de_entrada_id": 20263,
+                    "passo_de_entrada": "Tratamento: [Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20276,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                    "passo_de_entrada_id": 20264,
+                    "passo_de_entrada": "Tratamento: Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20263,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">- Passar caso com chefia local.</span></p>\n\n<p><span style=\"font-size:16px\">- Encaminhar paciente ao eixo vermelho para avaliar necessidade de observa&ccedil;&atilde;o rigorosa + monitoriza&ccedil;&atilde;o + controle PA</span></p>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:16px\">Prescri&ccedil;&atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&eacute; 3x se persistir sintomas.</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 722,
+                    "url": "",
+                    "medicamento": 32727,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 601,
+                        "codigo_produto": 65,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "B",
+                        "via_administracao": "EV   Bolus",
+                        "descricao_administracao": "AMPL      1.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 0.01,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 1,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 98,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 9,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20274,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20261,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Sintomas",
+                    "passo_de_entrada_id": 20263,
+                    "passo_de_entrada": "Tratamento: [Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20275,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                    "passo_de_entrada_id": 20263,
+                    "passo_de_entrada": "Tratamento: [Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20277,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20263,
+                    "passo_de_saida": "Tratamento: [Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                    "passo_de_entrada_id": 20266,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20264,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento",
+            "descricao": "<p><span style=\"font-size:16px\">- Prescrever anti histam&iacute;nico na emerg&ecirc;ncia.</span></p>\n\n<p><span style=\"font-size:16px\">- Deixar 2h em observa&ccedil;&atilde;o e reavaliar ap&oacute;s.</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 723,
+                    "url": "",
+                    "medicamento": 135144,
+                    "unidade": "M8",
+                    "unidade_display": "MILIGRAMA POR KG DOSE",
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": null
+                },
+                {
+                    "id": 724,
+                    "url": "",
+                    "medicamento": 36390,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 4381,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1 FA + 18 ml AD",
+                        "codigo_principio_ativo": 1309,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 100,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 602,
+                        "codigo_produto": 4473,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "FRAP    100.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 5.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 100,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 1309,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 8,
+                        "codigo_tipo_acesso": 6
+                    }
+                },
+                {
+                    "id": 725,
+                    "url": "",
+                    "medicamento": 39144,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 4382,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "2 ml + 18 ml AD",
+                        "codigo_principio_ativo": 2047,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 603,
+                        "codigo_produto": 7695,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "AMPL     50.00MG/2ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 1.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 25,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 2047,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 5,
+                        "codigo_tipo_acesso": 6
+                    }
+                },
+                {
+                    "id": 726,
+                    "url": "",
+                    "medicamento": 85294,
+                    "unidade": "M8",
+                    "unidade_display": "MILIGRAMA POR KG DOSE",
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null,
+                    "apresentacao": null
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20276,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                    "passo_de_entrada_id": 20264,
+                    "passo_de_entrada": "Tratamento: Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20280,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20264,
+                    "passo_de_saida": "Tratamento: Tratamento",
+                    "passo_de_entrada_id": 20267,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Tratamento] Avaliar Melhora Cl\u00ednica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20265,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Alta com Sintom\u00e1ticos",
+            "descricao": "<p><span style=\"font-size:16px\">Orienta&ccedil;&otilde;es gerais:</span></p>\n\n<p><span style=\"font-size:16px\">- Identificar e remover a causa</span></p>\n\n<p><span style=\"font-size:16px\">- Orientar sobre a doen&ccedil;a</span></p>\n\n<p><span style=\"font-size:16px\">- Evitar AINES</span></p>\n\n<p><span style=\"font-size:16px\">- Usar repelentes</span></p>\n\n<p><span style=\"font-size:16px\">- Retorno se piora do quadro</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5441,
+                    "url": "",
+                    "nome": "Hidroxizina 2mg/5ml _____ 1 Fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ ml de 8/8h",
+                    "ordem": 1
+                },
+                {
+                    "id": 5442,
+                    "url": "",
+                    "nome": "Desloratadina 0,5mg/ml _____ 1 Fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ ml 1 vez ao dia",
+                    "ordem": 2
+                },
+                {
+                    "id": 5443,
+                    "url": "",
+                    "nome": "Loratadina 1mg/ml _____ 1 Fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ ml 1 vez ao dia",
+                    "ordem": 3
+                },
+                {
+                    "id": 5444,
+                    "url": "",
+                    "nome": "Fexofenadina 6mg/ml _____ 1 Fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ ml de 12/12h",
+                    "ordem": 4
+                },
+                {
+                    "id": 5445,
+                    "url": "",
+                    "nome": "Prednisolona 3mg/ml _____ 1 Fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ ml 1 vez ao dia por 5 dias",
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20279,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20281,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Tratamento] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20283,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20268,
+                    "passo_de_saida": "Tratamento: [Sem Melhora Cl\u00ednica] Conduta",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20284,
+                    "url": "",
+                    "nome": "S13 (com melhora clinica)",
+                    "descricao": "com melhora clinica",
+                    "passo_de_saida_id": 20269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema] Houve melhora clinica",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20266,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10263,
+                    "url": "",
+                    "texto": "Houve melhora cl\u00ednica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19843,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "melhora_clinica_angioedema",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20277,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20263,
+                    "passo_de_saida": "Tratamento: [Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                    "passo_de_entrada_id": 20266,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20278,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20270,
+                    "passo_de_entrada": "Tratamento: Tratamento - Angioedema",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20279,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20267,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Tratamento] Avaliar Melhora Cl\u00ednica",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10264,
+                    "url": "",
+                    "texto": "Houve melhora cl\u00ednica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19844,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "melhora_clinica_tratamento",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20280,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20264,
+                    "passo_de_saida": "Tratamento: Tratamento",
+                    "passo_de_entrada_id": 20267,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Tratamento] Avaliar Melhora Cl\u00ednica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20281,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Tratamento] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20282,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Tratamento] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20268,
+                    "passo_de_entrada": "Tratamento: [Sem Melhora Cl\u00ednica] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20268,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Sem Melhora Cl\u00ednica] Conduta",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Prescri&ccedil;&atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&eacute; 3x se persistir sintomas.</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 727,
+                    "url": "",
+                    "medicamento": 32727,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 604,
+                        "codigo_produto": 65,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "B",
+                        "via_administracao": "EV   Bolus",
+                        "descricao_administracao": "AMPL      1.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 0.01,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 1,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 98,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 9,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20282,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Tratamento] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20268,
+                    "passo_de_entrada": "Tratamento: [Sem Melhora Cl\u00ednica] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20283,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20268,
+                    "passo_de_saida": "Tratamento: [Sem Melhora Cl\u00ednica] Conduta",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20269,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Angioedema] Houve melhora clinica",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10265,
+                    "url": "",
+                    "texto": "Houve melhora cl\u00ednica ap\u00f3s tratamento?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19845,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "melhora_clinica_angioedema_2",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20272,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Avaliar melhora clinica ap\u00f3s tratamento - Angioedema",
+                    "passo_de_saida_id": 20270,
+                    "passo_de_saida": "Tratamento: Tratamento - Angioedema",
+                    "passo_de_entrada_id": 20269,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Angioedema] Houve melhora clinica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20284,
+                    "url": "",
+                    "nome": "S13 (com melhora clinica)",
+                    "descricao": "com melhora clinica",
+                    "passo_de_saida_id": 20269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema] Houve melhora clinica",
+                    "passo_de_entrada_id": 20265,
+                    "passo_de_entrada": "Receita: Alta com Sintom\u00e1ticos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20285,
+                    "url": "",
+                    "nome": "S14 (sem melhora clinica)",
+                    "descricao": "sem melhora clinica",
+                    "passo_de_saida_id": 20269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema] Houve melhora clinica",
+                    "passo_de_entrada_id": 20271,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Chefia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20270,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento - Angioedema",
+            "descricao": "<p><span style=\"font-size:16px\">- Prescrever anti histam&iacute;nico na emerg&ecirc;ncia.</span></p>\n\n<p><span style=\"font-size:16px\">- Deixar 2h em observa&ccedil;&atilde;o e reavaliar ap&oacute;s.</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 728,
+                    "url": "",
+                    "medicamento": 135144,
+                    "unidade": "M8",
+                    "unidade_display": "MILIGRAMA POR KG DOSE",
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": null
+                },
+                {
+                    "id": 729,
+                    "url": "",
+                    "medicamento": 36390,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 4383,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1 FA + 18 ml AD",
+                        "codigo_principio_ativo": 1309,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 100,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 605,
+                        "codigo_produto": 4473,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "FRAP    100.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 5.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 100,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 1309,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 8,
+                        "codigo_tipo_acesso": 6
+                    }
+                },
+                {
+                    "id": 730,
+                    "url": "",
+                    "medicamento": 39144,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 4384,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "2 ml + 18 ml AD",
+                        "codigo_principio_ativo": 2047,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 606,
+                        "codigo_produto": 7695,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "AMPL     50.00MG/2ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 1.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 25,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 2047,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 5,
+                        "codigo_tipo_acesso": 6
+                    }
+                },
+                {
+                    "id": 731,
+                    "url": "",
+                    "medicamento": 85294,
+                    "unidade": "M8",
+                    "unidade_display": "MILIGRAMA POR KG DOSE",
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null,
+                    "apresentacao": null
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20278,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                    "passo_de_entrada_id": 20270,
+                    "passo_de_entrada": "Tratamento: Tratamento - Angioedema",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20272,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Avaliar melhora clinica ap\u00f3s tratamento - Angioedema",
+                    "passo_de_saida_id": 20270,
+                    "passo_de_saida": "Tratamento: Tratamento - Angioedema",
+                    "passo_de_entrada_id": 20269,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Angioedema] Houve melhora clinica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20271,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Chefia",
+            "descricao": "<p><span style=\"font-size:20px\">Discutir caso com chefia local</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20285,
+                    "url": "",
+                    "nome": "S14 (sem melhora clinica)",
+                    "descricao": "sem melhora clinica",
+                    "passo_de_saida_id": 20269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Angioedema] Houve melhora clinica",
+                    "passo_de_entrada_id": 20271,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Chefia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20272,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "Avaliar melhora clinica ap\u00f3s tratamento - Angioedema",
+            "passo_de_saida_id": 20270,
+            "passo_de_saida": {
+                "id": 20270,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento - Angioedema",
+                "descricao": "<p><span style=\"font-size:16px\">- Prescrever anti histam&iacute;nico na emerg&ecirc;ncia.</span></p>\n\n<p><span style=\"font-size:16px\">- Deixar 2h em observa&ccedil;&atilde;o e reavaliar ap&oacute;s.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20269,
+            "passo_de_entrada": {
+                "id": 20269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Angioedema] Houve melhora clinica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20273,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "-",
+            "passo_de_saida_id": 20261,
+            "passo_de_saida": {
+                "id": 20261,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sintomas",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20262,
+            "passo_de_entrada": {
+                "id": 20262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19849,
+                "nome": "Placas_Urticariformes",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    19841,
+                    19846
+                ],
+                "argumentos": [
+                    "sintoma_paciente",
+                    "5"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20274,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "-",
+            "passo_de_saida_id": 20261,
+            "passo_de_saida": {
+                "id": 20261,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Sintomas",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20263,
+            "passo_de_entrada": {
+                "id": 20263,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">- Passar caso com chefia local.</span></p>\n\n<p><span style=\"font-size:16px\">- Encaminhar paciente ao eixo vermelho para avaliar necessidade de observa&ccedil;&atilde;o rigorosa + monitoriza&ccedil;&atilde;o + controle PA</span></p>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:16px\">Prescri&ccedil;&atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&eacute; 3x se persistir sintomas.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19850,
+                "nome": "Angioedema",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    19841,
+                    19847
+                ],
+                "argumentos": [
+                    "sintoma_paciente",
+                    "10"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20275,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "-",
+            "passo_de_saida_id": 20262,
+            "passo_de_saida": {
+                "id": 20262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20263,
+            "passo_de_entrada": {
+                "id": 20263,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">- Passar caso com chefia local.</span></p>\n\n<p><span style=\"font-size:16px\">- Encaminhar paciente ao eixo vermelho para avaliar necessidade de observa&ccedil;&atilde;o rigorosa + monitoriza&ccedil;&atilde;o + controle PA</span></p>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:16px\">Prescri&ccedil;&atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&eacute; 3x se persistir sintomas.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19851,
+                "nome": "Cont\u00e9m_sinais_de_in\u00edcio_s\u00fabito",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    19842,
+                    19848
+                ],
+                "argumentos": [
+                    "sinais_inicio_subito",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20276,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "-",
+            "passo_de_saida_id": 20262,
+            "passo_de_saida": {
+                "id": 20262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Placas Urticariformes] Sinais de In\u00edcio S\u00fabito",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20264,
+            "passo_de_entrada": {
+                "id": 20264,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento",
+                "descricao": "<p><span style=\"font-size:16px\">- Prescrever anti histam&iacute;nico na emerg&ecirc;ncia.</span></p>\n\n<p><span style=\"font-size:16px\">- Deixar 2h em observa&ccedil;&atilde;o e reavaliar ap&oacute;s.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19852,
+                "nome": "N\u00e3o_cont\u00e9m_sinais_de_in\u00edcio_s\u00fabito",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    19842,
+                    19848
+                ],
+                "argumentos": [
+                    "sinais_inicio_subito",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20277,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "-",
+            "passo_de_saida_id": 20263,
+            "passo_de_saida": {
+                "id": 20263,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Angioedema ou Placas Urticariformes com Sinais de \u00cdnicio S\u00fabito] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">- Passar caso com chefia local.</span></p>\n\n<p><span style=\"font-size:16px\">- Encaminhar paciente ao eixo vermelho para avaliar necessidade de observa&ccedil;&atilde;o rigorosa + monitoriza&ccedil;&atilde;o + controle PA</span></p>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:16px\">Prescri&ccedil;&atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&eacute; 3x se persistir sintomas.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20266,
+            "passo_de_entrada": {
+                "id": 20266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20278,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "-",
+            "passo_de_saida_id": 20266,
+            "passo_de_saida": {
+                "id": 20266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20270,
+            "passo_de_entrada": {
+                "id": 20270,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento - Angioedema",
+                "descricao": "<p><span style=\"font-size:16px\">- Prescrever anti histam&iacute;nico na emerg&ecirc;ncia.</span></p>\n\n<p><span style=\"font-size:16px\">- Deixar 2h em observa&ccedil;&atilde;o e reavaliar ap&oacute;s.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19853,
+                "nome": "N\u00e3o_houve_melhora_cl\u00ednica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19843
+                ],
+                "argumentos": [
+                    "melhora_clinica_angioedema"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20279,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "-",
+            "passo_de_saida_id": 20266,
+            "passo_de_saida": {
+                "id": 20266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Angioedema ou Sinais de \u00cdnicio S\u00fabito] Avaliar Melhora Cl\u00ednica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20265,
+            "passo_de_entrada": {
+                "id": 20265,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta com Sintom\u00e1ticos",
+                "descricao": "<p><span style=\"font-size:16px\">Orienta&ccedil;&otilde;es gerais:</span></p>\n\n<p><span style=\"font-size:16px\">- Identificar e remover a causa</span></p>\n\n<p><span style=\"font-size:16px\">- Orientar sobre a doen&ccedil;a</span></p>\n\n<p><span style=\"font-size:16px\">- Evitar AINES</span></p>\n\n<p><span style=\"font-size:16px\">- Usar repelentes</span></p>\n\n<p><span style=\"font-size:16px\">- Retorno se piora do quadro</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19854,
+                "nome": "Houve_melhora_cl\u00ednica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19843
+                ],
+                "argumentos": [
+                    "melhora_clinica_angioedema"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20280,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "-",
+            "passo_de_saida_id": 20264,
+            "passo_de_saida": {
+                "id": 20264,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento",
+                "descricao": "<p><span style=\"font-size:16px\">- Prescrever anti histam&iacute;nico na emerg&ecirc;ncia.</span></p>\n\n<p><span style=\"font-size:16px\">- Deixar 2h em observa&ccedil;&atilde;o e reavaliar ap&oacute;s.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20267,
+            "passo_de_entrada": {
+                "id": 20267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Tratamento] Avaliar Melhora Cl\u00ednica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20281,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "-",
+            "passo_de_saida_id": 20267,
+            "passo_de_saida": {
+                "id": 20267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Tratamento] Avaliar Melhora Cl\u00ednica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20265,
+            "passo_de_entrada": {
+                "id": 20265,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta com Sintom\u00e1ticos",
+                "descricao": "<p><span style=\"font-size:16px\">Orienta&ccedil;&otilde;es gerais:</span></p>\n\n<p><span style=\"font-size:16px\">- Identificar e remover a causa</span></p>\n\n<p><span style=\"font-size:16px\">- Orientar sobre a doen&ccedil;a</span></p>\n\n<p><span style=\"font-size:16px\">- Evitar AINES</span></p>\n\n<p><span style=\"font-size:16px\">- Usar repelentes</span></p>\n\n<p><span style=\"font-size:16px\">- Retorno se piora do quadro</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19855,
+                "nome": "Houve_melhora_cl\u00ednica_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19844
+                ],
+                "argumentos": [
+                    "melhora_clinica_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20282,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "-",
+            "passo_de_saida_id": 20267,
+            "passo_de_saida": {
+                "id": 20267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Tratamento] Avaliar Melhora Cl\u00ednica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20268,
+            "passo_de_entrada": {
+                "id": 20268,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem Melhora Cl\u00ednica] Conduta",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Prescri&ccedil;&atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&eacute; 3x se persistir sintomas.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19856,
+                "nome": "N\u00e3o_houve_melhora_cl\u00ednica_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19844
+                ],
+                "argumentos": [
+                    "melhora_clinica_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20283,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "-",
+            "passo_de_saida_id": 20268,
+            "passo_de_saida": {
+                "id": 20268,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem Melhora Cl\u00ednica] Conduta",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Prescri&ccedil;&atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&eacute; 3x se persistir sintomas.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20265,
+            "passo_de_entrada": {
+                "id": 20265,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta com Sintom\u00e1ticos",
+                "descricao": "<p><span style=\"font-size:16px\">Orienta&ccedil;&otilde;es gerais:</span></p>\n\n<p><span style=\"font-size:16px\">- Identificar e remover a causa</span></p>\n\n<p><span style=\"font-size:16px\">- Orientar sobre a doen&ccedil;a</span></p>\n\n<p><span style=\"font-size:16px\">- Evitar AINES</span></p>\n\n<p><span style=\"font-size:16px\">- Usar repelentes</span></p>\n\n<p><span style=\"font-size:16px\">- Retorno se piora do quadro</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20284,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (com melhora clinica)",
+            "descricao": "com melhora clinica",
+            "passo_de_saida_id": 20269,
+            "passo_de_saida": {
+                "id": 20269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Angioedema] Houve melhora clinica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20265,
+            "passo_de_entrada": {
+                "id": 20265,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta com Sintom\u00e1ticos",
+                "descricao": "<p><span style=\"font-size:16px\">Orienta&ccedil;&otilde;es gerais:</span></p>\n\n<p><span style=\"font-size:16px\">- Identificar e remover a causa</span></p>\n\n<p><span style=\"font-size:16px\">- Orientar sobre a doen&ccedil;a</span></p>\n\n<p><span style=\"font-size:16px\">- Evitar AINES</span></p>\n\n<p><span style=\"font-size:16px\">- Usar repelentes</span></p>\n\n<p><span style=\"font-size:16px\">- Retorno se piora do quadro</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19857,
+                "nome": "com melhora clinica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19845
+                ],
+                "argumentos": [
+                    "melhora_clinica_angioedema_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20285,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (sem melhora clinica)",
+            "descricao": "sem melhora clinica",
+            "passo_de_saida_id": 20269,
+            "passo_de_saida": {
+                "id": 20269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Angioedema] Houve melhora clinica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20271,
+            "passo_de_entrada": {
+                "id": 20271,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Chefia",
+                "descricao": "<p><span style=\"font-size:20px\">Discutir caso com chefia local</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19858,
+                "nome": "sem melhora clinica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19845
+                ],
+                "argumentos": [
+                    "melhora_clinica_angioedema_2"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 19841,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sintoma_paciente",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Placas Urticariformes",
+                    "peso": 5.0
+                },
+                {
+                    "texto": "Angioedema",
+                    "peso": 10.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19842,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sinais_inicio_subito",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Dor abdominal ou tor\u00e1cica",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Sintomas gastro intestinais (diarr\u00e9ia, disfagia, n\u00e1usea/v\u00f4mitos)",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Cianose, m\u00e1 perfus\u00e3o, hipotens\u00e3o, taquicardia",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "S\u00edncope, confus\u00e3o mental, vertigem",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Sintomas respirat\u00f3rios (dispn\u00e9ia, estridor, sibil\u00e2ncia, taquipn\u00e9ia, tosse de in\u00edcio s\u00fabito)",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 19843,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "melhora_clinica_angioedema",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19844,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "melhora_clinica_tratamento",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19845,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "melhora_clinica_angioedema_2",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        },
+        {
+            "id": 19846,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "5",
+            "peso": 1.0,
+            "valor": 5.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19847,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "10",
+            "peso": 1.0,
+            "valor": 10.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19848,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

@@ -1,0 +1,2685 @@
+{
+    "id": 3243,
+    "url": "",
+    "codigo": "H008",
+    "nome": "ITU - Cistite",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 61,
+    "versao": 10,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T15:43:38.884137-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T15:40:44.981946-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T15:43:38.884137-03:00"
+    },
+    "elementos": [
+        {
+            "id": 18865,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Informar Sexo do paciente",
+            "descricao": "Informe o sexo do paciente para seguir com o tratamento adequado.",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9633,
+                    "url": "",
+                    "texto": "Masculino",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18556,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sexo_masculino",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 641,
+                            "type": "VinculoSexoPaciente",
+                            "type_verbose": "V\u00ednculo Com O Sexo Do Paciente",
+                            "premissa_verdadeira": "M",
+                            "premissa_verdadeira_display": "Masculino"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9634,
+                    "url": "",
+                    "texto": "Feminino",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18557,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sexo_feminino",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 642,
+                            "type": "VinculoSexoPaciente",
+                            "type_verbose": "V\u00ednculo Com O Sexo Do Paciente",
+                            "premissa_verdadeira": "F",
+                            "premissa_verdadeira_display": "Feminino"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 18882,
+                    "url": "",
+                    "nome": "S1 (Paciente homem)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Sexo do paciente",
+                    "passo_de_entrada_id": 18866,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Masculino] Avaliar Sintomas",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18883,
+                    "url": "",
+                    "nome": "S2 (Paciente mulher)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Sexo do paciente",
+                    "passo_de_entrada_id": 18867,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino] Avaliar Sintomas",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18866,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Masculino] Avaliar Sintomas",
+            "descricao": "Informe os sintomas apresentados pelo paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9635,
+                    "url": "",
+                    "texto": "Sintomas por mais de 7 dias",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18558,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_homem_7_dias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9636,
+                    "url": "",
+                    "texto": "Imunossupress\u00e3o",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18559,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_homem_imunossupressao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9637,
+                    "url": "",
+                    "texto": "DM",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18560,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_homem_dm",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9638,
+                    "url": "",
+                    "texto": "Idade > 65 anos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18581,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_homem_idoso",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9639,
+                    "url": "",
+                    "texto": "Altera\u00e7\u00f5es Urol\u00f3gicas ou DRC?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18582,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_homem_alteracoes_urologicas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9640,
+                    "url": "",
+                    "texto": "Recorr\u00eancia dos sintomas por mais de 14 dias",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18583,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_homem_14_dias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 9641,
+                    "url": "",
+                    "texto": "Paciente em uso de antibi\u00f3tico recente (h\u00e1 48-72H), sem melhora dos sintomas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18584,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "antibiotico_recente_masc",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18882,
+                    "url": "",
+                    "nome": "S1 (Paciente homem)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Sexo do paciente",
+                    "passo_de_entrada_id": 18866,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Masculino] Avaliar Sintomas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18891,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "",
+                    "passo_de_saida_id": 18866,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Masculino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18868,
+                    "passo_de_entrada": "Tratamento: [Masculino] Solicitar Exames + Hemograma",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18892,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 18866,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Masculino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18869,
+                    "passo_de_entrada": "Tratamento: [Masculino] Solicitar Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18867,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Feminino] Avaliar Sintomas",
+            "descricao": "Informe os sintomas apresentados pelo paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9642,
+                    "url": "",
+                    "texto": "Sintomas por mais de 7 dias",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18585,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_mulher_7_dias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9643,
+                    "url": "",
+                    "texto": "Imunossupress\u00e3o",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18586,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_mulher_imunossupressao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9644,
+                    "url": "",
+                    "texto": "Diabetes Melitus",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18587,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_mulher_dm",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9645,
+                    "url": "",
+                    "texto": "Idade > 65 anos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18588,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_mulher_idosa",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9646,
+                    "url": "",
+                    "texto": "Altera\u00e7\u00f5es Urol\u00f3gicas ou DRC",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18589,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_mulher_alteracoes_urologicas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9647,
+                    "url": "",
+                    "texto": "Recorr\u00eancia dos sintomas por mais de 14 dias",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18590,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "avaliar_sintomas_mulher_14_dias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 9648,
+                    "url": "",
+                    "texto": "Paciente em uso de antibi\u00f3tico recente (h\u00e1 48-72H), sem melhora dos sintomas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18591,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "antibiotico_recente_fem",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18883,
+                    "url": "",
+                    "nome": "S2 (Paciente mulher)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Informar Sexo do paciente",
+                    "passo_de_entrada_id": 18867,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino] Avaliar Sintomas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18894,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 18867,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18873,
+                    "passo_de_entrada": "Tratamento: [Feminino] Solicitar Exames + Hemograma",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18895,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 18867,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18875,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino] Verificar Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18868,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Masculino] Solicitar Exames + Hemograma",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com suspeita de Cistite",
+                    "indicacao_clinica": "N/A",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com suspeita de cistite",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com suspeita de cistite",
+                    "indicacao_clinica": "SUMARIO DE URINA  (TIPO I)",
+                    "categoria": null
+                },
+                {
+                    "url": "ANTIBIOGRAMA DIFUSAO EM AGAR",
+                    "exame": "28100034",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de ITU - Cistite",
+                    "indicacao_clinica": "Protocolo de ITU - Cistite",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18891,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "",
+                    "passo_de_saida_id": 18866,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Masculino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18868,
+                    "passo_de_entrada": "Tratamento: [Masculino] Solicitar Exames + Hemograma",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18884,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "",
+                    "passo_de_saida_id": 18868,
+                    "passo_de_saida": "Tratamento: [Masculino] Solicitar Exames + Hemograma",
+                    "passo_de_entrada_id": 18870,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aviso: Discutir tratamento espec\u00edfico com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18869,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Masculino] Solicitar Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com suspeita de cistite",
+                    "indicacao_clinica": "Protocolo de Cistite",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9780,
+                    "url": "",
+                    "medicamento": 38008,
+                    "codigo": "",
+                    "nome": "DIPIRONA 1 G AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": "Sint\u00f3maticas",
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3998,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1ml = 500mg",
+                        "codigo_principio_ativo": 909,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 1000,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 681,
+                    "url": "",
+                    "medicamento": 38008,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": "Sint\u00f3maticas",
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3999,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1ml = 500mg",
+                        "codigo_principio_ativo": 909,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 1000,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 561,
+                        "codigo_produto": 1485,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "AMPL   1000.00MG/2ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 20.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 500,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 909,
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 6,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18892,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 18866,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Masculino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18869,
+                    "passo_de_entrada": "Tratamento: [Masculino] Solicitar Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18885,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "",
+                    "passo_de_saida_id": 18869,
+                    "passo_de_saida": "Tratamento: [Masculino] Solicitar Exames",
+                    "passo_de_entrada_id": 18871,
+                    "passo_de_entrada": "Receita: [Marculino] Tratamento com antibi\u00f3tico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18870,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Aviso: Discutir tratamento espec\u00edfico com l\u00edder local",
+            "descricao": "Paciente apresenta potencial de gravidade, sugere-se discutir o caso com o l\u00edder local para defini\u00e7\u00e3o do tratamento mais adequado.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18884,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "",
+                    "passo_de_saida_id": 18868,
+                    "passo_de_saida": "Tratamento: [Masculino] Solicitar Exames + Hemograma",
+                    "passo_de_entrada_id": 18870,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aviso: Discutir tratamento espec\u00edfico com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18871,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Marculino] Tratamento com antibi\u00f3tico",
+            "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas, 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es a seguir, retornar imediatamente a emerg\u00eancia.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:42:35.749664-03:00"
+            },
+            "manter_prescricao": false,
+            "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico.",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5006,
+                    "url": "",
+                    "nome": "Ciprofloxacino 500Mg ...... 14cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 1
+                },
+                {
+                    "id": 5007,
+                    "url": "",
+                    "nome": "Fosfomicina 3g",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Diluir em um copo de agua e tomar em dose unica",
+                    "ordem": 2
+                },
+                {
+                    "id": 5008,
+                    "url": "",
+                    "nome": "Nitrofurantoina 100Mg ...... 28cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h",
+                    "ordem": 3
+                },
+                {
+                    "id": 5009,
+                    "url": "",
+                    "nome": "Pyridium 100Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 8/8h",
+                    "ordem": 4
+                },
+                {
+                    "id": 5010,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido 6/6h se dor ou febre",
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18885,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "",
+                    "passo_de_saida_id": 18869,
+                    "passo_de_saida": "Tratamento: [Masculino] Solicitar Exames",
+                    "passo_de_entrada_id": 18871,
+                    "passo_de_entrada": "Receita: [Marculino] Tratamento com antibi\u00f3tico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18886,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "",
+                    "passo_de_saida_id": 18871,
+                    "passo_de_saida": "Receita: [Marculino] Tratamento com antibi\u00f3tico",
+                    "passo_de_entrada_id": 18872,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aviso: Encaminhar paciente para urologista",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18872,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Aviso: Encaminhar paciente para urologista",
+            "descricao": "Recomende ao paciente a que procure uma consulta eletiva com o urologista para avalia\u00e7\u00e3o do caso.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18886,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "",
+                    "passo_de_saida_id": 18871,
+                    "passo_de_saida": "Receita: [Marculino] Tratamento com antibi\u00f3tico",
+                    "passo_de_entrada_id": 18872,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aviso: Encaminhar paciente para urologista",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18873,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Feminino] Solicitar Exames + Hemograma",
+            "descricao": "Exames com hemograma",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de cistite",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de cistite",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com suspeita de cistite",
+                    "indicacao_clinica": "Protocolo de Cistite",
+                    "categoria": null
+                },
+                {
+                    "url": "ANTIBIOGRAMA DIFUSAO EM AGAR",
+                    "exame": "28100034",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de ITU - Cistite",
+                    "indicacao_clinica": "Protocolo de ITU - Cistite",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18894,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 18867,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18873,
+                    "passo_de_entrada": "Tratamento: [Feminino] Solicitar Exames + Hemograma",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18887,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 18873,
+                    "passo_de_saida": "Tratamento: [Feminino] Solicitar Exames + Hemograma",
+                    "passo_de_entrada_id": 18880,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18874,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Feminino] Tratamento com antibi\u00f3tico",
+            "descricao": "<div class=\"box-header with-border\">\n<h3><u><strong>Aten&ccedil;&atilde;o!</strong></u></h3>\n</div>\n\n<div class=\"box-body\">\n<div>\n<div>\n<ul>\n\t<li>Caso paciente tenha feito uso de antibi&oacute;tico pr&eacute;vio, discutir com l&iacute;der local a possibilidade de troca para novo antibi&oacute;tico.</li>\n\t<li>Caso n&atilde;o apresente melhora dos sintomas, 3 dias ap&oacute;s in&iacute;cio das medica&ccedil;&otilde;es a seguir, retornar imediatamente a emerg&ecirc;ncia.</li>\n</ul>\n</div>\n</div>\n</div>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:42:47.585805-03:00"
+            },
+            "manter_prescricao": false,
+            "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico.",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5011,
+                    "url": "",
+                    "nome": "Ciprofloxacino 500Mg ...... 10cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 1
+                },
+                {
+                    "id": 5012,
+                    "url": "",
+                    "nome": "Fosfomicina 3g",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Diluir sache em um copo de agua, tomar em dose unica",
+                    "ordem": 2
+                },
+                {
+                    "id": 5013,
+                    "url": "",
+                    "nome": "Pyridium 100Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 8/8h",
+                    "ordem": 3
+                },
+                {
+                    "id": 5014,
+                    "url": "",
+                    "nome": "Amoxicilina/Clavulanato 875/125 ...... 10cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 4
+                },
+                {
+                    "id": 5015,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18896,
+                    "url": "",
+                    "nome": "S15 (n\u00e3o gestante)",
+                    "descricao": "n\u00e3o gestante",
+                    "passo_de_saida_id": 18880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                    "passo_de_entrada_id": 18874,
+                    "passo_de_entrada": "Receita: [Feminino] Tratamento com antibi\u00f3tico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18875,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Feminino] Verificar Gesta\u00e7\u00e3o",
+            "descricao": "Verificar se paciente est\u00e1 gestante.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9649,
+                    "url": "",
+                    "texto": "Paciente gestante?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18592,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gravidez",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18895,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 18867,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Avaliar Sintomas",
+                    "passo_de_entrada_id": 18875,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino] Verificar Gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18888,
+                    "url": "",
+                    "nome": "S12 (paciente gravida)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18875,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Gesta\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18876,
+                    "passo_de_entrada": "Receita: [Feminino] Tratamento paciente gestante",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18889,
+                    "url": "",
+                    "nome": "S13 (paciente n\u00e3o est\u00e1 gr\u00e1vida)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18875,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Gesta\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18877,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino] Verificar Fatores Agravantes",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18876,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Feminino] Tratamento paciente gestante",
+            "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas, 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es a seguir, retornar imediatamente a emerg\u00eancia.\nAumente a ingest\u00e3o h\u00eddrica para auxiliar no tratamento.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:43:21.383849-03:00"
+            },
+            "manter_prescricao": false,
+            "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico.",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5016,
+                    "url": "",
+                    "nome": "Cefalexina 500Mg ...... 28cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h",
+                    "ordem": 1
+                },
+                {
+                    "id": 5017,
+                    "url": "",
+                    "nome": "Fosfomicina 3g",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Diluir sache em um copo de agua e tomar em dose unica",
+                    "ordem": 2
+                },
+                {
+                    "id": 5018,
+                    "url": "",
+                    "nome": "Paracetamol 500Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 3
+                },
+                {
+                    "id": 5019,
+                    "url": "",
+                    "nome": "Nitrofurantoina 100Mg ...... 28cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18888,
+                    "url": "",
+                    "nome": "S12 (paciente gravida)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18875,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Gesta\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18876,
+                    "passo_de_entrada": "Receita: [Feminino] Tratamento paciente gestante",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18877,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Feminino] Verificar Fatores Agravantes",
+            "descricao": "Verificar se a paciente apresenta presen\u00e7a de leucorr\u00e9ia ou irrita\u00e7\u00e3o vaginal.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9650,
+                    "url": "",
+                    "texto": "Paciente apresenta leucorr\u00e9ia ou irrita\u00e7\u00e3o vaginal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18593,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "leucorreia_irritacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18889,
+                    "url": "",
+                    "nome": "S13 (paciente n\u00e3o est\u00e1 gr\u00e1vida)",
+                    "descricao": "",
+                    "passo_de_saida_id": 18875,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Gesta\u00e7\u00e3o",
+                    "passo_de_entrada_id": 18877,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino] Verificar Fatores Agravantes",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18890,
+                    "url": "",
+                    "nome": "S15 (N\u00e3o apresenta leucorreia/irritacao)",
+                    "descricao": "Paciente n\u00e3o apresenta leucorreia/irritacao",
+                    "passo_de_saida_id": 18877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Fatores Agravantes",
+                    "passo_de_entrada_id": 18878,
+                    "passo_de_entrada": "Receita: [Feminino] Tratamento de fatores agravantes com antibi\u00f3tico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18893,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 18877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Fatores Agravantes",
+                    "passo_de_entrada_id": 18879,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aviso: Encaminhar paciente para ginecologista",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18878,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Feminino] Tratamento de fatores agravantes com antibi\u00f3tico",
+            "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas, 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es a seguir, retornar imediatamente a emerg\u00eancia. \nAumente a ingest\u00e3o h\u00eddrica para auxiliar no tratamento.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:43:07.671205-03:00"
+            },
+            "manter_prescricao": false,
+            "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico.",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5020,
+                    "url": "",
+                    "nome": "Fosfomicina 3g",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Diluir sache em um copo de agua e tomar em dose unica",
+                    "ordem": 1
+                },
+                {
+                    "id": 5041,
+                    "url": "",
+                    "nome": "Pyridium 100Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 8/8h",
+                    "ordem": 2
+                },
+                {
+                    "id": 5042,
+                    "url": "",
+                    "nome": "Nitrofurantoina 100Mg ...... 20cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h",
+                    "ordem": 3
+                },
+                {
+                    "id": 5043,
+                    "url": "",
+                    "nome": "Amoxicilina/Clavulanato 875/125 ...... 14cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido 12/12h",
+                    "ordem": 4
+                },
+                {
+                    "id": 5044,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18890,
+                    "url": "",
+                    "nome": "S15 (N\u00e3o apresenta leucorreia/irritacao)",
+                    "descricao": "Paciente n\u00e3o apresenta leucorreia/irritacao",
+                    "passo_de_saida_id": 18877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Fatores Agravantes",
+                    "passo_de_entrada_id": 18878,
+                    "passo_de_entrada": "Receita: [Feminino] Tratamento de fatores agravantes com antibi\u00f3tico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18879,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Aviso: Encaminhar paciente para ginecologista",
+            "descricao": "Recomende a paciente a que procure uma consulta eletiva com o ginecologista para avalia\u00e7\u00e3o do caso.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18893,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 18877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino] Verificar Fatores Agravantes",
+                    "passo_de_entrada_id": 18879,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aviso: Encaminhar paciente para ginecologista",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18880,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9651,
+                    "url": "",
+                    "texto": "Paciente gestante?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18594,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "feminino_complicacoes_gestante",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18887,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 18873,
+                    "passo_de_saida": "Tratamento: [Feminino] Solicitar Exames + Hemograma",
+                    "passo_de_entrada_id": 18880,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18896,
+                    "url": "",
+                    "nome": "S15 (n\u00e3o gestante)",
+                    "descricao": "n\u00e3o gestante",
+                    "passo_de_saida_id": 18880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                    "passo_de_entrada_id": 18874,
+                    "passo_de_entrada": "Receita: [Feminino] Tratamento com antibi\u00f3tico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18897,
+                    "url": "",
+                    "nome": "S16 (paciente gestante)",
+                    "descricao": "paciente gestante",
+                    "passo_de_saida_id": 18880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                    "passo_de_entrada_id": 18881,
+                    "passo_de_entrada": "Receita: [Feminino - Gestante - Com complica\u00e7\u00f5es] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18881,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Feminino - Gestante - Com complica\u00e7\u00f5es] Tratamento",
+            "descricao": "<p><u><strong>Aten&ccedil;&atilde;o!</strong></u></p>\n\n<ul>\n\t<li>Caso paciente tenha feito uso de antibi&oacute;tico pr&eacute;vio, discutir com l&iacute;der local a possibilidade de troca para novo antibi&oacute;tico.</li>\n\t<li>Caso n&atilde;o apresente melhora dos sintomas, 3 dias ap&oacute;s in&iacute;cio das medica&ccedil;&otilde;es a seguir, retornar imediatamente a emerg&ecirc;ncia.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:42:56.361357-03:00"
+            },
+            "manter_prescricao": false,
+            "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico.",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5045,
+                    "url": "",
+                    "nome": "Fosfomicina 3g",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Diluir sache em um copo de agua, tomar em dose unica",
+                    "ordem": 1
+                },
+                {
+                    "id": 5046,
+                    "url": "",
+                    "nome": "Amoxicilina/Clavulanato 875/125 ...... 10cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 2
+                },
+                {
+                    "id": 5047,
+                    "url": "",
+                    "nome": "Paracetamol 750mg ..... 1 cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se necess\u00e1rio",
+                    "ordem": 3
+                },
+                {
+                    "id": 5048,
+                    "url": "",
+                    "nome": "Nitrofurantoina 100mg  ..... 1 cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18897,
+                    "url": "",
+                    "nome": "S16 (paciente gestante)",
+                    "descricao": "paciente gestante",
+                    "passo_de_saida_id": 18880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                    "passo_de_entrada_id": 18881,
+                    "passo_de_entrada": "Receita: [Feminino - Gestante - Com complica\u00e7\u00f5es] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18882,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (Paciente homem)",
+            "descricao": "",
+            "passo_de_saida_id": 18865,
+            "passo_de_saida": {
+                "id": 18865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Informar Sexo do paciente",
+                "descricao": "Informe o sexo do paciente para seguir com o tratamento adequado.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18866,
+            "passo_de_entrada": {
+                "id": 18866,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Masculino] Avaliar Sintomas",
+                "descricao": "Informe os sintomas apresentados pelo paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18600,
+                "nome": "Paciente homem",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18556
+                ],
+                "argumentos": [
+                    "sexo_masculino"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18883,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (Paciente mulher)",
+            "descricao": "",
+            "passo_de_saida_id": 18865,
+            "passo_de_saida": {
+                "id": 18865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Informar Sexo do paciente",
+                "descricao": "Informe o sexo do paciente para seguir com o tratamento adequado.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18867,
+            "passo_de_entrada": {
+                "id": 18867,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Avaliar Sintomas",
+                "descricao": "Informe os sintomas apresentados pelo paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18601,
+                "nome": "Paciente mulher",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18557
+                ],
+                "argumentos": [
+                    "sexo_feminino"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18884,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "",
+            "passo_de_saida_id": 18868,
+            "passo_de_saida": {
+                "id": 18868,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Masculino] Solicitar Exames + Hemograma",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18870,
+            "passo_de_entrada": {
+                "id": 18870,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aviso: Discutir tratamento espec\u00edfico com l\u00edder local",
+                "descricao": "Paciente apresenta potencial de gravidade, sugere-se discutir o caso com o l\u00edder local para defini\u00e7\u00e3o do tratamento mais adequado.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18885,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "",
+            "passo_de_saida_id": 18869,
+            "passo_de_saida": {
+                "id": 18869,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Masculino] Solicitar Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18871,
+            "passo_de_entrada": {
+                "id": 18871,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Marculino] Tratamento com antibi\u00f3tico",
+                "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas, 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es a seguir, retornar imediatamente a emerg\u00eancia.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:42:35.749664-03:00"
+                },
+                "manter_prescricao": false,
+                "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico."
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18886,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "",
+            "passo_de_saida_id": 18871,
+            "passo_de_saida": {
+                "id": 18871,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Marculino] Tratamento com antibi\u00f3tico",
+                "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas, 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es a seguir, retornar imediatamente a emerg\u00eancia.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:42:35.749664-03:00"
+                },
+                "manter_prescricao": false,
+                "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico."
+            },
+            "passo_de_entrada_id": 18872,
+            "passo_de_entrada": {
+                "id": 18872,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aviso: Encaminhar paciente para urologista",
+                "descricao": "Recomende ao paciente a que procure uma consulta eletiva com o urologista para avalia\u00e7\u00e3o do caso.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18887,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "",
+            "passo_de_saida_id": 18873,
+            "passo_de_saida": {
+                "id": 18873,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Feminino] Solicitar Exames + Hemograma",
+                "descricao": "Exames com hemograma",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18880,
+            "passo_de_entrada": {
+                "id": 18880,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18888,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (paciente gravida)",
+            "descricao": "",
+            "passo_de_saida_id": 18875,
+            "passo_de_saida": {
+                "id": 18875,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Verificar Gesta\u00e7\u00e3o",
+                "descricao": "Verificar se paciente est\u00e1 gestante.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18876,
+            "passo_de_entrada": {
+                "id": 18876,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Feminino] Tratamento paciente gestante",
+                "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas, 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es a seguir, retornar imediatamente a emerg\u00eancia.\nAumente a ingest\u00e3o h\u00eddrica para auxiliar no tratamento.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:43:21.383849-03:00"
+                },
+                "manter_prescricao": false,
+                "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico."
+            },
+            "operacao": {
+                "id": 18602,
+                "nome": "Paciente Gravida",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18592
+                ],
+                "argumentos": [
+                    "gravidez"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18889,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (paciente n\u00e3o est\u00e1 gr\u00e1vida)",
+            "descricao": "",
+            "passo_de_saida_id": 18875,
+            "passo_de_saida": {
+                "id": 18875,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Verificar Gesta\u00e7\u00e3o",
+                "descricao": "Verificar se paciente est\u00e1 gestante.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18877,
+            "passo_de_entrada": {
+                "id": 18877,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Verificar Fatores Agravantes",
+                "descricao": "Verificar se a paciente apresenta presen\u00e7a de leucorr\u00e9ia ou irrita\u00e7\u00e3o vaginal.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18603,
+                "nome": "Paciente n\u00e3o est\u00e1 gr\u00e1vida",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18592
+                ],
+                "argumentos": [
+                    "gravidez"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18890,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (N\u00e3o apresenta leucorreia/irritacao)",
+            "descricao": "Paciente n\u00e3o apresenta leucorreia/irritacao",
+            "passo_de_saida_id": 18877,
+            "passo_de_saida": {
+                "id": 18877,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Verificar Fatores Agravantes",
+                "descricao": "Verificar se a paciente apresenta presen\u00e7a de leucorr\u00e9ia ou irrita\u00e7\u00e3o vaginal.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18878,
+            "passo_de_entrada": {
+                "id": 18878,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Feminino] Tratamento de fatores agravantes com antibi\u00f3tico",
+                "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas, 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es a seguir, retornar imediatamente a emerg\u00eancia. \nAumente a ingest\u00e3o h\u00eddrica para auxiliar no tratamento.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:43:07.671205-03:00"
+                },
+                "manter_prescricao": false,
+                "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico."
+            },
+            "operacao": {
+                "id": 18604,
+                "nome": "Sem Leucorreia",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18593
+                ],
+                "argumentos": [
+                    "leucorreia_irritacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18891,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s9",
+            "descricao": "",
+            "passo_de_saida_id": 18866,
+            "passo_de_saida": {
+                "id": 18866,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Masculino] Avaliar Sintomas",
+                "descricao": "Informe os sintomas apresentados pelo paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18868,
+            "passo_de_entrada": {
+                "id": 18868,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Masculino] Solicitar Exames + Hemograma",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18605,
+                "nome": "um_ou_mais_sintomas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    18598,
+                    18595
+                ],
+                "argumentos": [
+                    "somatorio_sintomas_masc",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18892,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s10",
+            "descricao": "",
+            "passo_de_saida_id": 18866,
+            "passo_de_saida": {
+                "id": 18866,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Masculino] Avaliar Sintomas",
+                "descricao": "Informe os sintomas apresentados pelo paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18869,
+            "passo_de_entrada": {
+                "id": 18869,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Masculino] Solicitar Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18606,
+                "nome": "sem_sintomas_masculino",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    18598,
+                    18595
+                ],
+                "argumentos": [
+                    "somatorio_sintomas_masc",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18893,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s12",
+            "descricao": "",
+            "passo_de_saida_id": 18877,
+            "passo_de_saida": {
+                "id": 18877,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Verificar Fatores Agravantes",
+                "descricao": "Verificar se a paciente apresenta presen\u00e7a de leucorr\u00e9ia ou irrita\u00e7\u00e3o vaginal.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18879,
+            "passo_de_entrada": {
+                "id": 18879,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aviso: Encaminhar paciente para ginecologista",
+                "descricao": "Recomende a paciente a que procure uma consulta eletiva com o ginecologista para avalia\u00e7\u00e3o do caso.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18607,
+                "nome": "com_fatores_agravantes",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18593
+                ],
+                "argumentos": [
+                    "leucorreia_irritacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18894,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s13",
+            "descricao": "",
+            "passo_de_saida_id": 18867,
+            "passo_de_saida": {
+                "id": 18867,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Avaliar Sintomas",
+                "descricao": "Informe os sintomas apresentados pelo paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18873,
+            "passo_de_entrada": {
+                "id": 18873,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Feminino] Solicitar Exames + Hemograma",
+                "descricao": "Exames com hemograma",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18608,
+                "nome": "um_ou_mais_sintomas_feminino",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    18599,
+                    18595
+                ],
+                "argumentos": [
+                    "soma_sintomas_fem",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18895,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s14",
+            "descricao": "",
+            "passo_de_saida_id": 18867,
+            "passo_de_saida": {
+                "id": 18867,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Avaliar Sintomas",
+                "descricao": "Informe os sintomas apresentados pelo paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18875,
+            "passo_de_entrada": {
+                "id": 18875,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino] Verificar Gesta\u00e7\u00e3o",
+                "descricao": "Verificar se paciente est\u00e1 gestante.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18609,
+                "nome": "sem_sintomas_feminino",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    18599,
+                    18595
+                ],
+                "argumentos": [
+                    "soma_sintomas_fem",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18896,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (n\u00e3o gestante)",
+            "descricao": "n\u00e3o gestante",
+            "passo_de_saida_id": 18880,
+            "passo_de_saida": {
+                "id": 18880,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18874,
+            "passo_de_entrada": {
+                "id": 18874,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Feminino] Tratamento com antibi\u00f3tico",
+                "descricao": "<div class=\"box-header with-border\">\n<h3><u><strong>Aten&ccedil;&atilde;o!</strong></u></h3>\n</div>\n\n<div class=\"box-body\">\n<div>\n<div>\n<ul>\n\t<li>Caso paciente tenha feito uso de antibi&oacute;tico pr&eacute;vio, discutir com l&iacute;der local a possibilidade de troca para novo antibi&oacute;tico.</li>\n\t<li>Caso n&atilde;o apresente melhora dos sintomas, 3 dias ap&oacute;s in&iacute;cio das medica&ccedil;&otilde;es a seguir, retornar imediatamente a emerg&ecirc;ncia.</li>\n</ul>\n</div>\n</div>\n</div>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:42:47.585805-03:00"
+                },
+                "manter_prescricao": false,
+                "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico."
+            },
+            "operacao": {
+                "id": 18610,
+                "nome": "n\u00e3o gestante",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18594
+                ],
+                "argumentos": [
+                    "feminino_complicacoes_gestante"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18897,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (paciente gestante)",
+            "descricao": "paciente gestante",
+            "passo_de_saida_id": 18880,
+            "passo_de_saida": {
+                "id": 18880,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Feminino, com complica\u00e7\u00f5es] Paciente Gestante?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18881,
+            "passo_de_entrada": {
+                "id": 18881,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Feminino - Gestante - Com complica\u00e7\u00f5es] Tratamento",
+                "descricao": "<p><u><strong>Aten&ccedil;&atilde;o!</strong></u></p>\n\n<ul>\n\t<li>Caso paciente tenha feito uso de antibi&oacute;tico pr&eacute;vio, discutir com l&iacute;der local a possibilidade de troca para novo antibi&oacute;tico.</li>\n\t<li>Caso n&atilde;o apresente melhora dos sintomas, 3 dias ap&oacute;s in&iacute;cio das medica&ccedil;&otilde;es a seguir, retornar imediatamente a emerg&ecirc;ncia.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:42:56.361357-03:00"
+                },
+                "manter_prescricao": false,
+                "orientacao_medica": "Solicitar exame de urinocultura com TSAQ eletivamente antes de iniciar tratamento com antibi\u00f3tico."
+            },
+            "operacao": {
+                "id": 18611,
+                "nome": "paciente gestante",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18594
+                ],
+                "argumentos": [
+                    "feminino_complicacoes_gestante"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 18556,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sexo_masculino",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 641,
+                "type": "VinculoSexoPaciente",
+                "type_verbose": "V\u00ednculo Com O Sexo Do Paciente",
+                "premissa_verdadeira": "M",
+                "premissa_verdadeira_display": "Masculino"
+            }
+        },
+        {
+            "id": 18557,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sexo_feminino",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 642,
+                "type": "VinculoSexoPaciente",
+                "type_verbose": "V\u00ednculo Com O Sexo Do Paciente",
+                "premissa_verdadeira": "F",
+                "premissa_verdadeira_display": "Feminino"
+            }
+        },
+        {
+            "id": 18558,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_homem_7_dias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18559,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_homem_imunossupressao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18560,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_homem_dm",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18581,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_homem_idoso",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18582,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_homem_alteracoes_urologicas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18583,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_homem_14_dias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18584,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "antibiotico_recente_masc",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18585,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_mulher_7_dias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18586,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_mulher_imunossupressao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18587,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_mulher_dm",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18588,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_mulher_idosa",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18589,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_mulher_alteracoes_urologicas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18590,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "avaliar_sintomas_mulher_14_dias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18591,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "antibiotico_recente_fem",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18592,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gravidez",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18593,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "leucorreia_irritacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18594,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "feminino_complicacoes_gestante",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18595,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18596,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Total Sintomas Homem",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18558,
+                18559,
+                18560,
+                18581,
+                18582,
+                18583
+            ],
+            "argumentos": [
+                "avaliar_sintomas_homem_7_dias",
+                "avaliar_sintomas_homem_imunossupressao",
+                "avaliar_sintomas_homem_dm",
+                "avaliar_sintomas_homem_idoso",
+                "avaliar_sintomas_homem_alteracoes_urologicas",
+                "avaliar_sintomas_homem_14_dias"
+            ]
+        },
+        {
+            "id": 18597,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Total Sintomas Mulher",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18585,
+                18586,
+                18587,
+                18588,
+                18589,
+                18590
+            ],
+            "argumentos": [
+                "avaliar_sintomas_mulher_7_dias",
+                "avaliar_sintomas_mulher_imunossupressao",
+                "avaliar_sintomas_mulher_dm",
+                "avaliar_sintomas_mulher_idosa",
+                "avaliar_sintomas_mulher_alteracoes_urologicas",
+                "avaliar_sintomas_mulher_14_dias"
+            ]
+        },
+        {
+            "id": 18598,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "somatorio_sintomas_masc",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18558,
+                18559,
+                18560,
+                18581,
+                18582,
+                18583,
+                18584
+            ],
+            "argumentos": [
+                "avaliar_sintomas_homem_7_dias",
+                "avaliar_sintomas_homem_imunossupressao",
+                "avaliar_sintomas_homem_dm",
+                "avaliar_sintomas_homem_idoso",
+                "avaliar_sintomas_homem_alteracoes_urologicas",
+                "avaliar_sintomas_homem_14_dias",
+                "antibiotico_recente_masc"
+            ]
+        },
+        {
+            "id": 18599,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "soma_sintomas_fem",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18585,
+                18586,
+                18587,
+                18588,
+                18588,
+                18589,
+                18590,
+                18591
+            ],
+            "argumentos": [
+                "avaliar_sintomas_mulher_7_dias",
+                "avaliar_sintomas_mulher_imunossupressao",
+                "avaliar_sintomas_mulher_dm",
+                "avaliar_sintomas_mulher_idosa",
+                "avaliar_sintomas_mulher_idosa",
+                "avaliar_sintomas_mulher_alteracoes_urologicas",
+                "avaliar_sintomas_mulher_14_dias",
+                "antibiotico_recente_fem"
+            ]
+        }
+    ]
+}

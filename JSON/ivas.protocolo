@@ -1,0 +1,4498 @@
+{
+    "id": 3301,
+    "url": "",
+    "codigo": "H009",
+    "nome": "IVAS",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 83,
+    "versao": 27,
+    "ultima_auditoria": {
+        "usuario": "Dr. Andre",
+        "data": "2019-01-31T15:04:45.262047-03:00"
+    },
+    "criado_por": {
+        "usuario": "Dr. Andre",
+        "data": "2019-01-31T15:01:02.149230-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Dr. Andre",
+        "data": "2019-01-31T15:04:45.262047-03:00"
+    },
+    "elementos": [
+        {
+            "id": 19861,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Protocolo SEPSE",
+            "descricao": "Encaminhar para protocolo espec\u00edfico de SEPSE",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H012"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19885,
+                    "url": "",
+                    "nome": "S31 (quick sofa >= 2)",
+                    "descricao": "quick sofa >= 2",
+                    "passo_de_saida_id": 19880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19861,
+                    "passo_de_entrada": "Encaminhamento: Protocolo SEPSE",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19862,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Crit\u00e9rios de Pneumonia",
+            "descricao": "Avaliar Crit\u00e9rios de Pneumonia",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10081,
+                    "url": "",
+                    "texto": "Dispn\u00e9ia?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19501,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_pneumonia_dispneia",
+                        "peso": 4.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10082,
+                    "url": "",
+                    "texto": "Dor pleur\u00edtica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19502,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_pneumonia_dor_pleuritica",
+                        "peso": 3.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 10083,
+                    "url": "",
+                    "texto": "Tosse produtiva?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19503,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_pneumonia_tosse_produtiva",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                },
+                {
+                    "id": 10084,
+                    "url": "",
+                    "texto": "Calafrios?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19504,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_pneumonia_calafrios",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 15
+                },
+                {
+                    "id": 10085,
+                    "url": "",
+                    "texto": "Confus\u00e3o recente?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19505,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_pneumonia_confusao_recente",
+                        "peso": 4.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 16
+                },
+                {
+                    "id": 10086,
+                    "url": "",
+                    "texto": "Estertores Crepitantes?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19506,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_pneumonia_estertores_crepantes",
+                        "peso": 4.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 17
+                },
+                {
+                    "id": 10087,
+                    "url": "",
+                    "texto": "Entrada recente?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19507,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_pneumonia_entrada_recente",
+                        "peso": 2.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 18
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19886,
+                    "url": "",
+                    "nome": "S32 (quick sofa < 2)",
+                    "descricao": "quick sofa < 2",
+                    "passo_de_saida_id": 19880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19862,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Pneumonia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19888,
+                    "url": "",
+                    "nome": "S3 (1 ou mais criterios de pneumonia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19862,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Pneumonia",
+                    "passo_de_entrada_id": 19863,
+                    "passo_de_entrada": "Encaminhamento: Protocolo Pneumonia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19889,
+                    "url": "",
+                    "nome": "S4 (sem criterios de pneumonia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19862,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Pneumonia",
+                    "passo_de_entrada_id": 19865,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19863,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Protocolo Pneumonia",
+            "descricao": "Encaminhamento para protocolo de pneumonia",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H002"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19888,
+                    "url": "",
+                    "nome": "S3 (1 ou mais criterios de pneumonia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19862,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Pneumonia",
+                    "passo_de_entrada_id": 19863,
+                    "passo_de_entrada": "Encaminhamento: Protocolo Pneumonia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19864,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Influenza: Riscos de Complica\u00e7\u00f5es",
+            "descricao": "Avaliar presen\u00e7a de riscos de complica\u00e7\u00f5es para influenza",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10088,
+                    "url": "",
+                    "texto": "Gestante / Puerperas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19508,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_gestante",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10089,
+                    "url": "",
+                    "texto": "Idade > 60 anos?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19509,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_idoso",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 10090,
+                    "url": "",
+                    "texto": "Pneumopatias?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19510,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_pneumopatias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                },
+                {
+                    "id": 10091,
+                    "url": "",
+                    "texto": "ICC?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19511,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_icc",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 15
+                },
+                {
+                    "id": 10092,
+                    "url": "",
+                    "texto": "Doen\u00e7a renal cr\u00f4nica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19512,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_doenca_renal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 16
+                },
+                {
+                    "id": 10093,
+                    "url": "",
+                    "texto": "Cirrose Hep\u00e1tica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19513,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_cirrose",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 17
+                },
+                {
+                    "id": 10094,
+                    "url": "",
+                    "texto": "Neoplasias Hematol\u00f3gicas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19514,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_neoplasias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 18
+                },
+                {
+                    "id": 10095,
+                    "url": "",
+                    "texto": "Diabetes?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19515,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_diabetes",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 19
+                },
+                {
+                    "id": 10096,
+                    "url": "",
+                    "texto": "Doen\u00e7as Neurodegenerativas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19516,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_doencas_neurodegen",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 20
+                },
+                {
+                    "id": 10097,
+                    "url": "",
+                    "texto": "Obesidade M\u00f3rbida (IMC > 40)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19517,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_obesidade_morbida",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 21
+                },
+                {
+                    "id": 10098,
+                    "url": "",
+                    "texto": "Imunossupress\u00e3o?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19518,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "influenza_complicacoes_imunossupressao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 22
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19887,
+                    "url": "",
+                    "nome": "S33 (Influenza)",
+                    "descricao": "Influenza",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19864,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Influenza: Riscos de Complica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19890,
+                    "url": "",
+                    "nome": "S7 (com complica\u00e7\u00f5es de Influenza)",
+                    "descricao": "com complica\u00e7\u00f5es de Influenza",
+                    "passo_de_saida_id": 19864,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Influenza: Riscos de Complica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 19866,
+                    "passo_de_entrada": "Tratamento: Raio X + Medica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19891,
+                    "url": "",
+                    "nome": "S8 (sem complica\u00e7\u00f5es de Influenza)",
+                    "descricao": "sem complica\u00e7\u00f5es de Influenza",
+                    "passo_de_saida_id": 19864,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Influenza: Riscos de Complica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 19872,
+                    "passo_de_entrada": "Tratamento: [Resfriado] Medicamentos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19865,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Sintomas Espec\u00edficos",
+            "descricao": "Avaliar sintomas apresentados pelo paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10099,
+                    "url": "",
+                    "texto": "Resfriado comum",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19519,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_resfriado",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10100,
+                    "url": "",
+                    "texto": "Amigdalite / Tonsilite",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19520,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_amigdalite",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 10101,
+                    "url": "",
+                    "texto": "Rinossinusites",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19521,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_rinite",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                },
+                {
+                    "id": 10102,
+                    "url": "",
+                    "texto": "Influenza",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19522,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_influenza",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 15
+                },
+                {
+                    "id": 10103,
+                    "url": "",
+                    "texto": "Rinite",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19523,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rinite",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 16
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19889,
+                    "url": "",
+                    "nome": "S4 (sem criterios de pneumonia)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19862,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Pneumonia",
+                    "passo_de_entrada_id": 19865,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19887,
+                    "url": "",
+                    "nome": "S33 (Influenza)",
+                    "descricao": "Influenza",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19864,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Influenza: Riscos de Complica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19892,
+                    "url": "",
+                    "nome": "S9 (Resfriado)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19872,
+                    "passo_de_entrada": "Tratamento: [Resfriado] Medicamentos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19893,
+                    "url": "",
+                    "nome": "S10 (Amigdalite)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19874,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Fatores agravantes para amigdalite",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19896,
+                    "url": "",
+                    "nome": "S16 (Sinusite)",
+                    "descricao": "Positivo para rinite",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19877,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19904,
+                    "url": "",
+                    "nome": "S28 (Rinite)",
+                    "descricao": "Rinite",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19870,
+                    "passo_de_entrada": "Receita: Tratamento Rinite",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19866,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Raio X + Medica\u00e7\u00f5es",
+            "descricao": "Solicitar Raio X (Inclusive para gestantes)\n+ Adicionar sintom\u00e1ticos padr\u00e3o via conduta complementar.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de Pneumonia",
+                    "indicacao_clinica": "Protocolo de Pneumonia",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 10161,
+                    "url": "",
+                    "medicamento": 149641,
+                    "codigo": "149641",
+                    "nome": "TAMIFLU 75MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": false,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "12",
+                    "frequencia_display": "12/12",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19890,
+                    "url": "",
+                    "nome": "S7 (com complica\u00e7\u00f5es de Influenza)",
+                    "descricao": "com complica\u00e7\u00f5es de Influenza",
+                    "passo_de_saida_id": 19864,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Influenza: Riscos de Complica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 19866,
+                    "passo_de_entrada": "Tratamento: Raio X + Medica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19903,
+                    "url": "",
+                    "nome": "s32",
+                    "descricao": "",
+                    "passo_de_saida_id": 19866,
+                    "passo_de_saida": "Tratamento: Raio X + Medica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 19876,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir caso com l\u00edder de equipe",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19867,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Resfriado - Receita",
+            "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas por mais de 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es, retornar imediatamente a emerg\u00eancia.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5301,
+                    "url": "",
+                    "nome": "Fexofenadina 120Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 1
+                },
+                {
+                    "id": 5302,
+                    "url": "",
+                    "nome": "Loratadina 10Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                },
+                {
+                    "id": 5303,
+                    "url": "",
+                    "nome": "Solu\u00e7\u00e3o Salina",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 2,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "2 jatos em cada narina de 6/6h",
+                    "ordem": 3
+                },
+                {
+                    "id": 5304,
+                    "url": "",
+                    "nome": "Koide D Xarope ...... 1fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 10ml de 8/8h",
+                    "ordem": 4
+                },
+                {
+                    "id": 5305,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 5
+                },
+                {
+                    "id": 5306,
+                    "url": "",
+                    "nome": "Paracetamol 750Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 6
+                },
+                {
+                    "id": 5307,
+                    "url": "",
+                    "nome": "Levodropropizina Xarope ...... 1fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 10ml de 8/8h",
+                    "ordem": 7
+                },
+                {
+                    "id": 5308,
+                    "url": "",
+                    "nome": "Nimesulida 100Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 8
+                },
+                {
+                    "id": 5309,
+                    "url": "",
+                    "nome": "Prednisona 20 mg ............. 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 1 comprimido pela manh\u00e3",
+                    "ordem": 9
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19884,
+                    "url": "",
+                    "nome": "S24",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19872,
+                    "passo_de_saida": "Tratamento: [Resfriado] Medicamentos",
+                    "passo_de_entrada_id": 19867,
+                    "passo_de_entrada": "Receita: Resfriado - Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19868,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Amigdalite (Centor Score)",
+            "descricao": "Calculo do centor score para paciente com amigdalite",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10104,
+                    "url": "",
+                    "texto": "EDEMA / EXSUDATO AMIGDALIANO",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19524,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "centor_score_edema",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10105,
+                    "url": "",
+                    "texto": "ADENOPATIA CERVICAL ANTERIOR DOLOROSA",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19525,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "centor_score_adenopatia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 10106,
+                    "url": "",
+                    "texto": "Febre > 38\u00baC",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19526,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "centor_score_febre",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                },
+                {
+                    "id": 10107,
+                    "url": "",
+                    "texto": "AUS\u00caNCIA DE TOSSE",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19527,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "centor_score_sem_tosse",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 15
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19883,
+                    "url": "",
+                    "nome": "S22",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19881,
+                    "passo_de_saida": "Tratamento: [Amigdalite] Medicamentos",
+                    "passo_de_entrada_id": 19868,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Amigdalite (Centor Score)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19894,
+                    "url": "",
+                    "nome": "S11 (Centor Score < 2)",
+                    "descricao": "Centor Score < 2",
+                    "passo_de_saida_id": 19868,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Amigdalite (Centor Score)",
+                    "passo_de_entrada_id": 19869,
+                    "passo_de_entrada": "Receita: Amigdalite - Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19895,
+                    "url": "",
+                    "nome": "S12 (Centor Score >= 2)",
+                    "descricao": "Centor Score >= 2",
+                    "passo_de_saida_id": 19868,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Amigdalite (Centor Score)",
+                    "passo_de_entrada_id": 19871,
+                    "passo_de_entrada": "Receita: Amigdalite - Receita (Bacteriana)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19869,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Amigdalite - Receita",
+            "descricao": "Receita para pacientes que n\u00e3o apresentam sintomas do Centor Score",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5310,
+                    "url": "",
+                    "nome": "Cetoprofeno 100 mg ----------- 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5311,
+                    "url": "",
+                    "nome": "Prednisona 20 mg ........... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 cp de manh\u00e3 durante 5 dias",
+                    "ordem": 2
+                },
+                {
+                    "id": 5312,
+                    "url": "",
+                    "nome": "Nimesulida 100mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 3
+                },
+                {
+                    "id": 5313,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 4
+                },
+                {
+                    "id": 5314,
+                    "url": "",
+                    "nome": "Paracetamol 750Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19894,
+                    "url": "",
+                    "nome": "S11 (Centor Score < 2)",
+                    "descricao": "Centor Score < 2",
+                    "passo_de_saida_id": 19868,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Amigdalite (Centor Score)",
+                    "passo_de_entrada_id": 19869,
+                    "passo_de_entrada": "Receita: Amigdalite - Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19870,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento Rinite",
+            "descricao": "Receita para paciente com rinite",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5315,
+                    "url": "",
+                    "nome": "Prednisona 20Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 2 comprimidos pela manh\u00e3",
+                    "ordem": 1
+                },
+                {
+                    "id": 5316,
+                    "url": "",
+                    "nome": "Fexofenadina 60mg + Pseudoefedrina 120mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 2
+                },
+                {
+                    "id": 5317,
+                    "url": "",
+                    "nome": "Budesonida 50Mcg/dose ...... 1fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 2,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "MJ",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar um jato em cada narina pela manh\u00e3 por 30 dias",
+                    "ordem": 3
+                },
+                {
+                    "id": 5318,
+                    "url": "",
+                    "nome": "Solu\u00e7\u00e3o Salina",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 2,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 2 jatos em cada narina de 6/6h",
+                    "ordem": 4
+                },
+                {
+                    "id": 5319,
+                    "url": "",
+                    "nome": "Decongex Plus .... 1 cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19904,
+                    "url": "",
+                    "nome": "S28 (Rinite)",
+                    "descricao": "Rinite",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19870,
+                    "passo_de_entrada": "Receita: Tratamento Rinite",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19871,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Amigdalite - Receita (Bacteriana)",
+            "descricao": "Receita (Sem Etiologia Bacteriana)",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5320,
+                    "url": "",
+                    "nome": "Nimesulida 100mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 1
+                },
+                {
+                    "id": 5321,
+                    "url": "",
+                    "nome": "Prednisona 20Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 2 comprimidos pela manh\u00e3",
+                    "ordem": 2
+                },
+                {
+                    "id": 5322,
+                    "url": "",
+                    "nome": "Paracetamol 750Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 3
+                },
+                {
+                    "id": 5323,
+                    "url": "",
+                    "nome": "Azitromicina 500mg ...... 5cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 4
+                },
+                {
+                    "id": 5324,
+                    "url": "",
+                    "nome": "Amoxicilina/Clavulanato 875/125 ...... 14cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 5
+                },
+                {
+                    "id": 5325,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 6
+                },
+                {
+                    "id": 5326,
+                    "url": "",
+                    "nome": "Cetoprofeno 100 mg ......... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19895,
+                    "url": "",
+                    "nome": "S12 (Centor Score >= 2)",
+                    "descricao": "Centor Score >= 2",
+                    "passo_de_saida_id": 19868,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Amigdalite (Centor Score)",
+                    "passo_de_entrada_id": 19871,
+                    "passo_de_entrada": "Receita: Amigdalite - Receita (Bacteriana)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19872,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Resfriado] Medicamentos",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 10162,
+                    "url": "",
+                    "medicamento": 38008,
+                    "codigo": "",
+                    "nome": "DIPIRONA 1 G AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 4241,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Infusao ev",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 10163,
+                    "url": "",
+                    "medicamento": 42951,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IM AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 10164,
+                    "url": "",
+                    "medicamento": 38008,
+                    "codigo": "",
+                    "nome": "DIPIRONA 1 G AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 10165,
+                    "url": "",
+                    "medicamento": 59609,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IV FRAP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 4242,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "SF 0,9%",
+                        "codigo_principio_ativo": 635,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 5,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 100,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19891,
+                    "url": "",
+                    "nome": "S8 (sem complica\u00e7\u00f5es de Influenza)",
+                    "descricao": "sem complica\u00e7\u00f5es de Influenza",
+                    "passo_de_saida_id": 19864,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Influenza: Riscos de Complica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 19872,
+                    "passo_de_entrada": "Tratamento: [Resfriado] Medicamentos",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19892,
+                    "url": "",
+                    "nome": "S9 (Resfriado)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19872,
+                    "passo_de_entrada": "Tratamento: [Resfriado] Medicamentos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19884,
+                    "url": "",
+                    "nome": "S24",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19872,
+                    "passo_de_saida": "Tratamento: [Resfriado] Medicamentos",
+                    "passo_de_entrada_id": 19867,
+                    "passo_de_entrada": "Receita: Resfriado - Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19873,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento Rinite Viral ou Al\u00e9rgica",
+            "descricao": "Receita para paciente com rinite",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5327,
+                    "url": "",
+                    "nome": "Cetoprofeno 100 mg ......... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5328,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 2
+                },
+                {
+                    "id": 5329,
+                    "url": "",
+                    "nome": "Paracetamol 750Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 3
+                },
+                {
+                    "id": 5330,
+                    "url": "",
+                    "nome": "Prednisona 20Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 2 comprimidos pela manh\u00e3",
+                    "ordem": 4
+                },
+                {
+                    "id": 5331,
+                    "url": "",
+                    "nome": "Fexofenadina 60mg + Pseudoefedrina 120mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 5
+                },
+                {
+                    "id": 5332,
+                    "url": "",
+                    "nome": "Budesonida 50Mcg/dose ...... 1fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 2,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "MJ",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar um jato em cada narina pela manh\u00e3 por 30 dias",
+                    "ordem": 6
+                },
+                {
+                    "id": 5333,
+                    "url": "",
+                    "nome": "Solu\u00e7\u00e3o Salina",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 2,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 2 jatos em cada narina de 6/6h",
+                    "ordem": 7
+                },
+                {
+                    "id": 5334,
+                    "url": "",
+                    "nome": "Nimesulida 100 mg ........ 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19901,
+                    "url": "",
+                    "nome": "s26(viral)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "passo_de_entrada_id": 19873,
+                    "passo_de_entrada": "Receita: Tratamento Rinite Viral ou Al\u00e9rgica",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19907,
+                    "url": "",
+                    "nome": "S25 (etiologia al\u00e9rgica)",
+                    "descricao": "etiologia al\u00e9rgica",
+                    "passo_de_saida_id": 19878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "passo_de_entrada_id": 19873,
+                    "passo_de_entrada": "Receita: Tratamento Rinite Viral ou Al\u00e9rgica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19874,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Fatores agravantes para amigdalite",
+            "descricao": "Aventar suspeitas de abcesso periamigdaliano",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10108,
+                    "url": "",
+                    "texto": "Paciente com odinofagia acentuada e unilateral, piora da disfagia e da halitose, saliva\u00e7\u00e3o, altera\u00e7\u00e3o no timbre da voz e trismo. Ao exame com edema dos tecidos localizados superiormente e lateralmente \u00e0 am\u00edgdala envolvida e deslocamento da \u00favula?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19528,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ivas_agravante_amigdalite",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19893,
+                    "url": "",
+                    "nome": "S10 (Amigdalite)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19874,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Fatores agravantes para amigdalite",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19897,
+                    "url": "",
+                    "nome": "s17(complicacoes amigdalite)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19874,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores agravantes para amigdalite",
+                    "passo_de_entrada_id": 19875,
+                    "passo_de_entrada": "Tratamento: Tratamento Ambulatorial - Amigdalite",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19898,
+                    "url": "",
+                    "nome": "s18(sem complicacoes amigdalite)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19874,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores agravantes para amigdalite",
+                    "passo_de_entrada_id": 19881,
+                    "passo_de_entrada": "Tratamento: [Amigdalite] Medicamentos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19875,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento Ambulatorial - Amigdalite",
+            "descricao": "Tratamento ambulatorial para amigdalite",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19897,
+                    "url": "",
+                    "nome": "s17(complicacoes amigdalite)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19874,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores agravantes para amigdalite",
+                    "passo_de_entrada_id": 19875,
+                    "passo_de_entrada": "Tratamento: Tratamento Ambulatorial - Amigdalite",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19899,
+                    "url": "",
+                    "nome": "s19(informatico lider de equipe)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19875,
+                    "passo_de_saida": "Tratamento: Tratamento Ambulatorial - Amigdalite",
+                    "passo_de_entrada_id": 19876,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir caso com l\u00edder de equipe",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19876,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir caso com l\u00edder de equipe",
+            "descricao": "<p>Aten&ccedil;&atilde;o:<br />\n- Recomenda-se discutir o caso com o l&iacute;der de equipe.<br />\n- Aventar possibilidade de parecer do otorrino.<br />\n- Aventar possibilidades de solicita&ccedil;&atilde;o de tomografias computadorizadas.</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19899,
+                    "url": "",
+                    "nome": "s19(informatico lider de equipe)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19875,
+                    "passo_de_saida": "Tratamento: Tratamento Ambulatorial - Amigdalite",
+                    "passo_de_entrada_id": 19876,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir caso com l\u00edder de equipe",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19900,
+                    "url": "",
+                    "nome": "s20(sinusite com complica\u00e7\u00f5es)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 19876,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir caso com l\u00edder de equipe",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19903,
+                    "url": "",
+                    "nome": "s32",
+                    "descricao": "",
+                    "passo_de_saida_id": 19866,
+                    "passo_de_saida": "Tratamento: Raio X + Medica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 19876,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir caso com l\u00edder de equipe",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19877,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+            "descricao": "Aventar suspeita de complica\u00e7\u00e3o orbit\u00e1ria(celulite ou abscesso)!",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10109,
+                    "url": "",
+                    "texto": "Paciente com edema bipalpebral, quemose periorbit\u00e1ria, diminui\u00e7\u00e3o da motricidade ocular, diminui\u00e7\u00e3o da acuidade visual?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19529,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rino_suspeita_orbitaria",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10110,
+                    "url": "",
+                    "texto": "Paciente com cefal\u00e9ia de forte intensidade,sinais men\u00edngeos, convuls\u00f5es e rebaixamento do n\u00edvel de consci\u00eancia?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19530,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rino_complicacao_intracraniana",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 10111,
+                    "url": "",
+                    "texto": "Paciente j\u00e1 tratando rinossinusite sem melhora ou com sintomas recorrentes (4 ou mais epis\u00f3dios no ano)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19531,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rino_tratamento_anterior",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19896,
+                    "url": "",
+                    "nome": "S16 (Sinusite)",
+                    "descricao": "Positivo para rinite",
+                    "passo_de_saida_id": 19865,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Sintomas Espec\u00edficos",
+                    "passo_de_entrada_id": 19877,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19900,
+                    "url": "",
+                    "nome": "s20(sinusite com complica\u00e7\u00f5es)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 19876,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir caso com l\u00edder de equipe",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19905,
+                    "url": "",
+                    "nome": "S34 (sinusite sem complica\u00e7\u00f5es)",
+                    "descricao": "sinusite sem complica\u00e7\u00f5es",
+                    "passo_de_saida_id": 19877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 19882,
+                    "passo_de_entrada": "Tratamento: [Rinossinusite] Medicamentos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19878,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar a Etiologia",
+            "descricao": "Avaliar a etiologia viral ou bacteriana",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10112,
+                    "url": "",
+                    "texto": "VIRAL: sintomas leves, sem febre importante, manuten\u00e7\u00e3o estado geral",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19532,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rino_etiologia_viral",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10113,
+                    "url": "",
+                    "texto": "BACTERIANA: sintomas mais importantes, com febre e queda do estado geral",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19533,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rino_etiologia_bacteriana",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 10114,
+                    "url": "",
+                    "texto": "AL\u00c9RGICA: sintomas leves, sem febre importante por\u00e9m com similaridade a eventos anteriores. Manuten\u00e7\u00e3o do estado geral",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19534,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rino_etiologia_alergica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19906,
+                    "url": "",
+                    "nome": "S23",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19882,
+                    "passo_de_saida": "Tratamento: [Rinossinusite] Medicamentos",
+                    "passo_de_entrada_id": 19878,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19901,
+                    "url": "",
+                    "nome": "s26(viral)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "passo_de_entrada_id": 19873,
+                    "passo_de_entrada": "Receita: Tratamento Rinite Viral ou Al\u00e9rgica",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19902,
+                    "url": "",
+                    "nome": "s26(bacteriana)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "passo_de_entrada_id": 19879,
+                    "passo_de_entrada": "Receita: Tratamento Sinusite Bacteriana",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19907,
+                    "url": "",
+                    "nome": "S25 (etiologia al\u00e9rgica)",
+                    "descricao": "etiologia al\u00e9rgica",
+                    "passo_de_saida_id": 19878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "passo_de_entrada_id": 19873,
+                    "passo_de_entrada": "Receita: Tratamento Rinite Viral ou Al\u00e9rgica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19879,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento Sinusite Bacteriana",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5335,
+                    "url": "",
+                    "nome": "Dipirona 1G ......1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 1
+                },
+                {
+                    "id": 5336,
+                    "url": "",
+                    "nome": "Paracetamol 750Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 6/6h se dor ou febre",
+                    "ordem": 2
+                },
+                {
+                    "id": 5337,
+                    "url": "",
+                    "nome": "Fexofenadina 60mg + pseudoefedrina 120mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 3
+                },
+                {
+                    "id": 5338,
+                    "url": "",
+                    "nome": "Solu\u00e7\u00e3o Salina",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 2,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Aplicar 2 jatos em cada narina de 6/6 horas",
+                    "ordem": 4
+                },
+                {
+                    "id": 5339,
+                    "url": "",
+                    "nome": "Nimesulida 100mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 5
+                },
+                {
+                    "id": 5340,
+                    "url": "",
+                    "nome": "Prednisona 20Mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 2 comprimidos pela manh\u00e3",
+                    "ordem": 6
+                },
+                {
+                    "id": 5341,
+                    "url": "",
+                    "nome": "Amoxicilina/Clavulanato 875/125 ...... 20cp",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 10,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar um comprimido de 12/12h",
+                    "ordem": 7
+                },
+                {
+                    "id": 5342,
+                    "url": "",
+                    "nome": "Cetoprofeno 100mg ...... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19902,
+                    "url": "",
+                    "nome": "s26(bacteriana)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19878,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "passo_de_entrada_id": 19879,
+                    "passo_de_entrada": "Receita: Tratamento Sinusite Bacteriana",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19880,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Quick SOFA",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10115,
+                    "url": "",
+                    "texto": "Confus\u00e3o Mental",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19535,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quick_sofa_confusao_mental",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10116,
+                    "url": "",
+                    "texto": "PAS < 100",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19536,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quick_sofa_pas_menor_100",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 10117,
+                    "url": "",
+                    "texto": "FR > 22",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19537,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quick_sofa_fr_maior_22",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 19885,
+                    "url": "",
+                    "nome": "S31 (quick sofa >= 2)",
+                    "descricao": "quick sofa >= 2",
+                    "passo_de_saida_id": 19880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19861,
+                    "passo_de_entrada": "Encaminhamento: Protocolo SEPSE",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19886,
+                    "url": "",
+                    "nome": "S32 (quick sofa < 2)",
+                    "descricao": "quick sofa < 2",
+                    "passo_de_saida_id": 19880,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19862,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Crit\u00e9rios de Pneumonia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19881,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Amigdalite] Medicamentos",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Dr. Andre",
+                "data": "2019-01-31T15:02:21.411974-03:00"
+            },
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 10166,
+                    "url": "",
+                    "medicamento": 108545,
+                    "codigo": "",
+                    "nome": "PARACETAMOL 750MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 10167,
+                    "url": "",
+                    "medicamento": 38008,
+                    "codigo": "",
+                    "nome": "DIPIRONA 1 G AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 4243,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Infusao ev",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 10168,
+                    "url": "",
+                    "medicamento": 59609,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IV FRAP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 4244,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Infusao ev",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19898,
+                    "url": "",
+                    "nome": "s18(sem complicacoes amigdalite)",
+                    "descricao": "",
+                    "passo_de_saida_id": 19874,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores agravantes para amigdalite",
+                    "passo_de_entrada_id": 19881,
+                    "passo_de_entrada": "Tratamento: [Amigdalite] Medicamentos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19883,
+                    "url": "",
+                    "nome": "S22",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19881,
+                    "passo_de_saida": "Tratamento: [Amigdalite] Medicamentos",
+                    "passo_de_entrada_id": 19868,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Amigdalite (Centor Score)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19882,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Rinossinusite] Medicamentos",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Dr. Andre",
+                "data": "2019-01-31T15:03:13.591743-03:00"
+            },
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 10169,
+                    "url": "",
+                    "medicamento": 38008,
+                    "codigo": "",
+                    "nome": "DIPIRONA 1 G AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 4245,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Infusao ev",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 10170,
+                    "url": "",
+                    "medicamento": 108545,
+                    "codigo": "",
+                    "nome": "PARACETAMOL 750MG COMP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 1,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 10171,
+                    "url": "",
+                    "medicamento": 36811,
+                    "codigo": "",
+                    "nome": "DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 4246,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "LENTO COM SF 0,9%",
+                        "codigo_principio_ativo": 819,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 50,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 10172,
+                    "url": "",
+                    "medicamento": 59609,
+                    "codigo": "",
+                    "nome": "PROFENID 100MG IV FRAP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19905,
+                    "url": "",
+                    "nome": "S34 (sinusite sem complica\u00e7\u00f5es)",
+                    "descricao": "sinusite sem complica\u00e7\u00f5es",
+                    "passo_de_saida_id": 19877,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                    "passo_de_entrada_id": 19882,
+                    "passo_de_entrada": "Tratamento: [Rinossinusite] Medicamentos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19906,
+                    "url": "",
+                    "nome": "S23",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19882,
+                    "passo_de_saida": "Tratamento: [Rinossinusite] Medicamentos",
+                    "passo_de_entrada_id": 19878,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar a Etiologia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19883,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S22",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19881,
+            "passo_de_saida": {
+                "id": 19881,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Amigdalite] Medicamentos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Dr. Andre",
+                    "data": "2019-01-31T15:02:21.411974-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19868,
+            "passo_de_entrada": {
+                "id": 19868,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Amigdalite (Centor Score)",
+                "descricao": "Calculo do centor score para paciente com amigdalite",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19884,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S24",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19872,
+            "passo_de_saida": {
+                "id": 19872,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Resfriado] Medicamentos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19867,
+            "passo_de_entrada": {
+                "id": 19867,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Resfriado - Receita",
+                "descricao": "Aten\u00e7\u00e3o! Caso n\u00e3o apresente melhora dos sintomas por mais de 3 dias ap\u00f3s in\u00edcio das medica\u00e7\u00f5es, retornar imediatamente a emerg\u00eancia.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19885,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S31 (quick sofa >= 2)",
+            "descricao": "quick sofa >= 2",
+            "passo_de_saida_id": 19880,
+            "passo_de_saida": {
+                "id": 19880,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quick SOFA",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19861,
+            "passo_de_entrada": {
+                "id": 19861,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Protocolo SEPSE",
+                "descricao": "Encaminhar para protocolo espec\u00edfico de SEPSE",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    65
+                ]
+            },
+            "operacao": {
+                "id": 19551,
+                "nome": "quick sofa >= 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    19542,
+                    19538
+                ],
+                "argumentos": [
+                    "Quick SOFA",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19886,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S32 (quick sofa < 2)",
+            "descricao": "quick sofa < 2",
+            "passo_de_saida_id": 19880,
+            "passo_de_saida": {
+                "id": 19880,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quick SOFA",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19862,
+            "passo_de_entrada": {
+                "id": 19862,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Crit\u00e9rios de Pneumonia",
+                "descricao": "Avaliar Crit\u00e9rios de Pneumonia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19552,
+                "nome": "quick sofa < 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    19542,
+                    19538
+                ],
+                "argumentos": [
+                    "Quick SOFA",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19887,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S33 (Influenza)",
+            "descricao": "Influenza",
+            "passo_de_saida_id": 19865,
+            "passo_de_saida": {
+                "id": 19865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas Espec\u00edficos",
+                "descricao": "Avaliar sintomas apresentados pelo paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19864,
+            "passo_de_entrada": {
+                "id": 19864,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Influenza: Riscos de Complica\u00e7\u00f5es",
+                "descricao": "Avaliar presen\u00e7a de riscos de complica\u00e7\u00f5es para influenza",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19553,
+                "nome": "Influenza",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19522
+                ],
+                "argumentos": [
+                    "sintomas_influenza"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19888,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (1 ou mais criterios de pneumonia)",
+            "descricao": "",
+            "passo_de_saida_id": 19862,
+            "passo_de_saida": {
+                "id": 19862,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Crit\u00e9rios de Pneumonia",
+                "descricao": "Avaliar Crit\u00e9rios de Pneumonia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19863,
+            "passo_de_entrada": {
+                "id": 19863,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Protocolo Pneumonia",
+                "descricao": "Encaminhamento para protocolo de pneumonia",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    2
+                ]
+            },
+            "operacao": {
+                "id": 19554,
+                "nome": "criterios_pneumo_maior_igual_4",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    19544,
+                    19540
+                ],
+                "argumentos": [
+                    "Criterios Pneumonia",
+                    "4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19889,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (sem criterios de pneumonia)",
+            "descricao": "",
+            "passo_de_saida_id": 19862,
+            "passo_de_saida": {
+                "id": 19862,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Crit\u00e9rios de Pneumonia",
+                "descricao": "Avaliar Crit\u00e9rios de Pneumonia",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19865,
+            "passo_de_entrada": {
+                "id": 19865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas Espec\u00edficos",
+                "descricao": "Avaliar sintomas apresentados pelo paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19555,
+                "nome": "criterios_pneumo_menor_4",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    19544,
+                    19540
+                ],
+                "argumentos": [
+                    "Criterios Pneumonia",
+                    "4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19890,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (com complica\u00e7\u00f5es de Influenza)",
+            "descricao": "com complica\u00e7\u00f5es de Influenza",
+            "passo_de_saida_id": 19864,
+            "passo_de_saida": {
+                "id": 19864,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Influenza: Riscos de Complica\u00e7\u00f5es",
+                "descricao": "Avaliar presen\u00e7a de riscos de complica\u00e7\u00f5es para influenza",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19866,
+            "passo_de_entrada": {
+                "id": 19866,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Raio X + Medica\u00e7\u00f5es",
+                "descricao": "Solicitar Raio X (Inclusive para gestantes)\n+ Adicionar sintom\u00e1ticos padr\u00e3o via conduta complementar.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19556,
+                "nome": "Complicacoes Influenza >= 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    19546,
+                    19539
+                ],
+                "argumentos": [
+                    "Complicacoes Influenza",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19891,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (sem complica\u00e7\u00f5es de Influenza)",
+            "descricao": "sem complica\u00e7\u00f5es de Influenza",
+            "passo_de_saida_id": 19864,
+            "passo_de_saida": {
+                "id": 19864,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Influenza: Riscos de Complica\u00e7\u00f5es",
+                "descricao": "Avaliar presen\u00e7a de riscos de complica\u00e7\u00f5es para influenza",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19872,
+            "passo_de_entrada": {
+                "id": 19872,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Resfriado] Medicamentos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19557,
+                "nome": "Complicacoes Influenza < 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    19546,
+                    19539
+                ],
+                "argumentos": [
+                    "Complicacoes Influenza",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19892,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (Resfriado)",
+            "descricao": "",
+            "passo_de_saida_id": 19865,
+            "passo_de_saida": {
+                "id": 19865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas Espec\u00edficos",
+                "descricao": "Avaliar sintomas apresentados pelo paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19872,
+            "passo_de_entrada": {
+                "id": 19872,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Resfriado] Medicamentos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19558,
+                "nome": "Positivo para resfriado",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19519
+                ],
+                "argumentos": [
+                    "sintomas_resfriado"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19893,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (Amigdalite)",
+            "descricao": "",
+            "passo_de_saida_id": 19865,
+            "passo_de_saida": {
+                "id": 19865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas Espec\u00edficos",
+                "descricao": "Avaliar sintomas apresentados pelo paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19874,
+            "passo_de_entrada": {
+                "id": 19874,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores agravantes para amigdalite",
+                "descricao": "Aventar suspeitas de abcesso periamigdaliano",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19559,
+                "nome": "Positivo para Amigdalite",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19520
+                ],
+                "argumentos": [
+                    "sintomas_amigdalite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19894,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (Centor Score < 2)",
+            "descricao": "Centor Score < 2",
+            "passo_de_saida_id": 19868,
+            "passo_de_saida": {
+                "id": 19868,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Amigdalite (Centor Score)",
+                "descricao": "Calculo do centor score para paciente com amigdalite",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19869,
+            "passo_de_entrada": {
+                "id": 19869,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Amigdalite - Receita",
+                "descricao": "Receita para pacientes que n\u00e3o apresentam sintomas do Centor Score",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19560,
+                "nome": "Centor Score < 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    19547,
+                    19538
+                ],
+                "argumentos": [
+                    "Centor Score",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19895,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (Centor Score >= 2)",
+            "descricao": "Centor Score >= 2",
+            "passo_de_saida_id": 19868,
+            "passo_de_saida": {
+                "id": 19868,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Amigdalite (Centor Score)",
+                "descricao": "Calculo do centor score para paciente com amigdalite",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19871,
+            "passo_de_entrada": {
+                "id": 19871,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Amigdalite - Receita (Bacteriana)",
+                "descricao": "Receita (Sem Etiologia Bacteriana)",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19561,
+                "nome": "Centor Score >= 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    19547,
+                    19538
+                ],
+                "argumentos": [
+                    "Centor Score",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19896,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (Sinusite)",
+            "descricao": "Positivo para rinite",
+            "passo_de_saida_id": 19865,
+            "passo_de_saida": {
+                "id": 19865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas Espec\u00edficos",
+                "descricao": "Avaliar sintomas apresentados pelo paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19877,
+            "passo_de_entrada": {
+                "id": 19877,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                "descricao": "Aventar suspeita de complica\u00e7\u00e3o orbit\u00e1ria(celulite ou abscesso)!",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19562,
+                "nome": "Positivo para sinusite",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19521
+                ],
+                "argumentos": [
+                    "sintomas_rinite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19897,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s17(complicacoes amigdalite)",
+            "descricao": "",
+            "passo_de_saida_id": 19874,
+            "passo_de_saida": {
+                "id": 19874,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores agravantes para amigdalite",
+                "descricao": "Aventar suspeitas de abcesso periamigdaliano",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19875,
+            "passo_de_entrada": {
+                "id": 19875,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento Ambulatorial - Amigdalite",
+                "descricao": "Tratamento ambulatorial para amigdalite",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19563,
+                "nome": "com_fatores_agravantes_amigdalite",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19528
+                ],
+                "argumentos": [
+                    "ivas_agravante_amigdalite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19898,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s18(sem complicacoes amigdalite)",
+            "descricao": "",
+            "passo_de_saida_id": 19874,
+            "passo_de_saida": {
+                "id": 19874,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores agravantes para amigdalite",
+                "descricao": "Aventar suspeitas de abcesso periamigdaliano",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19881,
+            "passo_de_entrada": {
+                "id": 19881,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Amigdalite] Medicamentos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Dr. Andre",
+                    "data": "2019-01-31T15:02:21.411974-03:00"
+                }
+            },
+            "operacao": {
+                "id": 19564,
+                "nome": "sem_complicacoes_amigdalite",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19528
+                ],
+                "argumentos": [
+                    "ivas_agravante_amigdalite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19899,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s19(informatico lider de equipe)",
+            "descricao": "",
+            "passo_de_saida_id": 19875,
+            "passo_de_saida": {
+                "id": 19875,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento Ambulatorial - Amigdalite",
+                "descricao": "Tratamento ambulatorial para amigdalite",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19876,
+            "passo_de_entrada": {
+                "id": 19876,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir caso com l\u00edder de equipe",
+                "descricao": "<p>Aten&ccedil;&atilde;o:<br />\n- Recomenda-se discutir o caso com o l&iacute;der de equipe.<br />\n- Aventar possibilidade de parecer do otorrino.<br />\n- Aventar possibilidades de solicita&ccedil;&atilde;o de tomografias computadorizadas.</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19900,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s20(sinusite com complica\u00e7\u00f5es)",
+            "descricao": "",
+            "passo_de_saida_id": 19877,
+            "passo_de_saida": {
+                "id": 19877,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                "descricao": "Aventar suspeita de complica\u00e7\u00e3o orbit\u00e1ria(celulite ou abscesso)!",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19876,
+            "passo_de_entrada": {
+                "id": 19876,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir caso com l\u00edder de equipe",
+                "descricao": "<p>Aten&ccedil;&atilde;o:<br />\n- Recomenda-se discutir o caso com o l&iacute;der de equipe.<br />\n- Aventar possibilidade de parecer do otorrino.<br />\n- Aventar possibilidades de solicita&ccedil;&atilde;o de tomografias computadorizadas.</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19565,
+                "nome": "Complica\u00e7\u00f5es (sinusite) >= 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    19543,
+                    19539
+                ],
+                "argumentos": [
+                    "Complica\u00e7\u00f5es (sinusite)",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19901,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s26(viral)",
+            "descricao": "",
+            "passo_de_saida_id": 19878,
+            "passo_de_saida": {
+                "id": 19878,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar a Etiologia",
+                "descricao": "Avaliar a etiologia viral ou bacteriana",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19873,
+            "passo_de_entrada": {
+                "id": 19873,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento Rinite Viral ou Al\u00e9rgica",
+                "descricao": "Receita para paciente com rinite",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19566,
+                "nome": "tratamento_viral",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19532
+                ],
+                "argumentos": [
+                    "rino_etiologia_viral"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19902,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s26(bacteriana)",
+            "descricao": "",
+            "passo_de_saida_id": 19878,
+            "passo_de_saida": {
+                "id": 19878,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar a Etiologia",
+                "descricao": "Avaliar a etiologia viral ou bacteriana",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19879,
+            "passo_de_entrada": {
+                "id": 19879,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento Sinusite Bacteriana",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19567,
+                "nome": "tratamento_bacteriano",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19533
+                ],
+                "argumentos": [
+                    "rino_etiologia_bacteriana"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19903,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s32",
+            "descricao": "",
+            "passo_de_saida_id": 19866,
+            "passo_de_saida": {
+                "id": 19866,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Raio X + Medica\u00e7\u00f5es",
+                "descricao": "Solicitar Raio X (Inclusive para gestantes)\n+ Adicionar sintom\u00e1ticos padr\u00e3o via conduta complementar.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19876,
+            "passo_de_entrada": {
+                "id": 19876,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir caso com l\u00edder de equipe",
+                "descricao": "<p>Aten&ccedil;&atilde;o:<br />\n- Recomenda-se discutir o caso com o l&iacute;der de equipe.<br />\n- Aventar possibilidade de parecer do otorrino.<br />\n- Aventar possibilidades de solicita&ccedil;&atilde;o de tomografias computadorizadas.</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19904,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S28 (Rinite)",
+            "descricao": "Rinite",
+            "passo_de_saida_id": 19865,
+            "passo_de_saida": {
+                "id": 19865,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Sintomas Espec\u00edficos",
+                "descricao": "Avaliar sintomas apresentados pelo paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19870,
+            "passo_de_entrada": {
+                "id": 19870,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento Rinite",
+                "descricao": "Receita para paciente com rinite",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19568,
+                "nome": "Positivo para rinite",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19523
+                ],
+                "argumentos": [
+                    "rinite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19905,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S34 (sinusite sem complica\u00e7\u00f5es)",
+            "descricao": "sinusite sem complica\u00e7\u00f5es",
+            "passo_de_saida_id": 19877,
+            "passo_de_saida": {
+                "id": 19877,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Complica\u00e7\u00f5es ou Tratamento Pr\u00e9vio",
+                "descricao": "Aventar suspeita de complica\u00e7\u00e3o orbit\u00e1ria(celulite ou abscesso)!",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19882,
+            "passo_de_entrada": {
+                "id": 19882,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Rinossinusite] Medicamentos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Dr. Andre",
+                    "data": "2019-01-31T15:03:13.591743-03:00"
+                }
+            },
+            "operacao": {
+                "id": 19569,
+                "nome": "Complica\u00e7\u00f5es (sinusite) < 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    19543,
+                    19539
+                ],
+                "argumentos": [
+                    "Complica\u00e7\u00f5es (sinusite)",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19906,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S23",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19882,
+            "passo_de_saida": {
+                "id": 19882,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Rinossinusite] Medicamentos",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Dr. Andre",
+                    "data": "2019-01-31T15:03:13.591743-03:00"
+                }
+            },
+            "passo_de_entrada_id": 19878,
+            "passo_de_entrada": {
+                "id": 19878,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar a Etiologia",
+                "descricao": "Avaliar a etiologia viral ou bacteriana",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19907,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S25 (etiologia al\u00e9rgica)",
+            "descricao": "etiologia al\u00e9rgica",
+            "passo_de_saida_id": 19878,
+            "passo_de_saida": {
+                "id": 19878,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar a Etiologia",
+                "descricao": "Avaliar a etiologia viral ou bacteriana",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19873,
+            "passo_de_entrada": {
+                "id": 19873,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento Rinite Viral ou Al\u00e9rgica",
+                "descricao": "Receita para paciente com rinite",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19570,
+                "nome": "etiologia al\u00e9rgica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19534
+                ],
+                "argumentos": [
+                    "rino_etiologia_alergica"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 19501,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_pneumonia_dispneia",
+            "peso": 4.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19502,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_pneumonia_dor_pleuritica",
+            "peso": 3.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19503,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_pneumonia_tosse_produtiva",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19504,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_pneumonia_calafrios",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19505,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_pneumonia_confusao_recente",
+            "peso": 4.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19506,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_pneumonia_estertores_crepantes",
+            "peso": 4.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19507,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_pneumonia_entrada_recente",
+            "peso": 2.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19508,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_gestante",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19509,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_idoso",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19510,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_pneumopatias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19511,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_icc",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19512,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_doenca_renal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19513,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_cirrose",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19514,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_neoplasias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19515,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_diabetes",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19516,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_doencas_neurodegen",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19517,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_obesidade_morbida",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19518,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "influenza_complicacoes_imunossupressao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19519,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_resfriado",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19520,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_amigdalite",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19521,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_rinite",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19522,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_influenza",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19523,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rinite",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19524,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "centor_score_edema",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19525,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "centor_score_adenopatia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19526,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "centor_score_febre",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19527,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "centor_score_sem_tosse",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19528,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ivas_agravante_amigdalite",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19529,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rino_suspeita_orbitaria",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19530,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rino_complicacao_intracraniana",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19531,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rino_tratamento_anterior",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19532,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rino_etiologia_viral",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19533,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rino_etiologia_bacteriana",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19534,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rino_etiologia_alergica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19535,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quick_sofa_confusao_mental",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19536,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quick_sofa_pas_menor_100",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19537,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quick_sofa_fr_maior_22",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19538,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19539,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19540,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "4",
+            "peso": 1.0,
+            "valor": 4.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19541,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19542,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Quick SOFA",
+            "descricao": "Quick SOFA",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                19537,
+                19535,
+                19536
+            ],
+            "argumentos": [
+                "quick_sofa_fr_maior_22",
+                "quick_sofa_confusao_mental",
+                "quick_sofa_pas_menor_100"
+            ]
+        },
+        {
+            "id": 19543,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Complica\u00e7\u00f5es (sinusite)",
+            "descricao": "Complica\u00e7\u00f5es (sinusite)",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                19530,
+                19531,
+                19529
+            ],
+            "argumentos": [
+                "rino_complicacao_intracraniana",
+                "rino_tratamento_anterior",
+                "rino_suspeita_orbitaria"
+            ]
+        },
+        {
+            "id": 19544,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Criterios Pneumonia",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                19501,
+                19502,
+                19503,
+                19504,
+                19505,
+                19506,
+                19507
+            ],
+            "argumentos": [
+                "criterios_pneumonia_dispneia",
+                "criterios_pneumonia_dor_pleuritica",
+                "criterios_pneumonia_tosse_produtiva",
+                "criterios_pneumonia_calafrios",
+                "criterios_pneumonia_confusao_recente",
+                "criterios_pneumonia_estertores_crepantes",
+                "criterios_pneumonia_entrada_recente"
+            ]
+        },
+        {
+            "id": 19545,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Riscos Influenza",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [],
+            "argumentos": []
+        },
+        {
+            "id": 19546,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Complicacoes Influenza",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                19508,
+                19509,
+                19510,
+                19511,
+                19512,
+                19513,
+                19514,
+                19515,
+                19516,
+                19517,
+                19518
+            ],
+            "argumentos": [
+                "influenza_complicacoes_gestante",
+                "influenza_complicacoes_idoso",
+                "influenza_complicacoes_pneumopatias",
+                "influenza_complicacoes_icc",
+                "influenza_complicacoes_doenca_renal",
+                "influenza_complicacoes_cirrose",
+                "influenza_complicacoes_neoplasias",
+                "influenza_complicacoes_diabetes",
+                "influenza_complicacoes_doencas_neurodegen",
+                "influenza_complicacoes_obesidade_morbida",
+                "influenza_complicacoes_imunossupressao"
+            ]
+        },
+        {
+            "id": 19547,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Centor Score",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                19524,
+                19525,
+                19526,
+                19527
+            ],
+            "argumentos": [
+                "centor_score_edema",
+                "centor_score_adenopatia",
+                "centor_score_febre",
+                "centor_score_sem_tosse"
+            ]
+        },
+        {
+            "id": 19548,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Otite Sintomas",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [],
+            "argumentos": []
+        },
+        {
+            "id": 19549,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "somas_fatores_risco",
+            "descricao": "Soma fatores de risco",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [],
+            "argumentos": []
+        },
+        {
+            "id": 19550,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Crit\u00e9rios SIRS",
+            "descricao": "Crit\u00e9rios SIRS",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [],
+            "argumentos": []
+        }
+    ]
+}

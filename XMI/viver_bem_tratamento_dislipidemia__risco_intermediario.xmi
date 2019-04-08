@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="982" url="" name="[Viver Bem] Tratamento Dislipidemia - Risco Intermedi&#xe1;rio" code="VBL_DISLIP_RISCO_INTER">
+  <element xsi:type="pathwayMetamodel:Information" id="4928" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar para Nutricionista" description="Encaminhar paciente para nutricionista" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4929" type="Receita" type_verbose="Receita" url="" name="Prescrever Atrovastatina 40mg" description="Atrovastatina 40mg/dia" inputSequences="//@sequence.0" outputSequences="//@sequence.1">
+    <item id="949" url="" name="ATORVASTATINA" med_code="1854839394" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica di&#xe1;ria. Uso cont&#xed;nuo."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4930" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Prescrever Medica&#xe7;&#xe3;o Avulsa?" description="Prescrever medica&#xe7;&#xe3;o n&#xe3;o contida neste protocolo" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Prescrever Medica&#xe7;&#xe3;o Avulsa?" url="" id="2181">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3562" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="4931" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Medica&#xe7;&#xe3;o Avulsa: Prescrever e Justificar" description="&lt;p>Esta medica&amp;ccedil;&amp;atilde;o n&amp;atilde;o est&amp;aacute; contida no protocolo previamente definido, e &amp;eacute; de responsabilidade do m&amp;eacute;dico em atendimento.&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" inputSequences="//@sequence.2" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4932" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavalia&#xe7;&#xe3;o" description="Atingiu meta? LDL&lt;50mg/dl" inputSequences="//@sequence.4" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Atingiu meta de LDL&lt;50mg/dl?" url="" id="2182">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3563" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4933" type="Receita" type_verbose="Receita" url="" name="Prescrever Atrovastatina 80mg" description="Prescrever Atrovastatina 80mg [*]" isTerminal="true" inputSequences="//@sequence.7">
+    <item id="950" url="" name="ATORVASTATINA" med_code="1854839411" presentation="COMP" access="1" quantity="1" period="30" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica di&#xe1;ria. Uso cont&#xed;nuo."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4934" type="Receita" type_verbose="Receita" url="" name="Manter Prescri&#xe7;&#xe3;o" description="Manter Prescri&#xe7;&#xe3;o de Atrovastatina 10mg/dia, em caso de medica&#xe7;&#xe3;o avulsa continuar com essa prescri&#xe7;&#xe3;o." isTerminal="true" inputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="4935" type="Pausa" type_verbose="Pausa" url="" name="Aguardar 3 Meses" description="Aguardar 3 Meses" inputSequences="//@sequence.8" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Process" id="4936" type="Processo" type_verbose="Processo" url="" name="Agendar Retorno Trimestral" description="Agendar Retorno Trimestral" inputSequences="//@sequence.3 //@sequence.5" outputSequences="//@sequence.8">
+    <action id="143" process_id="4936" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4937" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="4938" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4939" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (com medicacao avulsa)" description="">
+    <operation name="com medicacao avulsa" Operator="affirmation" id="3564">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3562" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="4940" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (sem medicacao avulsa)" description="">
+    <operation name="sem medicacao avulsa" id="3565">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3562" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.7" id="5001" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description=""/>
+  <sequence inputStep="//@element.8" outputStep="//@element.3" id="5002" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description=""/>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="5003" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (LDL &lt; 50)" description="">
+    <operation name="LDL &lt; 50" Operator="affirmation" id="3566">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3563" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="5004" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (LDL >= 50)" description="">
+    <operation name="LDL >= 50" id="3567">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3563" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.8" id="5005" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="3562" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ldl_menor_que_50" id="3563" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

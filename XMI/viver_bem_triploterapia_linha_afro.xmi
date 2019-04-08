@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="906" url="" name="[Viver Bem] Triploterapia Linha Afro" code="VB_TRIPLO_AFRO">
+  <element xsi:type="pathwayMetamodel:Prescription" id="4290" type="Receita" type_verbose="Receita" url="" name="Receita I - Enalapril" description="&lt;p>Prescrever Enalapril 20mg 2x/dia&amp;nbsp;+ Anlodipino 5mg/dia + Clortalidona 12,5mg/dia&lt;/p>" inputSequences="//@sequence.10" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4291" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar press&#xe3;o (1)" description="Atingiu meta press&#xf3;rica?" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Atingiu meta press&#xf3;rica?" url="" id="1905">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="3134" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4292" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar press&#xe3;o (2)" description="Manteve meta press&#xf3;rica?" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Manteve meta press&#xf3;rica?" url="" id="1906">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="3135" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4293" type="Receita" type_verbose="Receita" url="" name="Manter Tratamento" description="&lt;p>Manter Tratamento anterior, segue medicamentos prescritos na Receita anterior:&lt;/p>" inputSequences="//@sequence.5" outputSequences="//@sequence.7"/>
+  <element xsi:type="pathwayMetamodel:Process" id="4294" type="Processo" type_verbose="Processo" url="" name="Agendar Retorno Semanal" description="" inputSequences="//@sequence.0 //@sequence.12" outputSequences="//@sequence.8">
+    <action id="59" process_id="4294" service="aprazamento" description="Retorno Semanal"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4295" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno Semanal" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:Process" id="4296" type="Processo" type_verbose="Processo" url="" name="Agendar Retorno Semestral" description="" inputSequences="//@sequence.2 //@sequence.7" outputSequences="//@sequence.9">
+    <action id="60" process_id="4296" service="aprazamento" description="Retorno Semestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4297" type="Pausa" type_verbose="Pausa" url="" name="Aguardar Retorno Semestral" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4298" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhamento Tetraterapia" description="Encaminhar ao protocolo de Tetraterapia" isTerminal="true" inputSequences="//@sequence.3 //@sequence.6">
+    <pathways>VB_TETRA_AFRO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4299" type="Receita" type_verbose="Receita" url="" name="Receita II - Losartana" description="&lt;p>Prescrever Losartan 50mg 2x/dia + Anlodipino 5mg/d + Clortalidona 12,5mg/dia&lt;/p>" inputSequences="//@sequence.11" outputSequences="//@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4300" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verifica&#xe7;&#xe3;o de Medica&#xe7;&#xe3;o" description="" isInitial="true" outputSequences="//@sequence.10 //@sequence.11">
+    <questions text="Selecionar Op&#xe7;&#xe3;o:" url="" id="1907">
+      <answers xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="3136" weight="1" value="0.0">
+        <option description="Enalapril 20mg" weight="1"/>
+        <option description="Losartana 50mg" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="4301" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description=""/>
+  <sequence inputStep="//@element.1" outputStep="//@element.5" id="4302" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description=""/>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="4303" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (atingiu meta pressorica)" description="">
+    <operation name="atingiu meta pressorica" Operator="affirmation" id="3139">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="3134" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.1" id="4304" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (n&#xe3;o atingiu meta pressorica)" description="">
+    <operation name="n&#xe3;o atingiu meta pressorica" id="3140">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="3134" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.7" id="4305" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4306" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (manteve meta pressorica)" description="">
+    <operation name="manteve meta pressorica" Operator="affirmation" id="3181">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="3135" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="4307" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (n&#xe3;o manteve meta pressorica)" description="">
+    <operation name="n&#xe3;o manteve meta pressorica" id="3182">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="3135" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="4308" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="4309" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="4310" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.10" id="4311" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-">
+    <operation name="enalapril" Operator="equal" id="3183">
+      <operand xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="3136" weight="1" value="0.0">
+        <option description="Enalapril 20mg" weight="1"/>
+        <option description="Losartana 50mg" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="UM" id="3137" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.10" id="4312" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="-">
+    <operation name="losartana" Operator="equal" id="3184">
+      <operand xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="3136" weight="1" value="0.0">
+        <option description="Enalapril 20mg" weight="1"/>
+        <option description="Losartana 50mg" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="DOIS" id="3138" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.9" id="4313" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="atingiu_meta_pressorica" id="3134" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="manteve_meta_pressorica" id="3135" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="medicacao_linha_triplo_afro" id="3136" weight="1" value="0.0">
+    <option description="Enalapril 20mg" weight="1"/>
+    <option description="Losartana 50mg" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="UM" id="3137" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="DOIS" id="3138" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

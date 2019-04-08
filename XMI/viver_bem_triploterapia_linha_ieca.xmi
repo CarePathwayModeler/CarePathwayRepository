@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="905" url="" name="[Viver Bem] Triploterapia Linha IECA" code="VB_TRIPLO_IECA">
+  <element xsi:type="pathwayMetamodel:Prescription" id="4217" type="Receita" type_verbose="Receita" url="" name="Tratamento com Enalapril + Clortalidona" description="Prescrever Clortalidona 12,5mg/dia + Enalapril 20mg 2x/dia + (BCC) Anlodipino 5mg/dia PS > 180 e PD > 110" isInitial="true" outputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4218" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Meta Press&#xf3;rica" description="Avalia&#xe7;&#xe3;o ap&#xf3;s retorno quinzenal do Tratamento com Enalapril + Clortalidona" inputSequences="//@sequence.6" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Atingiu meta press&#xf3;rica?" url="" id="1903">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_meta_pressorica" id="3128" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="4219" type="Pausa" type_verbose="Pausa" url="" name="Retorno Semestral" description="Agendar retorno semestral do Paciente ap&#xf3;s avalia&#xe7;&#xe3;o de meta press&#xf3;rica" inputSequences="//@sequence.0 //@sequence.3" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="4220" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Se Manteve Meta press&#xf3;rica" description="Avaliar se manteve meta press&#xf3;rica ap&#xf3;s retorno semestral" inputSequences="//@sequence.5" outputSequences="//@sequence.2 //@sequence.4">
+    <questions text="Manteve meta press&#xf3;rica?" url="" id="1904">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_manteve_meta_pressorica" id="3129" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="4281" type="Receita" type_verbose="Receita" url="" name="Prescrever &#xfa;ltima medica&#xe7;&#xe3;o" description="Continuar tomando a &#xfa;ltima medica&#xe7;&#xe3;o prescrita" inputSequences="//@sequence.2" outputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Referral" id="4282" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Prescrever Tetraterapia" description="Encaminhar paciente para Triploterapia" isTerminal="true" inputSequences="//@sequence.1 //@sequence.4">
+    <pathways>VB_TETRA_IECA</pathways>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="4283" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Avaliar Meta Press&#xf3;rica - Retorno Semestral)" description="">
+    <operation name="atingiu_meta_pressorica" Operator="affirmation" id="3130">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_meta_pressorica" id="3128" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="4284" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Avaliar Meta Press&#xf3;rica - Prescrever Triploterapia)" description="">
+    <operation name="nao_atingiu_meta_pressorica" id="3131">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_meta_pressorica" id="3128" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="4285" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Avaliar Se Manteve Meta - Prescrever &#xfa;ltimo medicamento)" description="">
+    <operation name="manteve_meta_pressorica" Operator="affirmation" id="3132">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_manteve_meta_pressorica" id="3129" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.4" id="4286" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Prescrever &#xfa;ltima medica&#xe7;&#xe3;o - Retorno Semestral)" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="4287" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Avaliar Se Manteve Meta - Prescrever Triploterapia)" description="">
+    <operation name="nao_manteve_meta_pressorica" id="3133">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_manteve_meta_pressorica" id="3129" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="4288" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description=""/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="4289" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description=""/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_meta_pressorica" id="3128" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ieca_triplo_manteve_meta_pressorica" id="3129" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

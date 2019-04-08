@@ -1,0 +1,2910 @@
+{
+    "id": 3119,
+    "url": "",
+    "codigo": "H025",
+    "nome": "Tontura e Vertigem",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 221,
+    "versao": 7,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:46:51.229451-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:45:19.618246-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:46:51.229451-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17741,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar como Tontura ou Vertigem",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9128,
+                    "url": "",
+                    "texto": "D\u00e9ficit s\u00fabito, pr\u00e9-s\u00edncope, dispneia, palpita\u00e7\u00e3o, hipotens\u00e3o, desconforto tor\u00e1cico, rebaixamento sensorial.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17501,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "tontura",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9129,
+                    "url": "",
+                    "texto": "VERTIGEM ROTAT\u00d3RIA (cinetose, piora com movimenta\u00e7\u00e3o da cabe\u00e7a, n\u00e1useas)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17502,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "vertigem",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17762,
+                    "url": "",
+                    "nome": "S1 (Tontura)",
+                    "descricao": "tontura",
+                    "passo_de_saida_id": 17741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar como Tontura ou Vertigem",
+                    "passo_de_entrada_id": 17742,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Tontura] Anamnese",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17763,
+                    "url": "",
+                    "nome": "S2 (Vertigem)",
+                    "descricao": "vertigem",
+                    "passo_de_saida_id": 17741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar como Tontura ou Vertigem",
+                    "passo_de_entrada_id": 17743,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Vertigem] Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17742,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Tontura] Anamnese",
+            "descricao": "Anamnese completa com sinais vitais",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17762,
+                    "url": "",
+                    "nome": "S1 (Tontura)",
+                    "descricao": "tontura",
+                    "passo_de_saida_id": 17741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar como Tontura ou Vertigem",
+                    "passo_de_entrada_id": 17742,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Tontura] Anamnese",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17764,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondiciona",
+                    "passo_de_saida_id": 17742,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Tontura] Anamnese",
+                    "passo_de_entrada_id": 17744,
+                    "passo_de_entrada": "Tratamento: [Tontura] Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17743,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Vertigem] Sinais de Alarme",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9130,
+                    "url": "",
+                    "texto": "Sinais de Alarme",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17503,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "sinais_alarme",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Ataxia",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Nistagmo Vertical",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Diplopia",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Convuls\u00e3o",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Cefal\u00e9ia Associada",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Disartria",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "D\u00e9ficit Motor ou Sensitivo",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17763,
+                    "url": "",
+                    "nome": "S2 (Vertigem)",
+                    "descricao": "vertigem",
+                    "passo_de_saida_id": 17741,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar como Tontura ou Vertigem",
+                    "passo_de_entrada_id": 17743,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Vertigem] Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17766,
+                    "url": "",
+                    "nome": "S5 (um ou mais sinais de alarme)",
+                    "descricao": "um ou mais sinais de alarme",
+                    "passo_de_saida_id": 17743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem] Sinais de Alarme",
+                    "passo_de_entrada_id": 17746,
+                    "passo_de_entrada": "Tratamento: [Vertigem Central] Exames e Internamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17767,
+                    "url": "",
+                    "nome": "S7 (sem sinais de alarme)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 17743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem] Sinais de Alarme",
+                    "passo_de_entrada_id": 17747,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17744,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Tontura] Exames",
+            "descricao": "Solicitar ECG, hemograma, ureia, creatinina, s\u00f3dio pot\u00e1ssio, glicemia capilar",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "ELETROCARDIOGRAMA (ECG)",
+                    "exame": "75130050",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "n/a",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "n/a",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "n/a",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "n/a",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "n/a",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "n/a",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GLICEMIA P/ FITA",
+                    "exame": "99011973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Tontura",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17764,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondiciona",
+                    "passo_de_saida_id": 17742,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Tontura] Anamnese",
+                    "passo_de_entrada_id": 17744,
+                    "passo_de_entrada": "Tratamento: [Tontura] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17765,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17744,
+                    "passo_de_saida": "Tratamento: [Tontura] Exames",
+                    "passo_de_entrada_id": 17745,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Tontura] Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17745,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Tontura] Discutir com l\u00edder local",
+            "descricao": "Avaliar caso com l\u00edder local",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17765,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17744,
+                    "passo_de_saida": "Tratamento: [Tontura] Exames",
+                    "passo_de_entrada_id": 17745,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Tontura] Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17746,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Vertigem Central] Exames e Internamento",
+            "descricao": "<p><span style=\"font-size:20px\">Solicitar Tomografia de cr&acirc;nio sem contraste.</span></p>\n\n<p><span style=\"font-size:20px\"><u>Solicitar avalia&ccedil;&atilde;o da neurologia.</u></span></p>\n\n<p><strong><span style=\"font-size:20px\">Discutir necessidade de internamento hospitalar do paciente.</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "TC CRANIO/ORBITAS,SELA TURSICA",
+                    "exame": "34010068",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "n/a",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17766,
+                    "url": "",
+                    "nome": "S5 (um ou mais sinais de alarme)",
+                    "descricao": "um ou mais sinais de alarme",
+                    "passo_de_saida_id": 17743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem] Sinais de Alarme",
+                    "passo_de_entrada_id": 17746,
+                    "passo_de_entrada": "Tratamento: [Vertigem Central] Exames e Internamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17747,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+            "descricao": "<p>VERTIGEM PERIF&Eacute;RICA</p>\n\n<p>Sensa&ccedil;&atilde;o de rota&ccedil;&atilde;o, desequil&iacute;brio, n&aacute;usea e v&ocirc;mito, nistagmo horizonto-rotat&oacute;rio, desvio da marcha para um dos lados e tend&ecirc;ncia a queda ao fechar os olhos.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9131,
+                    "url": "",
+                    "texto": "Paciente com idade > 50 anos + um ou mais fatores de risco para doen\u00e7a cerebrovascular?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17504,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_maior_50_ou_doenca_cerebrovascular",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17767,
+                    "url": "",
+                    "nome": "S7 (sem sinais de alarme)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 17743,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem] Sinais de Alarme",
+                    "passo_de_entrada_id": 17747,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17768,
+                    "url": "",
+                    "nome": "S8 (mais de 50 anos + doenca cerebrovascular)",
+                    "descricao": "mais de 50 anos + doenca cerebrovascular",
+                    "passo_de_saida_id": 17747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                    "passo_de_entrada_id": 17749,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17780,
+                    "url": "",
+                    "nome": "S9 (menos de 50 anos ou sem doen\u00e7a cerebrovascular)",
+                    "descricao": "menos de 50 anos ou sem doen\u00e7a cerebrovascular",
+                    "passo_de_saida_id": 17747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                    "passo_de_entrada_id": 17748,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17748,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar suspeita de doen\u00e7a",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9132,
+                    "url": "",
+                    "texto": "Neurite Vestibular: \n\nIdade entre 30-50 anos. Vertigem rotat\u00f3ria aguda, com dura\u00e7\u00e3o de dias e melhora progressiva. Associada a n\u00e1useas, v\u00f4mitos e desequil\u00edbrio",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17505,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "neurite_vestibular",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9133,
+                    "url": "",
+                    "texto": "Doen\u00e7a de Meniere: \n\nIdade entre 30-50 anos. Vertigem rotat\u00f3ria aguda associada a zumbido, hipoacusia e plenitude auricular",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17506,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "doenca_de_meniere",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9134,
+                    "url": "",
+                    "texto": "Mastoidite com envolvimento do labirinto: \n\nComplica\u00e7\u00e3o de um quadro infeccioso pr\u00e9vio como otite m\u00e9dia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17507,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "mastoidite_envolvimento_labirinto",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9135,
+                    "url": "",
+                    "texto": "Trauma: \n\nIn\u00edcio do quadro ap\u00f3s epis\u00f3dio de trauma na cabe\u00e7a",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17508,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "trauma",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9136,
+                    "url": "",
+                    "texto": "VERTIGEM POSICIONAL PAROX\u00cdSTICA BENIGNA (VPPB): \n\nEpis\u00f3dios curtos de vertigem desencadeados por movimentos r\u00e1pidos da cabe\u00e7a",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17509,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "vertigem_posicional_paroxistica_benigna",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17780,
+                    "url": "",
+                    "nome": "S9 (menos de 50 anos ou sem doen\u00e7a cerebrovascular)",
+                    "descricao": "menos de 50 anos ou sem doen\u00e7a cerebrovascular",
+                    "passo_de_saida_id": 17747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                    "passo_de_entrada_id": 17748,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17769,
+                    "url": "",
+                    "nome": "S13 (VPPB)",
+                    "descricao": "VPPB",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17750,
+                    "passo_de_entrada": "Tratamento: [VPPB] Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17770,
+                    "url": "",
+                    "nome": "S14 (trauma)",
+                    "descricao": "trauma",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17761,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local (mastoidite)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17771,
+                    "url": "",
+                    "nome": "S16 (mastoidite)",
+                    "descricao": "mastoidite",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17761,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local (mastoidite)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17772,
+                    "url": "",
+                    "nome": "S17 (Meniere)",
+                    "descricao": "Meniere",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17751,
+                    "passo_de_entrada": "Tratamento: [M\u00e9ni\u00e8re] Tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17776,
+                    "url": "",
+                    "nome": "S21 (neurite vestibular)",
+                    "descricao": "neurite vestibular",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17755,
+                    "passo_de_entrada": "Tratamento: [Neurite Vestibular] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17749,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com L\u00edder Local",
+            "descricao": "Discutir caso com l\u00edder local e aventar possibilidade de TC de cr\u00e2nio.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17768,
+                    "url": "",
+                    "nome": "S8 (mais de 50 anos + doenca cerebrovascular)",
+                    "descricao": "mais de 50 anos + doenca cerebrovascular",
+                    "passo_de_saida_id": 17747,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                    "passo_de_entrada_id": 17749,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17750,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[VPPB] Tratamento",
+            "descricao": "<h3><span style=\"font-size:18px\">Se paciente sintom&aacute;tico no momento da consulta:&nbsp;</span></h3>\n\n<ul>\n\t<li>\n\t<h3><span style=\"font-size:18px\">Dimenidrato 1 ampola, endovenosa, agora</span></h3>\n\t</li>\n\t<li>\n\t<h3><span style=\"font-size:18px\">Ondansetrona 4mg, endovenoso, agora</span></h3>\n\t</li>\n</ul>\n\n<p><strong><span style=\"color:#c0392b\"><span style=\"font-size:18px\">Sugerir que o paciente procure&nbsp;consulta ambulatorial com neurologista ou otorrinolaringologista.</span></span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-24T14:46:08.824924-03:00"
+            },
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9076,
+                    "url": "",
+                    "medicamento": 40088,
+                    "codigo": "",
+                    "nome": "DRAMIN B6  IM AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9077,
+                    "url": "",
+                    "medicamento": 126122,
+                    "codigo": "",
+                    "nome": "DRAMIN B6 DL IV AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3752,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Infusao ev",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "PUNCAO C/ JELCO",
+                    "procedimento": "76030002",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "PUNCAO C/ SCALP",
+                    "procedimento": "76030001",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17769,
+                    "url": "",
+                    "nome": "S13 (VPPB)",
+                    "descricao": "VPPB",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17750,
+                    "passo_de_entrada": "Tratamento: [VPPB] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17783,
+                    "url": "",
+                    "nome": "S25",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17750,
+                    "passo_de_saida": "Tratamento: [VPPB] Tratamento",
+                    "passo_de_entrada_id": 17760,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [VPPB] Encaminhamentos",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17751,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[M\u00e9ni\u00e8re] Tratamento",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9078,
+                    "url": "",
+                    "medicamento": 40088,
+                    "codigo": "",
+                    "nome": "DRAMIN B6  IM AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 5,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17772,
+                    "url": "",
+                    "nome": "S17 (Meniere)",
+                    "descricao": "Meniere",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17751,
+                    "passo_de_entrada": "Tratamento: [M\u00e9ni\u00e8re] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17773,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "Incondicionao",
+                    "passo_de_saida_id": 17751,
+                    "passo_de_saida": "Tratamento: [M\u00e9ni\u00e8re] Tratamento",
+                    "passo_de_entrada_id": 17752,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17752,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[M\u00e9ni\u00e8re] Avaliar melhora",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9137,
+                    "url": "",
+                    "texto": "Houve melhora?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17510,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "meniere_houve_melhora",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17773,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "Incondicionao",
+                    "passo_de_saida_id": 17751,
+                    "passo_de_saida": "Tratamento: [M\u00e9ni\u00e8re] Tratamento",
+                    "passo_de_entrada_id": 17752,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17774,
+                    "url": "",
+                    "nome": "S19 (meniere - houve melhora)",
+                    "descricao": "meniere - houve melhora",
+                    "passo_de_saida_id": 17752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Avaliar melhora",
+                    "passo_de_entrada_id": 17759,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Classificar quadro",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17775,
+                    "url": "",
+                    "nome": "S20 (meniere - nao houve melhora)",
+                    "descricao": "meniere - nao houve melhora",
+                    "passo_de_saida_id": 17752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Avaliar melhora",
+                    "passo_de_entrada_id": 17754,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17753,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[M\u00e9ni\u00e8re] Fase Subaguda/Cr\u00f4nica - Alta + Receita",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Liberar paciente ap&oacute;s prescri&ccedil;&atilde;o da receita.</strong></span></p>\n\n<p><br />\n<span style=\"font-size:16px\"><u>Procurar emerg&ecirc;ncia em caso de n&atilde;o melhora ou piora do quadro</u></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4681,
+                    "url": "",
+                    "nome": "Betaistina 24mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "3 a 5 dias",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17782,
+                    "url": "",
+                    "nome": "S24 (meniere subaguda ou cronica)",
+                    "descricao": "meniere subaguda ou cronica",
+                    "passo_de_saida_id": 17759,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Classificar quadro",
+                    "passo_de_entrada_id": 17753,
+                    "passo_de_entrada": "Receita: [M\u00e9ni\u00e8re] Fase Subaguda/Cr\u00f4nica - Alta + Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17754,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "Discutir com l\u00edder local. Aventar possibilidade de internamento.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17775,
+                    "url": "",
+                    "nome": "S20 (meniere - nao houve melhora)",
+                    "descricao": "meniere - nao houve melhora",
+                    "passo_de_saida_id": 17752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Avaliar melhora",
+                    "passo_de_entrada_id": 17754,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17779,
+                    "url": "",
+                    "nome": "S24 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 17756,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Neurite Vestibular] Avaliar Melhora",
+                    "passo_de_entrada_id": 17754,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17755,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Neurite Vestibular] Tratamento",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-24T14:46:48.811653-03:00"
+            },
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9079,
+                    "url": "",
+                    "medicamento": 126122,
+                    "codigo": "",
+                    "nome": "DRAMIN B6 DL IV AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3774,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Infusao ev",
+                        "codigo_principio_ativo": 871,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 2,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 50,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17776,
+                    "url": "",
+                    "nome": "S21 (neurite vestibular)",
+                    "descricao": "neurite vestibular",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17755,
+                    "passo_de_entrada": "Tratamento: [Neurite Vestibular] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17777,
+                    "url": "",
+                    "nome": "S22",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17755,
+                    "passo_de_saida": "Tratamento: [Neurite Vestibular] Tratamento",
+                    "passo_de_entrada_id": 17756,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Neurite Vestibular] Avaliar Melhora",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17756,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Neurite Vestibular] Avaliar Melhora",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9138,
+                    "url": "",
+                    "texto": "Houve melhora?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17511,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "neurite_houve_melhora",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17777,
+                    "url": "",
+                    "nome": "S22",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17755,
+                    "passo_de_saida": "Tratamento: [Neurite Vestibular] Tratamento",
+                    "passo_de_entrada_id": 17756,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Neurite Vestibular] Avaliar Melhora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17778,
+                    "url": "",
+                    "nome": "S23 (neurite - houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 17756,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Neurite Vestibular] Avaliar Melhora",
+                    "passo_de_entrada_id": 17757,
+                    "passo_de_entrada": "Receita: [Neurite Vestibular] Alta + Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17779,
+                    "url": "",
+                    "nome": "S24 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 17756,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Neurite Vestibular] Avaliar Melhora",
+                    "passo_de_entrada_id": 17754,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17757,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Neurite Vestibular] Alta + Receita",
+            "descricao": "<p><span style=\"font-size:18px\"><strong>ALTA</strong>&nbsp;<br />\nDimenidrinato + piridoxina 50mg, 01 comprimido, via oral 6/6h por 3-5 dias e Prednisona 1mg/kg, via oral, 1x/dia por 5 dias, com redu&ccedil;&atilde;o gradativa da dose por mais 15 dias<br />\n<br />\nProcurar emerg&ecirc;ncia em caso de n&atilde;o melhora ou piora do quadro</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4682,
+                    "url": "",
+                    "nome": "Dimenidrato + Piridoxina 50mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "tomar por 3 a 5 duas",
+                    "ordem": 1
+                },
+                {
+                    "id": 4683,
+                    "url": "",
+                    "nome": "Prednisona 1mg/kg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "com redu\u00e7\u00e3o gradativa da dose por mais 15 dias",
+                    "ordem": 2
+                },
+                {
+                    "id": 4684,
+                    "url": "",
+                    "nome": "Vertix 10mg ..... 1cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Uma vez durante a noite, at\u00e9 a melhora do paciente.",
+                    "ordem": 3
+                },
+                {
+                    "id": 4685,
+                    "url": "",
+                    "nome": "Vertizine D 3mg + 10mg ...... 1 cx",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Uma vez durante a noite.",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17778,
+                    "url": "",
+                    "nome": "S23 (neurite - houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 17756,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Neurite Vestibular] Avaliar Melhora",
+                    "passo_de_entrada_id": 17757,
+                    "passo_de_entrada": "Receita: [Neurite Vestibular] Alta + Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17758,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[M\u00e9ni\u00e8re] Fase Aguda - Alta + Receita",
+            "descricao": "<p><span style=\"font-size:18px\">Liberar paciente ap&oacute;s prescri&ccedil;&atilde;o da receita.</span></p>\n\n<p><br />\n<span style=\"font-size:18px\"><u><strong>Procurar emerg&ecirc;ncia em caso de n&atilde;o melhora ou piora do quadro.</strong></u></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4686,
+                    "url": "",
+                    "nome": "Dimenidrato + Piridoxina 50mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "usar medica\u00e7\u00e3o por 3 a 5 dias.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4687,
+                    "url": "",
+                    "nome": "Prednisona 1mg/kg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "usar medica\u00e7\u00e3o por 3 a 5 dias, com redu\u00e7\u00e3o gradativa da dose por mais 15 dias",
+                    "ordem": 2
+                },
+                {
+                    "id": 4688,
+                    "url": "",
+                    "nome": "HIDROCLOROTIAZIDA 25MG COMP 1 UD",
+                    "medicamento": 154015,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17781,
+                    "url": "",
+                    "nome": "S23 (meniere aguda)",
+                    "descricao": "meniere aguda",
+                    "passo_de_saida_id": 17759,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Classificar quadro",
+                    "passo_de_entrada_id": 17758,
+                    "passo_de_entrada": "Receita: [M\u00e9ni\u00e8re] Fase Aguda - Alta + Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17759,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[M\u00e9ni\u00e8re] Classificar quadro",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9139,
+                    "url": "",
+                    "texto": "Fase Aguda",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17512,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fase_aguda",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9140,
+                    "url": "",
+                    "texto": "Fase Subaguda ou Cr\u00f4nica",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17513,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "meniere_fase_subaguda_ou_cronica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17774,
+                    "url": "",
+                    "nome": "S19 (meniere - houve melhora)",
+                    "descricao": "meniere - houve melhora",
+                    "passo_de_saida_id": 17752,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Avaliar melhora",
+                    "passo_de_entrada_id": 17759,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Classificar quadro",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17781,
+                    "url": "",
+                    "nome": "S23 (meniere aguda)",
+                    "descricao": "meniere aguda",
+                    "passo_de_saida_id": 17759,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Classificar quadro",
+                    "passo_de_entrada_id": 17758,
+                    "passo_de_entrada": "Receita: [M\u00e9ni\u00e8re] Fase Aguda - Alta + Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17782,
+                    "url": "",
+                    "nome": "S24 (meniere subaguda ou cronica)",
+                    "descricao": "meniere subaguda ou cronica",
+                    "passo_de_saida_id": 17759,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [M\u00e9ni\u00e8re] Classificar quadro",
+                    "passo_de_entrada_id": 17753,
+                    "passo_de_entrada": "Receita: [M\u00e9ni\u00e8re] Fase Subaguda/Cr\u00f4nica - Alta + Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17760,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[VPPB] Encaminhamentos",
+            "descricao": "Se julgar necess\u00e1rio, agendar consulta eletiva com Neurologista ou Otorrinolaringologista",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17783,
+                    "url": "",
+                    "nome": "S25",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17750,
+                    "passo_de_saida": "Tratamento: [VPPB] Tratamento",
+                    "passo_de_entrada_id": 17760,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [VPPB] Encaminhamentos",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17761,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com L\u00edder Local (mastoidite)",
+            "descricao": "Discutir caso com l\u00edder de plant\u00e3o e aventar possibilidade de TC de mast\u00f3ide.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17770,
+                    "url": "",
+                    "nome": "S14 (trauma)",
+                    "descricao": "trauma",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17761,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local (mastoidite)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17771,
+                    "url": "",
+                    "nome": "S16 (mastoidite)",
+                    "descricao": "mastoidite",
+                    "passo_de_saida_id": 17748,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar suspeita de doen\u00e7a",
+                    "passo_de_entrada_id": 17761,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com L\u00edder Local (mastoidite)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17762,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (Tontura)",
+            "descricao": "tontura",
+            "passo_de_saida_id": 17741,
+            "passo_de_saida": {
+                "id": 17741,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar como Tontura ou Vertigem",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17742,
+            "passo_de_entrada": {
+                "id": 17742,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Tontura] Anamnese",
+                "descricao": "Anamnese completa com sinais vitais",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17524,
+                "nome": "tontura (e sem vertigem)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17501,
+                    17516
+                ],
+                "argumentos": [
+                    "tontura",
+                    "sem vertigem"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17763,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (Vertigem)",
+            "descricao": "vertigem",
+            "passo_de_saida_id": 17741,
+            "passo_de_saida": {
+                "id": 17741,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar como Tontura ou Vertigem",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17743,
+            "passo_de_entrada": {
+                "id": 17743,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Vertigem] Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17525,
+                "nome": "vertigem (e sem tontura)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17502,
+                    17515
+                ],
+                "argumentos": [
+                    "vertigem",
+                    "sem tontura"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17764,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Incondiciona",
+            "passo_de_saida_id": 17742,
+            "passo_de_saida": {
+                "id": 17742,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Tontura] Anamnese",
+                "descricao": "Anamnese completa com sinais vitais",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17744,
+            "passo_de_entrada": {
+                "id": 17744,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Tontura] Exames",
+                "descricao": "Solicitar ECG, hemograma, ureia, creatinina, s\u00f3dio pot\u00e1ssio, glicemia capilar",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17765,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17744,
+            "passo_de_saida": {
+                "id": 17744,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Tontura] Exames",
+                "descricao": "Solicitar ECG, hemograma, ureia, creatinina, s\u00f3dio pot\u00e1ssio, glicemia capilar",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17745,
+            "passo_de_entrada": {
+                "id": 17745,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Tontura] Discutir com l\u00edder local",
+                "descricao": "Avaliar caso com l\u00edder local",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17766,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (um ou mais sinais de alarme)",
+            "descricao": "um ou mais sinais de alarme",
+            "passo_de_saida_id": 17743,
+            "passo_de_saida": {
+                "id": 17743,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Vertigem] Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17746,
+            "passo_de_entrada": {
+                "id": 17746,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Vertigem Central] Exames e Internamento",
+                "descricao": "<p><span style=\"font-size:20px\">Solicitar Tomografia de cr&acirc;nio sem contraste.</span></p>\n\n<p><span style=\"font-size:20px\"><u>Solicitar avalia&ccedil;&atilde;o da neurologia.</u></span></p>\n\n<p><strong><span style=\"font-size:20px\">Discutir necessidade de internamento hospitalar do paciente.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17526,
+                "nome": "um ou mais sinais de alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    17503,
+                    17514
+                ],
+                "argumentos": [
+                    "sinais_alarme",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17767,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (sem sinais de alarme)",
+            "descricao": "sem sinais de alarme",
+            "passo_de_saida_id": 17743,
+            "passo_de_saida": {
+                "id": 17743,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Vertigem] Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17747,
+            "passo_de_entrada": {
+                "id": 17747,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                "descricao": "<p>VERTIGEM PERIF&Eacute;RICA</p>\n\n<p>Sensa&ccedil;&atilde;o de rota&ccedil;&atilde;o, desequil&iacute;brio, n&aacute;usea e v&ocirc;mito, nistagmo horizonto-rotat&oacute;rio, desvio da marcha para um dos lados e tend&ecirc;ncia a queda ao fechar os olhos.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17527,
+                "nome": "sem sinais de alarme",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17503,
+                    17514
+                ],
+                "argumentos": [
+                    "sinais_alarme",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17768,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (mais de 50 anos + doenca cerebrovascular)",
+            "descricao": "mais de 50 anos + doenca cerebrovascular",
+            "passo_de_saida_id": 17747,
+            "passo_de_saida": {
+                "id": 17747,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                "descricao": "<p>VERTIGEM PERIF&Eacute;RICA</p>\n\n<p>Sensa&ccedil;&atilde;o de rota&ccedil;&atilde;o, desequil&iacute;brio, n&aacute;usea e v&ocirc;mito, nistagmo horizonto-rotat&oacute;rio, desvio da marcha para um dos lados e tend&ecirc;ncia a queda ao fechar os olhos.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17749,
+            "passo_de_entrada": {
+                "id": 17749,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com L\u00edder Local",
+                "descricao": "Discutir caso com l\u00edder local e aventar possibilidade de TC de cr\u00e2nio.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17528,
+                "nome": "mais de 50 anos + doenca cerebrovascular",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17504
+                ],
+                "argumentos": [
+                    "idade_maior_50_ou_doenca_cerebrovascular"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17769,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (VPPB)",
+            "descricao": "VPPB",
+            "passo_de_saida_id": 17748,
+            "passo_de_saida": {
+                "id": 17748,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar suspeita de doen\u00e7a",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17750,
+            "passo_de_entrada": {
+                "id": 17750,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[VPPB] Tratamento",
+                "descricao": "<h3><span style=\"font-size:18px\">Se paciente sintom&aacute;tico no momento da consulta:&nbsp;</span></h3>\n\n<ul>\n\t<li>\n\t<h3><span style=\"font-size:18px\">Dimenidrato 1 ampola, endovenosa, agora</span></h3>\n\t</li>\n\t<li>\n\t<h3><span style=\"font-size:18px\">Ondansetrona 4mg, endovenoso, agora</span></h3>\n\t</li>\n</ul>\n\n<p><strong><span style=\"color:#c0392b\"><span style=\"font-size:18px\">Sugerir que o paciente procure&nbsp;consulta ambulatorial com neurologista ou otorrinolaringologista.</span></span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-24T14:46:08.824924-03:00"
+                }
+            },
+            "operacao": {
+                "id": 17529,
+                "nome": "VPPB",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17509,
+                    17521,
+                    17520,
+                    17519,
+                    17518
+                ],
+                "argumentos": [
+                    "vertigem_posicional_paroxistica_benigna",
+                    "sem neurite",
+                    "sem meniere",
+                    "sem mastoidite",
+                    "sem trauma"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17770,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (trauma)",
+            "descricao": "trauma",
+            "passo_de_saida_id": 17748,
+            "passo_de_saida": {
+                "id": 17748,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar suspeita de doen\u00e7a",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17761,
+            "passo_de_entrada": {
+                "id": 17761,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com L\u00edder Local (mastoidite)",
+                "descricao": "Discutir caso com l\u00edder de plant\u00e3o e aventar possibilidade de TC de mast\u00f3ide.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17530,
+                "nome": "com trauma",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17508,
+                    17521,
+                    17517,
+                    17519,
+                    17520
+                ],
+                "argumentos": [
+                    "trauma",
+                    "sem neurite",
+                    "sem VPPB",
+                    "sem mastoidite",
+                    "sem meniere"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17771,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (mastoidite)",
+            "descricao": "mastoidite",
+            "passo_de_saida_id": 17748,
+            "passo_de_saida": {
+                "id": 17748,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar suspeita de doen\u00e7a",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17761,
+            "passo_de_entrada": {
+                "id": 17761,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com L\u00edder Local (mastoidite)",
+                "descricao": "Discutir caso com l\u00edder de plant\u00e3o e aventar possibilidade de TC de mast\u00f3ide.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17531,
+                "nome": "mastoidite",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17507,
+                    17517,
+                    17520,
+                    17518,
+                    17521
+                ],
+                "argumentos": [
+                    "mastoidite_envolvimento_labirinto",
+                    "sem VPPB",
+                    "sem meniere",
+                    "sem trauma",
+                    "sem neurite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17772,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (Meniere)",
+            "descricao": "Meniere",
+            "passo_de_saida_id": 17748,
+            "passo_de_saida": {
+                "id": 17748,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar suspeita de doen\u00e7a",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17751,
+            "passo_de_entrada": {
+                "id": 17751,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17532,
+                "nome": "Meniere",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17506,
+                    17517,
+                    17518,
+                    17519,
+                    17521
+                ],
+                "argumentos": [
+                    "doenca_de_meniere",
+                    "sem VPPB",
+                    "sem trauma",
+                    "sem mastoidite",
+                    "sem neurite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17773,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18",
+            "descricao": "Incondicionao",
+            "passo_de_saida_id": 17751,
+            "passo_de_saida": {
+                "id": 17751,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17752,
+            "passo_de_entrada": {
+                "id": 17752,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17774,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19 (meniere - houve melhora)",
+            "descricao": "meniere - houve melhora",
+            "passo_de_saida_id": 17752,
+            "passo_de_saida": {
+                "id": 17752,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17759,
+            "passo_de_entrada": {
+                "id": 17759,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Classificar quadro",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17533,
+                "nome": "meniere - houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17510
+                ],
+                "argumentos": [
+                    "meniere_houve_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17775,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20 (meniere - nao houve melhora)",
+            "descricao": "meniere - nao houve melhora",
+            "passo_de_saida_id": 17752,
+            "passo_de_saida": {
+                "id": 17752,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17754,
+            "passo_de_entrada": {
+                "id": 17754,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Discutir com l\u00edder local. Aventar possibilidade de internamento.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17534,
+                "nome": "meniere - nao houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17510
+                ],
+                "argumentos": [
+                    "meniere_houve_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17776,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S21 (neurite vestibular)",
+            "descricao": "neurite vestibular",
+            "passo_de_saida_id": 17748,
+            "passo_de_saida": {
+                "id": 17748,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar suspeita de doen\u00e7a",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17755,
+            "passo_de_entrada": {
+                "id": 17755,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Neurite Vestibular] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-24T14:46:48.811653-03:00"
+                }
+            },
+            "operacao": {
+                "id": 17535,
+                "nome": "neurite vestibular",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17505,
+                    17517,
+                    17518,
+                    17519,
+                    17520
+                ],
+                "argumentos": [
+                    "neurite_vestibular",
+                    "sem VPPB",
+                    "sem trauma",
+                    "sem mastoidite",
+                    "sem meniere"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17777,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S22",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17755,
+            "passo_de_saida": {
+                "id": 17755,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Neurite Vestibular] Tratamento",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-24T14:46:48.811653-03:00"
+                }
+            },
+            "passo_de_entrada_id": 17756,
+            "passo_de_entrada": {
+                "id": 17756,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Neurite Vestibular] Avaliar Melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17778,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S23 (neurite - houve melhora)",
+            "descricao": "houve melhora",
+            "passo_de_saida_id": 17756,
+            "passo_de_saida": {
+                "id": 17756,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Neurite Vestibular] Avaliar Melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17757,
+            "passo_de_entrada": {
+                "id": 17757,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Neurite Vestibular] Alta + Receita",
+                "descricao": "<p><span style=\"font-size:18px\"><strong>ALTA</strong>&nbsp;<br />\nDimenidrinato + piridoxina 50mg, 01 comprimido, via oral 6/6h por 3-5 dias e Prednisona 1mg/kg, via oral, 1x/dia por 5 dias, com redu&ccedil;&atilde;o gradativa da dose por mais 15 dias<br />\n<br />\nProcurar emerg&ecirc;ncia em caso de n&atilde;o melhora ou piora do quadro</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17536,
+                "nome": "houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17511
+                ],
+                "argumentos": [
+                    "neurite_houve_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17779,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S24 (n\u00e3o houve melhora)",
+            "descricao": "n\u00e3o houve melhora",
+            "passo_de_saida_id": 17756,
+            "passo_de_saida": {
+                "id": 17756,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Neurite Vestibular] Avaliar Melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17754,
+            "passo_de_entrada": {
+                "id": 17754,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Discutir com l\u00edder local. Aventar possibilidade de internamento.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17537,
+                "nome": "n\u00e3o houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17511
+                ],
+                "argumentos": [
+                    "neurite_houve_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17780,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (menos de 50 anos ou sem doen\u00e7a cerebrovascular)",
+            "descricao": "menos de 50 anos ou sem doen\u00e7a cerebrovascular",
+            "passo_de_saida_id": 17747,
+            "passo_de_saida": {
+                "id": 17747,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Vertigem Perif\u00e9rica] Verificar Idade e hist\u00f3rico do paciente",
+                "descricao": "<p>VERTIGEM PERIF&Eacute;RICA</p>\n\n<p>Sensa&ccedil;&atilde;o de rota&ccedil;&atilde;o, desequil&iacute;brio, n&aacute;usea e v&ocirc;mito, nistagmo horizonto-rotat&oacute;rio, desvio da marcha para um dos lados e tend&ecirc;ncia a queda ao fechar os olhos.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17748,
+            "passo_de_entrada": {
+                "id": 17748,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar suspeita de doen\u00e7a",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17538,
+                "nome": "menos de 50 anos e sem doen\u00e7a cerebrovascular",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17504
+                ],
+                "argumentos": [
+                    "idade_maior_50_ou_doenca_cerebrovascular"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17781,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S23 (meniere aguda)",
+            "descricao": "meniere aguda",
+            "passo_de_saida_id": 17759,
+            "passo_de_saida": {
+                "id": 17759,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Classificar quadro",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17758,
+            "passo_de_entrada": {
+                "id": 17758,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Fase Aguda - Alta + Receita",
+                "descricao": "<p><span style=\"font-size:18px\">Liberar paciente ap&oacute;s prescri&ccedil;&atilde;o da receita.</span></p>\n\n<p><br />\n<span style=\"font-size:18px\"><u><strong>Procurar emerg&ecirc;ncia em caso de n&atilde;o melhora ou piora do quadro.</strong></u></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17539,
+                "nome": "meniere aguda",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17512,
+                    17523
+                ],
+                "argumentos": [
+                    "fase_aguda",
+                    "meniere nao cronica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17782,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S24 (meniere subaguda ou cronica)",
+            "descricao": "meniere subaguda ou cronica",
+            "passo_de_saida_id": 17759,
+            "passo_de_saida": {
+                "id": 17759,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Classificar quadro",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17753,
+            "passo_de_entrada": {
+                "id": 17753,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[M\u00e9ni\u00e8re] Fase Subaguda/Cr\u00f4nica - Alta + Receita",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Liberar paciente ap&oacute;s prescri&ccedil;&atilde;o da receita.</strong></span></p>\n\n<p><br />\n<span style=\"font-size:16px\"><u>Procurar emerg&ecirc;ncia em caso de n&atilde;o melhora ou piora do quadro</u></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17540,
+                "nome": "meniere subaguda ou cronica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17513,
+                    17522
+                ],
+                "argumentos": [
+                    "meniere_fase_subaguda_ou_cronica",
+                    "meniere nao aguda"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17783,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S25",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17750,
+            "passo_de_saida": {
+                "id": 17750,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[VPPB] Tratamento",
+                "descricao": "<h3><span style=\"font-size:18px\">Se paciente sintom&aacute;tico no momento da consulta:&nbsp;</span></h3>\n\n<ul>\n\t<li>\n\t<h3><span style=\"font-size:18px\">Dimenidrato 1 ampola, endovenosa, agora</span></h3>\n\t</li>\n\t<li>\n\t<h3><span style=\"font-size:18px\">Ondansetrona 4mg, endovenoso, agora</span></h3>\n\t</li>\n</ul>\n\n<p><strong><span style=\"color:#c0392b\"><span style=\"font-size:18px\">Sugerir que o paciente procure&nbsp;consulta ambulatorial com neurologista ou otorrinolaringologista.</span></span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-24T14:46:08.824924-03:00"
+                }
+            },
+            "passo_de_entrada_id": 17760,
+            "passo_de_entrada": {
+                "id": 17760,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[VPPB] Encaminhamentos",
+                "descricao": "Se julgar necess\u00e1rio, agendar consulta eletiva com Neurologista ou Otorrinolaringologista",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17501,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "tontura",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17502,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "vertigem",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17503,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "sinais_alarme",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Ataxia",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Nistagmo Vertical",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Diplopia",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Convuls\u00e3o",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Cefal\u00e9ia Associada",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Disartria",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "D\u00e9ficit Motor ou Sensitivo",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 17504,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_maior_50_ou_doenca_cerebrovascular",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17505,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "neurite_vestibular",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17506,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "doenca_de_meniere",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17507,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "mastoidite_envolvimento_labirinto",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17508,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "trauma",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17509,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "vertigem_posicional_paroxistica_benigna",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17510,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "meniere_houve_melhora",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17511,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "neurite_houve_melhora",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17512,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fase_aguda",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17513,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "meniere_fase_subaguda_ou_cronica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17514,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17515,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem tontura",
+            "descricao": "sem tontura",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17501
+            ],
+            "argumentos": [
+                "tontura"
+            ]
+        },
+        {
+            "id": 17516,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem vertigem",
+            "descricao": "sem vertigem",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17502
+            ],
+            "argumentos": [
+                "vertigem"
+            ]
+        },
+        {
+            "id": 17517,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem VPPB",
+            "descricao": "sem VPPB",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17509
+            ],
+            "argumentos": [
+                "vertigem_posicional_paroxistica_benigna"
+            ]
+        },
+        {
+            "id": 17518,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem trauma",
+            "descricao": "sem trauma",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17508
+            ],
+            "argumentos": [
+                "trauma"
+            ]
+        },
+        {
+            "id": 17519,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem mastoidite",
+            "descricao": "sem mastoidite",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17507
+            ],
+            "argumentos": [
+                "mastoidite_envolvimento_labirinto"
+            ]
+        },
+        {
+            "id": 17520,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem meniere",
+            "descricao": "sem meniere",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17506
+            ],
+            "argumentos": [
+                "doenca_de_meniere"
+            ]
+        },
+        {
+            "id": 17521,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem neurite",
+            "descricao": "sem neurite",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17505
+            ],
+            "argumentos": [
+                "neurite_vestibular"
+            ]
+        },
+        {
+            "id": 17522,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "meniere nao aguda",
+            "descricao": "meniere nao aguda",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17512
+            ],
+            "argumentos": [
+                "fase_aguda"
+            ]
+        },
+        {
+            "id": 17523,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "meniere nao cronica",
+            "descricao": "meniere nao cronica",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17513
+            ],
+            "argumentos": [
+                "meniere_fase_subaguda_ou_cronica"
+            ]
+        }
+    ]
+}

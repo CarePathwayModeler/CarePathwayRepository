@@ -1,0 +1,1358 @@
+{
+    "id": 3137,
+    "url": "",
+    "codigo": "H048",
+    "nome": "Diabetes Mellitus",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 581,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:43:05.828231-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:42:49.862068-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:43:05.828231-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17516,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar cen\u00e1rio do paciente diab\u00e9tico",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9081,
+                    "url": "",
+                    "texto": "Qual cen\u00e1rio o paciente se enquadra?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17302,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "cenario_paciente",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Cen\u00e1rio 1 - Paciente diab\u00e9tico mal controlado, assintom\u00e1tico ou com sintomas leves",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Cen\u00e1rio 2 - Paciente diab\u00e9tico mal controlado, sintom\u00e1tico ou com achados cl\u00ednicos importantes (desidrata\u00e7\u00e3o, taquicardia)",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Cen\u00e1rio 3 - Paciente diab\u00e9tico mal controlado, sintom\u00e1tico e com sinais de gravidade (torporoso, com rebaixamento do n\u00edvel de consci\u00eancia) - Cetoacidose Diab\u00e9tica ou Estado Hiperglic\u00eamico Hiperosmolar",
+                                "peso": 3.0
+                            },
+                            {
+                                "texto": "Cen\u00e1rio 4 - Paciente diab\u00e9tico com hipoglicemia",
+                                "peso": 4.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17565,
+                    "url": "",
+                    "nome": "S1 (Cen\u00e1rio 1)",
+                    "descricao": "Cen\u00e1rio 1",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17517,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17566,
+                    "url": "",
+                    "nome": "S2 (Cen\u00e1rio 2)",
+                    "descricao": "Cen\u00e1rio 2",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17518,
+                    "passo_de_entrada": "Tratamento: [Cen\u00e1rio 2] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17570,
+                    "url": "",
+                    "nome": "S6 (Cen\u00e1rio 3)",
+                    "descricao": "Cen\u00e1rio 3",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17561,
+                    "passo_de_entrada": "Tratamento: [Cen\u00e1rio 3] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17571,
+                    "url": "",
+                    "nome": "S7 (Cen\u00e1rio 4)",
+                    "descricao": "Cen\u00e1rio 4",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17562,
+                    "passo_de_entrada": "Tratamento: [Cen\u00e1rio 4] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17517,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Alta",
+            "descricao": "<p><strong><u>Dar alta ambulatorial com as seguintes orienta&ccedil;&otilde;es:</u></strong></p>\n\n<ul>\n\t<li>Estimular a ingest&atilde;o h&iacute;drica, se n&atilde;o houver contra-indica&ccedil;&otilde;es.</li>\n\t<li>Controle adequado do peso, com atividade f&iacute;sica e dieta adequada.</li>\n\t<li>Refor&ccedil;ar a ader&ecirc;ncia ao tratamento medicamentoso.</li>\n\t<li>Ajustar esquema anti-diab&eacute;tico se necess&aacute;rio.</li>\n\t<li>Se sinais de infec&ccedil;&atilde;o, iniciar antibioticoterapia conforme foco infeccioso suspeito.</li>\n\t<li>Retornar a emerg&ecirc;ncia se houver piora do quadro.</li>\n\t<li>Orientar sobre sintomas, riscos e tratamento das eventuais hipoglicemias.</li>\n\t<li>Tratar as comorbidades.</li>\n\t<li>Acompanhamento ambulatorial com endocrinologista.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17565,
+                    "url": "",
+                    "nome": "S1 (Cen\u00e1rio 1)",
+                    "descricao": "Cen\u00e1rio 1",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17517,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17568,
+                    "url": "",
+                    "nome": "S4 (houve melhora e exames normais)",
+                    "descricao": "houve melhora e exames normais",
+                    "passo_de_saida_id": 17519,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora e exames",
+                    "passo_de_entrada_id": 17517,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17518,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Cen\u00e1rio 2] Conduta",
+            "descricao": "<p>-&nbsp;<u>Solicitar:</u> hemograma completo, glicemia s&eacute;rica, ureia, creatinina, s&oacute;dio, pot&aacute;ssio. E, <u>se necess&aacute;rio:</u>&nbsp;gasometria arterial, raio-x t&oacute;rax e eletrocardiograma.<br />\n- Colocar o paciente deitado em observa&ccedil;&atilde;o.<br />\n- Prescrever jejum,&nbsp;<u>se for necess&aacute;rio (se n&aacute;useas e/ou v&ocirc;mitos).</u><br />\n- Realizar hidrata&ccedil;&atilde;o oral,&nbsp;<u>se n&atilde;o houver contra-indica&ccedil;&otilde;es.</u><br />\n- Obter acesso venoso e iniciar hidrata&ccedil;&atilde;o endovenosa com Soro Fisiol&oacute;gico 0,9% de acordo coma condi&ccedil;&atilde;o vol&ecirc;mica, condi&ccedil;&atilde;o cardiovascular.<br />\n- Iniciar tratamento medicamentoso sintom&aacute;tico <u>quando necess&aacute;rio.&nbsp;</u><br />\n- Verificar glicemia capilar a cada 1 hora e prescrever Insulina Regular subcut&acirc;nea de acordo com os n&iacute;veis da glicemia capilar.<br />\n- Identificar e iniciar o tratamento dos dist&uacute;rbios hidroeletrol&iacute;ticos, inflamat&oacute;rios, infecciosos, dentre outros existentes, se poss&iacute;vel.<br />\n- Monitoramento dos sinais vitais frente &agrave;s medidas prescritas.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GLICOSE  (SANGUE)",
+                    "exame": "28010973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "SINAIS VITAIS",
+                    "procedimento": "75130020",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "GLICEMIA PELA FITA ( DX ) / HGT",
+                    "procedimento": "75130013",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17566,
+                    "url": "",
+                    "nome": "S2 (Cen\u00e1rio 2)",
+                    "descricao": "Cen\u00e1rio 2",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17518,
+                    "passo_de_entrada": "Tratamento: [Cen\u00e1rio 2] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17567,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17518,
+                    "passo_de_saida": "Tratamento: [Cen\u00e1rio 2] Conduta",
+                    "passo_de_entrada_id": 17519,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora e exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17519,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar melhora e exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9082,
+                    "url": "",
+                    "texto": "Houve melhora cl\u00ednica e n\u00edveis de glicemia capilar aceit\u00e1veis (< 200,0 mg/dL)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17303,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "houve_melhora",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9083,
+                    "url": "",
+                    "texto": "Exames sem altera\u00e7\u00f5es importantes?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17304,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "exames_normais",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17567,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17518,
+                    "passo_de_saida": "Tratamento: [Cen\u00e1rio 2] Conduta",
+                    "passo_de_entrada_id": 17519,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora e exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17568,
+                    "url": "",
+                    "nome": "S4 (houve melhora e exames normais)",
+                    "descricao": "houve melhora e exames normais",
+                    "passo_de_saida_id": 17519,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora e exames",
+                    "passo_de_entrada_id": 17517,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17569,
+                    "url": "",
+                    "nome": "S5 (n\u00e3o houve melhora e/ou exames alterados)",
+                    "descricao": "n\u00e3o houve melhora e/ou exames alterados",
+                    "passo_de_saida_id": 17519,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora e exames",
+                    "passo_de_entrada_id": 17520,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17520,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "<p><span style=\"font-size:16px\"><strong>Discutir caso com l&iacute;der local.</strong></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17569,
+                    "url": "",
+                    "nome": "S5 (n\u00e3o houve melhora e/ou exames alterados)",
+                    "descricao": "n\u00e3o houve melhora e/ou exames alterados",
+                    "passo_de_saida_id": 17519,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora e exames",
+                    "passo_de_entrada_id": 17520,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17574,
+                    "url": "",
+                    "nome": "S10 (Sem melhora cl\u00ednica)",
+                    "descricao": "Sem melhora cl\u00ednica",
+                    "passo_de_saida_id": 17563,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 17520,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17561,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Cen\u00e1rio 3] Conduta",
+            "descricao": "<p><strong><u>Deve ser encaminhado ao</u></strong><strong><u> l&iacute;der local.</u></strong><br />\n- <u>Solicitar:</u> hemograma completo, ureia, creatinina, s&oacute;dio, pot&aacute;ssio, gasometria arterial, TAP,&nbsp;TTPA. E, <u>se necess&aacute;rio:&nbsp;</u>raio-x t&oacute;rax e eletrocardiograma.<br />\n- Iniciar tratamento precoce de fator desencadeante (infec&ccedil;&atilde;o ou&nbsp;abandono de tratamento) e conduzir a descompensa&ccedil;&atilde;o aguda.<br />\n- Oferecer suporte de oxig&ecirc;nio, <u>se houver evid&ecirc;ncia de m&aacute; satura&ccedil;&atilde;o sangu&iacute;nea.</u><br />\n- Instalar monitoriza&ccedil;&atilde;o cardiol&oacute;gica cont&iacute;nua.&nbsp;<br />\n- Obter acesso venoso calibroso e iniciar reposi&ccedil;&atilde;o de flu&iacute;dos.<br />\n- A insulinoterapia s&oacute; deve ser iniciada 1-2 horas ap&oacute;s iniciada a&nbsp;ressuscita&ccedil;&atilde;o vol&ecirc;mica e se os n&iacute;veis de pot&aacute;ssio s&eacute;rico for &ge; 3,3&nbsp;mEq/L .&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Diabetes mellitus mal controlada",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "LACTATO",
+                    "exame": "28090209",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DIABETES MELLITUS",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "MONITOR CARDIACO",
+                    "procedimento": "75130036",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2 UMIDO C/ CATETER NASAL",
+                    "procedimento": "75010001",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17570,
+                    "url": "",
+                    "nome": "S6 (Cen\u00e1rio 3)",
+                    "descricao": "Cen\u00e1rio 3",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17561,
+                    "passo_de_entrada": "Tratamento: [Cen\u00e1rio 3] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17562,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Cen\u00e1rio 4] Conduta",
+            "descricao": "<p>- Prescrever jejum, <u>se for necess&aacute;rio (se n&aacute;useas e/ou v&ocirc;mitos, ou rebaixamento do n&iacute;vel de consci&ecirc;ncia).</u><br />\n- Obter acesso venoso e infundir imediatamente 50 mL de Glicose 50% endovenoso.<br />\n- O paciente com prov&aacute;vel defici&ecirc;ncia de tiamina&nbsp;(vitamina B1) (desnutrido e/ou com hist&oacute;rico de etilismo cr&ocirc;nico e/ou&nbsp;hepatopatia cr&ocirc;nica)&nbsp; necessita de reposi&ccedil;&atilde;o imediata com 100 mg&nbsp;endovenosa, concomitantemente, com o aporte de glicose&nbsp;para preven&ccedil;&atilde;o da S&iacute;ndrome de Wernicke-Korsakoff. Na d&uacute;vida, o&nbsp;m&eacute;dico dever&aacute; prescrever a dupla terapia com tiamina e solu&ccedil;&atilde;o&nbsp;glicosada a 50%.<br />\n- Iniciar hidrata&ccedil;&atilde;o endovenosa com Soro Fisiol&oacute;gico 0,9% de acordo com&nbsp;o estado de hidrata&ccedil;&atilde;o e condi&ccedil;&atilde;o&nbsp;cardiovascular.<br />\n- Iniciar tratamento medicamentoso sintom&aacute;tico quando necess&aacute;rio.<br />\n- Verificar a glicemia capilar 15-30 minutos ap&oacute;s a medica&ccedil;&atilde;o com glicose e repetir o tratamento, <u>se necess&aacute;rio.</u><br />\n- Identificar e tratar os dist&uacute;rbios hidroeletrol&iacute;ticos, inflamat&oacute;rios, infecciosos, existentes,<u> se poss&iacute;vel.</u><br />\n- O paciente deve permanecer na sala de observa&ccedil;&atilde;o com reavalia&ccedil;&otilde;es cl&iacute;nicas para verifica&ccedil;&atilde;o da melhora ou piora do quadro cl&iacute;nico.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 8999,
+                    "url": "",
+                    "medicamento": 48593,
+                    "codigo": "",
+                    "nome": "GLICOSE 50% AMPL 10 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 5,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "GLICEMIA PELA FITA ( DX ) / HGT",
+                    "procedimento": "75130013",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17571,
+                    "url": "",
+                    "nome": "S7 (Cen\u00e1rio 4)",
+                    "descricao": "Cen\u00e1rio 4",
+                    "passo_de_saida_id": 17516,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                    "passo_de_entrada_id": 17562,
+                    "passo_de_entrada": "Tratamento: [Cen\u00e1rio 4] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17572,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17562,
+                    "passo_de_saida": "Tratamento: [Cen\u00e1rio 4] Conduta",
+                    "passo_de_entrada_id": 17563,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17563,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar melhora",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9084,
+                    "url": "",
+                    "texto": "Houve melhora cl\u00ednica e dos n\u00edveis de glicemia capilar aceit\u00e1veis (> 70 mg/dL)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17305,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "melhora_clinica",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17572,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17562,
+                    "passo_de_saida": "Tratamento: [Cen\u00e1rio 4] Conduta",
+                    "passo_de_entrada_id": 17563,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17573,
+                    "url": "",
+                    "nome": "S9 (Houve melhora)",
+                    "descricao": "Houve melhora",
+                    "passo_de_saida_id": 17563,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 17564,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17574,
+                    "url": "",
+                    "nome": "S10 (Sem melhora cl\u00ednica)",
+                    "descricao": "Sem melhora cl\u00ednica",
+                    "passo_de_saida_id": 17563,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 17520,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17564,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Alta",
+            "descricao": "<p><strong><u>Dar alta ambulatorial com as seguintes orienta&ccedil;&otilde;es:</u></strong></p>\n\n<ul>\n\t<li>Estimular a ingest&atilde;o h&iacute;drica, se n&atilde;o houver contra-indica&ccedil;&otilde;es.</li>\n\t<li>Controle adequado do peso, com atividade f&iacute;sica e dieta adequada.</li>\n\t<li>Refor&ccedil;ar a ader&ecirc;ncia ao tratamento medicamentoso.</li>\n\t<li>Ajustar esquema anti-diab&eacute;tico se necess&aacute;rio.</li>\n\t<li>Orientar sobre sintomas, riscos e tratamento das eventuais hipoglicemias.</li>\n\t<li>Tratar as comorbidades.</li>\n\t<li>Acompanhamento ambulatorial com endocrinologista.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17573,
+                    "url": "",
+                    "nome": "S9 (Houve melhora)",
+                    "descricao": "Houve melhora",
+                    "passo_de_saida_id": 17563,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 17564,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17565,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (Cen\u00e1rio 1)",
+            "descricao": "Cen\u00e1rio 1",
+            "passo_de_saida_id": 17516,
+            "passo_de_saida": {
+                "id": 17516,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17517,
+            "passo_de_entrada": {
+                "id": 17517,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta",
+                "descricao": "<p><strong><u>Dar alta ambulatorial com as seguintes orienta&ccedil;&otilde;es:</u></strong></p>\n\n<ul>\n\t<li>Estimular a ingest&atilde;o h&iacute;drica, se n&atilde;o houver contra-indica&ccedil;&otilde;es.</li>\n\t<li>Controle adequado do peso, com atividade f&iacute;sica e dieta adequada.</li>\n\t<li>Refor&ccedil;ar a ader&ecirc;ncia ao tratamento medicamentoso.</li>\n\t<li>Ajustar esquema anti-diab&eacute;tico se necess&aacute;rio.</li>\n\t<li>Se sinais de infec&ccedil;&atilde;o, iniciar antibioticoterapia conforme foco infeccioso suspeito.</li>\n\t<li>Retornar a emerg&ecirc;ncia se houver piora do quadro.</li>\n\t<li>Orientar sobre sintomas, riscos e tratamento das eventuais hipoglicemias.</li>\n\t<li>Tratar as comorbidades.</li>\n\t<li>Acompanhamento ambulatorial com endocrinologista.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17312,
+                "nome": "Cen\u00e1rio 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17302,
+                    17306
+                ],
+                "argumentos": [
+                    "cenario_paciente",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17566,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (Cen\u00e1rio 2)",
+            "descricao": "Cen\u00e1rio 2",
+            "passo_de_saida_id": 17516,
+            "passo_de_saida": {
+                "id": 17516,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17518,
+            "passo_de_entrada": {
+                "id": 17518,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Cen\u00e1rio 2] Conduta",
+                "descricao": "<p>-&nbsp;<u>Solicitar:</u> hemograma completo, glicemia s&eacute;rica, ureia, creatinina, s&oacute;dio, pot&aacute;ssio. E, <u>se necess&aacute;rio:</u>&nbsp;gasometria arterial, raio-x t&oacute;rax e eletrocardiograma.<br />\n- Colocar o paciente deitado em observa&ccedil;&atilde;o.<br />\n- Prescrever jejum,&nbsp;<u>se for necess&aacute;rio (se n&aacute;useas e/ou v&ocirc;mitos).</u><br />\n- Realizar hidrata&ccedil;&atilde;o oral,&nbsp;<u>se n&atilde;o houver contra-indica&ccedil;&otilde;es.</u><br />\n- Obter acesso venoso e iniciar hidrata&ccedil;&atilde;o endovenosa com Soro Fisiol&oacute;gico 0,9% de acordo coma condi&ccedil;&atilde;o vol&ecirc;mica, condi&ccedil;&atilde;o cardiovascular.<br />\n- Iniciar tratamento medicamentoso sintom&aacute;tico <u>quando necess&aacute;rio.&nbsp;</u><br />\n- Verificar glicemia capilar a cada 1 hora e prescrever Insulina Regular subcut&acirc;nea de acordo com os n&iacute;veis da glicemia capilar.<br />\n- Identificar e iniciar o tratamento dos dist&uacute;rbios hidroeletrol&iacute;ticos, inflamat&oacute;rios, infecciosos, dentre outros existentes, se poss&iacute;vel.<br />\n- Monitoramento dos sinais vitais frente &agrave;s medidas prescritas.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17313,
+                "nome": "Cen\u00e1rio 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17302,
+                    17307
+                ],
+                "argumentos": [
+                    "cenario_paciente",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17567,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "-",
+            "passo_de_saida_id": 17518,
+            "passo_de_saida": {
+                "id": 17518,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Cen\u00e1rio 2] Conduta",
+                "descricao": "<p>-&nbsp;<u>Solicitar:</u> hemograma completo, glicemia s&eacute;rica, ureia, creatinina, s&oacute;dio, pot&aacute;ssio. E, <u>se necess&aacute;rio:</u>&nbsp;gasometria arterial, raio-x t&oacute;rax e eletrocardiograma.<br />\n- Colocar o paciente deitado em observa&ccedil;&atilde;o.<br />\n- Prescrever jejum,&nbsp;<u>se for necess&aacute;rio (se n&aacute;useas e/ou v&ocirc;mitos).</u><br />\n- Realizar hidrata&ccedil;&atilde;o oral,&nbsp;<u>se n&atilde;o houver contra-indica&ccedil;&otilde;es.</u><br />\n- Obter acesso venoso e iniciar hidrata&ccedil;&atilde;o endovenosa com Soro Fisiol&oacute;gico 0,9% de acordo coma condi&ccedil;&atilde;o vol&ecirc;mica, condi&ccedil;&atilde;o cardiovascular.<br />\n- Iniciar tratamento medicamentoso sintom&aacute;tico <u>quando necess&aacute;rio.&nbsp;</u><br />\n- Verificar glicemia capilar a cada 1 hora e prescrever Insulina Regular subcut&acirc;nea de acordo com os n&iacute;veis da glicemia capilar.<br />\n- Identificar e iniciar o tratamento dos dist&uacute;rbios hidroeletrol&iacute;ticos, inflamat&oacute;rios, infecciosos, dentre outros existentes, se poss&iacute;vel.<br />\n- Monitoramento dos sinais vitais frente &agrave;s medidas prescritas.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17519,
+            "passo_de_entrada": {
+                "id": 17519,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora e exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17568,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (houve melhora e exames normais)",
+            "descricao": "houve melhora e exames normais",
+            "passo_de_saida_id": 17519,
+            "passo_de_saida": {
+                "id": 17519,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora e exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17517,
+            "passo_de_entrada": {
+                "id": 17517,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta",
+                "descricao": "<p><strong><u>Dar alta ambulatorial com as seguintes orienta&ccedil;&otilde;es:</u></strong></p>\n\n<ul>\n\t<li>Estimular a ingest&atilde;o h&iacute;drica, se n&atilde;o houver contra-indica&ccedil;&otilde;es.</li>\n\t<li>Controle adequado do peso, com atividade f&iacute;sica e dieta adequada.</li>\n\t<li>Refor&ccedil;ar a ader&ecirc;ncia ao tratamento medicamentoso.</li>\n\t<li>Ajustar esquema anti-diab&eacute;tico se necess&aacute;rio.</li>\n\t<li>Se sinais de infec&ccedil;&atilde;o, iniciar antibioticoterapia conforme foco infeccioso suspeito.</li>\n\t<li>Retornar a emerg&ecirc;ncia se houver piora do quadro.</li>\n\t<li>Orientar sobre sintomas, riscos e tratamento das eventuais hipoglicemias.</li>\n\t<li>Tratar as comorbidades.</li>\n\t<li>Acompanhamento ambulatorial com endocrinologista.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17314,
+                "nome": "houve melhora e exames normais",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    17303,
+                    17304
+                ],
+                "argumentos": [
+                    "houve_melhora",
+                    "exames_normais"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17569,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (n\u00e3o houve melhora e/ou exames alterados)",
+            "descricao": "n\u00e3o houve melhora e/ou exames alterados",
+            "passo_de_saida_id": 17519,
+            "passo_de_saida": {
+                "id": 17519,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora e exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17520,
+            "passo_de_entrada": {
+                "id": 17520,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Discutir caso com l&iacute;der local.</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17315,
+                "nome": "n\u00e3o houve melhora e/ou exames alterados",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    17310,
+                    17311
+                ],
+                "argumentos": [
+                    "exames_ruins",
+                    "sem_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17570,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Cen\u00e1rio 3)",
+            "descricao": "Cen\u00e1rio 3",
+            "passo_de_saida_id": 17516,
+            "passo_de_saida": {
+                "id": 17516,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17561,
+            "passo_de_entrada": {
+                "id": 17561,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Cen\u00e1rio 3] Conduta",
+                "descricao": "<p><strong><u>Deve ser encaminhado ao</u></strong><strong><u> l&iacute;der local.</u></strong><br />\n- <u>Solicitar:</u> hemograma completo, ureia, creatinina, s&oacute;dio, pot&aacute;ssio, gasometria arterial, TAP,&nbsp;TTPA. E, <u>se necess&aacute;rio:&nbsp;</u>raio-x t&oacute;rax e eletrocardiograma.<br />\n- Iniciar tratamento precoce de fator desencadeante (infec&ccedil;&atilde;o ou&nbsp;abandono de tratamento) e conduzir a descompensa&ccedil;&atilde;o aguda.<br />\n- Oferecer suporte de oxig&ecirc;nio, <u>se houver evid&ecirc;ncia de m&aacute; satura&ccedil;&atilde;o sangu&iacute;nea.</u><br />\n- Instalar monitoriza&ccedil;&atilde;o cardiol&oacute;gica cont&iacute;nua.&nbsp;<br />\n- Obter acesso venoso calibroso e iniciar reposi&ccedil;&atilde;o de flu&iacute;dos.<br />\n- A insulinoterapia s&oacute; deve ser iniciada 1-2 horas ap&oacute;s iniciada a&nbsp;ressuscita&ccedil;&atilde;o vol&ecirc;mica e se os n&iacute;veis de pot&aacute;ssio s&eacute;rico for &ge; 3,3&nbsp;mEq/L .&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17316,
+                "nome": "Cen\u00e1rio 3",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17302,
+                    17308
+                ],
+                "argumentos": [
+                    "cenario_paciente",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17571,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (Cen\u00e1rio 4)",
+            "descricao": "Cen\u00e1rio 4",
+            "passo_de_saida_id": 17516,
+            "passo_de_saida": {
+                "id": 17516,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar cen\u00e1rio do paciente diab\u00e9tico",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17562,
+            "passo_de_entrada": {
+                "id": 17562,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Cen\u00e1rio 4] Conduta",
+                "descricao": "<p>- Prescrever jejum, <u>se for necess&aacute;rio (se n&aacute;useas e/ou v&ocirc;mitos, ou rebaixamento do n&iacute;vel de consci&ecirc;ncia).</u><br />\n- Obter acesso venoso e infundir imediatamente 50 mL de Glicose 50% endovenoso.<br />\n- O paciente com prov&aacute;vel defici&ecirc;ncia de tiamina&nbsp;(vitamina B1) (desnutrido e/ou com hist&oacute;rico de etilismo cr&ocirc;nico e/ou&nbsp;hepatopatia cr&ocirc;nica)&nbsp; necessita de reposi&ccedil;&atilde;o imediata com 100 mg&nbsp;endovenosa, concomitantemente, com o aporte de glicose&nbsp;para preven&ccedil;&atilde;o da S&iacute;ndrome de Wernicke-Korsakoff. Na d&uacute;vida, o&nbsp;m&eacute;dico dever&aacute; prescrever a dupla terapia com tiamina e solu&ccedil;&atilde;o&nbsp;glicosada a 50%.<br />\n- Iniciar hidrata&ccedil;&atilde;o endovenosa com Soro Fisiol&oacute;gico 0,9% de acordo com&nbsp;o estado de hidrata&ccedil;&atilde;o e condi&ccedil;&atilde;o&nbsp;cardiovascular.<br />\n- Iniciar tratamento medicamentoso sintom&aacute;tico quando necess&aacute;rio.<br />\n- Verificar a glicemia capilar 15-30 minutos ap&oacute;s a medica&ccedil;&atilde;o com glicose e repetir o tratamento, <u>se necess&aacute;rio.</u><br />\n- Identificar e tratar os dist&uacute;rbios hidroeletrol&iacute;ticos, inflamat&oacute;rios, infecciosos, existentes,<u> se poss&iacute;vel.</u><br />\n- O paciente deve permanecer na sala de observa&ccedil;&atilde;o com reavalia&ccedil;&otilde;es cl&iacute;nicas para verifica&ccedil;&atilde;o da melhora ou piora do quadro cl&iacute;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17317,
+                "nome": "Cen\u00e1rio 4",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17302,
+                    17309
+                ],
+                "argumentos": [
+                    "cenario_paciente",
+                    "4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17572,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "-",
+            "passo_de_saida_id": 17562,
+            "passo_de_saida": {
+                "id": 17562,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Cen\u00e1rio 4] Conduta",
+                "descricao": "<p>- Prescrever jejum, <u>se for necess&aacute;rio (se n&aacute;useas e/ou v&ocirc;mitos, ou rebaixamento do n&iacute;vel de consci&ecirc;ncia).</u><br />\n- Obter acesso venoso e infundir imediatamente 50 mL de Glicose 50% endovenoso.<br />\n- O paciente com prov&aacute;vel defici&ecirc;ncia de tiamina&nbsp;(vitamina B1) (desnutrido e/ou com hist&oacute;rico de etilismo cr&ocirc;nico e/ou&nbsp;hepatopatia cr&ocirc;nica)&nbsp; necessita de reposi&ccedil;&atilde;o imediata com 100 mg&nbsp;endovenosa, concomitantemente, com o aporte de glicose&nbsp;para preven&ccedil;&atilde;o da S&iacute;ndrome de Wernicke-Korsakoff. Na d&uacute;vida, o&nbsp;m&eacute;dico dever&aacute; prescrever a dupla terapia com tiamina e solu&ccedil;&atilde;o&nbsp;glicosada a 50%.<br />\n- Iniciar hidrata&ccedil;&atilde;o endovenosa com Soro Fisiol&oacute;gico 0,9% de acordo com&nbsp;o estado de hidrata&ccedil;&atilde;o e condi&ccedil;&atilde;o&nbsp;cardiovascular.<br />\n- Iniciar tratamento medicamentoso sintom&aacute;tico quando necess&aacute;rio.<br />\n- Verificar a glicemia capilar 15-30 minutos ap&oacute;s a medica&ccedil;&atilde;o com glicose e repetir o tratamento, <u>se necess&aacute;rio.</u><br />\n- Identificar e tratar os dist&uacute;rbios hidroeletrol&iacute;ticos, inflamat&oacute;rios, infecciosos, existentes,<u> se poss&iacute;vel.</u><br />\n- O paciente deve permanecer na sala de observa&ccedil;&atilde;o com reavalia&ccedil;&otilde;es cl&iacute;nicas para verifica&ccedil;&atilde;o da melhora ou piora do quadro cl&iacute;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17563,
+            "passo_de_entrada": {
+                "id": 17563,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17573,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (Houve melhora)",
+            "descricao": "Houve melhora",
+            "passo_de_saida_id": 17563,
+            "passo_de_saida": {
+                "id": 17563,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17564,
+            "passo_de_entrada": {
+                "id": 17564,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta",
+                "descricao": "<p><strong><u>Dar alta ambulatorial com as seguintes orienta&ccedil;&otilde;es:</u></strong></p>\n\n<ul>\n\t<li>Estimular a ingest&atilde;o h&iacute;drica, se n&atilde;o houver contra-indica&ccedil;&otilde;es.</li>\n\t<li>Controle adequado do peso, com atividade f&iacute;sica e dieta adequada.</li>\n\t<li>Refor&ccedil;ar a ader&ecirc;ncia ao tratamento medicamentoso.</li>\n\t<li>Ajustar esquema anti-diab&eacute;tico se necess&aacute;rio.</li>\n\t<li>Orientar sobre sintomas, riscos e tratamento das eventuais hipoglicemias.</li>\n\t<li>Tratar as comorbidades.</li>\n\t<li>Acompanhamento ambulatorial com endocrinologista.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17318,
+                "nome": "Houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17305
+                ],
+                "argumentos": [
+                    "melhora_clinica"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17574,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (Sem melhora cl\u00ednica)",
+            "descricao": "Sem melhora cl\u00ednica",
+            "passo_de_saida_id": 17563,
+            "passo_de_saida": {
+                "id": 17563,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17520,
+            "passo_de_entrada": {
+                "id": 17520,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "<p><span style=\"font-size:16px\"><strong>Discutir caso com l&iacute;der local.</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17319,
+                "nome": "Sem melhora cl\u00ednica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17305
+                ],
+                "argumentos": [
+                    "melhora_clinica"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17302,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "cenario_paciente",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Cen\u00e1rio 1 - Paciente diab\u00e9tico mal controlado, assintom\u00e1tico ou com sintomas leves",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Cen\u00e1rio 2 - Paciente diab\u00e9tico mal controlado, sintom\u00e1tico ou com achados cl\u00ednicos importantes (desidrata\u00e7\u00e3o, taquicardia)",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Cen\u00e1rio 3 - Paciente diab\u00e9tico mal controlado, sintom\u00e1tico e com sinais de gravidade (torporoso, com rebaixamento do n\u00edvel de consci\u00eancia) - Cetoacidose Diab\u00e9tica ou Estado Hiperglic\u00eamico Hiperosmolar",
+                    "peso": 3.0
+                },
+                {
+                    "texto": "Cen\u00e1rio 4 - Paciente diab\u00e9tico com hipoglicemia",
+                    "peso": 4.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17303,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "houve_melhora",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        },
+        {
+            "id": 17304,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "exames_normais",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        },
+        {
+            "id": 17305,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "melhora_clinica",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        },
+        {
+            "id": 17306,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17307,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17308,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17309,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "4",
+            "peso": 1.0,
+            "valor": 4.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17310,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "exames_ruins",
+            "descricao": "exames ruins",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17304
+            ],
+            "argumentos": [
+                "exames_normais"
+            ]
+        },
+        {
+            "id": 17311,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "sem_melhora",
+            "descricao": "n\u00e3o houve melhora",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                17303
+            ],
+            "argumentos": [
+                "houve_melhora"
+            ]
+        }
+    ]
+}

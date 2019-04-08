@@ -1,0 +1,4440 @@
+{
+    "id": 624,
+    "url": "",
+    "codigo": "DIA",
+    "nome": "Diabetes Gestacional",
+    "repositorio_id": 344,
+    "versao": 1,
+    "ultima_auditoria": null,
+    "criado_por": null,
+    "finalizado_por": null,
+    "elementos": [
+        {
+            "id": 3137,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar atendimento",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1515,
+                    "url": "",
+                    "texto": "\u00c9 retorno de atendimento?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2395,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "verifica_retorno_atendimento_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 3276,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3137,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar atendimento",
+                    "passo_de_entrada_id": 3138,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3321,
+                    "url": "",
+                    "nome": "s26",
+                    "descricao": "",
+                    "passo_de_saida_id": 3137,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar atendimento",
+                    "passo_de_entrada_id": 3257,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar exame USG Obst\u00e9trica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3138,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1516,
+                    "url": "",
+                    "texto": "Glicemia em Jejum > 92 mg/dl",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2396,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "glicemia_jejum_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3276,
+                    "url": "",
+                    "nome": "s1",
+                    "descricao": "",
+                    "passo_de_saida_id": 3137,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar atendimento",
+                    "passo_de_entrada_id": 3138,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3322,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "",
+                    "passo_de_saida_id": 3138,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                    "passo_de_entrada_id": 3139,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar fatores de risco na gestante",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3323,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "",
+                    "passo_de_saida_id": 3138,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                    "passo_de_entrada_id": 3243,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3139,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar fatores de risco na gestante",
+            "descricao": "Positivo para pelo menos UM fator de risco:",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1517,
+                    "url": "",
+                    "texto": "Diabetes gestacional anterior?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2397,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "diabetes_gestacional_anterior_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1518,
+                    "url": "",
+                    "texto": "RN com macrosom\u00eda?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2398,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "rn_com_macrosomia_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1519,
+                    "url": "",
+                    "texto": "Pais com Diabetes?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2399,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "pais_diabeticos_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1520,
+                    "url": "",
+                    "texto": "Idade superior \u00e0 35 anos?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2400,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_superior_35_anos_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1521,
+                    "url": "",
+                    "texto": "Ov\u00e1rio polic\u00edstico?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2441,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ovario_policistico_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1522,
+                    "url": "",
+                    "texto": "IMC maior de 30?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2442,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "imc_maior_30_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1523,
+                    "url": "",
+                    "texto": "Glicosuria na sumario de urina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2443,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "glicosuria_urina_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3322,
+                    "url": "",
+                    "nome": "s2",
+                    "descricao": "",
+                    "passo_de_saida_id": 3138,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                    "passo_de_entrada_id": 3139,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar fatores de risco na gestante",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3277,
+                    "url": "",
+                    "nome": "s3",
+                    "descricao": "",
+                    "passo_de_saida_id": 3139,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar fatores de risco na gestante",
+                    "passo_de_entrada_id": 3140,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classificar Paciente com Risco Habitual",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3278,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "",
+                    "passo_de_saida_id": 3139,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar fatores de risco na gestante",
+                    "passo_de_entrada_id": 3242,
+                    "passo_de_entrada": "Tratamento: Solicitar TOTG",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3140,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classificar Paciente com Risco Habitual",
+            "descricao": "Classificar o paciente com risco habitual.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "CODFORDIAGEST",
+                "codigo_risco": "M"
+            }
+        },
+        {
+            "id": 3241,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Realizar Aprazamento Mensal",
+            "descricao": "Apraza retorno mensal com m\u00e9dico",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "Gerar Aprazamento de retorno MENSAL para m\u00e9dico com alto risco.",
+                "codigo_retorno": "1",
+                "tipo_profissional": "M",
+                "codigo_risco": "2"
+            }
+        },
+        {
+            "id": 3242,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar TOTG",
+            "descricao": "Teste Oral de Toler\u00e2ncia a Glicose.\r\nCom base no resultado do teste o quadro da gestante pode ser reavaliado.\r\n\r\n#####################################################################\r\n#   **IG < 24 semanas**                                                                                                  \r\n#                                                                                                                                     \r\n#                                Sem altera\u00e7\u00f5es        Diabetes Gestacional        Diabetes Tipo II  \r\n# Glicemia em jejum     X <  92 mg/dl                     -                          X >= 92 mg/dl  \r\n# Glicemia ap\u00f3s 1h       X < 180 mg/dl                    -                          X >= 180 mg/dl\r\n# Glicemia ap\u00f3s 2h       X < 153 mg/dl                    -                          X >= 153 mg/dl\r\n#####################################################################\r\n\r\n#####################################################################\r\n#   **IG >= 24 semanas**                                                                                                \r\n#                                                                                                                                      \r\n#                                Sem altera\u00e7\u00f5es        Diabetes Gestacional        Diabetes Tipo II\r\n# Glicemia em jejum     X <  92 mg/dl        92 <=  X < 126 mg/dl      X >= 126 mg/dl\r\n# Glicemia ap\u00f3s 1h       X < 180 mg/dl      180 <= X                           X >= 180 mg/dl\r\n# Glicemia ap\u00f3s 2h       X < 153 mg/dl      153 <= X < 200 mg          X >= 200 mg/dl\r\n#####################################################################\r\n\r\nObs: Diagn\u00f3stico de diabetes gestacional n\u00e3o se aplica no per\u00edodo anterior \u00e0 24 semanas.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28011562",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "-",
+                    "indicacao_clinica": "-",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3278,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "",
+                    "passo_de_saida_id": 3139,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar fatores de risco na gestante",
+                    "passo_de_entrada_id": 3242,
+                    "passo_de_entrada": "Tratamento: Solicitar TOTG",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3279,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "",
+                    "passo_de_saida_id": 3242,
+                    "passo_de_saida": "Tratamento: Solicitar TOTG",
+                    "passo_de_entrada_id": 3140,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classificar Paciente com Risco Habitual",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3243,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+            "descricao": "Verifica resultado de exame Glic\u00eamico em jejum",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1524,
+                    "url": "",
+                    "texto": "Glicemia em jejum entre 92 mg/dl e 126 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2444,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "glicemia_jejum_92_126_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3323,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "",
+                    "passo_de_saida_id": 3138,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                    "passo_de_entrada_id": 3243,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3281,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3243,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                    "passo_de_entrada_id": 3244,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( > 24 semanas)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3290,
+                    "url": "",
+                    "nome": "s17",
+                    "descricao": "",
+                    "passo_de_saida_id": 3243,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                    "passo_de_entrada_id": 3270,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Atribui diagn\u00f3stico de Diabetes Tipo 2",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3244,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar idade Gestacional ( > 24 semanas)",
+            "descricao": "Idade Gestacional maior que 24 semanas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1525,
+                    "url": "",
+                    "texto": "Idade Gestacional > 24 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2445,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_24_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3281,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3243,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                    "passo_de_entrada_id": 3244,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( > 24 semanas)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3282,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "",
+                    "passo_de_saida_id": 3244,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( > 24 semanas)",
+                    "passo_de_entrada_id": 3271,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Diagnosticar Diabetes Gestacional",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3283,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3244,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( > 24 semanas)",
+                    "passo_de_entrada_id": 3245,
+                    "passo_de_entrada": "Tratamento: Solicitar TOTG 75 mg",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3245,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar TOTG 75 mg",
+            "descricao": "Solicitar Teste Oral de Toler\u00e2ncia a Glicose",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28011562",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "-",
+                    "indicacao_clinica": "-",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3283,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3244,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( > 24 semanas)",
+                    "passo_de_entrada_id": 3245,
+                    "passo_de_entrada": "Tratamento: Solicitar TOTG 75 mg",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3284,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "",
+                    "passo_de_saida_id": 3271,
+                    "passo_de_saida": "A\u00e7\u00e3o: Diagnosticar Diabetes Gestacional",
+                    "passo_de_entrada_id": 3245,
+                    "passo_de_entrada": "Tratamento: Solicitar TOTG 75 mg",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3285,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 3245,
+                    "passo_de_saida": "Tratamento: Solicitar TOTG 75 mg",
+                    "passo_de_entrada_id": 3246,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classificar Paciente Como Alto Risco",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3246,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classificar Paciente Como Alto Risco",
+            "descricao": "Classificar o paciente como alto risco.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "CODFORDIAGEST_2",
+                "codigo_risco": "A"
+            }
+        },
+        {
+            "id": 3247,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Realizar Aprazamento Quinzenal",
+            "descricao": "Gerar Aprazamento de retorno QUINZENAL para m\u00e9dico com alto risco.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "Gerar Aprazamento de retorno QUINZENAL para m\u00e9dico com alto risco.",
+                "codigo_retorno": "2",
+                "tipo_profissional": "M",
+                "codigo_risco": "2"
+            }
+        },
+        {
+            "id": 3248,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar idade Gestacional ( entre 29 e 33 semanas)",
+            "descricao": "Verifica\u00e7\u00e3o de idade gestacional entre 29 e 33 semanas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1526,
+                    "url": "",
+                    "texto": "Idade Gestacional entre 29 e 33 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2446,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_29_33_semanas_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3287,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 3247,
+                    "passo_de_saida": "A\u00e7\u00e3o: Realizar Aprazamento Quinzenal",
+                    "passo_de_entrada_id": 3248,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3297,
+                    "url": "",
+                    "nome": "s24",
+                    "descricao": "",
+                    "passo_de_saida_id": 3255,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                    "passo_de_entrada_id": 3248,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3298,
+                    "url": "",
+                    "nome": "s25",
+                    "descricao": "",
+                    "passo_de_saida_id": 3256,
+                    "passo_de_saida": "Tratamento: Solicitar Ecocardiograma Fetal",
+                    "passo_de_entrada_id": 3248,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3288,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "",
+                    "passo_de_saida_id": 3248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "passo_de_entrada_id": 3249,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encerrar Protocolo de Diabetes Gestacional",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3289,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "",
+                    "passo_de_saida_id": 3248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "passo_de_entrada_id": 3250,
+                    "passo_de_entrada": "Tratamento: Solicitar Ecocardiograma Fetal *",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3249,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encerrar Protocolo de Diabetes Gestacional",
+            "descricao": "Finalizando protocolo Diabetes Gestacional",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 3288,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "",
+                    "passo_de_saida_id": 3248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "passo_de_entrada_id": 3249,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encerrar Protocolo de Diabetes Gestacional",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3319,
+                    "url": "",
+                    "nome": "s47",
+                    "descricao": "",
+                    "passo_de_saida_id": 3269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: TOTG Positivo para Diabetes Tipo 2",
+                    "passo_de_entrada_id": 3249,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encerrar Protocolo de Diabetes Gestacional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3250,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Ecocardiograma Fetal *",
+            "descricao": "-",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "20010133",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "-",
+                    "indicacao_clinica": "-",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3289,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "",
+                    "passo_de_saida_id": 3248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "passo_de_entrada_id": 3250,
+                    "passo_de_entrada": "Tratamento: Solicitar Ecocardiograma Fetal *",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3309,
+                    "url": "",
+                    "nome": "s37",
+                    "descricao": "",
+                    "passo_de_saida_id": 3264,
+                    "passo_de_saida": "A\u00e7\u00e3o: Classificar Paciente como Alto Risco (ap\u00f3s solicitar perfil glic\u00eamico)",
+                    "passo_de_entrada_id": 3250,
+                    "passo_de_entrada": "Tratamento: Solicitar Ecocardiograma Fetal *",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3251,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar Gestante para Nutricionista",
+            "descricao": "Encaminha Gestante para Nutricionista e End\u00f3crinologista",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "130"
+            }
+        },
+        {
+            "id": 3252,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar Gestante para Endocrinologista",
+            "descricao": "Encaminha Gestante para Endocrinologista",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "177"
+            }
+        },
+        {
+            "id": 3253,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classificar Paciente Como Alto Risco (ap\u00f3s encaminhamento Nutricionista e Endocrinologista)",
+            "descricao": "Classificar o paciente como alto risco.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "CODFORDIAGEST_3",
+                "codigo_risco": "A"
+            }
+        },
+        {
+            "id": 3254,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Realizar Aprazamento Quinzenal (ap\u00f3s encaminhamento Nutricionista e Endocrinologista)",
+            "descricao": "Realizar Aprazamento Quinzenal",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "Gerar Aprazamento de retorno QUINZENAL para m\u00e9dico com alto risco.",
+                "codigo_retorno": "2",
+                "tipo_profissional": "M",
+                "codigo_risco": "2"
+            }
+        },
+        {
+            "id": 3255,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+            "descricao": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1527,
+                    "url": "",
+                    "texto": "Idade Gestacional entre 24 e 28 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2447,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_24_28_semanas_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3295,
+                    "url": "",
+                    "nome": "s22",
+                    "descricao": "",
+                    "passo_de_saida_id": 3254,
+                    "passo_de_saida": "A\u00e7\u00e3o: Realizar Aprazamento Quinzenal (ap\u00f3s encaminhamento Nutricionista e Endocrinologista)",
+                    "passo_de_entrada_id": 3255,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3296,
+                    "url": "",
+                    "nome": "s23",
+                    "descricao": "",
+                    "passo_de_saida_id": 3255,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                    "passo_de_entrada_id": 3256,
+                    "passo_de_entrada": "Tratamento: Solicitar Ecocardiograma Fetal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3297,
+                    "url": "",
+                    "nome": "s24",
+                    "descricao": "",
+                    "passo_de_saida_id": 3255,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                    "passo_de_entrada_id": 3248,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3256,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Ecocardiograma Fetal",
+            "descricao": "Solicita Ecocardiograma Fetal",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "20010133",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "-",
+                    "indicacao_clinica": "-",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3296,
+                    "url": "",
+                    "nome": "s23",
+                    "descricao": "",
+                    "passo_de_saida_id": 3255,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                    "passo_de_entrada_id": 3256,
+                    "passo_de_entrada": "Tratamento: Solicitar Ecocardiograma Fetal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3298,
+                    "url": "",
+                    "nome": "s25",
+                    "descricao": "",
+                    "passo_de_saida_id": 3256,
+                    "passo_de_saida": "Tratamento: Solicitar Ecocardiograma Fetal",
+                    "passo_de_entrada_id": 3248,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3257,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar exame USG Obst\u00e9trica",
+            "descricao": "Verificar Gestante realizou USG Obst\u00e9trica / Percentil abdominal do feto",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1528,
+                    "url": "",
+                    "texto": "Gestante realizou USG Obst\u00e9trica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2448,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gestante_usg_obstretrica_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3321,
+                    "url": "",
+                    "nome": "s26",
+                    "descricao": "",
+                    "passo_de_saida_id": 3137,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar atendimento",
+                    "passo_de_entrada_id": 3257,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar exame USG Obst\u00e9trica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3299,
+                    "url": "",
+                    "nome": "s27",
+                    "descricao": "",
+                    "passo_de_saida_id": 3257,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar exame USG Obst\u00e9trica",
+                    "passo_de_entrada_id": 3272,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar percentil abdominal do feto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3300,
+                    "url": "",
+                    "nome": "s28",
+                    "descricao": "",
+                    "passo_de_saida_id": 3257,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar exame USG Obst\u00e9trica",
+                    "passo_de_entrada_id": 3259,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3258,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar Gestante para Endocrinologista\t(ap\u00f3s verificar % abdominal do feto)",
+            "descricao": "Encaminhar Gestante para Endocrinologista",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "177"
+            }
+        },
+        {
+            "id": 3259,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Exame ECG Fetal",
+            "descricao": "Verificar se gestante realizou Eletrocardiograma fetal",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1529,
+                    "url": "",
+                    "texto": "Gestante realizou ECG Fetal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2449,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gestante_ecg_fetal_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3300,
+                    "url": "",
+                    "nome": "s28",
+                    "descricao": "",
+                    "passo_de_saida_id": 3257,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar exame USG Obst\u00e9trica",
+                    "passo_de_entrada_id": 3259,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3301,
+                    "url": "",
+                    "nome": "s29",
+                    "descricao": "",
+                    "passo_de_saida_id": 3258,
+                    "passo_de_saida": "A\u00e7\u00e3o: Encaminhar Gestante para Endocrinologista\t(ap\u00f3s verificar % abdominal do feto)",
+                    "passo_de_entrada_id": 3259,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3325,
+                    "url": "",
+                    "nome": "s50",
+                    "descricao": "",
+                    "passo_de_saida_id": 3272,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar percentil abdominal do feto",
+                    "passo_de_entrada_id": 3259,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3302,
+                    "url": "",
+                    "nome": "s30",
+                    "descricao": "",
+                    "passo_de_saida_id": 3259,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "passo_de_entrada_id": 3260,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar para acompanhamento na medicina fetal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3303,
+                    "url": "",
+                    "nome": "s31",
+                    "descricao": "",
+                    "passo_de_saida_id": 3259,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "passo_de_entrada_id": 3261,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: TOTG Positivo Diabetes Gestacional",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3260,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar para acompanhamento na medicina fetal",
+            "descricao": "Encaminhar para acompanhamento na medicina fetal\n\n*OBS:\nA especialidade encaminhada foi o 'OBSTETRICIA NASCER BEM', necess\u00e1rio verificar se especialidade est\u00e1 correto",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "456"
+            }
+        },
+        {
+            "id": 3261,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "TOTG Positivo Diabetes Gestacional",
+            "descricao": "TOTG Positivo Diabetes Gestacional",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1530,
+                    "url": "",
+                    "texto": "Glicemia em Jejum entre 92 mg/dl e 126 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2450,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "totg_glicemia_jejum_92_126_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1531,
+                    "url": "",
+                    "texto": "Glicemia ap\u00f3s 2h entre 180 mg/dl e 200 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2451,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "totg_glicemia_2h_180_200_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3303,
+                    "url": "",
+                    "nome": "s31",
+                    "descricao": "",
+                    "passo_de_saida_id": 3259,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "passo_de_entrada_id": 3261,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: TOTG Positivo Diabetes Gestacional",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3310,
+                    "url": "",
+                    "nome": "s38",
+                    "descricao": "",
+                    "passo_de_saida_id": 3260,
+                    "passo_de_saida": "A\u00e7\u00e3o: Encaminhar para acompanhamento na medicina fetal",
+                    "passo_de_entrada_id": 3261,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: TOTG Positivo Diabetes Gestacional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3304,
+                    "url": "",
+                    "nome": "s32",
+                    "descricao": "",
+                    "passo_de_saida_id": 3261,
+                    "passo_de_saida": "Aux\u00edlio Conduta: TOTG Positivo Diabetes Gestacional",
+                    "passo_de_entrada_id": 3273,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Atribui diagn\u00f3stico de Diabetes Gestacional",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3311,
+                    "url": "",
+                    "nome": "s39",
+                    "descricao": "",
+                    "passo_de_saida_id": 3261,
+                    "passo_de_saida": "Aux\u00edlio Conduta: TOTG Positivo Diabetes Gestacional",
+                    "passo_de_entrada_id": 3265,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Perfil Glic\u00eamico da Paciente",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3262,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar Gestante para Nutricionista (ap\u00f3s diagnostico Diabetes Gestacional)",
+            "descricao": "Encaminhar Gestante para Nutricionista\n\n*OBS: Atribuir prioridade nesse encaminhamento",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "130"
+            }
+        },
+        {
+            "id": 3263,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Perfil Glic\u00eamico (7 dias ap\u00f3s dieta)",
+            "descricao": "1. Jejum\n\n2. 2 horas depois do caf\u00e9 da manha\n\n3. 2 horas depois do almo\u00e7o\n\n4. 2 horas depois do jantar",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28010973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "-",
+                    "indicacao_clinica": "Para controle glic\u00eamico",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3307,
+                    "url": "",
+                    "nome": "s35",
+                    "descricao": "",
+                    "passo_de_saida_id": 3274,
+                    "passo_de_saida": "A\u00e7\u00e3o: Prescreve controle glic\u00eamico em casa",
+                    "passo_de_entrada_id": 3263,
+                    "passo_de_entrada": "Tratamento: Solicitar Perfil Glic\u00eamico (7 dias ap\u00f3s dieta)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3308,
+                    "url": "",
+                    "nome": "s36",
+                    "descricao": "",
+                    "passo_de_saida_id": 3263,
+                    "passo_de_saida": "Tratamento: Solicitar Perfil Glic\u00eamico (7 dias ap\u00f3s dieta)",
+                    "passo_de_entrada_id": 3264,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classificar Paciente como Alto Risco (ap\u00f3s solicitar perfil glic\u00eamico)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3264,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classificar Paciente como Alto Risco (ap\u00f3s solicitar perfil glic\u00eamico)",
+            "descricao": "Classificar como ALTO RISCO",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "CODFORDIAGEST",
+                "codigo_risco": "A"
+            }
+        },
+        {
+            "id": 3265,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Perfil Glic\u00eamico da Paciente",
+            "descricao": "Verificar se Gestante realizou Perfil Glic\u00eamico",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1532,
+                    "url": "",
+                    "texto": "Gestante realizou Perfil Glic\u00eamico?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2452,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gestante_perfil_glicemico_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3311,
+                    "url": "",
+                    "nome": "s39",
+                    "descricao": "",
+                    "passo_de_saida_id": 3261,
+                    "passo_de_saida": "Aux\u00edlio Conduta: TOTG Positivo Diabetes Gestacional",
+                    "passo_de_entrada_id": 3265,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Perfil Glic\u00eamico da Paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3312,
+                    "url": "",
+                    "nome": "s40",
+                    "descricao": "",
+                    "passo_de_saida_id": 3265,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Perfil Glic\u00eamico da Paciente",
+                    "passo_de_entrada_id": 3266,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Controlado com Dieta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3318,
+                    "url": "",
+                    "nome": "s46",
+                    "descricao": "",
+                    "passo_de_saida_id": 3265,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Perfil Glic\u00eamico da Paciente",
+                    "passo_de_entrada_id": 3269,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: TOTG Positivo para Diabetes Tipo 2",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3266,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Controlado com Dieta",
+            "descricao": "Verificar se todas as condi\u00e7\u00f5es da dieta foram atendidas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1533,
+                    "url": "",
+                    "texto": "Controle  glic\u00eamico jejum maior de 70 mg/dl  OU  menor  de 90 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2453,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "controle_glicemico_jejum_70_90_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1534,
+                    "url": "",
+                    "texto": "2 horas ap\u00f3s almo\u00e7o - maior de 100 mg/dl  e menor de  120 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2454,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "2h_almoco_100_120_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1535,
+                    "url": "",
+                    "texto": "2 horas ap\u00f3s caf\u00e9 da manh\u00e3 - maior de 100 mg/dl  e menor de  120 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2455,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "2h_cafe_100_120_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1536,
+                    "url": "",
+                    "texto": "2 horas ap\u00f3s jantar - maior de 100 mg/dl  e menor de  120 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2456,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "2h_jantar_100_120_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3312,
+                    "url": "",
+                    "nome": "s40",
+                    "descricao": "",
+                    "passo_de_saida_id": 3265,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Perfil Glic\u00eamico da Paciente",
+                    "passo_de_entrada_id": 3266,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Controlado com Dieta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3313,
+                    "url": "",
+                    "nome": "s41",
+                    "descricao": "",
+                    "passo_de_saida_id": 3266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Controlado com Dieta",
+                    "passo_de_entrada_id": 3267,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar Gestante para Endocrinologista\t(ap\u00f3s controlado com Dieta)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3314,
+                    "url": "",
+                    "nome": "s42",
+                    "descricao": "",
+                    "passo_de_saida_id": 3266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Controlado com Dieta",
+                    "passo_de_entrada_id": 3268,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3267,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar Gestante para Endocrinologista\t(ap\u00f3s controlado com Dieta)",
+            "descricao": "Encaminhar Gestante para Endocrinologista",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "177"
+            }
+        },
+        {
+            "id": 3268,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+            "descricao": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_diagnostico",
+            "entradas": {
+                "diagnostico": "FL_DIABETES_G"
+            }
+        },
+        {
+            "id": 3269,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "TOTG Positivo para Diabetes Tipo 2",
+            "descricao": "Glicemia em jejum acima de 126 mg/dl ou Glicemia depois de 2h acima de 200 mg/dl",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1537,
+                    "url": "",
+                    "texto": "Glicemia em jejum acima de 126 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2457,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "glicemia_jejum_126_totg_2_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1538,
+                    "url": "",
+                    "texto": "Glicemia depois de 2h acima de 200 mg/dl?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2458,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "glicemia_2h_200_totg_pc002",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3317,
+                    "url": "",
+                    "nome": "s45",
+                    "descricao": "",
+                    "passo_de_saida_id": 3275,
+                    "passo_de_saida": "A\u00e7\u00e3o: Prescreve controle glic\u00eamico em casa (ap\u00f3s atribuir Diabetes Gestacional)",
+                    "passo_de_entrada_id": 3269,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: TOTG Positivo para Diabetes Tipo 2",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3318,
+                    "url": "",
+                    "nome": "s46",
+                    "descricao": "",
+                    "passo_de_saida_id": 3265,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Perfil Glic\u00eamico da Paciente",
+                    "passo_de_entrada_id": 3269,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: TOTG Positivo para Diabetes Tipo 2",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3319,
+                    "url": "",
+                    "nome": "s47",
+                    "descricao": "",
+                    "passo_de_saida_id": 3269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: TOTG Positivo para Diabetes Tipo 2",
+                    "passo_de_entrada_id": 3249,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encerrar Protocolo de Diabetes Gestacional",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3320,
+                    "url": "",
+                    "nome": "s48",
+                    "descricao": "",
+                    "passo_de_saida_id": 3269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: TOTG Positivo para Diabetes Tipo 2",
+                    "passo_de_entrada_id": 3270,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Atribui diagn\u00f3stico de Diabetes Tipo 2",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3270,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Atribui diagn\u00f3stico de Diabetes Tipo 2",
+            "descricao": "Atribui diagn\u00f3stico de Diabetes Tipo 2 a Gestante\n\nOBS: \u00c9 necess\u00e1rio adicionar Diabetes Tipo 2 na lista de poss\u00edveis diagn\u00f3sticos",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_diagnostico",
+            "entradas": {
+                "diagnostico": "FL_DIABETES_2"
+            }
+        },
+        {
+            "id": 3271,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Diagnosticar Diabetes Gestacional",
+            "descricao": "Diagnosticar Diabetes Gestacional",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_diagnostico",
+            "entradas": {
+                "diagnostico": "FL_DIABETES_G"
+            }
+        },
+        {
+            "id": 3272,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar percentil abdominal do feto",
+            "descricao": "Verificar se Percentil abdominal do feto > 75%",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1539,
+                    "url": "",
+                    "texto": "Percentil abdominal do feto > 75%?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2459,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "perc_abdom_maior_75%",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3299,
+                    "url": "",
+                    "nome": "s27",
+                    "descricao": "",
+                    "passo_de_saida_id": 3257,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar exame USG Obst\u00e9trica",
+                    "passo_de_entrada_id": 3272,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar percentil abdominal do feto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3324,
+                    "url": "",
+                    "nome": "s49",
+                    "descricao": "",
+                    "passo_de_saida_id": 3272,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar percentil abdominal do feto",
+                    "passo_de_entrada_id": 3258,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Encaminhar Gestante para Endocrinologista\t(ap\u00f3s verificar % abdominal do feto)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3325,
+                    "url": "",
+                    "nome": "s50",
+                    "descricao": "",
+                    "passo_de_saida_id": 3272,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar percentil abdominal do feto",
+                    "passo_de_entrada_id": 3259,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Exame ECG Fetal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3273,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Atribui diagn\u00f3stico de Diabetes Gestacional",
+            "descricao": "Atribui diagn\u00f3stico de Diabetes Gestacional",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_diagnostico",
+            "entradas": {
+                "diagnostico": "FL_DIABETES_G"
+            }
+        },
+        {
+            "id": 3274,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Prescreve controle glic\u00eamico em casa",
+            "descricao": "Prescreve controle glic\u00eamico em casa",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_guia_controle",
+            "entradas": {
+                "tipo_controle": "2"
+            }
+        },
+        {
+            "id": 3275,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Prescreve controle glic\u00eamico em casa (ap\u00f3s atribuir Diabetes Gestacional)",
+            "descricao": "Prescreve controle glic\u00eamico em casa",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "registrar_guia_controle",
+            "entradas": {
+                "tipo_controle": "2"
+            }
+        },
+        {
+            "id": 3276,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s1",
+            "descricao": "",
+            "passo_de_saida_id": 3137,
+            "passo_de_saida": {
+                "id": 3137,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar atendimento",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3138,
+            "passo_de_entrada": {
+                "id": 3138,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2465,
+                "nome": "nao_e_retorno_atendimento",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2395
+                ],
+                "argumentos": [
+                    "verifica_retorno_atendimento_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3277,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s3",
+            "descricao": "",
+            "passo_de_saida_id": 3139,
+            "passo_de_saida": {
+                "id": 3139,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar fatores de risco na gestante",
+                "descricao": "Positivo para pelo menos UM fator de risco:",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3140,
+            "passo_de_entrada": {
+                "id": 3140,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente com Risco Habitual",
+                "descricao": "Classificar o paciente com risco habitual.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": {
+                "id": 2466,
+                "nome": "gestante_nao_apresenta_fatores_de_riscos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorQue",
+                "operador_display": "Maior Que",
+                "argumentos_ids": [
+                    2460,
+                    2462
+                ],
+                "argumentos": [
+                    "CONST_UM",
+                    "soma_fatores_riscos_diabetes"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3278,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s4",
+            "descricao": "",
+            "passo_de_saida_id": 3139,
+            "passo_de_saida": {
+                "id": 3139,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar fatores de risco na gestante",
+                "descricao": "Positivo para pelo menos UM fator de risco:",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3242,
+            "passo_de_entrada": {
+                "id": 3242,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar TOTG",
+                "descricao": "Teste Oral de Toler\u00e2ncia a Glicose.\r\nCom base no resultado do teste o quadro da gestante pode ser reavaliado.\r\n\r\n#####################################################################\r\n#   **IG < 24 semanas**                                                                                                  \r\n#                                                                                                                                     \r\n#                                Sem altera\u00e7\u00f5es        Diabetes Gestacional        Diabetes Tipo II  \r\n# Glicemia em jejum     X <  92 mg/dl                     -                          X >= 92 mg/dl  \r\n# Glicemia ap\u00f3s 1h       X < 180 mg/dl                    -                          X >= 180 mg/dl\r\n# Glicemia ap\u00f3s 2h       X < 153 mg/dl                    -                          X >= 153 mg/dl\r\n#####################################################################\r\n\r\n#####################################################################\r\n#   **IG >= 24 semanas**                                                                                                \r\n#                                                                                                                                      \r\n#                                Sem altera\u00e7\u00f5es        Diabetes Gestacional        Diabetes Tipo II\r\n# Glicemia em jejum     X <  92 mg/dl        92 <=  X < 126 mg/dl      X >= 126 mg/dl\r\n# Glicemia ap\u00f3s 1h       X < 180 mg/dl      180 <= X                           X >= 180 mg/dl\r\n# Glicemia ap\u00f3s 2h       X < 153 mg/dl      153 <= X < 200 mg          X >= 200 mg/dl\r\n#####################################################################\r\n\r\nObs: Diagn\u00f3stico de diabetes gestacional n\u00e3o se aplica no per\u00edodo anterior \u00e0 24 semanas.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2467,
+                "nome": "gestante_apresenta_fator_de_risco",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    2462,
+                    2460
+                ],
+                "argumentos": [
+                    "soma_fatores_riscos_diabetes",
+                    "CONST_UM"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3279,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s5",
+            "descricao": "",
+            "passo_de_saida_id": 3242,
+            "passo_de_saida": {
+                "id": 3242,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar TOTG",
+                "descricao": "Teste Oral de Toler\u00e2ncia a Glicose.\r\nCom base no resultado do teste o quadro da gestante pode ser reavaliado.\r\n\r\n#####################################################################\r\n#   **IG < 24 semanas**                                                                                                  \r\n#                                                                                                                                     \r\n#                                Sem altera\u00e7\u00f5es        Diabetes Gestacional        Diabetes Tipo II  \r\n# Glicemia em jejum     X <  92 mg/dl                     -                          X >= 92 mg/dl  \r\n# Glicemia ap\u00f3s 1h       X < 180 mg/dl                    -                          X >= 180 mg/dl\r\n# Glicemia ap\u00f3s 2h       X < 153 mg/dl                    -                          X >= 153 mg/dl\r\n#####################################################################\r\n\r\n#####################################################################\r\n#   **IG >= 24 semanas**                                                                                                \r\n#                                                                                                                                      \r\n#                                Sem altera\u00e7\u00f5es        Diabetes Gestacional        Diabetes Tipo II\r\n# Glicemia em jejum     X <  92 mg/dl        92 <=  X < 126 mg/dl      X >= 126 mg/dl\r\n# Glicemia ap\u00f3s 1h       X < 180 mg/dl      180 <= X                           X >= 180 mg/dl\r\n# Glicemia ap\u00f3s 2h       X < 153 mg/dl      153 <= X < 200 mg          X >= 200 mg/dl\r\n#####################################################################\r\n\r\nObs: Diagn\u00f3stico de diabetes gestacional n\u00e3o se aplica no per\u00edodo anterior \u00e0 24 semanas.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3140,
+            "passo_de_entrada": {
+                "id": 3140,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente com Risco Habitual",
+                "descricao": "Classificar o paciente com risco habitual.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3280,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s6",
+            "descricao": "",
+            "passo_de_saida_id": 3140,
+            "passo_de_saida": {
+                "id": 3140,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente com Risco Habitual",
+                "descricao": "Classificar o paciente com risco habitual.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 3241,
+            "passo_de_entrada": {
+                "id": 3241,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar Aprazamento Mensal",
+                "descricao": "Apraza retorno mensal com m\u00e9dico",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3281,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s8",
+            "descricao": "",
+            "passo_de_saida_id": 3243,
+            "passo_de_saida": {
+                "id": 3243,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                "descricao": "Verifica resultado de exame Glic\u00eamico em jejum",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3244,
+            "passo_de_entrada": {
+                "id": 3244,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( > 24 semanas)",
+                "descricao": "Idade Gestacional maior que 24 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2468,
+                "nome": "glicemia_gestante_em_jejum_entre_92_126",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2444
+                ],
+                "argumentos": [
+                    "glicemia_jejum_92_126_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3282,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s9",
+            "descricao": "",
+            "passo_de_saida_id": 3244,
+            "passo_de_saida": {
+                "id": 3244,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( > 24 semanas)",
+                "descricao": "Idade Gestacional maior que 24 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3271,
+            "passo_de_entrada": {
+                "id": 3271,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Diagnosticar Diabetes Gestacional",
+                "descricao": "Diagnosticar Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "operacao": {
+                "id": 2469,
+                "nome": "gestacao_maior_24_semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2445
+                ],
+                "argumentos": [
+                    "idade_gestacional_24_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3283,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s10",
+            "descricao": "",
+            "passo_de_saida_id": 3244,
+            "passo_de_saida": {
+                "id": 3244,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( > 24 semanas)",
+                "descricao": "Idade Gestacional maior que 24 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3245,
+            "passo_de_entrada": {
+                "id": 3245,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar TOTG 75 mg",
+                "descricao": "Solicitar Teste Oral de Toler\u00e2ncia a Glicose",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2470,
+                "nome": "gestacao_menor_que_24_semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2445
+                ],
+                "argumentos": [
+                    "idade_gestacional_24_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3284,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s11",
+            "descricao": "",
+            "passo_de_saida_id": 3271,
+            "passo_de_saida": {
+                "id": 3271,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Diagnosticar Diabetes Gestacional",
+                "descricao": "Diagnosticar Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "passo_de_entrada_id": 3245,
+            "passo_de_entrada": {
+                "id": 3245,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar TOTG 75 mg",
+                "descricao": "Solicitar Teste Oral de Toler\u00e2ncia a Glicose",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3285,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s12",
+            "descricao": "",
+            "passo_de_saida_id": 3245,
+            "passo_de_saida": {
+                "id": 3245,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar TOTG 75 mg",
+                "descricao": "Solicitar Teste Oral de Toler\u00e2ncia a Glicose",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3246,
+            "passo_de_entrada": {
+                "id": 3246,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente Como Alto Risco",
+                "descricao": "Classificar o paciente como alto risco.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3286,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s13",
+            "descricao": "",
+            "passo_de_saida_id": 3246,
+            "passo_de_saida": {
+                "id": 3246,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente Como Alto Risco",
+                "descricao": "Classificar o paciente como alto risco.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 3247,
+            "passo_de_entrada": {
+                "id": 3247,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar Aprazamento Quinzenal",
+                "descricao": "Gerar Aprazamento de retorno QUINZENAL para m\u00e9dico com alto risco.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3287,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s14",
+            "descricao": "",
+            "passo_de_saida_id": 3247,
+            "passo_de_saida": {
+                "id": 3247,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar Aprazamento Quinzenal",
+                "descricao": "Gerar Aprazamento de retorno QUINZENAL para m\u00e9dico com alto risco.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "passo_de_entrada_id": 3248,
+            "passo_de_entrada": {
+                "id": 3248,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                "descricao": "Verifica\u00e7\u00e3o de idade gestacional entre 29 e 33 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3288,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s15",
+            "descricao": "",
+            "passo_de_saida_id": 3248,
+            "passo_de_saida": {
+                "id": 3248,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                "descricao": "Verifica\u00e7\u00e3o de idade gestacional entre 29 e 33 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3249,
+            "passo_de_entrada": {
+                "id": 3249,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encerrar Protocolo de Diabetes Gestacional",
+                "descricao": "Finalizando protocolo Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2471,
+                "nome": "gestacao_nao_esta_entre_29_e_33_semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2446
+                ],
+                "argumentos": [
+                    "idade_gestacional_29_33_semanas_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3289,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s16",
+            "descricao": "",
+            "passo_de_saida_id": 3248,
+            "passo_de_saida": {
+                "id": 3248,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                "descricao": "Verifica\u00e7\u00e3o de idade gestacional entre 29 e 33 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3250,
+            "passo_de_entrada": {
+                "id": 3250,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Ecocardiograma Fetal *",
+                "descricao": "-",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2472,
+                "nome": "gestacao_entre_29_e_33_semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2446
+                ],
+                "argumentos": [
+                    "idade_gestacional_29_33_semanas_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3290,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s17",
+            "descricao": "",
+            "passo_de_saida_id": 3243,
+            "passo_de_saida": {
+                "id": 3243,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                "descricao": "Verifica resultado de exame Glic\u00eamico em jejum",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3270,
+            "passo_de_entrada": {
+                "id": 3270,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de Diabetes Tipo 2",
+                "descricao": "Atribui diagn\u00f3stico de Diabetes Tipo 2 a Gestante\n\nOBS: \u00c9 necess\u00e1rio adicionar Diabetes Tipo 2 na lista de poss\u00edveis diagn\u00f3sticos",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "operacao": {
+                "id": 2473,
+                "nome": "glicemia_gestante_em_jejum_maior_que_126",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2444
+                ],
+                "argumentos": [
+                    "glicemia_jejum_92_126_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3291,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s18",
+            "descricao": "",
+            "passo_de_saida_id": 3270,
+            "passo_de_saida": {
+                "id": 3270,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de Diabetes Tipo 2",
+                "descricao": "Atribui diagn\u00f3stico de Diabetes Tipo 2 a Gestante\n\nOBS: \u00c9 necess\u00e1rio adicionar Diabetes Tipo 2 na lista de poss\u00edveis diagn\u00f3sticos",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "passo_de_entrada_id": 3251,
+            "passo_de_entrada": {
+                "id": 3251,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Nutricionista",
+                "descricao": "Encaminha Gestante para Nutricionista e End\u00f3crinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3292,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s19",
+            "descricao": "",
+            "passo_de_saida_id": 3251,
+            "passo_de_saida": {
+                "id": 3251,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Nutricionista",
+                "descricao": "Encaminha Gestante para Nutricionista e End\u00f3crinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3252,
+            "passo_de_entrada": {
+                "id": 3252,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Endocrinologista",
+                "descricao": "Encaminha Gestante para Endocrinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3293,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s20",
+            "descricao": "",
+            "passo_de_saida_id": 3252,
+            "passo_de_saida": {
+                "id": 3252,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Endocrinologista",
+                "descricao": "Encaminha Gestante para Endocrinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3253,
+            "passo_de_entrada": {
+                "id": 3253,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente Como Alto Risco (ap\u00f3s encaminhamento Nutricionista e Endocrinologista)",
+                "descricao": "Classificar o paciente como alto risco.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3294,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s21",
+            "descricao": "",
+            "passo_de_saida_id": 3253,
+            "passo_de_saida": {
+                "id": 3253,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente Como Alto Risco (ap\u00f3s encaminhamento Nutricionista e Endocrinologista)",
+                "descricao": "Classificar o paciente como alto risco.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 3254,
+            "passo_de_entrada": {
+                "id": 3254,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar Aprazamento Quinzenal (ap\u00f3s encaminhamento Nutricionista e Endocrinologista)",
+                "descricao": "Realizar Aprazamento Quinzenal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3295,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s22",
+            "descricao": "",
+            "passo_de_saida_id": 3254,
+            "passo_de_saida": {
+                "id": 3254,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar Aprazamento Quinzenal (ap\u00f3s encaminhamento Nutricionista e Endocrinologista)",
+                "descricao": "Realizar Aprazamento Quinzenal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "passo_de_entrada_id": 3255,
+            "passo_de_entrada": {
+                "id": 3255,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                "descricao": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3296,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s23",
+            "descricao": "",
+            "passo_de_saida_id": 3255,
+            "passo_de_saida": {
+                "id": 3255,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                "descricao": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3256,
+            "passo_de_entrada": {
+                "id": 3256,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Ecocardiograma Fetal",
+                "descricao": "Solicita Ecocardiograma Fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2474,
+                "nome": "gestacao_entre_24_e_28_semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2447
+                ],
+                "argumentos": [
+                    "idade_gestacional_24_28_semanas_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3297,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s24",
+            "descricao": "",
+            "passo_de_saida_id": 3255,
+            "passo_de_saida": {
+                "id": 3255,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                "descricao": "Verificar idade Gestacional ( entre 24 e 28 semanas)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3248,
+            "passo_de_entrada": {
+                "id": 3248,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                "descricao": "Verifica\u00e7\u00e3o de idade gestacional entre 29 e 33 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2475,
+                "nome": "gestacao_nao_esta_entre_24_e_28_semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2447
+                ],
+                "argumentos": [
+                    "idade_gestacional_24_28_semanas_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3298,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s25",
+            "descricao": "",
+            "passo_de_saida_id": 3256,
+            "passo_de_saida": {
+                "id": 3256,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Ecocardiograma Fetal",
+                "descricao": "Solicita Ecocardiograma Fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3248,
+            "passo_de_entrada": {
+                "id": 3248,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar idade Gestacional ( entre 29 e 33 semanas)",
+                "descricao": "Verifica\u00e7\u00e3o de idade gestacional entre 29 e 33 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3299,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s27",
+            "descricao": "",
+            "passo_de_saida_id": 3257,
+            "passo_de_saida": {
+                "id": 3257,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar exame USG Obst\u00e9trica",
+                "descricao": "Verificar Gestante realizou USG Obst\u00e9trica / Percentil abdominal do feto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3272,
+            "passo_de_entrada": {
+                "id": 3272,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar percentil abdominal do feto",
+                "descricao": "Verificar se Percentil abdominal do feto > 75%",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2476,
+                "nome": "gestante_realizou_exame_USG",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2448
+                ],
+                "argumentos": [
+                    "gestante_usg_obstretrica_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3300,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s28",
+            "descricao": "",
+            "passo_de_saida_id": 3257,
+            "passo_de_saida": {
+                "id": 3257,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar exame USG Obst\u00e9trica",
+                "descricao": "Verificar Gestante realizou USG Obst\u00e9trica / Percentil abdominal do feto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3259,
+            "passo_de_entrada": {
+                "id": 3259,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Exame ECG Fetal",
+                "descricao": "Verificar se gestante realizou Eletrocardiograma fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2477,
+                "nome": "gestante_nao_realizou_exame_USG",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2448
+                ],
+                "argumentos": [
+                    "gestante_usg_obstretrica_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3301,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s29",
+            "descricao": "",
+            "passo_de_saida_id": 3258,
+            "passo_de_saida": {
+                "id": 3258,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Endocrinologista\t(ap\u00f3s verificar % abdominal do feto)",
+                "descricao": "Encaminhar Gestante para Endocrinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3259,
+            "passo_de_entrada": {
+                "id": 3259,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Exame ECG Fetal",
+                "descricao": "Verificar se gestante realizou Eletrocardiograma fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3302,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s30",
+            "descricao": "",
+            "passo_de_saida_id": 3259,
+            "passo_de_saida": {
+                "id": 3259,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Exame ECG Fetal",
+                "descricao": "Verificar se gestante realizou Eletrocardiograma fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3260,
+            "passo_de_entrada": {
+                "id": 3260,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para acompanhamento na medicina fetal",
+                "descricao": "Encaminhar para acompanhamento na medicina fetal\n\n*OBS:\nA especialidade encaminhada foi o 'OBSTETRICIA NASCER BEM', necess\u00e1rio verificar se especialidade est\u00e1 correto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": {
+                "id": 2478,
+                "nome": "gestante_realizou_ECG_fetal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2449
+                ],
+                "argumentos": [
+                    "gestante_ecg_fetal_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3303,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s31",
+            "descricao": "",
+            "passo_de_saida_id": 3259,
+            "passo_de_saida": {
+                "id": 3259,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Exame ECG Fetal",
+                "descricao": "Verificar se gestante realizou Eletrocardiograma fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3261,
+            "passo_de_entrada": {
+                "id": 3261,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo Diabetes Gestacional",
+                "descricao": "TOTG Positivo Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2479,
+                "nome": "gestante_nao_realizou_ECG_fetal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2449
+                ],
+                "argumentos": [
+                    "gestante_ecg_fetal_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3304,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s32",
+            "descricao": "",
+            "passo_de_saida_id": 3261,
+            "passo_de_saida": {
+                "id": 3261,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo Diabetes Gestacional",
+                "descricao": "TOTG Positivo Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3273,
+            "passo_de_entrada": {
+                "id": 3273,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de Diabetes Gestacional",
+                "descricao": "Atribui diagn\u00f3stico de Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "operacao": {
+                "id": 2480,
+                "nome": "TOTG_positivo_para_diabetes_gestacional",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    2463,
+                    2460
+                ],
+                "argumentos": [
+                    "soma_totg_positivo_diabetes_gestacional",
+                    "CONST_UM"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3305,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s33",
+            "descricao": "",
+            "passo_de_saida_id": 3273,
+            "passo_de_saida": {
+                "id": 3273,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de Diabetes Gestacional",
+                "descricao": "Atribui diagn\u00f3stico de Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "passo_de_entrada_id": 3262,
+            "passo_de_entrada": {
+                "id": 3262,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Nutricionista (ap\u00f3s diagnostico Diabetes Gestacional)",
+                "descricao": "Encaminhar Gestante para Nutricionista\n\n*OBS: Atribuir prioridade nesse encaminhamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3306,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s34",
+            "descricao": "",
+            "passo_de_saida_id": 3262,
+            "passo_de_saida": {
+                "id": 3262,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Nutricionista (ap\u00f3s diagnostico Diabetes Gestacional)",
+                "descricao": "Encaminhar Gestante para Nutricionista\n\n*OBS: Atribuir prioridade nesse encaminhamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3274,
+            "passo_de_entrada": {
+                "id": 3274,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Prescreve controle glic\u00eamico em casa",
+                "descricao": "Prescreve controle glic\u00eamico em casa",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3307,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s35",
+            "descricao": "",
+            "passo_de_saida_id": 3274,
+            "passo_de_saida": {
+                "id": 3274,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Prescreve controle glic\u00eamico em casa",
+                "descricao": "Prescreve controle glic\u00eamico em casa",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "passo_de_entrada_id": 3263,
+            "passo_de_entrada": {
+                "id": 3263,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Perfil Glic\u00eamico (7 dias ap\u00f3s dieta)",
+                "descricao": "1. Jejum\n\n2. 2 horas depois do caf\u00e9 da manha\n\n3. 2 horas depois do almo\u00e7o\n\n4. 2 horas depois do jantar",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3308,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s36",
+            "descricao": "",
+            "passo_de_saida_id": 3263,
+            "passo_de_saida": {
+                "id": 3263,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Perfil Glic\u00eamico (7 dias ap\u00f3s dieta)",
+                "descricao": "1. Jejum\n\n2. 2 horas depois do caf\u00e9 da manha\n\n3. 2 horas depois do almo\u00e7o\n\n4. 2 horas depois do jantar",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3264,
+            "passo_de_entrada": {
+                "id": 3264,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente como Alto Risco (ap\u00f3s solicitar perfil glic\u00eamico)",
+                "descricao": "Classificar como ALTO RISCO",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3309,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s37",
+            "descricao": "",
+            "passo_de_saida_id": 3264,
+            "passo_de_saida": {
+                "id": 3264,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente como Alto Risco (ap\u00f3s solicitar perfil glic\u00eamico)",
+                "descricao": "Classificar como ALTO RISCO",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 3250,
+            "passo_de_entrada": {
+                "id": 3250,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Ecocardiograma Fetal *",
+                "descricao": "-",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3310,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s38",
+            "descricao": "",
+            "passo_de_saida_id": 3260,
+            "passo_de_saida": {
+                "id": 3260,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para acompanhamento na medicina fetal",
+                "descricao": "Encaminhar para acompanhamento na medicina fetal\n\n*OBS:\nA especialidade encaminhada foi o 'OBSTETRICIA NASCER BEM', necess\u00e1rio verificar se especialidade est\u00e1 correto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3261,
+            "passo_de_entrada": {
+                "id": 3261,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo Diabetes Gestacional",
+                "descricao": "TOTG Positivo Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3311,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s39",
+            "descricao": "",
+            "passo_de_saida_id": 3261,
+            "passo_de_saida": {
+                "id": 3261,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo Diabetes Gestacional",
+                "descricao": "TOTG Positivo Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3265,
+            "passo_de_entrada": {
+                "id": 3265,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Perfil Glic\u00eamico da Paciente",
+                "descricao": "Verificar se Gestante realizou Perfil Glic\u00eamico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2481,
+                "nome": "TOTG_negativo_para_diabetes_gestacional",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    2463,
+                    2460
+                ],
+                "argumentos": [
+                    "soma_totg_positivo_diabetes_gestacional",
+                    "CONST_UM"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3312,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s40",
+            "descricao": "",
+            "passo_de_saida_id": 3265,
+            "passo_de_saida": {
+                "id": 3265,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Perfil Glic\u00eamico da Paciente",
+                "descricao": "Verificar se Gestante realizou Perfil Glic\u00eamico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3266,
+            "passo_de_entrada": {
+                "id": 3266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Controlado com Dieta",
+                "descricao": "Verificar se todas as condi\u00e7\u00f5es da dieta foram atendidas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2482,
+                "nome": "gestante_realizou_perfil_glicemico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2452
+                ],
+                "argumentos": [
+                    "gestante_perfil_glicemico_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3313,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s41",
+            "descricao": "",
+            "passo_de_saida_id": 3266,
+            "passo_de_saida": {
+                "id": 3266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Controlado com Dieta",
+                "descricao": "Verificar se todas as condi\u00e7\u00f5es da dieta foram atendidas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3267,
+            "passo_de_entrada": {
+                "id": 3267,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Endocrinologista\t(ap\u00f3s controlado com Dieta)",
+                "descricao": "Encaminhar Gestante para Endocrinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": {
+                "id": 2483,
+                "nome": "pelo_menos_uma_condicao_nao_foi_atendido_pela_dieta",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    2464,
+                    2461
+                ],
+                "argumentos": [
+                    "soma_controlado_com_dietas",
+                    "CONST_QUATRO"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3314,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s42",
+            "descricao": "",
+            "passo_de_saida_id": 3266,
+            "passo_de_saida": {
+                "id": 3266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Controlado com Dieta",
+                "descricao": "Verificar se todas as condi\u00e7\u00f5es da dieta foram atendidas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3268,
+            "passo_de_entrada": {
+                "id": 3268,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+                "descricao": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "operacao": {
+                "id": 2484,
+                "nome": "todas_condicoes_controlado_com_dieta_positivos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    2464,
+                    2461
+                ],
+                "argumentos": [
+                    "soma_controlado_com_dietas",
+                    "CONST_QUATRO"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3315,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s43",
+            "descricao": "",
+            "passo_de_saida_id": 3267,
+            "passo_de_saida": {
+                "id": 3267,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Endocrinologista\t(ap\u00f3s controlado com Dieta)",
+                "descricao": "Encaminhar Gestante para Endocrinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3268,
+            "passo_de_entrada": {
+                "id": 3268,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+                "descricao": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3316,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s44",
+            "descricao": "",
+            "passo_de_saida_id": 3268,
+            "passo_de_saida": {
+                "id": 3268,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+                "descricao": "Atribui diagn\u00f3stico de diabetes gestacional controlado com dieta",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "passo_de_entrada_id": 3275,
+            "passo_de_entrada": {
+                "id": 3275,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Prescreve controle glic\u00eamico em casa (ap\u00f3s atribuir Diabetes Gestacional)",
+                "descricao": "Prescreve controle glic\u00eamico em casa",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3317,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s45",
+            "descricao": "",
+            "passo_de_saida_id": 3275,
+            "passo_de_saida": {
+                "id": 3275,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Prescreve controle glic\u00eamico em casa (ap\u00f3s atribuir Diabetes Gestacional)",
+                "descricao": "Prescreve controle glic\u00eamico em casa",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 82,
+                "servico": "Registrar Guia de Controle"
+            },
+            "passo_de_entrada_id": 3269,
+            "passo_de_entrada": {
+                "id": 3269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo para Diabetes Tipo 2",
+                "descricao": "Glicemia em jejum acima de 126 mg/dl ou Glicemia depois de 2h acima de 200 mg/dl",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3318,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s46",
+            "descricao": "",
+            "passo_de_saida_id": 3265,
+            "passo_de_saida": {
+                "id": 3265,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Perfil Glic\u00eamico da Paciente",
+                "descricao": "Verificar se Gestante realizou Perfil Glic\u00eamico",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3269,
+            "passo_de_entrada": {
+                "id": 3269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo para Diabetes Tipo 2",
+                "descricao": "Glicemia em jejum acima de 126 mg/dl ou Glicemia depois de 2h acima de 200 mg/dl",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2485,
+                "nome": "gestante_nao_realizou_perfil_glicemico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2452
+                ],
+                "argumentos": [
+                    "gestante_perfil_glicemico_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3319,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s47",
+            "descricao": "",
+            "passo_de_saida_id": 3269,
+            "passo_de_saida": {
+                "id": 3269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo para Diabetes Tipo 2",
+                "descricao": "Glicemia em jejum acima de 126 mg/dl ou Glicemia depois de 2h acima de 200 mg/dl",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3249,
+            "passo_de_entrada": {
+                "id": 3249,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encerrar Protocolo de Diabetes Gestacional",
+                "descricao": "Finalizando protocolo Diabetes Gestacional",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2486,
+                "nome": "TOTG_positivo_diabetes_tipo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorQue",
+                "operador_display": "Maior Que",
+                "argumentos_ids": [
+                    2460,
+                    2463
+                ],
+                "argumentos": [
+                    "CONST_UM",
+                    "soma_totg_positivo_diabetes_gestacional"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3320,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s48",
+            "descricao": "",
+            "passo_de_saida_id": 3269,
+            "passo_de_saida": {
+                "id": 3269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "TOTG Positivo para Diabetes Tipo 2",
+                "descricao": "Glicemia em jejum acima de 126 mg/dl ou Glicemia depois de 2h acima de 200 mg/dl",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3270,
+            "passo_de_entrada": {
+                "id": 3270,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Atribui diagn\u00f3stico de Diabetes Tipo 2",
+                "descricao": "Atribui diagn\u00f3stico de Diabetes Tipo 2 a Gestante\n\nOBS: \u00c9 necess\u00e1rio adicionar Diabetes Tipo 2 na lista de poss\u00edveis diagn\u00f3sticos",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 81,
+                "servico": "Registrar Diagn\u00f3stico"
+            },
+            "operacao": {
+                "id": 2487,
+                "nome": "totg_positivo_diabetes_gestacional_tipo_2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    2463,
+                    2460
+                ],
+                "argumentos": [
+                    "soma_totg_positivo_diabetes_gestacional",
+                    "CONST_UM"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3321,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s26",
+            "descricao": "",
+            "passo_de_saida_id": 3137,
+            "passo_de_saida": {
+                "id": 3137,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar atendimento",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3257,
+            "passo_de_entrada": {
+                "id": 3257,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar exame USG Obst\u00e9trica",
+                "descricao": "Verificar Gestante realizou USG Obst\u00e9trica / Percentil abdominal do feto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2488,
+                "nome": "retorno_de_atendimento",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2395
+                ],
+                "argumentos": [
+                    "verifica_retorno_atendimento_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3322,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s2",
+            "descricao": "",
+            "passo_de_saida_id": 3138,
+            "passo_de_saida": {
+                "id": 3138,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3139,
+            "passo_de_entrada": {
+                "id": 3139,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar fatores de risco na gestante",
+                "descricao": "Positivo para pelo menos UM fator de risco:",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2489,
+                "nome": "glicemia_jejum_menor_92",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2396
+                ],
+                "argumentos": [
+                    "glicemia_jejum_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3323,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s7",
+            "descricao": "",
+            "passo_de_saida_id": 3138,
+            "passo_de_saida": {
+                "id": 3138,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar resultado de exame Glic\u00eamico ( > 92 mg/dl)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3243,
+            "passo_de_entrada": {
+                "id": 3243,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar resultado de exame Glic\u00eamico (entre 92 mg/dl  e 126 mg/dl)",
+                "descricao": "Verifica resultado de exame Glic\u00eamico em jejum",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2490,
+                "nome": "glicemia_jejum_maior_92",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2396
+                ],
+                "argumentos": [
+                    "glicemia_jejum_pc002"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3324,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s49",
+            "descricao": "",
+            "passo_de_saida_id": 3272,
+            "passo_de_saida": {
+                "id": 3272,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar percentil abdominal do feto",
+                "descricao": "Verificar se Percentil abdominal do feto > 75%",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3258,
+            "passo_de_entrada": {
+                "id": 3258,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Gestante para Endocrinologista\t(ap\u00f3s verificar % abdominal do feto)",
+                "descricao": "Encaminhar Gestante para Endocrinologista",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": {
+                "id": 2491,
+                "nome": "percentil_abdominal_feto_maior_75%",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2459
+                ],
+                "argumentos": [
+                    "perc_abdom_maior_75%"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3325,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s50",
+            "descricao": "",
+            "passo_de_saida_id": 3272,
+            "passo_de_saida": {
+                "id": 3272,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar percentil abdominal do feto",
+                "descricao": "Verificar se Percentil abdominal do feto > 75%",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3259,
+            "passo_de_entrada": {
+                "id": 3259,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Exame ECG Fetal",
+                "descricao": "Verificar se gestante realizou Eletrocardiograma fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2492,
+                "nome": "percentil_abdominal_feto_menor_75%",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2459
+                ],
+                "argumentos": [
+                    "perc_abdom_maior_75%"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 2395,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "verifica_retorno_atendimento_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2396,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "glicemia_jejum_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2397,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "diabetes_gestacional_anterior_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2398,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "rn_com_macrosomia_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2399,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "pais_diabeticos_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2400,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_superior_35_anos_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2441,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ovario_policistico_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2442,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "imc_maior_30_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2443,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "glicosuria_urina_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2444,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "glicemia_jejum_92_126_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2445,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_24_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2446,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_29_33_semanas_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2447,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_24_28_semanas_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2448,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gestante_usg_obstretrica_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2449,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gestante_ecg_fetal_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2450,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "totg_glicemia_jejum_92_126_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2451,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "totg_glicemia_2h_180_200_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2452,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gestante_perfil_glicemico_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2453,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "controle_glicemico_jejum_70_90_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2454,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "2h_almoco_100_120_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2455,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "2h_cafe_100_120_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2456,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "2h_jantar_100_120_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2457,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "glicemia_jejum_126_totg_2_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2458,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "glicemia_2h_200_totg_pc002",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2459,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "perc_abdom_maior_75%",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 2460,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "CONST_UM",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 2461,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "CONST_QUATRO",
+            "peso": 1.0,
+            "valor": 4.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 2462,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "soma_fatores_riscos_diabetes",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                2397,
+                2398,
+                2399,
+                2400,
+                2441,
+                2442,
+                2443
+            ],
+            "argumentos": [
+                "diabetes_gestacional_anterior_pc002",
+                "rn_com_macrosomia_pc002",
+                "pais_diabeticos_pc002",
+                "idade_superior_35_anos_pc002",
+                "ovario_policistico_pc002",
+                "imc_maior_30_pc002",
+                "glicosuria_urina_pc002"
+            ]
+        },
+        {
+            "id": 2463,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "soma_totg_positivo_diabetes_gestacional",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                2450,
+                2451
+            ],
+            "argumentos": [
+                "totg_glicemia_jejum_92_126_pc002",
+                "totg_glicemia_2h_180_200_pc002"
+            ]
+        },
+        {
+            "id": 2464,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "soma_controlado_com_dietas",
+            "descricao": "",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                2453,
+                2454,
+                2456,
+                2455
+            ],
+            "argumentos": [
+                "controle_glicemico_jejum_70_90_pc002",
+                "2h_almoco_100_120_pc002",
+                "2h_jantar_100_120_pc002",
+                "2h_cafe_100_120_pc002"
+            ]
+        }
+    ]
+}

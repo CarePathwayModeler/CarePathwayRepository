@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3361" url="" name="Urtic&#xe1;ria Pedi&#xe1;trico" code="H040">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20261" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Sintomas" description="" isInitial="true" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Qual sintoma o paciente apresenta?" url="" id="10261">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sintoma_paciente" id="19841" weight="1" value="0.0">
+        <option description="Placas Urticariformes" weight="5"/>
+        <option description="Angioedema" weight="10"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20262" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Placas Urticariformes] Sinais de In&#xed;cio S&#xfa;bito" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="&#xc9; associado &#xe0; sinais de in&#xed;cio s&#xfa;bito?" url="" id="10262">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_inicio_subito" id="19842" weight="1" value="0.0">
+        <option description="Dor abdominal ou tor&#xe1;cica" weight="1"/>
+        <option description="Sintomas gastro intestinais (diarr&#xe9;ia, disfagia, n&#xe1;usea/v&#xf4;mitos)" weight="1"/>
+        <option description="Cianose, m&#xe1; perfus&#xe3;o, hipotens&#xe3;o, taquicardia" weight="1"/>
+        <option description="S&#xed;ncope, confus&#xe3;o mental, vertigem" weight="1"/>
+        <option description="Sintomas respirat&#xf3;rios (dispn&#xe9;ia, estridor, sibil&#xe2;ncia, taquipn&#xe9;ia, tosse de in&#xed;cio s&#xfa;bito)" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20263" type="Tratamento" type_verbose="Tratamento" url="" name="[Angioedema ou Placas Urticariformes com Sinais de &#xcd;nicio S&#xfa;bito] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Passar caso com chefia local.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Encaminhar paciente ao eixo vermelho para avaliar necessidade de observa&amp;ccedil;&amp;atilde;o rigorosa + monitoriza&amp;ccedil;&amp;atilde;o + controle PA&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Prescri&amp;ccedil;&amp;atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&amp;eacute; 3x se persistir sintomas.&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.2 //@sequence.3" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20264" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Prescrever anti histam&amp;iacute;nico na emerg&amp;ecirc;ncia.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Deixar 2h em observa&amp;ccedil;&amp;atilde;o e reavaliar ap&amp;oacute;s.&lt;/span>&lt;/p>" inputSequences="//@sequence.4" outputSequences="//@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20265" type="Receita" type_verbose="Receita" url="" name="Alta com Sintom&#xe1;ticos" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Orienta&amp;ccedil;&amp;otilde;es gerais:&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Identificar e remover a causa&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Orientar sobre a doen&amp;ccedil;a&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Evitar AINES&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Usar repelentes&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Retorno se piora do quadro&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.7 //@sequence.9 //@sequence.11 //@sequence.12">
+    <item id="5441" url="" name="Hidroxizina 2mg/5ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 8/8h"/>
+    <item id="5442" url="" name="Desloratadina 0,5mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml 1 vez ao dia"/>
+    <item id="5443" url="" name="Loratadina 1mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml 1 vez ao dia"/>
+    <item id="5444" url="" name="Fexofenadina 6mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 12/12h"/>
+    <item id="5445" url="" name="Prednisolona 3mg/ml _____ 1 Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml 1 vez ao dia por 5 dias"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20266" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Angioedema ou Sinais de &#xcd;nicio S&#xfa;bito] Avaliar Melhora Cl&#xed;nica" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Houve melhora cl&#xed;nica?" url="" id="10263">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema" id="19843" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20267" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Tratamento] Avaliar Melhora Cl&#xed;nica" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Houve melhora cl&#xed;nica?" url="" id="10264">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_tratamento" id="19844" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20268" type="Tratamento" type_verbose="Tratamento" url="" name="[Sem Melhora Cl&#xed;nica] Conduta" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Prescri&amp;ccedil;&amp;atilde;o Adrenalina: IM no vasto lateral da coxa. Repetir a cada 15 minutos, at&amp;eacute; 3x se persistir sintomas.&lt;/span>&lt;/strong>&lt;/p>" inputSequences="//@sequence.10" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20269" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Angioedema] Houve melhora clinica" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Houve melhora cl&#xed;nica ap&#xf3;s tratamento?" url="" id="10265">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema_2" id="19845" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20270" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento - Angioedema" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Prescrever anti histam&amp;iacute;nico na emerg&amp;ecirc;ncia.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Deixar 2h em observa&amp;ccedil;&amp;atilde;o e reavaliar ap&amp;oacute;s.&lt;/span>&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Information" id="20271" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Chefia" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Discutir caso com chefia local&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.13"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="20272" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Avaliar melhora clinica ap&#xf3;s tratamento - Angioedema"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="20273" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-">
+    <operation name="Placas_Urticariformes" Operator="equal" id="19849">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintoma_paciente" id="19841" weight="1" value="0.0">
+        <option description="Placas Urticariformes" weight="5"/>
+        <option description="Angioedema" weight="10"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="5" id="19846" weight="1" value="5.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="20274" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-">
+    <operation name="Angioedema" Operator="equal" id="19850">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintoma_paciente" id="19841" weight="1" value="0.0">
+        <option description="Placas Urticariformes" weight="5"/>
+        <option description="Angioedema" weight="10"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="10" id="19847" weight="1" value="10.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="20275" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-">
+    <operation name="Cont&#xe9;m_sinais_de_in&#xed;cio_s&#xfa;bito" Operator="greaterOrEqual" id="19851">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_inicio_subito" id="19842" weight="1" value="0.0">
+        <option description="Dor abdominal ou tor&#xe1;cica" weight="1"/>
+        <option description="Sintomas gastro intestinais (diarr&#xe9;ia, disfagia, n&#xe1;usea/v&#xf4;mitos)" weight="1"/>
+        <option description="Cianose, m&#xe1; perfus&#xe3;o, hipotens&#xe3;o, taquicardia" weight="1"/>
+        <option description="S&#xed;ncope, confus&#xe3;o mental, vertigem" weight="1"/>
+        <option description="Sintomas respirat&#xf3;rios (dispn&#xe9;ia, estridor, sibil&#xe2;ncia, taquipn&#xe9;ia, tosse de in&#xed;cio s&#xfa;bito)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19848" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="20276" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-">
+    <operation name="N&#xe3;o_cont&#xe9;m_sinais_de_in&#xed;cio_s&#xfa;bito" Operator="lessThan" id="19852">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_inicio_subito" id="19842" weight="1" value="0.0">
+        <option description="Dor abdominal ou tor&#xe1;cica" weight="1"/>
+        <option description="Sintomas gastro intestinais (diarr&#xe9;ia, disfagia, n&#xe1;usea/v&#xf4;mitos)" weight="1"/>
+        <option description="Cianose, m&#xe1; perfus&#xe3;o, hipotens&#xe3;o, taquicardia" weight="1"/>
+        <option description="S&#xed;ncope, confus&#xe3;o mental, vertigem" weight="1"/>
+        <option description="Sintomas respirat&#xf3;rios (dispn&#xe9;ia, estridor, sibil&#xe2;ncia, taquipn&#xe9;ia, tosse de in&#xed;cio s&#xfa;bito)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19848" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="20277" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.5" id="20278" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-">
+    <operation name="N&#xe3;o_houve_melhora_cl&#xed;nica" id="19853">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema" id="19843" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.5" id="20279" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="-">
+    <operation name="Houve_melhora_cl&#xed;nica" Operator="affirmation" id="19854">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema" id="19843" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="20280" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="20281" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-">
+    <operation name="Houve_melhora_cl&#xed;nica_" Operator="affirmation" id="19855">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_tratamento" id="19844" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="20282" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-">
+    <operation name="N&#xe3;o_houve_melhora_cl&#xed;nica_" id="19856">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_tratamento" id="19844" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.7" id="20283" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.8" id="20284" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (com melhora clinica)" description="com melhora clinica">
+    <operation name="com melhora clinica" Operator="affirmation" id="19857">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema_2" id="19845" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="20285" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (sem melhora clinica)" description="sem melhora clinica">
+    <operation name="sem melhora clinica" id="19858">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema_2" id="19845" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sintoma_paciente" id="19841" weight="1" value="0.0">
+    <option description="Placas Urticariformes" weight="5"/>
+    <option description="Angioedema" weight="10"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_inicio_subito" id="19842" weight="1" value="0.0">
+    <option description="Dor abdominal ou tor&#xe1;cica" weight="1"/>
+    <option description="Sintomas gastro intestinais (diarr&#xe9;ia, disfagia, n&#xe1;usea/v&#xf4;mitos)" weight="1"/>
+    <option description="Cianose, m&#xe1; perfus&#xe3;o, hipotens&#xe3;o, taquicardia" weight="1"/>
+    <option description="S&#xed;ncope, confus&#xe3;o mental, vertigem" weight="1"/>
+    <option description="Sintomas respirat&#xf3;rios (dispn&#xe9;ia, estridor, sibil&#xe2;ncia, taquipn&#xe9;ia, tosse de in&#xed;cio s&#xfa;bito)" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema" id="19843" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_tratamento" id="19844" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="melhora_clinica_angioedema_2" id="19845" weight="1" value="true"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="5" id="19846" weight="1" value="5.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="10" id="19847" weight="1" value="10.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="19848" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,747 @@
+{
+    "id": 3124,
+    "url": "",
+    "codigo": "H050",
+    "nome": "Laringite Pedi\u00e1trico",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 602,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:25:36.230409-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:25:25.478477-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:25:36.230409-03:00"
+    },
+    "elementos": [
+        {
+            "id": 16797,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento inicial",
+            "descricao": "<p><strong>Paciente com tosse estridulosa e/ou roquid&atilde;o + estridor</strong></p>\n\n<ul>\n\t<li>Verificar satura&ccedil;&atilde;o (oximetria pulso).</li>\n\t<li>Excluir presen&ccedil;a de corpo estranho em vias a&eacute;reas.</li>\n\t<li>Prescrever:</li>\n</ul>\n\n<ol>\n\t<li>Decadron 0,6 mg/kg/dose (m&aacute;x 10mg) EV ou IM</li>\n\t<li>Aerosol&nbsp;com Adrenalina - 3 a 5 ml PURO - 3x de 30 em 30 min</li>\n</ol>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 601,
+                    "url": "",
+                    "medicamento": 36811,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3705,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "LENTO COM SF 0,9%",
+                        "codigo_principio_ativo": 819,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 50,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 10,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 481,
+                        "codigo_produto": 1274,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "AMPL     10.00MG/2,5ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 1.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 4,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 819,
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 8,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [
+                {
+                    "url": "OXIMETRO DE PULSO",
+                    "procedimento": "75130035",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 16903,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16797,
+                    "passo_de_saida": "Tratamento: Tratamento inicial",
+                    "passo_de_entrada_id": 16798,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16798,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar melhora",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8869,
+                    "url": "",
+                    "texto": "Paciente melhorou?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16781,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "melhora_1",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16903,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16797,
+                    "passo_de_saida": "Tratamento: Tratamento inicial",
+                    "passo_de_entrada_id": 16798,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16904,
+                    "url": "",
+                    "nome": "S2 (houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 16798,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16799,
+                    "passo_de_entrada": "Receita: Alta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16905,
+                    "url": "",
+                    "nome": "S3 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 16798,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16800,
+                    "passo_de_entrada": "Tratamento: [Sem melhora] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16799,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Alta",
+            "descricao": "<p><span style=\"font-size:14px\">Dar alta com:</span></p>\n\n<ol>\n\t<li><span style=\"font-size:14px\">Dexametasona XPE - 1 FR - Dar ____ ml de 6/6h por 5 dias.</span></li>\n\t<li><span style=\"font-size:14px\">Aerosol com SF0,9% 5 ml + Pulmicort 0,25 mcg - 1 AMP - 12/12h por 5 dias</span></li>\n\t<li><span style=\"font-size:14px\">Orientar paciente para aumentar oferta de l&iacute;quidos e evitar estresse.&nbsp;</span></li>\n</ol>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4512,
+                    "url": "",
+                    "nome": "DEXAMETASONA XPE ______ 1 Fr",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar ______ ml de 6/6h por 5 dias",
+                    "ordem": 1
+                },
+                {
+                    "id": 4513,
+                    "url": "",
+                    "nome": "AEROSOL COM SF0,9% 5 ml + PULMICORT 0,25 mcg",
+                    "medicamento": null,
+                    "apresentacao": "AMPL",
+                    "via_acesso": 20,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16904,
+                    "url": "",
+                    "nome": "S2 (houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 16798,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16799,
+                    "passo_de_entrada": "Receita: Alta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16907,
+                    "url": "",
+                    "nome": "S6 (Houve melhora)",
+                    "descricao": "Houve melhora",
+                    "passo_de_saida_id": 16901,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16799,
+                    "passo_de_entrada": "Receita: Alta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16800,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Sem melhora] Tratamento",
+            "descricao": "<ul>\n\t<li>Verificar satura&ccedil;&atilde;o O2 (Oximetria).</li>\n\t<li>Manter observa&ccedil;&atilde;o.</li>\n\t<li>Avaliar necessidade de M&aacute;scara de Venturi com O2 umidificado - conforme satura&ccedil;&atilde;o.</li>\n\t<li>Dieta zero.&nbsp;</li>\n\t<li>HV - SGF 1:1 lento (hidrata&ccedil;&atilde;o).</li>\n\t<li>Aerosol com Adrenalina 3-5 ml - de 1/1h at&eacute; melhora do quadro.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "OXIMETRIA NAO INVASIVA",
+                    "procedimento": "20102054",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2 C/MASCARA DE VENTURI/FACIAL",
+                    "procedimento": "75010014",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16905,
+                    "url": "",
+                    "nome": "S3 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 16798,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16800,
+                    "passo_de_entrada": "Tratamento: [Sem melhora] Tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16906,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16800,
+                    "passo_de_saida": "Tratamento: [Sem melhora] Tratamento",
+                    "passo_de_entrada_id": 16901,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16901,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar melhora",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8870,
+                    "url": "",
+                    "texto": "Paciente melhorou?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16782,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "melhora_2",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16906,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "-",
+                    "passo_de_saida_id": 16800,
+                    "passo_de_saida": "Tratamento: [Sem melhora] Tratamento",
+                    "passo_de_entrada_id": 16901,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 16907,
+                    "url": "",
+                    "nome": "S6 (Houve melhora)",
+                    "descricao": "Houve melhora",
+                    "passo_de_saida_id": 16901,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16799,
+                    "passo_de_entrada": "Receita: Alta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 16908,
+                    "url": "",
+                    "nome": "S7 (N\u00e3o houve melhora)",
+                    "descricao": "N\u00e3o houve melhora",
+                    "passo_de_saida_id": 16901,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16902,
+                    "passo_de_entrada": "Tratamento: [Sem melhora] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 16902,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Sem melhora] Conduta",
+            "descricao": "<p><span style=\"font-size:14px\"><u>Passar caso com chefia</u> e solicitar exames.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "laringite pedi\u00e1trico sem melhora",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "laringite pedi\u00e1trico sem melhora",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "laringite pedi\u00e1trico sem melhora",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "laringite pedi\u00e1trico sem melhora",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 16908,
+                    "url": "",
+                    "nome": "S7 (N\u00e3o houve melhora)",
+                    "descricao": "N\u00e3o houve melhora",
+                    "passo_de_saida_id": 16901,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar melhora",
+                    "passo_de_entrada_id": 16902,
+                    "passo_de_entrada": "Tratamento: [Sem melhora] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 16903,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "-",
+            "passo_de_saida_id": 16797,
+            "passo_de_saida": {
+                "id": 16797,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento inicial",
+                "descricao": "<p><strong>Paciente com tosse estridulosa e/ou roquid&atilde;o + estridor</strong></p>\n\n<ul>\n\t<li>Verificar satura&ccedil;&atilde;o (oximetria pulso).</li>\n\t<li>Excluir presen&ccedil;a de corpo estranho em vias a&eacute;reas.</li>\n\t<li>Prescrever:</li>\n</ul>\n\n<ol>\n\t<li>Decadron 0,6 mg/kg/dose (m&aacute;x 10mg) EV ou IM</li>\n\t<li>Aerosol&nbsp;com Adrenalina - 3 a 5 ml PURO - 3x de 30 em 30 min</li>\n</ol>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16798,
+            "passo_de_entrada": {
+                "id": 16798,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16904,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (houve melhora)",
+            "descricao": "houve melhora",
+            "passo_de_saida_id": 16798,
+            "passo_de_saida": {
+                "id": 16798,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16799,
+            "passo_de_entrada": {
+                "id": 16799,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta",
+                "descricao": "<p><span style=\"font-size:14px\">Dar alta com:</span></p>\n\n<ol>\n\t<li><span style=\"font-size:14px\">Dexametasona XPE - 1 FR - Dar ____ ml de 6/6h por 5 dias.</span></li>\n\t<li><span style=\"font-size:14px\">Aerosol com SF0,9% 5 ml + Pulmicort 0,25 mcg - 1 AMP - 12/12h por 5 dias</span></li>\n\t<li><span style=\"font-size:14px\">Orientar paciente para aumentar oferta de l&iacute;quidos e evitar estresse.&nbsp;</span></li>\n</ol>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 16783,
+                "nome": "houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16781
+                ],
+                "argumentos": [
+                    "melhora_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16905,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (n\u00e3o houve melhora)",
+            "descricao": "n\u00e3o houve melhora",
+            "passo_de_saida_id": 16798,
+            "passo_de_saida": {
+                "id": 16798,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16800,
+            "passo_de_entrada": {
+                "id": 16800,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem melhora] Tratamento",
+                "descricao": "<ul>\n\t<li>Verificar satura&ccedil;&atilde;o O2 (Oximetria).</li>\n\t<li>Manter observa&ccedil;&atilde;o.</li>\n\t<li>Avaliar necessidade de M&aacute;scara de Venturi com O2 umidificado - conforme satura&ccedil;&atilde;o.</li>\n\t<li>Dieta zero.&nbsp;</li>\n\t<li>HV - SGF 1:1 lento (hidrata&ccedil;&atilde;o).</li>\n\t<li>Aerosol com Adrenalina 3-5 ml - de 1/1h at&eacute; melhora do quadro.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16784,
+                "nome": "n\u00e3o houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16781
+                ],
+                "argumentos": [
+                    "melhora_1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16906,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "-",
+            "passo_de_saida_id": 16800,
+            "passo_de_saida": {
+                "id": 16800,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem melhora] Tratamento",
+                "descricao": "<ul>\n\t<li>Verificar satura&ccedil;&atilde;o O2 (Oximetria).</li>\n\t<li>Manter observa&ccedil;&atilde;o.</li>\n\t<li>Avaliar necessidade de M&aacute;scara de Venturi com O2 umidificado - conforme satura&ccedil;&atilde;o.</li>\n\t<li>Dieta zero.&nbsp;</li>\n\t<li>HV - SGF 1:1 lento (hidrata&ccedil;&atilde;o).</li>\n\t<li>Aerosol com Adrenalina 3-5 ml - de 1/1h at&eacute; melhora do quadro.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16901,
+            "passo_de_entrada": {
+                "id": 16901,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16907,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Houve melhora)",
+            "descricao": "Houve melhora",
+            "passo_de_saida_id": 16901,
+            "passo_de_saida": {
+                "id": 16901,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16799,
+            "passo_de_entrada": {
+                "id": 16799,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta",
+                "descricao": "<p><span style=\"font-size:14px\">Dar alta com:</span></p>\n\n<ol>\n\t<li><span style=\"font-size:14px\">Dexametasona XPE - 1 FR - Dar ____ ml de 6/6h por 5 dias.</span></li>\n\t<li><span style=\"font-size:14px\">Aerosol com SF0,9% 5 ml + Pulmicort 0,25 mcg - 1 AMP - 12/12h por 5 dias</span></li>\n\t<li><span style=\"font-size:14px\">Orientar paciente para aumentar oferta de l&iacute;quidos e evitar estresse.&nbsp;</span></li>\n</ol>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 16785,
+                "nome": "Houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16782
+                ],
+                "argumentos": [
+                    "melhora_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 16908,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (N\u00e3o houve melhora)",
+            "descricao": "N\u00e3o houve melhora",
+            "passo_de_saida_id": 16901,
+            "passo_de_saida": {
+                "id": 16901,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar melhora",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 16902,
+            "passo_de_entrada": {
+                "id": 16902,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem melhora] Conduta",
+                "descricao": "<p><span style=\"font-size:14px\"><u>Passar caso com chefia</u> e solicitar exames.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16786,
+                "nome": "N\u00e3o houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16782
+                ],
+                "argumentos": [
+                    "melhora_2"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16781,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "melhora_1",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        },
+        {
+            "id": 16782,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "melhora_2",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        }
+    ]
+}

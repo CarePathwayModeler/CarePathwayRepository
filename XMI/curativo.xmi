@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3115" url="" name="Curativo" code="H047">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17476" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar sinais" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="H&#xe1; sinais infecciosos, necrose ou forma&#xe7;&#xe3;o de abscessos?" url="" id="9070">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sinais" id="17262" weight="1" value="true"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17477" type="Tratamento" type_verbose="Tratamento" url="" name="Curativo" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Selecione o tipo de curativo:&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.1">
+    <procedure url="CURATIVO COM ATADURA E GAZE ACOCHOADA" procedure="76060004" quantity="1"/>
+    <procedure url="CURATIVO COM IRUXOL/KOLAGENASE PEQUENO" procedure="76060006" quantity="1"/>
+    <procedure url="CURATIVO COM SULFADIAZINA" procedure="76060005" quantity="1"/>
+    <procedure url="CURATIVO GRANDE" procedure="76060003" quantity="1"/>
+    <procedure url="CURATIVO MEDIO" procedure="76060002" quantity="1"/>
+    <procedure url="CURATIVO PEQUENO" procedure="76060001" quantity="1"/>
+    <procedure url="RETIRADA DE PONTOS" procedure="76050007" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="17478" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Encaminhamento para Partes Moles" description="" isTerminal="true" inputSequences="//@sequence.0"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17479" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (h&#xe1; sinais)" description="h&#xe1; sinais">
+    <operation name="h&#xe1; sinais" Operator="affirmation" id="17263">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais" id="17262" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17480" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (n&#xe3;o h&#xe1; sinais)" description="N&#xe3;o h&#xe1; sinais">
+    <operation name="n&#xe3;o h&#xe1; sinais" id="17264">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sinais" id="17262" weight="1" value="true"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sinais" id="17262" weight="1" value="true"/>
+</pathwayMetamodel:Pathway>

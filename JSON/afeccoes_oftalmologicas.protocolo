@@ -1,0 +1,878 @@
+{
+    "id": 3250,
+    "url": "",
+    "codigo": "H051",
+    "nome": "Afec\u00e7\u00f5es Oftalmol\u00f3gicas",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 621,
+    "versao": 6,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T17:13:11.825431-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T17:13:11.825431-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T17:13:37.838988-03:00"
+    },
+    "elementos": [
+        {
+            "id": 19440,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar sintomas",
+            "descricao": "<p><span style=\"font-size:16px\">Verificar se paciente apresenta algum dos sintomas abaixo:</span></p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9900,
+                    "url": "",
+                    "texto": "Baixa acuidade visual",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19145,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "acuidade_visual",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10021,
+                    "url": "",
+                    "texto": "Dor ocular intensa",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19146,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dor_ocular",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 10022,
+                    "url": "",
+                    "texto": "Fotofobia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19147,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fotofobia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 10023,
+                    "url": "",
+                    "texto": "Trauma Ocular",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19148,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "trauma_ocular",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 10024,
+                    "url": "",
+                    "texto": "Corpo estranho",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19149,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "corpo_estranho",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 10025,
+                    "url": "",
+                    "texto": "Dor na movimenta\u00e7\u00e3o ocular",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19150,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dor_movimentacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 10026,
+                    "url": "",
+                    "texto": "Restri\u00e7\u00e3o na movimenta\u00e7\u00e3o ocular",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19151,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "restricao_movimentacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 10027,
+                    "url": "",
+                    "texto": "Sintomas h\u00e1 mais de 5 dias?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19152,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_mais_dias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 19725,
+                    "url": "",
+                    "nome": "S1 (com algum sintoma)",
+                    "descricao": "com algum sintoma",
+                    "passo_de_saida_id": 19440,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sintomas",
+                    "passo_de_entrada_id": 19721,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar Oftalmologista",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19726,
+                    "url": "",
+                    "nome": "S2 (sem nenhum sintoma)",
+                    "descricao": "sem nenhum sintoma",
+                    "passo_de_saida_id": 19440,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sintomas",
+                    "passo_de_entrada_id": 19722,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19721,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar Oftalmologista",
+            "descricao": "<p><span style=\"font-size:18px\">Encaminhar paciente para&nbsp;Oftalmologista.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19725,
+                    "url": "",
+                    "nome": "S1 (com algum sintoma)",
+                    "descricao": "com algum sintoma",
+                    "passo_de_saida_id": 19440,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sintomas",
+                    "passo_de_entrada_id": 19721,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar Oftalmologista",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19727,
+                    "url": "",
+                    "nome": "S3 (conjuntivite bacteriana)",
+                    "descricao": "conjuntivite bacteriana",
+                    "passo_de_saida_id": 19722,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "passo_de_entrada_id": 19721,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar Oftalmologista",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19722,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Diagnosticar paciente",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10028,
+                    "url": "",
+                    "texto": "Qual o diagn\u00f3stico do paciente a partir da an\u00e1lise do olho?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19153,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "diagnostico",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Conjuntivite viral: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre\u00e7\u00e3o ocular aquosa e sensa\u00e7\u00e3o de corpo estranho.",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Conjuntivite bacteriana: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre\u00e7\u00e3o ocular branco-amarelada ou purulenta e sensa\u00e7\u00e3o de corpo estranho.",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Hemorragia subconjuntival: Olho vermelho (sangue sob a conjuntiva em \u00e1rea localizada) unilateral e aus\u00eancia de outros sintomas",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19726,
+                    "url": "",
+                    "nome": "S2 (sem nenhum sintoma)",
+                    "descricao": "sem nenhum sintoma",
+                    "passo_de_saida_id": 19440,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sintomas",
+                    "passo_de_entrada_id": 19722,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19727,
+                    "url": "",
+                    "nome": "S3 (conjuntivite bacteriana)",
+                    "descricao": "conjuntivite bacteriana",
+                    "passo_de_saida_id": 19722,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "passo_de_entrada_id": 19721,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar Oftalmologista",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19728,
+                    "url": "",
+                    "nome": "S4 (hemorragia subconjuntival)",
+                    "descricao": "hemorragia subconjuntival",
+                    "passo_de_saida_id": 19722,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "passo_de_entrada_id": 19723,
+                    "passo_de_entrada": "Receita: [Hemorragia subconjuntival] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19729,
+                    "url": "",
+                    "nome": "S5 (conjuntivite viral)",
+                    "descricao": "conjuntivite viral",
+                    "passo_de_saida_id": 19722,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "passo_de_entrada_id": 19724,
+                    "passo_de_entrada": "Receita: [Conjuntivite Viral] Receita",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19723,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Hemorragia subconjuntival] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Compressa gelada 4x/dia    \n\nRetorno se persist\u00eancia dos sintomas em 5 dias ou piora.\nInvestigar hipertens\u00e3o arterial sist\u00eamica",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5178,
+                    "url": "",
+                    "nome": "SYSTANE COL\u00cdRIO _______ 1 FR",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 17,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Pingar 1 gota no olho de 4/4horas.",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19728,
+                    "url": "",
+                    "nome": "S4 (hemorragia subconjuntival)",
+                    "descricao": "hemorragia subconjuntival",
+                    "passo_de_saida_id": 19722,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "passo_de_entrada_id": 19723,
+                    "passo_de_entrada": "Receita: [Hemorragia subconjuntival] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19724,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Conjuntivite Viral] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Compressa gelada 4x/dia.  \n  \nRetorno se persist\u00eancia dos sintomas em 5 dias ou piora.",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5179,
+                    "url": "",
+                    "nome": "SYSTANE COL\u00cdRIO _______ 1 FR",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 17,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Pingar 1 gota no olho de 4/4horas.",
+                    "ordem": 1
+                },
+                {
+                    "id": 5180,
+                    "url": "",
+                    "nome": "NIMESULIDA 100 mg _______ 1 CX",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19729,
+                    "url": "",
+                    "nome": "S5 (conjuntivite viral)",
+                    "descricao": "conjuntivite viral",
+                    "passo_de_saida_id": 19722,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Diagnosticar paciente",
+                    "passo_de_entrada_id": 19724,
+                    "passo_de_entrada": "Receita: [Conjuntivite Viral] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19725,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (com algum sintoma)",
+            "descricao": "com algum sintoma",
+            "passo_de_saida_id": 19440,
+            "passo_de_saida": {
+                "id": 19440,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar sintomas",
+                "descricao": "<p><span style=\"font-size:16px\">Verificar se paciente apresenta algum dos sintomas abaixo:</span></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19721,
+            "passo_de_entrada": {
+                "id": 19721,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Oftalmologista",
+                "descricao": "<p><span style=\"font-size:18px\">Encaminhar paciente para&nbsp;Oftalmologista.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19158,
+                "nome": "com algum sintoma",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    19157,
+                    19154
+                ],
+                "argumentos": [
+                    "com_sintomas",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19726,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sem nenhum sintoma)",
+            "descricao": "sem nenhum sintoma",
+            "passo_de_saida_id": 19440,
+            "passo_de_saida": {
+                "id": 19440,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar sintomas",
+                "descricao": "<p><span style=\"font-size:16px\">Verificar se paciente apresenta algum dos sintomas abaixo:</span></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19722,
+            "passo_de_entrada": {
+                "id": 19722,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Diagnosticar paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19159,
+                "nome": "sem nenhum sintoma",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    19157,
+                    19154
+                ],
+                "argumentos": [
+                    "com_sintomas",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19727,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (conjuntivite bacteriana)",
+            "descricao": "conjuntivite bacteriana",
+            "passo_de_saida_id": 19722,
+            "passo_de_saida": {
+                "id": 19722,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Diagnosticar paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19721,
+            "passo_de_entrada": {
+                "id": 19721,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar Oftalmologista",
+                "descricao": "<p><span style=\"font-size:18px\">Encaminhar paciente para&nbsp;Oftalmologista.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19160,
+                "nome": "conjuntivite bacteriana",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    19153,
+                    19155
+                ],
+                "argumentos": [
+                    "diagnostico",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19728,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (hemorragia subconjuntival)",
+            "descricao": "hemorragia subconjuntival",
+            "passo_de_saida_id": 19722,
+            "passo_de_saida": {
+                "id": 19722,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Diagnosticar paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19723,
+            "passo_de_entrada": {
+                "id": 19723,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Hemorragia subconjuntival] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Compressa gelada 4x/dia    \n\nRetorno se persist\u00eancia dos sintomas em 5 dias ou piora.\nInvestigar hipertens\u00e3o arterial sist\u00eamica"
+            },
+            "operacao": {
+                "id": 19401,
+                "nome": "hemorragia subconjuntival",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    19153,
+                    19156
+                ],
+                "argumentos": [
+                    "diagnostico",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19729,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (conjuntivite viral)",
+            "descricao": "conjuntivite viral",
+            "passo_de_saida_id": 19722,
+            "passo_de_saida": {
+                "id": 19722,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Diagnosticar paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19724,
+            "passo_de_entrada": {
+                "id": 19724,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Conjuntivite Viral] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Compressa gelada 4x/dia.  \n  \nRetorno se persist\u00eancia dos sintomas em 5 dias ou piora."
+            },
+            "operacao": {
+                "id": 19402,
+                "nome": "conjuntivite viral",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    19153,
+                    19154
+                ],
+                "argumentos": [
+                    "diagnostico",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 19145,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "acuidade_visual",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19146,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dor_ocular",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19147,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fotofobia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19148,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "trauma_ocular",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19149,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "corpo_estranho",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19150,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dor_movimentacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19151,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "restricao_movimentacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19152,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_mais_dias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19153,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "diagnostico",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Conjuntivite viral: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre\u00e7\u00e3o ocular aquosa e sensa\u00e7\u00e3o de corpo estranho.",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Conjuntivite bacteriana: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre\u00e7\u00e3o ocular branco-amarelada ou purulenta e sensa\u00e7\u00e3o de corpo estranho.",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Hemorragia subconjuntival: Olho vermelho (sangue sob a conjuntiva em \u00e1rea localizada) unilateral e aus\u00eancia de outros sintomas",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 19154,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19155,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19156,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 19157,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "com_sintomas",
+            "descricao": "Paciente com sintomas",
+            "visivel": false,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                19145,
+                19146,
+                19147,
+                19148,
+                19149,
+                19150,
+                19151,
+                19152
+            ],
+            "argumentos": [
+                "acuidade_visual",
+                "dor_ocular",
+                "fotofobia",
+                "trauma_ocular",
+                "corpo_estranho",
+                "dor_movimentacao",
+                "restricao_movimentacao",
+                "sintomas_mais_dias"
+            ]
+        }
+    ]
+}

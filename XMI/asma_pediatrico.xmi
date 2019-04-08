@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3125" url="" name="Asma Pedi&#xe1;trico" code="H049">
+  <element xsi:type="pathwayMetamodel:Treatment" id="16909" type="Tratamento" type_verbose="Tratamento" url="" name="Anamnese + Oximetria" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Anamnese + Exame F&amp;iacute;sico + Oximetria.&lt;/span>&lt;/p>" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16910" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Satura&#xe7;&#xe3;o" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Paciente apresenta Satura&#xe7;&#xe3;o &lt; 85%?" url="" id="8871">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="16787" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16911" type="Tratamento" type_verbose="Tratamento" url="" name="[Asma Grave] Sala de Cuidados" description="&lt;ul>&#xA;&#x9;&lt;li>Dieta Zero.&lt;/li>&#xA;&#x9;&lt;li>M&amp;aacute;scara de Venturi 50%&lt;/li>&#xA;&#x9;&lt;li>Pun&amp;ccedil;&amp;atilde;o com jelco&lt;/li>&#xA;&#x9;&lt;li>Aerossol 1h cont&amp;iacute;nua com&lt;strong> Aerolin nebules&lt;span style=&quot;color:#e74c3c&quot;> &lt;/span>&lt;/strong>+ SF 0,9%. Dose: Aerolin Nebules 1,2ml (&amp;lt;15kg) ou 2,5ml (&amp;gt; 15kg)&amp;nbsp;&lt;/li>&#xA;&#x9;&lt;li>Considerar Sulfato de Magn&amp;eacute;sio 50% ap&amp;oacute;s 1h de nebuliza&amp;ccedil;&amp;atilde;o cont&amp;iacute;nua. Dose: 50mg/kg - Max 2g. Correr 30 min.&lt;/li>&#xA;&#x9;&lt;li>Metilprednisolona 1mg/kg/dose EV&lt;/li>&#xA;&#x9;&lt;li>Hidrata&amp;ccedil;&amp;atilde;o Venosa - Manuten&amp;ccedil;&amp;atilde;o&lt;/li>&#xA;&#x9;&lt;li>Ox&amp;iacute;metro pulso cont&amp;iacute;nuo&lt;/li>&#xA;&#x9;&lt;li>Cabeceira 30&amp;ordm;&lt;/li>&#xA;&#x9;&lt;li>Sinais Vitais de 1/1h&lt;/li>&#xA;&#x9;&lt;li>&lt;strong>Considerar Interna&amp;ccedil;&amp;atilde;o&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>&lt;strong>Considerar IOT&lt;/strong>&lt;/li>&#xA;&#x9;&lt;li>&lt;strong>Considerar vaga na UTI&lt;/strong>&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.1 //@sequence.11">
+    <medication url="" med_id="43931" id="8800" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="8800" standard="null"/>
+    <procedure url="O2 C/MASCARA DE VENTURI/FACIAL" procedure="75010014" quantity="1"/>
+    <procedure url="PUNCAO C/ JELCO" procedure="76030002" quantity="1"/>
+    <procedure url="OXIMETRO DE PULSO" procedure="75130035" quantity="1"/>
+    <procedure url="CABECEIRA  ELEVADA" procedure="75130016" quantity="1"/>
+    <procedure url="SINAIS VITAIS" procedure="75130020" frequency="1" quantity="1"/>
+    <procedure url="ENTUBACAO OROTRAQUEAL" procedure="76010003" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16912" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Intensidade da Crise" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Intensidade da Crise" url="" id="8872">
+      <answers xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="16788" weight="1" value="0.0">
+        <option description="Leve (Sat O2 > 94%)" weight="1"/>
+        <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="16913" type="Receita" type_verbose="Receita" url="" name="[Asma Leve] Alta com Receita" description="&lt;p>&lt;strong>Orientar acompanhamento ambulatorial com pneumopediatra&lt;/strong>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Aerossol com Aerolin Nebules, 1 amp de 4/4h por 5 dias.&lt;/li>&#xA;&#x9;&lt;li>Aerossol com SF 0,9% 3ml + Berotec ____ gotas de 4/4h por 5 dias.&lt;/li>&#xA;&#x9;&lt;li>Prednisolona 3mg/ml ____ 1FR. Dar ___ ml 1x ao dia por 5 dias.&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.3 //@sequence.6 //@sequence.9">
+    <item id="4514" url="" name="Aerossol com Soro Fisiol&#xf3;gico 0,9% 3ml + Berotec." med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aerossol de SF 0,9% 3ml + Berotec ___ gotas de 4/4h por 5 dias."/>
+    <item id="4515" url="" name="Aerossol com Aerolin Nebules" med_code="-1" presentation="-" access="20" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="1 amp de 4/4h por 5 dias."/>
+    <item id="4516" url="" name="Prednisolona 3mg/ml ___ 1 FR." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ ml 1x ao dia por 5 dias."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16914" type="Tratamento" type_verbose="Tratamento" url="" name="[Asma Moderada] Tratamento" description="&lt;p>&lt;strong>&lt;u>Prescrever&lt;/u>&lt;/strong>:&lt;/p>&#xA;&#xA;&lt;p>Nebuliza&amp;ccedil;&amp;atilde;o de resgate 3x (de 20 em 20 min) com:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Aerolin Nebules&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>2,5ml (&amp;gt;15kg) &lt;strong>OU&lt;/strong>&lt;/li>&#xA;&#x9;&#x9;&lt;li>1,2ml (&amp;lt;15kg)&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&#x9;&lt;li>Prednisolona 3ml/ml oral (1-2mg/Kg/dose)&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.4" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16915" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Melhora" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Houve melhora?" url="" id="8873">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="16789" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16916" type="Tratamento" type_verbose="Tratamento" url="" name="[Asma Moderada] Tratamento Alternativo" description="&lt;p>Repetir resgate 3x (20 em 20 min) com:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Aerolin Nebules 1,2ml (&amp;lt;15kg) ou 2,5ml (&amp;gt; 15kg) + Atrovent 10 gotas (&amp;lt; 6 anos) ou 20 gotas (&amp;gt; 6 anos).&lt;/li>&#xA;&#x9;&lt;li>Solicitar Gasometria Arterial&lt;/li>&#xA;&#x9;&lt;li>Se suspeita de infec&amp;ccedil;&amp;atilde;o:&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>RX Torax PA. Lat&lt;/li>&#xA;&#x9;&#x9;&lt;li>Hemograma Completo&lt;/li>&#xA;&#x9;&#x9;&lt;li>PCR&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.7" outputSequences="//@sequence.8">
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Asma pedi&#xe1;trica" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Asma pedi&#xe1;trica" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Asma pedi&#xe1;trica" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Asma pedi&#xe1;trica" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="16917" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Resposta" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10 //@sequence.11">
+    <questions text="Resposta" url="" id="8874">
+      <answers xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="16790" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="16918" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento + Chefia" description="&lt;p>&lt;u>&lt;strong>Comunicar Chefia&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>Encaminhar para sala de cuidados.&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Suporte O2 - M&amp;aacute;scara de Venturi.&lt;/li>&#xA;&#x9;&lt;li>Ox&amp;iacute;metro Pulso&lt;/li>&#xA;&#x9;&lt;li>Aerossol 1h cont&amp;iacute;nua com:&#xA;&#x9;&lt;ul>&#xA;&#x9;&#x9;&lt;li>Aerolin nebules + SF 0,9%&lt;/li>&#xA;&#x9;&#x9;&lt;li>Sulfato de Magn&amp;eacute;sio 50% EV em 30 min.&lt;/li>&#xA;&#x9;&lt;/ul>&#xA;&#x9;&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.10"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="16919" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="16920" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Satura&#xe7;&#xe3;o menor que 85%)" description="Satura&#xe7;&#xe3;o menor que 85%">
+    <operation name="Satura&#xe7;&#xe3;o menor que 85%" Operator="affirmation" id="16794">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="16787" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="16921" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Satura&#xe7;&#xe3;o maior ou igual a 85%)" description="Satura&#xe7;&#xe3;o maior ou igual a 85%">
+    <operation name="Satura&#xe7;&#xe3;o maior ou igual a 85%" id="16795">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="16787" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="16922" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Crise Leve)" description="Crise Leve">
+    <operation name="Crise Leve" Operator="equal" id="16796">
+      <operand xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="16788" weight="1" value="0.0">
+        <option description="Leve (Sat O2 > 94%)" weight="1"/>
+        <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16791" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="16923" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Crise Moderada)" description="Crise Moderada">
+    <operation name="Crise Moderada" Operator="equal" id="16797">
+      <operand xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="16788" weight="1" value="0.0">
+        <option description="Leve (Sat O2 > 94%)" weight="1"/>
+        <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16792" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="16924" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="16925" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Houve melhora)" description="Houve melhora">
+    <operation name="Houve melhora" Operator="affirmation" id="16798">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="16789" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="16926" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (N&#xe3;o houve melhora)" description="N&#xe3;o houve melhora">
+    <operation name="N&#xe3;o houve melhora" id="16799">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="16789" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="16927" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.8" id="16928" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (Boa resposta)" description="Boa resposta">
+    <operation name="Boa resposta" Operator="equal" id="16800">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="16790" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16791" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="16929" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (Resposta Incompleta)" description="Resposta Incompleta">
+    <operation name="Resposta Incompleta" Operator="equal" id="16801">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="16790" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16792" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.8" id="16930" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (Resposta Ausente)" description="Resposta Ausente">
+    <operation name="Resposta Ausente" Operator="equal" id="16802">
+      <operand xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="16790" weight="1" value="0.0">
+        <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+        <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+        <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="16793" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="saturacao_menor_85" id="16787" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="intensidade_crise" id="16788" weight="1" value="0.0">
+    <option description="Leve (Sat O2 > 94%)" weight="1"/>
+    <option description="Moderada (Sat O2 entre 85 e 94%)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="houve_melhora" id="16789" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="resposta_tratamento" id="16790" weight="1" value="0.0">
+    <option description="Boa Resposta (eupneico, sat O2 > 92%, sem altera&#xe7;&#xf5;es nos exames)" weight="1"/>
+    <option description="Resposta Incompleta (taquidispn&#xe9;ia leve a moderada, sat O2 entre 88-92%, altera&#xe7;&#xf5;es nos exames)" weight="2"/>
+    <option description="Resposta Ausente ou piora do quadro, sat O2 &lt; 88%" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="16791" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="16792" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="16793" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3130" url="" name="Pneumonia Adquirida na Comunidade" code="H039">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17085" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Quadro agudo?" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Quadro agudo de tosse e/ou desconforto respirat&#xf3;rio(taquipneia ou dispneia)?" url="" id="8921">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="quadro_agudo" id="16900" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="17086" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Protocolo IVAS Pedi&#xe1;trico" description="" isTerminal="true" inputSequences="//@sequence.1">
+    <pathways>H026</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17087" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Sinais de Alarme" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="O paciente apresenta sinais de alarme?" url="" id="8922">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16901" weight="1" value="0.0">
+        <option description="Febre" weight="1"/>
+        <option description="Satura&#xe7;&#xe3;o &lt; 92%" weight="1"/>
+        <option description="Hipersecre&#xe7;&#xe3;o" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="Dor ventilat&#xf3;ria dependente" weight="1"/>
+        <option description="Dor abdominal" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o na ausculta (crepta&#xe7;&#xe3;o, murm&#xfa;rio diminu&#xed;do ou broncofonia)" weight="1"/>
+        <option description="Comorbidade associada (encefalopata, s&#xed;ndrome gen&#xe9;tica, cardiopata, &lt; 2 meses)" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17088" type="Tratamento" type_verbose="Tratamento" url="" name="Raio X AP Lateral" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.4">
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Pneumonia" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17089" type="Tratamento" type_verbose="Tratamento" url="" name="[Com Sinais de Alarme] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Avaliar com chefia na sala de cuidados (eixo vermelho)&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Avaliar necessidade de suplementa&amp;ccedil;&amp;atilde;o O2 + Oximetria e avalia&amp;ccedil;&amp;atilde;o de sinais vitais de 1/1h&lt;/span>&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.11">
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="Pneumonia adquirida na comunidade"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidadeq" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Pneumonia" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17090" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Raio X" description="Avaliar se ha altera&#xe7;&#xf5;es radiogr&#xe1;ficas" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Raio X" url="" id="8923">
+      <answers xsi:type="pathwayMetamodel:Choice" name="raio_x_alterado" id="16902" weight="1" value="0.0">
+        <option description="Normal"/>
+        <option description="Alterado" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17091" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Investigar causas" description="Investigar outras causas do desconforto respirat&#xf3;rio" isTerminal="true" inputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17092" type="Tratamento" type_verbose="Tratamento" url="" name="[Raio X Alterado] Conduta" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>OBS1&lt;/strong>&lt;/u>: Se altera&amp;ccedil;&amp;otilde;es leves e localizadas, solicitar HC + PCR&amp;nbsp;&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>OBS2:&lt;/strong>&lt;/u> Altera&amp;ccedil;&amp;otilde;es significativas, extensas e/ou lobares:&lt;/span>&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Discutir com chefia local&lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Avaliar paciente na sala de cuidados. &lt;/span>&lt;/li>&#xA;&#x9;&lt;li>&lt;span style=&quot;font-size:16px&quot;>Solicitar HC + PCR + Hemocultura + Gasometria + S&amp;oacute;dio + Pot&amp;aacute;ssio + C&amp;aacute;lcio&amp;nbsp;&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;u>&lt;strong>OBS3:&lt;/strong>&lt;/u>&amp;nbsp;Se sinais de derrame pleural, discutir com chefia e solicitar exames acima (Obs 2) + US T&amp;oacute;rax.&lt;/span>&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.12">
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="Pneumonia adquirida na comunidade"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidadeq" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="n/a"/>
+    <examination url="CALCIO (SANGUE)" exam_id="28010329" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA" exam_id="28100298" limb_side="" quantity="1" reason="Pneumonia adquirida na comunidade" clinical_indication="n/a"/>
+    <examination url="US TORAX (EXTRA-CARDIACO)" exam_id="33010188" limb_side="" quantity="1" reason="Exames alterados" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Pneumonia" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17093" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade" description="" inputSequences="//@sequence.11" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Idade do paciente" url="" id="8924">
+      <answers xsi:type="pathwayMetamodel:Choice" name="idade_paciente" id="16903" weight="1" value="0.0">
+        <option description="&lt; 2 meses" weight="1"/>
+        <option description=">= 2 meses" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17094" type="Tratamento" type_verbose="Tratamento" url="" name="ATB + Interna&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Discutir com chefia. Avaliar necessidade de&amp;nbsp;interna&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>-&amp;nbsp; Se menor&amp;nbsp; de 2 meses&lt;/strong>: Internar, prescrever: Ampicilina + Gentamicina (dose: conforme idade e peso do RN).&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>- Interna&amp;ccedil;&amp;atilde;o em maiores de 2 meses:&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>a) Prescrever Unasyn 100mg/kg/dia&amp;nbsp;de&amp;nbsp;6/6h EV se n&amp;atilde;o houver uso de ATB pr&amp;eacute;vio&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>b) Prescrever Cetriaxona 50-100mg/kg/dia&amp;nbsp;EV se houver falha terapeutica com antibi&amp;oacute;tico oral pr&amp;eacute;vio.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>c) Considerar uso de Oxacilina 100-200mg/kg/dia em casos de PNM lobar/extensa&amp;nbsp;ou com derrame pleural.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.7 //@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17095" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Exames" description="" inputSequences="//@sequence.8" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="Avaliar Exames" url="" id="8925">
+      <answers xsi:type="pathwayMetamodel:Choice" name="nivel_alteracao_radiologica" id="16904" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica leve e leuc&#xf3;citos &lt; 20 mil" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica importante, derrame pleural e/ou leuc&#xf3;citos > 20 mil" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17096" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com chefia" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Discutir conduta com chefia devido a prov&amp;aacute;vel interna&amp;ccedil;&amp;atilde;o.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>Em caso de interna&amp;ccedil;&amp;atilde;o:&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>a) Prescrever Unasyn 100mg/kg/dia&amp;nbsp;de&amp;nbsp;6/6h EV se n&amp;atilde;o houver uso de ATB pr&amp;eacute;vio&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>b) Prescrever Cetriaxona 50-100mg/kg/dia&amp;nbsp;EV se houver falha terapeutica com antibi&amp;oacute;tico oral pr&amp;eacute;vio.&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>c) Considerar uso de Oxacilina 100-200mg/kg/dia em casos de PNM lobar/extensa&amp;nbsp;ou com derrame pleural.&amp;nbsp;&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="17097" type="Receita" type_verbose="Receita" url="" name="Receita" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Considerar alta com antibi&amp;oacute;tico oral e retorno em 48h para reavalia&amp;ccedil;&amp;atilde;o. &lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.9">
+    <item id="4593" url="" name="Amoxicilina + Clavulanato 400+57 mg/ml ___________ FR" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ ml de 12/12h por 10 dias (conservar na geladeira)."/>
+    <item id="4594" url="" name="Ceftriaxona 1g ________________________fr" med_code="-1" presentation="-" access="5" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Aplicar 1 ampola IM, 1x por dia por 3 dias. Reavaliar ap&#xf3;s 48h."/>
+    <item id="4595" url="" name="Azitromicina 900mg ___ Fr" med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar ___ ml 1x por dia por 5 dias."/>
+  </element>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17098" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com quadro agudo)" description="com quadro agudo">
+    <operation name="com quadro agudo" Operator="affirmation" id="16908">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="quadro_agudo" id="16900" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="17099" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem quadro agudo)" description="sem quadro agudo">
+    <operation name="sem quadro agudo" id="16909">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="quadro_agudo" id="16900" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="17100" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (sem sinais de alarme)" description="sem sinais de alarme">
+    <operation name="Sem Sinais de Alarme" Operator="lessThan" id="16910">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16901" weight="1" value="0.0">
+        <option description="Febre" weight="1"/>
+        <option description="Satura&#xe7;&#xe3;o &lt; 92%" weight="1"/>
+        <option description="Hipersecre&#xe7;&#xe3;o" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="Dor ventilat&#xf3;ria dependente" weight="1"/>
+        <option description="Dor abdominal" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o na ausculta (crepta&#xe7;&#xe3;o, murm&#xfa;rio diminu&#xed;do ou broncofonia)" weight="1"/>
+        <option description="Comorbidade associada (encefalopata, s&#xed;ndrome gen&#xe9;tica, cardiopata, &lt; 2 meses)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16905" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="17101" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (com sinais de alarme)" description="com sinais de alarme">
+    <operation name="Cont&#xe9;m Sinais de Alarme" Operator="greaterOrEqual" id="16911">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16901" weight="1" value="0.0">
+        <option description="Febre" weight="1"/>
+        <option description="Satura&#xe7;&#xe3;o &lt; 92%" weight="1"/>
+        <option description="Hipersecre&#xe7;&#xe3;o" weight="1"/>
+        <option description="Dor tor&#xe1;cica" weight="1"/>
+        <option description="Dor ventilat&#xf3;ria dependente" weight="1"/>
+        <option description="Dor abdominal" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o na ausculta (crepta&#xe7;&#xe3;o, murm&#xfa;rio diminu&#xed;do ou broncofonia)" weight="1"/>
+        <option description="Comorbidade associada (encefalopata, s&#xed;ndrome gen&#xe9;tica, cardiopata, &lt; 2 meses)" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16905" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="17102" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="Incondicional"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="17103" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (sem altera&#xe7;&#xf5;es)" description="sem altera&#xe7;&#xf5;es">
+    <operation name="sem altera&#xe7;&#xf5;es" id="16912">
+      <operand xsi:type="pathwayMetamodel:Choice" name="raio_x_alterado" id="16902" weight="1" value="0.0">
+        <option description="Normal"/>
+        <option description="Alterado" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="17104" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (com altera&#xe7;&#xf5;es)" description="com altera&#xe7;&#xf5;es">
+    <operation name="com altera&#xe7;&#xf5;es" Operator="affirmation" id="16913">
+      <operand xsi:type="pathwayMetamodel:Choice" name="raio_x_alterado" id="16902" weight="1" value="0.0">
+        <option description="Normal"/>
+        <option description="Alterado" weight="1"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="17105" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (&lt; 2 meses)" description="&lt; 2 meses">
+    <operation name="&lt; 2 meses" Operator="lessThan" id="16914">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_paciente" id="16903" weight="1" value="0.0">
+        <option description="&lt; 2 meses" weight="1"/>
+        <option description=">= 2 meses" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16906" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="17106" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (>= 2 meses)" description=">= 2 meses">
+    <operation name=">= 2 meses" Operator="greaterOrEqual" id="16915">
+      <operand xsi:type="pathwayMetamodel:Choice" name="idade_paciente" id="16903" weight="1" value="0.0">
+        <option description="&lt; 2 meses" weight="1"/>
+        <option description=">= 2 meses" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16906" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="17107" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (alteracao leve)" description="alteracao leve">
+    <operation name="alteracao leve" Operator="equal" id="16916">
+      <operand xsi:type="pathwayMetamodel:Choice" name="nivel_alteracao_radiologica" id="16904" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica leve e leuc&#xf3;citos &lt; 20 mil" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica importante, derrame pleural e/ou leuc&#xf3;citos > 20 mil" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16905" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="17108" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (alteracao importante)" description="alteracao importante">
+    <operation name="alteracao importante" Operator="equal" id="16917">
+      <operand xsi:type="pathwayMetamodel:Choice" name="nivel_alteracao_radiologica" id="16904" weight="1" value="0.0">
+        <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica leve e leuc&#xf3;citos &lt; 20 mil" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica importante, derrame pleural e/ou leuc&#xf3;citos > 20 mil" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="16906" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.4" id="17109" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="17110" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-"/>
+  <operation name="Sinais de Alarme" Operator="addition" id="16907"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="quadro_agudo" id="16900" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_de_alarme" id="16901" weight="1" value="0.0">
+    <option description="Febre" weight="1"/>
+    <option description="Satura&#xe7;&#xe3;o &lt; 92%" weight="1"/>
+    <option description="Hipersecre&#xe7;&#xe3;o" weight="1"/>
+    <option description="Dor tor&#xe1;cica" weight="1"/>
+    <option description="Dor ventilat&#xf3;ria dependente" weight="1"/>
+    <option description="Dor abdominal" weight="1"/>
+    <option description="Altera&#xe7;&#xe3;o na ausculta (crepta&#xe7;&#xe3;o, murm&#xfa;rio diminu&#xed;do ou broncofonia)" weight="1"/>
+    <option description="Comorbidade associada (encefalopata, s&#xed;ndrome gen&#xe9;tica, cardiopata, &lt; 2 meses)" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="raio_x_alterado" id="16902" weight="1" value="0.0">
+    <option description="Normal"/>
+    <option description="Alterado" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="idade_paciente" id="16903" weight="1" value="0.0">
+    <option description="&lt; 2 meses" weight="1"/>
+    <option description=">= 2 meses" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="nivel_alteracao_radiologica" id="16904" weight="1" value="0.0">
+    <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica leve e leuc&#xf3;citos &lt; 20 mil" weight="1"/>
+    <option description="Altera&#xe7;&#xe3;o Radiol&#xf3;gica importante, derrame pleural e/ou leuc&#xf3;citos > 20 mil" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="16905" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="16906" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

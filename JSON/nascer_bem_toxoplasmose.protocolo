@@ -1,0 +1,2579 @@
+{
+    "id": 927,
+    "url": "",
+    "codigo": "NB_TOXO",
+    "nome": "[Nascer Bem] Toxoplasmose",
+    "repositorio_id": 483,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:23:34.728096-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:23:30.490853-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:23:34.728096-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4681,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[IgM (+)] Prescrever Rovamicina",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 837,
+                    "url": "",
+                    "nome": "ROVAMICINA",
+                    "medicamento": 7896070605497,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 10,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dura\u00e7\u00e3o por tempo indeterminado"
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4706,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4681,
+                    "passo_de_saida": "Receita: [IgM (+)] Prescrever Rovamicina",
+                    "passo_de_entrada_id": 4682,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Classifica\u00e7\u00e3o: Alto Risco",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4682,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classifica\u00e7\u00e3o: Alto Risco",
+            "descricao": "Classificar paciente como alto risco",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4706,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4681,
+                    "passo_de_saida": "Receita: [IgM (+)] Prescrever Rovamicina",
+                    "passo_de_entrada_id": 4682,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Classifica\u00e7\u00e3o: Alto Risco",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4709,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4682,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Classifica\u00e7\u00e3o: Alto Risco",
+                    "passo_de_entrada_id": 4683,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4683,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Idade Gestacional",
+            "descricao": "Avaliar se gesta\u00e7\u00e3o tem menos de 16 semanas",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2032,
+                    "url": "",
+                    "texto": "Idade Gestacional < 16 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3397,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_menor_16_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4709,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4682,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Classifica\u00e7\u00e3o: Alto Risco",
+                    "passo_de_entrada_id": 4683,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4707,
+                    "url": "",
+                    "nome": "S3 (menos de 16 semanas)",
+                    "descricao": "menos de 16 semanas",
+                    "passo_de_saida_id": 4683,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4684,
+                    "passo_de_entrada": "Tratamento: [< 16 semanas] Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4708,
+                    "url": "",
+                    "nome": "S4 (mais de 16 semanas)",
+                    "descricao": "mais de 16 semanas",
+                    "passo_de_saida_id": 4683,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4686,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pesquisa de Infec\u00e7\u00e3o Fetal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4684,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[< 16 semanas] Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28063007",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de toxoplasmose",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4707,
+                    "url": "",
+                    "nome": "S3 (menos de 16 semanas)",
+                    "descricao": "menos de 16 semanas",
+                    "passo_de_saida_id": 4683,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4684,
+                    "passo_de_entrada": "Tratamento: [< 16 semanas] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4712,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4684,
+                    "passo_de_saida": "Tratamento: [< 16 semanas] Exames",
+                    "passo_de_entrada_id": 4704,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4685,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Alta Avidez",
+            "descricao": "Alta avidez - infec\u00e7\u00e3o contra\u00edda h\u00e1 mais de 16 semanas, ou seja, antes da gesta\u00e7\u00e3o. Esse quadro representa um menor risco para o feto.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4710,
+                    "url": "",
+                    "nome": "S5 (alta avidez)",
+                    "descricao": "alta avidez",
+                    "passo_de_saida_id": 4687,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exame de Avidez",
+                    "passo_de_entrada_id": 4685,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta Avidez",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4713,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4685,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Alta Avidez",
+                    "passo_de_entrada_id": 4689,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Cr\u00f4nica & Pr\u00e9-Natal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4686,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Pesquisa de Infec\u00e7\u00e3o Fetal",
+            "descricao": "Solicitar pesquisa de infec\u00e7\u00e3o fetal",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4708,
+                    "url": "",
+                    "nome": "S4 (mais de 16 semanas)",
+                    "descricao": "mais de 16 semanas",
+                    "passo_de_saida_id": 4683,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4686,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pesquisa de Infec\u00e7\u00e3o Fetal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4718,
+                    "url": "",
+                    "nome": "S13 (menos de 28 semanas)",
+                    "descricao": "menos de 28 semanas",
+                    "passo_de_saida_id": 4692,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4686,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pesquisa de Infec\u00e7\u00e3o Fetal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4719,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4686,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Pesquisa de Infec\u00e7\u00e3o Fetal",
+                    "passo_de_entrada_id": 4694,
+                    "passo_de_entrada": "Tratamento: Solicitar Ultrassom com Amniocentese",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4687,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Exame de Avidez",
+            "descricao": "Avaliar exame de avidez a toxoplasmose previamente solicitado",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2033,
+                    "url": "",
+                    "texto": "Resultado indica alta avidez?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3398,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alta_avidez",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4733,
+                    "url": "",
+                    "nome": "S28",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4704,
+                    "passo_de_saida": "Pausa: Aguardar Retorno (2)",
+                    "passo_de_entrada_id": 4687,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exame de Avidez",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4710,
+                    "url": "",
+                    "nome": "S5 (alta avidez)",
+                    "descricao": "alta avidez",
+                    "passo_de_saida_id": 4687,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exame de Avidez",
+                    "passo_de_entrada_id": 4685,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta Avidez",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4711,
+                    "url": "",
+                    "nome": "S6 (baixa avidez)",
+                    "descricao": "baixa avidez",
+                    "passo_de_saida_id": 4687,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exame de Avidez",
+                    "passo_de_entrada_id": 4688,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avidez Baixa ou Intermedi\u00e1ria",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4688,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Avidez Baixa ou Intermedi\u00e1ria",
+            "descricao": "Baixa avidez significa que a infec\u00e7\u00e3o foi contra\u00edda em menos de 16 semanas. Esse quadro representa o caso mais grave, pois a infec\u00e7\u00e3o foi contra\u00edda ainda na gesta\u00e7\u00e3o, representando um maior risco ao feto.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4711,
+                    "url": "",
+                    "nome": "S6 (baixa avidez)",
+                    "descricao": "baixa avidez",
+                    "passo_de_saida_id": 4687,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exame de Avidez",
+                    "passo_de_entrada_id": 4688,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Avidez Baixa ou Intermedi\u00e1ria",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4714,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4688,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Avidez Baixa ou Intermedi\u00e1ria",
+                    "passo_de_entrada_id": 4690,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Aguda",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4689,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Infec\u00e7\u00e3o Cr\u00f4nica & Pr\u00e9-Natal",
+            "descricao": "<p><span style=\"font-size:16px\">Tranquilizar o paciente e manter segmento em pr&eacute;-natal de baixo risco.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4713,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4685,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Alta Avidez",
+                    "passo_de_entrada_id": 4689,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Cr\u00f4nica & Pr\u00e9-Natal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4690,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Infec\u00e7\u00e3o Aguda",
+            "descricao": "Diagnosticar como infec\u00e7\u00e3o AGUDA.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4714,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4688,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Avidez Baixa ou Intermedi\u00e1ria",
+                    "passo_de_entrada_id": 4690,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Aguda",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4715,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4690,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Aguda",
+                    "passo_de_entrada_id": 4691,
+                    "passo_de_entrada": "Receita: Manter Rovamicina 3g/dia at\u00e9 reavalia\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4691,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Manter Rovamicina 3g/dia at\u00e9 reavalia\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 838,
+                    "url": "",
+                    "nome": "ROVAMICINA",
+                    "medicamento": 7896070605497,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 10,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tratamento por tempo indeterminado"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4715,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4690,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Aguda",
+                    "passo_de_entrada_id": 4691,
+                    "passo_de_entrada": "Receita: Manter Rovamicina 3g/dia at\u00e9 reavalia\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4716,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4691,
+                    "passo_de_saida": "Receita: Manter Rovamicina 3g/dia at\u00e9 reavalia\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4692,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4692,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reavaliar Idade Gestacional",
+            "descricao": "Avaliar se paciente tem menos de 28 semanas de gesta\u00e7\u00e3o",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2034,
+                    "url": "",
+                    "texto": "Idade Gestacional < 28 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3399,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_menor_28_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4716,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4691,
+                    "passo_de_saida": "Receita: Manter Rovamicina 3g/dia at\u00e9 reavalia\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4692,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4717,
+                    "url": "",
+                    "nome": "S12 (mais de 28 semanas)",
+                    "descricao": "mais de 28 semanas",
+                    "passo_de_saida_id": 4692,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4705,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio (Maios de 28 semanas)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4718,
+                    "url": "",
+                    "nome": "S13 (menos de 28 semanas)",
+                    "descricao": "menos de 28 semanas",
+                    "passo_de_saida_id": 4692,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4686,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Pesquisa de Infec\u00e7\u00e3o Fetal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4693,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Retornar ao Prontu\u00e1rio",
+            "descricao": "Retornar ao Prontu\u00e1rio e finalizar protocolo de Toxoplasmose.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4724,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4698,
+                    "passo_de_saida": "Receita: Prescrever Medica\u00e7\u00f5es Alternadas",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4728,
+                    "url": "",
+                    "nome": "S23",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4700,
+                    "passo_de_saida": "Tratamento: Ultrassom Morfol\u00f3gico",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4730,
+                    "url": "",
+                    "nome": "S25 (menos 24 ou mais de 28 semanas)",
+                    "descricao": "menos 24 ou mais de 28 semanas",
+                    "passo_de_saida_id": 4701,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (3)",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4731,
+                    "url": "",
+                    "nome": "S26",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4702,
+                    "passo_de_saida": "Tratamento: Ecocardiografia Fetal",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4694,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar Ultrassom com Amniocentese",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "45010129",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de toxoplasmose",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Suspeita de toxoplasmose",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4719,
+                    "url": "",
+                    "nome": "S14",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4686,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Pesquisa de Infec\u00e7\u00e3o Fetal",
+                    "passo_de_entrada_id": 4694,
+                    "passo_de_entrada": "Tratamento: Solicitar Ultrassom com Amniocentese",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4720,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4694,
+                    "passo_de_saida": "Tratamento: Solicitar Ultrassom com Amniocentese",
+                    "passo_de_entrada_id": 4703,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno (1)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4695,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Manter Rovamicina 3,0g/dia at\u00e9 o fim da gesta\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 839,
+                    "url": "",
+                    "nome": "ROVAMICINA",
+                    "medicamento": 7896070605497,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 10,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tratamento por tempo indeterminado"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4722,
+                    "url": "",
+                    "nome": "S17 (pcr (-))",
+                    "descricao": "pcr (-)",
+                    "passo_de_saida_id": 4696,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PCR",
+                    "passo_de_entrada_id": 4695,
+                    "passo_de_entrada": "Receita: Manter Rovamicina 3,0g/dia at\u00e9 o fim da gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4725,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4695,
+                    "passo_de_saida": "Receita: Manter Rovamicina 3,0g/dia at\u00e9 o fim da gesta\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4699,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4696,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar PCR",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2035,
+                    "url": "",
+                    "texto": "PCR positivo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3400,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "pcr_positivo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4732,
+                    "url": "",
+                    "nome": "S27",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4703,
+                    "passo_de_saida": "Pausa: Aguardar Retorno (1)",
+                    "passo_de_entrada_id": 4696,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar PCR",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4721,
+                    "url": "",
+                    "nome": "S16 (pcr (+))",
+                    "descricao": "pcr (+)",
+                    "passo_de_saida_id": 4696,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PCR",
+                    "passo_de_entrada_id": 4697,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Fetal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4722,
+                    "url": "",
+                    "nome": "S17 (pcr (-))",
+                    "descricao": "pcr (-)",
+                    "passo_de_saida_id": 4696,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PCR",
+                    "passo_de_entrada_id": 4695,
+                    "passo_de_entrada": "Receita: Manter Rovamicina 3,0g/dia at\u00e9 o fim da gesta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4697,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Infec\u00e7\u00e3o Fetal",
+            "descricao": "Diagnosticar infec\u00e7\u00e3o fetal",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4721,
+                    "url": "",
+                    "nome": "S16 (pcr (+))",
+                    "descricao": "pcr (+)",
+                    "passo_de_saida_id": 4696,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar PCR",
+                    "passo_de_entrada_id": 4697,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Fetal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4723,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4697,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Fetal",
+                    "passo_de_entrada_id": 4698,
+                    "passo_de_entrada": "Receita: Prescrever Medica\u00e7\u00f5es Alternadas",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4698,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescrever Medica\u00e7\u00f5es Alternadas",
+            "descricao": "<p>Prescrever medica&ccedil;&otilde;es alternadas conforme esquema representado na tabela a seguir:</p>\n\n<table border=\"1\" cellspacing=\"0\" style=\"-webkit-text-stroke-width:0px; border-collapse:collapse; border-spacing:0px; border:1px solid black; box-sizing:border-box; font-variant-caps:normal; font-variant-ligatures:normal; orphans:2; text-align:start; text-decoration-color:initial; text-decoration-style:initial; widows:2; width:626pt; word-break:break-word\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:127pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Per&iacute;odo</span></strong></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:193pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Medicamento</span></strong></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:306pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Posologia</span></strong></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">3 semanas</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Rovamicina</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">1,5mUi: 2 comprimidos em 8/8 horas&nbsp;</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" rowspan=\"3\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:normal; width:127pt\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">3 semanas seguintes&nbsp;</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Daraprim </span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">25mg: 1 comprimido em 12/12 horas</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Suladrim</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">500mg: 1 comprimido em 6/6 horas</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Folinato de C&aacute;lcio </span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">10mg: tomar 1 comprimido em 12/12 horas</span></span></span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 840,
+                    "url": "",
+                    "nome": "ROVAMICINA",
+                    "medicamento": 7896070605497,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 21,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                },
+                {
+                    "id": 841,
+                    "url": "",
+                    "nome": "DARAPRIM",
+                    "medicamento": 7898040320829,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 21,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                },
+                {
+                    "id": 842,
+                    "url": "",
+                    "nome": "SULADRIN",
+                    "medicamento": 7896023709043,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 21,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                },
+                {
+                    "id": 843,
+                    "url": "",
+                    "nome": "FOLINATO DE CALCIO",
+                    "medicamento": 7891317466206,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 21,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4723,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4697,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Infec\u00e7\u00e3o Fetal",
+                    "passo_de_entrada_id": 4698,
+                    "passo_de_entrada": "Receita: Prescrever Medica\u00e7\u00f5es Alternadas",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4724,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4698,
+                    "passo_de_saida": "Receita: Prescrever Medica\u00e7\u00f5es Alternadas",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4699,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reavaliar Idade Gestacional (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2036,
+                    "url": "",
+                    "texto": "Idade Gestacional de 20 a 24 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3401,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_20_a_24_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4725,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4695,
+                    "passo_de_saida": "Receita: Manter Rovamicina 3,0g/dia at\u00e9 o fim da gesta\u00e7\u00e3o",
+                    "passo_de_entrada_id": 4699,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4726,
+                    "url": "",
+                    "nome": "S21 (20 a 24 semanas)",
+                    "descricao": "20 a 24 semanas",
+                    "passo_de_saida_id": 4699,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4700,
+                    "passo_de_entrada": "Tratamento: Ultrassom Morfol\u00f3gico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4727,
+                    "url": "",
+                    "nome": "S22 (menos de 20 ou mais de 24)",
+                    "descricao": "menos de 20 ou mais de 24",
+                    "passo_de_saida_id": 4699,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4701,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (3)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4700,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Ultrassom Morfol\u00f3gico",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "33010277",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Protocolo de toxoplasmose",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4726,
+                    "url": "",
+                    "nome": "S21 (20 a 24 semanas)",
+                    "descricao": "20 a 24 semanas",
+                    "passo_de_saida_id": 4699,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4700,
+                    "passo_de_entrada": "Tratamento: Ultrassom Morfol\u00f3gico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4728,
+                    "url": "",
+                    "nome": "S23",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4700,
+                    "passo_de_saida": "Tratamento: Ultrassom Morfol\u00f3gico",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4701,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reavaliar Idade Gestacional (3)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2037,
+                    "url": "",
+                    "texto": "Idade Gestacional de 24 a 28 semanas?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3402,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_gestacional_24_a_28_semanas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4727,
+                    "url": "",
+                    "nome": "S22 (menos de 20 ou mais de 24)",
+                    "descricao": "menos de 20 ou mais de 24",
+                    "passo_de_saida_id": 4699,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (2)",
+                    "passo_de_entrada_id": 4701,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (3)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4729,
+                    "url": "",
+                    "nome": "S24 (24 a 28 semanas)",
+                    "descricao": "24 a 28 semanas",
+                    "passo_de_saida_id": 4701,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (3)",
+                    "passo_de_entrada_id": 4702,
+                    "passo_de_entrada": "Tratamento: Ecocardiografia Fetal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4730,
+                    "url": "",
+                    "nome": "S25 (menos 24 ou mais de 28 semanas)",
+                    "descricao": "menos 24 ou mais de 28 semanas",
+                    "passo_de_saida_id": 4701,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (3)",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4702,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Ecocardiografia Fetal",
+            "descricao": "<p><span style=\"font-size:16px\"><u><strong>Aten&ccedil;&atilde;o</strong></u>: Deve ser impresso a solicita&ccedil;&atilde;o, pois n&atilde;o &eacute; um exame de rotina.</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "33010064",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "protocolo de toxoplasmose",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4729,
+                    "url": "",
+                    "nome": "S24 (24 a 28 semanas)",
+                    "descricao": "24 a 28 semanas",
+                    "passo_de_saida_id": 4701,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional (3)",
+                    "passo_de_entrada_id": 4702,
+                    "passo_de_entrada": "Tratamento: Ecocardiografia Fetal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4731,
+                    "url": "",
+                    "nome": "S26",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4702,
+                    "passo_de_saida": "Tratamento: Ecocardiografia Fetal",
+                    "passo_de_entrada_id": 4693,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4703,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Aguardar Retorno (1)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4720,
+                    "url": "",
+                    "nome": "S15",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4694,
+                    "passo_de_saida": "Tratamento: Solicitar Ultrassom com Amniocentese",
+                    "passo_de_entrada_id": 4703,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno (1)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4732,
+                    "url": "",
+                    "nome": "S27",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4703,
+                    "passo_de_saida": "Pausa: Aguardar Retorno (1)",
+                    "passo_de_entrada_id": 4696,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar PCR",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4704,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Aguardar Retorno (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4712,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4684,
+                    "passo_de_saida": "Tratamento: [< 16 semanas] Exames",
+                    "passo_de_entrada_id": 4704,
+                    "passo_de_entrada": "Pausa: Aguardar Retorno (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4733,
+                    "url": "",
+                    "nome": "S28",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 4704,
+                    "passo_de_saida": "Pausa: Aguardar Retorno (2)",
+                    "passo_de_entrada_id": 4687,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exame de Avidez",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4705,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Retornar ao Prontu\u00e1rio (Maios de 28 semanas)",
+            "descricao": "Retornar ao Prontu\u00e1rio e finalizar protocolo de Toxoplasmose devido a impossibilidade de realiza\u00e7\u00e3o de, pelo menos, um ciclo de tratamento, por idade gestacional avan\u00e7ada.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4717,
+                    "url": "",
+                    "nome": "S12 (mais de 28 semanas)",
+                    "descricao": "mais de 28 semanas",
+                    "passo_de_saida_id": 4692,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavaliar Idade Gestacional",
+                    "passo_de_entrada_id": 4705,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Retornar ao Prontu\u00e1rio (Maios de 28 semanas)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4706,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4681,
+            "passo_de_saida": {
+                "id": 4681,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[IgM (+)] Prescrever Rovamicina",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4682,
+            "passo_de_entrada": {
+                "id": 4682,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Alto Risco",
+                "descricao": "Classificar paciente como alto risco",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4707,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (menos de 16 semanas)",
+            "descricao": "menos de 16 semanas",
+            "passo_de_saida_id": 4683,
+            "passo_de_saida": {
+                "id": 4683,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "Avaliar se gesta\u00e7\u00e3o tem menos de 16 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4684,
+            "passo_de_entrada": {
+                "id": 4684,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[< 16 semanas] Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3403,
+                "nome": "menos de 16 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3397
+                ],
+                "argumentos": [
+                    "idade_gestacional_menor_16_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4708,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (mais de 16 semanas)",
+            "descricao": "mais de 16 semanas",
+            "passo_de_saida_id": 4683,
+            "passo_de_saida": {
+                "id": 4683,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "Avaliar se gesta\u00e7\u00e3o tem menos de 16 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4686,
+            "passo_de_entrada": {
+                "id": 4686,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Pesquisa de Infec\u00e7\u00e3o Fetal",
+                "descricao": "Solicitar pesquisa de infec\u00e7\u00e3o fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3404,
+                "nome": "mais de 16 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3397
+                ],
+                "argumentos": [
+                    "idade_gestacional_menor_16_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4709,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4682,
+            "passo_de_saida": {
+                "id": 4682,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Alto Risco",
+                "descricao": "Classificar paciente como alto risco",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4683,
+            "passo_de_entrada": {
+                "id": 4683,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade Gestacional",
+                "descricao": "Avaliar se gesta\u00e7\u00e3o tem menos de 16 semanas",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4710,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (alta avidez)",
+            "descricao": "alta avidez",
+            "passo_de_saida_id": 4687,
+            "passo_de_saida": {
+                "id": 4687,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exame de Avidez",
+                "descricao": "Avaliar exame de avidez a toxoplasmose previamente solicitado",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4685,
+            "passo_de_entrada": {
+                "id": 4685,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta Avidez",
+                "descricao": "Alta avidez - infec\u00e7\u00e3o contra\u00edda h\u00e1 mais de 16 semanas, ou seja, antes da gesta\u00e7\u00e3o. Esse quadro representa um menor risco para o feto.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3405,
+                "nome": "alta avidez",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3398
+                ],
+                "argumentos": [
+                    "alta_avidez"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4711,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (baixa avidez)",
+            "descricao": "baixa avidez",
+            "passo_de_saida_id": 4687,
+            "passo_de_saida": {
+                "id": 4687,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exame de Avidez",
+                "descricao": "Avaliar exame de avidez a toxoplasmose previamente solicitado",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4688,
+            "passo_de_entrada": {
+                "id": 4688,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Avidez Baixa ou Intermedi\u00e1ria",
+                "descricao": "Baixa avidez significa que a infec\u00e7\u00e3o foi contra\u00edda em menos de 16 semanas. Esse quadro representa o caso mais grave, pois a infec\u00e7\u00e3o foi contra\u00edda ainda na gesta\u00e7\u00e3o, representando um maior risco ao feto.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3406,
+                "nome": "baixa avidez",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3398
+                ],
+                "argumentos": [
+                    "alta_avidez"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4712,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4684,
+            "passo_de_saida": {
+                "id": 4684,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[< 16 semanas] Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4704,
+            "passo_de_entrada": {
+                "id": 4704,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4713,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4685,
+            "passo_de_saida": {
+                "id": 4685,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta Avidez",
+                "descricao": "Alta avidez - infec\u00e7\u00e3o contra\u00edda h\u00e1 mais de 16 semanas, ou seja, antes da gesta\u00e7\u00e3o. Esse quadro representa um menor risco para o feto.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4689,
+            "passo_de_entrada": {
+                "id": 4689,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Cr\u00f4nica & Pr\u00e9-Natal",
+                "descricao": "<p><span style=\"font-size:16px\">Tranquilizar o paciente e manter segmento em pr&eacute;-natal de baixo risco.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4714,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4688,
+            "passo_de_saida": {
+                "id": 4688,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Avidez Baixa ou Intermedi\u00e1ria",
+                "descricao": "Baixa avidez significa que a infec\u00e7\u00e3o foi contra\u00edda em menos de 16 semanas. Esse quadro representa o caso mais grave, pois a infec\u00e7\u00e3o foi contra\u00edda ainda na gesta\u00e7\u00e3o, representando um maior risco ao feto.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4690,
+            "passo_de_entrada": {
+                "id": 4690,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Aguda",
+                "descricao": "Diagnosticar como infec\u00e7\u00e3o AGUDA.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4715,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4690,
+            "passo_de_saida": {
+                "id": 4690,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Aguda",
+                "descricao": "Diagnosticar como infec\u00e7\u00e3o AGUDA.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4691,
+            "passo_de_entrada": {
+                "id": 4691,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter Rovamicina 3g/dia at\u00e9 reavalia\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4716,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4691,
+            "passo_de_saida": {
+                "id": 4691,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter Rovamicina 3g/dia at\u00e9 reavalia\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4692,
+            "passo_de_entrada": {
+                "id": 4692,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional",
+                "descricao": "Avaliar se paciente tem menos de 28 semanas de gesta\u00e7\u00e3o",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4717,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (mais de 28 semanas)",
+            "descricao": "mais de 28 semanas",
+            "passo_de_saida_id": 4692,
+            "passo_de_saida": {
+                "id": 4692,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional",
+                "descricao": "Avaliar se paciente tem menos de 28 semanas de gesta\u00e7\u00e3o",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4705,
+            "passo_de_entrada": {
+                "id": 4705,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Retornar ao Prontu\u00e1rio (Maios de 28 semanas)",
+                "descricao": "Retornar ao Prontu\u00e1rio e finalizar protocolo de Toxoplasmose devido a impossibilidade de realiza\u00e7\u00e3o de, pelo menos, um ciclo de tratamento, por idade gestacional avan\u00e7ada.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3407,
+                "nome": "mais de 28 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3399
+                ],
+                "argumentos": [
+                    "idade_gestacional_menor_28_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4718,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (menos de 28 semanas)",
+            "descricao": "menos de 28 semanas",
+            "passo_de_saida_id": 4692,
+            "passo_de_saida": {
+                "id": 4692,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional",
+                "descricao": "Avaliar se paciente tem menos de 28 semanas de gesta\u00e7\u00e3o",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4686,
+            "passo_de_entrada": {
+                "id": 4686,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Pesquisa de Infec\u00e7\u00e3o Fetal",
+                "descricao": "Solicitar pesquisa de infec\u00e7\u00e3o fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3408,
+                "nome": "menos de 28 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3399
+                ],
+                "argumentos": [
+                    "idade_gestacional_menor_28_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4719,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4686,
+            "passo_de_saida": {
+                "id": 4686,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Pesquisa de Infec\u00e7\u00e3o Fetal",
+                "descricao": "Solicitar pesquisa de infec\u00e7\u00e3o fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4694,
+            "passo_de_entrada": {
+                "id": 4694,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Ultrassom com Amniocentese",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4720,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4694,
+            "passo_de_saida": {
+                "id": 4694,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar Ultrassom com Amniocentese",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4703,
+            "passo_de_entrada": {
+                "id": 4703,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4721,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (pcr (+))",
+            "descricao": "pcr (+)",
+            "passo_de_saida_id": 4696,
+            "passo_de_saida": {
+                "id": 4696,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PCR",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4697,
+            "passo_de_entrada": {
+                "id": 4697,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Fetal",
+                "descricao": "Diagnosticar infec\u00e7\u00e3o fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3409,
+                "nome": "pcr (+)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3400
+                ],
+                "argumentos": [
+                    "pcr_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4722,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (pcr (-))",
+            "descricao": "pcr (-)",
+            "passo_de_saida_id": 4696,
+            "passo_de_saida": {
+                "id": 4696,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PCR",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4695,
+            "passo_de_entrada": {
+                "id": 4695,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter Rovamicina 3,0g/dia at\u00e9 o fim da gesta\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3410,
+                "nome": "pcr (-)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3400
+                ],
+                "argumentos": [
+                    "pcr_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4723,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4697,
+            "passo_de_saida": {
+                "id": 4697,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Fetal",
+                "descricao": "Diagnosticar infec\u00e7\u00e3o fetal",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4698,
+            "passo_de_entrada": {
+                "id": 4698,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever Medica\u00e7\u00f5es Alternadas",
+                "descricao": "<p>Prescrever medica&ccedil;&otilde;es alternadas conforme esquema representado na tabela a seguir:</p>\n\n<table border=\"1\" cellspacing=\"0\" style=\"-webkit-text-stroke-width:0px; border-collapse:collapse; border-spacing:0px; border:1px solid black; box-sizing:border-box; font-variant-caps:normal; font-variant-ligatures:normal; orphans:2; text-align:start; text-decoration-color:initial; text-decoration-style:initial; widows:2; width:626pt; word-break:break-word\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:127pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Per&iacute;odo</span></strong></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:193pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Medicamento</span></strong></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:306pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Posologia</span></strong></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">3 semanas</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Rovamicina</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">1,5mUi: 2 comprimidos em 8/8 horas&nbsp;</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" rowspan=\"3\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:normal; width:127pt\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">3 semanas seguintes&nbsp;</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Daraprim </span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">25mg: 1 comprimido em 12/12 horas</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Suladrim</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">500mg: 1 comprimido em 6/6 horas</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Folinato de C&aacute;lcio </span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">10mg: tomar 1 comprimido em 12/12 horas</span></span></span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4724,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4698,
+            "passo_de_saida": {
+                "id": 4698,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescrever Medica\u00e7\u00f5es Alternadas",
+                "descricao": "<p>Prescrever medica&ccedil;&otilde;es alternadas conforme esquema representado na tabela a seguir:</p>\n\n<table border=\"1\" cellspacing=\"0\" style=\"-webkit-text-stroke-width:0px; border-collapse:collapse; border-spacing:0px; border:1px solid black; box-sizing:border-box; font-variant-caps:normal; font-variant-ligatures:normal; orphans:2; text-align:start; text-decoration-color:initial; text-decoration-style:initial; widows:2; width:626pt; word-break:break-word\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:127pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Per&iacute;odo</span></strong></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:193pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Medicamento</span></strong></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:black; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap; width:306pt\"><span style=\"font-size:12pt\"><span style=\"color:white\"><strong><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Posologia</span></strong></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">3 semanas</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Rovamicina</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; border-color:#000000; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">1,5mUi: 2 comprimidos em 8/8 horas&nbsp;</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" rowspan=\"3\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:normal; width:127pt\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">3 semanas seguintes&nbsp;</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Daraprim </span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:32.6pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">25mg: 1 comprimido em 12/12 horas</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Suladrim</span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:#f8f8f8; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">500mg: 1 comprimido em 6/6 horas</span></span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">Folinato de C&aacute;lcio </span></span></span></td>\n\t\t\t<td dir=\"LTR\" style=\"background-color:white; height:16.9pt; text-align:center; vertical-align:middle; white-space:nowrap\"><span style=\"font-size:12pt\"><span style=\"color:black\"><span style=\"font-family:&quot;Segoe UI&quot;,sans-serif\">10mg: tomar 1 comprimido em 12/12 horas</span></span></span></td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4693,
+            "passo_de_entrada": {
+                "id": 4693,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Retornar ao Prontu\u00e1rio",
+                "descricao": "Retornar ao Prontu\u00e1rio e finalizar protocolo de Toxoplasmose.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4725,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4695,
+            "passo_de_saida": {
+                "id": 4695,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter Rovamicina 3,0g/dia at\u00e9 o fim da gesta\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4699,
+            "passo_de_entrada": {
+                "id": 4699,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4726,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S21 (20 a 24 semanas)",
+            "descricao": "20 a 24 semanas",
+            "passo_de_saida_id": 4699,
+            "passo_de_saida": {
+                "id": 4699,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4700,
+            "passo_de_entrada": {
+                "id": 4700,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Ultrassom Morfol\u00f3gico",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3411,
+                "nome": "20 a 24 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3401
+                ],
+                "argumentos": [
+                    "idade_gestacional_20_a_24_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4727,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S22 (menos de 20 ou mais de 24)",
+            "descricao": "menos de 20 ou mais de 24",
+            "passo_de_saida_id": 4699,
+            "passo_de_saida": {
+                "id": 4699,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4701,
+            "passo_de_entrada": {
+                "id": 4701,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3412,
+                "nome": "menos de 20 ou mais de 24",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3401
+                ],
+                "argumentos": [
+                    "idade_gestacional_20_a_24_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4728,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S23",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4700,
+            "passo_de_saida": {
+                "id": 4700,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Ultrassom Morfol\u00f3gico",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4693,
+            "passo_de_entrada": {
+                "id": 4693,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Retornar ao Prontu\u00e1rio",
+                "descricao": "Retornar ao Prontu\u00e1rio e finalizar protocolo de Toxoplasmose.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4729,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S24 (24 a 28 semanas)",
+            "descricao": "24 a 28 semanas",
+            "passo_de_saida_id": 4701,
+            "passo_de_saida": {
+                "id": 4701,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4702,
+            "passo_de_entrada": {
+                "id": 4702,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Ecocardiografia Fetal",
+                "descricao": "<p><span style=\"font-size:16px\"><u><strong>Aten&ccedil;&atilde;o</strong></u>: Deve ser impresso a solicita&ccedil;&atilde;o, pois n&atilde;o &eacute; um exame de rotina.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3413,
+                "nome": "24 a 28 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3402
+                ],
+                "argumentos": [
+                    "idade_gestacional_24_a_28_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4730,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S25 (menos 24 ou mais de 28 semanas)",
+            "descricao": "menos 24 ou mais de 28 semanas",
+            "passo_de_saida_id": 4701,
+            "passo_de_saida": {
+                "id": 4701,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavaliar Idade Gestacional (3)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4693,
+            "passo_de_entrada": {
+                "id": 4693,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Retornar ao Prontu\u00e1rio",
+                "descricao": "Retornar ao Prontu\u00e1rio e finalizar protocolo de Toxoplasmose.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3414,
+                "nome": "menos 24 ou mais de 28 semanas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3402
+                ],
+                "argumentos": [
+                    "idade_gestacional_24_a_28_semanas"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4731,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S26",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4702,
+            "passo_de_saida": {
+                "id": 4702,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Ecocardiografia Fetal",
+                "descricao": "<p><span style=\"font-size:16px\"><u><strong>Aten&ccedil;&atilde;o</strong></u>: Deve ser impresso a solicita&ccedil;&atilde;o, pois n&atilde;o &eacute; um exame de rotina.</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4693,
+            "passo_de_entrada": {
+                "id": 4693,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Retornar ao Prontu\u00e1rio",
+                "descricao": "Retornar ao Prontu\u00e1rio e finalizar protocolo de Toxoplasmose.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4732,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S27",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4703,
+            "passo_de_saida": {
+                "id": 4703,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno (1)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4696,
+            "passo_de_entrada": {
+                "id": 4696,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar PCR",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4733,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S28",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 4704,
+            "passo_de_saida": {
+                "id": 4704,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Aguardar Retorno (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4687,
+            "passo_de_entrada": {
+                "id": 4687,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exame de Avidez",
+                "descricao": "Avaliar exame de avidez a toxoplasmose previamente solicitado",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3397,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_menor_16_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3398,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alta_avidez",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3399,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_menor_28_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3400,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "pcr_positivo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3401,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_20_a_24_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3402,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_gestacional_24_a_28_semanas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

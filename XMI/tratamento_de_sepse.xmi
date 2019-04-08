@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3241" url="" name="Tratamento de SEPSE" code="H012">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18623" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Identificar Foco Infeccioso" description="Defina o foco infeccioso do paciente para uma melhor condu&#xe7;&#xe3;o do tratamento" inputSequences="//@sequence.16" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2 //@sequence.3 //@sequence.4 //@sequence.5 //@sequence.6 //@sequence.7 //@sequence.18 //@sequence.19">
+    <questions text="Pneumonia Comunit&#xe1;ria" url="" id="9521">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pneumo_comunit" id="18180" weight="1" value="false"/>
+    </questions>
+    <questions text="Pneumonia Hospitalar" url="" id="9522">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pneumo_hosp" id="18341" weight="1" value="false"/>
+    </questions>
+    <questions text="Cistite Complicada" url="" id="9523">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_cistite" id="18342" weight="1" value="false"/>
+    </questions>
+    <questions text="Pielonefrite" url="" id="9524">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pielonefrite" id="18343" weight="1" value="false"/>
+    </questions>
+    <questions text="Meningite" url="" id="9525">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_meningite" id="18344" weight="1" value="false"/>
+    </questions>
+    <questions text="Partes Moles / Pele" url="" id="9526">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_partes_moles" id="18345" weight="1" value="false"/>
+    </questions>
+    <questions text="Abdominal" url="" id="9527">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_abdominal" id="18346" weight="1" value="false"/>
+    </questions>
+    <questions text="Neutropenia Febril" url="" id="9528">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_neutropenia" id="18347" weight="1" value="false"/>
+    </questions>
+    <questions text="Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" url="" id="9529">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_infeccao_sanguinea" id="18348" weight="1" value="false"/>
+    </questions>
+    <questions text="Foco Indeterminado" url="" id="9530">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_indeterminado" id="18349" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18624" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Pneumonia Comunit&#xe1;ria" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.8">
+    <examination url="ANTIBIOGRAMA DIFUSAO EM AGAR" exam_id="28100034" limb_side="" quantity="1" reason="Protocolo de Tratamento de Sepse" clinical_indication="Protocolo de Tratamento de Sepse"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <medication url="" med_id="43400" id="9561" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="9561" standard="null"/>
+    <medication url="" med_id="43400" id="9562" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="9562" standard="null"/>
+    <medication url="" med_id="43800" id="9563" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9563" standard="null"/>
+    <medication url="" med_id="43800" id="9564" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9564" standard="null"/>
+    <medication url="" med_id="43800" id="9565" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9565" standard="null"/>
+    <medication url="" med_id="43800" id="9566" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9566" standard="null"/>
+    <medication url="" med_id="130123" id="9567" name="ZITROMAX 500MG AMPL 1 UD" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9567" frequency="24" standard="null"/>
+    <medication url="" med_id="38008" id="9568" name="DIPIRONA 1 G AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9568" frequency="6" standard="null"/>
+    <medication url="" med_id="108545" id="9569" name="PARACETAMOL 750MG COMP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="9569" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18625" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Pneumonia Hospitalar" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.9">
+    <examination url="ANTIBIOGRAMA DIFUSAO EM AGAR" exam_id="28100034" limb_side="" quantity="1" reason="Protocolo de Tratamento de Sepse" clinical_indication="Protocolo de Tratamento de Sepse"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Tratamento de SEPSE" clinical_indication="Protocolo de Tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Tratamento de SEPSE" clinical_indication="Protocolo de Tratamento de SEPSE"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Tratamento de SEPSE" clinical_indication="Protocolo de Tratamento de SEPSE"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Tratamento de SEPSE" clinical_indication="Protocolo de Tratamento de SEPSE"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Tratamento de SEPSE" clinical_indication="Protocolo de Tratamento de SEPSE"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Tratamento de SEPSE" clinical_indication="Protocolo de Tratamento de SEPSE"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Protocolo de Tratamento de SEPSE" clinical_indication="Protocolo de Tratamento de SEPSE"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <medication url="" med_id="111473" id="9570" name="MAXCEF 2GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9570" standard="null"/>
+    <medication url="" med_id="118759" id="9571" name="TAZOCIN 4,5GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9571" standard="null"/>
+    <medication url="" med_id="43800" id="9572" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9572" standard="null"/>
+    <medication url="" med_id="43800" id="9573" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9573" standard="null"/>
+    <medication url="" med_id="43800" id="9574" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9574" standard="null"/>
+    <medication url="" med_id="43800" id="9575" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9575" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18626" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Cistite Complicada" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.10">
+    <examination url="ANTIBIOGRAMA DIFUSAO EM AGAR" exam_id="28100034" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de Sepse" clinical_indication="Protocolo de tratamento de Sepse"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de Sepse" clinical_indication="Protocolo de tratamento de Sepse"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de Sepse" clinical_indication="Protocolo de tratamento de Sepse"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de Sepse" clinical_indication="Protocolo de tratamento de Sepse"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de Sepse" clinical_indication="Protocolo de tratamento de Sepse"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="Protocolo de tratamento de Sepse" clinical_indication="Protocolo de tratamento de Sepse"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Protocolo de tratamento de Sepse" clinical_indication="Protocolo de tratamento de Sepse"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Cistite complicada" clinical_indication="n/a"/>
+    <medication url="" med_id="43400" id="9576" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="9576" standard="null"/>
+    <medication url="" med_id="43400" id="9577" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="9577" standard="null"/>
+    <medication url="" med_id="43800" id="9578" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9578" standard="null"/>
+    <medication url="" med_id="43800" id="9579" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9579" standard="null"/>
+    <medication url="" med_id="43800" id="9580" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9580" standard="null"/>
+    <medication url="" med_id="43800" id="9581" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9581" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18627" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Pielonefrite" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.11">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="SUMARIO DE URINA" exam_id="99130367" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="ULTRA-SOM DE RETROPERITONEO GRANDES VASOS E S" exam_id="56010273" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="US APARELHO URINARIO (RINS E BEXIGA)" exam_id="33010030" limb_side="" quantity="1" reason="SEPSE - Pielonefrite" clinical_indication="n/a"/>
+    <medication url="" med_id="43800" id="9582" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9582" standard="null"/>
+    <medication url="" med_id="43800" id="9583" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9583" standard="null"/>
+    <medication url="" med_id="43800" id="9584" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9584" standard="null"/>
+    <medication url="" med_id="43800" id="9585" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9585" standard="null"/>
+    <medication url="" med_id="43400" id="9586" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="9586" standard="null"/>
+    <medication url="" med_id="43400" id="9587" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="9587" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18628" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Meningite" description="Tratamento Foco Meningite" inputSequences="//@sequence.4" outputSequences="//@sequence.12">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <medication url="" med_id="36811" id="9588" name="DECADRON 4 MG FR 2,5 ML AMPL 2,5 ML" brand="" unit="MG" access="6" daily_dosage="1" cycles="1" treatement_time="9588" standard="null"/>
+    <medication url="" med_id="43400" id="9589" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9589" standard="null"/>
+    <medication url="" med_id="75116" id="9590" name="AMPICILINA 1 GR AMPL 1 UD" brand="" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9590" standard="null"/>
+    <medication url="" med_id="43800" id="9591" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9591" standard="null"/>
+    <medication url="" med_id="43800" id="9592" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9592" standard="null"/>
+    <medication url="" med_id="43800" id="9593" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9593" standard="null"/>
+    <medication url="" med_id="43800" id="9594" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9594" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18629" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Partes Moles / Pele" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.13">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <medication url="" med_id="75264" id="9595" name="OXACILINA 500 MG FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="4" cycles="1" treatement_time="9595" standard="null"/>
+    <medication url="" med_id="37400" id="9596" name="GENTAMICINA 80 MG AMPL 2 ML" brand="" unit="UD" access="6" daily_dosage="3" cycles="1" treatement_time="9596" standard="null"/>
+    <medication url="" med_id="38849" id="9597" name="DALACIN 600 MG AMPL 4 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9597" standard="null"/>
+    <medication url="" med_id="43800" id="9598" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9598" standard="null"/>
+    <medication url="" med_id="38547" id="9599" name="CIPRO 200 MG FRAP 100 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9599" standard="null"/>
+    <medication url="" med_id="38547" id="9600" name="CIPRO 200 MG FRAP 100 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9600" standard="null"/>
+    <medication url="" med_id="43800" id="9601" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9601" standard="null"/>
+    <medication url="" med_id="43800" id="9602" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9602" standard="null"/>
+    <medication url="" med_id="43800" id="9603" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9603" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18630" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Abdominal" description="Tratamento Foco Abdominal" inputSequences="//@sequence.6" outputSequences="//@sequence.14">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="FOSFATASE ALCALINA" exam_id="28010850" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="PROVAS D/FUNC HEPATICA INCL BILIRRUBINAS" exam_id="28140079" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="AMILASE  (SANGUE)" exam_id="28010256" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="LIPASE" exam_id="28011082" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="US ABDOMEN TOTAL ABDOM SUP RINS RETROPERIT" exam_id="33010021" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <medication url="" med_id="108324" id="9604" name="METRONIDAZOL 500 MG AMP TUBO 100 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9604" standard="null"/>
+    <medication url="" med_id="43800" id="9605" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9605" standard="null"/>
+    <medication url="" med_id="38547" id="9606" name="CIPRO 200 MG FRAP 100 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9606" standard="null"/>
+    <medication url="" med_id="38547" id="9607" name="CIPRO 200 MG FRAP 100 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9607" standard="null"/>
+    <medication url="" med_id="43800" id="9608" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9608" standard="null"/>
+    <medication url="" med_id="43800" id="9609" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9609" standard="null"/>
+    <medication url="" med_id="43800" id="9610" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9610" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18631" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Neutropenia Febril" description="" inputSequences="//@sequence.7" outputSequences="//@sequence.15">
+    <examination url="ANTIBIOGRAMA DIFUSAO EM AGAR" exam_id="28100034" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de tratamento de SEPSE" clinical_indication="Protocolo de tratamento de SEPSE"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <medication url="" med_id="111473" id="9611" name="MAXCEF 2GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9611" standard="null"/>
+    <medication url="" med_id="118759" id="9612" name="TAZOCIN 4,5GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9612" standard="null"/>
+    <medication url="" med_id="43800" id="9613" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9613" standard="null"/>
+    <medication url="" med_id="43800" id="9614" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9614" standard="null"/>
+    <medication url="" med_id="43800" id="9615" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9615" standard="null"/>
+    <medication url="" med_id="43800" id="9616" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9616" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18632" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Encaminhar paciente ao l&#xed;der local" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>PROTOCOLO SEPSE - Tempo &amp;eacute; vida!&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:14px&quot;>Paciente: __________________________________ Idade: _____ anos&amp;nbsp; &amp;nbsp;Data: ____/____/____&lt;/span>&lt;/p>&#xA;&#xA;&lt;table align=&quot;center&quot; border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:650px&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; style=&quot;background-color:#000000; text-align:center; vertical-align:middle&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; style=&quot;vertical-align:middle&quot;>- Solicitar &lt;strong>KIT SEPSE&amp;nbsp;&lt;/strong>(lactato arterial, bioqu&amp;iacute;mica geral, hemocultura (02 amostras) e culturas de s&amp;iacute;tios pertinentes)&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&lt;span style=&quot;font-size:10px&quot;>* Enfermagem aciona equipe do laborat&amp;oacute;rio para coleta do Kit sepse&lt;/span>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&lt;span style=&quot;font-size:10px&quot;>* Tempo ideal m&amp;aacute;ximo para resultado de Lactato: 30 min&lt;/span>&amp;nbsp;&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&lt;br />&#xA;&#x9;&#x9;&#x9;Hora do acionamento do laborat&amp;oacute;rio: _____:_____ h&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;________________________________&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br />&#xA;&#x9;&#x9;&#x9;Enfermeiro (a)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;table align=&quot;center&quot; border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:650px&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; style=&quot;background-color:#000000&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>- Iniciar&amp;nbsp;&lt;strong>ANTIBI&amp;Oacute;TICO&lt;/strong>&amp;nbsp;conforme protocolo. Contactar enfermeiro (a) para administra&amp;ccedil;&amp;atilde;o&amp;nbsp;&lt;strong>IMEDIATA.&lt;/strong>&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Hora da administra&amp;ccedil;&amp;atilde;o: ____ : ____ h&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;_____________________________&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br />&#xA;&#x9;&#x9;&#x9;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Enfermeiro (a)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;table align=&quot;center&quot; border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; class=&quot;table&quot; style=&quot;width:650px&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; style=&quot;background-color:#000000&quot;>&amp;nbsp;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p>&amp;nbsp;3.1) PAS &amp;lt;= 90 mmHg&amp;nbsp;&lt;strong>OU&amp;nbsp;&lt;/strong>PAM &amp;lt;= 65 mmHg&amp;nbsp;&lt;strong>OU&amp;nbsp;&lt;/strong>RNC&amp;nbsp;&lt;strong>OU&amp;nbsp;&lt;/strong>TEC &amp;gt;3s&amp;nbsp;&lt;strong>OU&lt;/strong>&amp;nbsp;Olig&amp;uacute;ria&amp;nbsp;&lt;strong>OU&lt;/strong>&amp;nbsp;Livedo&amp;nbsp;&lt;strong>OU&lt;/strong>&amp;nbsp;Lactato arterial &amp;gt;= 2x o valor normal:&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;table align=&quot;center&quot; border=&quot;2&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:550px&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Iniciar infus&amp;atilde;o de SF 0,9% ou Ringer lactato (30mg/kg/peso), EV, em 30-60 minutos&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/tbody>&#xA;&#x9;&#x9;&#x9;&lt;/table>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>* &lt;span style=&quot;font-size:11px&quot;>Em pacientes cardiopatas pode ser necess&amp;aacute;rio diminuir o volume e/ou velocidade de infus&amp;atilde;o&lt;/span>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&lt;span style=&quot;font-size:11px&quot;>&lt;strong>* &lt;/strong>Manter avalia&amp;ccedil;&amp;atilde;o cont&amp;iacute;nua durante reanima&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica&lt;/span>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&lt;br />&#xA;&#x9;&#x9;&#x9;Hora da administra&amp;ccedil;&amp;atilde;o: _____:_____ h&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;strong>_____________________________&lt;/strong>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&amp;nbsp;Enfermeiro (a)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p>&#xA;&#x9;&#x9;&#x9;3.2) &lt;strong>SE&lt;/strong> hipotens&amp;atilde;o persistente (PAM &amp;lt; 65 mmHg) ou amea&amp;ccedil;adora:&#xA;&#xA;&#x9;&#x9;&#x9;&lt;table align=&quot;center&quot; border=&quot;2&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:550px&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;text-align:center&quot;>&lt;strong>Iniciar vasopressor: Noradrenalina (0,1 a 0,2mcg/kg/min)&lt;/strong>&lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/tbody>&#xA;&#x9;&#x9;&#x9;&lt;/table>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left&quot;>&lt;span style=&quot;font-size:10px&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Dilui&amp;ccedil;&amp;atilde;o: Noradrenalina 4mg/4ml &amp;ndash; 04 FA + 250ml SG 5% (60mcg/ml) &amp;ndash; Iniciar entre 7-15ml/h e titular dose a cada 2 a 5&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; minutos,&amp;nbsp;escalonando vaz&amp;atilde;o de acordo com resposta obtida.&lt;/span>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&lt;span style=&quot;font-size:10px&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span>&lt;span style=&quot;font-size:11px&quot;> * Em caso de hipotens&amp;atilde;o amea&amp;ccedil;adora &amp;agrave; vida, o vasopressor deve ser iniciado concomitante &amp;agrave; reposi&amp;ccedil;&amp;atilde;o vol&amp;ecirc;mica.&lt;/span>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&lt;span style=&quot;font-size:11px&quot;>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; * Nenhum paciente deve permanecer hipotenso por mais que 30-40 min. Portanto, o vasopressor pode ser iniciado em veia perif&amp;eacute;rica para garantir normotens&amp;atilde;o at&amp;eacute; que o acesso central seja estabelecido.&lt;/span>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:right&quot;>&lt;span style=&quot;font-size:11px&quot;>&amp;nbsp;* Avaliar associar Vasopressina, se necess&amp;aacute;rio&lt;/span>&lt;span style=&quot;font-size:10px&quot;>.&lt;/span>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.8 //@sequence.9 //@sequence.10 //@sequence.11 //@sequence.13 //@sequence.14 //@sequence.15 //@sequence.20 //@sequence.21"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="18633" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Confirmar Suspeia de SEPSE" description="Confirmar Suspeia de SEPSE" inputSequences="//@sequence.22" outputSequences="//@sequence.16 //@sequence.17">
+    <questions text="Ap&#xf3;s reavalia&#xe7;&#xe3;o, &#xe9; confirmado a possibilidade de sepse?" url="" id="9531">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trata_sepse_confirma_suspeita" id="18350" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18634" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Encaminhar para protocolo espec&#xed;fico" description="Paciente com potencial de gravidade maior, em virtude de altera&#xe7;&#xf5;es importantes nos sinais vitais, encaminhar para protocolo espec&#xed;fico (TEP, ICC, SCA, Desidrata&#xe7;&#xe3;o Importante, Intoxica&#xe7;&#xe3;o Ex&#xf3;gena?)&#xA;&#xA;Importante!&#xA;O l&#xed;der de plant&#xe3;o deve justificar em evolu&#xe7;&#xe3;o o que afasta a possibilidade de SEPSE." isTerminal="true" inputSequences="//@sequence.17"/>
+  <element xsi:type="pathwayMetamodel:Information" id="18635" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Sugest&#xe3;o de tratamento para meningite" description="Para pacientes que apresentem evid&#xea;ncias de  Hipertens&#xe3;o Intracraniana ( cl&#xed;nica ou radiol&#xf3;gica ),   n&#xe3;o  sugerimos a realiza&#xe7;&#xe3;o  de pun&#xe7;&#xe3;o lombar,  manter tratamento emp&#xed;rico.&#xA;&#xA;Aguardar resultado dos exames.&#xA;Se houver suspeita de  encefalite  ou meningite viral,  acrescentar  aos exame  j&#xe1; solicitados  os seguintes itens .:&#xA;&#xA;* Isolamento viral para dengue e CKG do l&#xed;quor e do sangue ( avaliar  disponibilidade  do teste no laborat&#xf3;rio )  &#xA;* Sorologia para Herpes do l&#xed;quor&#xA;* PCR s&#xe9;rico para Herpes &#xA;&#xA;Sugerimos ap&#xf3;s Bacterioscopia do LCR.:&#xA;&#xA;* COCO GRAM +: PNEUMOCOCO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA 4MG EV 6/6H&#xA;* COCOBACILOS GRAM +: LISTERIA -- CEFTRIAXONA 2G 12/12H + AMPICILINA 2G 4/4H&#xA;* DIPLOCOCO GRAM - : MENINGOCOCO -- CEFTRIAXONA 2G 12/12H&#xA;* COCOBACILO GRAM - : HEM&#xd3;FILO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA&#xA;&#xA;Se n&#xe3;o for evidenciado microorganismo cor&#xe1;vel pelo GRAM, manter o tratamento emp&#xed;rico." isTerminal="true" inputSequences="//@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18636" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" description="Tratamento Foco Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" inputSequences="//@sequence.18" outputSequences="//@sequence.20">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco de Infec&#xe7;&#xe3;o de Corrente Sangu&#xed;nea" clinical_indication="n/a"/>
+    <examination url="ANTIBIOGRAMA DIFUSAO EM AGAR" exam_id="28100034" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <medication url="" med_id="109134" id="9617" name="VANCOCINA 1GR FRAP 1 UD" brand="" unit="UD" access="1" daily_dosage="1" cycles="1" treatement_time="9617" frequency="12" standard="null"/>
+    <medication url="" med_id="118759" id="9618" name="TAZOCIN 4,5GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9618" standard="null"/>
+    <medication url="" med_id="43800" id="9619" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9619" standard="null"/>
+    <medication url="" med_id="43800" id="9620" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9620" standard="null"/>
+    <medication url="" med_id="43800" id="9621" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9621" standard="null"/>
+    <medication url="" med_id="43800" id="9622" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9622" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="18637" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Foco Indeterminado" description="Tratamento Foco Indeterminado" inputSequences="//@sequence.19" outputSequences="//@sequence.21">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/s"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/s"/>
+    <examination url="GLICOSE  (SANGUE)" exam_id="28010973" limb_side="" quantity="1" reason="Tratamento de Sepse - Foco Indeterminado" clinical_indication="n/a"/>
+    <examination url="ANTIBIOGRAMA DIFUSAO EM AGAR" exam_id="28100034" limb_side="" quantity="1" reason="Tratamento de SEPSE" clinical_indication="Tratamento de SEPSE"/>
+    <medication url="" med_id="118759" id="9623" name="TAZOCIN 4,5GR FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9623" standard="null"/>
+    <medication url="" med_id="43800" id="9624" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9624" standard="null"/>
+    <medication url="" med_id="43800" id="9625" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9625" standard="null"/>
+    <medication url="" med_id="43800" id="9626" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9626" standard="null"/>
+    <medication url="" med_id="43800" id="9627" name="SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9627" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="18638" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar ao l&#xed;der local" description="" isInitial="true" outputSequences="//@sequence.22"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="18639" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="">
+    <operation name="foco_infec_pneumo_comunitaria" Operator="affirmation" id="18351">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pneumo_comunit" id="18180" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="18640" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="">
+    <operation name="foco_infec_pneumo_hospitalar" Operator="affirmation" id="18352">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pneumo_hosp" id="18341" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="18661" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description="">
+    <operation name="foco_infec_cistite" Operator="affirmation" id="18353">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_cistite" id="18342" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="18662" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="">
+    <operation name="foco_infec_pielonefrite" Operator="affirmation" id="18354">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pielonefrite" id="18343" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.0" id="18663" type="Sequencia" type_verbose="Sequencia" url="" name="s8" description="">
+    <operation name="foco_infec_meningite" Operator="affirmation" id="18355">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_meningite" id="18344" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.0" id="18664" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="">
+    <operation name="foco_infec_partes_moles" Operator="affirmation" id="18356">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_partes_moles" id="18345" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.0" id="18665" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="">
+    <operation name="foco_infec_abdominal" Operator="affirmation" id="18357">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_abdominal" id="18346" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.0" id="18666" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description="">
+    <operation name="foco_infec_neutropenia" Operator="affirmation" id="18358">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_neutropenia" id="18347" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.1" id="18667" type="Sequencia" type_verbose="Sequencia" url="" name="s12" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.2" id="18668" type="Sequencia" type_verbose="Sequencia" url="" name="s13" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.3" id="18669" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.4" id="18670" type="Sequencia" type_verbose="Sequencia" url="" name="s15" description=""/>
+  <sequence inputStep="//@element.12" outputStep="//@element.5" id="18671" type="Sequencia" type_verbose="Sequencia" url="" name="s16" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.6" id="18672" type="Sequencia" type_verbose="Sequencia" url="" name="s17" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="18673" type="Sequencia" type_verbose="Sequencia" url="" name="s18" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="18674" type="Sequencia" type_verbose="Sequencia" url="" name="s19" description=""/>
+  <sequence inputStep="//@element.0" outputStep="//@element.10" id="18675" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (confirma sepse)" description="">
+    <operation name="confirmacao_de_sepse" Operator="affirmation" id="18359">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trata_sepse_confirma_suspeita" id="18350" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="18676" type="Sequencia" type_verbose="Sequencia" url="" name="s22 (sem sepse)" description="">
+    <operation name="sem_confirmacao_de_sepse" id="18360">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trata_sepse_confirma_suspeita" id="18350" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.0" id="18677" type="Sequencia" type_verbose="Sequencia" url="" name="S23 (foco infeccao de corrente sanguinea)" description="">
+    <operation name="foco: infeccao de corrente sanguinea" Operator="affirmation" id="18361">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_infeccao_sanguinea" id="18348" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.0" id="18678" type="Sequencia" type_verbose="Sequencia" url="" name="S24 (foco indeterminado)" description="">
+    <operation name="foco indeterminado" Operator="affirmation" id="18362">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_indeterminado" id="18349" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.13" id="18679" type="Sequencia" type_verbose="Sequencia" url="" name="S25" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.14" id="18680" type="Sequencia" type_verbose="Sequencia" url="" name="S26" description=""/>
+  <sequence inputStep="//@element.10" outputStep="//@element.15" id="18681" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description="Incondicional"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pneumo_comunit" id="18180" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pneumo_hosp" id="18341" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_cistite" id="18342" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_pielonefrite" id="18343" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_meningite" id="18344" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_partes_moles" id="18345" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_abdominal" id="18346" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_neutropenia" id="18347" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_infeccao_sanguinea" id="18348" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trat_sepse_indeterminado" id="18349" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trata_sepse_confirma_suspeita" id="18350" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

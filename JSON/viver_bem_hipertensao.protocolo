@@ -1,0 +1,874 @@
+{
+    "id": 915,
+    "url": "",
+    "codigo": "MF_HAS",
+    "nome": "[Viver Bem] Hipertens\u00e3o",
+    "repositorio_id": 479,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:48.485911-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:57:02.207521-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:48.485911-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4486,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "J\u00e1 est\u00e1 em tratamento?",
+            "descricao": "Verificar se paciente j\u00e1 est\u00e1 em tratamento",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1919,
+                    "url": "",
+                    "texto": "J\u00e1 est\u00e1 em tratamento?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3267,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ja_esta_em_tratamento",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4495,
+                    "url": "",
+                    "nome": "S1 (com tratamento previo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4486,
+                    "passo_de_saida": "Aux\u00edlio Conduta: J\u00e1 est\u00e1 em tratamento?",
+                    "passo_de_entrada_id": 4491,
+                    "passo_de_entrada": "Encaminhamento: Avaliar continuidade do tratamento",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4496,
+                    "url": "",
+                    "nome": "S2 (sem tratamento previo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4486,
+                    "passo_de_saida": "Aux\u00edlio Conduta: J\u00e1 est\u00e1 em tratamento?",
+                    "passo_de_entrada_id": 4487,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Etnia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4487,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Etnia",
+            "descricao": "Verificar se paciente \u00e9 afroamericano",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1920,
+                    "url": "",
+                    "texto": "Paciente \u00e9 afroamericano?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3268,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "paciente_afroamericano",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4496,
+                    "url": "",
+                    "nome": "S2 (sem tratamento previo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4486,
+                    "passo_de_saida": "Aux\u00edlio Conduta: J\u00e1 est\u00e1 em tratamento?",
+                    "passo_de_entrada_id": 4487,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Etnia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4497,
+                    "url": "",
+                    "nome": "S3 (paciente afroamericano)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4487,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Etnia",
+                    "passo_de_entrada_id": 4492,
+                    "passo_de_entrada": "Encaminhamento: Protocolo Farmacol\u00f3gico Afroamericano",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4498,
+                    "url": "",
+                    "nome": "S4 (paciente nao afroamericano)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4487,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Etnia",
+                    "passo_de_entrada_id": 4488,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Alergia a IECA?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4488,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Alergia a IECA?",
+            "descricao": "Verificar se paciente possui alergia a IECA",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1961,
+                    "url": "",
+                    "texto": "Paciente al\u00e9rgico a IECA?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3269,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_IECA",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4498,
+                    "url": "",
+                    "nome": "S4 (paciente nao afroamericano)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4487,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Etnia",
+                    "passo_de_entrada_id": 4488,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Alergia a IECA?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4501,
+                    "url": "",
+                    "nome": "S7 (alergico a IECA)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4488,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Alergia a IECA?",
+                    "passo_de_entrada_id": 4489,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Tratamento Alternativo?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4502,
+                    "url": "",
+                    "nome": "S8 (nao alergico a IECA)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4488,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Alergia a IECA?",
+                    "passo_de_entrada_id": 4494,
+                    "passo_de_entrada": "Encaminhamento: IECA + BBC + BETABLOQUEADOR",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4489,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Tratamento Alternativo?",
+            "descricao": "Paciente Al\u00e9rgico a IECA, em caso de n\u00e3o realizar tratamento alternativo, paciente ir\u00e1 ser encaminhado para tratamento BAR + BBC + BETABLOQUEADOR",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1962,
+                    "url": "",
+                    "texto": "Tratamento alternativo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3270,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "tratamento_alternativo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4501,
+                    "url": "",
+                    "nome": "S7 (alergico a IECA)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4488,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Alergia a IECA?",
+                    "passo_de_entrada_id": 4489,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Tratamento Alternativo?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4499,
+                    "url": "",
+                    "nome": "S5 (tratamento alternativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4489,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Tratamento Alternativo?",
+                    "passo_de_entrada_id": 4490,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Tratamento Alternativo",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4500,
+                    "url": "",
+                    "nome": "S6 (sem tratamento alternativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4489,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Tratamento Alternativo?",
+                    "passo_de_entrada_id": 4493,
+                    "passo_de_entrada": "Encaminhamento: BAR + BBC + BETABLOQUEADOR",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4490,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Tratamento Alternativo",
+            "descricao": "Prescrever e Justificar tratamento alternativo",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4499,
+                    "url": "",
+                    "nome": "S5 (tratamento alternativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4489,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Tratamento Alternativo?",
+                    "passo_de_entrada_id": 4490,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Tratamento Alternativo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4491,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Avaliar continuidade do tratamento",
+            "descricao": "Selecionar tratamento adequado para o Paciente",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_PROT_FARM_AFRO",
+                "VB_DIA_IECA",
+                "VB_BAR"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4495,
+                    "url": "",
+                    "nome": "S1 (com tratamento previo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4486,
+                    "passo_de_saida": "Aux\u00edlio Conduta: J\u00e1 est\u00e1 em tratamento?",
+                    "passo_de_entrada_id": 4491,
+                    "passo_de_entrada": "Encaminhamento: Avaliar continuidade do tratamento",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4492,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Protocolo Farmacol\u00f3gico Afroamericano",
+            "descricao": "- Encaminhar para Protocolo Farmacol\u00f3gico Afroamericano",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_PROT_FARM_AFRO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4497,
+                    "url": "",
+                    "nome": "S3 (paciente afroamericano)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4487,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Etnia",
+                    "passo_de_entrada_id": 4492,
+                    "passo_de_entrada": "Encaminhamento: Protocolo Farmacol\u00f3gico Afroamericano",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4493,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "BAR + BBC + BETABLOQUEADOR",
+            "descricao": "Encaminhar para tratamento BAR + BBC + BETABLOQUEADOR",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_BAR"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4500,
+                    "url": "",
+                    "nome": "S6 (sem tratamento alternativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4489,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Tratamento Alternativo?",
+                    "passo_de_entrada_id": 4493,
+                    "passo_de_entrada": "Encaminhamento: BAR + BBC + BETABLOQUEADOR",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4494,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "IECA + BBC + BETABLOQUEADOR",
+            "descricao": "Encaminhar para tratamento IECA + BBC + BETABLOQUEADOR",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_DIA_IECA"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4502,
+                    "url": "",
+                    "nome": "S8 (nao alergico a IECA)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4488,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Alergia a IECA?",
+                    "passo_de_entrada_id": 4494,
+                    "passo_de_entrada": "Encaminhamento: IECA + BBC + BETABLOQUEADOR",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4495,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (com tratamento previo)",
+            "descricao": "",
+            "passo_de_saida_id": 4486,
+            "passo_de_saida": {
+                "id": 4486,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "J\u00e1 est\u00e1 em tratamento?",
+                "descricao": "Verificar se paciente j\u00e1 est\u00e1 em tratamento",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4491,
+            "passo_de_entrada": {
+                "id": 4491,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Avaliar continuidade do tratamento",
+                "descricao": "Selecionar tratamento adequado para o Paciente",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    476,
+                    477,
+                    478
+                ]
+            },
+            "operacao": {
+                "id": 3271,
+                "nome": "com tratamento previo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3267
+                ],
+                "argumentos": [
+                    "ja_esta_em_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4496,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sem tratamento previo)",
+            "descricao": "",
+            "passo_de_saida_id": 4486,
+            "passo_de_saida": {
+                "id": 4486,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "J\u00e1 est\u00e1 em tratamento?",
+                "descricao": "Verificar se paciente j\u00e1 est\u00e1 em tratamento",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4487,
+            "passo_de_entrada": {
+                "id": 4487,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Etnia",
+                "descricao": "Verificar se paciente \u00e9 afroamericano",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3272,
+                "nome": "sem tratamento previo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3267
+                ],
+                "argumentos": [
+                    "ja_esta_em_tratamento"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4497,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (paciente afroamericano)",
+            "descricao": "",
+            "passo_de_saida_id": 4487,
+            "passo_de_saida": {
+                "id": 4487,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Etnia",
+                "descricao": "Verificar se paciente \u00e9 afroamericano",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4492,
+            "passo_de_entrada": {
+                "id": 4492,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Protocolo Farmacol\u00f3gico Afroamericano",
+                "descricao": "- Encaminhar para Protocolo Farmacol\u00f3gico Afroamericano",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    476
+                ]
+            },
+            "operacao": {
+                "id": 3273,
+                "nome": "paciente afroamericano",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3268
+                ],
+                "argumentos": [
+                    "paciente_afroamericano"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4498,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (paciente nao afroamericano)",
+            "descricao": "",
+            "passo_de_saida_id": 4487,
+            "passo_de_saida": {
+                "id": 4487,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Etnia",
+                "descricao": "Verificar se paciente \u00e9 afroamericano",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4488,
+            "passo_de_entrada": {
+                "id": 4488,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Alergia a IECA?",
+                "descricao": "Verificar se paciente possui alergia a IECA",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3274,
+                "nome": "paciente nao afroamericano",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3268
+                ],
+                "argumentos": [
+                    "paciente_afroamericano"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4499,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (tratamento alternativo)",
+            "descricao": "",
+            "passo_de_saida_id": 4489,
+            "passo_de_saida": {
+                "id": 4489,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Tratamento Alternativo?",
+                "descricao": "Paciente Al\u00e9rgico a IECA, em caso de n\u00e3o realizar tratamento alternativo, paciente ir\u00e1 ser encaminhado para tratamento BAR + BBC + BETABLOQUEADOR",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4490,
+            "passo_de_entrada": {
+                "id": 4490,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Tratamento Alternativo",
+                "descricao": "Prescrever e Justificar tratamento alternativo",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3275,
+                "nome": "com tratamento alternativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3270
+                ],
+                "argumentos": [
+                    "tratamento_alternativo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4500,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (sem tratamento alternativo)",
+            "descricao": "",
+            "passo_de_saida_id": 4489,
+            "passo_de_saida": {
+                "id": 4489,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Tratamento Alternativo?",
+                "descricao": "Paciente Al\u00e9rgico a IECA, em caso de n\u00e3o realizar tratamento alternativo, paciente ir\u00e1 ser encaminhado para tratamento BAR + BBC + BETABLOQUEADOR",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4493,
+            "passo_de_entrada": {
+                "id": 4493,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "BAR + BBC + BETABLOQUEADOR",
+                "descricao": "Encaminhar para tratamento BAR + BBC + BETABLOQUEADOR",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    478
+                ]
+            },
+            "operacao": {
+                "id": 3276,
+                "nome": "sem tratamento alternativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3270
+                ],
+                "argumentos": [
+                    "tratamento_alternativo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4501,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (alergico a IECA)",
+            "descricao": "",
+            "passo_de_saida_id": 4488,
+            "passo_de_saida": {
+                "id": 4488,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Alergia a IECA?",
+                "descricao": "Verificar se paciente possui alergia a IECA",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4489,
+            "passo_de_entrada": {
+                "id": 4489,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Tratamento Alternativo?",
+                "descricao": "Paciente Al\u00e9rgico a IECA, em caso de n\u00e3o realizar tratamento alternativo, paciente ir\u00e1 ser encaminhado para tratamento BAR + BBC + BETABLOQUEADOR",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3277,
+                "nome": "alergico a IECA",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3269
+                ],
+                "argumentos": [
+                    "alergia_IECA"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4502,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (nao alergico a IECA)",
+            "descricao": "",
+            "passo_de_saida_id": 4488,
+            "passo_de_saida": {
+                "id": 4488,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Alergia a IECA?",
+                "descricao": "Verificar se paciente possui alergia a IECA",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4494,
+            "passo_de_entrada": {
+                "id": 4494,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "IECA + BBC + BETABLOQUEADOR",
+                "descricao": "Encaminhar para tratamento IECA + BBC + BETABLOQUEADOR",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    477
+                ]
+            },
+            "operacao": {
+                "id": 3278,
+                "nome": "nao alergico a IECA",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3269
+                ],
+                "argumentos": [
+                    "alergia_IECA"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3267,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ja_esta_em_tratamento",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3268,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "paciente_afroamericano",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3269,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_IECA",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3270,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "tratamento_alternativo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

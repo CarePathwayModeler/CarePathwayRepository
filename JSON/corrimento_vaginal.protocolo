@@ -1,0 +1,2438 @@
+{
+    "id": 3165,
+    "url": "",
+    "codigo": "H056",
+    "nome": "Corrimento Vaginal",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Obstetr\u00edcia",
+    "repositorio_id": 721,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:53:02.861569-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:52:53.638529-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:53:02.861569-03:00"
+    },
+    "elementos": [
+        {
+            "id": 18259,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar gravidez",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9327,
+                    "url": "",
+                    "texto": "Verificar gravidez",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17956,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "gravidez",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Gestante",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "N\u00e3o Gestante",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 18275,
+                    "url": "",
+                    "nome": "S1 (gestante)",
+                    "descricao": "gestante",
+                    "passo_de_saida_id": 18259,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar gravidez",
+                    "passo_de_entrada_id": 18260,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar tipo do corrimento da gestante",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18281,
+                    "url": "",
+                    "nome": "S7 (n\u00e3o gestante)",
+                    "descricao": "n\u00e3o gestante",
+                    "passo_de_saida_id": 18259,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar gravidez",
+                    "passo_de_entrada_id": 18266,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar tipo do corrimento da n\u00e3o gestante",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18260,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar tipo do corrimento da gestante",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9328,
+                    "url": "",
+                    "texto": "O corrimento \u00e9:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17957,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "tipo_corrimento_gestante",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Fisiol\u00f3gico",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Patol\u00f3gico",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18275,
+                    "url": "",
+                    "nome": "S1 (gestante)",
+                    "descricao": "gestante",
+                    "passo_de_saida_id": 18259,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar gravidez",
+                    "passo_de_entrada_id": 18260,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar tipo do corrimento da gestante",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18276,
+                    "url": "",
+                    "nome": "S2 (gestante fisiol\u00f3gico)",
+                    "descricao": "gestante fisiol\u00f3gico",
+                    "passo_de_saida_id": 18260,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da gestante",
+                    "passo_de_entrada_id": 18261,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es paciente",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18277,
+                    "url": "",
+                    "nome": "S3 (gestante patol\u00f3gico)",
+                    "descricao": "gestante patol\u00f3gico",
+                    "passo_de_saida_id": 18260,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da gestante",
+                    "passo_de_entrada_id": 18262,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18261,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Orienta\u00e7\u00f5es paciente",
+            "descricao": "<p><span style=\"font-size:18px\">Dar as orienta&ccedil;&otilde;es necess&aacute;rias para a paciente.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18276,
+                    "url": "",
+                    "nome": "S2 (gestante fisiol\u00f3gico)",
+                    "descricao": "gestante fisiol\u00f3gico",
+                    "passo_de_saida_id": 18260,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da gestante",
+                    "passo_de_entrada_id": 18261,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es paciente",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18282,
+                    "url": "",
+                    "nome": "S8 (n\u00e3o gestante fisiol\u00f3gico)",
+                    "descricao": "n\u00e3o gestante fisiol\u00f3gico",
+                    "passo_de_saida_id": 18266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18261,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18262,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar aspectos do corrimento da gestante",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9329,
+                    "url": "",
+                    "texto": "Classificar corrimento de acordo com seus aspectos:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17958,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "corrimento_patologico_gestante",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Corrimento flu\u00eddo, homog\u00eaneo, branco/acinzentado/amarelado, com odor f\u00e9tido",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Corrimento grumoso, aderido as paredes, branco, intenso prurido",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Corrimento amarelado/esverdeado, bolhoso, odor f\u00e9tido, abundante, hiperemia e ard\u00eancia vaginal/colpite",
+                                "peso": 4.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18277,
+                    "url": "",
+                    "nome": "S3 (gestante patol\u00f3gico)",
+                    "descricao": "gestante patol\u00f3gico",
+                    "passo_de_saida_id": 18260,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da gestante",
+                    "passo_de_entrada_id": 18262,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18278,
+                    "url": "",
+                    "nome": "S4 (Corrimento fluido)",
+                    "descricao": "Corrimento fluido",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18263,
+                    "passo_de_entrada": "Receita: Receita 01",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18279,
+                    "url": "",
+                    "nome": "S5 (Corrimento grumoso)",
+                    "descricao": "Corrimento grumoso",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18264,
+                    "passo_de_entrada": "Receita: Receita 02",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18280,
+                    "url": "",
+                    "nome": "S6 (Corrimento bolhoso)",
+                    "descricao": "Corrimento bolhoso",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18265,
+                    "passo_de_entrada": "Receita: Receita 03",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18289,
+                    "url": "",
+                    "nome": "S15 (Corrimento com mais de um aspecto)",
+                    "descricao": "Corrimento com mais de um aspecto",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18273,
+                    "passo_de_entrada": "Receita: Receita 08",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18263,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 01",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4797,
+                    "url": "",
+                    "nome": "METRONIDAZOL 0,75% CREME VAGINAL",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4798,
+                    "url": "",
+                    "nome": "METRONIDAZOL 400 MG",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 5,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 2
+                },
+                {
+                    "id": 4799,
+                    "url": "",
+                    "nome": "METRONIDAZOL 250 MG",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 2 comprimidos de 12/12h via oral durante 7 dias.",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18278,
+                    "url": "",
+                    "nome": "S4 (Corrimento fluido)",
+                    "descricao": "Corrimento fluido",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18263,
+                    "passo_de_entrada": "Receita: Receita 01",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18264,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 02",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4800,
+                    "url": "",
+                    "nome": "MICONAZOL 2%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4801,
+                    "url": "",
+                    "nome": "NISTATINA 100.000 UI",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 14 noites.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4802,
+                    "url": "",
+                    "nome": "CLOTRIMAZOL 1%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18279,
+                    "url": "",
+                    "nome": "S5 (Corrimento grumoso)",
+                    "descricao": "Corrimento grumoso",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18264,
+                    "passo_de_entrada": "Receita: Receita 02",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18265,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 03",
+            "descricao": "<p><span style=\"font-size:20px\">Orientar paciente para necessidade de tratamento do parceiro.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4803,
+                    "url": "",
+                    "nome": "METRONIDAZOL 400 MG",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 5,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 1
+                },
+                {
+                    "id": 4804,
+                    "url": "",
+                    "nome": "METRONIDAZOL 250 MG",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos via oral de 12/12h durante 7 dias.",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18280,
+                    "url": "",
+                    "nome": "S6 (Corrimento bolhoso)",
+                    "descricao": "Corrimento bolhoso",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18265,
+                    "passo_de_entrada": "Receita: Receita 03",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18266,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar tipo do corrimento da n\u00e3o gestante",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9330,
+                    "url": "",
+                    "texto": "O corrimento \u00e9:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17959,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "tipo_corrimento_n_gestante",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Fisiol\u00f3gico",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Patol\u00f3gico",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18281,
+                    "url": "",
+                    "nome": "S7 (n\u00e3o gestante)",
+                    "descricao": "n\u00e3o gestante",
+                    "passo_de_saida_id": 18259,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar gravidez",
+                    "passo_de_entrada_id": 18266,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar tipo do corrimento da n\u00e3o gestante",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18282,
+                    "url": "",
+                    "nome": "S8 (n\u00e3o gestante fisiol\u00f3gico)",
+                    "descricao": "n\u00e3o gestante fisiol\u00f3gico",
+                    "passo_de_saida_id": 18266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18261,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Orienta\u00e7\u00f5es paciente",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18283,
+                    "url": "",
+                    "nome": "S9 (n\u00e3o gestante patol\u00f3gico)",
+                    "descricao": "corrimento fluido",
+                    "passo_de_saida_id": 18266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18267,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18267,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar aspectos do corrimento da n\u00e3o gestante",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9331,
+                    "url": "",
+                    "texto": "Classificar corrimento de acordo com seus aspectos:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17960,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "corrimento_patologico_n_gestante",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Corrimento flu\u00eddo, homog\u00eaneo, branco/acinzentado/amarelado, com odor f\u00e9tido",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Corrimento grumoso, aderido as paredes, branco, intenso prurido",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Corrimento amarelado/esverdeado, bolhoso, odor f\u00e9tido, abundante, hiperemia e ard\u00eancia vaginal/colpite",
+                                "peso": 4.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18283,
+                    "url": "",
+                    "nome": "S9 (n\u00e3o gestante patol\u00f3gico)",
+                    "descricao": "corrimento fluido",
+                    "passo_de_saida_id": 18266,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tipo do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18267,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18284,
+                    "url": "",
+                    "nome": "S10 (corrimento fluido)",
+                    "descricao": "corrimento fluido",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18268,
+                    "passo_de_entrada": "Receita: Receita 04",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18285,
+                    "url": "",
+                    "nome": "S11 (corrimento grumoso)",
+                    "descricao": "corrimento grumoso",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18269,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Quantidade de epis\u00f3dios",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18288,
+                    "url": "",
+                    "nome": "S14 (corrimento bolhoso)",
+                    "descricao": "corrimento bolhoso",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18272,
+                    "passo_de_entrada": "Receita: Receita 07",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18290,
+                    "url": "",
+                    "nome": "S16 (corrimento com mais de um aspecto)",
+                    "descricao": "corrimento com mais de um aspecto",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18274,
+                    "passo_de_entrada": "Receita: Receita 09",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18268,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 04",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4805,
+                    "url": "",
+                    "nome": "METRONIDAZOL 0,75% CREME VAGINAL",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4806,
+                    "url": "",
+                    "nome": "METRONIDAZOL 400 MG",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 5,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 2
+                },
+                {
+                    "id": 4807,
+                    "url": "",
+                    "nome": "METRONIDAZOL 250 MG",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos via oral de 12/12h durante 7 dias.",
+                    "ordem": 3
+                },
+                {
+                    "id": 4808,
+                    "url": "",
+                    "nome": "CLINDAMICINA 2%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18284,
+                    "url": "",
+                    "nome": "S10 (corrimento fluido)",
+                    "descricao": "corrimento fluido",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18268,
+                    "passo_de_entrada": "Receita: Receita 04",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18269,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Quantidade de epis\u00f3dios",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9332,
+                    "url": "",
+                    "texto": "Determinar a quantidade de epis\u00f3dios:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17961,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "qtd_episodios",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "< 4 epis\u00f3dios",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": ">= 4 epis\u00f3dios",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18285,
+                    "url": "",
+                    "nome": "S11 (corrimento grumoso)",
+                    "descricao": "corrimento grumoso",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18269,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Quantidade de epis\u00f3dios",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18286,
+                    "url": "",
+                    "nome": "S12 (>= 4 epis\u00f3dios)",
+                    "descricao": ">= 4 epis\u00f3dios",
+                    "passo_de_saida_id": 18269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quantidade de epis\u00f3dios",
+                    "passo_de_entrada_id": 18270,
+                    "passo_de_entrada": "Receita: Receita 05",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18287,
+                    "url": "",
+                    "nome": "S13 (< 4 epis\u00f3dios)",
+                    "descricao": "< 4 epis\u00f3dios",
+                    "passo_de_saida_id": 18269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quantidade de epis\u00f3dios",
+                    "passo_de_entrada_id": 18271,
+                    "passo_de_entrada": "Receita: Receita 06",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18270,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 05",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4809,
+                    "url": "",
+                    "nome": "MICONAZOL 2%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4810,
+                    "url": "",
+                    "nome": "NISTATINA 100.000 UI",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 14 noites.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4811,
+                    "url": "",
+                    "nome": "CLOTRIMAZOL 1%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 3
+                },
+                {
+                    "id": 4812,
+                    "url": "",
+                    "nome": "FLUCONAZOL 150MG COMP 150 MG",
+                    "medicamento": 40630,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 01 comprimido via oral no 1\u00ba, 4\u00ba e 7\u00ba dia. Ap\u00f3s, tomar 01 comprimido por semana durante 06 meses.",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18286,
+                    "url": "",
+                    "nome": "S12 (>= 4 epis\u00f3dios)",
+                    "descricao": ">= 4 epis\u00f3dios",
+                    "passo_de_saida_id": 18269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quantidade de epis\u00f3dios",
+                    "passo_de_entrada_id": 18270,
+                    "passo_de_entrada": "Receita: Receita 05",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18271,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 06",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4813,
+                    "url": "",
+                    "nome": "MICONAZOL 2%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4814,
+                    "url": "",
+                    "nome": "NISTATINA 100.000 UI",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 14 noites.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4815,
+                    "url": "",
+                    "nome": "CLOTRIMAZOL 1%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites.",
+                    "ordem": 3
+                },
+                {
+                    "id": 4816,
+                    "url": "",
+                    "nome": "CLOTRIMAZOL 1%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 03 noites.",
+                    "ordem": 4
+                },
+                {
+                    "id": 4817,
+                    "url": "",
+                    "nome": "FLUCONAZOL 150MG COMP 150 MG",
+                    "medicamento": 40630,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 5
+                },
+                {
+                    "id": 4818,
+                    "url": "",
+                    "nome": "FENTIZOL \u00d3VULO 600 MG",
+                    "medicamento": null,
+                    "apresentacao": "DOSE",
+                    "via_acesso": 4,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 6
+                },
+                {
+                    "id": 4819,
+                    "url": "",
+                    "nome": "BUTOCONAZOL CREME 2%",
+                    "medicamento": null,
+                    "apresentacao": "DOSE",
+                    "via_acesso": 4,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 7
+                },
+                {
+                    "id": 4820,
+                    "url": "",
+                    "nome": "\u00c1CIDO B\u00d3RICO 600 MG",
+                    "medicamento": null,
+                    "apresentacao": "CAPS",
+                    "via_acesso": 4,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 10,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 8
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18287,
+                    "url": "",
+                    "nome": "S13 (< 4 epis\u00f3dios)",
+                    "descricao": "< 4 epis\u00f3dios",
+                    "passo_de_saida_id": 18269,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quantidade de epis\u00f3dios",
+                    "passo_de_entrada_id": 18271,
+                    "passo_de_entrada": "Receita: Receita 06",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18272,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 07",
+            "descricao": "<p><span style=\"font-size:20px\">Orientar paciente para necessidade de tratamento do parceiro.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4821,
+                    "url": "",
+                    "nome": "METRONIDAZOL 400 MG",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 5,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 1
+                },
+                {
+                    "id": 4822,
+                    "url": "",
+                    "nome": "METRONIDAZOL 250 MG",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos via oral de 12/12h durante 07 dias.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4823,
+                    "url": "",
+                    "nome": "TINIDAZOL 500 MG",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 4,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "DOSE \u00daNICA",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18288,
+                    "url": "",
+                    "nome": "S14 (corrimento bolhoso)",
+                    "descricao": "corrimento bolhoso",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18272,
+                    "passo_de_entrada": "Receita: Receita 07",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18273,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 08",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4824,
+                    "url": "",
+                    "nome": "METRONIDAZOL 62,5 mg/g + NISTATINA 25.000 UI/g + CLORETO DE BENZALC\u00d4NIO 1,25 mg/g",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 7 noites.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4825,
+                    "url": "",
+                    "nome": "METRONIDAZOL 750 mg + MICONAZOL 200 mg",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Fazer 01 \u00f3vulo via vaginal por noite durante 7 noites.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4826,
+                    "url": "",
+                    "nome": "METRONIDAZOL 250 mg",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos via oral de 12/12h durante 7 dias.",
+                    "ordem": 3
+                },
+                {
+                    "id": 4827,
+                    "url": "",
+                    "nome": "MICONAZOL 2%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 7 noites.",
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18289,
+                    "url": "",
+                    "nome": "S15 (Corrimento com mais de um aspecto)",
+                    "descricao": "Corrimento com mais de um aspecto",
+                    "passo_de_saida_id": 18262,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da gestante",
+                    "passo_de_entrada_id": 18273,
+                    "passo_de_entrada": "Receita: Receita 08",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18274,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita 09",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4828,
+                    "url": "",
+                    "nome": "METRONIDAZOL 62,5 mg/g + NISTATINA 25.000 UI/g + CLORETO DE BENZALC\u00d4NIO 1,25 mg/g",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 7 noites.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4829,
+                    "url": "",
+                    "nome": "METRONIDAZOL 750 mg + MICONAZOL 200 mg",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Fazer 01 \u00f3vulo via vaginal por noite durante 7 noites.",
+                    "ordem": 2
+                },
+                {
+                    "id": 4830,
+                    "url": "",
+                    "nome": "METRONIDAZOL 250 mg",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 02 comprimidos via oral de 12/12h durante 7 dias",
+                    "ordem": 3
+                },
+                {
+                    "id": 4831,
+                    "url": "",
+                    "nome": "MICONAZOL 2%",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 7 noites",
+                    "ordem": 4
+                },
+                {
+                    "id": 4832,
+                    "url": "",
+                    "nome": "TINIDAZOL 30 mg/mg + MICONAZOL 20 mg/mg",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites",
+                    "ordem": 5
+                },
+                {
+                    "id": 4833,
+                    "url": "",
+                    "nome": "TIOCONAZOL 100 mg + TINIDAZOL 150 mg",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 4,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar 01 aplicador/noite via vaginal durante 07 noites",
+                    "ordem": 6
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18290,
+                    "url": "",
+                    "nome": "S16 (corrimento com mais de um aspecto)",
+                    "descricao": "corrimento com mais de um aspecto",
+                    "passo_de_saida_id": 18267,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar aspectos do corrimento da n\u00e3o gestante",
+                    "passo_de_entrada_id": 18274,
+                    "passo_de_entrada": "Receita: Receita 09",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18275,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (gestante)",
+            "descricao": "gestante",
+            "passo_de_saida_id": 18259,
+            "passo_de_saida": {
+                "id": 18259,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar gravidez",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18260,
+            "passo_de_entrada": {
+                "id": 18260,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tipo do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17966,
+                "nome": "gestante",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17956,
+                    17962
+                ],
+                "argumentos": [
+                    "gravidez",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18276,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (gestante fisiol\u00f3gico)",
+            "descricao": "gestante fisiol\u00f3gico",
+            "passo_de_saida_id": 18260,
+            "passo_de_saida": {
+                "id": 18260,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tipo do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18261,
+            "passo_de_entrada": {
+                "id": 18261,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Orienta\u00e7\u00f5es paciente",
+                "descricao": "<p><span style=\"font-size:18px\">Dar as orienta&ccedil;&otilde;es necess&aacute;rias para a paciente.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17967,
+                "nome": "gestante fisiol\u00f3gico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17957,
+                    17962
+                ],
+                "argumentos": [
+                    "tipo_corrimento_gestante",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18277,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (gestante patol\u00f3gico)",
+            "descricao": "gestante patol\u00f3gico",
+            "passo_de_saida_id": 18260,
+            "passo_de_saida": {
+                "id": 18260,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tipo do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18262,
+            "passo_de_entrada": {
+                "id": 18262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17968,
+                "nome": "gestante patol\u00f3gico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17957,
+                    17963
+                ],
+                "argumentos": [
+                    "tipo_corrimento_gestante",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18278,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Corrimento fluido)",
+            "descricao": "Corrimento fluido",
+            "passo_de_saida_id": 18262,
+            "passo_de_saida": {
+                "id": 18262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18263,
+            "passo_de_entrada": {
+                "id": 18263,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 01",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17969,
+                "nome": "Corrimento fluido",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17958,
+                    17962
+                ],
+                "argumentos": [
+                    "corrimento_patologico_gestante",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18279,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Corrimento grumoso)",
+            "descricao": "Corrimento grumoso",
+            "passo_de_saida_id": 18262,
+            "passo_de_saida": {
+                "id": 18262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18264,
+            "passo_de_entrada": {
+                "id": 18264,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 02",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17970,
+                "nome": "Corrimento grumoso",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17958,
+                    17963
+                ],
+                "argumentos": [
+                    "corrimento_patologico_gestante",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18280,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Corrimento bolhoso)",
+            "descricao": "Corrimento bolhoso",
+            "passo_de_saida_id": 18262,
+            "passo_de_saida": {
+                "id": 18262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18265,
+            "passo_de_entrada": {
+                "id": 18265,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 03",
+                "descricao": "<p><span style=\"font-size:20px\">Orientar paciente para necessidade de tratamento do parceiro.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17971,
+                "nome": "Corrimento bolhoso",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17958,
+                    17965
+                ],
+                "argumentos": [
+                    "corrimento_patologico_gestante",
+                    "4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18281,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (n\u00e3o gestante)",
+            "descricao": "n\u00e3o gestante",
+            "passo_de_saida_id": 18259,
+            "passo_de_saida": {
+                "id": 18259,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar gravidez",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18266,
+            "passo_de_entrada": {
+                "id": 18266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tipo do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17972,
+                "nome": "n\u00e3o gestante",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17956,
+                    17963
+                ],
+                "argumentos": [
+                    "gravidez",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18282,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (n\u00e3o gestante fisiol\u00f3gico)",
+            "descricao": "n\u00e3o gestante fisiol\u00f3gico",
+            "passo_de_saida_id": 18266,
+            "passo_de_saida": {
+                "id": 18266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tipo do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18261,
+            "passo_de_entrada": {
+                "id": 18261,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Orienta\u00e7\u00f5es paciente",
+                "descricao": "<p><span style=\"font-size:18px\">Dar as orienta&ccedil;&otilde;es necess&aacute;rias para a paciente.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17973,
+                "nome": "n\u00e3o gestante fisiol\u00f3gico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17959,
+                    17962
+                ],
+                "argumentos": [
+                    "tipo_corrimento_n_gestante",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18283,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (n\u00e3o gestante patol\u00f3gico)",
+            "descricao": "corrimento fluido",
+            "passo_de_saida_id": 18266,
+            "passo_de_saida": {
+                "id": 18266,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tipo do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18267,
+            "passo_de_entrada": {
+                "id": 18267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17974,
+                "nome": "n\u00e3o gestante patol\u00f3gico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17959,
+                    17963
+                ],
+                "argumentos": [
+                    "tipo_corrimento_n_gestante",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18284,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (corrimento fluido)",
+            "descricao": "corrimento fluido",
+            "passo_de_saida_id": 18267,
+            "passo_de_saida": {
+                "id": 18267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18268,
+            "passo_de_entrada": {
+                "id": 18268,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 04",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17975,
+                "nome": "corrimento fluido",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17960,
+                    17962
+                ],
+                "argumentos": [
+                    "corrimento_patologico_n_gestante",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18285,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (corrimento grumoso)",
+            "descricao": "corrimento grumoso",
+            "passo_de_saida_id": 18267,
+            "passo_de_saida": {
+                "id": 18267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18269,
+            "passo_de_entrada": {
+                "id": 18269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quantidade de epis\u00f3dios",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17976,
+                "nome": "corrimento grumoso",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17960,
+                    17963
+                ],
+                "argumentos": [
+                    "corrimento_patologico_n_gestante",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18286,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (>= 4 epis\u00f3dios)",
+            "descricao": ">= 4 epis\u00f3dios",
+            "passo_de_saida_id": 18269,
+            "passo_de_saida": {
+                "id": 18269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quantidade de epis\u00f3dios",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18270,
+            "passo_de_entrada": {
+                "id": 18270,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 05",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17977,
+                "nome": ">= 4 epis\u00f3dios",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17961,
+                    17963
+                ],
+                "argumentos": [
+                    "qtd_episodios",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18287,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (< 4 epis\u00f3dios)",
+            "descricao": "< 4 epis\u00f3dios",
+            "passo_de_saida_id": 18269,
+            "passo_de_saida": {
+                "id": 18269,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quantidade de epis\u00f3dios",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18271,
+            "passo_de_entrada": {
+                "id": 18271,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 06",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17978,
+                "nome": "< 4 epis\u00f3dios",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17961,
+                    17962
+                ],
+                "argumentos": [
+                    "qtd_episodios",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18288,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (corrimento bolhoso)",
+            "descricao": "corrimento bolhoso",
+            "passo_de_saida_id": 18267,
+            "passo_de_saida": {
+                "id": 18267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18272,
+            "passo_de_entrada": {
+                "id": 18272,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 07",
+                "descricao": "<p><span style=\"font-size:20px\">Orientar paciente para necessidade de tratamento do parceiro.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17979,
+                "nome": "corrimento bolhoso",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17960,
+                    17965
+                ],
+                "argumentos": [
+                    "corrimento_patologico_n_gestante",
+                    "4"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18289,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (Corrimento com mais de um aspecto)",
+            "descricao": "Corrimento com mais de um aspecto",
+            "passo_de_saida_id": 18262,
+            "passo_de_saida": {
+                "id": 18262,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18273,
+            "passo_de_entrada": {
+                "id": 18273,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 08",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17980,
+                "nome": "Corrimento com mais de um aspecto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17958,
+                    17964
+                ],
+                "argumentos": [
+                    "corrimento_patologico_gestante",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18290,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (corrimento com mais de um aspecto)",
+            "descricao": "corrimento com mais de um aspecto",
+            "passo_de_saida_id": 18267,
+            "passo_de_saida": {
+                "id": 18267,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar aspectos do corrimento da n\u00e3o gestante",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18274,
+            "passo_de_entrada": {
+                "id": 18274,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita 09",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17981,
+                "nome": "corrimento com mais de um aspecto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17960,
+                    17964
+                ],
+                "argumentos": [
+                    "corrimento_patologico_n_gestante",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17956,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "gravidez",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Gestante",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "N\u00e3o Gestante",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17957,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "tipo_corrimento_gestante",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Fisiol\u00f3gico",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Patol\u00f3gico",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17958,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "corrimento_patologico_gestante",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Corrimento flu\u00eddo, homog\u00eaneo, branco/acinzentado/amarelado, com odor f\u00e9tido",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Corrimento grumoso, aderido as paredes, branco, intenso prurido",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Corrimento amarelado/esverdeado, bolhoso, odor f\u00e9tido, abundante, hiperemia e ard\u00eancia vaginal/colpite",
+                    "peso": 4.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 17959,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "tipo_corrimento_n_gestante",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Fisiol\u00f3gico",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Patol\u00f3gico",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17960,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "corrimento_patologico_n_gestante",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Corrimento flu\u00eddo, homog\u00eaneo, branco/acinzentado/amarelado, com odor f\u00e9tido",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Corrimento grumoso, aderido as paredes, branco, intenso prurido",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Corrimento amarelado/esverdeado, bolhoso, odor f\u00e9tido, abundante, hiperemia e ard\u00eancia vaginal/colpite",
+                    "peso": 4.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 17961,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "qtd_episodios",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "< 4 epis\u00f3dios",
+                    "peso": 1.0
+                },
+                {
+                    "texto": ">= 4 epis\u00f3dios",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17962,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17963,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17964,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17965,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "4",
+            "peso": 1.0,
+            "valor": 4.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

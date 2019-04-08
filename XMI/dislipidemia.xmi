@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="1081" url="" name="Dislipidemia" code="MF_DLP">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5201" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Classificar por risco" description="Classificar quadro do paciente conforme fator de risco" isInitial="true" outputSequences="//@sequence.0">
+    <questions text="Risco Intermedi&#xe1;rio ou Baixo (LDL-c mg/dL > 100)" url="" id="2241">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_baixo" id="3741" weight="1" value="false"/>
+    </questions>
+    <questions text="Risco Alto ((LDL-c mg/dL > 70)" url="" id="2242">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_alto" id="3742" weight="1" value="false"/>
+    </questions>
+    <questions text="Risco Muito Alto (LDL-c mg/dL > 50)" url="" id="2243">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="risco_muito_alto" id="3743" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5202" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Doen&#xe7;a Ateroscler&#xf3;tica Significativa (DAS)?" description="Avaliar se paciente possui Doen&#xe7;a Ateroscler&#xf3;tica Significativa (DAS)" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Doen&#xe7;a Ateroscler&#xf3;tica Significativa (DAS)?" url="" id="2244">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="doenca_aterosclerotica_significativa" id="3744" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5203" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Fatores de Estratifica&#xe7;&#xe3;o de Risco (FER)?" description="Averiguar se paciente apresenta Fatores de Estratifica&#xe7;&#xe3;o de Risco (FER)" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Apresenta Fatores de Estratifica&#xe7;&#xe3;o de Risco (FER)?" url="" id="2245">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fatores_de_estratificacao_de_risco" id="3745" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="5204" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Idade/Sexo" description="Avaliar sexo e idade do(a) paciente" inputSequences="//@sequence.4" outputSequences="//@sequence.5 //@sequence.6">
+    <questions text="Sexo Masculino" url="" id="2246">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_masculino" id="3746" weight="1" value="false"/>
+    </questions>
+    <questions text="Sexo Feminino" url="" id="2247">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_feminino" id="3747" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade:" url="" id="2248">
+      <answers xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5209" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Risco Muito Alto" description="Encaminhar ao protocolo de Risco Muito Alto" isTerminal="true" inputSequences="//@sequence.7">
+    <pathways>VB_DISLIP_RISCO_MT_ALTO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5210" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Risco Alto" description="Encaminhar ao protocolo de Risco Alto" isTerminal="true" inputSequences="//@sequence.8">
+    <pathways>VBL_DISLIP_RISCO_ALTO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5211" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Risco Intermedi&#xe1;rio" description="Encaminhar ao protocolo de Risco Intermedi&#xe1;rio" isTerminal="true" inputSequences="//@sequence.9">
+    <pathways>VBL_DISLIP_RISCO_INTER</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Referral" id="5212" type="Encaminhamento" type_verbose="Encaminhamento" url="" name="Risco Baixo" description="Encaminhar ao protocolo de Risco Baixo" isTerminal="true" inputSequences="//@sequence.10">
+    <pathways>VB_DISLIP_RISCO_BAIXO</pathways>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="5213" type="Pausa" type_verbose="Pausa" url="" name="Teste 11/06" description="Testando o passo para V10"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="5214" type="Tratamento" type_verbose="Tratamento" url="" name="teste" description="asdasd"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="5215" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description=""/>
+  <sequence outputStep="//@element.1" id="5216" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (DAS positivo)" description="">
+    <operation name="DAS positivo" Operator="affirmation" id="3759">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_aterosclerotica_significativa" id="3744" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="5217" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (DAS negativo)" description="">
+    <operation name="DAS negativo" id="3760">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="doenca_aterosclerotica_significativa" id="3744" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.2" id="5218" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Com FER)" description="">
+    <operation name="Com FER" Operator="affirmation" id="3761">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fatores_de_estratificacao_de_risco" id="3745" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="5219" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Sem FER)" description="">
+    <operation name="Sem FER" id="3762">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="fatores_de_estratificacao_de_risco" id="3745" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.3" id="5220" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (H > 40 ou M > 50)" description="">
+    <operation name="H > 40 ou M > 50" Operator="or" id="3763">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Homem acima de 40" Operator="and" id="3755">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_masculino" id="3746" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:Operation" name="Idade > 40" Operator="greaterThan" id="3751">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="40" id="3749" weight="1" value="40.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Mulher acima de 50" Operator="and" id="3756">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_feminino" id="3747" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:Operation" name="Idade > 50" Operator="greaterThan" id="3753">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="3750" weight="1" value="50.0"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.3" id="5221" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (H &lt;= 40 ou M &lt;= 50)" description="">
+    <operation name="H &lt;= 40 ou M &lt;= 50" Operator="or" id="3764">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Homem abaixo de 40" Operator="and" id="3757">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_masculino" id="3746" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:Operation" name="Idade &lt;= 40" Operator="lessOrEqual" id="3752">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="40" id="3749" weight="1" value="40.0"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="Mulher abaixo de 50" Operator="and" id="3758">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_feminino" id="3747" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:Operation" name="Idade &lt;= 50" Operator="lessOrEqual" id="3754">
+          <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+          <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="3750" weight="1" value="50.0"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" id="5222" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description=""/>
+  <sequence inputStep="//@element.5" id="5223" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description=""/>
+  <sequence inputStep="//@element.6" id="5224" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description=""/>
+  <sequence inputStep="//@element.7" id="5225" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description=""/>
+  <operation name="Idade > 40" Operator="greaterThan" id="3751">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="40" id="3749" weight="1" value="40.0"/>
+  </operation>
+  <operation name="Idade &lt;= 40" Operator="lessOrEqual" id="3752">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="40" id="3749" weight="1" value="40.0"/>
+  </operation>
+  <operation name="Idade > 50" Operator="greaterThan" id="3753">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="3750" weight="1" value="50.0"/>
+  </operation>
+  <operation name="Idade &lt;= 50" Operator="lessOrEqual" id="3754">
+    <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="3750" weight="1" value="50.0"/>
+  </operation>
+  <operation name="Homem acima de 40" Operator="and" id="3755">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_masculino" id="3746" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:Operation" name="Idade > 40" Operator="greaterThan" id="3751">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="40" id="3749" weight="1" value="40.0"/>
+    </operand>
+  </operation>
+  <operation name="Mulher acima de 50" Operator="and" id="3756">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_feminino" id="3747" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:Operation" name="Idade > 50" Operator="greaterThan" id="3753">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="3750" weight="1" value="50.0"/>
+    </operand>
+  </operation>
+  <operation name="Homem abaixo de 40" Operator="and" id="3757">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_masculino" id="3746" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:Operation" name="Idade &lt;= 40" Operator="lessOrEqual" id="3752">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="40" id="3749" weight="1" value="40.0"/>
+    </operand>
+  </operation>
+  <operation name="Mulher abaixo de 50" Operator="and" id="3758">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_feminino" id="3747" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:Operation" name="Idade &lt;= 50" Operator="lessOrEqual" id="3754">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="50" id="3750" weight="1" value="50.0"/>
+    </operand>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_baixo" id="3741" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_alto" id="3742" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="risco_muito_alto" id="3743" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="doenca_aterosclerotica_significativa" id="3744" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fatores_de_estratificacao_de_risco" id="3745" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_masculino" id="3746" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="paciente_sexo_feminino" id="3747" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="paciente_idade" id="3748" weight="1" value="0.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="40" id="3749" weight="1" value="40.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="50" id="3750" weight="1" value="50.0"/>
+</pathwayMetamodel:Pathway>

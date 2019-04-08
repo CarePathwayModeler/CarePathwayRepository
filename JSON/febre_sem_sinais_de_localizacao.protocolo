@@ -1,0 +1,2318 @@
+{
+    "id": 3341,
+    "url": "",
+    "codigo": "H036",
+    "nome": "Febre Sem Sinais de Localiza\u00e7\u00e3o",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 403,
+    "versao": 12,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-04T14:20:09.911415-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-04T14:10:24.111884-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-02-04T14:20:38.128142-03:00"
+    },
+    "elementos": [
+        {
+            "id": 20221,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Comprometimento",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10241,
+                    "url": "",
+                    "texto": "H\u00e1 comprometimento do estado geral?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19801,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "comprometimento_estado_geral",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 20237,
+                    "url": "",
+                    "nome": "S1 (h\u00e1 comprometimento)",
+                    "descricao": "h\u00e1 comprometimento",
+                    "passo_de_saida_id": 20221,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Comprometimento",
+                    "passo_de_entrada_id": 20222,
+                    "passo_de_entrada": "Tratamento: Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20238,
+                    "url": "",
+                    "nome": "S2 (n\u00e3o h\u00e1 comprometimento)",
+                    "descricao": "n\u00e3o h\u00e1 comprometimento",
+                    "passo_de_saida_id": 20221,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Comprometimento",
+                    "passo_de_entrada_id": 20223,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20222,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Exames",
+            "descricao": "<p>- Checar sinais vitais do paciente. Avaliar necessidade de monitoriza&ccedil;&atilde;o</p>\n\n<p>- Avaliar necessidade de expans&atilde;o com SF 0,9% -- 20ml/kg</p>\n\n<p>- Compressa fria.&nbsp;</p>\n\n<p>- Banho &aacute;gua corrente.&nbsp;<br />\n&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-02-04T14:15:55.228892-03:00"
+            },
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "N/A",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOCULTURA AUTOMATIZADA (POR AMOSTRA)",
+                    "exame": "28160096",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Febre",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 701,
+                    "url": "",
+                    "medicamento": 107964,
+                    "unidade": "GT",
+                    "unidade_display": "GOTA",
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": null
+                },
+                {
+                    "id": 702,
+                    "url": "",
+                    "medicamento": 38024,
+                    "unidade": "M8",
+                    "unidade_display": "MILIGRAMA POR KG DOSE",
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 4361,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Inf.Lenta",
+                        "codigo_principio_ativo": 909,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 6,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 8,
+                        "quantidade_volume": 2,
+                        "quantidade_dosagem": 1000,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 581,
+                        "codigo_produto": 4395,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "B",
+                        "via_administracao": "ORAL   Bolus",
+                        "descricao_administracao": "COMP    500.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 25.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 500,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 909,
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_tipo_acesso": 1
+                    }
+                },
+                {
+                    "id": 703,
+                    "url": "",
+                    "medicamento": 43800,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 582,
+                        "codigo_produto": 4352,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "TUBO      9.00GR/1000ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 20.0,
+                        "codigo_unidade_folha": "MF",
+                        "descricao_unidade_usual": "ml/kg",
+                        "quantidade_concentracao_folha_calculo": 0,
+                        "codigo_unidade_concentracao_diluicao": "GR",
+                        "codigo_principio_ativo": 2188,
+                        "codigo_ocorrencia_diluicao": 6,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_tipo_acesso": 6
+                    }
+                },
+                {
+                    "id": 706,
+                    "url": "",
+                    "medicamento": 37982,
+                    "unidade": "GT",
+                    "unidade_display": "GOTA",
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null,
+                    "apresentacao": null
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20237,
+                    "url": "",
+                    "nome": "S1 (h\u00e1 comprometimento)",
+                    "descricao": "h\u00e1 comprometimento",
+                    "passo_de_saida_id": 20221,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Comprometimento",
+                    "passo_de_entrada_id": 20222,
+                    "passo_de_entrada": "Tratamento: Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20255,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20222,
+                    "passo_de_saida": "Tratamento: Exames",
+                    "passo_de_entrada_id": 20224,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20223,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Idade",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10242,
+                    "url": "",
+                    "texto": "Idade menor que 28 dias de vida",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19802,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_menor_28_ddv",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 10243,
+                    "url": "",
+                    "texto": "De 1 a 3 meses",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19803,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_1_a_3_meses",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                },
+                {
+                    "id": 10244,
+                    "url": "",
+                    "texto": "Maior que 3 meses",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19804,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "idade_maior_3_meses",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 5
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20238,
+                    "url": "",
+                    "nome": "S2 (n\u00e3o h\u00e1 comprometimento)",
+                    "descricao": "n\u00e3o h\u00e1 comprometimento",
+                    "passo_de_saida_id": 20221,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Comprometimento",
+                    "passo_de_entrada_id": 20223,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20239,
+                    "url": "",
+                    "nome": "S5 (< 28 ddv)",
+                    "descricao": "< 28 ddv",
+                    "passo_de_saida_id": 20223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 20225,
+                    "passo_de_entrada": "Tratamento: [Menor que 28 ddv] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20240,
+                    "url": "",
+                    "nome": "S6 (de 1 a 3 meses)",
+                    "descricao": "1 a 3 meses",
+                    "passo_de_saida_id": 20223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 20227,
+                    "passo_de_entrada": "Tratamento: [1 a 3 meses] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20241,
+                    "url": "",
+                    "nome": "S7 (maior que 3 meses)",
+                    "descricao": "maior que 3 meses",
+                    "passo_de_saida_id": 20223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 20229,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20224,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Interna\u00e7\u00e3o?",
+            "descricao": "Decidir se deve haver interna\u00e7\u00e3o do paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10245,
+                    "url": "",
+                    "texto": "Internar paciente?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19805,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "internacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20250,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20230,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Discutir com Chefia (2)",
+                    "passo_de_entrada_id": 20224,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20254,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20235,
+                    "passo_de_saida": "Tratamento: [Febre > 48h] Exames",
+                    "passo_de_entrada_id": 20224,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20255,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20222,
+                    "passo_de_saida": "Tratamento: Exames",
+                    "passo_de_entrada_id": 20224,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20251,
+                    "url": "",
+                    "nome": "S17 (n\u00e3o interna)",
+                    "descricao": "n\u00e3o interna",
+                    "passo_de_saida_id": 20224,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20231,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Reavaliar com 48h",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20252,
+                    "url": "",
+                    "nome": "S18 (interna)",
+                    "descricao": "interna",
+                    "passo_de_saida_id": 20224,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20232,
+                    "passo_de_entrada": "Tratamento: ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20225,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Menor que 28 ddv] Conduta",
+            "descricao": "<ul>\n\t<li>Avaliar desidrata&ccedil;&atilde;o por m&aacute; pega em menor de 7 dias</li>\n\t<li>Curva t&eacute;rmica na observa&ccedil;&atilde;o de 2/2h por 6h</li>\n\t<li>Se febre, medicar com Dipirona ou Paracetamol VO&nbsp;</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-02-04T14:20:09.911415-03:00"
+            },
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL menor de 28 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL menor de 28 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Febre",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL menor de 28 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 704,
+                    "url": "",
+                    "medicamento": 38024,
+                    "unidade": null,
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 583,
+                        "codigo_produto": 4395,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "B",
+                        "via_administracao": "ORAL   Bolus",
+                        "descricao_administracao": "COMP    500.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 25.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 500,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 909,
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_tipo_acesso": 1
+                    }
+                },
+                {
+                    "id": 705,
+                    "url": "",
+                    "medicamento": 107964,
+                    "unidade": null,
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 584,
+                        "codigo_produto": 7752,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "B",
+                        "via_administracao": "ORAL   Bolus",
+                        "descricao_administracao": "-    200.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 15.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 200,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 1858,
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_tipo_acesso": 1
+                    }
+                },
+                {
+                    "id": 721,
+                    "url": "",
+                    "medicamento": 37982,
+                    "unidade": "GT",
+                    "unidade_display": "GOTA",
+                    "via_acesso": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null,
+                    "apresentacao": null
+                }
+            ],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20239,
+                    "url": "",
+                    "nome": "S5 (< 28 ddv)",
+                    "descricao": "< 28 ddv",
+                    "passo_de_saida_id": 20223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 20225,
+                    "passo_de_entrada": "Tratamento: [Menor que 28 ddv] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20242,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20225,
+                    "passo_de_saida": "Tratamento: [Menor que 28 ddv] Conduta",
+                    "passo_de_entrada_id": 20226,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames (< 28 ddv)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20226,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Exames (< 28 ddv)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10246,
+                    "url": "",
+                    "texto": "H\u00e1 altera\u00e7\u00e3o nos exames?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19806,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alteracao_exames_menor_28_ddv",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20242,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20225,
+                    "passo_de_saida": "Tratamento: [Menor que 28 ddv] Conduta",
+                    "passo_de_entrada_id": 20226,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames (< 28 ddv)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20246,
+                    "url": "",
+                    "nome": "S12 (sem alteracoes  - 28 ddv)",
+                    "descricao": "sem alteracoes",
+                    "passo_de_saida_id": 20226,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (< 28 ddv)",
+                    "passo_de_entrada_id": 20233,
+                    "passo_de_entrada": "Receita: Alta + Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20247,
+                    "url": "",
+                    "nome": "S13 (com alteracoes - 28 ddv)",
+                    "descricao": "com alteracoes",
+                    "passo_de_saida_id": 20226,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (< 28 ddv)",
+                    "passo_de_entrada_id": 20234,
+                    "passo_de_entrada": "Tratamento: [<28 dias] ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20227,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[1 a 3 meses] Conduta",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL e 1 a 3 meses",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL e 1 a 3 meses",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Febre",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL e 1 a 3 meses",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20240,
+                    "url": "",
+                    "nome": "S6 (de 1 a 3 meses)",
+                    "descricao": "1 a 3 meses",
+                    "passo_de_saida_id": 20223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 20227,
+                    "passo_de_entrada": "Tratamento: [1 a 3 meses] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20243,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20227,
+                    "passo_de_saida": "Tratamento: [1 a 3 meses] Conduta",
+                    "passo_de_entrada_id": 20228,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames (1 a 3 meses)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20228,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Exames (1 a 3 meses)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10247,
+                    "url": "",
+                    "texto": "H\u00e1 altera\u00e7\u00e3o nos exames?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19807,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alteracao_exames_1_a_3_meses",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20243,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20227,
+                    "passo_de_saida": "Tratamento: [1 a 3 meses] Conduta",
+                    "passo_de_entrada_id": 20228,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames (1 a 3 meses)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20248,
+                    "url": "",
+                    "nome": "S14 (sem alteracao - 1 a 3 meses)",
+                    "descricao": "sem alteracao - 1 a 3 meses",
+                    "passo_de_saida_id": 20228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (1 a 3 meses)",
+                    "passo_de_entrada_id": 20233,
+                    "passo_de_entrada": "Receita: Alta + Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20249,
+                    "url": "",
+                    "nome": "S15 (com alteracao - 1 a 3 meses)",
+                    "descricao": "com alteracao (1 a 3 meses)",
+                    "passo_de_saida_id": 20228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (1 a 3 meses)",
+                    "passo_de_entrada_id": 20230,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com Chefia (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20229,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 10248,
+                    "url": "",
+                    "texto": "Febre com dura\u00e7\u00e3o maior ou igual a 48h?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 19808,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "febre_maior_48h",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20241,
+                    "url": "",
+                    "nome": "S7 (maior que 3 meses)",
+                    "descricao": "maior que 3 meses",
+                    "passo_de_saida_id": 20223,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Idade",
+                    "passo_de_entrada_id": 20229,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20244,
+                    "url": "",
+                    "nome": "S10 (menos de 48h)",
+                    "descricao": "menos de 48h",
+                    "passo_de_saida_id": 20229,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                    "passo_de_entrada_id": 20236,
+                    "passo_de_entrada": "Receita: Alta (sintom\u00e1ticos) + Reavalia\u00e7\u00e3o 48h",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20245,
+                    "url": "",
+                    "nome": "S11 (mais de 48h)",
+                    "descricao": "mais de 48h",
+                    "passo_de_saida_id": 20229,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                    "passo_de_entrada_id": 20235,
+                    "passo_de_entrada": "Tratamento: [Febre > 48h] Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20230,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com Chefia (2)",
+            "descricao": "Discutir caso do paciente com chefia local",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20249,
+                    "url": "",
+                    "nome": "S15 (com alteracao - 1 a 3 meses)",
+                    "descricao": "com alteracao (1 a 3 meses)",
+                    "passo_de_saida_id": 20228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (1 a 3 meses)",
+                    "passo_de_entrada_id": 20230,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com Chefia (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20250,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20230,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Discutir com Chefia (2)",
+                    "passo_de_entrada_id": 20224,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20231,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Reavaliar com 48h",
+            "descricao": "Reavaliar paciente ap\u00f3s 48h",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 20251,
+                    "url": "",
+                    "nome": "S17 (n\u00e3o interna)",
+                    "descricao": "n\u00e3o interna",
+                    "passo_de_saida_id": 20224,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20231,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Reavaliar com 48h",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20253,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20231,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Reavaliar com 48h",
+                    "passo_de_entrada_id": 20233,
+                    "passo_de_entrada": "Receita: Alta + Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20232,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "ATB + Interna\u00e7\u00e3o",
+            "descricao": "<p dir=\"ltr\"><u><strong>Discutir com chefe de plant&atilde;o a necessidade de interna&ccedil;&atilde;o.</strong></u></p>\n\n<p>Prescrever antibi&oacute;ticoterapia conforme tabela abaixo:</p>\n\n<table align=\"center\" border=\"1\" cellpadding=\"1\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th scope=\"col\">\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\"><strong>IDADE</strong></p>\n\t\t\t</th>\n\t\t\t<th scope=\"col\">\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\"><strong>ALTERA&Ccedil;&Atilde;O LABORATORIAL</strong></p>\n\t\t\t</th>\n\t\t\t<th scope=\"col\">\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\"><strong>ANTIBIOTICOTERAPIA</strong></p>\n\t\t\t</th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Menores de 28 dias</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ampi + Genta (dose: conorme idade e peso do RN)</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Entre 28 dias e 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ceftriaxona 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Menores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados + L&iacute;quor alterado</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ampicilina 200mg/kg/dia e Ceftriaxona para 100mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Menores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Fator de risco de herpes</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Associar Aciclovir 300mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">2 a 3 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios alterados e L&iacute;quor normal</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ceftriaxona 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados + L&iacute;quor alterado</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ceftriaxona 100mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos normais e urin&aacute;rios alterados</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Oral: Acetil-cefuroxima 30mg/kg/dia ou Amoxicilina + Clavulanato 50mg/kg/dia</p>\n\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Parental: Ceftriaxina 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames normais</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Sem antibioticoterapia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 3 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames urin&aacute;rios normais e hemograma e PCR alterado</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Oral: Amoxicilina + Clavulanato 50mg/kg/dia</p>\n\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Parental: Ceftriaxina 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "99996666",
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "N/A",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20252,
+                    "url": "",
+                    "nome": "S18 (interna)",
+                    "descricao": "interna",
+                    "passo_de_saida_id": 20224,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "passo_de_entrada_id": 20232,
+                    "passo_de_entrada": "Tratamento: ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20233,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Alta + Orienta\u00e7\u00f5es",
+            "descricao": "<p>SINAIS DE ALARME, RETORNO PRECOCE SE:<br />\n- Queda do estado geral, irritabilidade<br />\n- Manchas no corpo<br />\n- Baixa aceita&ccedil;&atilde;o das mamadas / dieta<br />\n- Diminui&ccedil;&atilde;o da diurese<br />\n- V&ocirc;mitos de repeti&ccedil;&atilde;o</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5421,
+                    "url": "",
+                    "nome": "Dipirona Solu\u00e7\u00e3o 50mg/ml _____ 1 Fr.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ ml de 6/6h se dor ou febre",
+                    "ordem": 1
+                },
+                {
+                    "id": 5422,
+                    "url": "",
+                    "nome": "Paracetamol Gotas  _____ 1 Fr.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 0,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 0,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Dar _____ gotas de 6/6h se dor ou febre.",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20246,
+                    "url": "",
+                    "nome": "S12 (sem alteracoes  - 28 ddv)",
+                    "descricao": "sem alteracoes",
+                    "passo_de_saida_id": 20226,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (< 28 ddv)",
+                    "passo_de_entrada_id": 20233,
+                    "passo_de_entrada": "Receita: Alta + Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20248,
+                    "url": "",
+                    "nome": "S14 (sem alteracao - 1 a 3 meses)",
+                    "descricao": "sem alteracao - 1 a 3 meses",
+                    "passo_de_saida_id": 20228,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (1 a 3 meses)",
+                    "passo_de_entrada_id": 20233,
+                    "passo_de_entrada": "Receita: Alta + Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 20253,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 20231,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Reavaliar com 48h",
+                    "passo_de_entrada_id": 20233,
+                    "passo_de_entrada": "Receita: Alta + Orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20234,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[<28 dias] ATB + Interna\u00e7\u00e3o",
+            "descricao": "<p><span style=\"font-size:16px\">- Discutir com chefia local sobre necessidade de interna&ccedil;&atilde;o</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar necessidade de pun&ccedil;&atilde;o lombar</span></p>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:16px\">Prescrever antibi&oacute;ticoterapia: Ampicilina + Gentamicina (Dose: conforme idade e peso do RN)</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "99996666",
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "N/A",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20247,
+                    "url": "",
+                    "nome": "S13 (com alteracoes - 28 ddv)",
+                    "descricao": "com alteracoes",
+                    "passo_de_saida_id": 20226,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (< 28 ddv)",
+                    "passo_de_entrada_id": 20234,
+                    "passo_de_entrada": "Tratamento: [<28 dias] ATB + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20235,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Febre > 48h] Exames",
+            "descricao": "<p><span style=\"font-size:16px\">Solicitar os exames a seguir:</span></p>\n\n<p>&nbsp;\n<ul>\n</ul>\n</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "N/A",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOCULTURA AUTOMATIZADA (POR AMOSTRA)",
+                    "exame": "28160096",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "RX TORAX: P.A - LAT",
+                    "exame": "32050054",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Febre",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SUMARIO DE URINA  (TIPO I)",
+                    "exame": "28130367",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "FSSL",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "BANHO EM AGUA CORRENTE",
+                    "procedimento": "75050009",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "COMPRESSA GELADA",
+                    "procedimento": "75130079",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20245,
+                    "url": "",
+                    "nome": "S11 (mais de 48h)",
+                    "descricao": "mais de 48h",
+                    "passo_de_saida_id": 20229,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                    "passo_de_entrada_id": 20235,
+                    "passo_de_entrada": "Tratamento: [Febre > 48h] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 20254,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 20235,
+                    "passo_de_saida": "Tratamento: [Febre > 48h] Exames",
+                    "passo_de_entrada_id": 20224,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Interna\u00e7\u00e3o?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 20236,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Alta (sintom\u00e1ticos) + Reavalia\u00e7\u00e3o 48h",
+            "descricao": "SINAIS DE ALARME, RETORNO PRECOCE SE:\n- Queda do estado geral, irritabilidade\n- Manchas no corpo\n- Baixa aceita\u00e7\u00e3o das mamadas / dieta\n- Diminui\u00e7\u00e3o da diurese\n- V\u00f4mitos de repeti\u00e7\u00e3o",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5423,
+                    "url": "",
+                    "nome": "Dipirona Solu\u00e7\u00e3o 50mg/ml _____ 1 Fr.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5424,
+                    "url": "",
+                    "nome": "Paracetamol Gotas _____ gotas. 1 Fr.",
+                    "medicamento": null,
+                    "apresentacao": "-",
+                    "via_acesso": 1,
+                    "quantidade_receita": 0,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 20244,
+                    "url": "",
+                    "nome": "S10 (menos de 48h)",
+                    "descricao": "menos de 48h",
+                    "passo_de_saida_id": 20229,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                    "passo_de_entrada_id": 20236,
+                    "passo_de_entrada": "Receita: Alta (sintom\u00e1ticos) + Reavalia\u00e7\u00e3o 48h",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 20237,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (h\u00e1 comprometimento)",
+            "descricao": "h\u00e1 comprometimento",
+            "passo_de_saida_id": 20221,
+            "passo_de_saida": {
+                "id": 20221,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Comprometimento",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20222,
+            "passo_de_entrada": {
+                "id": 20222,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exames",
+                "descricao": "<p>- Checar sinais vitais do paciente. Avaliar necessidade de monitoriza&ccedil;&atilde;o</p>\n\n<p>- Avaliar necessidade de expans&atilde;o com SF 0,9% -- 20ml/kg</p>\n\n<p>- Compressa fria.&nbsp;</p>\n\n<p>- Banho &aacute;gua corrente.&nbsp;<br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-02-04T14:15:55.228892-03:00"
+                }
+            },
+            "operacao": {
+                "id": 19809,
+                "nome": "h\u00e1 comprometimento",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19801
+                ],
+                "argumentos": [
+                    "comprometimento_estado_geral"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20238,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (n\u00e3o h\u00e1 comprometimento)",
+            "descricao": "n\u00e3o h\u00e1 comprometimento",
+            "passo_de_saida_id": 20221,
+            "passo_de_saida": {
+                "id": 20221,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Comprometimento",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20223,
+            "passo_de_entrada": {
+                "id": 20223,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19810,
+                "nome": "n\u00e3o h\u00e1 comprometimento",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19801
+                ],
+                "argumentos": [
+                    "comprometimento_estado_geral"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20239,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (< 28 ddv)",
+            "descricao": "< 28 ddv",
+            "passo_de_saida_id": 20223,
+            "passo_de_saida": {
+                "id": 20223,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20225,
+            "passo_de_entrada": {
+                "id": 20225,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Menor que 28 ddv] Conduta",
+                "descricao": "<ul>\n\t<li>Avaliar desidrata&ccedil;&atilde;o por m&aacute; pega em menor de 7 dias</li>\n\t<li>Curva t&eacute;rmica na observa&ccedil;&atilde;o de 2/2h por 6h</li>\n\t<li>Se febre, medicar com Dipirona ou Paracetamol VO&nbsp;</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-02-04T14:20:09.911415-03:00"
+                }
+            },
+            "operacao": {
+                "id": 19811,
+                "nome": "< 28 ddv",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19802
+                ],
+                "argumentos": [
+                    "idade_menor_28_ddv"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20240,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (de 1 a 3 meses)",
+            "descricao": "1 a 3 meses",
+            "passo_de_saida_id": 20223,
+            "passo_de_saida": {
+                "id": 20223,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20227,
+            "passo_de_entrada": {
+                "id": 20227,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[1 a 3 meses] Conduta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19812,
+                "nome": "1 a 3 meses",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19803
+                ],
+                "argumentos": [
+                    "idade_1_a_3_meses"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20241,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (maior que 3 meses)",
+            "descricao": "maior que 3 meses",
+            "passo_de_saida_id": 20223,
+            "passo_de_saida": {
+                "id": 20223,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Idade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20229,
+            "passo_de_entrada": {
+                "id": 20229,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19813,
+                "nome": "maior que 3 meses",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19804
+                ],
+                "argumentos": [
+                    "idade_maior_3_meses"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20242,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20225,
+            "passo_de_saida": {
+                "id": 20225,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Menor que 28 ddv] Conduta",
+                "descricao": "<ul>\n\t<li>Avaliar desidrata&ccedil;&atilde;o por m&aacute; pega em menor de 7 dias</li>\n\t<li>Curva t&eacute;rmica na observa&ccedil;&atilde;o de 2/2h por 6h</li>\n\t<li>Se febre, medicar com Dipirona ou Paracetamol VO&nbsp;</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-02-04T14:20:09.911415-03:00"
+                }
+            },
+            "passo_de_entrada_id": 20226,
+            "passo_de_entrada": {
+                "id": 20226,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (< 28 ddv)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20243,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20227,
+            "passo_de_saida": {
+                "id": 20227,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[1 a 3 meses] Conduta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20228,
+            "passo_de_entrada": {
+                "id": 20228,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (1 a 3 meses)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20244,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (menos de 48h)",
+            "descricao": "menos de 48h",
+            "passo_de_saida_id": 20229,
+            "passo_de_saida": {
+                "id": 20229,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20236,
+            "passo_de_entrada": {
+                "id": 20236,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta (sintom\u00e1ticos) + Reavalia\u00e7\u00e3o 48h",
+                "descricao": "SINAIS DE ALARME, RETORNO PRECOCE SE:\n- Queda do estado geral, irritabilidade\n- Manchas no corpo\n- Baixa aceita\u00e7\u00e3o das mamadas / dieta\n- Diminui\u00e7\u00e3o da diurese\n- V\u00f4mitos de repeti\u00e7\u00e3o",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19814,
+                "nome": "menos de 48h",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19808
+                ],
+                "argumentos": [
+                    "febre_maior_48h"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20245,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (mais de 48h)",
+            "descricao": "mais de 48h",
+            "passo_de_saida_id": 20229,
+            "passo_de_saida": {
+                "id": 20229,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Maior que 3 meses] Avaliar dura\u00e7\u00e3o da febre",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20235,
+            "passo_de_entrada": {
+                "id": 20235,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Febre > 48h] Exames",
+                "descricao": "<p><span style=\"font-size:16px\">Solicitar os exames a seguir:</span></p>\n\n<p>&nbsp;\n<ul>\n</ul>\n</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19815,
+                "nome": "mais de 48h",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19808
+                ],
+                "argumentos": [
+                    "febre_maior_48h"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20246,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (sem alteracoes  - 28 ddv)",
+            "descricao": "sem alteracoes",
+            "passo_de_saida_id": 20226,
+            "passo_de_saida": {
+                "id": 20226,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (< 28 ddv)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20233,
+            "passo_de_entrada": {
+                "id": 20233,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta + Orienta\u00e7\u00f5es",
+                "descricao": "<p>SINAIS DE ALARME, RETORNO PRECOCE SE:<br />\n- Queda do estado geral, irritabilidade<br />\n- Manchas no corpo<br />\n- Baixa aceita&ccedil;&atilde;o das mamadas / dieta<br />\n- Diminui&ccedil;&atilde;o da diurese<br />\n- V&ocirc;mitos de repeti&ccedil;&atilde;o</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19816,
+                "nome": "sem alteracoes",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19806
+                ],
+                "argumentos": [
+                    "alteracao_exames_menor_28_ddv"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20247,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (com alteracoes - 28 ddv)",
+            "descricao": "com alteracoes",
+            "passo_de_saida_id": 20226,
+            "passo_de_saida": {
+                "id": 20226,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (< 28 ddv)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20234,
+            "passo_de_entrada": {
+                "id": 20234,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[<28 dias] ATB + Interna\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:16px\">- Discutir com chefia local sobre necessidade de interna&ccedil;&atilde;o</span></p>\n\n<p><span style=\"font-size:16px\">- Avaliar necessidade de pun&ccedil;&atilde;o lombar</span></p>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:16px\">Prescrever antibi&oacute;ticoterapia: Ampicilina + Gentamicina (Dose: conforme idade e peso do RN)</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19817,
+                "nome": "com alteracoes (28 ddv)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19806
+                ],
+                "argumentos": [
+                    "alteracao_exames_menor_28_ddv"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20248,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (sem alteracao - 1 a 3 meses)",
+            "descricao": "sem alteracao - 1 a 3 meses",
+            "passo_de_saida_id": 20228,
+            "passo_de_saida": {
+                "id": 20228,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (1 a 3 meses)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20233,
+            "passo_de_entrada": {
+                "id": 20233,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta + Orienta\u00e7\u00f5es",
+                "descricao": "<p>SINAIS DE ALARME, RETORNO PRECOCE SE:<br />\n- Queda do estado geral, irritabilidade<br />\n- Manchas no corpo<br />\n- Baixa aceita&ccedil;&atilde;o das mamadas / dieta<br />\n- Diminui&ccedil;&atilde;o da diurese<br />\n- V&ocirc;mitos de repeti&ccedil;&atilde;o</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 19818,
+                "nome": "sem alteracao (1 a 3 meses)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19807
+                ],
+                "argumentos": [
+                    "alteracao_exames_1_a_3_meses"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20249,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (com alteracao - 1 a 3 meses)",
+            "descricao": "com alteracao (1 a 3 meses)",
+            "passo_de_saida_id": 20228,
+            "passo_de_saida": {
+                "id": 20228,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (1 a 3 meses)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20230,
+            "passo_de_entrada": {
+                "id": 20230,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com Chefia (2)",
+                "descricao": "Discutir caso do paciente com chefia local",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19819,
+                "nome": "com alteracao (1 a 3 meses)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19807
+                ],
+                "argumentos": [
+                    "alteracao_exames_1_a_3_meses"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20250,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20230,
+            "passo_de_saida": {
+                "id": 20230,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com Chefia (2)",
+                "descricao": "Discutir caso do paciente com chefia local",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20224,
+            "passo_de_entrada": {
+                "id": 20224,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Interna\u00e7\u00e3o?",
+                "descricao": "Decidir se deve haver interna\u00e7\u00e3o do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20251,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (n\u00e3o interna)",
+            "descricao": "n\u00e3o interna",
+            "passo_de_saida_id": 20224,
+            "passo_de_saida": {
+                "id": 20224,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Interna\u00e7\u00e3o?",
+                "descricao": "Decidir se deve haver interna\u00e7\u00e3o do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20231,
+            "passo_de_entrada": {
+                "id": 20231,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Reavaliar com 48h",
+                "descricao": "Reavaliar paciente ap\u00f3s 48h",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19820,
+                "nome": "n\u00e3o interna",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    19805
+                ],
+                "argumentos": [
+                    "internacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20252,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18 (interna)",
+            "descricao": "interna",
+            "passo_de_saida_id": 20224,
+            "passo_de_saida": {
+                "id": 20224,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Interna\u00e7\u00e3o?",
+                "descricao": "Decidir se deve haver interna\u00e7\u00e3o do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20232,
+            "passo_de_entrada": {
+                "id": 20232,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "ATB + Interna\u00e7\u00e3o",
+                "descricao": "<p dir=\"ltr\"><u><strong>Discutir com chefe de plant&atilde;o a necessidade de interna&ccedil;&atilde;o.</strong></u></p>\n\n<p>Prescrever antibi&oacute;ticoterapia conforme tabela abaixo:</p>\n\n<table align=\"center\" border=\"1\" cellpadding=\"1\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th scope=\"col\">\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\"><strong>IDADE</strong></p>\n\t\t\t</th>\n\t\t\t<th scope=\"col\">\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\"><strong>ALTERA&Ccedil;&Atilde;O LABORATORIAL</strong></p>\n\t\t\t</th>\n\t\t\t<th scope=\"col\">\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\"><strong>ANTIBIOTICOTERAPIA</strong></p>\n\t\t\t</th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Menores de 28 dias</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ampi + Genta (dose: conorme idade e peso do RN)</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Entre 28 dias e 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ceftriaxona 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Menores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados + L&iacute;quor alterado</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ampicilina 200mg/kg/dia e Ceftriaxona para 100mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Menores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Fator de risco de herpes</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Associar Aciclovir 300mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">2 a 3 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios alterados e L&iacute;quor normal</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ceftriaxona 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos e urin&aacute;rios normais ou alterados + L&iacute;quor alterado</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Ceftriaxona 100mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames s&eacute;ricos normais e urin&aacute;rios alterados</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Oral: Acetil-cefuroxima 30mg/kg/dia ou Amoxicilina + Clavulanato 50mg/kg/dia</p>\n\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Parental: Ceftriaxina 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 2 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames normais</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Sem antibioticoterapia</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Maiores de 3 meses</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Exames urin&aacute;rios normais e hemograma e PCR alterado</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Oral: Amoxicilina + Clavulanato 50mg/kg/dia</p>\n\n\t\t\t<p dir=\"ltr\" style=\"text-align:center\">Parental: Ceftriaxina 50-80mg/kg/dia</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 19821,
+                "nome": "interna",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    19805
+                ],
+                "argumentos": [
+                    "internacao"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20253,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 20231,
+            "passo_de_saida": {
+                "id": 20231,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Reavaliar com 48h",
+                "descricao": "Reavaliar paciente ap\u00f3s 48h",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20233,
+            "passo_de_entrada": {
+                "id": 20233,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta + Orienta\u00e7\u00f5es",
+                "descricao": "<p>SINAIS DE ALARME, RETORNO PRECOCE SE:<br />\n- Queda do estado geral, irritabilidade<br />\n- Manchas no corpo<br />\n- Baixa aceita&ccedil;&atilde;o das mamadas / dieta<br />\n- Diminui&ccedil;&atilde;o da diurese<br />\n- V&ocirc;mitos de repeti&ccedil;&atilde;o</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20254,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20",
+            "descricao": "-",
+            "passo_de_saida_id": 20235,
+            "passo_de_saida": {
+                "id": 20235,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Febre > 48h] Exames",
+                "descricao": "<p><span style=\"font-size:16px\">Solicitar os exames a seguir:</span></p>\n\n<p>&nbsp;\n<ul>\n</ul>\n</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 20224,
+            "passo_de_entrada": {
+                "id": 20224,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Interna\u00e7\u00e3o?",
+                "descricao": "Decidir se deve haver interna\u00e7\u00e3o do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 20255,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20",
+            "descricao": "-",
+            "passo_de_saida_id": 20222,
+            "passo_de_saida": {
+                "id": 20222,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Exames",
+                "descricao": "<p>- Checar sinais vitais do paciente. Avaliar necessidade de monitoriza&ccedil;&atilde;o</p>\n\n<p>- Avaliar necessidade de expans&atilde;o com SF 0,9% -- 20ml/kg</p>\n\n<p>- Compressa fria.&nbsp;</p>\n\n<p>- Banho &aacute;gua corrente.&nbsp;<br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-02-04T14:15:55.228892-03:00"
+                }
+            },
+            "passo_de_entrada_id": 20224,
+            "passo_de_entrada": {
+                "id": 20224,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Interna\u00e7\u00e3o?",
+                "descricao": "Decidir se deve haver interna\u00e7\u00e3o do paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 19801,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "comprometimento_estado_geral",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19802,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_menor_28_ddv",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19803,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_1_a_3_meses",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19804,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "idade_maior_3_meses",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19805,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "internacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19806,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alteracao_exames_menor_28_ddv",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19807,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alteracao_exames_1_a_3_meses",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 19808,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "febre_maior_48h",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

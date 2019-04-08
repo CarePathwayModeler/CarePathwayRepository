@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3250" url="" name="Afec&#xe7;&#xf5;es Oftalmol&#xf3;gicas" code="H051">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19440" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar sintomas" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Verificar se paciente apresenta algum dos sintomas abaixo:&lt;/span>&lt;/p>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Baixa acuidade visual" url="" id="9900">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="acuidade_visual" id="19145" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor ocular intensa" url="" id="10021">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_ocular" id="19146" weight="1" value="false"/>
+    </questions>
+    <questions text="Fotofobia" url="" id="10022">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="fotofobia" id="19147" weight="1" value="false"/>
+    </questions>
+    <questions text="Trauma Ocular" url="" id="10023">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trauma_ocular" id="19148" weight="1" value="false"/>
+    </questions>
+    <questions text="Corpo estranho" url="" id="10024">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho" id="19149" weight="1" value="false"/>
+    </questions>
+    <questions text="Dor na movimenta&#xe7;&#xe3;o ocular" url="" id="10025">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dor_movimentacao" id="19150" weight="1" value="false"/>
+    </questions>
+    <questions text="Restri&#xe7;&#xe3;o na movimenta&#xe7;&#xe3;o ocular" url="" id="10026">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="restricao_movimentacao" id="19151" weight="1" value="false"/>
+    </questions>
+    <questions text="Sintomas h&#xe1; mais de 5 dias?" url="" id="10027">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_mais_dias" id="19152" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="19721" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar Oftalmologista" description="&lt;p>&lt;span style=&quot;font-size:18px&quot;>Encaminhar paciente para&amp;nbsp;Oftalmologista.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0 //@sequence.2"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19722" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Diagnosticar paciente" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3 //@sequence.4">
+    <questions text="Qual o diagn&#xf3;stico do paciente a partir da an&#xe1;lise do olho?" url="" id="10028">
+      <answers xsi:type="pathwayMetamodel:Choice" name="diagnostico" id="19153" weight="1" value="0.0">
+        <option description="Conjuntivite viral: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular aquosa e sensa&#xe7;&#xe3;o de corpo estranho." weight="1"/>
+        <option description="Conjuntivite bacteriana: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular branco-amarelada ou purulenta e sensa&#xe7;&#xe3;o de corpo estranho." weight="2"/>
+        <option description="Hemorragia subconjuntival: Olho vermelho (sangue sob a conjuntiva em &#xe1;rea localizada) unilateral e aus&#xea;ncia de outros sintomas" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19723" type="Receita" type_verbose="Receita" url="" name="[Hemorragia subconjuntival] Receita" description="" isTerminal="true" inputSequences="//@sequence.3">
+    <item id="5178" url="" name="SYSTANE COL&#xcd;RIO _______ 1 FR" med_code="-1" presentation="-" access="17" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Pingar 1 gota no olho de 4/4horas."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="19724" type="Receita" type_verbose="Receita" url="" name="[Conjuntivite Viral] Receita" description="" isTerminal="true" inputSequences="//@sequence.4">
+    <item id="5179" url="" name="SYSTANE COL&#xcd;RIO _______ 1 FR" med_code="-1" presentation="-" access="17" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Pingar 1 gota no olho de 4/4horas."/>
+    <item id="5180" url="" name="NIMESULIDA 100 mg _______ 1 CX" med_code="-1" presentation="COMP" access="1" quantity="1" period="3" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="19725" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (com algum sintoma)" description="com algum sintoma">
+    <operation name="com algum sintoma" Operator="greaterOrEqual" id="19158">
+      <operand xsi:type="pathwayMetamodel:Operation" name="com_sintomas" Operator="addition" id="19157">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="acuidade_visual" id="19145" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_ocular" id="19146" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fotofobia" id="19147" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma_ocular" id="19148" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho" id="19149" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_movimentacao" id="19150" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="restricao_movimentacao" id="19151" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_mais_dias" id="19152" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19154" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="19726" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (sem nenhum sintoma)" description="sem nenhum sintoma">
+    <operation name="sem nenhum sintoma" Operator="lessThan" id="19159">
+      <operand xsi:type="pathwayMetamodel:Operation" name="com_sintomas" Operator="addition" id="19157">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="acuidade_visual" id="19145" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_ocular" id="19146" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="fotofobia" id="19147" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma_ocular" id="19148" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho" id="19149" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_movimentacao" id="19150" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="restricao_movimentacao" id="19151" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_mais_dias" id="19152" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19154" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.2" id="19727" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (conjuntivite bacteriana)" description="conjuntivite bacteriana">
+    <operation name="conjuntivite bacteriana" Operator="equal" id="19160">
+      <operand xsi:type="pathwayMetamodel:Choice" name="diagnostico" id="19153" weight="1" value="0.0">
+        <option description="Conjuntivite viral: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular aquosa e sensa&#xe7;&#xe3;o de corpo estranho." weight="1"/>
+        <option description="Conjuntivite bacteriana: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular branco-amarelada ou purulenta e sensa&#xe7;&#xe3;o de corpo estranho." weight="2"/>
+        <option description="Hemorragia subconjuntival: Olho vermelho (sangue sob a conjuntiva em &#xe1;rea localizada) unilateral e aus&#xea;ncia de outros sintomas" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="19155" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="19728" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (hemorragia subconjuntival)" description="hemorragia subconjuntival">
+    <operation name="hemorragia subconjuntival" Operator="equal" id="19401">
+      <operand xsi:type="pathwayMetamodel:Choice" name="diagnostico" id="19153" weight="1" value="0.0">
+        <option description="Conjuntivite viral: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular aquosa e sensa&#xe7;&#xe3;o de corpo estranho." weight="1"/>
+        <option description="Conjuntivite bacteriana: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular branco-amarelada ou purulenta e sensa&#xe7;&#xe3;o de corpo estranho." weight="2"/>
+        <option description="Hemorragia subconjuntival: Olho vermelho (sangue sob a conjuntiva em &#xe1;rea localizada) unilateral e aus&#xea;ncia de outros sintomas" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="19156" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="19729" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (conjuntivite viral)" description="conjuntivite viral">
+    <operation name="conjuntivite viral" Operator="equal" id="19402">
+      <operand xsi:type="pathwayMetamodel:Choice" name="diagnostico" id="19153" weight="1" value="0.0">
+        <option description="Conjuntivite viral: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular aquosa e sensa&#xe7;&#xe3;o de corpo estranho." weight="1"/>
+        <option description="Conjuntivite bacteriana: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular branco-amarelada ou purulenta e sensa&#xe7;&#xe3;o de corpo estranho." weight="2"/>
+        <option description="Hemorragia subconjuntival: Olho vermelho (sangue sob a conjuntiva em &#xe1;rea localizada) unilateral e aus&#xea;ncia de outros sintomas" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="19154" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="com_sintomas" Operator="addition" id="19157">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="acuidade_visual" id="19145" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_ocular" id="19146" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="fotofobia" id="19147" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="trauma_ocular" id="19148" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho" id="19149" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="dor_movimentacao" id="19150" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="restricao_movimentacao" id="19151" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_mais_dias" id="19152" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="acuidade_visual" id="19145" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_ocular" id="19146" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="fotofobia" id="19147" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trauma_ocular" id="19148" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="corpo_estranho" id="19149" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dor_movimentacao" id="19150" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="restricao_movimentacao" id="19151" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_mais_dias" id="19152" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="diagnostico" id="19153" weight="1" value="0.0">
+    <option description="Conjuntivite viral: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular aquosa e sensa&#xe7;&#xe3;o de corpo estranho." weight="1"/>
+    <option description="Conjuntivite bacteriana: Hiperemia conjuntival uni ou bilateral, lacrimejamento, secre&#xe7;&#xe3;o ocular branco-amarelada ou purulenta e sensa&#xe7;&#xe3;o de corpo estranho." weight="2"/>
+    <option description="Hemorragia subconjuntival: Olho vermelho (sangue sob a conjuntiva em &#xe1;rea localizada) unilateral e aus&#xea;ncia de outros sintomas" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="19154" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="19155" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="19156" weight="1" value="3.0"/>
+</pathwayMetamodel:Pathway>

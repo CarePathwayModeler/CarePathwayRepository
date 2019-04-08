@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3267" url="" name="Meningite" code="H003">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19014" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verifique as condi&#xe7;&#xf5;es do paciente" description="Avalie as condi&#xe7;&#xf5;es do paciente para dar seguimento ao tratamento adequado." inputSequences="//@sequence.11" outputSequences="//@sequence.0 //@sequence.1 //@sequence.2 //@sequence.3">
+    <questions text="Idade > 50 anos?" url="" id="9758">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+    </questions>
+    <questions text="Hist&#xf3;rico de etilismo?" url="" id="9759">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+    </questions>
+    <questions text="Imunossupress&#xe3;o (HIV, Uso cr&#xf4;nico de corticoide, transplantado), Diabetes, gestante, portadores de doen&#xe7;a renal ou hep&#xe1;ticas cr&#xf4;nicas?" url="" id="9760">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+    </questions>
+    <questions text="Procedimento neurocir&#xfa;rgico pr&#xe9;vio ou trauma penetrante)?" url="" id="9761">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19015" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Padr&#xe3;o" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.4">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Meningite" clinical_indication="n/a"/>
+    <medication url="" med_id="146890" id="9785" name="DEXAMETASONA 4MG AMPL 1 ML" brand="EMS" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9785" frequency="6" standard="null"/>
+    <medication url="" med_id="43400" id="9786" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9786" frequency="12" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19016" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento indicado para idade elevada, etilismo ou imunossupress&#xe3;o" description="Para os casos em que o paciente apresente alguns dos crit&#xe9;rios a seguir:  Idade maior que 50 anos ou hist&#xf3;rico de Etilismo ou Imunossupress&#xe3;o, complementar o tratamento com Ampicilina." inputSequences="//@sequence.3" outputSequences="//@sequence.5">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo Meningite" clinical_indication="Protocolo Meningite"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <medication url="" med_id="146890" id="9787" name="DEXAMETASONA 4MG AMPL 1 ML" brand="EMS" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9787" frequency="6" standard="null"/>
+    <medication url="" med_id="43400" id="9788" name="ROCEFIN 1G IV FRAP 1 UD" brand="" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9788" frequency="12" standard="null"/>
+    <medication url="" med_id="75116" id="9789" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9789" frequency="4" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19017" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento indicado quando procedimentos neurocir&#xfa;rgicos" description="Para os casos em que o paciente passou por algum procedimento cir&#xfa;rgico recente complementar o tratamento com Vancomicina e substituir  Ceftriaxona  por  Cefepime." inputSequences="//@sequence.0" outputSequences="//@sequence.6">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo Meningite" clinical_indication="Protocolo Meningite"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Meningite" clinical_indication="n/a"/>
+    <medication url="" med_id="146890" id="9790" name="DEXAMETASONA 4MG AMPL 1 ML" brand="EMS" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9790" frequency="6" standard="null"/>
+    <medication url="" med_id="109134" id="9791" name="VANCOCINA 1GR FRAP 1 UD" brand="ELI LILLY" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9791" frequency="12" standard="null"/>
+    <medication url="" med_id="111473" id="9792" name="MAXCEF 2GR FRAP 1 UD" brand="BRISTOL" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9792" frequency="8" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19018" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento Completo" description="Paciente que apresenta m&#xfa;ltiplos fatores agravantes(  neurocirurgia, idade avan&#xe7;ada,  etilismo imunossupress&#xe3;o, cultura espec&#xed;fica ), Devem ser individualizados ,  o tratamento sugerido  dispon&#xed;vel a seguir." inputSequences="//@sequence.1" outputSequences="//@sequence.7">
+    <examination url="TC CRANIO/ORBITAS,SELA TURSICA" exam_id="34010068" limb_side="" quantity="1" reason="Protocolo Meningite" clinical_indication="Protocolo Meningite"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA(POR AMOSTRA,INCLUI T" exam_id="28100727" limb_side="" quantity="2" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Meningite" clinical_indication="Protocolo de Meningite"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Meningite" clinical_indication="n/a"/>
+    <medication url="" med_id="146890" id="9793" name="DEXAMETASONA 4MG AMPL 1 ML" brand="EMS" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9793" frequency="6" standard="null"/>
+    <medication url="" med_id="75116" id="9794" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9794" frequency="4" standard="{&quot;quantidade_dosagem&quot;:500,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:2,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:4352,&quot;nome_diluente&quot;:&quot;SORO FISIOLOGICO 0,9%&quot;,&quot;quantidade_diluente&quot;:18,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;1 FA + 18 ml SF 0,9%&quot;,&quot;id&quot;:3953,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Bolus&quot;,&quot;codigo_ordem_administracao&quot;:3,&quot;codigo_principio_ativo&quot;:198}"/>
+    <medication url="" med_id="109134" id="9795" name="VANCOCINA 1GR FRAP 1 UD" brand="ELI LILLY" unit="UD" access="6" daily_dosage="2" cycles="1" treatement_time="9795" frequency="12" standard="null"/>
+    <medication url="" med_id="111473" id="9796" name="MAXCEF 2GR FRAP 1 UD" brand="BRISTOL" unit="UD" access="6" daily_dosage="1" cycles="1" treatement_time="9796" frequency="8" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19019" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar resultado dos exames" description="Avalie o resultado dos exames do paciente." inputSequences="//@sequence.4 //@sequence.5 //@sequence.6 //@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Paciente apresenta hipertens&#xe3;o craniana?" url="" id="9762">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="18802" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19020" type="Tratamento" type_verbose="Tratamento" url="" name="Tratamento LCR" description="Realize a coleta do LCR e mantenha o tratamento emp&#xed;rico do paciente." inputSequences="//@sequence.8" outputSequences="//@sequence.10">
+    <examination url="ANTIBIOGRAMA DIFUSAO EM AGAR" exam_id="28100034" limb_side="" quantity="1" reason="MENINGITE , ANTIBIOGRAMA AUTOMATIZADO" clinical_indication="MENINGITE , ANTIBIOGRAMA AUTOMATIZADO"/>
+    <examination url="COLETA POR PUNCAO" exam_id="28080050" limb_side="" quantity="1" reason="PUNCAO LIQUORICA RAQUIANA OU CISTERNAL, MENINGITE" clinical_indication="PUNCAO LIQUORICA RAQUIANA OU CISTERNAL, MENINGITE"/>
+    <examination url="CITOBIOQUIMICA DO LIQUOR" exam_id="28090098" limb_side="" quantity="1" reason="MENINGITE" clinical_indication="MENINGITE"/>
+    <examination url="CULTURAS EM GERAL" exam_id="28100581" limb_side="" quantity="1" reason="MENINGITE" clinical_indication="MENINGITE"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="19021" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Aviso: Sugest&#xe3;o de conduta" description="Para pacientes que apresentem evid&#xea;ncias de  Hipertens&#xe3;o Intracraniana ( cl&#xed;nica ou radiol&#xf3;gica ),   n&#xe3;o  sugerimos a realiza&#xe7;&#xe3;o  de pun&#xe7;&#xe3;o lombar,  manter tratamento emp&#xed;rico.&#xA;&#xA;Aguardar resultado dos exames.&#xA;Se houver suspeita de  encefalite  ou meningite viral,  acrescentar  aos exame  j&#xe1; solicitados  os seguintes itens .:&#xA;&#xA;* Isolamento viral para dengue e CKG do l&#xed;quor e do sangue ( avaliar  disponibilidade  do teste no laborat&#xf3;rio )  &#xA;* Sorologia para Herpes do l&#xed;quor&#xA;* PCR s&#xe9;rico para Herpes &#xA;&#xA;Sugerimos ap&#xf3;s Bacterioscopia do LCR.:&#xA;&#xA;* COCO GRAM +: PNEUMOCOCO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA 4MG EV 6/6H&#xA;* COCOBACILOS GRAM +: LISTERIA -- CEFTRIAXONA 2G 12/12H + AMPICILINA 2G 4/4H&#xA;* DIPLOCOCO GRAM - : MENINGOCOCO -- CEFTRIAXONA 2G 12/12H&#xA;* COCOBACILO GRAM - : HEM&#xd3;FILO -- CEFTRIAXONA 2G 12/12H + DEXAMETASONA&#xA;&#xA;Se n&#xe3;o for evidenciado microorganismo cor&#xe1;vel pelo GRAM, manter o tratamento emp&#xed;rico." isTerminal="true" inputSequences="//@sequence.9 //@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:Information" id="19022" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar para Chefia" description="&lt;p>Solicitar avalia&amp;ccedil;&amp;atilde;o conjunta do chefe de equipe em caso de suspeita de meningite. O chefe&amp;nbsp;dar&amp;aacute; continuidade ao protocolo e paciente ficar&amp;aacute; em leito de observa&amp;ccedil;&amp;atilde;o.&lt;/p>" isInitial="true" outputSequences="//@sequence.11"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="19023" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="s3">
+    <operation name="s3-agravante-vancomicina" Operator="affirmation" id="18813">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes-agravantes-vancomicina" Operator="and" id="18806">
+        <operand xsi:type="pathwayMetamodel:Operation" name="neg_ampicilina" id="18805">
+          <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+            <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+          </operand>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.0" id="19024" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="s4">
+    <operation name="s4-todos-os-criterios" Operator="and" id="18814">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="19025" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description="s1">
+    <operation name="s1-sem-criterios-agravantes" Operator="affirmation" id="18815">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem-criterios" Operator="and" id="18811">
+        <operand xsi:type="pathwayMetamodel:Operation" name="idade-menor-50" id="18807">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-etilismo" id="18808">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-imuno" id="18809">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="18810">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="19026" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="s2">
+    <operation name="s2-criterios-ampicilina-sem-neuro" Operator="affirmation" id="18816">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes-ampicilina-neg-neuro" Operator="and" id="18812">
+        <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="18810">
+          <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+        </operand>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="19027" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="s5"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.2" id="19028" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description="s6"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="19029" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="s7"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="19030" type="Sequencia" type_verbose="Sequencia" url="" name="s8" description="s8"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="19031" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="s9">
+    <operation name="sem-hipertensao-craniana" id="18817">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="18802" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.5" id="19032" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="s10">
+    <operation name="com-hiper-craniana" Operator="affirmation" id="18818">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="18802" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="19033" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description=""/>
+  <sequence inputStep="//@element.0" outputStep="//@element.8" id="19034" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="Incondicional"/>
+  <operation name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+  </operation>
+  <operation name="condicoes_agravantes_e_procedimento_neurocirurgico" Operator="and" id="18804">
+    <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+  </operation>
+  <operation name="neg_ampicilina" id="18805">
+    <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <operation name="condicoes-agravantes-vancomicina" Operator="and" id="18806">
+    <operand xsi:type="pathwayMetamodel:Operation" name="neg_ampicilina" id="18805">
+      <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+      </operand>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+  </operation>
+  <operation name="idade-menor-50" id="18807">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-etilismo" id="18808">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-imuno" id="18809">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-neurocirurgia" id="18810">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-criterios" Operator="and" id="18811">
+    <operand xsi:type="pathwayMetamodel:Operation" name="idade-menor-50" id="18807">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-etilismo" id="18808">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-imuno" id="18809">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="18810">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <operation name="condicoes-ampicilina-neg-neuro" Operator="and" id="18812">
+    <operand xsi:type="pathwayMetamodel:Operation" name="condicoes_agravantes_ampicilina" Operator="or" id="18803">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Operation" name="sem-neurocirurgia" id="18810">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+    </operand>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade" id="18798" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="etilismo" id="18799" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="imunossupressao" id="18800" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="neurocirurgico" id="18801" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hiper-craniana" id="18802" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

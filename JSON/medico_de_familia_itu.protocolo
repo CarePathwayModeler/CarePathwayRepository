@@ -1,0 +1,536 @@
+{
+    "id": 926,
+    "url": "",
+    "codigo": "MF_ITU",
+    "nome": "[M\u00e9dico de Fam\u00edlia] ITU",
+    "repositorio_id": 505,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:19:43.013430-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:19:39.895245-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-19T17:19:43.013430-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4670,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Solicitar urocultura com antibiograma",
+            "descricao": "Solicitar exame ap\u00f3s identifica\u00e7\u00e3o de Sintomas",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "urocultura com antibiograma",
+                    "indicacao_clinica": "urocultura com antibiograma",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4676,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 4670,
+                    "passo_de_saida": "Tratamento: Solicitar urocultura com antibiograma",
+                    "passo_de_entrada_id": 4671,
+                    "passo_de_entrada": "Receita: Tratamento Emp\u00edrico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4671,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratamento Emp\u00edrico",
+            "descricao": "<p>&nbsp;Ap&oacute;s 72h retornar com resultados dos exames ou caso piora dos sintomas.<br />\n&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 834,
+                    "url": "",
+                    "nome": "CLORIDRATO DE CIPROFLOXACINO",
+                    "medicamento": 7896004701264,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                },
+                {
+                    "id": 835,
+                    "url": "",
+                    "nome": "CLORIDRATO DE CIPROFLOXACINO",
+                    "medicamento": 7896004701271,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                },
+                {
+                    "id": 836,
+                    "url": "",
+                    "nome": "CEFALEXINA",
+                    "medicamento": 7891317449100,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4676,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 4670,
+                    "passo_de_saida": "Tratamento: Solicitar urocultura com antibiograma",
+                    "passo_de_entrada_id": 4671,
+                    "passo_de_entrada": "Receita: Tratamento Emp\u00edrico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4677,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "",
+                    "passo_de_saida_id": 4671,
+                    "passo_de_saida": "Receita: Tratamento Emp\u00edrico",
+                    "passo_de_entrada_id": 4672,
+                    "passo_de_entrada": "Pausa: Reavaliar paciente ap\u00f3s 72h",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4672,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Reavaliar paciente ap\u00f3s 72h",
+            "descricao": "Ap\u00f3s retorno, observar se houve melhoras dos sintomas ap\u00f3s tratamento",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4677,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "",
+                    "passo_de_saida_id": 4671,
+                    "passo_de_saida": "Receita: Tratamento Emp\u00edrico",
+                    "passo_de_entrada_id": 4672,
+                    "passo_de_entrada": "Pausa: Reavaliar paciente ap\u00f3s 72h",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4678,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "",
+                    "passo_de_saida_id": 4672,
+                    "passo_de_saida": "Pausa: Reavaliar paciente ap\u00f3s 72h",
+                    "passo_de_entrada_id": 4673,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar estado do paciente",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4673,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar estado do paciente",
+            "descricao": "Reavalia\u00e7\u00e3o ap\u00f3s 72h",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2031,
+                    "url": "",
+                    "texto": "Paciente Obteve Melhora?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3394,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "estado_paciente",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4678,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "",
+                    "passo_de_saida_id": 4672,
+                    "passo_de_saida": "Pausa: Reavaliar paciente ap\u00f3s 72h",
+                    "passo_de_entrada_id": 4673,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar estado do paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 4679,
+                    "url": "",
+                    "nome": "S4 (Obteve Melhora)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4673,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar estado do paciente",
+                    "passo_de_entrada_id": 4675,
+                    "passo_de_entrada": "Receita: Manter Conduta M\u00e9dica",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4680,
+                    "url": "",
+                    "nome": "S5 (N\u00e3o Obteve Melhora)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4673,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar estado do paciente",
+                    "passo_de_entrada_id": 4674,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Substituir antibi\u00f3tico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4674,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Substituir antibi\u00f3tico",
+            "descricao": "<p>Substituir antibi&oacute;tico com base no antibiograma ou substitui&ccedil;&atilde;o por falha terap&ecirc;utica.&nbsp;<br />\n&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 4680,
+                    "url": "",
+                    "nome": "S5 (N\u00e3o Obteve Melhora)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4673,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar estado do paciente",
+                    "passo_de_entrada_id": 4674,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Substituir antibi\u00f3tico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4675,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Manter Conduta M\u00e9dica",
+            "descricao": "<p>Manter &uacute;ltima conduta m&eacute;dica do tratamento.</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": true,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4679,
+                    "url": "",
+                    "nome": "S4 (Obteve Melhora)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4673,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar estado do paciente",
+                    "passo_de_entrada_id": 4675,
+                    "passo_de_entrada": "Receita: Manter Conduta M\u00e9dica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4676,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "",
+            "passo_de_saida_id": 4670,
+            "passo_de_saida": {
+                "id": 4670,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Solicitar urocultura com antibiograma",
+                "descricao": "Solicitar exame ap\u00f3s identifica\u00e7\u00e3o de Sintomas",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4671,
+            "passo_de_entrada": {
+                "id": 4671,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento Emp\u00edrico",
+                "descricao": "<p>&nbsp;Ap&oacute;s 72h retornar com resultados dos exames ou caso piora dos sintomas.<br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4677,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "",
+            "passo_de_saida_id": 4671,
+            "passo_de_saida": {
+                "id": 4671,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratamento Emp\u00edrico",
+                "descricao": "<p>&nbsp;Ap&oacute;s 72h retornar com resultados dos exames ou caso piora dos sintomas.<br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 4672,
+            "passo_de_entrada": {
+                "id": 4672,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Reavaliar paciente ap\u00f3s 72h",
+                "descricao": "Ap\u00f3s retorno, observar se houve melhoras dos sintomas ap\u00f3s tratamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4678,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "",
+            "passo_de_saida_id": 4672,
+            "passo_de_saida": {
+                "id": 4672,
+                "type": "Pausa",
+                "type_verbose": "Pausa",
+                "url": "",
+                "nome": "Reavaliar paciente ap\u00f3s 72h",
+                "descricao": "Ap\u00f3s retorno, observar se houve melhoras dos sintomas ap\u00f3s tratamento",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4673,
+            "passo_de_entrada": {
+                "id": 4673,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar estado do paciente",
+                "descricao": "Reavalia\u00e7\u00e3o ap\u00f3s 72h",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4679,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Obteve Melhora)",
+            "descricao": "",
+            "passo_de_saida_id": 4673,
+            "passo_de_saida": {
+                "id": 4673,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar estado do paciente",
+                "descricao": "Reavalia\u00e7\u00e3o ap\u00f3s 72h",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4675,
+            "passo_de_entrada": {
+                "id": 4675,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Manter Conduta M\u00e9dica",
+                "descricao": "<p>Manter &uacute;ltima conduta m&eacute;dica do tratamento.</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": true,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 3395,
+                "nome": "paciente_obteve_melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3394
+                ],
+                "argumentos": [
+                    "estado_paciente"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4680,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (N\u00e3o Obteve Melhora)",
+            "descricao": "",
+            "passo_de_saida_id": 4673,
+            "passo_de_saida": {
+                "id": 4673,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar estado do paciente",
+                "descricao": "Reavalia\u00e7\u00e3o ap\u00f3s 72h",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4674,
+            "passo_de_entrada": {
+                "id": 4674,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Substituir antibi\u00f3tico",
+                "descricao": "<p>Substituir antibi&oacute;tico com base no antibiograma ou substitui&ccedil;&atilde;o por falha terap&ecirc;utica.&nbsp;<br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3396,
+                "nome": "paciente_nao_obteve_melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3394
+                ],
+                "argumentos": [
+                    "estado_paciente"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3394,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "estado_paciente",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        }
+    ]
+}

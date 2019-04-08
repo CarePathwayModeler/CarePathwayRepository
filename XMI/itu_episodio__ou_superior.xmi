@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="681" url="" name="ITU Epis&#xf3;dio 3 ou Superior" code="itu_ep_03">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3476" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Nitrofurantoina" description="Verificar Alergia a Nitrofurantoina" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Paciente possui alergia a nitrofurantoina?" url="" id="1578">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoina" id="2601" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3477" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Nitrofurantoina" description="Prescri&#xe7;&#xe3;o de Tratamento Com Nitrofurantoina" inputSequences="//@sequence.4" outputSequences="//@sequence.12">
+    <item id="686" url="" name="NITROFURANTOINA" med_code="1962276173" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3478" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Cefalexina" description="Verificar Alergia a Cefalexina" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Paciente possui alergia a cefalexina?" url="" id="1579">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina" id="2602" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3479" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Cefalexina" description="Prescri&#xe7;&#xe3;o de Tratamento Com Cefalexina" inputSequences="//@sequence.6" outputSequences="//@sequence.13">
+    <item id="687" url="" name="CEFALEXINA" med_code="1462079051" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3480" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Amoxicilina" description="Verificar Alergia a Amoxicilina" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Paciente possui alergia a amoxicilina?" url="" id="1580">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina" id="2603" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3481" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Amoxicilina" description="Prescri&#xe7;&#xe3;o de Tratamento Com Amoxicilina" inputSequences="//@sequence.8" outputSequences="//@sequence.14">
+    <item id="688" url="" name="AMOXICILINA" med_code="1462078884" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 6/6 horas"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3482" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Alergia a Fosfomicina" description="Verificar Alergia a Fosfomicina" inputSequences="//@sequence.9" outputSequences="//@sequence.10 //@sequence.11">
+    <questions text="Paciente possui alergia a fosfomicina?" url="" id="1581">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina" id="2604" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3483" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Com Fosfomicina" description="Prescri&#xe7;&#xe3;o de Tratamento Com Fosfomicina. Medicamento n&#xe3;o encontrado na integra&#xe7;&#xe3;o" inputSequences="//@sequence.10" outputSequences="//@sequence.15"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3484" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento Alternativo" description="Prescri&#xe7;&#xe3;o de Tratamento Alternativo" inputSequences="//@sequence.11" outputSequences="//@sequence.16">
+    <item id="689" url="" name="AMPICILINA" med_code="1462086235" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar de 6/6 horas"/>
+    <item id="695" url="" name="AMOXICILINA+CLAV POTASSIO" med_code="1854813356" presentation="COMP" access="1" quantity="1" period="7" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3485" type="Receita" type_verbose="Receita" url="" name="Prescri&#xe7;&#xe3;o de Tratamento de Profilaxia" description="Prescrever tratamento de Profilaxia. Em cada consulta subsequente dever&#xe1; ser gerada uma nova prescri&#xe7;&#xe3;o. Recomendar a paciente que o tratamento seja mantido por 42 dias ap&#xf3;s o parto." isTerminal="true" inputSequences="//@sequence.12 //@sequence.13 //@sequence.14 //@sequence.15 //@sequence.16">
+    <item id="691" url="" name="NITROFURANTOINA" med_code="1962276173" presentation="COMP" access="1" quantity="1" period="42" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 comprimido a noite ao deitar, durante toda a gesta&#xe7;&#xe3;o e at&#xe9; 42 dias ap&#xf3;s o parto;"/>
+    <item id="692" url="" name="AMOXICILINA" med_code="1462078884" presentation="COMP" access="1" quantity="1" period="42" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 comprimido a noite ao deitar, durante toda a gesta&#xe7;&#xe3;o e at&#xe9; 42 dias ap&#xf3;s o parto;"/>
+    <item id="693" url="" name="AMPICILINA" med_code="1854825711" presentation="COMP" access="1" quantity="1" period="42" period_unit="DD" frequency="1" frequency_unit="DD" orientations="1 comprimido a noite ao deitar, durante toda a gesta&#xe7;&#xe3;o e at&#xe9; 42 dias ap&#xf3;s o parto;"/>
+    <item id="696" url="" name="AMOXICILINA+CLAV POTASSIO" med_code="1854813356" presentation="COMP" access="1" quantity="1" period="42" period_unit="DD" frequency="1" frequency_unit="DD" orientations=""/>
+  </element>
+  <sequence id="3490" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description=""/>
+  <sequence id="3491" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description=""/>
+  <sequence id="3492" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description=""/>
+  <sequence inputStep="//@element.0" id="3493" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description=""/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="3494" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description="">
+    <operation name="sem_alergia_nitrofurantoina" id="2605">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoina" id="2601" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="3495" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description="">
+    <operation name="com_alergia_nitrofurantoina" Operator="affirmation" id="2606">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoina" id="2601" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="3496" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="">
+    <operation name="sem_alergia_cefalexina" id="2607">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina" id="2602" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="3497" type="Sequencia" type_verbose="Sequencia" url="" name="s8" description="">
+    <operation name="com_alergia_cefalexina" Operator="affirmation" id="2608">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina" id="2602" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="3498" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="">
+    <operation name="sem_alergia_amoxicilina" id="2609">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina" id="2603" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.4" id="3499" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="">
+    <operation name="com_alergia_amoxicilina" Operator="affirmation" id="2610">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina" id="2603" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="3500" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description="">
+    <operation name="sem_alergia_fosfomicina" id="2611">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina" id="2604" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="3501" type="Sequencia" type_verbose="Sequencia" url="" name="s12" description="">
+    <operation name="com_alergia_fosfomicina" Operator="affirmation" id="2612">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina" id="2604" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.1" id="3502" type="Sequencia" type_verbose="Sequencia" url="" name="s13" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.3" id="3503" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.5" id="3504" type="Sequencia" type_verbose="Sequencia" url="" name="s15" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="3505" type="Sequencia" type_verbose="Sequencia" url="" name="s16" description=""/>
+  <sequence inputStep="//@element.9" outputStep="//@element.8" id="3506" type="Sequencia" type_verbose="Sequencia" url="" name="s17" description=""/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_nitrofurantoina" id="2601" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_cefalexina" id="2602" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_amoxicilina" id="2603" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alergia_fosfomicina" id="2604" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

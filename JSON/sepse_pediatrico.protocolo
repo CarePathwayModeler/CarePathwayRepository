@@ -1,0 +1,2735 @@
+{
+    "id": 3222,
+    "url": "",
+    "codigo": "H060",
+    "nome": "SEPSE Pedi\u00e1trico",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 782,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T09:54:14.092599-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T09:38:13.129451-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T09:54:21.888122-03:00"
+    },
+    "elementos": [
+        {
+            "id": 18608,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Sinais de SIRS",
+            "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\">\n\t\t\t<p>&nbsp;<strong> PACIENTE APRESENTA PELO MENOS DOIS (2) DOS SINAIS DE SIRS, SENDO UM DELES<br />\n\t\t\t&nbsp; FEBRE E/OU ALTERA&Ccedil;&Atilde;O DE LEUC&Oacute;CITOS CONFORME A REFER&Ecirc;NCIA DE FAIXA ET&Aacute;RIA NA TABELA ABAIXO?</strong>&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong>Idade</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>FC (bpm)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>Leuc&oacute;citos (*10&sup3;/mm&sup3;)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>FR (ipm)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>Temperatura</strong></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">0 - 2 meses</td>\n\t\t\t<td style=\"text-align:center\">&gt; 180 ou &lt; 100</td>\n\t\t\t<td style=\"text-align:center\">&gt; 25</td>\n\t\t\t<td style=\"text-align:center\">&gt; 60</td>\n\t\t\t<td colspan=\"1\" rowspan=\"5\">\n\t\t\t<p style=\"text-align:center\">&gt; 37,8 ou &lt; 36</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">2 meses - 1 ano</td>\n\t\t\t<td style=\"text-align:center\">&gt; 160</td>\n\t\t\t<td style=\"text-align:center\">&gt; 18 ou &lt; 5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 50</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">2 - 5 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 140</td>\n\t\t\t<td style=\"text-align:center\">&gt; 15,5 ou &lt; 6</td>\n\t\t\t<td style=\"text-align:center\">&gt; 40</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">6 - 10 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 130</td>\n\t\t\t<td style=\"text-align:center\">&gt; 13,5 ou &lt; 4,5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">11 - 14 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 110</td>\n\t\t\t<td style=\"text-align:center\">&gt; 11 ou &lt; 4,5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 14</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9503,
+                    "url": "",
+                    "texto": "Apresenta 2 ou mais fatores conforme especificado na tabela?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18307,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "dois_ou_mais_fatores_sirs",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 18620,
+                    "url": "",
+                    "nome": "S1 (2 ou mais sintomas de SIRS)",
+                    "descricao": "2 ou mais sintomas de SIRS",
+                    "passo_de_saida_id": 18608,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de SIRS",
+                    "passo_de_entrada_id": 18609,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18641,
+                    "url": "",
+                    "nome": "S2 (menos de 2 sintomas de SIRS)",
+                    "descricao": "menos de 2 sintomas de SIRS",
+                    "passo_de_saida_id": 18608,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de SIRS",
+                    "passo_de_entrada_id": 18611,
+                    "passo_de_entrada": "Encaminhamento: Febre Sem Sinais de Localiza\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18609,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Identificar foco da SEPSE",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:52:10.304805-03:00"
+            },
+            "perguntas": [
+                {
+                    "id": 9504,
+                    "url": "",
+                    "texto": "Pneumonia",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18308,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_pneumonia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9505,
+                    "url": "",
+                    "texto": "ITU - Pielonefrite",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18309,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_pielonefrite",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 9506,
+                    "url": "",
+                    "texto": "Meningite",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18310,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_meningite",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9507,
+                    "url": "",
+                    "texto": "Sem foco/outro foco",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18311,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_outro_foco",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9508,
+                    "url": "",
+                    "texto": "Abdome agudo",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18312,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_abdome_agudo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9509,
+                    "url": "",
+                    "texto": "Partes moles/pele",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18313,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_partes_moles",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9510,
+                    "url": "",
+                    "texto": "\u00d3ssea/articular",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18314,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_ossea",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 9511,
+                    "url": "",
+                    "texto": "Neutropenia Febril",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18315,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_neutropenia_febril",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 9512,
+                    "url": "",
+                    "texto": "Infec\u00e7\u00e3o Neonatal",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18316,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "foco_infeccao_neonatal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18620,
+                    "url": "",
+                    "nome": "S1 (2 ou mais sintomas de SIRS)",
+                    "descricao": "2 ou mais sintomas de SIRS",
+                    "passo_de_saida_id": 18608,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de SIRS",
+                    "passo_de_entrada_id": 18609,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18642,
+                    "url": "",
+                    "nome": "S3 (Caso 1)",
+                    "descricao": "Caso 1 - Ceftriaxona",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18610,
+                    "passo_de_entrada": "Tratamento: a) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T09:54:14.092599-03:00"
+                    }
+                },
+                {
+                    "id": 18643,
+                    "url": "",
+                    "nome": "S4 (Caso 2)",
+                    "descricao": "Caso 2",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18612,
+                    "passo_de_entrada": "Tratamento: b) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18644,
+                    "url": "",
+                    "nome": "S5 (Caso 3)",
+                    "descricao": "Caso 3",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18613,
+                    "passo_de_entrada": "Tratamento: c) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18645,
+                    "url": "",
+                    "nome": "S6 (Caso 4)",
+                    "descricao": "Caso 4",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18614,
+                    "passo_de_entrada": "Tratamento: d) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T09:52:33.418992-03:00"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 18610,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "a) Medidas urgentes de 1\u00aa hora",
+            "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <u><strong>Ceftriaxona</strong></u> (100mg/kg/dia)</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:47:33.241320-03:00"
+            },
+            "exames": [
+                {
+                    "url": "HEMOCULTURA AUTOMATIZADA",
+                    "exame": "99100664",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CLORO  (SANGUE)",
+                    "exame": "28010469",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "MAGNESIO  (SANGUE)",
+                    "exame": "28011120",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CALCIO (SANGUE)",
+                    "exame": "28010329",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TGO/AST (ASPARTATO AMINOTRANSFERASE)",
+                    "exame": "28011368",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CULTURAS EM GERAL",
+                    "exame": "28100581",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TGP/ALT (ALANINA AMINOTRANSFERASE)",
+                    "exame": "28011376",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com sepse",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 661,
+                    "url": "",
+                    "medicamento": 43400,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3942,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1FA + 10ml AD (100mg/ml)",
+                        "codigo_principio_ativo": 618,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 10,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 1,
+                        "codigo_unidade_dosagem": "GR"
+                    },
+                    "apresentacao": {
+                        "id": 541,
+                        "codigo_produto": 846,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "FRAP      1.00GR/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 100.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 0,
+                        "codigo_unidade_concentracao_diluicao": "GR",
+                        "codigo_principio_ativo": 618,
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 6,
+                        "codigo_tipo_acesso": 6
+                    }
+                },
+                {
+                    "id": 662,
+                    "url": "",
+                    "medicamento": 43800,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 542,
+                        "codigo_produto": 4352,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "TUBO      9.00GR/1000ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 20.0,
+                        "codigo_unidade_folha": "MF",
+                        "descricao_unidade_usual": "ml/kg",
+                        "quantidade_concentracao_folha_calculo": 0,
+                        "codigo_unidade_concentracao_diluicao": "GR",
+                        "codigo_principio_ativo": 2188,
+                        "codigo_ocorrencia_diluicao": 6,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [
+                {
+                    "url": "SINAIS VITAIS",
+                    "procedimento": "75130020",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CONTROLE DE DIURESE",
+                    "procedimento": "75130022",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2 C/MASCARA DE VENTURI/FACIAL",
+                    "procedimento": "75010014",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "PUNCAO C/ JELCO",
+                    "procedimento": "76030002",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "MONITOR CARDIACO",
+                    "procedimento": "75130036",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18642,
+                    "url": "",
+                    "nome": "S3 (Caso 1)",
+                    "descricao": "Caso 1 - Ceftriaxona",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18610,
+                    "passo_de_entrada": "Tratamento: a) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T09:54:14.092599-03:00"
+                    }
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18646,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18610,
+                    "passo_de_saida": "Tratamento: a) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18611,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Febre Sem Sinais de Localiza\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H036"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18641,
+                    "url": "",
+                    "nome": "S2 (menos de 2 sintomas de SIRS)",
+                    "descricao": "menos de 2 sintomas de SIRS",
+                    "passo_de_saida_id": 18608,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de SIRS",
+                    "passo_de_entrada_id": 18611,
+                    "passo_de_entrada": "Encaminhamento: Febre Sem Sinais de Localiza\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18612,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "b) Medidas urgentes de 1\u00aa hora",
+            "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <strong><u>Oxacilina&nbsp;</u></strong>(200mg/kg/dia)</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:41:26.673164-03:00"
+            },
+            "exames": [
+                {
+                    "url": "HEMOCULTURA AUTOMATIZADA",
+                    "exame": "99100664",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CLORO  (SANGUE)",
+                    "exame": "28010469",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "MAGNESIO  (SANGUE)",
+                    "exame": "28011120",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CALCIO (SANGUE)",
+                    "exame": "28010329",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TGO/AST (ASPARTATO AMINOTRANSFERASE)",
+                    "exame": "28011368",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TRANSAMINASE PIRUVICA-TGP ALT P/UD SANG",
+                    "exame": "27040380",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CULTURAS EM GERAL",
+                    "exame": "28100581",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 663,
+                    "url": "",
+                    "medicamento": 75264,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3943,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "SF 0,9%",
+                        "codigo_principio_ativo": 1818,
+                        "codigo_diluente": 4352,
+                        "nome_diluente": "SORO FISIOLOGICO 0,9%",
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 3,
+                        "codigo_apresentacao_diluente": "TUBO",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 100,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 500,
+                        "codigo_unidade_dosagem": "MG"
+                    },
+                    "apresentacao": {
+                        "id": 543,
+                        "codigo_produto": 3558,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "FRAP    500.00MG/1ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 50.0,
+                        "codigo_unidade_folha": "M8",
+                        "descricao_unidade_usual": "mg/kg/dose",
+                        "quantidade_concentracao_folha_calculo": 500,
+                        "codigo_unidade_concentracao_diluicao": "MG",
+                        "codigo_principio_ativo": 1818,
+                        "codigo_ocorrencia_diluicao": 2,
+                        "codigo_ordem_administracao": 5,
+                        "codigo_tipo_acesso": 6
+                    }
+                },
+                {
+                    "id": 664,
+                    "url": "",
+                    "medicamento": 43800,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 544,
+                        "codigo_produto": 4352,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "TUBO      9.00GR/1000ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 20.0,
+                        "codigo_unidade_folha": "MF",
+                        "descricao_unidade_usual": "ml/kg",
+                        "quantidade_concentracao_folha_calculo": 0,
+                        "codigo_unidade_concentracao_diluicao": "GR",
+                        "codigo_principio_ativo": 2188,
+                        "codigo_ocorrencia_diluicao": 6,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [
+                {
+                    "url": "SINAIS VITAIS",
+                    "procedimento": "75130020",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CONTROLE DE DIURESE",
+                    "procedimento": "75130022",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2 C/MASCARA DE VENTURI/FACIAL",
+                    "procedimento": "75010014",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "PUNCAO C/ JELCO",
+                    "procedimento": "76030002",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "MONITOR CARDIACO",
+                    "procedimento": "75130036",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18643,
+                    "url": "",
+                    "nome": "S4 (Caso 2)",
+                    "descricao": "Caso 2",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18612,
+                    "passo_de_entrada": "Tratamento: b) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18647,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18612,
+                    "passo_de_saida": "Tratamento: b) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18613,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "c) Medidas urgentes de 1\u00aa hora",
+            "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <u><strong>Cefepime</strong></u> (50mg/kg/dia)</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:41:45.225593-03:00"
+            },
+            "exames": [
+                {
+                    "url": "HEMOCULTURA AUTOMATIZADA",
+                    "exame": "99100664",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CLORO  (SANGUE)",
+                    "exame": "28010469",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "MAGNESIO  (SANGUE)",
+                    "exame": "28011120",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CALCIO (SANGUE)",
+                    "exame": "28010329",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TGO/AST (ASPARTATO AMINOTRANSFERASE)",
+                    "exame": "28011368",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TRANSAMINASE PIRUVICA-TGP ALT P/UD SANG",
+                    "exame": "27040380",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CULTURAS EM GERAL",
+                    "exame": "28100581",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 665,
+                    "url": "",
+                    "medicamento": 43800,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 545,
+                        "codigo_produto": 4352,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "TUBO      9.00GR/1000ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 20.0,
+                        "codigo_unidade_folha": "MF",
+                        "descricao_unidade_usual": "ml/kg",
+                        "quantidade_concentracao_folha_calculo": 0,
+                        "codigo_unidade_concentracao_diluicao": "GR",
+                        "codigo_principio_ativo": 2188,
+                        "codigo_ocorrencia_diluicao": 6,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [
+                {
+                    "url": "SINAIS VITAIS",
+                    "procedimento": "75130020",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CONTROLE DE DIURESE",
+                    "procedimento": "75130022",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2 C/MASCARA DE VENTURI/FACIAL",
+                    "procedimento": "75010014",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "PUNCAO C/ JELCO",
+                    "procedimento": "76030002",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "MONITOR CARDIACO",
+                    "procedimento": "75130036",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18644,
+                    "url": "",
+                    "nome": "S5 (Caso 3)",
+                    "descricao": "Caso 3",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18613,
+                    "passo_de_entrada": "Tratamento: c) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18648,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18613,
+                    "passo_de_saida": "Tratamento: c) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18614,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "d) Medidas urgentes de 1\u00aa hora",
+            "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 10ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia;</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n</ul>\n\n<p>PRESCREVER ANTIBI&Oacute;TICO CONFORME ESQUEMA DEFINIDO NA TABELA A SEGUIR:</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">AMPICILINA</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">GENTAMICINA</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&lt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&gt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&lt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&gt; 2 kg</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&lt; 7 dias</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &gt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&gt; 7 dias</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &gt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&gt; 7 dias</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 300mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp; de 12/12h</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&nbsp; 300mg/kg/dia<br />\n\t\t\t&nbsp;&nbsp;de 8/8h</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 300mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp;&nbsp;de 6/6h</td>\n\t\t\t<td colspan=\"3\" rowspan=\"1\" style=\"text-align:center\">&nbsp; 3mg/kg/dia<br />\n\t\t\t&nbsp;&nbsp;de 24/24h</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 4mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp;&nbsp;de 24/24h</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:49:20.900353-03:00"
+            },
+            "exames": [
+                {
+                    "url": "HEMOCULTURA AUTOMATIZADA",
+                    "exame": "99100664",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE PROTROMBINA",
+                    "exame": "28040732",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO",
+                    "exame": "28040791",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CLORO  (SANGUE)",
+                    "exame": "28010469",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "MAGNESIO  (SANGUE)",
+                    "exame": "28011120",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CALCIO (SANGUE)",
+                    "exame": "28010329",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TGO/AST (ASPARTATO AMINOTRANSFERASE)",
+                    "exame": "28011368",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TRANSAMINASE PIRUVICA-TGP ALT P/UD SANG",
+                    "exame": "27040380",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "URINOCULTURA",
+                    "exame": "28100549",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CULTURAS EM GERAL",
+                    "exame": "28100581",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "SEPSE pedi\u00e1trico",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [
+                {
+                    "id": 666,
+                    "url": "",
+                    "medicamento": 43800,
+                    "unidade": null,
+                    "via_acesso": 6,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null,
+                    "apresentacao": {
+                        "id": 546,
+                        "codigo_produto": 4352,
+                        "codigo_modelo": 22,
+                        "codigo_classe_acomodacao": 36,
+                        "tipo_administracao": "L",
+                        "via_administracao": "EV   Lento",
+                        "descricao_administracao": "TUBO      9.00GR/1000ml (un)",
+                        "quantidade_dosagem_padrao": null,
+                        "quantidade_dosagem_folha": 20.0,
+                        "codigo_unidade_folha": "MF",
+                        "descricao_unidade_usual": "ml/kg",
+                        "quantidade_concentracao_folha_calculo": 0,
+                        "codigo_unidade_concentracao_diluicao": "GR",
+                        "codigo_principio_ativo": 2188,
+                        "codigo_ocorrencia_diluicao": 6,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_tipo_acesso": 6
+                    }
+                }
+            ],
+            "procedimentos": [
+                {
+                    "url": "SINAIS VITAIS",
+                    "procedimento": "75130020",
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CONTROLE DE DIURESE",
+                    "procedimento": "75130022",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "O2 C/MASCARA DE VENTURI/FACIAL",
+                    "procedimento": "75010014",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "PUNCAO C/ JELCO",
+                    "procedimento": "76030002",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "MONITOR CARDIACO",
+                    "procedimento": "75130036",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18645,
+                    "url": "",
+                    "nome": "S6 (Caso 4)",
+                    "descricao": "Caso 4",
+                    "passo_de_saida_id": 18609,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Identificar foco da SEPSE",
+                    "passo_de_entrada_id": 18614,
+                    "passo_de_entrada": "Tratamento: d) Medidas urgentes de 1\u00aa hora",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T09:52:33.418992-03:00"
+                    }
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18649,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18614,
+                    "passo_de_saida": "Tratamento: d) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18615,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Resposta \u00e0 terapia?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9513,
+                    "url": "",
+                    "texto": "Resposta \u00e0 terapia vol\u00eamica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18317,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "respondeu_a_terapia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18646,
+                    "url": "",
+                    "nome": "S7",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18610,
+                    "passo_de_saida": "Tratamento: a) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18647,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18612,
+                    "passo_de_saida": "Tratamento: b) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18648,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18613,
+                    "passo_de_saida": "Tratamento: c) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18649,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18614,
+                    "passo_de_saida": "Tratamento: d) Medidas urgentes de 1\u00aa hora",
+                    "passo_de_entrada_id": 18615,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18650,
+                    "url": "",
+                    "nome": "S11 (com resposta \u00e1 terapia vol\u00eamica )",
+                    "descricao": "sem resposta",
+                    "passo_de_saida_id": 18615,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "passo_de_entrada_id": 18616,
+                    "passo_de_entrada": "Tratamento: Interna\u00e7\u00e3o + Observa\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18651,
+                    "url": "",
+                    "nome": "S12 (sem resposta \u00e0 terapia)",
+                    "descricao": "com resposta \u00e0 terapia",
+                    "passo_de_saida_id": 18615,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "passo_de_entrada_id": 18617,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18616,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Interna\u00e7\u00e3o + Observa\u00e7\u00e3o",
+            "descricao": "Solicitar interna\u00e7\u00e3o e manter sob observa\u00e7\u00e3o rigorosa.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "10990003",
+                    "justificativa": "Paciente septico sem resposta \u00e0 medica\u00e7\u00e3o.",
+                    "indicacao_clinica": "Observa\u00e7\u00e3o rigorosa.",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18650,
+                    "url": "",
+                    "nome": "S11 (com resposta \u00e1 terapia vol\u00eamica )",
+                    "descricao": "sem resposta",
+                    "passo_de_saida_id": 18615,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "passo_de_entrada_id": 18616,
+                    "passo_de_entrada": "Tratamento: Interna\u00e7\u00e3o + Observa\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18617,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+            "descricao": "Paciente apresenta algum dos crit\u00e9rios de disfun\u00e7\u00e3o org\u00e2nica abaixo?",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9514,
+                    "url": "",
+                    "texto": "Altera\u00e7\u00e3o da perfus\u00e3o (em flush < 2 seg ou lentificada - TEC > 3 seg)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18318,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "disf_org_alteracao_perfusao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9515,
+                    "url": "",
+                    "texto": "Olig\u00faria (<= 0,5mL/kg/h)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18319,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "disf_org_oliguria",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 9516,
+                    "url": "",
+                    "texto": "Hipossatura\u00e7\u00e3o (SpO2<92%) em ar ambiente",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18320,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "disf_org_hipossaturacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9517,
+                    "url": "",
+                    "texto": "Hipotens\u00e3o",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18321,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "disf_org_hipotensao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9518,
+                    "url": "",
+                    "texto": "Mudan\u00e7a aguda de estado neurol\u00f3gico",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18322,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "disf_org_mudanca_estado_neurologico",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18651,
+                    "url": "",
+                    "nome": "S12 (sem resposta \u00e0 terapia)",
+                    "descricao": "com resposta \u00e0 terapia",
+                    "passo_de_saida_id": 18615,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Resposta \u00e0 terapia?",
+                    "passo_de_entrada_id": 18617,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18652,
+                    "url": "",
+                    "nome": "S13 (apresenta disfun\u00e7\u00e3o org\u00e2nica)",
+                    "descricao": "apresenta disfun\u00e7\u00e3o org\u00e2nica",
+                    "passo_de_saida_id": 18617,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "passo_de_entrada_id": 18619,
+                    "passo_de_entrada": "Tratamento: Choque S\u00e9ptico Refrat\u00e1rio a Volume",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18653,
+                    "url": "",
+                    "nome": "S14 (n\u00e3o apresenta disfun\u00e7\u00e3o org\u00e2nica)",
+                    "descricao": "n\u00e3o apresenta disfun\u00e7\u00e3o org\u00e2nica",
+                    "passo_de_saida_id": 18617,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "passo_de_entrada_id": 18618,
+                    "passo_de_entrada": "Tratamento: HV Manuten\u00e7\u00e3o + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18618,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "HV Manuten\u00e7\u00e3o + Interna\u00e7\u00e3o",
+            "descricao": "<ul>\n\t<li><strong>HV Manuten&ccedil;&atilde;o</strong></li>\n\t<li><strong>Solicitar Interna&ccedil;&atilde;o</strong></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "10990003",
+                    "justificativa": "Paciente septico sem resposta a terapia vol\u00eamica (por\u00e9m sem crit\u00e9rios de disfun\u00e7\u00e3o org\u00e2nica)",
+                    "indicacao_clinica": "n/a",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18653,
+                    "url": "",
+                    "nome": "S14 (n\u00e3o apresenta disfun\u00e7\u00e3o org\u00e2nica)",
+                    "descricao": "n\u00e3o apresenta disfun\u00e7\u00e3o org\u00e2nica",
+                    "passo_de_saida_id": 18617,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "passo_de_entrada_id": 18618,
+                    "passo_de_entrada": "Tratamento: HV Manuten\u00e7\u00e3o + Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18619,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Choque S\u00e9ptico Refrat\u00e1rio a Volume",
+            "descricao": "<p><span style=\"font-size:16px\"><u><strong>Solicitar UTI</strong></u></span></p>\n\n<p><span style=\"font-size:16px\">Iniciar Inotr&oacute;pico:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Acesso Venoso Perif&eacute;rico ou Intra-&Oacute;sseo</span></li>\n\t<li><span style=\"font-size:16px\">Adrenalina - 0,05 - 0,3 mcg/Kg/min&nbsp;</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "99996666",
+                    "justificativa": "Paciente com choque s\u00e9ptico refrat\u00e1rio a volume",
+                    "indicacao_clinica": "Interna\u00e7\u00e3o na UTI.",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18652,
+                    "url": "",
+                    "nome": "S13 (apresenta disfun\u00e7\u00e3o org\u00e2nica)",
+                    "descricao": "apresenta disfun\u00e7\u00e3o org\u00e2nica",
+                    "passo_de_saida_id": 18617,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "passo_de_entrada_id": 18619,
+                    "passo_de_entrada": "Tratamento: Choque S\u00e9ptico Refrat\u00e1rio a Volume",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18620,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (2 ou mais sintomas de SIRS)",
+            "descricao": "2 ou mais sintomas de SIRS",
+            "passo_de_saida_id": 18608,
+            "passo_de_saida": {
+                "id": 18608,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de SIRS",
+                "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\">\n\t\t\t<p>&nbsp;<strong> PACIENTE APRESENTA PELO MENOS DOIS (2) DOS SINAIS DE SIRS, SENDO UM DELES<br />\n\t\t\t&nbsp; FEBRE E/OU ALTERA&Ccedil;&Atilde;O DE LEUC&Oacute;CITOS CONFORME A REFER&Ecirc;NCIA DE FAIXA ET&Aacute;RIA NA TABELA ABAIXO?</strong>&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong>Idade</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>FC (bpm)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>Leuc&oacute;citos (*10&sup3;/mm&sup3;)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>FR (ipm)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>Temperatura</strong></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">0 - 2 meses</td>\n\t\t\t<td style=\"text-align:center\">&gt; 180 ou &lt; 100</td>\n\t\t\t<td style=\"text-align:center\">&gt; 25</td>\n\t\t\t<td style=\"text-align:center\">&gt; 60</td>\n\t\t\t<td colspan=\"1\" rowspan=\"5\">\n\t\t\t<p style=\"text-align:center\">&gt; 37,8 ou &lt; 36</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">2 meses - 1 ano</td>\n\t\t\t<td style=\"text-align:center\">&gt; 160</td>\n\t\t\t<td style=\"text-align:center\">&gt; 18 ou &lt; 5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 50</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">2 - 5 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 140</td>\n\t\t\t<td style=\"text-align:center\">&gt; 15,5 ou &lt; 6</td>\n\t\t\t<td style=\"text-align:center\">&gt; 40</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">6 - 10 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 130</td>\n\t\t\t<td style=\"text-align:center\">&gt; 13,5 ou &lt; 4,5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">11 - 14 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 110</td>\n\t\t\t<td style=\"text-align:center\">&gt; 11 ou &lt; 4,5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 14</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18609,
+            "passo_de_entrada": {
+                "id": 18609,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar foco da SEPSE",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:52:10.304805-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18325,
+                "nome": "2 ou mais sintomas de SIRS",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18307
+                ],
+                "argumentos": [
+                    "dois_ou_mais_fatores_sirs"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18641,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (menos de 2 sintomas de SIRS)",
+            "descricao": "menos de 2 sintomas de SIRS",
+            "passo_de_saida_id": 18608,
+            "passo_de_saida": {
+                "id": 18608,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de SIRS",
+                "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\">\n\t\t\t<p>&nbsp;<strong> PACIENTE APRESENTA PELO MENOS DOIS (2) DOS SINAIS DE SIRS, SENDO UM DELES<br />\n\t\t\t&nbsp; FEBRE E/OU ALTERA&Ccedil;&Atilde;O DE LEUC&Oacute;CITOS CONFORME A REFER&Ecirc;NCIA DE FAIXA ET&Aacute;RIA NA TABELA ABAIXO?</strong>&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\"><strong>Idade</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>FC (bpm)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>Leuc&oacute;citos (*10&sup3;/mm&sup3;)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>FR (ipm)</strong></td>\n\t\t\t<td style=\"text-align:center\"><strong>Temperatura</strong></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">0 - 2 meses</td>\n\t\t\t<td style=\"text-align:center\">&gt; 180 ou &lt; 100</td>\n\t\t\t<td style=\"text-align:center\">&gt; 25</td>\n\t\t\t<td style=\"text-align:center\">&gt; 60</td>\n\t\t\t<td colspan=\"1\" rowspan=\"5\">\n\t\t\t<p style=\"text-align:center\">&gt; 37,8 ou &lt; 36</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">2 meses - 1 ano</td>\n\t\t\t<td style=\"text-align:center\">&gt; 160</td>\n\t\t\t<td style=\"text-align:center\">&gt; 18 ou &lt; 5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 50</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">2 - 5 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 140</td>\n\t\t\t<td style=\"text-align:center\">&gt; 15,5 ou &lt; 6</td>\n\t\t\t<td style=\"text-align:center\">&gt; 40</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">6 - 10 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 130</td>\n\t\t\t<td style=\"text-align:center\">&gt; 13,5 ou &lt; 4,5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">11 - 14 anos</td>\n\t\t\t<td style=\"text-align:center\">&gt; 110</td>\n\t\t\t<td style=\"text-align:center\">&gt; 11 ou &lt; 4,5</td>\n\t\t\t<td style=\"text-align:center\">&gt; 14</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18611,
+            "passo_de_entrada": {
+                "id": 18611,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Febre Sem Sinais de Localiza\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    403
+                ]
+            },
+            "operacao": {
+                "id": 18326,
+                "nome": "menos de 2 sintomas de SIRS",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18307
+                ],
+                "argumentos": [
+                    "dois_ou_mais_fatores_sirs"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18642,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (Caso 1)",
+            "descricao": "Caso 1 - Ceftriaxona",
+            "passo_de_saida_id": 18609,
+            "passo_de_saida": {
+                "id": 18609,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar foco da SEPSE",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:52:10.304805-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18610,
+            "passo_de_entrada": {
+                "id": 18610,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "a) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <u><strong>Ceftriaxona</strong></u> (100mg/kg/dia)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:47:33.241320-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18335,
+                "nome": "PNM ou Pielonef. Ou Meningite ou Absome Agudo ou sem foco",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    18308,
+                    18309,
+                    18310,
+                    18311,
+                    18312
+                ],
+                "argumentos": [
+                    "foco_pneumonia",
+                    "foco_pielonefrite",
+                    "foco_meningite",
+                    "foco_outro_foco",
+                    "foco_abdome_agudo"
+                ]
+            },
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:54:14.092599-03:00"
+            }
+        },
+        {
+            "id": 18643,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Caso 2)",
+            "descricao": "Caso 2",
+            "passo_de_saida_id": 18609,
+            "passo_de_saida": {
+                "id": 18609,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar foco da SEPSE",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:52:10.304805-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18612,
+            "passo_de_entrada": {
+                "id": 18612,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "b) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <strong><u>Oxacilina&nbsp;</u></strong>(200mg/kg/dia)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:41:26.673164-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18328,
+                "nome": "Partes Moles/Pele ou \u00d3ssea/Articular",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    18313,
+                    18313
+                ],
+                "argumentos": [
+                    "foco_partes_moles",
+                    "foco_partes_moles"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18644,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Caso 3)",
+            "descricao": "Caso 3",
+            "passo_de_saida_id": 18609,
+            "passo_de_saida": {
+                "id": 18609,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar foco da SEPSE",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:52:10.304805-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18613,
+            "passo_de_entrada": {
+                "id": 18613,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "c) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <u><strong>Cefepime</strong></u> (50mg/kg/dia)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:41:45.225593-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18329,
+                "nome": "Neutropenia Febril",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18315
+                ],
+                "argumentos": [
+                    "foco_neutropenia_febril"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18645,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (Caso 4)",
+            "descricao": "Caso 4",
+            "passo_de_saida_id": 18609,
+            "passo_de_saida": {
+                "id": 18609,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Identificar foco da SEPSE",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:52:10.304805-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18614,
+            "passo_de_entrada": {
+                "id": 18614,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "d) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 10ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia;</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n</ul>\n\n<p>PRESCREVER ANTIBI&Oacute;TICO CONFORME ESQUEMA DEFINIDO NA TABELA A SEGUIR:</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">AMPICILINA</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">GENTAMICINA</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&lt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&gt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&lt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&gt; 2 kg</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&lt; 7 dias</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &gt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&gt; 7 dias</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &gt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&gt; 7 dias</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 300mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp; de 12/12h</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&nbsp; 300mg/kg/dia<br />\n\t\t\t&nbsp;&nbsp;de 8/8h</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 300mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp;&nbsp;de 6/6h</td>\n\t\t\t<td colspan=\"3\" rowspan=\"1\" style=\"text-align:center\">&nbsp; 3mg/kg/dia<br />\n\t\t\t&nbsp;&nbsp;de 24/24h</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 4mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp;&nbsp;de 24/24h</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:49:20.900353-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18179,
+                "nome": "Infec\u00e7\u00e3o Neonatal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18316
+                ],
+                "argumentos": [
+                    "foco_infeccao_neonatal"
+                ]
+            },
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T09:52:33.418992-03:00"
+            }
+        },
+        {
+            "id": 18646,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18610,
+            "passo_de_saida": {
+                "id": 18610,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "a) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <u><strong>Ceftriaxona</strong></u> (100mg/kg/dia)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:47:33.241320-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18615,
+            "passo_de_entrada": {
+                "id": 18615,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta \u00e0 terapia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18647,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18612,
+            "passo_de_saida": {
+                "id": 18612,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "b) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <strong><u>Oxacilina&nbsp;</u></strong>(200mg/kg/dia)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:41:26.673164-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18615,
+            "passo_de_entrada": {
+                "id": 18615,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta \u00e0 terapia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18648,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18613,
+            "passo_de_saida": {
+                "id": 18613,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "c) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 20ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia; OBS: Em casos de pacientes cardiopatas, realizar expans&atilde;o com 10 ml/kg.</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n\t<li>Iniciar <u><strong>Cefepime</strong></u> (50mg/kg/dia)</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:41:45.225593-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18615,
+            "passo_de_entrada": {
+                "id": 18615,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta \u00e0 terapia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18649,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18614,
+            "passo_de_saida": {
+                "id": 18614,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "d) Medidas urgentes de 1\u00aa hora",
+                "descricao": "<ul>\n\t<li><strong>OTIMIZAR O ATENDIMENTO SUGERIDO ABAIXO NOS PRIMEIROS 15 MIN AP&Oacute;S A ABERTURA DO PROTOCOLO.</strong></li>\n\t<li>Iniciar O2, se necess&aacute;rio;</li>\n\t<li>Estabelecer 2 acessos Endovenosos;</li>\n\t<li>Monitoriza&ccedil;&atilde;o e Controle de Sinais Vitais de 1/1h;</li>\n\t<li>Realizar DX;</li>\n\t<li>Controle de Diurese;</li>\n\t<li>Iniciar expans&atilde;o imediata 10ml/kg de cristal&oacute;ide 3x ou mais at&eacute; melhora da perfus&atilde;o ou aparecimento de crepita&ccedil;&atilde;o pulmonar ou hepatomegalia;</li>\n\t<li>Coletar Exames (antes da antibi&oacute;ticoterapia): HC, TAP, TTPA, Creatinina, Ur&eacute;ia, S&oacute;dio, Pot&aacute;ssio, Cloro, Magn&eacute;sio, C&aacute;lcio, TGO, TGP,&nbsp;Culturas&nbsp;conforme o foco suspeito;</li>\n</ul>\n\n<p>PRESCREVER ANTIBI&Oacute;TICO CONFORME ESQUEMA DEFINIDO NA TABELA A SEGUIR:</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">AMPICILINA</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">GENTAMICINA</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&lt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&gt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&lt; 2 kg</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&gt; 2 kg</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&lt; 7 dias</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &gt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&gt; 7 dias</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &gt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &lt; 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&gt; 7 dias</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 300mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp; de 12/12h</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">&nbsp; 300mg/kg/dia<br />\n\t\t\t&nbsp;&nbsp;de 8/8h</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 300mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp;&nbsp;de 6/6h</td>\n\t\t\t<td colspan=\"3\" rowspan=\"1\" style=\"text-align:center\">&nbsp; 3mg/kg/dia<br />\n\t\t\t&nbsp;&nbsp;de 24/24h</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 4mg/kg/dia&nbsp;&nbsp;<br />\n\t\t\t&nbsp;&nbsp;de 24/24h</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T09:49:20.900353-03:00"
+                }
+            },
+            "passo_de_entrada_id": 18615,
+            "passo_de_entrada": {
+                "id": 18615,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta \u00e0 terapia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18650,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (com resposta \u00e1 terapia vol\u00eamica )",
+            "descricao": "sem resposta",
+            "passo_de_saida_id": 18615,
+            "passo_de_saida": {
+                "id": 18615,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta \u00e0 terapia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18616,
+            "passo_de_entrada": {
+                "id": 18616,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Interna\u00e7\u00e3o + Observa\u00e7\u00e3o",
+                "descricao": "Solicitar interna\u00e7\u00e3o e manter sob observa\u00e7\u00e3o rigorosa.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18331,
+                "nome": "com resposta \u00e1 terapia vol\u00eamica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18317
+                ],
+                "argumentos": [
+                    "respondeu_a_terapia"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18651,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (sem resposta \u00e0 terapia)",
+            "descricao": "com resposta \u00e0 terapia",
+            "passo_de_saida_id": 18615,
+            "passo_de_saida": {
+                "id": 18615,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Resposta \u00e0 terapia?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18617,
+            "passo_de_entrada": {
+                "id": 18617,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                "descricao": "Paciente apresenta algum dos crit\u00e9rios de disfun\u00e7\u00e3o org\u00e2nica abaixo?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18332,
+                "nome": "sem resposta \u00e1 terapia vol\u00eamica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18317
+                ],
+                "argumentos": [
+                    "respondeu_a_terapia"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18652,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (apresenta disfun\u00e7\u00e3o org\u00e2nica)",
+            "descricao": "apresenta disfun\u00e7\u00e3o org\u00e2nica",
+            "passo_de_saida_id": 18617,
+            "passo_de_saida": {
+                "id": 18617,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                "descricao": "Paciente apresenta algum dos crit\u00e9rios de disfun\u00e7\u00e3o org\u00e2nica abaixo?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18619,
+            "passo_de_entrada": {
+                "id": 18619,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Choque S\u00e9ptico Refrat\u00e1rio a Volume",
+                "descricao": "<p><span style=\"font-size:16px\"><u><strong>Solicitar UTI</strong></u></span></p>\n\n<p><span style=\"font-size:16px\">Iniciar Inotr&oacute;pico:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Acesso Venoso Perif&eacute;rico ou Intra-&Oacute;sseo</span></li>\n\t<li><span style=\"font-size:16px\">Adrenalina - 0,05 - 0,3 mcg/Kg/min&nbsp;</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18333,
+                "nome": "apresenta disfun\u00e7\u00e3o org\u00e2nica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    18324,
+                    18323
+                ],
+                "argumentos": [
+                    "Crit\u00e9rios de Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18653,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (n\u00e3o apresenta disfun\u00e7\u00e3o org\u00e2nica)",
+            "descricao": "n\u00e3o apresenta disfun\u00e7\u00e3o org\u00e2nica",
+            "passo_de_saida_id": 18617,
+            "passo_de_saida": {
+                "id": 18617,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Disfun\u00e7\u00e3o Org\u00e2nica",
+                "descricao": "Paciente apresenta algum dos crit\u00e9rios de disfun\u00e7\u00e3o org\u00e2nica abaixo?",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18618,
+            "passo_de_entrada": {
+                "id": 18618,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "HV Manuten\u00e7\u00e3o + Interna\u00e7\u00e3o",
+                "descricao": "<ul>\n\t<li><strong>HV Manuten&ccedil;&atilde;o</strong></li>\n\t<li><strong>Solicitar Interna&ccedil;&atilde;o</strong></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18334,
+                "nome": "n\u00e3o apresenta disfun\u00e7\u00e3o org\u00e2nica",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    18324,
+                    18323
+                ],
+                "argumentos": [
+                    "Crit\u00e9rios de Disfun\u00e7\u00e3o Org\u00e2nica",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 18307,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "dois_ou_mais_fatores_sirs",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18308,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_pneumonia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18309,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_pielonefrite",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18310,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_meningite",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18311,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_outro_foco",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18312,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_abdome_agudo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18313,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_partes_moles",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18314,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_ossea",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18315,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_neutropenia_febril",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18316,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "foco_infeccao_neonatal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18317,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "respondeu_a_terapia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18318,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "disf_org_alteracao_perfusao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18319,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "disf_org_oliguria",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18320,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "disf_org_hipossaturacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18321,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "disf_org_hipotensao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18322,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "disf_org_mudanca_estado_neurologico",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18323,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18324,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Crit\u00e9rios de Disfun\u00e7\u00e3o Org\u00e2nica",
+            "descricao": "Crit\u00e9rios de Disfun\u00e7\u00e3o Org\u00e2nica",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18318,
+                18319,
+                18320,
+                18321,
+                18322
+            ],
+            "argumentos": [
+                "disf_org_alteracao_perfusao",
+                "disf_org_oliguria",
+                "disf_org_hipossaturacao",
+                "disf_org_hipotensao",
+                "disf_org_mudanca_estado_neurologico"
+            ]
+        }
+    ]
+}

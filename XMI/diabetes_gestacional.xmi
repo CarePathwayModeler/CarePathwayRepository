@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="624" url="" name="Diabetes Gestacional" code="DIA">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3137" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar atendimento" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.45">
+    <questions text="&#xc9; retorno de atendimento?" url="" id="1515">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="verifica_retorno_atendimento_pc002" id="2395" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3138" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar resultado de exame Glic&#xea;mico ( > 92 mg/dl)" description="" inputSequences="//@sequence.0" outputSequences="//@sequence.46 //@sequence.47">
+    <questions text="Glicemia em Jejum > 92 mg/dl" url="" id="1516">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_pc002" id="2396" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3139" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar fatores de risco na gestante" description="Positivo para pelo menos UM fator de risco:" inputSequences="//@sequence.46" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="Diabetes gestacional anterior?" url="" id="1517">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diabetes_gestacional_anterior_pc002" id="2397" weight="1" value="false"/>
+    </questions>
+    <questions text="RN com macrosom&#xed;a?" url="" id="1518">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="rn_com_macrosomia_pc002" id="2398" weight="1" value="false"/>
+    </questions>
+    <questions text="Pais com Diabetes?" url="" id="1519">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="pais_diabeticos_pc002" id="2399" weight="1" value="false"/>
+    </questions>
+    <questions text="Idade superior &#xe0; 35 anos?" url="" id="1520">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_superior_35_anos_pc002" id="2400" weight="1" value="false"/>
+    </questions>
+    <questions text="Ov&#xe1;rio polic&#xed;stico?" url="" id="1521">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ovario_policistico_pc002" id="2441" weight="1" value="false"/>
+    </questions>
+    <questions text="IMC maior de 30?" url="" id="1522">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="imc_maior_30_pc002" id="2442" weight="1" value="false"/>
+    </questions>
+    <questions text="Glicosuria na sumario de urina?" url="" id="1523">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="glicosuria_urina_pc002" id="2443" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3242" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar TOTG" description="Teste Oral de Toler&#xe2;ncia a Glicose.&#xD;&#xA;Com base no resultado do teste o quadro da gestante pode ser reavaliado.&#xD;&#xA;&#xD;&#xA;#####################################################################&#xD;&#xA;#   **IG &lt; 24 semanas**                                                                                                  &#xD;&#xA;#                                                                                                                                     &#xD;&#xA;#                                Sem altera&#xe7;&#xf5;es        Diabetes Gestacional        Diabetes Tipo II  &#xD;&#xA;# Glicemia em jejum     X &lt;  92 mg/dl                     -                          X >= 92 mg/dl  &#xD;&#xA;# Glicemia ap&#xf3;s 1h       X &lt; 180 mg/dl                    -                          X >= 180 mg/dl&#xD;&#xA;# Glicemia ap&#xf3;s 2h       X &lt; 153 mg/dl                    -                          X >= 153 mg/dl&#xD;&#xA;#####################################################################&#xD;&#xA;&#xD;&#xA;#####################################################################&#xD;&#xA;#   **IG >= 24 semanas**                                                                                                &#xD;&#xA;#                                                                                                                                      &#xD;&#xA;#                                Sem altera&#xe7;&#xf5;es        Diabetes Gestacional        Diabetes Tipo II&#xD;&#xA;# Glicemia em jejum     X &lt;  92 mg/dl        92 &lt;=  X &lt; 126 mg/dl      X >= 126 mg/dl&#xD;&#xA;# Glicemia ap&#xf3;s 1h       X &lt; 180 mg/dl      180 &lt;= X                           X >= 180 mg/dl&#xD;&#xA;# Glicemia ap&#xf3;s 2h       X &lt; 153 mg/dl      153 &lt;= X &lt; 200 mg          X >= 200 mg/dl&#xD;&#xA;#####################################################################&#xD;&#xA;&#xD;&#xA;Obs: Diagn&#xf3;stico de diabetes gestacional n&#xe3;o se aplica no per&#xed;odo anterior &#xe0; 24 semanas." inputSequences="//@sequence.2" outputSequences="//@sequence.3">
+    <examination url="" exam_id="28011562" limb_side="" quantity="1" reason="-" clinical_indication="-"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3243" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar resultado de exame Glic&#xea;mico (entre 92 mg/dl  e 126 mg/dl)" description="Verifica resultado de exame Glic&#xea;mico em jejum" inputSequences="//@sequence.47" outputSequences="//@sequence.5 //@sequence.14">
+    <questions text="Glicemia em jejum entre 92 mg/dl e 126 mg/dl?" url="" id="1524">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_92_126_pc002" id="2444" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3244" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar idade Gestacional ( > 24 semanas)" description="Idade Gestacional maior que 24 semanas" inputSequences="//@sequence.5" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="Idade Gestacional > 24 semanas?" url="" id="1525">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_semanas" id="2445" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3245" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar TOTG 75 mg" description="Solicitar Teste Oral de Toler&#xe2;ncia a Glicose" inputSequences="//@sequence.7 //@sequence.8" outputSequences="//@sequence.9">
+    <examination url="" exam_id="28011562" limb_side="" quantity="1" reason="-" clinical_indication="-"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3248" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar idade Gestacional ( entre 29 e 33 semanas)" description="Verifica&#xe7;&#xe3;o de idade gestacional entre 29 e 33 semanas" inputSequences="//@sequence.11 //@sequence.21 //@sequence.22" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Idade Gestacional entre 29 e 33 semanas?" url="" id="1526">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_29_33_semanas_pc002" id="2446" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3249" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encerrar Protocolo de Diabetes Gestacional" description="Finalizando protocolo Diabetes Gestacional" isTerminal="true" inputSequences="//@sequence.12 //@sequence.43"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3250" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Ecocardiograma Fetal *" description="-" isTerminal="true" inputSequences="//@sequence.13 //@sequence.33">
+    <examination url="" exam_id="20010133" limb_side="" quantity="1" reason="-" clinical_indication="-"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3255" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar idade Gestacional ( entre 24 e 28 semanas)" description="Verificar idade Gestacional ( entre 24 e 28 semanas)" inputSequences="//@sequence.19" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Idade Gestacional entre 24 e 28 semanas?" url="" id="1527">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_28_semanas_pc002" id="2447" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3256" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Ecocardiograma Fetal" description="Solicita Ecocardiograma Fetal" inputSequences="//@sequence.20" outputSequences="//@sequence.22">
+    <examination url="" exam_id="20010133" limb_side="" quantity="1" reason="-" clinical_indication="-"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3257" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar exame USG Obst&#xe9;trica" description="Verificar Gestante realizou USG Obst&#xe9;trica / Percentil abdominal do feto" inputSequences="//@sequence.45" outputSequences="//@sequence.23 //@sequence.24">
+    <questions text="Gestante realizou USG Obst&#xe9;trica?" url="" id="1528">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gestante_usg_obstretrica_pc002" id="2448" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3259" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Exame ECG Fetal" description="Verificar se gestante realizou Eletrocardiograma fetal" inputSequences="//@sequence.24 //@sequence.25 //@sequence.49" outputSequences="//@sequence.26 //@sequence.27">
+    <questions text="Gestante realizou ECG Fetal?" url="" id="1529">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gestante_ecg_fetal_pc002" id="2449" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3261" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="TOTG Positivo Diabetes Gestacional" description="TOTG Positivo Diabetes Gestacional" inputSequences="//@sequence.27 //@sequence.34" outputSequences="//@sequence.28 //@sequence.35">
+    <questions text="Glicemia em Jejum entre 92 mg/dl e 126 mg/dl?" url="" id="1530">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_jejum_92_126_pc002" id="2450" weight="1" value="false"/>
+    </questions>
+    <questions text="Glicemia ap&#xf3;s 2h entre 180 mg/dl e 200 mg/dl?" url="" id="1531">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_2h_180_200_pc002" id="2451" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="3263" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar Perfil Glic&#xea;mico (7 dias ap&#xf3;s dieta)" description="1. Jejum&#xA;&#xA;2. 2 horas depois do caf&#xe9; da manha&#xA;&#xA;3. 2 horas depois do almo&#xe7;o&#xA;&#xA;4. 2 horas depois do jantar" inputSequences="//@sequence.31" outputSequences="//@sequence.32">
+    <examination url="" exam_id="28010973" limb_side="" quantity="1" reason="-" clinical_indication="Para controle glic&#xea;mico"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3265" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Perfil Glic&#xea;mico da Paciente" description="Verificar se Gestante realizou Perfil Glic&#xea;mico" inputSequences="//@sequence.35" outputSequences="//@sequence.36 //@sequence.42">
+    <questions text="Gestante realizou Perfil Glic&#xea;mico?" url="" id="1532">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="gestante_perfil_glicemico_pc002" id="2452" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3266" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Controlado com Dieta" description="Verificar se todas as condi&#xe7;&#xf5;es da dieta foram atendidas" inputSequences="//@sequence.36" outputSequences="//@sequence.37 //@sequence.38">
+    <questions text="Controle  glic&#xea;mico jejum maior de 70 mg/dl  OU  menor  de 90 mg/dl?" url="" id="1533">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="controle_glicemico_jejum_70_90_pc002" id="2453" weight="1" value="false"/>
+    </questions>
+    <questions text="2 horas ap&#xf3;s almo&#xe7;o - maior de 100 mg/dl  e menor de  120 mg/dl?" url="" id="1534">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="2h_almoco_100_120_pc002" id="2454" weight="1" value="false"/>
+    </questions>
+    <questions text="2 horas ap&#xf3;s caf&#xe9; da manh&#xe3; - maior de 100 mg/dl  e menor de  120 mg/dl?" url="" id="1535">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="2h_cafe_100_120_pc002" id="2455" weight="1" value="false"/>
+    </questions>
+    <questions text="2 horas ap&#xf3;s jantar - maior de 100 mg/dl  e menor de  120 mg/dl?" url="" id="1536">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="2h_jantar_100_120_pc002" id="2456" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3269" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="TOTG Positivo para Diabetes Tipo 2" description="Glicemia em jejum acima de 126 mg/dl ou Glicemia depois de 2h acima de 200 mg/dl" inputSequences="//@sequence.41 //@sequence.42" outputSequences="//@sequence.43 //@sequence.44">
+    <questions text="Glicemia em jejum acima de 126 mg/dl?" url="" id="1537">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_126_totg_2_pc002" id="2457" weight="1" value="false"/>
+    </questions>
+    <questions text="Glicemia depois de 2h acima de 200 mg/dl?" url="" id="1538">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_2h_200_totg_pc002" id="2458" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3272" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar percentil abdominal do feto" description="Verificar se Percentil abdominal do feto > 75%" inputSequences="//@sequence.23" outputSequences="//@sequence.48 //@sequence.49">
+    <questions text="Percentil abdominal do feto > 75%?" url="" id="1539">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="perc_abdom_maior_75%" id="2459" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="3276" type="Sequencia" type_verbose="Sequencia" url="" name="s1" description="">
+    <operation name="nao_e_retorno_atendimento" id="2465">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="verifica_retorno_atendimento_pc002" id="2395" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.2" id="3277" type="Sequencia" type_verbose="Sequencia" url="" name="s3" description="">
+    <operation name="gestante_nao_apresenta_fatores_de_riscos" Operator="greaterThan" id="2466">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_UM" id="2460" weight="1" value="1.0"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_fatores_riscos_diabetes" Operator="addition" id="2462">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diabetes_gestacional_anterior_pc002" id="2397" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rn_com_macrosomia_pc002" id="2398" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pais_diabeticos_pc002" id="2399" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_superior_35_anos_pc002" id="2400" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ovario_policistico_pc002" id="2441" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="imc_maior_30_pc002" id="2442" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicosuria_urina_pc002" id="2443" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="3278" type="Sequencia" type_verbose="Sequencia" url="" name="s4" description="">
+    <operation name="gestante_apresenta_fator_de_risco" Operator="greaterOrEqual" id="2467">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_fatores_riscos_diabetes" Operator="addition" id="2462">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="diabetes_gestacional_anterior_pc002" id="2397" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="rn_com_macrosomia_pc002" id="2398" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="pais_diabeticos_pc002" id="2399" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_superior_35_anos_pc002" id="2400" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="ovario_policistico_pc002" id="2441" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="imc_maior_30_pc002" id="2442" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicosuria_urina_pc002" id="2443" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_UM" id="2460" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.3" id="3279" type="Sequencia" type_verbose="Sequencia" url="" name="s5" description=""/>
+  <sequence id="3280" type="Sequencia" type_verbose="Sequencia" url="" name="s6" description=""/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="3281" type="Sequencia" type_verbose="Sequencia" url="" name="s8" description="">
+    <operation name="glicemia_gestante_em_jejum_entre_92_126" Operator="affirmation" id="2468">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_92_126_pc002" id="2444" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.5" id="3282" type="Sequencia" type_verbose="Sequencia" url="" name="s9" description="">
+    <operation name="gestacao_maior_24_semanas" Operator="affirmation" id="2469">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_semanas" id="2445" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="3283" type="Sequencia" type_verbose="Sequencia" url="" name="s10" description="">
+    <operation name="gestacao_menor_que_24_semanas" id="2470">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_semanas" id="2445" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" id="3284" type="Sequencia" type_verbose="Sequencia" url="" name="s11" description=""/>
+  <sequence outputStep="//@element.6" id="3285" type="Sequencia" type_verbose="Sequencia" url="" name="s12" description=""/>
+  <sequence id="3286" type="Sequencia" type_verbose="Sequencia" url="" name="s13" description=""/>
+  <sequence inputStep="//@element.7" id="3287" type="Sequencia" type_verbose="Sequencia" url="" name="s14" description=""/>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="3288" type="Sequencia" type_verbose="Sequencia" url="" name="s15" description="">
+    <operation name="gestacao_nao_esta_entre_29_e_33_semanas" id="2471">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_29_33_semanas_pc002" id="2446" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="3289" type="Sequencia" type_verbose="Sequencia" url="" name="s16" description="">
+    <operation name="gestacao_entre_29_e_33_semanas" Operator="affirmation" id="2472">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_29_33_semanas_pc002" id="2446" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.4" id="3290" type="Sequencia" type_verbose="Sequencia" url="" name="s17" description="">
+    <operation name="glicemia_gestante_em_jejum_maior_que_126" id="2473">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_92_126_pc002" id="2444" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence id="3291" type="Sequencia" type_verbose="Sequencia" url="" name="s18" description=""/>
+  <sequence id="3292" type="Sequencia" type_verbose="Sequencia" url="" name="s19" description=""/>
+  <sequence id="3293" type="Sequencia" type_verbose="Sequencia" url="" name="s20" description=""/>
+  <sequence id="3294" type="Sequencia" type_verbose="Sequencia" url="" name="s21" description=""/>
+  <sequence inputStep="//@element.10" id="3295" type="Sequencia" type_verbose="Sequencia" url="" name="s22" description=""/>
+  <sequence inputStep="//@element.11" outputStep="//@element.10" id="3296" type="Sequencia" type_verbose="Sequencia" url="" name="s23" description="">
+    <operation name="gestacao_entre_24_e_28_semanas" Operator="affirmation" id="2474">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_28_semanas_pc002" id="2447" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.10" id="3297" type="Sequencia" type_verbose="Sequencia" url="" name="s24" description="">
+    <operation name="gestacao_nao_esta_entre_24_e_28_semanas" id="2475">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_28_semanas_pc002" id="2447" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.11" id="3298" type="Sequencia" type_verbose="Sequencia" url="" name="s25" description=""/>
+  <sequence inputStep="//@element.19" outputStep="//@element.12" id="3299" type="Sequencia" type_verbose="Sequencia" url="" name="s27" description="">
+    <operation name="gestante_realizou_exame_USG" Operator="affirmation" id="2476">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_usg_obstretrica_pc002" id="2448" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.12" id="3300" type="Sequencia" type_verbose="Sequencia" url="" name="s28" description="">
+    <operation name="gestante_nao_realizou_exame_USG" id="2477">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_usg_obstretrica_pc002" id="2448" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" id="3301" type="Sequencia" type_verbose="Sequencia" url="" name="s29" description=""/>
+  <sequence outputStep="//@element.13" id="3302" type="Sequencia" type_verbose="Sequencia" url="" name="s30" description="">
+    <operation name="gestante_realizou_ECG_fetal" Operator="affirmation" id="2478">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_ecg_fetal_pc002" id="2449" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.13" id="3303" type="Sequencia" type_verbose="Sequencia" url="" name="s31" description="">
+    <operation name="gestante_nao_realizou_ECG_fetal" id="2479">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_ecg_fetal_pc002" id="2449" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.14" id="3304" type="Sequencia" type_verbose="Sequencia" url="" name="s32" description="">
+    <operation name="TOTG_positivo_para_diabetes_gestacional" Operator="greaterOrEqual" id="2480">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_totg_positivo_diabetes_gestacional" Operator="addition" id="2463">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_jejum_92_126_pc002" id="2450" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_2h_180_200_pc002" id="2451" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_UM" id="2460" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence id="3305" type="Sequencia" type_verbose="Sequencia" url="" name="s33" description=""/>
+  <sequence id="3306" type="Sequencia" type_verbose="Sequencia" url="" name="s34" description=""/>
+  <sequence inputStep="//@element.15" id="3307" type="Sequencia" type_verbose="Sequencia" url="" name="s35" description=""/>
+  <sequence outputStep="//@element.15" id="3308" type="Sequencia" type_verbose="Sequencia" url="" name="s36" description=""/>
+  <sequence inputStep="//@element.9" id="3309" type="Sequencia" type_verbose="Sequencia" url="" name="s37" description=""/>
+  <sequence inputStep="//@element.14" id="3310" type="Sequencia" type_verbose="Sequencia" url="" name="s38" description=""/>
+  <sequence inputStep="//@element.16" outputStep="//@element.14" id="3311" type="Sequencia" type_verbose="Sequencia" url="" name="s39" description="">
+    <operation name="TOTG_negativo_para_diabetes_gestacional" Operator="lessThan" id="2481">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_totg_positivo_diabetes_gestacional" Operator="addition" id="2463">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_jejum_92_126_pc002" id="2450" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_2h_180_200_pc002" id="2451" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_UM" id="2460" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.16" id="3312" type="Sequencia" type_verbose="Sequencia" url="" name="s40" description="">
+    <operation name="gestante_realizou_perfil_glicemico" Operator="affirmation" id="2482">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_perfil_glicemico_pc002" id="2452" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.17" id="3313" type="Sequencia" type_verbose="Sequencia" url="" name="s41" description="">
+    <operation name="pelo_menos_uma_condicao_nao_foi_atendido_pela_dieta" Operator="lessThan" id="2483">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_controlado_com_dietas" Operator="addition" id="2464">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="controle_glicemico_jejum_70_90_pc002" id="2453" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_almoco_100_120_pc002" id="2454" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_jantar_100_120_pc002" id="2456" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_cafe_100_120_pc002" id="2455" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_QUATRO" id="2461" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.17" id="3314" type="Sequencia" type_verbose="Sequencia" url="" name="s42" description="">
+    <operation name="todas_condicoes_controlado_com_dieta_positivos" Operator="equal" id="2484">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_controlado_com_dietas" Operator="addition" id="2464">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="controle_glicemico_jejum_70_90_pc002" id="2453" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_almoco_100_120_pc002" id="2454" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_jantar_100_120_pc002" id="2456" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_cafe_100_120_pc002" id="2455" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_QUATRO" id="2461" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence id="3315" type="Sequencia" type_verbose="Sequencia" url="" name="s43" description=""/>
+  <sequence id="3316" type="Sequencia" type_verbose="Sequencia" url="" name="s44" description=""/>
+  <sequence inputStep="//@element.18" id="3317" type="Sequencia" type_verbose="Sequencia" url="" name="s45" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.16" id="3318" type="Sequencia" type_verbose="Sequencia" url="" name="s46" description="">
+    <operation name="gestante_nao_realizou_perfil_glicemico" id="2485">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="gestante_perfil_glicemico_pc002" id="2452" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.18" id="3319" type="Sequencia" type_verbose="Sequencia" url="" name="s47" description="">
+    <operation name="TOTG_positivo_diabetes_tipo_2" Operator="greaterThan" id="2486">
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_UM" id="2460" weight="1" value="1.0"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_totg_positivo_diabetes_gestacional" Operator="addition" id="2463">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_jejum_92_126_pc002" id="2450" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_2h_180_200_pc002" id="2451" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.18" id="3320" type="Sequencia" type_verbose="Sequencia" url="" name="s48" description="">
+    <operation name="totg_positivo_diabetes_gestacional_tipo_2" Operator="greaterOrEqual" id="2487">
+      <operand xsi:type="pathwayMetamodel:Operation" name="soma_totg_positivo_diabetes_gestacional" Operator="addition" id="2463">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_jejum_92_126_pc002" id="2450" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_2h_180_200_pc002" id="2451" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="CONST_UM" id="2460" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.0" id="3321" type="Sequencia" type_verbose="Sequencia" url="" name="s26" description="">
+    <operation name="retorno_de_atendimento" Operator="affirmation" id="2488">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="verifica_retorno_atendimento_pc002" id="2395" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="3322" type="Sequencia" type_verbose="Sequencia" url="" name="s2" description="">
+    <operation name="glicemia_jejum_menor_92" id="2489">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_pc002" id="2396" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="3323" type="Sequencia" type_verbose="Sequencia" url="" name="s7" description="">
+    <operation name="glicemia_jejum_maior_92" Operator="affirmation" id="2490">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_pc002" id="2396" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence outputStep="//@element.19" id="3324" type="Sequencia" type_verbose="Sequencia" url="" name="s49" description="">
+    <operation name="percentil_abdominal_feto_maior_75%" Operator="affirmation" id="2491">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="perc_abdom_maior_75%" id="2459" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.19" id="3325" type="Sequencia" type_verbose="Sequencia" url="" name="s50" description="">
+    <operation name="percentil_abdominal_feto_menor_75%" id="2492">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="perc_abdom_maior_75%" id="2459" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="soma_fatores_riscos_diabetes" Operator="addition" id="2462">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="diabetes_gestacional_anterior_pc002" id="2397" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="rn_com_macrosomia_pc002" id="2398" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="pais_diabeticos_pc002" id="2399" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_superior_35_anos_pc002" id="2400" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="ovario_policistico_pc002" id="2441" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="imc_maior_30_pc002" id="2442" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="glicosuria_urina_pc002" id="2443" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_totg_positivo_diabetes_gestacional" Operator="addition" id="2463">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_jejum_92_126_pc002" id="2450" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_2h_180_200_pc002" id="2451" weight="1" value="false"/>
+  </operation>
+  <operation name="soma_controlado_com_dietas" Operator="addition" id="2464">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="controle_glicemico_jejum_70_90_pc002" id="2453" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_almoco_100_120_pc002" id="2454" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_jantar_100_120_pc002" id="2456" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="2h_cafe_100_120_pc002" id="2455" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="verifica_retorno_atendimento_pc002" id="2395" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_pc002" id="2396" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diabetes_gestacional_anterior_pc002" id="2397" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="rn_com_macrosomia_pc002" id="2398" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="pais_diabeticos_pc002" id="2399" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_superior_35_anos_pc002" id="2400" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ovario_policistico_pc002" id="2441" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="imc_maior_30_pc002" id="2442" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="glicosuria_urina_pc002" id="2443" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_92_126_pc002" id="2444" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_semanas" id="2445" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_29_33_semanas_pc002" id="2446" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_gestacional_24_28_semanas_pc002" id="2447" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gestante_usg_obstretrica_pc002" id="2448" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gestante_ecg_fetal_pc002" id="2449" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_jejum_92_126_pc002" id="2450" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="totg_glicemia_2h_180_200_pc002" id="2451" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="gestante_perfil_glicemico_pc002" id="2452" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="controle_glicemico_jejum_70_90_pc002" id="2453" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="2h_almoco_100_120_pc002" id="2454" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="2h_cafe_100_120_pc002" id="2455" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="2h_jantar_100_120_pc002" id="2456" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_jejum_126_totg_2_pc002" id="2457" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="glicemia_2h_200_totg_pc002" id="2458" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="perc_abdom_maior_75%" id="2459" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="CONST_UM" id="2460" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="CONST_QUATRO" id="2461" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

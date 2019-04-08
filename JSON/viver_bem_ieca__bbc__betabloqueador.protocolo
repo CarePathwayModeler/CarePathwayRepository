@@ -1,0 +1,849 @@
+{
+    "id": 913,
+    "url": "",
+    "codigo": "VB_DIA_IECA",
+    "nome": "[Viver Bem] IECA + BBC + Betabloqueador",
+    "repositorio_id": 477,
+    "versao": 1,
+    "ultima_auditoria": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:37.215363-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:55:36.058590-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed",
+        "data": "2018-09-14T17:58:37.215363-03:00"
+    },
+    "elementos": [
+        {
+            "id": 4469,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Monoterapia Linha IECA",
+            "descricao": "Encaminhar Paciente para tratamento Monoterapia Linha IECA",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_MONO_IECA"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4473,
+                    "url": "",
+                    "nome": "S1 (PS 130 -159 PD80 - 99)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4472,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Valores PS e PD",
+                    "passo_de_entrada_id": 4469,
+                    "passo_de_entrada": "Encaminhamento: Monoterapia Linha IECA",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4470,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Duploterapia Linha IECA",
+            "descricao": "Encaminhar paciente para tratamento Duploterapia Linha IECA",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_DUPLO_IECA"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4474,
+                    "url": "",
+                    "nome": "S2 (PS 160-179 PD 100 -109)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4472,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Valores PS e PD",
+                    "passo_de_entrada_id": 4470,
+                    "passo_de_entrada": "Encaminhamento: Duploterapia Linha IECA",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4471,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Triploterapia Linha IECA",
+            "descricao": "Encaminhar paciente para tratamento Triploterapia Linha IECA",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_TRIPLO_IECA"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 4475,
+                    "url": "",
+                    "nome": "S3 (PS >180 PD >110)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4472,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Valores PS e PD",
+                    "passo_de_entrada_id": 4471,
+                    "passo_de_entrada": "Encaminhamento: Triploterapia Linha IECA",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 4472,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Valores PS e PD",
+            "descricao": "Indique os valores de PS e PD",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1915,
+                    "url": "",
+                    "texto": "Valor PS",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3228,
+                        "type": "Numerica",
+                        "type_verbose": "Num\u00e9rica",
+                        "url": "",
+                        "nome": "valor_ps",
+                        "peso": 1.0,
+                        "valor": 0.0,
+                        "vinculo": null,
+                        "unidade": ""
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 1916,
+                    "url": "",
+                    "texto": "Valor PD",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3229,
+                        "type": "Numerica",
+                        "type_verbose": "Num\u00e9rica",
+                        "url": "",
+                        "nome": "valor_pd",
+                        "peso": 1.0,
+                        "valor": 0.0,
+                        "vinculo": null,
+                        "unidade": ""
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 4473,
+                    "url": "",
+                    "nome": "S1 (PS 130 -159 PD80 - 99)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4472,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Valores PS e PD",
+                    "passo_de_entrada_id": 4469,
+                    "passo_de_entrada": "Encaminhamento: Monoterapia Linha IECA",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4474,
+                    "url": "",
+                    "nome": "S2 (PS 160-179 PD 100 -109)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4472,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Valores PS e PD",
+                    "passo_de_entrada_id": 4470,
+                    "passo_de_entrada": "Encaminhamento: Duploterapia Linha IECA",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 4475,
+                    "url": "",
+                    "nome": "S3 (PS >180 PD >110)",
+                    "descricao": "",
+                    "passo_de_saida_id": 4472,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Valores PS e PD",
+                    "passo_de_entrada_id": 4471,
+                    "passo_de_entrada": "Encaminhamento: Triploterapia Linha IECA",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 4473,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (PS 130 -159 PD80 - 99)",
+            "descricao": "",
+            "passo_de_saida_id": 4472,
+            "passo_de_saida": {
+                "id": 4472,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Valores PS e PD",
+                "descricao": "Indique os valores de PS e PD",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4469,
+            "passo_de_entrada": {
+                "id": 4469,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Monoterapia Linha IECA",
+                "descricao": "Encaminhar Paciente para tratamento Monoterapia Linha IECA",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    513
+                ]
+            },
+            "operacao": {
+                "id": 3258,
+                "nome": "130<=PS<=159_ou_80<=PD<=99",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    3252,
+                    3256,
+                    3257
+                ],
+                "argumentos": [
+                    "A",
+                    "~B",
+                    "~C"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4474,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (PS 160-179 PD 100 -109)",
+            "descricao": "",
+            "passo_de_saida_id": 4472,
+            "passo_de_saida": {
+                "id": 4472,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Valores PS e PD",
+                "descricao": "Indique os valores de PS e PD",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4470,
+            "passo_de_entrada": {
+                "id": 4470,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Duploterapia Linha IECA",
+                "descricao": "Encaminhar paciente para tratamento Duploterapia Linha IECA",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    510
+                ]
+            },
+            "operacao": {
+                "id": 3259,
+                "nome": "160<=PS<=179_ou_100<=PD<=109",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    3255,
+                    3253,
+                    3257
+                ],
+                "argumentos": [
+                    "~A",
+                    "B",
+                    "~C"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 4475,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (PS >180 PD >110)",
+            "descricao": "",
+            "passo_de_saida_id": 4472,
+            "passo_de_saida": {
+                "id": 4472,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Valores PS e PD",
+                "descricao": "Indique os valores de PS e PD",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 4471,
+            "passo_de_entrada": {
+                "id": 4471,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Triploterapia Linha IECA",
+                "descricao": "Encaminhar paciente para tratamento Triploterapia Linha IECA",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    469
+                ]
+            },
+            "operacao": {
+                "id": 3260,
+                "nome": "PS>180_ou_PD>110",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    3255,
+                    3256,
+                    3254
+                ],
+                "argumentos": [
+                    "~A",
+                    "~B",
+                    "C"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3228,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "valor_ps",
+            "peso": 1.0,
+            "valor": 0.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3229,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "valor_pd",
+            "peso": 1.0,
+            "valor": 0.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3230,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "130",
+            "peso": 1.0,
+            "valor": 130.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3231,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "159",
+            "peso": 1.0,
+            "valor": 159.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3232,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "80",
+            "peso": 1.0,
+            "valor": 80.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3233,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "99",
+            "peso": 1.0,
+            "valor": 99.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3234,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "160",
+            "peso": 1.0,
+            "valor": 160.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3235,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "179",
+            "peso": 1.0,
+            "valor": 179.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3236,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "100",
+            "peso": 1.0,
+            "valor": 100.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3237,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "109",
+            "peso": 1.0,
+            "valor": 109.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3238,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PS>=130",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                3228,
+                3230
+            ],
+            "argumentos": [
+                "valor_ps",
+                "130"
+            ]
+        },
+        {
+            "id": 3239,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PS<=159",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "menorOuIgual",
+            "operador_display": "Menor Ou Igual",
+            "argumentos_ids": [
+                3228,
+                3231
+            ],
+            "argumentos": [
+                "valor_ps",
+                "159"
+            ]
+        },
+        {
+            "id": 3240,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PS>=160",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                3228,
+                3234
+            ],
+            "argumentos": [
+                "valor_ps",
+                "160"
+            ]
+        },
+        {
+            "id": 3241,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PS<=179",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "menorOuIgual",
+            "operador_display": "Menor Ou Igual",
+            "argumentos_ids": [
+                3228,
+                3235
+            ],
+            "argumentos": [
+                "valor_ps",
+                "179"
+            ]
+        },
+        {
+            "id": 3242,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PS>179",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "maiorQue",
+            "operador_display": "Maior Que",
+            "argumentos_ids": [
+                3228,
+                3235
+            ],
+            "argumentos": [
+                "valor_ps",
+                "179"
+            ]
+        },
+        {
+            "id": 3243,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PD>=80",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                3229,
+                3232
+            ],
+            "argumentos": [
+                "valor_pd",
+                "80"
+            ]
+        },
+        {
+            "id": 3244,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PD<=99",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "menorOuIgual",
+            "operador_display": "Menor Ou Igual",
+            "argumentos_ids": [
+                3229,
+                3233
+            ],
+            "argumentos": [
+                "valor_pd",
+                "99"
+            ]
+        },
+        {
+            "id": 3245,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PD>=100",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                3229,
+                3236
+            ],
+            "argumentos": [
+                "valor_pd",
+                "100"
+            ]
+        },
+        {
+            "id": 3246,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PD<=109",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "menorOuIgual",
+            "operador_display": "Menor Ou Igual",
+            "argumentos_ids": [
+                3229,
+                3237
+            ],
+            "argumentos": [
+                "valor_pd",
+                "109"
+            ]
+        },
+        {
+            "id": 3247,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PD>109",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "maiorQue",
+            "operador_display": "Maior Que",
+            "argumentos_ids": [
+                3229,
+                3237
+            ],
+            "argumentos": [
+                "valor_pd",
+                "109"
+            ]
+        },
+        {
+            "id": 3248,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PS>=130_&_PS<=159",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3238,
+                3239
+            ],
+            "argumentos": [
+                "PS>=130",
+                "PS<=159"
+            ]
+        },
+        {
+            "id": 3249,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PD>=80_&_PD<=99",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3243,
+                3244
+            ],
+            "argumentos": [
+                "PD>=80",
+                "PD<=99"
+            ]
+        },
+        {
+            "id": 3250,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PS>=160_&_PS<=179",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3240,
+                3241
+            ],
+            "argumentos": [
+                "PS>=160",
+                "PS<=179"
+            ]
+        },
+        {
+            "id": 3251,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "PD>=100_&_PD<=109",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3245,
+                3246
+            ],
+            "argumentos": [
+                "PD>=100",
+                "PD<=109"
+            ]
+        },
+        {
+            "id": 3252,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "A",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "ouLogico",
+            "operador_display": "Ou L\u00f3gico",
+            "argumentos_ids": [
+                3248,
+                3249
+            ],
+            "argumentos": [
+                "PS>=130_&_PS<=159",
+                "PD>=80_&_PD<=99"
+            ]
+        },
+        {
+            "id": 3253,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "B",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "ouLogico",
+            "operador_display": "Ou L\u00f3gico",
+            "argumentos_ids": [
+                3250,
+                3251
+            ],
+            "argumentos": [
+                "PS>=160_&_PS<=179",
+                "PD>=100_&_PD<=109"
+            ]
+        },
+        {
+            "id": 3254,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "C",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "ouLogico",
+            "operador_display": "Ou L\u00f3gico",
+            "argumentos_ids": [
+                3242,
+                3247
+            ],
+            "argumentos": [
+                "PS>179",
+                "PD>109"
+            ]
+        },
+        {
+            "id": 3255,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "~A",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                3252
+            ],
+            "argumentos": [
+                "A"
+            ]
+        },
+        {
+            "id": 3256,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "~B",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                3253
+            ],
+            "argumentos": [
+                "B"
+            ]
+        },
+        {
+            "id": 3257,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "~C",
+            "descricao": "-",
+            "visivel": false,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                3254
+            ],
+            "argumentos": [
+                "C"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1320 @@
+{
+    "id": 1081,
+    "url": "",
+    "codigo": "MF_DLP",
+    "nome": "Dislipidemia",
+    "repositorio_id": 563,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "intmed",
+        "data": "2018-11-30T11:20:23.211681-03:00"
+    },
+    "criado_por": {
+        "usuario": "intmed",
+        "data": "2018-11-30T11:19:11.088334-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "intmed",
+        "data": "2018-11-30T11:20:23.211681-03:00"
+    },
+    "elementos": [
+        {
+            "id": 5201,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classificar por risco",
+            "descricao": "Classificar quadro do paciente conforme fator de risco",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2241,
+                    "url": "",
+                    "texto": "Risco Intermedi\u00e1rio ou Baixo (LDL-c mg/dL > 100)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3741,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_baixo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2242,
+                    "url": "",
+                    "texto": "Risco Alto ((LDL-c mg/dL > 70)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3742,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_alto",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2243,
+                    "url": "",
+                    "texto": "Risco Muito Alto (LDL-c mg/dL > 50)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3743,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "risco_muito_alto",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 5215,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 5201,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar por risco",
+                    "passo_de_entrada_id": 5202,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 5202,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+            "descricao": "Avaliar se paciente possui Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2244,
+                    "url": "",
+                    "texto": "Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3744,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "doenca_aterosclerotica_significativa",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 5215,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "",
+                    "passo_de_saida_id": 5201,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classificar por risco",
+                    "passo_de_entrada_id": 5202,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 5216,
+                    "url": "",
+                    "nome": "S2 (DAS positivo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5202,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                    "passo_de_entrada_id": 5207,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Muito Alto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 5217,
+                    "url": "",
+                    "nome": "S3 (DAS negativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5202,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                    "passo_de_entrada_id": 5203,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 5203,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+            "descricao": "Averiguar se paciente apresenta Fatores de Estratifica\u00e7\u00e3o de Risco (FER)",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2245,
+                    "url": "",
+                    "texto": "Apresenta Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3745,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "fatores_de_estratificacao_de_risco",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 5217,
+                    "url": "",
+                    "nome": "S3 (DAS negativo)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5202,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                    "passo_de_entrada_id": 5203,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 5218,
+                    "url": "",
+                    "nome": "S4 (Com FER)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5203,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                    "passo_de_entrada_id": 5206,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Alto",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 5219,
+                    "url": "",
+                    "nome": "S5 (Sem FER)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5203,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                    "passo_de_entrada_id": 5204,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Idade/Sexo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 5204,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Idade/Sexo",
+            "descricao": "Avaliar sexo e idade do(a) paciente",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 2246,
+                    "url": "",
+                    "texto": "Sexo Masculino",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3746,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "paciente_sexo_masculino",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2247,
+                    "url": "",
+                    "texto": "Sexo Feminino",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3747,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "paciente_sexo_feminino",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false
+                },
+                {
+                    "id": 2248,
+                    "url": "",
+                    "texto": "Idade:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 3748,
+                        "type": "Numerica",
+                        "type_verbose": "Num\u00e9rica",
+                        "url": "",
+                        "nome": "paciente_idade",
+                        "peso": 1.0,
+                        "valor": 0.0,
+                        "vinculo": null,
+                        "unidade": ""
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 5219,
+                    "url": "",
+                    "nome": "S5 (Sem FER)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5203,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                    "passo_de_entrada_id": 5204,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Idade/Sexo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 5220,
+                    "url": "",
+                    "nome": "S6 (H > 40 ou M > 50)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5204,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Idade/Sexo",
+                    "passo_de_entrada_id": 5208,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Intermedi\u00e1rio",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 5221,
+                    "url": "",
+                    "nome": "S7 (H <= 40 ou M <= 50)",
+                    "descricao": "",
+                    "passo_de_saida_id": 5204,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Idade/Sexo",
+                    "passo_de_entrada_id": 5205,
+                    "passo_de_entrada": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Baixo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 5205,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classifica\u00e7\u00e3o: Risco Baixo",
+            "descricao": "Paciente de baixo risco ou risco intermedi\u00e1rio",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "VB_DIA_DISL",
+                "codigo_risco": "B"
+            }
+        },
+        {
+            "id": 5206,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classifica\u00e7\u00e3o: Risco Alto",
+            "descricao": "Paciente de risco alto",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "VB_DIA_DISL",
+                "codigo_risco": "A"
+            }
+        },
+        {
+            "id": 5207,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classifica\u00e7\u00e3o: Risco Muito Alto",
+            "descricao": "Paciente de risco muito alto",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "VB_DIA_DISL",
+                "codigo_risco": "A"
+            }
+        },
+        {
+            "id": 5208,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classifica\u00e7\u00e3o: Risco Intermedi\u00e1rio",
+            "descricao": "Paciente de risco intermedi\u00e1rio",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "VB_DIA_DISL",
+                "codigo_risco": "M"
+            }
+        },
+        {
+            "id": 5209,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Risco Muito Alto",
+            "descricao": "Encaminhar ao protocolo de Risco Muito Alto",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_DISLIP_RISCO_MT_ALTO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 5222,
+                    "url": "",
+                    "nome": "S8",
+                    "descricao": "",
+                    "passo_de_saida_id": 5207,
+                    "passo_de_saida": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Muito Alto",
+                    "passo_de_entrada_id": 5209,
+                    "passo_de_entrada": "Encaminhamento: Risco Muito Alto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 5210,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Risco Alto",
+            "descricao": "Encaminhar ao protocolo de Risco Alto",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VBL_DISLIP_RISCO_ALTO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 5223,
+                    "url": "",
+                    "nome": "S9",
+                    "descricao": "",
+                    "passo_de_saida_id": 5206,
+                    "passo_de_saida": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Alto",
+                    "passo_de_entrada_id": 5210,
+                    "passo_de_entrada": "Encaminhamento: Risco Alto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 5211,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Risco Intermedi\u00e1rio",
+            "descricao": "Encaminhar ao protocolo de Risco Intermedi\u00e1rio",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VBL_DISLIP_RISCO_INTER"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 5224,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "",
+                    "passo_de_saida_id": 5208,
+                    "passo_de_saida": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Intermedi\u00e1rio",
+                    "passo_de_entrada_id": 5211,
+                    "passo_de_entrada": "Encaminhamento: Risco Intermedi\u00e1rio",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 5212,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Risco Baixo",
+            "descricao": "Encaminhar ao protocolo de Risco Baixo",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "VB_DISLIP_RISCO_BAIXO"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 5225,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "",
+                    "passo_de_saida_id": 5205,
+                    "passo_de_saida": "A\u00e7\u00e3o: Classifica\u00e7\u00e3o: Risco Baixo",
+                    "passo_de_entrada_id": 5212,
+                    "passo_de_entrada": "Encaminhamento: Risco Baixo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 5213,
+            "type": "Pausa",
+            "type_verbose": "Pausa",
+            "url": "",
+            "nome": "Teste 11/06",
+            "descricao": "Testando o passo para V10",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 5214,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "teste",
+            "descricao": "asdasd",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 5215,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "",
+            "passo_de_saida_id": 5201,
+            "passo_de_saida": {
+                "id": 5201,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classificar por risco",
+                "descricao": "Classificar quadro do paciente conforme fator de risco",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 5202,
+            "passo_de_entrada": {
+                "id": 5202,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                "descricao": "Avaliar se paciente possui Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5216,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (DAS positivo)",
+            "descricao": "",
+            "passo_de_saida_id": 5202,
+            "passo_de_saida": {
+                "id": 5202,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                "descricao": "Avaliar se paciente possui Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 5207,
+            "passo_de_entrada": {
+                "id": 5207,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Muito Alto",
+                "descricao": "Paciente de risco muito alto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": {
+                "id": 3759,
+                "nome": "DAS positivo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3744
+                ],
+                "argumentos": [
+                    "doenca_aterosclerotica_significativa"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5217,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (DAS negativo)",
+            "descricao": "",
+            "passo_de_saida_id": 5202,
+            "passo_de_saida": {
+                "id": 5202,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)?",
+                "descricao": "Avaliar se paciente possui Doen\u00e7a Ateroscler\u00f3tica Significativa (DAS)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 5203,
+            "passo_de_entrada": {
+                "id": 5203,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                "descricao": "Averiguar se paciente apresenta Fatores de Estratifica\u00e7\u00e3o de Risco (FER)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3760,
+                "nome": "DAS negativo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3744
+                ],
+                "argumentos": [
+                    "doenca_aterosclerotica_significativa"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5218,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Com FER)",
+            "descricao": "",
+            "passo_de_saida_id": 5203,
+            "passo_de_saida": {
+                "id": 5203,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                "descricao": "Averiguar se paciente apresenta Fatores de Estratifica\u00e7\u00e3o de Risco (FER)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 5206,
+            "passo_de_entrada": {
+                "id": 5206,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Alto",
+                "descricao": "Paciente de risco alto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": {
+                "id": 3761,
+                "nome": "Com FER",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    3745
+                ],
+                "argumentos": [
+                    "fatores_de_estratificacao_de_risco"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5219,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Sem FER)",
+            "descricao": "",
+            "passo_de_saida_id": 5203,
+            "passo_de_saida": {
+                "id": 5203,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Fatores de Estratifica\u00e7\u00e3o de Risco (FER)?",
+                "descricao": "Averiguar se paciente apresenta Fatores de Estratifica\u00e7\u00e3o de Risco (FER)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 5204,
+            "passo_de_entrada": {
+                "id": 5204,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Idade/Sexo",
+                "descricao": "Avaliar sexo e idade do(a) paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 3762,
+                "nome": "Sem FER",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    3745
+                ],
+                "argumentos": [
+                    "fatores_de_estratificacao_de_risco"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5220,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (H > 40 ou M > 50)",
+            "descricao": "",
+            "passo_de_saida_id": 5204,
+            "passo_de_saida": {
+                "id": 5204,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Idade/Sexo",
+                "descricao": "Avaliar sexo e idade do(a) paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 5208,
+            "passo_de_entrada": {
+                "id": 5208,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Intermedi\u00e1rio",
+                "descricao": "Paciente de risco intermedi\u00e1rio",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": {
+                "id": 3763,
+                "nome": "H > 40 ou M > 50",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    3755,
+                    3756
+                ],
+                "argumentos": [
+                    "Homem acima de 40",
+                    "Mulher acima de 50"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5221,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (H <= 40 ou M <= 50)",
+            "descricao": "",
+            "passo_de_saida_id": 5204,
+            "passo_de_saida": {
+                "id": 5204,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Idade/Sexo",
+                "descricao": "Avaliar sexo e idade do(a) paciente",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 5205,
+            "passo_de_entrada": {
+                "id": 5205,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Baixo",
+                "descricao": "Paciente de baixo risco ou risco intermedi\u00e1rio",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": {
+                "id": 3764,
+                "nome": "H <= 40 ou M <= 50",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    3757,
+                    3758
+                ],
+                "argumentos": [
+                    "Homem abaixo de 40",
+                    "Mulher abaixo de 50"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5222,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8",
+            "descricao": "",
+            "passo_de_saida_id": 5207,
+            "passo_de_saida": {
+                "id": 5207,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Muito Alto",
+                "descricao": "Paciente de risco muito alto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 5209,
+            "passo_de_entrada": {
+                "id": 5209,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Risco Muito Alto",
+                "descricao": "Encaminhar ao protocolo de Risco Muito Alto",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    562
+                ]
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5223,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9",
+            "descricao": "",
+            "passo_de_saida_id": 5206,
+            "passo_de_saida": {
+                "id": 5206,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Alto",
+                "descricao": "Paciente de risco alto",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 5210,
+            "passo_de_entrada": {
+                "id": 5210,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Risco Alto",
+                "descricao": "Encaminhar ao protocolo de Risco Alto",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    561
+                ]
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5224,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "",
+            "passo_de_saida_id": 5208,
+            "passo_de_saida": {
+                "id": 5208,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Intermedi\u00e1rio",
+                "descricao": "Paciente de risco intermedi\u00e1rio",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 5211,
+            "passo_de_entrada": {
+                "id": 5211,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Risco Intermedi\u00e1rio",
+                "descricao": "Encaminhar ao protocolo de Risco Intermedi\u00e1rio",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    601
+                ]
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 5225,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "",
+            "passo_de_saida_id": 5205,
+            "passo_de_saida": {
+                "id": 5205,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o: Risco Baixo",
+                "descricao": "Paciente de baixo risco ou risco intermedi\u00e1rio",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 5212,
+            "passo_de_entrada": {
+                "id": 5212,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Risco Baixo",
+                "descricao": "Encaminhar ao protocolo de Risco Baixo",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    581
+                ]
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 3741,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_baixo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3742,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_alto",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3743,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "risco_muito_alto",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3744,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "doenca_aterosclerotica_significativa",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3745,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "fatores_de_estratificacao_de_risco",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3746,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "paciente_sexo_masculino",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3747,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "paciente_sexo_feminino",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 3748,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "paciente_idade",
+            "peso": 1.0,
+            "valor": 0.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3749,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "40",
+            "peso": 1.0,
+            "valor": 40.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3750,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "50",
+            "peso": 1.0,
+            "valor": 50.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 3751,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Idade > 40",
+            "descricao": "Paciente com mais de 40 anos",
+            "visivel": false,
+            "operador": "maiorQue",
+            "operador_display": "Maior Que",
+            "argumentos_ids": [
+                3748,
+                3749
+            ],
+            "argumentos": [
+                "paciente_idade",
+                "40"
+            ]
+        },
+        {
+            "id": 3752,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Idade <= 40",
+            "descricao": "Paciente com 40 anos ou menos de 40 anos",
+            "visivel": false,
+            "operador": "menorOuIgual",
+            "operador_display": "Menor Ou Igual",
+            "argumentos_ids": [
+                3748,
+                3749
+            ],
+            "argumentos": [
+                "paciente_idade",
+                "40"
+            ]
+        },
+        {
+            "id": 3753,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Idade > 50",
+            "descricao": "Paciente com mais de 50 anos",
+            "visivel": false,
+            "operador": "maiorQue",
+            "operador_display": "Maior Que",
+            "argumentos_ids": [
+                3748,
+                3750
+            ],
+            "argumentos": [
+                "paciente_idade",
+                "50"
+            ]
+        },
+        {
+            "id": 3754,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Idade <= 50",
+            "descricao": "Paciente com 50 anos ou menos de 50 anos",
+            "visivel": false,
+            "operador": "menorOuIgual",
+            "operador_display": "Menor Ou Igual",
+            "argumentos_ids": [
+                3748,
+                3750
+            ],
+            "argumentos": [
+                "paciente_idade",
+                "50"
+            ]
+        },
+        {
+            "id": 3755,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Homem acima de 40",
+            "descricao": "Homem com mais de 40 anos",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3746,
+                3751
+            ],
+            "argumentos": [
+                "paciente_sexo_masculino",
+                "Idade > 40"
+            ]
+        },
+        {
+            "id": 3756,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Mulher acima de 50",
+            "descricao": "Mulher acima de 50 anos",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3747,
+                3753
+            ],
+            "argumentos": [
+                "paciente_sexo_feminino",
+                "Idade > 50"
+            ]
+        },
+        {
+            "id": 3757,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Homem abaixo de 40",
+            "descricao": "Homem com 40 anos ou menos",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3746,
+                3752
+            ],
+            "argumentos": [
+                "paciente_sexo_masculino",
+                "Idade <= 40"
+            ]
+        },
+        {
+            "id": 3758,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Mulher abaixo de 50",
+            "descricao": "Mulher com 50 anos ou menos",
+            "visivel": false,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                3747,
+                3754
+            ],
+            "argumentos": [
+                "paciente_sexo_feminino",
+                "Idade <= 50"
+            ]
+        }
+    ]
+}

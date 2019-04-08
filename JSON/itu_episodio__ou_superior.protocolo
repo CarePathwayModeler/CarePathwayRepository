@@ -1,0 +1,1616 @@
+{
+    "id": 681,
+    "url": "",
+    "codigo": "itu_ep_03",
+    "nome": "ITU Epis\u00f3dio 3 ou Superior",
+    "repositorio_id": 291,
+    "versao": 3,
+    "ultima_auditoria": null,
+    "criado_por": null,
+    "finalizado_por": null,
+    "elementos": [
+        {
+            "id": 3476,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Nitrofurantoina",
+            "descricao": "Verificar Alergia a Nitrofurantoina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1578,
+                    "url": "",
+                    "texto": "Paciente possui alergia a nitrofurantoina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2601,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_nitrofurantoina",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 625,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Nitrofurantoina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3493,
+                    "url": "",
+                    "nome": "s4",
+                    "descricao": "",
+                    "passo_de_saida_id": 3489,
+                    "passo_de_saida": "A\u00e7\u00e3o: Encaminhar para US de Rins e Vias Urin\u00e1rias",
+                    "passo_de_entrada_id": 3476,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3494,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "",
+                    "passo_de_saida_id": 3476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3477,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3495,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "",
+                    "passo_de_saida_id": 3476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3478,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3477,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+            "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 686,
+                    "url": "",
+                    "nome": "NITROFURANTOINA",
+                    "medicamento": 7896112166221,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar de 6/6 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3494,
+                    "url": "",
+                    "nome": "s5",
+                    "descricao": "",
+                    "passo_de_saida_id": 3476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3477,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3502,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 3477,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3478,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Cefalexina",
+            "descricao": "Verificar Alergia a Cefalexina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1579,
+                    "url": "",
+                    "texto": "Paciente possui alergia a cefalexina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2602,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_cefalexina",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 626,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Cefalexina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3495,
+                    "url": "",
+                    "nome": "s6",
+                    "descricao": "",
+                    "passo_de_saida_id": 3476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Nitrofurantoina",
+                    "passo_de_entrada_id": 3478,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3496,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "",
+                    "passo_de_saida_id": 3478,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3479,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3497,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3478,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3480,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3479,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+            "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 687,
+                    "url": "",
+                    "nome": "CEFALEXINA",
+                    "medicamento": 7891317001803,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar de 6/6 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3496,
+                    "url": "",
+                    "nome": "s7",
+                    "descricao": "",
+                    "passo_de_saida_id": 3478,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3479,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3503,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 3479,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3480,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Amoxicilina",
+            "descricao": "Verificar Alergia a Amoxicilina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1580,
+                    "url": "",
+                    "texto": "Paciente possui alergia a amoxicilina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2603,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_amoxicilina",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 627,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Amoxicilina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3497,
+                    "url": "",
+                    "nome": "s8",
+                    "descricao": "",
+                    "passo_de_saida_id": 3478,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Cefalexina",
+                    "passo_de_entrada_id": 3480,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3498,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "",
+                    "passo_de_saida_id": 3480,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3481,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3499,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3480,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3482,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3481,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+            "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 688,
+                    "url": "",
+                    "nome": "AMOXICILINA",
+                    "medicamento": 7891317001636,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar de 6/6 horas"
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3498,
+                    "url": "",
+                    "nome": "s9",
+                    "descricao": "",
+                    "passo_de_saida_id": 3480,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3481,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3504,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "",
+                    "passo_de_saida_id": 3481,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3482,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar Alergia a Fosfomicina",
+            "descricao": "Verificar Alergia a Fosfomicina",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 1581,
+                    "url": "",
+                    "texto": "Paciente possui alergia a fosfomicina?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 2604,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "alergia_fosfomicina",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": {
+                            "id": 628,
+                            "type": "VinculoAlergia",
+                            "type_verbose": "V\u00ednculo De Alergia",
+                            "alergia": "Fosfomicina"
+                        }
+                    },
+                    "permitir_nao_se_aplica": false
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3499,
+                    "url": "",
+                    "nome": "s10",
+                    "descricao": "",
+                    "passo_de_saida_id": 3480,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Amoxicilina",
+                    "passo_de_entrada_id": 3482,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3500,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "",
+                    "passo_de_saida_id": 3482,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3483,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3501,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 3482,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3484,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3483,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+            "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina. Medicamento n\u00e3o encontrado na integra\u00e7\u00e3o",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3500,
+                    "url": "",
+                    "nome": "s11",
+                    "descricao": "",
+                    "passo_de_saida_id": 3482,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3483,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3505,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "",
+                    "passo_de_saida_id": 3483,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3484,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+            "descricao": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 689,
+                    "url": "",
+                    "nome": "AMPICILINA",
+                    "medicamento": 7891317008987,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar de 6/6 horas"
+                },
+                {
+                    "id": 695,
+                    "url": "",
+                    "nome": "AMOXICILINA+CLAV POTASSIO",
+                    "medicamento": 7896004703404,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3501,
+                    "url": "",
+                    "nome": "s12",
+                    "descricao": "",
+                    "passo_de_saida_id": 3482,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar Alergia a Fosfomicina",
+                    "passo_de_entrada_id": 3484,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 3506,
+                    "url": "",
+                    "nome": "s17",
+                    "descricao": "",
+                    "passo_de_saida_id": 3484,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 3485,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+            "descricao": "Prescrever tratamento de Profilaxia. Em cada consulta subsequente dever\u00e1 ser gerada uma nova prescri\u00e7\u00e3o. Recomendar a paciente que o tratamento seja mantido por 42 dias ap\u00f3s o parto.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 691,
+                    "url": "",
+                    "nome": "NITROFURANTOINA",
+                    "medicamento": 7896112166221,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 42,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "1 comprimido a noite ao deitar, durante toda a gesta\u00e7\u00e3o e at\u00e9 42 dias ap\u00f3s o parto;"
+                },
+                {
+                    "id": 692,
+                    "url": "",
+                    "nome": "AMOXICILINA",
+                    "medicamento": 7891317001636,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 42,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "1 comprimido a noite ao deitar, durante toda a gesta\u00e7\u00e3o e at\u00e9 42 dias ap\u00f3s o parto;"
+                },
+                {
+                    "id": 693,
+                    "url": "",
+                    "nome": "AMPICILINA",
+                    "medicamento": 7896004715759,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 42,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "1 comprimido a noite ao deitar, durante toda a gesta\u00e7\u00e3o e at\u00e9 42 dias ap\u00f3s o parto;"
+                },
+                {
+                    "id": 696,
+                    "url": "",
+                    "nome": "AMOXICILINA+CLAV POTASSIO",
+                    "medicamento": 7896004703404,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 42,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": ""
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 3502,
+                    "url": "",
+                    "nome": "s13",
+                    "descricao": "",
+                    "passo_de_saida_id": 3477,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3503,
+                    "url": "",
+                    "nome": "s14",
+                    "descricao": "",
+                    "passo_de_saida_id": 3479,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3504,
+                    "url": "",
+                    "nome": "s15",
+                    "descricao": "",
+                    "passo_de_saida_id": 3481,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3505,
+                    "url": "",
+                    "nome": "s16",
+                    "descricao": "",
+                    "passo_de_saida_id": 3483,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 3506,
+                    "url": "",
+                    "nome": "s17",
+                    "descricao": "",
+                    "passo_de_saida_id": 3484,
+                    "passo_de_saida": "Receita: Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                    "passo_de_entrada_id": 3485,
+                    "passo_de_entrada": "Receita: Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 3486,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Realizar Aprazamento Mensal",
+            "descricao": "Gerar Aprazamento de retorno MENSAL para m\u00e9dico com alto risco.",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "aprazamento",
+            "entradas": {
+                "orientacao": "Gerar Aprazamento de retorno MENSAL para m\u00e9dico com alto risco.  Editar Voltar",
+                "codigo_retorno": "1",
+                "tipo_profissional": "M",
+                "codigo_risco": "2"
+            }
+        },
+        {
+            "id": 3487,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Classificar Paciente Como Alto Risco",
+            "descricao": "Classificar o paciente como alto risco. (Formul\u00e1rio ITU01)",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "classificar_risco",
+            "entradas": {
+                "codigo_formulario": "ITU01",
+                "codigo_risco": "A"
+            }
+        },
+        {
+            "id": 3488,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar para Urologista",
+            "descricao": "Encaminhar paciente para urologista.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "56"
+            }
+        },
+        {
+            "id": 3489,
+            "type": "Acao",
+            "type_verbose": "A\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar para US de Rins e Vias Urin\u00e1rias",
+            "descricao": "Encaminhar paciente para US (ultrasonografia) de rins e vias urin\u00e1rias.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "servico": "encaminhar_especialidade",
+            "entradas": {
+                "codigo_especialidade": "33"
+            }
+        },
+        {
+            "id": 3490,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s1",
+            "descricao": "",
+            "passo_de_saida_id": 3486,
+            "passo_de_saida": {
+                "id": 3486,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Realizar Aprazamento Mensal",
+                "descricao": "Gerar Aprazamento de retorno MENSAL para m\u00e9dico com alto risco.",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 61,
+                "servico": "Aprazamento"
+            },
+            "passo_de_entrada_id": 3487,
+            "passo_de_entrada": {
+                "id": 3487,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente Como Alto Risco",
+                "descricao": "Classificar o paciente como alto risco. (Formul\u00e1rio ITU01)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3491,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s2",
+            "descricao": "",
+            "passo_de_saida_id": 3487,
+            "passo_de_saida": {
+                "id": 3487,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Classificar Paciente Como Alto Risco",
+                "descricao": "Classificar o paciente como alto risco. (Formul\u00e1rio ITU01)",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 62,
+                "servico": "Classificar Risco do Paciente"
+            },
+            "passo_de_entrada_id": 3488,
+            "passo_de_entrada": {
+                "id": 3488,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Urologista",
+                "descricao": "Encaminhar paciente para urologista.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3492,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s3",
+            "descricao": "",
+            "passo_de_saida_id": 3488,
+            "passo_de_saida": {
+                "id": 3488,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para Urologista",
+                "descricao": "Encaminhar paciente para urologista.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3489,
+            "passo_de_entrada": {
+                "id": 3489,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para US de Rins e Vias Urin\u00e1rias",
+                "descricao": "Encaminhar paciente para US (ultrasonografia) de rins e vias urin\u00e1rias.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3493,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s4",
+            "descricao": "",
+            "passo_de_saida_id": 3489,
+            "passo_de_saida": {
+                "id": 3489,
+                "type": "Acao",
+                "type_verbose": "A\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar para US de Rins e Vias Urin\u00e1rias",
+                "descricao": "Encaminhar paciente para US (ultrasonografia) de rins e vias urin\u00e1rias.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "servico_id": 63,
+                "servico": "Encaminhamento Especialidade"
+            },
+            "passo_de_entrada_id": 3476,
+            "passo_de_entrada": {
+                "id": 3476,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Nitrofurantoina",
+                "descricao": "Verificar Alergia a Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3494,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s5",
+            "descricao": "",
+            "passo_de_saida_id": 3476,
+            "passo_de_saida": {
+                "id": 3476,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Nitrofurantoina",
+                "descricao": "Verificar Alergia a Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3477,
+            "passo_de_entrada": {
+                "id": 3477,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2605,
+                "nome": "sem_alergia_nitrofurantoina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2601
+                ],
+                "argumentos": [
+                    "alergia_nitrofurantoina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3495,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s6",
+            "descricao": "",
+            "passo_de_saida_id": 3476,
+            "passo_de_saida": {
+                "id": 3476,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Nitrofurantoina",
+                "descricao": "Verificar Alergia a Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3478,
+            "passo_de_entrada": {
+                "id": 3478,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Cefalexina",
+                "descricao": "Verificar Alergia a Cefalexina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2606,
+                "nome": "com_alergia_nitrofurantoina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2601
+                ],
+                "argumentos": [
+                    "alergia_nitrofurantoina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3496,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s7",
+            "descricao": "",
+            "passo_de_saida_id": 3478,
+            "passo_de_saida": {
+                "id": 3478,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Cefalexina",
+                "descricao": "Verificar Alergia a Cefalexina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3479,
+            "passo_de_entrada": {
+                "id": 3479,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2607,
+                "nome": "sem_alergia_cefalexina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2602
+                ],
+                "argumentos": [
+                    "alergia_cefalexina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3497,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s8",
+            "descricao": "",
+            "passo_de_saida_id": 3478,
+            "passo_de_saida": {
+                "id": 3478,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Cefalexina",
+                "descricao": "Verificar Alergia a Cefalexina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3480,
+            "passo_de_entrada": {
+                "id": 3480,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Amoxicilina",
+                "descricao": "Verificar Alergia a Amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2608,
+                "nome": "com_alergia_cefalexina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2602
+                ],
+                "argumentos": [
+                    "alergia_cefalexina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3498,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s9",
+            "descricao": "",
+            "passo_de_saida_id": 3480,
+            "passo_de_saida": {
+                "id": 3480,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Amoxicilina",
+                "descricao": "Verificar Alergia a Amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3481,
+            "passo_de_entrada": {
+                "id": 3481,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2609,
+                "nome": "sem_alergia_amoxicilina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2603
+                ],
+                "argumentos": [
+                    "alergia_amoxicilina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3499,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s10",
+            "descricao": "",
+            "passo_de_saida_id": 3480,
+            "passo_de_saida": {
+                "id": 3480,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Amoxicilina",
+                "descricao": "Verificar Alergia a Amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3482,
+            "passo_de_entrada": {
+                "id": 3482,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Fosfomicina",
+                "descricao": "Verificar Alergia a Fosfomicina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 2610,
+                "nome": "com_alergia_amoxicilina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2603
+                ],
+                "argumentos": [
+                    "alergia_amoxicilina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3500,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s11",
+            "descricao": "",
+            "passo_de_saida_id": 3482,
+            "passo_de_saida": {
+                "id": 3482,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Fosfomicina",
+                "descricao": "Verificar Alergia a Fosfomicina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3483,
+            "passo_de_entrada": {
+                "id": 3483,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina. Medicamento n\u00e3o encontrado na integra\u00e7\u00e3o",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2611,
+                "nome": "sem_alergia_fosfomicina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    2604
+                ],
+                "argumentos": [
+                    "alergia_fosfomicina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3501,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s12",
+            "descricao": "",
+            "passo_de_saida_id": 3482,
+            "passo_de_saida": {
+                "id": 3482,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar Alergia a Fosfomicina",
+                "descricao": "Verificar Alergia a Fosfomicina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 3484,
+            "passo_de_entrada": {
+                "id": 3484,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 2612,
+                "nome": "com_alergia_fosfomicina",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    2604
+                ],
+                "argumentos": [
+                    "alergia_fosfomicina"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3502,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s13",
+            "descricao": "",
+            "passo_de_saida_id": 3477,
+            "passo_de_saida": {
+                "id": 3477,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Nitrofurantoina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3485,
+            "passo_de_entrada": {
+                "id": 3485,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                "descricao": "Prescrever tratamento de Profilaxia. Em cada consulta subsequente dever\u00e1 ser gerada uma nova prescri\u00e7\u00e3o. Recomendar a paciente que o tratamento seja mantido por 42 dias ap\u00f3s o parto.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3503,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s14",
+            "descricao": "",
+            "passo_de_saida_id": 3479,
+            "passo_de_saida": {
+                "id": 3479,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Cefalexina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3485,
+            "passo_de_entrada": {
+                "id": 3485,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                "descricao": "Prescrever tratamento de Profilaxia. Em cada consulta subsequente dever\u00e1 ser gerada uma nova prescri\u00e7\u00e3o. Recomendar a paciente que o tratamento seja mantido por 42 dias ap\u00f3s o parto.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3504,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s15",
+            "descricao": "",
+            "passo_de_saida_id": 3481,
+            "passo_de_saida": {
+                "id": 3481,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Amoxicilina",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3485,
+            "passo_de_entrada": {
+                "id": 3485,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                "descricao": "Prescrever tratamento de Profilaxia. Em cada consulta subsequente dever\u00e1 ser gerada uma nova prescri\u00e7\u00e3o. Recomendar a paciente que o tratamento seja mantido por 42 dias ap\u00f3s o parto.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3505,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s16",
+            "descricao": "",
+            "passo_de_saida_id": 3483,
+            "passo_de_saida": {
+                "id": 3483,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Com Fosfomicina. Medicamento n\u00e3o encontrado na integra\u00e7\u00e3o",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3485,
+            "passo_de_entrada": {
+                "id": 3485,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                "descricao": "Prescrever tratamento de Profilaxia. Em cada consulta subsequente dever\u00e1 ser gerada uma nova prescri\u00e7\u00e3o. Recomendar a paciente que o tratamento seja mantido por 42 dias ap\u00f3s o parto.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 3506,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "s17",
+            "descricao": "",
+            "passo_de_saida_id": 3484,
+            "passo_de_saida": {
+                "id": 3484,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                "descricao": "Prescri\u00e7\u00e3o de Tratamento Alternativo",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "passo_de_entrada_id": 3485,
+            "passo_de_entrada": {
+                "id": 3485,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Prescri\u00e7\u00e3o de Tratamento de Profilaxia",
+                "descricao": "Prescrever tratamento de Profilaxia. Em cada consulta subsequente dever\u00e1 ser gerada uma nova prescri\u00e7\u00e3o. Recomendar a paciente que o tratamento seja mantido por 42 dias ap\u00f3s o parto.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 2601,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_nitrofurantoina",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 625,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Nitrofurantoina"
+            }
+        },
+        {
+            "id": 2602,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_cefalexina",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 626,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Cefalexina"
+            }
+        },
+        {
+            "id": 2603,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_amoxicilina",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 627,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Amoxicilina"
+            }
+        },
+        {
+            "id": 2604,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "alergia_fosfomicina",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": {
+                "id": 628,
+                "type": "VinculoAlergia",
+                "type_verbose": "V\u00ednculo De Alergia",
+                "alergia": "Fosfomicina"
+            }
+        }
+    ]
+}

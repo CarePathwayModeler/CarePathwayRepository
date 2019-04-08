@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3341" url="" name="Febre Sem Sinais de Localiza&#xe7;&#xe3;o" code="H036">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20221" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Comprometimento" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="H&#xe1; comprometimento do estado geral?" url="" id="10241">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="comprometimento_estado_geral" id="19801" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20222" type="Tratamento" type_verbose="Tratamento" url="" name="Exames" description="&lt;p>- Checar sinais vitais do paciente. Avaliar necessidade de monitoriza&amp;ccedil;&amp;atilde;o&lt;/p>&#xA;&#xA;&lt;p>- Avaliar necessidade de expans&amp;atilde;o com SF 0,9% -- 20ml/kg&lt;/p>&#xA;&#xA;&lt;p>- Compressa fria.&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>- Banho &amp;aacute;gua corrente.&amp;nbsp;&lt;br />&#xA;&amp;nbsp;&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.18">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="FSSL" clinical_indication="N/A"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA (POR AMOSTRA)" exam_id="28160096" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Febre" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20223" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3 //@sequence.4">
+    <questions text="Idade menor que 28 dias de vida" url="" id="10242">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_28_ddv" id="19802" weight="1" value="false"/>
+    </questions>
+    <questions text="De 1 a 3 meses" url="" id="10243">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_1_a_3_meses" id="19803" weight="1" value="false"/>
+    </questions>
+    <questions text="Maior que 3 meses" url="" id="10244">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_3_meses" id="19804" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20224" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Interna&#xe7;&#xe3;o?" description="Decidir se deve haver interna&#xe7;&#xe3;o do paciente" inputSequences="//@sequence.13 //@sequence.17 //@sequence.18" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Internar paciente?" url="" id="10245">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="internacao" id="19805" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20225" type="Tratamento" type_verbose="Tratamento" url="" name="[Menor que 28 ddv] Conduta" description="&lt;ul>&#xA;&#x9;&lt;li>Avaliar desidrata&amp;ccedil;&amp;atilde;o por m&amp;aacute; pega em menor de 7 dias&lt;/li>&#xA;&#x9;&lt;li>Curva t&amp;eacute;rmica na observa&amp;ccedil;&amp;atilde;o de 2/2h por 6h&lt;/li>&#xA;&#x9;&lt;li>Se febre, medicar com Dipirona ou Paracetamol VO&amp;nbsp;&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.2" outputSequences="//@sequence.5">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="FSSL menor de 28 dias de vida" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="FSSL menor de 28 dias de vida" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Febre" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="FSSL menor de 28 dias de vida" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20226" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Exames (&lt; 28 ddv)" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.9 //@sequence.10">
+    <questions text="H&#xe1; altera&#xe7;&#xe3;o nos exames?" url="" id="10246">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_menor_28_ddv" id="19806" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20227" type="Tratamento" type_verbose="Tratamento" url="" name="[1 a 3 meses] Conduta" description="" inputSequences="//@sequence.3" outputSequences="//@sequence.6">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="FSSL e 1 a 3 meses" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="FSSL e 1 a 3 meses" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Febre" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="FSSL e 1 a 3 meses" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20228" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Exames (1 a 3 meses)" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="H&#xe1; altera&#xe7;&#xe3;o nos exames?" url="" id="10247">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_1_a_3_meses" id="19807" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="20229" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Maior que 3 meses] Avaliar dura&#xe7;&#xe3;o da febre" description="" inputSequences="//@sequence.4" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Febre com dura&#xe7;&#xe3;o maior ou igual a 48h?" url="" id="10248">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="febre_maior_48h" id="19808" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="20230" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Discutir com Chefia (2)" description="Discutir caso do paciente com chefia local" inputSequences="//@sequence.12" outputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:Information" id="20231" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Reavaliar com 48h" description="Reavaliar paciente ap&#xf3;s 48h" inputSequences="//@sequence.14" outputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20232" type="Tratamento" type_verbose="Tratamento" url="" name="ATB + Interna&#xe7;&#xe3;o" description="&lt;p dir=&quot;ltr&quot;>&lt;u>&lt;strong>Discutir com chefe de plant&amp;atilde;o a necessidade de interna&amp;ccedil;&amp;atilde;o.&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>Prescrever antibi&amp;oacute;ticoterapia conforme tabela abaixo:&lt;/p>&#xA;&#xA;&lt;table align=&quot;center&quot; border=&quot;1&quot; cellpadding=&quot;1&quot;>&#xA;&#x9;&lt;thead>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;th scope=&quot;col&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>&lt;strong>IDADE&lt;/strong>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/th>&#xA;&#x9;&#x9;&#x9;&lt;th scope=&quot;col&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>&lt;strong>ALTERA&amp;Ccedil;&amp;Atilde;O LABORATORIAL&lt;/strong>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/th>&#xA;&#x9;&#x9;&#x9;&lt;th scope=&quot;col&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>&lt;strong>ANTIBIOTICOTERAPIA&lt;/strong>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/th>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/thead>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Menores de 28 dias&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames s&amp;eacute;ricos e urin&amp;aacute;rios normais ou alterados&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Ampi + Genta (dose: conorme idade e peso do RN)&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Entre 28 dias e 2 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames s&amp;eacute;ricos e urin&amp;aacute;rios normais ou alterados&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Ceftriaxona 50-80mg/kg/dia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Menores de 2 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames s&amp;eacute;ricos e urin&amp;aacute;rios normais ou alterados + L&amp;iacute;quor alterado&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Ampicilina 200mg/kg/dia e Ceftriaxona para 100mg/kg/dia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Menores de 2 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Fator de risco de herpes&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Associar Aciclovir 300mg/kg/dia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>2 a 3 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames s&amp;eacute;ricos e urin&amp;aacute;rios alterados e L&amp;iacute;quor normal&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Ceftriaxona 50-80mg/kg/dia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Maiores de 2 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames s&amp;eacute;ricos e urin&amp;aacute;rios normais ou alterados + L&amp;iacute;quor alterado&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Ceftriaxona 100mg/kg/dia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Maiores de 2 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames s&amp;eacute;ricos normais e urin&amp;aacute;rios alterados&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Oral: Acetil-cefuroxima 30mg/kg/dia ou Amoxicilina + Clavulanato 50mg/kg/dia&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Parental: Ceftriaxina 50-80mg/kg/dia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Maiores de 2 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames normais&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Sem antibioticoterapia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Maiores de 3 meses&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Exames urin&amp;aacute;rios normais e hemograma e PCR alterado&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&#x9;&lt;td>&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Oral: Amoxicilina + Clavulanato 50mg/kg/dia&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:center&quot;>Parental: Ceftriaxina 50-80mg/kg/dia&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>" isTerminal="true" inputSequences="//@sequence.15">
+    <admission url="ADMISSION" admission="99996666" reason="FSSL" clinical_indication="N/A" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20233" type="Receita" type_verbose="Receita" url="" name="Alta + Orienta&#xe7;&#xf5;es" description="&lt;p>SINAIS DE ALARME, RETORNO PRECOCE SE:&lt;br />&#xA;- Queda do estado geral, irritabilidade&lt;br />&#xA;- Manchas no corpo&lt;br />&#xA;- Baixa aceita&amp;ccedil;&amp;atilde;o das mamadas / dieta&lt;br />&#xA;- Diminui&amp;ccedil;&amp;atilde;o da diurese&lt;br />&#xA;- V&amp;ocirc;mitos de repeti&amp;ccedil;&amp;atilde;o&lt;/p>" isTerminal="true" inputSequences="//@sequence.9 //@sequence.11 //@sequence.16">
+    <item id="5421" url="" name="Dipirona Solu&#xe7;&#xe3;o 50mg/ml _____ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ ml de 6/6h se dor ou febre"/>
+    <item id="5422" url="" name="Paracetamol Gotas  _____ 1 Fr." med_code="-1" presentation="-" access="1" period="0" period_unit="DD" frequency="0" frequency_unit="DD" orientations="Dar _____ gotas de 6/6h se dor ou febre."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20234" type="Tratamento" type_verbose="Tratamento" url="" name="[&lt;28 dias] ATB + Interna&#xe7;&#xe3;o" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Discutir com chefia local sobre necessidade de interna&amp;ccedil;&amp;atilde;o&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>- Avaliar necessidade de pun&amp;ccedil;&amp;atilde;o lombar&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Prescrever antibi&amp;oacute;ticoterapia: Ampicilina + Gentamicina (Dose: conforme idade e peso do RN)&lt;/span>&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.10">
+    <admission url="ADMISSION" admission="99996666" reason="FSSL" clinical_indication="N/A" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="20235" type="Tratamento" type_verbose="Tratamento" url="" name="[Febre > 48h] Exames" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Solicitar os exames a seguir:&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&#xA;&lt;ul>&#xA;&lt;/ul>&#xA;&lt;/p>" inputSequences="//@sequence.8" outputSequences="//@sequence.17">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="FSSL" clinical_indication="N/A"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+    <examination url="HEMOCULTURA AUTOMATIZADA (POR AMOSTRA)" exam_id="28160096" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+    <examination url="URINOCULTURA" exam_id="28100549" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+    <examination url="RX TORAX: P.A - LAT" exam_id="32050054" limb_side="" quantity="1" reason="Febre" clinical_indication="n/a"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="FSSL" clinical_indication="n/a"/>
+    <procedure url="BANHO EM AGUA CORRENTE" procedure="75050009" quantity="1"/>
+    <procedure url="COMPRESSA GELADA" procedure="75130079" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="20236" type="Receita" type_verbose="Receita" url="" name="Alta (sintom&#xe1;ticos) + Reavalia&#xe7;&#xe3;o 48h" description="SINAIS DE ALARME, RETORNO PRECOCE SE:&#xA;- Queda do estado geral, irritabilidade&#xA;- Manchas no corpo&#xA;- Baixa aceita&#xe7;&#xe3;o das mamadas / dieta&#xA;- Diminui&#xe7;&#xe3;o da diurese&#xA;- V&#xf4;mitos de repeti&#xe7;&#xe3;o" isTerminal="true" inputSequences="//@sequence.7">
+    <item id="5423" url="" name="Dipirona Solu&#xe7;&#xe3;o 50mg/ml _____ 1 Fr." med_code="-1" presentation="-" access="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="5424" url="" name="Paracetamol Gotas _____ gotas. 1 Fr." med_code="-1" presentation="-" access="1" period="5" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="20237" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (h&#xe1; comprometimento)" description="h&#xe1; comprometimento">
+    <operation name="h&#xe1; comprometimento" Operator="affirmation" id="19809">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comprometimento_estado_geral" id="19801" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="20238" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (n&#xe3;o h&#xe1; comprometimento)" description="n&#xe3;o h&#xe1; comprometimento">
+    <operation name="n&#xe3;o h&#xe1; comprometimento" id="19810">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="comprometimento_estado_geral" id="19801" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="20239" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (&lt; 28 ddv)" description="&lt; 28 ddv">
+    <operation name="&lt; 28 ddv" Operator="affirmation" id="19811">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_28_ddv" id="19802" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.2" id="20240" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (de 1 a 3 meses)" description="1 a 3 meses">
+    <operation name="1 a 3 meses" Operator="affirmation" id="19812">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_1_a_3_meses" id="19803" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="20241" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (maior que 3 meses)" description="maior que 3 meses">
+    <operation name="maior que 3 meses" Operator="affirmation" id="19813">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_3_meses" id="19804" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="20242" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="Incondicional"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="20243" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <sequence inputStep="//@element.15" outputStep="//@element.8" id="20244" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (menos de 48h)" description="menos de 48h">
+    <operation name="menos de 48h" id="19814">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="febre_maior_48h" id="19808" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.8" id="20245" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (mais de 48h)" description="mais de 48h">
+    <operation name="mais de 48h" Operator="affirmation" id="19815">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="febre_maior_48h" id="19808" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.5" id="20246" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (sem alteracoes  - 28 ddv)" description="sem alteracoes">
+    <operation name="sem alteracoes" id="19816">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_menor_28_ddv" id="19806" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.5" id="20247" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (com alteracoes - 28 ddv)" description="com alteracoes">
+    <operation name="com alteracoes (28 ddv)" Operator="affirmation" id="19817">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_menor_28_ddv" id="19806" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.7" id="20248" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (sem alteracao - 1 a 3 meses)" description="sem alteracao - 1 a 3 meses">
+    <operation name="sem alteracao (1 a 3 meses)" id="19818">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_1_a_3_meses" id="19807" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.7" id="20249" type="Sequencia" type_verbose="Sequencia" url="" name="S15 (com alteracao - 1 a 3 meses)" description="com alteracao (1 a 3 meses)">
+    <operation name="com alteracao (1 a 3 meses)" Operator="affirmation" id="19819">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_1_a_3_meses" id="19807" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.9" id="20250" type="Sequencia" type_verbose="Sequencia" url="" name="S16" description="Incondicional"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.3" id="20251" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (n&#xe3;o interna)" description="n&#xe3;o interna">
+    <operation name="n&#xe3;o interna" id="19820">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="internacao" id="19805" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.3" id="20252" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (interna)" description="interna">
+    <operation name="interna" Operator="affirmation" id="19821">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="internacao" id="19805" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="20253" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description="Incondicional"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.14" id="20254" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="-"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="20255" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description="-"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="comprometimento_estado_geral" id="19801" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_menor_28_ddv" id="19802" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_1_a_3_meses" id="19803" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="idade_maior_3_meses" id="19804" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="internacao" id="19805" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_menor_28_ddv" id="19806" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="alteracao_exames_1_a_3_meses" id="19807" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="febre_maior_48h" id="19808" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

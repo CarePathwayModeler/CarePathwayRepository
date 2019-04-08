@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3108" url="" name="DHEG" code="H031">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17046" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Press&#xe3;o" description="Verifique a situa&#xe7;&#xe3;o inicial da paciente para seguir com o tratamento adequado" inputSequences="//@sequence.6" outputSequences="//@sequence.0 //@sequence.1 //@sequence.7">
+    <questions text="PA >= 140/90 e PA &lt; 160/110 mmHg" url="" id="8893">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_pa_maior14_menor16" id="16874" weight="1" value="false"/>
+    </questions>
+    <questions text="PA >= 160/110 mmHg" url="" id="8894">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_pa_maior16" id="16875" weight="1" value="false"/>
+    </questions>
+    <questions text="Eclampsia" url="" id="8895">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_eclampsia" id="16876" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17047" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Iniciais" description="Solicite os exames para avaliar a situa&#xe7;&#xe3;o da paciente." inputSequences="//@sequence.3" outputSequences="//@sequence.6">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="teste" clinical_indication="teste"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="TGO/AST (ASPARTATO AMINOTRANSFERASE)" exam_id="28011368" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="TGP/ALT (ALANINA AMINOTRANSFERASE)" exam_id="28011376" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="LDH (DESIDROGENASE LATICA)" exam_id="28010655" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="BILIRRUBINA TOTAL E FRACOES" exam_id="28010299" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="SUMARIO DE URINA  (TIPO I)" exam_id="28130367" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="US OBSTETRICA CONVENCIONAL COM DOPPLER COLORI" exam_id="33020019" limb_side="" quantity="1" reason="t" clinical_indication="t"/>
+    <examination url="ACIDO URICO  (SANGUE)" exam_id="28010175" limb_side="" quantity="1" reason="Protocolo de DHEG" clinical_indication="n/a"/>
+    <examination url="FOSFATASE ALCALINA" exam_id="28010850" limb_side="" quantity="1" reason="DHEG" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17048" type="Tratamento" type_verbose="Tratamento" url="" name="Exames Eclampsia" description="&lt;p>Se prescrever Adalat:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Tomar 1 comprimido a cada 30 minutos se a PAS &amp;gt; 160mmHg e/ou PAD &amp;gt; 110. Fazer &lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>&lt;u>no m&amp;aacute;ximo&amp;nbsp; 3 doses.&lt;/u>&lt;/strong>&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Suspender Sulfato de magn&amp;eacute;sio se:&lt;/p>&#xA;&#xA;&lt;p>- &lt;u>FR &amp;lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&amp;euml;ncia de reflexos patelares.&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>Se sinais de intoxica&amp;ccedil;&amp;atilde;o pelo sulfato, fazer Gluconato de c&amp;aacute;lcio a 10%, uma ampola EV embolus.&lt;/p>&#xA;&#xA;&lt;p>Prescrever Hidralazina somente se:&lt;br />&#xA;- &lt;u>PA &amp;gt;= 160/110 mmHg&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>A dose de ataque do MgSO4 (12ml) dever&amp;aacute; ser dilu&amp;iacute;da em 250ml de SG 5% e correr em 20 minutos.&lt;br />&#xA;A dose de manuten&amp;ccedil;&amp;atilde;o do MgSO4 (24ml) dever&amp;aacute; ser dilu&amp;iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.&lt;/p>&#xA;&#xA;&lt;p>O2 8L/min sob cat&amp;eacute;ter nasal.&lt;/p>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <medication url="" med_id="43931" id="8969" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="31" access="6" daily_dosage="12" cycles="1" treatement_time="8969" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;%&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:2246,&quot;nome_diluente&quot;:&quot;SORO GLICOSADO 5%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:10,&quot;administracao_diluicao&quot;:&quot;ENDO&quot;,&quot;id&quot;:3747,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1554}"/>
+    <medication url="" med_id="48879" id="8970" name="SORO GLICOSADO 50% 500ML TUBO 500 ML" brand="" unit="BL" access="6" daily_dosage="4" cycles="1" treatement_time="8970" standard="null"/>
+    <medication url="" med_id="115690" id="8971" name="HIDRALAZINA AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="8971" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;ev&quot;,&quot;id&quot;:3748,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1302}"/>
+    <medication url="" med_id="43931" id="8972" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="24" cycles="1" treatement_time="8972" frequency="6" standard="null"/>
+    <medication url="" med_id="36145" id="8973" name="ADALAT 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="8973" standard="null"/>
+    <procedure url="SONDAGEM VESICAL DE DEMORA" procedure="76040005" quantity="1"/>
+    <procedure url="O2" procedure="75010026" quantity="1"/>
+    <procedure url="CURVA PRESSORICA" procedure="75130077" frequency="1" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17049" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Verificar Sinais de Gravidade" description="Verifique o resultado dos exames e avalie sinais de gravidade para a paciente" inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Cefaleia persistente, turva&#xe7;&#xe3;o visual, nauseas, vomitos ou epigastralgia" url="" id="8896">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_criterios_cefaleia" id="16877" weight="1" value="false"/>
+    </questions>
+    <questions text="Plaquetas &lt; 150.000" url="" id="8897">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_plaquetas" id="16878" weight="1" value="false"/>
+    </questions>
+    <questions text="Creatinina > 1,1" url="" id="8898">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_creatinina" id="16879" weight="1" value="false"/>
+    </questions>
+    <questions text="TGO e TGP 2x acima do valor normal" url="" id="8899">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_tgo_tgp" id="16880" weight="1" value="false"/>
+    </questions>
+    <questions text="Dispneia Intensa" url="" id="8900">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_dispneia_intensa" id="16921" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17050" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Idade Gestacional (Inicial)" description="Qual a idade gestacional da paciente?" isInitial="true" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="IG >= 20 semanas?" url="" id="8941">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_igual_20_semanas" id="16922" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17051" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Hipertens&#xe3;o Cr&#xf4;nica" description="Tratar paciente como paciente de hipertens&#xe3;o cr&#xf4;nica" inputSequences="//@sequence.4" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Information" id="17052" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Pr&#xe9;-Natal de Alto Risco" description="Encaminhar paciente ao pr&#xe9;-natal de alto risco." isTerminal="true" inputSequences="//@sequence.5 //@sequence.12"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17053" type="Tratamento" type_verbose="Tratamento" url="" name="[Eclampsia] Interna&#xe7;&#xe3;o e Tratamento" description="&lt;p>&lt;u>&lt;strong>Solicitar interna&amp;ccedil;&amp;atilde;o da paciente.&lt;/strong>&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>SE PACIENTE COM GESTA&amp;Ccedil;&amp;Atilde;O INFERIOR A 37 SEMANAS&lt;/strong>&lt;/u>, tratar com &lt;strong>Celestone Soluspan&lt;/strong>.&lt;/p>&#xA;&#xA;&lt;p>SE AP&amp;Oacute;S SULFATO A PACIENTE MANTIVER CRISE CONVULSIVA, PRESCREVER HIDANTAL CONFORME ESQUEMA:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>50-70kg&lt;/strong>&lt;/u>&amp;nbsp;- 1g (04 ampolas) - 750mg (3 ampolas) em 100 ml SF 0,9%, em 30 min. 250mg em SF 0,9%, nas pr&amp;oacute;ximas 2h.&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>&amp;lt; 50kg&lt;/strong>&lt;/u>&amp;nbsp;- 750mg (03 ampolas) - 500mg (02 ampolas) em 100 ml de SF 0,9%, EV, em 30 min. 250mg (01 ampola) em SF 0,9%, nas pr&amp;oacute;ximas 2h.&lt;/li>&#xA;&#x9;&lt;li>&lt;u>&lt;strong>&amp;gt; 70kg&lt;/strong>&lt;/u>&amp;nbsp;- 1,5g - 1g (04 ampolas) em 100 ml SF 0,9%, EV, em 30 min. e 500mg (02 ampolas) em SF 0,9%, nas pr&amp;oacute;ximas 2h.&lt;/li>&#xA;&lt;/ul>" isTerminal="true" inputSequences="//@sequence.2">
+    <medication url="" med_id="37150" id="8974" name="CELESTONE SOLUSPAN AMPL 1 ML" brand="" unit="AL" access="5" daily_dosage="1" cycles="1" treatement_time="8974" standard="null"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com Ecl&#xe2;mpsia" clinical_indication="SE AP&#xd3;S SULFATO A PACIENTE MANTIVER CRISE CONVULSIVA, PRESCREVER HIDANTAL CONFORME ESQUEMA:&#xA;&#xA;50-70kg - 1g (04 ampolas) - 750mg (3 ampolas) em 100 ml SF 0,9%, em 30 min. 250mg em SF 0,9%, nas pr&#xf3;ximas 2h.&#xA;&lt; 50kg - 750mg (03 ampolas) - 500mg (02 ampolas) em 100 ml de SF 0,9%, EV, em 30 min. 250mg (01 ampola) em SF 0,9%, nas pr&#xf3;ximas 2h.&#xA;> 70kg - 1,5g - 1g (04 ampolas) em 100 ml SF 0,9%, EV, em 30 min. e 500mg (02 ampolas) em SF 0,9%, nas pr&#xf3;ximas 2h." quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17054" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[PA > 160] Sofrimento Fetal?" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.8 //@sequence.10">
+    <questions text="H&#xe1; sinais de sofrimento fetal?" url="" id="8942">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal1" id="16923" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17055" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[PA &lt;= 160] Sofrimento Fetal?" description="Sofrimento Fetal?" inputSequences="//@sequence.7" outputSequences="//@sequence.9 //@sequence.11">
+    <questions text="H&#xe1; sinais de sofrimento fetal?" url="" id="8943">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal2" id="16924" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17056" type="Tratamento" type_verbose="Tratamento" url="" name="Sulfato + Interna&#xe7;&#xe3;o" description="Internar paciente para tratamento" isTerminal="true" inputSequences="//@sequence.10 //@sequence.13">
+    <medication url="" med_id="43931" id="8975" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="12" cycles="1" treatement_time="8975" standard="null"/>
+    <admission url="ADMISSION" admission="45990000" reason="Paciente com PA > 160/110 e sob suspeita de DHEG" clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17057" type="Tratamento" type_verbose="Tratamento" url="" name="[Sofrimento Fetal] Interna&#xe7;&#xe3;o" description="Internar paciente por exibi&#xe7;&#xe3;o de sinais de sofrimento fetal." isTerminal="true" inputSequences="//@sequence.8 //@sequence.9">
+    <admission url="ADMISSION" admission="45990000" reason="Paciente exibe sinais de sofrimento fetal. Interna&#xe7;&#xe3;o para resolu&#xe7;&#xe3;o emergencial da gesta&#xe7;&#xe3;o." clinical_indication="n/a" quantity="1"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17058" type="Tratamento" type_verbose="Tratamento" url="" name="[PA > 160] Exames" description="&lt;p>Se prescrever Adalat:&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Tomar 1 comprimido a cada 30 minutos se a PAS &amp;gt; 160mmHg e/ou PAD &amp;gt; 110. Fazer &lt;span style=&quot;color:#e74c3c&quot;>&lt;strong>&lt;u>no m&amp;aacute;ximo&amp;nbsp; 3 doses.&lt;/u>&lt;/strong>&lt;/span>&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p>Suspender Sulfato de magn&amp;eacute;sio se:&lt;/p>&#xA;&#xA;&lt;p>- &lt;u>FR &amp;lt; 16 iRPM, Diurese menor ou igual a 30ml/hora e/ou aus&amp;euml;ncia de reflexos patelares.&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>Se sinais de intoxica&amp;ccedil;&amp;atilde;o pelo sulfato, fazer Gluconato de c&amp;aacute;lcio a 10%, uma ampola EV embolus.&lt;/p>&#xA;&#xA;&lt;p>Prescrever Hidralazina somente se:&lt;br />&#xA;- &lt;u>PA &amp;gt;= 160/110 mmHg&lt;/u>&lt;/p>&#xA;&#xA;&lt;p>A dose de ataque do MgSO4 (12ml) dever&amp;aacute; ser dilu&amp;iacute;da em 250ml de SG 5% e correr em 20 minutos.&lt;br />&#xA;A dose de manuten&amp;ccedil;&amp;atilde;o do MgSO4 (24ml) dever&amp;aacute; ser dilu&amp;iacute;da em 500ml de SG 5% e correr em BIC 84 ml/hora.&lt;/p>&#xA;&#xA;&lt;p>O2 8L/min sob cat&amp;eacute;ter nasal.&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.14">
+    <medication url="" med_id="43931" id="8976" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="31" access="6" daily_dosage="12" cycles="1" treatement_time="8976" standard="{&quot;quantidade_dosagem&quot;:10,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;TUBO&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;%&quot;,&quot;codigo_ocorrencia_diluicao&quot;:1,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:2246,&quot;nome_diluente&quot;:&quot;SORO GLICOSADO 5%&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:10,&quot;administracao_diluicao&quot;:&quot;ENDO&quot;,&quot;id&quot;:3749,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1554}"/>
+    <medication url="" med_id="48879" id="8977" name="SORO GLICOSADO 50% 500ML TUBO 500 ML" brand="" unit="BL" access="6" daily_dosage="4" cycles="1" treatement_time="8977" standard="null"/>
+    <medication url="" med_id="115690" id="8978" name="HIDRALAZINA AMPL 1 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="8978" standard="{&quot;quantidade_dosagem&quot;:20,&quot;mnemonico&quot;:&quot;EV&quot;,&quot;codigo_apresentacao_diluente&quot;:&quot;AMPL&quot;,&quot;codigo_unidade_dosagem&quot;:&quot;MG&quot;,&quot;codigo_ocorrencia_diluicao&quot;:3,&quot;flag_tipo_administracao&quot;:&quot;&quot;,&quot;flag_fragmenta&quot;:&quot;N&quot;,&quot;codigo_diluente&quot;:5259,&quot;nome_diluente&quot;:&quot;AGUA DESTILADA&quot;,&quot;quantidade_diluente&quot;:100,&quot;quantidade_volume&quot;:1,&quot;administracao_diluicao&quot;:&quot;ev&quot;,&quot;id&quot;:3750,&quot;tipo_acesso&quot;:&quot;6&quot;,&quot;tipo_administracao&quot;:&quot;Lento&quot;,&quot;codigo_ordem_administracao&quot;:1,&quot;codigo_principio_ativo&quot;:1302}"/>
+    <medication url="" med_id="43931" id="8979" name="SULFATO DE MAGNESIO 50% AMPL 10 ML" brand="" unit="ML" access="6" daily_dosage="24" cycles="1" treatement_time="8979" frequency="6" standard="null"/>
+    <medication url="" med_id="36145" id="8980" name="ADALAT 20 MG COMP 1 UD" brand="" unit="MG" access="1" daily_dosage="20" cycles="1" treatement_time="8980" standard="null"/>
+    <procedure url="SONDAGEM VESICAL DE DEMORA" procedure="76040005" quantity="1"/>
+    <procedure url="O2" procedure="75010026" quantity="1"/>
+    <procedure url="CURVA PRESSORICA" procedure="75130077" frequency="1" quantity="1"/>
+  </element>
+  <sequence inputStep="//@element.12" outputStep="//@element.0" id="17059" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (pa > 16)" description="pa > 16">
+    <operation name="pa > 16" Operator="affirmation" id="16927">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_pa_maior16" id="16875" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17060" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="s3">
+    <operation name="eclampsia" Operator="affirmation" id="16928">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_eclampsia" id="16876" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.2" id="17121" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.4" id="17122" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (IG >= 20)" description="IG >= 20">
+    <operation name="IG >= 20" Operator="affirmation" id="16929">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_igual_20_semanas" id="16922" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="17123" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (IG &lt; 20)" description="IG &lt; 20">
+    <operation name="IG &lt; 20" id="16930">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_igual_20_semanas" id="16922" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="17124" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="Incondicional"/>
+  <sequence inputStep="//@element.0" outputStep="//@element.1" id="17125" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="Incondicional"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="17126" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (PA > 140/110 e &lt; 160/110)" description="PA > 140/110 e &lt; 160/110">
+    <operation name="PA > 140/110 e &lt; 160/110" Operator="affirmation" id="16931">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_pa_maior14_menor16" id="16874" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="17127" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (ha sofrimento fetal)" description="ha sofrimento fetal">
+    <operation name="ha sofrimento fetal" Operator="affirmation" id="16932">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal1" id="16923" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="17128" type="Sequencia" type_verbose="Sequencia" url="" name="S10 (ha sofrimento fetal)" description="ha sofrimento fetal">
+    <operation name="ha sofrimento fetal" Operator="affirmation" id="16933">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal2" id="16924" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.8" id="17129" type="Sequencia" type_verbose="Sequencia" url="" name="S11 (sem sofrimento fetal)" description="sem sofrimento fetal">
+    <operation name="sem sofrimento fetal" id="16934">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal1" id="16923" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.9" id="17130" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (sem sofrimento fetal)" description="sem sofrimento fetal">
+    <operation name="sem sofrimento fetal" id="16935">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal2" id="16924" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="17131" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (sem sinais de gravidade)" description="sem sinais de gravidade">
+    <operation name="sinais gravidade &lt; 1" Operator="lessThan" id="16936">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sinais de Gravidade" Operator="addition" id="16926">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_criterios_cefaleia" id="16877" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_plaquetas" id="16878" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_creatinina" id="16879" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_tgo_tgp" id="16880" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_dispneia_intensa" id="16921" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16925" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.3" id="17132" type="Sequencia" type_verbose="Sequencia" url="" name="S14 (com sinais de gravidade)" description="com sinais de gravidade">
+    <operation name="sinais gravidade >= 1" Operator="greaterOrEqual" id="16937">
+      <operand xsi:type="pathwayMetamodel:Operation" name="Sinais de Gravidade" Operator="addition" id="16926">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_criterios_cefaleia" id="16877" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_plaquetas" id="16878" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_creatinina" id="16879" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_tgo_tgp" id="16880" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_dispneia_intensa" id="16921" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="16925" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.12" id="17133" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="Incondicional"/>
+  <operation name="Sinais de Gravidade" Operator="addition" id="16926">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_criterios_cefaleia" id="16877" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_plaquetas" id="16878" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_creatinina" id="16879" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_tgo_tgp" id="16880" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_dispneia_intensa" id="16921" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_pa_maior14_menor16" id="16874" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_pa_maior16" id="16875" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_eclampsia" id="16876" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_criterios_cefaleia" id="16877" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_plaquetas" id="16878" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_creatinina" id="16879" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_tgo_tgp" id="16880" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aux_gravidade_dispneia_intensa" id="16921" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig_maior_igual_20_semanas" id="16922" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal1" id="16923" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sofrimento_fetal2" id="16924" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="16925" weight="1" value="1.0"/>
+</pathwayMetamodel:Pathway>

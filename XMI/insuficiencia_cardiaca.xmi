@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3247" url="" name="Insufici&#xea;ncia Card&#xed;aca" code="H045">
+  <element xsi:type="pathwayMetamodel:Information" id="19197" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Exame F&#xed;sico &amp; Hist&#xf3;rico" description="&lt;p>Realizar exame f&amp;iacute;sico no paciente.&lt;/p>&#xA;&#xA;&lt;p>Interrogar sobre medica&amp;ccedil;&amp;otilde;es em uso, exames pr&amp;eacute;vios realizados, hist&amp;oacute;ria de IC, SCA, revasculariza&amp;ccedil;&amp;atilde;o, HAS, DM, DRC, AVC.&lt;/p>" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19198" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Investigar Sintomas" description="&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;u>H&amp;aacute; congest&amp;atilde;o?&lt;/u>&lt;/strong>&lt;/span> (Paciente com crepita&amp;ccedil;&amp;otilde;es na ausculta, edema de membros inferiores, turg&amp;ecirc;ncia jugular, refluxo hepato-jugular)&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:14px&quot;>&lt;strong>&lt;u>H&amp;aacute; m&amp;aacute; perfus&amp;atilde;o?&lt;/u>&lt;/strong>&lt;/span> (Paciente com pele fria, &amp;uacute;mida, tempo de enchimento capilar &amp;gt; 3 segundos, contra&amp;ccedil;&amp;atilde;o da diurese)&lt;/p>&#xA;&#xA;&lt;p>&lt;br />&#xA;&amp;nbsp;&lt;/p>" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.3 //@sequence.4 //@sequence.5">
+    <questions text="-" url="" id="9834">
+      <answers xsi:type="pathwayMetamodel:Choice" name="congestao_perfusao" id="18963" weight="1" value="0.0">
+        <option description="Sem congest&#xe3;o e bem perfundido" weight="1"/>
+        <option description="Com congest&#xe3;o e bem perfundido" weight="2"/>
+        <option description="Com congest&#xe3;o e mal perfundido" weight="3"/>
+        <option description="Sem congest&#xe3;o e mal perfundido" weight="4"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19199" type="Tratamento" type_verbose="Tratamento" url="" name="Perfil A: Quente e Seco" description="&lt;p>&lt;strong>&lt;span style=&quot;font-size:16px&quot;>Encaminhar paciente para chefia local&lt;/span>&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>Investigar fator desencadeador da descompensa&amp;ccedil;&amp;atilde;o card&amp;iacute;aca.&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Infec&amp;ccedil;&amp;atilde;o?&lt;/li>&#xA;&#x9;&lt;li>SCA?&lt;/li>&#xA;&#x9;&lt;li>Abandono do tratamento para IC?&lt;/li>&#xA;&#x9;&lt;li>Anemia?&lt;/li>&#xA;&#x9;&lt;li>DM n&amp;atilde;o controlada?&lt;/li>&#xA;&#x9;&lt;li>Disfun&amp;ccedil;&amp;atilde;o tireoidiana?&lt;/li>&#xA;&#x9;&lt;li>Arritmias?&lt;/li>&#xA;&#x9;&lt;li>TEP?&lt;/li>&#xA;&#x9;&lt;li>Abuso de drogas?&lt;/li>&#xA;&#x9;&lt;li>Gravidez?&lt;/li>&#xA;&lt;/ul>" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="N/A"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="19200" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Orienta&#xe7;&#xf5;es" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>Se paciente est&amp;aacute;vel e sem sinais de gravidade: otimizar medica&amp;ccedil;&amp;otilde;es da IC, tratar fator desencadeante e agendar consulta com cardiologista.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.7 //@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19201" type="Tratamento" type_verbose="Tratamento" url="" name="Perfil B: Quente e &#xda;mido" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Encaminhar paciente para chefia local&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>Prescrever furosemida (1-2 ampolas), suporte de O2 se necess&amp;aacute;rio, VNI se necess&amp;aacute;rio, se pico hipertensivo iniciar tridil/vasodilatador oral&lt;br />&#xA;&lt;br />&#xA;&lt;u>&lt;strong>Indica&amp;ccedil;&amp;atilde;o de VNI&lt;/strong>&lt;/u>: Pacientes com congest&amp;atilde;o pulmonar, SpO2 &amp;lt; 92% ou FR &amp;gt; 30 ipm com m&amp;aacute;scara com reservat&amp;oacute;rio,uso de musculatura acess&amp;oacute;ria, n&amp;iacute;vel de consci&amp;ecirc;ncia preservado(GCS &amp;gt; 13) e reflexos de prote&amp;ccedil;&amp;atilde;o de via a&amp;eacute;rea presentes&lt;br />&#xA;&lt;br />&#xA;&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Reavaliar ap&amp;oacute;s 30 - 60 minutos&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3">
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="N/A"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="LACTATO" exam_id="28090209" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <medication url="" med_id="36722" id="9821" name="FUROSEMIDA 20 MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="2" cycles="1" treatement_time="9821" standard="null"/>
+    <medication url="" med_id="59790" id="9822" name="TRIDIL 50MG AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9822" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19202" type="Tratamento" type_verbose="Tratamento" url="" name="Perfil C: Frio e &#xda;mido" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Encaminhar paciente para chefia local&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;u>&lt;strong>Solicitar avalia&amp;ccedil;&amp;atilde;o do cardiologista&lt;/strong>&lt;/u>&lt;br />&#xA;&lt;br />&#xA;Prescrever furosemida (1-2 ampolas), considerar noradrenalina + dobutamina, VNI, &lt;u>&lt;strong>considerar internamento em UTI&lt;/strong>&lt;/u>&lt;br />&#xA;&lt;br />&#xA;&lt;u>&lt;strong>Indica&amp;ccedil;&amp;atilde;o de VNI&lt;/strong>&lt;/u>: Pacientes com congest&amp;atilde;o pulmonar, SpO2 &amp;lt; 92% ou FR &amp;gt; 30 ipm com m&amp;aacute;scara com reservat&amp;oacute;rio,uso de musculatura acess&amp;oacute;ria, n&amp;iacute;vel de consci&amp;ecirc;ncia preservado(GCS &amp;gt; 13) e reflexos de prote&amp;ccedil;&amp;atilde;o de via a&amp;eacute;rea presentes&lt;br />&#xA;&lt;br />&#xA;&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Reavaliar ap&amp;oacute;s 30 - 60 minutos&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.4">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="CREATINO FOSFOQUINASE - CK MASSA" exam_id="28012119" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="N/A"/>
+    <examination url="TEMPO DE PROTROMBINA" exam_id="28040732" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca Perfil C" clinical_indication="n/a"/>
+    <examination url="TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO" exam_id="28040791" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca Perfil C" clinical_indication="n/a"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <medication url="" med_id="36722" id="9823" name="FUROSEMIDA 20 MG AMPL 2 ML" brand="" unit="AL" access="6" daily_dosage="2" cycles="1" treatement_time="9823" standard="null"/>
+    <medication url="" med_id="59790" id="9824" name="TRIDIL 50MG AMPL 10 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9824" standard="null"/>
+    <medication url="" med_id="50571" id="9825" name="NORADRENALINA (LEVOPHED) AMPL 4 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9825" standard="null"/>
+    <medication url="" med_id="39918" id="9826" name="DOBUTREX AMPL 20 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9826" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19203" type="Tratamento" type_verbose="Tratamento" url="" name="Perfil D: Frio e Seco" description="&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Encaminhar paciente para chefia local&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p>&lt;br />&#xA;Fazer expans&amp;atilde;o vol&amp;ecirc;mica com al&amp;iacute;quotas de soro fisiol&amp;oacute;gico 250ml em 30min, reavaliando a ausculta&lt;br />&#xA;&lt;br />&#xA;Se n&amp;atilde;o melhorar, considerar iniciar inotr&amp;oacute;pico (dobutamina) e avalia&amp;ccedil;&amp;atilde;o do cardiologista&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>" isTerminal="true" inputSequences="//@sequence.5">
+    <examination url="HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS" exam_id="28040481" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="CREATINO FOSFOQUINASE - CK MASSA" exam_id="28012119" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="n/a"/>
+    <examination url="RX TORAX P.A" exam_id="32050038" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca perfil A" clinical_indication="N/A"/>
+    <examination url="GASOMETRIA ARTERIAL" exam_id="28010965" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="ELETROCARDIOGRAMA" exam_id="20010010" limb_side="" quantity="1" reason="Insufici&#xea;ncia card&#xed;aca" clinical_indication="n/a"/>
+    <medication url="" med_id="43796" id="9827" name="SORO FISIOLOGICO 0,9% 250 ML TUBO 250 ML" brand="" unit="BL" access="6" daily_dosage="1" cycles="1" treatement_time="9827" standard="null"/>
+    <medication url="" med_id="39918" id="9828" name="DOBUTREX AMPL 20 ML" brand="" unit="AL" access="6" daily_dosage="1" cycles="1" treatement_time="9828" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="19204" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Perfil A] Avaliar exames" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.6 //@sequence.7">
+    <questions text="For descoberta causa da descompensa&#xe7;&#xe3;o?" url="" id="9835">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="descoberta_causa_descompensacao" id="18964" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="19205" type="Tratamento" type_verbose="Tratamento" url="" name="[Perfil A] Exames adicionais" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.8">
+    <examination url="POTASSIO" exam_id="28011210" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="PCR  DETERMINACAO QUANTITATIVA" exam_id="28060865" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="SODIO (SANGUE)" exam_id="28011279" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="TROPONINA" exam_id="28011783" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="D' DIMERO" exam_id="28140110" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+    <examination url="CREATINO FOSFOQUINASE - CK MASSA" exam_id="28012119" limb_side="" quantity="1" reason="Insufici&#xea;ncia Card&#xed;aca" clinical_indication="n/a"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="19206" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="19207" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Perfil A)" description="Perfil A">
+    <operation name="perfil a - bem perfundido e sem congest&#xe3;o" Operator="equal" id="18971">
+      <operand xsi:type="pathwayMetamodel:Choice" name="congestao_perfusao" id="18963" weight="1" value="0.0">
+        <option description="Sem congest&#xe3;o e bem perfundido" weight="1"/>
+        <option description="Com congest&#xe3;o e bem perfundido" weight="2"/>
+        <option description="Com congest&#xe3;o e mal perfundido" weight="3"/>
+        <option description="Sem congest&#xe3;o e mal perfundido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="18965" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.2" id="19208" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="Incondicional"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.1" id="19209" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Perfil B)" description="Perfil B">
+    <operation name="Perfil B - bem perfundido e com congest&#xe3;o" Operator="equal" id="18972">
+      <operand xsi:type="pathwayMetamodel:Choice" name="congestao_perfusao" id="18963" weight="1" value="0.0">
+        <option description="Sem congest&#xe3;o e bem perfundido" weight="1"/>
+        <option description="Com congest&#xe3;o e bem perfundido" weight="2"/>
+        <option description="Com congest&#xe3;o e mal perfundido" weight="3"/>
+        <option description="Sem congest&#xe3;o e mal perfundido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="18966" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.1" id="19210" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (Perfil C)" description="Perfil C">
+    <operation name="Perfil C - mal perfundido e com congest&#xe3;o" Operator="equal" id="18973">
+      <operand xsi:type="pathwayMetamodel:Choice" name="congestao_perfusao" id="18963" weight="1" value="0.0">
+        <option description="Sem congest&#xe3;o e bem perfundido" weight="1"/>
+        <option description="Com congest&#xe3;o e bem perfundido" weight="2"/>
+        <option description="Com congest&#xe3;o e mal perfundido" weight="3"/>
+        <option description="Sem congest&#xe3;o e mal perfundido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="3" id="18967" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.1" id="19211" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Perfil D)" description="Perfil D">
+    <operation name="Perfil D - mal perfundido e sem congest&#xe3;o" Operator="equal" id="18974">
+      <operand xsi:type="pathwayMetamodel:Choice" name="congestao_perfusao" id="18963" weight="1" value="0.0">
+        <option description="Sem congest&#xe3;o e bem perfundido" weight="1"/>
+        <option description="Com congest&#xe3;o e bem perfundido" weight="2"/>
+        <option description="Com congest&#xe3;o e mal perfundido" weight="3"/>
+        <option description="Sem congest&#xe3;o e mal perfundido" weight="4"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="4" id="18968" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="19212" type="Sequencia" type_verbose="Sequencia" url="" name="S8 (N&#xe3;o descoberta causa da descompensa&#xe7;&#xe3;o)" description="N&#xe3;o descoberta causa da descompensa&#xe7;&#xe3;o">
+    <operation name="N&#xe3;o descoberta causa" id="18975">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="descoberta_causa_descompensacao" id="18964" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.7" id="19213" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (Descoberta causa da descompensa&#xe7;&#xe3;o)" description="Descoberta causa da descompensa&#xe7;&#xe3;o">
+    <operation name="Descoberta causa" Operator="affirmation" id="18976">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="descoberta_causa_descompensacao" id="18964" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.8" id="19214" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="Incondicional"/>
+  <operation name="bem perfundido" id="18969"/>
+  <operation name="sem congest&#xe3;o" id="18970"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="congestao_perfusao" id="18963" weight="1" value="0.0">
+    <option description="Sem congest&#xe3;o e bem perfundido" weight="1"/>
+    <option description="Com congest&#xe3;o e bem perfundido" weight="2"/>
+    <option description="Com congest&#xe3;o e mal perfundido" weight="3"/>
+    <option description="Sem congest&#xe3;o e mal perfundido" weight="4"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="descoberta_causa_descompensacao" id="18964" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="18965" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="18966" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="3" id="18967" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="4" id="18968" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

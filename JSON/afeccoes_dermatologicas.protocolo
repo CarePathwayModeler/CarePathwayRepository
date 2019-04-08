@@ -1,0 +1,4135 @@
+{
+    "id": 3246,
+    "url": "",
+    "codigo": "H037",
+    "nome": "Afec\u00e7\u00f5es Dermatol\u00f3gicas",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 424,
+    "versao": 14,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:20:16.312751-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:13:47.978395-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T16:20:16.312751-03:00"
+    },
+    "elementos": [
+        {
+            "id": 19074,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Quick SOFA",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9786,
+                    "url": "",
+                    "texto": "Paciente apresenta confus\u00e3o mental",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18842,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quick_sofa_confusao_mental",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9787,
+                    "url": "",
+                    "texto": "FR > 22",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18843,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quick_sofa_FR_maior_22",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9788,
+                    "url": "",
+                    "texto": "PAS < 100",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18844,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "quick_sofa_PAS_menor_100",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 19164,
+                    "url": "",
+                    "nome": "S1 (Quick Sofa < 2)",
+                    "descricao": "Quick Sofa < 2",
+                    "passo_de_saida_id": 19074,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19077,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19165,
+                    "url": "",
+                    "nome": "S2 (Quick Sofa >= 2)",
+                    "descricao": "Quick Sofa >= 2",
+                    "passo_de_saida_id": 19074,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19075,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Sepse] Eixo Vermelho",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19075,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Sepse] Eixo Vermelho",
+            "descricao": "Encaminhar paciente ao Eixo Vermelho",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19165,
+                    "url": "",
+                    "nome": "S2 (Quick Sofa >= 2)",
+                    "descricao": "Quick Sofa >= 2",
+                    "passo_de_saida_id": 19074,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19075,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Sepse] Eixo Vermelho",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19166,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19075,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Sepse] Eixo Vermelho",
+                    "passo_de_entrada_id": 19076,
+                    "passo_de_entrada": "Encaminhamento: Protocolo Sepse",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19076,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Protocolo Sepse",
+            "descricao": "Encaminhar paciente ao protocolo de tratamento para SEPSE.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H012"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19166,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19075,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: [Sepse] Eixo Vermelho",
+                    "passo_de_entrada_id": 19076,
+                    "passo_de_entrada": "Encaminhamento: Protocolo Sepse",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19077,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avalia\u00e7\u00e3o do Quadro",
+            "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9789,
+                    "url": "",
+                    "texto": "HERPES LABIAL: les\u00f5es no in\u00edcio vesiculares, coalescentes, que evoluem para crostas.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18845,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "herpes_labial",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9790,
+                    "url": "",
+                    "texto": "CELULITE: Infec\u00e7\u00e3o da derme profunda e tecido celular subcut\u00e2neo, com caracter\u00edstica mais infiltrativa e mal delimitada. Quadro mais arrastado.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18846,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "celulite",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9791,
+                    "url": "",
+                    "texto": "IMPETIGO: Les\u00f5es indolores eritematosas, acompanhadas de les\u00f5es pustulares ou bolhosas.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18847,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "impetigo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9792,
+                    "url": "",
+                    "texto": "FURUNCULOS: N\u00f3dulos inflamat\u00f3rios, dolorosos e profundos com desenvolvimento oriundo da foliculite, que evoluem para drenagem espont\u00e2nea de material purulento.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18848,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "furunculos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                },
+                {
+                    "id": 9793,
+                    "url": "",
+                    "texto": "P\u00c9 DIAB\u00c9TICO: Complica\u00e7\u00e3o infecciosa decorrente de les\u00e3o em membros inferiores. H\u00e1 eritema, calor, sensibilidade, edema, endurecimento e secre\u00e7\u00f5es purulentas.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18849,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "pe_diabetico",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 13
+                },
+                {
+                    "id": 9794,
+                    "url": "",
+                    "texto": "URTIC\u00c1RIA: Les\u00f5es cut\u00e2neas eritematosas, edemaciadas e pruriginosas de aparecimento abrupto, que surgem ap\u00f3s contato com al\u00e9rgenos.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18850,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "urticaria",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 14
+                },
+                {
+                    "id": 9795,
+                    "url": "",
+                    "texto": "ERISIPELA: Infec\u00e7\u00e3o da derme, epiderme e vasos linf\u00e1ticos superficiais. Dor, hiperemia, edema e aumento da temperatura local. Les\u00f5es elevadas com clara diferencia\u00e7\u00e3o entre \u00e1rea acometida e pele de aspecto normal. Mais comum em membros inferiores e face.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18851,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "erisipela",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 15
+                },
+                {
+                    "id": 9796,
+                    "url": "",
+                    "texto": "ESCABIOSE: P\u00e1pulas eritematosas com prurido que piora \u00e0 noite. Localizado preferencialmente em dedos das m\u00e3os e p\u00e9s, punhos, cotovelos, axilas, em torno dos mamilos, p\u00eanis e bolsa escrotal.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18852,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "escabiose",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 16
+                },
+                {
+                    "id": 9797,
+                    "url": "",
+                    "texto": "QUEIMADURAS",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18853,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queimaduras",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 17
+                },
+                {
+                    "id": 9798,
+                    "url": "",
+                    "texto": "HERPES ZOSTER: m\u00faltiplas ves\u00edculas, seguindo um derm\u00e1tomo, com dor ou parestesia local.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18854,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "herpes_zoster",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 18
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19164,
+                    "url": "",
+                    "nome": "S1 (Quick Sofa < 2)",
+                    "descricao": "Quick Sofa < 2",
+                    "passo_de_saida_id": 19074,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Quick SOFA",
+                    "passo_de_entrada_id": 19077,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19167,
+                    "url": "",
+                    "nome": "S5 (erisipela)",
+                    "descricao": "erisipela",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19078,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19168,
+                    "url": "",
+                    "nome": "S6 (celulite)",
+                    "descricao": "celulite",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19078,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19169,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19148,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Urtic\u00e1ria] Verificar sinais de gravidade",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19172,
+                    "url": "",
+                    "nome": "S9 (impetigo)",
+                    "descricao": "impetigo",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19142,
+                    "passo_de_entrada": "Receita: Receita (Cefalexina)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19173,
+                    "url": "",
+                    "nome": "S10 (furunculos)",
+                    "descricao": "furunculos",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19142,
+                    "passo_de_entrada": "Receita: Receita (Cefalexina)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19174,
+                    "url": "",
+                    "nome": "S11 (p\u00e9 diab\u00e9tico)",
+                    "descricao": "p\u00e9 diab\u00e9tico",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19143,
+                    "passo_de_entrada": "Tratamento: [P\u00e9 diab\u00e9tico] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19182,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19151,
+                    "passo_de_entrada": "Receita: [Herpes Labial] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19183,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19144,
+                    "passo_de_entrada": "Receita: [Escabiose] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19184,
+                    "url": "",
+                    "nome": "S21 (Queimadura)",
+                    "descricao": "Queimadura",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19152,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19188,
+                    "url": "",
+                    "nome": "S27 (Herpes Zoster)",
+                    "descricao": "Herpes Zoster",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19159,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Acometimento Facial?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19078,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Marcadores e Gravidade",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9799,
+                    "url": "",
+                    "texto": "Idade > 60 anos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18855,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "marcadores_gravidade_idade_maior_60",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9800,
+                    "url": "",
+                    "texto": "Acometimento facial",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18856,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "marcadores_gravidade_acometimento_facial",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9821,
+                    "url": "",
+                    "texto": "Imunossupress\u00e3o",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18857,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "marcadores_gravidade_imunossupressao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9822,
+                    "url": "",
+                    "texto": "Resist\u00eancia ao tratamento ambulatorial",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18858,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "marcadores_gravidade_resustencia_ao_tratamento",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19167,
+                    "url": "",
+                    "nome": "S5 (erisipela)",
+                    "descricao": "erisipela",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19078,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19168,
+                    "url": "",
+                    "nome": "S6 (celulite)",
+                    "descricao": "celulite",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19078,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19170,
+                    "url": "",
+                    "nome": "S7 (marcadores de gravidade >= 1)",
+                    "descricao": "marcadores de gravidade >= 1",
+                    "passo_de_saida_id": 19078,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "passo_de_entrada_id": 19079,
+                    "passo_de_entrada": "Tratamento: [Com sinais de gravidade] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19171,
+                    "url": "",
+                    "nome": "S8 (marcadores de gravidade < 1)",
+                    "descricao": "marcadores de gravidade < 1",
+                    "passo_de_saida_id": 19078,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "passo_de_entrada_id": 19141,
+                    "passo_de_entrada": "Receita: [Sem sinais de gravidade] Tratamento ambulatorial",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19079,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Com sinais de gravidade] Conduta",
+            "descricao": "<h4><span style=\"font-size:16px\"><strong>Discutir internamento com l&iacute;der local</strong></span></h4>\n\n<h4><span style=\"font-size:16px\"><u>ATEN&Ccedil;&Atilde;O</u>:</span></h4>\n\n<p><span style=\"font-size:16px\">Substituir oxacilina por <u>Vancomicina 1g, endovenoso, de 12/12h</u> se houver:&nbsp;</span></p>\n\n<h4><span style=\"font-size:16px\">- Epis&oacute;dio anterior de infec&ccedil;&atilde;o por MRSA ou coloniza&ccedil;&atilde;o conhecida por MRSA</span></h4>\n\n<h4><span style=\"font-size:16px\">- Falta de resposta cl&iacute;nica ao esquema antibi&oacute;tico que n&atilde;o inclui atividade contra MRSA</span></h4>\n\n<h4><span style=\"font-size:16px\">- Presen&ccedil;a de fator (es) de risco para infec&ccedil;&atilde;o por MRSA (incluindo hospitaliza&ccedil;&atilde;o recente, resid&ecirc;ncia em institui&ccedil;&atilde;o de longa perman&ecirc;ncia, instrumentaliza&ccedil;&atilde;o ou cirurgia recente, hemodi&aacute;lise e infec&ccedil;&atilde;o por HIV)</span></h4>\n\n<h4><span style=\"font-size:16px\">- Proximidade da les&atilde;o a um dispositivo m&eacute;dico (por exemplo, pr&oacute;tese articular ou enxerto vascular)</span></h4>\n\n<h4>&nbsp;</h4>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente apresenta sinais de gravidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente apresenta sinais de gravidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente apresenta sinais de gravidade",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9820,
+                    "url": "",
+                    "medicamento": 75264,
+                    "codigo": "",
+                    "nome": "OXACILINA 500 MG FRAP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GR",
+                    "unidade_display": "GRAMA",
+                    "via_acesso": 6,
+                    "dose_diaria": 2,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "4",
+                    "frequencia_display": "4/4",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19170,
+                    "url": "",
+                    "nome": "S7 (marcadores de gravidade >= 1)",
+                    "descricao": "marcadores de gravidade >= 1",
+                    "passo_de_saida_id": 19078,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "passo_de_entrada_id": 19079,
+                    "passo_de_entrada": "Tratamento: [Com sinais de gravidade] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19195,
+                    "url": "",
+                    "nome": "S32",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19079,
+                    "passo_de_saida": "Tratamento: [Com sinais de gravidade] Conduta",
+                    "passo_de_entrada_id": 19162,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com chefia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19080,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Infec\u00e7\u00e3o Moderada ou Grave] Conduta",
+            "descricao": "Encaminhar ao cirurgi\u00e3o geral para avaliar necessidade de desbridamento de les\u00f5es, solicitar culturas e Ultrassom com doppler venoso e/ou arterial se necess\u00e1rio.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19196,
+                    "url": "",
+                    "nome": "S33",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19163,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "passo_de_entrada_id": 19080,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Infec\u00e7\u00e3o Moderada ou Grave] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19141,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Sem sinais de gravidade] Tratamento ambulatorial",
+            "descricao": "Repouso e eleva\u00e7\u00e3o do membro acometido.\n\nProcurar a emerg\u00eancia se n\u00e3o houver melhora do quadro com 72h ou houver piora do quadro.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Se quadro recorrente, sugerir acompanhamento ambulatorial com a cirurgia vascular.",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5091,
+                    "url": "",
+                    "nome": "Clindamicina 300mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19171,
+                    "url": "",
+                    "nome": "S8 (marcadores de gravidade < 1)",
+                    "descricao": "marcadores de gravidade < 1",
+                    "passo_de_saida_id": 19078,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Marcadores e Gravidade",
+                    "passo_de_entrada_id": 19141,
+                    "passo_de_entrada": "Receita: [Sem sinais de gravidade] Tratamento ambulatorial",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19142,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita (Cefalexina)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5092,
+                    "url": "",
+                    "nome": "Cefalexina 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 5093,
+                    "url": "",
+                    "nome": "Mupirocina 20mg/g",
+                    "medicamento": null,
+                    "apresentacao": "TUBO",
+                    "via_acesso": 18,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 10,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Utilizar at\u00e9 por 10 dias.",
+                    "ordem": 2
+                },
+                {
+                    "id": 5094,
+                    "url": "",
+                    "nome": "\u00c1cido Fus\u00eddico 20mg/g",
+                    "medicamento": null,
+                    "apresentacao": "TUBO",
+                    "via_acesso": 18,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19172,
+                    "url": "",
+                    "nome": "S9 (impetigo)",
+                    "descricao": "impetigo",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19142,
+                    "passo_de_entrada": "Receita: Receita (Cefalexina)",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19173,
+                    "url": "",
+                    "nome": "S10 (furunculos)",
+                    "descricao": "furunculos",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19142,
+                    "passo_de_entrada": "Receita: Receita (Cefalexina)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19143,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[P\u00e9 diab\u00e9tico] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Checar os p&eacute;s e pulsos.</span></p>\n\n<p><span style=\"font-size:16px\">Avaliar necessidade de desbridamento cir&uacute;rgico </span></p>\n\n<p><strong><span style=\"font-size:16px\">Solicitar Raio X do membro acometido</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Infec\u00e7\u00e3o das partes moles",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Infec\u00e7\u00e3o das partes moles",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Infec\u00e7\u00e3o das partes moles",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Infec\u00e7\u00e3o das partes moles",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Infec\u00e7\u00e3o das partes moles",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19174,
+                    "url": "",
+                    "nome": "S11 (p\u00e9 diab\u00e9tico)",
+                    "descricao": "p\u00e9 diab\u00e9tico",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19143,
+                    "passo_de_entrada": "Tratamento: [P\u00e9 diab\u00e9tico] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19175,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19143,
+                    "passo_de_saida": "Tratamento: [P\u00e9 diab\u00e9tico] Conduta",
+                    "passo_de_entrada_id": 19145,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19144,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Escabiose] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5095,
+                    "url": "",
+                    "nome": "Ivermectina 6mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar 1 cp e meio em dose \u00fanica",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19183,
+                    "url": "",
+                    "nome": "S20",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19144,
+                    "passo_de_entrada": "Receita: [Escabiose] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19145,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar gravidade",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9823,
+                    "url": "",
+                    "texto": "N\u00e3o infectado: Ferida sem purul\u00eancia ou qualquer manifesta\u00e7\u00e3o de inflama\u00e7\u00e3o.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18859,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gravidade_nao_infectado",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9824,
+                    "url": "",
+                    "texto": "Infec\u00e7\u00e3o leve: Purul\u00eancia ou eritema, dor, calor ou endurecimento, mas qualquer celulite/eritema se estende <= 2 cm ao redor da \u00falcera e infec\u00e7\u00e3o \u00e9 limitada \u00e0 pele ou tecidos subcut\u00e2neos superficiais. N\u00e3o h\u00e1 outra complica\u00e7\u00e3o local ou doen\u00e7a sist\u00eamica.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18860,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gravidade_infeccao_leve",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9825,
+                    "url": "",
+                    "texto": "Infec\u00e7\u00e3o moderada: hemodinamicamente est\u00e1vel, com (pelo menos 1): celulite com extens\u00e3o > 2 cm, estria linfang\u00edtica, dissemina\u00e7\u00e3o abaixo da f\u00e1scia superficial, abscesso de tecido profundo, gangrena, envolvimento de m\u00fasculo, tend\u00e3o, articula\u00e7\u00e3o ou osso.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18921,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gravidade_infeccao_moderada",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9826,
+                    "url": "",
+                    "texto": "Infec\u00e7\u00e3o grave: infec\u00e7\u00e3o em um paciente com toxicidade sist\u00eamica ou instabilidade metab\u00f3lica (febre, calafrios, taquicardia, hipotens\u00e3o, confus\u00e3o, v\u00f4mitos, leucocitose, acidose, hiperglicemia grave ou azotemia).",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18922,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "gravidade_infeccao_grave",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19175,
+                    "url": "",
+                    "nome": "S12",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19143,
+                    "passo_de_saida": "Tratamento: [P\u00e9 diab\u00e9tico] Conduta",
+                    "passo_de_entrada_id": 19145,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19176,
+                    "url": "",
+                    "nome": "S13 (sem infeccao)",
+                    "descricao": "sem infeccao",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19146,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [N\u00e3o infectado] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19177,
+                    "url": "",
+                    "nome": "S14 (infeccao leve)",
+                    "descricao": "infeccao leve",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19147,
+                    "passo_de_entrada": "Receita: [Infec\u00e7\u00e3o Leve] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19178,
+                    "url": "",
+                    "nome": "S15 (infeccao moderada)",
+                    "descricao": "infeccao moderada",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19163,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19179,
+                    "url": "",
+                    "nome": "S16 (infeccao grave)",
+                    "descricao": "infeccao grave",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19163,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19146,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[N\u00e3o infectado] Conduta",
+            "descricao": "<p><span style=\"font-size:16px\">Avaliar necessidade de desbridamento. Se necess&aacute;rio, encaminhar para o cirurgi&atilde;o da emerg&ecirc;ncia<br />\n<br />\nEm casos de &uacute;lceras cr&ocirc;nicas, n&atilde;o infectadas, sem indica&ccedil;&atilde;o de desbridamento, acompanhamento ambulatorial com cirurgia vascular<br />\n<br />\nNa aus&ecirc;ncia de pulsos, solicitar ultrassom com doppler arterial e venoso do membro acometido para avaliar causa isqu&ecirc;mica</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19176,
+                    "url": "",
+                    "nome": "S13 (sem infeccao)",
+                    "descricao": "sem infeccao",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19146,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [N\u00e3o infectado] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19147,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Infec\u00e7\u00e3o Leve] Conduta",
+            "descricao": "<p>&nbsp;</p>\n\n<ul>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Se n\u00e3o houver sinais de gravidade, avaliar necessidade de desbridamento.\n\nSe realizar desbridamento, enviar material para cultura Na aus\u00eancia de pulsos, solicitar ultrassom doppler arterial e venoso de membros inferiores\n\nATEN\u00c7\u00c3O:\n\n    Se por fatores sociais ou n\u00e3o possibilidade de tratamento oral seja indicado internamento hospitalar, iniciar Amoxicilina-clavulonato 500mg, endovenoso, 8/8h",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5096,
+                    "url": "",
+                    "nome": "Cefalexina 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 14,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "De 7 a 14 dias",
+                    "ordem": 1
+                },
+                {
+                    "id": 5097,
+                    "url": "",
+                    "nome": "Amoxicilina-clavulanato 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 6,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 14,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "7 a 14 dias",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19177,
+                    "url": "",
+                    "nome": "S14 (infeccao leve)",
+                    "descricao": "infeccao leve",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19147,
+                    "passo_de_entrada": "Receita: [Infec\u00e7\u00e3o Leve] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19148,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Urtic\u00e1ria] Verificar sinais de gravidade",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9827,
+                    "url": "",
+                    "texto": "Paciente com queixas respirat\u00f3rias ou par\u00e2metros hemodin\u00e2micos alterados ap\u00f3s contato com subst\u00e2ncia alerg\u00eanica?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18923,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "paciente_queixas_respitatorias",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19169,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19148,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Urtic\u00e1ria] Verificar sinais de gravidade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19180,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19148,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Urtic\u00e1ria] Verificar sinais de gravidade",
+                    "passo_de_entrada_id": 19149,
+                    "passo_de_entrada": "Receita: [Urtic\u00e1ria] Sem sinais de gravidade",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19181,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19148,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Urtic\u00e1ria] Verificar sinais de gravidade",
+                    "passo_de_entrada_id": 19150,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Urtic\u00e1ria] Com sinais de gravidade",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19149,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Urtic\u00e1ria] Sem sinais de gravidade",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5098,
+                    "url": "",
+                    "nome": "Hidroxizina 25mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19180,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19148,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Urtic\u00e1ria] Verificar sinais de gravidade",
+                    "passo_de_entrada_id": 19149,
+                    "passo_de_entrada": "Receita: [Urtic\u00e1ria] Sem sinais de gravidade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19150,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Urtic\u00e1ria] Com sinais de gravidade",
+            "descricao": "<p><strong><span style=\"font-size:16px\">Caso sinais respirat&oacute;rios/hemodin&acirc;micos, dever&aacute; ser discutido com l&iacute;der local.</span></strong></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19181,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19148,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Urtic\u00e1ria] Verificar sinais de gravidade",
+                    "passo_de_entrada_id": 19150,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Urtic\u00e1ria] Com sinais de gravidade",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19151,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Herpes Labial] Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5099,
+                    "url": "",
+                    "nome": "Aciclovir pomada _____ 1tb",
+                    "medicamento": null,
+                    "apresentacao": "TUBO",
+                    "via_acesso": 18,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 5,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19182,
+                    "url": "",
+                    "nome": "S19",
+                    "descricao": "-",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19151,
+                    "passo_de_entrada": "Receita: [Herpes Labial] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19152,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Definir Grau da Queimadura",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9828,
+                    "url": "",
+                    "texto": "1\u00ba Grau: hiperemia, edema e sensibilidade aumentada.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18924,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queimadura_grau_i",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9829,
+                    "url": "",
+                    "texto": "2\u00ba Grau: bolhas de base r\u00f3sea e \u00famida, ardorosa e com edema importante.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18925,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queimadura_grau_ii",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9830,
+                    "url": "",
+                    "texto": "3\u00ba Grau: secas, indolores, enegrecidas ou p\u00e1lidas.",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18926,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "queimadura_grau_iii",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19184,
+                    "url": "",
+                    "nome": "S21 (Queimadura)",
+                    "descricao": "Queimadura",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19152,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19185,
+                    "url": "",
+                    "nome": "S22 (grau 1)",
+                    "descricao": "grau 1",
+                    "passo_de_saida_id": 19152,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "passo_de_entrada_id": 19157,
+                    "passo_de_entrada": "Receita: [Queimadura] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19186,
+                    "url": "",
+                    "nome": "S23 (grau 2)",
+                    "descricao": "grau 2",
+                    "passo_de_saida_id": 19152,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "passo_de_entrada_id": 19153,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Queimadura] < 10% da superf\u00edcie corporal?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19187,
+                    "url": "",
+                    "nome": "S24 (grau 3)",
+                    "descricao": "grau 3",
+                    "passo_de_saida_id": 19152,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "passo_de_entrada_id": 19156,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Queimadura 3\u00ba Grau] Discutir com l\u00edder e cirurgi\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19153,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "[Queimadura] < 10% da superf\u00edcie corporal?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9831,
+                    "url": "",
+                    "texto": "Queimaduras se estendem por menos de 10% da superf\u00edcie corporal total?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18927,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "menor_10_superficie_corporal",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19186,
+                    "url": "",
+                    "nome": "S23 (grau 2)",
+                    "descricao": "grau 2",
+                    "passo_de_saida_id": 19152,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "passo_de_entrada_id": 19153,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: [Queimadura] < 10% da superf\u00edcie corporal?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19190,
+                    "url": "",
+                    "nome": "S25 (menos de 10%)",
+                    "descricao": "menos de 10%",
+                    "passo_de_saida_id": 19153,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Queimadura] < 10% da superf\u00edcie corporal?",
+                    "passo_de_entrada_id": 19158,
+                    "passo_de_entrada": "Receita: [Queimadura 2\u00ba grau] Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19191,
+                    "url": "",
+                    "nome": "S26 (mais de 10%)",
+                    "descricao": "mais de 10%",
+                    "passo_de_saida_id": 19153,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Queimadura] < 10% da superf\u00edcie corporal?",
+                    "passo_de_entrada_id": 19156,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Queimadura 3\u00ba Grau] Discutir com l\u00edder e cirurgi\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19154,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Herpes Zoster] Discutir com chefe de equipe",
+            "descricao": "Discutir com chefe de equipe possibilidade de internamento.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19192,
+                    "url": "",
+                    "nome": "S28 (h\u00e1 acometimento facial)",
+                    "descricao": "h\u00e1 acometimento facial",
+                    "passo_de_saida_id": 19159,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Acometimento Facial?",
+                    "passo_de_entrada_id": 19154,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Herpes Zoster] Discutir com chefe de equipe",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19155,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Infec\u00e7\u00e3o Secund\u00e1ria?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9832,
+                    "url": "",
+                    "texto": "H\u00e1 infec\u00e7\u00e3o secund\u00e1ria?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18928,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "infeccao_secundaria",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19189,
+                    "url": "",
+                    "nome": "S29 (n\u00e3o h\u00e1 acometimento facial)",
+                    "descricao": "n\u00e3o h\u00e1 acometimento facial",
+                    "passo_de_saida_id": 19159,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Acometimento Facial?",
+                    "passo_de_entrada_id": 19155,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Infec\u00e7\u00e3o Secund\u00e1ria?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19193,
+                    "url": "",
+                    "nome": "S30 (com infec\u00e7\u00e3o secund\u00e1ria)",
+                    "descricao": "com infec\u00e7\u00e3o secund\u00e1ria",
+                    "passo_de_saida_id": 19155,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Infec\u00e7\u00e3o Secund\u00e1ria?",
+                    "passo_de_entrada_id": 19161,
+                    "passo_de_entrada": "Receita: [Herpes Zoster] Com infec\u00e7\u00e3o secund\u00e1ria",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19194,
+                    "url": "",
+                    "nome": "S31 (sem infec\u00e7\u00e3o secund\u00e1ria)",
+                    "descricao": "sem infec\u00e7\u00e3o secund\u00e1ria",
+                    "passo_de_saida_id": 19155,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Infec\u00e7\u00e3o Secund\u00e1ria?",
+                    "passo_de_entrada_id": 19160,
+                    "passo_de_entrada": "Receita: [Herpes Zoster] Sem infec\u00e7\u00e3o secund\u00e1ria",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19156,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Queimadura 3\u00ba Grau] Discutir com l\u00edder e cirurgi\u00e3o",
+            "descricao": "Discutir com chefe de equipe e cirurgi\u00e3o de plant\u00e3o.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19187,
+                    "url": "",
+                    "nome": "S24 (grau 3)",
+                    "descricao": "grau 3",
+                    "passo_de_saida_id": 19152,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "passo_de_entrada_id": 19156,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Queimadura 3\u00ba Grau] Discutir com l\u00edder e cirurgi\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19191,
+                    "url": "",
+                    "nome": "S26 (mais de 10%)",
+                    "descricao": "mais de 10%",
+                    "passo_de_saida_id": 19153,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Queimadura] < 10% da superf\u00edcie corporal?",
+                    "passo_de_entrada_id": 19156,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Queimadura 3\u00ba Grau] Discutir com l\u00edder e cirurgi\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19157,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Queimadura] Receita",
+            "descricao": "<p><span style=\"font-size:14px\"><strong>Realizar hidrata&ccedil;&atilde;o da pele.</strong></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Realizar hidrata\u00e7\u00e3o da pele.",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5100,
+                    "url": "",
+                    "nome": "DIPIRONA 1G",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se dor",
+                    "ordem": 1
+                },
+                {
+                    "id": 5121,
+                    "url": "",
+                    "nome": "PARACETAMOL 750MG COMP 1 UD",
+                    "medicamento": 108545,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se dor",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19185,
+                    "url": "",
+                    "nome": "S22 (grau 1)",
+                    "descricao": "grau 1",
+                    "passo_de_saida_id": 19152,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Definir Grau da Queimadura",
+                    "passo_de_entrada_id": 19157,
+                    "passo_de_entrada": "Receita: [Queimadura] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19158,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Queimadura 2\u00ba grau] Receita",
+            "descricao": "<p><span style=\"font-size:14px\"><strong>Realizar curativo com gaze + sulfadiazina de prata 1%, 2 vezes ao dia.</strong></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5122,
+                    "url": "",
+                    "nome": "IBUPROFENO 300MG",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "SE DOR",
+                    "ordem": 1
+                },
+                {
+                    "id": 5123,
+                    "url": "",
+                    "nome": "PARACETAMOL 750MG COMP 1 UD",
+                    "medicamento": 108545,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "SE DOR",
+                    "ordem": 2
+                },
+                {
+                    "id": 5124,
+                    "url": "",
+                    "nome": "DIPIRONA 1G",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "SE DOR",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19190,
+                    "url": "",
+                    "nome": "S25 (menos de 10%)",
+                    "descricao": "menos de 10%",
+                    "passo_de_saida_id": 19153,
+                    "passo_de_saida": "Aux\u00edlio Conduta: [Queimadura] < 10% da superf\u00edcie corporal?",
+                    "passo_de_entrada_id": 19158,
+                    "passo_de_entrada": "Receita: [Queimadura 2\u00ba grau] Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19159,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Acometimento Facial?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9833,
+                    "url": "",
+                    "texto": "H\u00e1 acometimento facial?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18929,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "acometimento_facial",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19188,
+                    "url": "",
+                    "nome": "S27 (Herpes Zoster)",
+                    "descricao": "Herpes Zoster",
+                    "passo_de_saida_id": 19077,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avalia\u00e7\u00e3o do Quadro",
+                    "passo_de_entrada_id": 19159,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Acometimento Facial?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19189,
+                    "url": "",
+                    "nome": "S29 (n\u00e3o h\u00e1 acometimento facial)",
+                    "descricao": "n\u00e3o h\u00e1 acometimento facial",
+                    "passo_de_saida_id": 19159,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Acometimento Facial?",
+                    "passo_de_entrada_id": 19155,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Infec\u00e7\u00e3o Secund\u00e1ria?",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19192,
+                    "url": "",
+                    "nome": "S28 (h\u00e1 acometimento facial)",
+                    "descricao": "h\u00e1 acometimento facial",
+                    "passo_de_saida_id": 19159,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Acometimento Facial?",
+                    "passo_de_entrada_id": 19154,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Herpes Zoster] Discutir com chefe de equipe",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19160,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Herpes Zoster] Sem infec\u00e7\u00e3o secund\u00e1ria",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5125,
+                    "url": "",
+                    "nome": "Aciclovir 400mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 6,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Pular dose da madrugada.",
+                    "ordem": 1
+                },
+                {
+                    "id": 5126,
+                    "url": "",
+                    "nome": "Diclofenaco 50mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se dor",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19194,
+                    "url": "",
+                    "nome": "S31 (sem infec\u00e7\u00e3o secund\u00e1ria)",
+                    "descricao": "sem infec\u00e7\u00e3o secund\u00e1ria",
+                    "passo_de_saida_id": 19155,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Infec\u00e7\u00e3o Secund\u00e1ria?",
+                    "passo_de_entrada_id": 19160,
+                    "passo_de_entrada": "Receita: [Herpes Zoster] Sem infec\u00e7\u00e3o secund\u00e1ria",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19161,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "[Herpes Zoster] Com infec\u00e7\u00e3o secund\u00e1ria",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "E",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 5127,
+                    "url": "",
+                    "nome": "Aciclovir 400mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 6,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Pular dose da madrugada",
+                    "ordem": 1
+                },
+                {
+                    "id": 5128,
+                    "url": "",
+                    "nome": "Diclofenaco 50mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 3,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se dor",
+                    "ordem": 2
+                },
+                {
+                    "id": 5129,
+                    "url": "",
+                    "nome": "Cefalexina 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 19193,
+                    "url": "",
+                    "nome": "S30 (com infec\u00e7\u00e3o secund\u00e1ria)",
+                    "descricao": "com infec\u00e7\u00e3o secund\u00e1ria",
+                    "passo_de_saida_id": 19155,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Infec\u00e7\u00e3o Secund\u00e1ria?",
+                    "passo_de_entrada_id": 19161,
+                    "passo_de_entrada": "Receita: [Herpes Zoster] Com infec\u00e7\u00e3o secund\u00e1ria",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19162,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com chefia",
+            "descricao": "Discutir caso com chefe de equipe para defini\u00e7\u00e3o de conduta.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19195,
+                    "url": "",
+                    "nome": "S32",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19079,
+                    "passo_de_saida": "Tratamento: [Com sinais de gravidade] Conduta",
+                    "passo_de_entrada_id": 19162,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com chefia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 19163,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "Encaminhar para o l\u00edder local para dar continuidade ao protocolo.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 19178,
+                    "url": "",
+                    "nome": "S15 (infeccao moderada)",
+                    "descricao": "infeccao moderada",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19163,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 19179,
+                    "url": "",
+                    "nome": "S16 (infeccao grave)",
+                    "descricao": "infeccao grave",
+                    "passo_de_saida_id": 19145,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar gravidade",
+                    "passo_de_entrada_id": 19163,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 19196,
+                    "url": "",
+                    "nome": "S33",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 19163,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "passo_de_entrada_id": 19080,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Infec\u00e7\u00e3o Moderada ou Grave] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 19164,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (Quick Sofa < 2)",
+            "descricao": "Quick Sofa < 2",
+            "passo_de_saida_id": 19074,
+            "passo_de_saida": {
+                "id": 19074,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quick SOFA",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19077,
+            "passo_de_entrada": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18934,
+                "nome": "quick sofa < 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    18932,
+                    18930
+                ],
+                "argumentos": [
+                    "Quick SOFA",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19165,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (Quick Sofa >= 2)",
+            "descricao": "Quick Sofa >= 2",
+            "passo_de_saida_id": 19074,
+            "passo_de_saida": {
+                "id": 19074,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Quick SOFA",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19075,
+            "passo_de_entrada": {
+                "id": 19075,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Sepse] Eixo Vermelho",
+                "descricao": "Encaminhar paciente ao Eixo Vermelho",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18935,
+                "nome": "quick sofa >= 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    18932,
+                    18930
+                ],
+                "argumentos": [
+                    "Quick SOFA",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19166,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19075,
+            "passo_de_saida": {
+                "id": 19075,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Sepse] Eixo Vermelho",
+                "descricao": "Encaminhar paciente ao Eixo Vermelho",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19076,
+            "passo_de_entrada": {
+                "id": 19076,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Protocolo Sepse",
+                "descricao": "Encaminhar paciente ao protocolo de tratamento para SEPSE.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    65
+                ]
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19167,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (erisipela)",
+            "descricao": "erisipela",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19078,
+            "passo_de_entrada": {
+                "id": 19078,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Marcadores e Gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18936,
+                "nome": "Erisipela",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18851
+                ],
+                "argumentos": [
+                    "erisipela"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19168,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (celulite)",
+            "descricao": "celulite",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19078,
+            "passo_de_entrada": {
+                "id": 19078,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Marcadores e Gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18937,
+                "nome": "quadro_celulite",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18846
+                ],
+                "argumentos": [
+                    "celulite"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19169,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16",
+            "descricao": "-",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19148,
+            "passo_de_entrada": {
+                "id": 19148,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Urtic\u00e1ria] Verificar sinais de gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18938,
+                "nome": "Urticaria",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18850
+                ],
+                "argumentos": [
+                    "urticaria"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19170,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (marcadores de gravidade >= 1)",
+            "descricao": "marcadores de gravidade >= 1",
+            "passo_de_saida_id": 19078,
+            "passo_de_saida": {
+                "id": 19078,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Marcadores e Gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19079,
+            "passo_de_entrada": {
+                "id": 19079,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Com sinais de gravidade] Conduta",
+                "descricao": "<h4><span style=\"font-size:16px\"><strong>Discutir internamento com l&iacute;der local</strong></span></h4>\n\n<h4><span style=\"font-size:16px\"><u>ATEN&Ccedil;&Atilde;O</u>:</span></h4>\n\n<p><span style=\"font-size:16px\">Substituir oxacilina por <u>Vancomicina 1g, endovenoso, de 12/12h</u> se houver:&nbsp;</span></p>\n\n<h4><span style=\"font-size:16px\">- Epis&oacute;dio anterior de infec&ccedil;&atilde;o por MRSA ou coloniza&ccedil;&atilde;o conhecida por MRSA</span></h4>\n\n<h4><span style=\"font-size:16px\">- Falta de resposta cl&iacute;nica ao esquema antibi&oacute;tico que n&atilde;o inclui atividade contra MRSA</span></h4>\n\n<h4><span style=\"font-size:16px\">- Presen&ccedil;a de fator (es) de risco para infec&ccedil;&atilde;o por MRSA (incluindo hospitaliza&ccedil;&atilde;o recente, resid&ecirc;ncia em institui&ccedil;&atilde;o de longa perman&ecirc;ncia, instrumentaliza&ccedil;&atilde;o ou cirurgia recente, hemodi&aacute;lise e infec&ccedil;&atilde;o por HIV)</span></h4>\n\n<h4><span style=\"font-size:16px\">- Proximidade da les&atilde;o a um dispositivo m&eacute;dico (por exemplo, pr&oacute;tese articular ou enxerto vascular)</span></h4>\n\n<h4>&nbsp;</h4>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18939,
+                "nome": "marcadores de gravidade >= 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    18933,
+                    18931
+                ],
+                "argumentos": [
+                    "Marcadores de Gravidade",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19171,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (marcadores de gravidade < 1)",
+            "descricao": "marcadores de gravidade < 1",
+            "passo_de_saida_id": 19078,
+            "passo_de_saida": {
+                "id": 19078,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Marcadores e Gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19141,
+            "passo_de_entrada": {
+                "id": 19141,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Sem sinais de gravidade] Tratamento ambulatorial",
+                "descricao": "Repouso e eleva\u00e7\u00e3o do membro acometido.\n\nProcurar a emerg\u00eancia se n\u00e3o houver melhora do quadro com 72h ou houver piora do quadro.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Se quadro recorrente, sugerir acompanhamento ambulatorial com a cirurgia vascular."
+            },
+            "operacao": {
+                "id": 18940,
+                "nome": "marcadores de gravidade < 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    18933,
+                    18931
+                ],
+                "argumentos": [
+                    "Marcadores de Gravidade",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19172,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (impetigo)",
+            "descricao": "impetigo",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19142,
+            "passo_de_entrada": {
+                "id": 19142,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita (Cefalexina)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18941,
+                "nome": "quadro_impetigo",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18847
+                ],
+                "argumentos": [
+                    "impetigo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19173,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (furunculos)",
+            "descricao": "furunculos",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19142,
+            "passo_de_entrada": {
+                "id": 19142,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita (Cefalexina)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18942,
+                "nome": "quadro_furunculos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18848
+                ],
+                "argumentos": [
+                    "furunculos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19174,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (p\u00e9 diab\u00e9tico)",
+            "descricao": "p\u00e9 diab\u00e9tico",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19143,
+            "passo_de_entrada": {
+                "id": 19143,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[P\u00e9 diab\u00e9tico] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Checar os p&eacute;s e pulsos.</span></p>\n\n<p><span style=\"font-size:16px\">Avaliar necessidade de desbridamento cir&uacute;rgico </span></p>\n\n<p><strong><span style=\"font-size:16px\">Solicitar Raio X do membro acometido</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18943,
+                "nome": "quadro_pe_diabetico",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18849
+                ],
+                "argumentos": [
+                    "pe_diabetico"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19175,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19143,
+            "passo_de_saida": {
+                "id": 19143,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[P\u00e9 diab\u00e9tico] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Checar os p&eacute;s e pulsos.</span></p>\n\n<p><span style=\"font-size:16px\">Avaliar necessidade de desbridamento cir&uacute;rgico </span></p>\n\n<p><strong><span style=\"font-size:16px\">Solicitar Raio X do membro acometido</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19145,
+            "passo_de_entrada": {
+                "id": 19145,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19176,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (sem infeccao)",
+            "descricao": "sem infeccao",
+            "passo_de_saida_id": 19145,
+            "passo_de_saida": {
+                "id": 19145,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19146,
+            "passo_de_entrada": {
+                "id": 19146,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[N\u00e3o infectado] Conduta",
+                "descricao": "<p><span style=\"font-size:16px\">Avaliar necessidade de desbridamento. Se necess&aacute;rio, encaminhar para o cirurgi&atilde;o da emerg&ecirc;ncia<br />\n<br />\nEm casos de &uacute;lceras cr&ocirc;nicas, n&atilde;o infectadas, sem indica&ccedil;&atilde;o de desbridamento, acompanhamento ambulatorial com cirurgia vascular<br />\n<br />\nNa aus&ecirc;ncia de pulsos, solicitar ultrassom com doppler arterial e venoso do membro acometido para avaliar causa isqu&ecirc;mica</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18944,
+                "nome": "sem infeccao",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18859
+                ],
+                "argumentos": [
+                    "gravidade_nao_infectado"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19177,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (infeccao leve)",
+            "descricao": "infeccao leve",
+            "passo_de_saida_id": 19145,
+            "passo_de_saida": {
+                "id": 19145,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19147,
+            "passo_de_entrada": {
+                "id": 19147,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Infec\u00e7\u00e3o Leve] Conduta",
+                "descricao": "<p>&nbsp;</p>\n\n<ul>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Se n\u00e3o houver sinais de gravidade, avaliar necessidade de desbridamento.\n\nSe realizar desbridamento, enviar material para cultura Na aus\u00eancia de pulsos, solicitar ultrassom doppler arterial e venoso de membros inferiores\n\nATEN\u00c7\u00c3O:\n\n    Se por fatores sociais ou n\u00e3o possibilidade de tratamento oral seja indicado internamento hospitalar, iniciar Amoxicilina-clavulonato 500mg, endovenoso, 8/8h"
+            },
+            "operacao": {
+                "id": 18945,
+                "nome": "infeccao leve",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18860
+                ],
+                "argumentos": [
+                    "gravidade_infeccao_leve"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19178,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (infeccao moderada)",
+            "descricao": "infeccao moderada",
+            "passo_de_saida_id": 19145,
+            "passo_de_saida": {
+                "id": 19145,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19163,
+            "passo_de_entrada": {
+                "id": 19163,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Encaminhar para o l\u00edder local para dar continuidade ao protocolo.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18946,
+                "nome": "infeccao moderada",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18921
+                ],
+                "argumentos": [
+                    "gravidade_infeccao_moderada"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19179,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16 (infeccao grave)",
+            "descricao": "infeccao grave",
+            "passo_de_saida_id": 19145,
+            "passo_de_saida": {
+                "id": 19145,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19163,
+            "passo_de_entrada": {
+                "id": 19163,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Encaminhar para o l\u00edder local para dar continuidade ao protocolo.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18947,
+                "nome": "infeccao grave",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18922
+                ],
+                "argumentos": [
+                    "gravidade_infeccao_grave"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19180,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17",
+            "descricao": "-",
+            "passo_de_saida_id": 19148,
+            "passo_de_saida": {
+                "id": 19148,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Urtic\u00e1ria] Verificar sinais de gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19149,
+            "passo_de_entrada": {
+                "id": 19149,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Urtic\u00e1ria] Sem sinais de gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18948,
+                "nome": "Sem_sinais_de_gravidade",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18923
+                ],
+                "argumentos": [
+                    "paciente_queixas_respitatorias"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19181,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18",
+            "descricao": "-",
+            "passo_de_saida_id": 19148,
+            "passo_de_saida": {
+                "id": 19148,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Urtic\u00e1ria] Verificar sinais de gravidade",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19150,
+            "passo_de_entrada": {
+                "id": 19150,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Urtic\u00e1ria] Com sinais de gravidade",
+                "descricao": "<p><strong><span style=\"font-size:16px\">Caso sinais respirat&oacute;rios/hemodin&acirc;micos, dever&aacute; ser discutido com l&iacute;der local.</span></strong></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18949,
+                "nome": "Com_sinais_de_gravidade",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18923
+                ],
+                "argumentos": [
+                    "paciente_queixas_respitatorias"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19182,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S19",
+            "descricao": "-",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19151,
+            "passo_de_entrada": {
+                "id": 19151,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Herpes Labial] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18950,
+                "nome": "Herpes_labial_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18845
+                ],
+                "argumentos": [
+                    "herpes_labial"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19183,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S20",
+            "descricao": "-",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19144,
+            "passo_de_entrada": {
+                "id": 19144,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Escabiose] Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18951,
+                "nome": "Escabiose_",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18852
+                ],
+                "argumentos": [
+                    "escabiose"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19184,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S21 (Queimadura)",
+            "descricao": "Queimadura",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19152,
+            "passo_de_entrada": {
+                "id": 19152,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Definir Grau da Queimadura",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18952,
+                "nome": "Queimadura",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18853
+                ],
+                "argumentos": [
+                    "queimaduras"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19185,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S22 (grau 1)",
+            "descricao": "grau 1",
+            "passo_de_saida_id": 19152,
+            "passo_de_saida": {
+                "id": 19152,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Definir Grau da Queimadura",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19157,
+            "passo_de_entrada": {
+                "id": 19157,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Queimadura] Receita",
+                "descricao": "<p><span style=\"font-size:14px\"><strong>Realizar hidrata&ccedil;&atilde;o da pele.</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Realizar hidrata\u00e7\u00e3o da pele."
+            },
+            "operacao": {
+                "id": 18953,
+                "nome": "grau 1",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18924
+                ],
+                "argumentos": [
+                    "queimadura_grau_i"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19186,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S23 (grau 2)",
+            "descricao": "grau 2",
+            "passo_de_saida_id": 19152,
+            "passo_de_saida": {
+                "id": 19152,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Definir Grau da Queimadura",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19153,
+            "passo_de_entrada": {
+                "id": 19153,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Queimadura] < 10% da superf\u00edcie corporal?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18954,
+                "nome": "grau 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18925
+                ],
+                "argumentos": [
+                    "queimadura_grau_ii"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19187,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S24 (grau 3)",
+            "descricao": "grau 3",
+            "passo_de_saida_id": 19152,
+            "passo_de_saida": {
+                "id": 19152,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Definir Grau da Queimadura",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19156,
+            "passo_de_entrada": {
+                "id": 19156,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Queimadura 3\u00ba Grau] Discutir com l\u00edder e cirurgi\u00e3o",
+                "descricao": "Discutir com chefe de equipe e cirurgi\u00e3o de plant\u00e3o.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18955,
+                "nome": "grau 3",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18926
+                ],
+                "argumentos": [
+                    "queimadura_grau_iii"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19188,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S27 (Herpes Zoster)",
+            "descricao": "Herpes Zoster",
+            "passo_de_saida_id": 19077,
+            "passo_de_saida": {
+                "id": 19077,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avalia\u00e7\u00e3o do Quadro",
+                "descricao": "<p>Anamnese, sinais vitais, avalia&ccedil;&atilde;o da &aacute;rea acometida, poss&iacute;vel porta de entrada, acometimento agudo ou cr&ocirc;nico.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19159,
+            "passo_de_entrada": {
+                "id": 19159,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Acometimento Facial?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18956,
+                "nome": "Herpes Zoster",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18854
+                ],
+                "argumentos": [
+                    "herpes_zoster"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19189,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S29 (n\u00e3o h\u00e1 acometimento facial)",
+            "descricao": "n\u00e3o h\u00e1 acometimento facial",
+            "passo_de_saida_id": 19159,
+            "passo_de_saida": {
+                "id": 19159,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Acometimento Facial?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19155,
+            "passo_de_entrada": {
+                "id": 19155,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Secund\u00e1ria?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18957,
+                "nome": "n\u00e3o h\u00e1 acometimento facial",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18929
+                ],
+                "argumentos": [
+                    "acometimento_facial"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19190,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S25 (menos de 10%)",
+            "descricao": "menos de 10%",
+            "passo_de_saida_id": 19153,
+            "passo_de_saida": {
+                "id": 19153,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Queimadura] < 10% da superf\u00edcie corporal?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19158,
+            "passo_de_entrada": {
+                "id": 19158,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Queimadura 2\u00ba grau] Receita",
+                "descricao": "<p><span style=\"font-size:14px\"><strong>Realizar curativo com gaze + sulfadiazina de prata 1%, 2 vezes ao dia.</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18958,
+                "nome": "menos de 10%",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18927
+                ],
+                "argumentos": [
+                    "menor_10_superficie_corporal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19191,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S26 (mais de 10%)",
+            "descricao": "mais de 10%",
+            "passo_de_saida_id": 19153,
+            "passo_de_saida": {
+                "id": 19153,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "[Queimadura] < 10% da superf\u00edcie corporal?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19156,
+            "passo_de_entrada": {
+                "id": 19156,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Queimadura 3\u00ba Grau] Discutir com l\u00edder e cirurgi\u00e3o",
+                "descricao": "Discutir com chefe de equipe e cirurgi\u00e3o de plant\u00e3o.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18959,
+                "nome": "mais de 10%",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18927
+                ],
+                "argumentos": [
+                    "menor_10_superficie_corporal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19192,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S28 (h\u00e1 acometimento facial)",
+            "descricao": "h\u00e1 acometimento facial",
+            "passo_de_saida_id": 19159,
+            "passo_de_saida": {
+                "id": 19159,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Acometimento Facial?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19154,
+            "passo_de_entrada": {
+                "id": 19154,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Herpes Zoster] Discutir com chefe de equipe",
+                "descricao": "Discutir com chefe de equipe possibilidade de internamento.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18960,
+                "nome": "h\u00e1 acometimento facial",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18929
+                ],
+                "argumentos": [
+                    "acometimento_facial"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19193,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S30 (com infec\u00e7\u00e3o secund\u00e1ria)",
+            "descricao": "com infec\u00e7\u00e3o secund\u00e1ria",
+            "passo_de_saida_id": 19155,
+            "passo_de_saida": {
+                "id": 19155,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Secund\u00e1ria?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19161,
+            "passo_de_entrada": {
+                "id": 19161,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Herpes Zoster] Com infec\u00e7\u00e3o secund\u00e1ria",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18961,
+                "nome": "com infec\u00e7\u00e3o secund\u00e1ria",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18928
+                ],
+                "argumentos": [
+                    "infeccao_secundaria"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19194,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S31 (sem infec\u00e7\u00e3o secund\u00e1ria)",
+            "descricao": "sem infec\u00e7\u00e3o secund\u00e1ria",
+            "passo_de_saida_id": 19155,
+            "passo_de_saida": {
+                "id": 19155,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Infec\u00e7\u00e3o Secund\u00e1ria?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19160,
+            "passo_de_entrada": {
+                "id": 19160,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "[Herpes Zoster] Sem infec\u00e7\u00e3o secund\u00e1ria",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 18962,
+                "nome": "sem infec\u00e7\u00e3o secund\u00e1ria",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naonulo",
+                "operador_display": "N\u00e3o Nulo",
+                "argumentos_ids": [
+                    18928
+                ],
+                "argumentos": [
+                    "infeccao_secundaria"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19195,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S32",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19079,
+            "passo_de_saida": {
+                "id": 19079,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Com sinais de gravidade] Conduta",
+                "descricao": "<h4><span style=\"font-size:16px\"><strong>Discutir internamento com l&iacute;der local</strong></span></h4>\n\n<h4><span style=\"font-size:16px\"><u>ATEN&Ccedil;&Atilde;O</u>:</span></h4>\n\n<p><span style=\"font-size:16px\">Substituir oxacilina por <u>Vancomicina 1g, endovenoso, de 12/12h</u> se houver:&nbsp;</span></p>\n\n<h4><span style=\"font-size:16px\">- Epis&oacute;dio anterior de infec&ccedil;&atilde;o por MRSA ou coloniza&ccedil;&atilde;o conhecida por MRSA</span></h4>\n\n<h4><span style=\"font-size:16px\">- Falta de resposta cl&iacute;nica ao esquema antibi&oacute;tico que n&atilde;o inclui atividade contra MRSA</span></h4>\n\n<h4><span style=\"font-size:16px\">- Presen&ccedil;a de fator (es) de risco para infec&ccedil;&atilde;o por MRSA (incluindo hospitaliza&ccedil;&atilde;o recente, resid&ecirc;ncia em institui&ccedil;&atilde;o de longa perman&ecirc;ncia, instrumentaliza&ccedil;&atilde;o ou cirurgia recente, hemodi&aacute;lise e infec&ccedil;&atilde;o por HIV)</span></h4>\n\n<h4><span style=\"font-size:16px\">- Proximidade da les&atilde;o a um dispositivo m&eacute;dico (por exemplo, pr&oacute;tese articular ou enxerto vascular)</span></h4>\n\n<h4>&nbsp;</h4>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19162,
+            "passo_de_entrada": {
+                "id": 19162,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com chefia",
+                "descricao": "Discutir caso com chefe de equipe para defini\u00e7\u00e3o de conduta.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 19196,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S33",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 19163,
+            "passo_de_saida": {
+                "id": 19163,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Encaminhar para o l\u00edder local para dar continuidade ao protocolo.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 19080,
+            "passo_de_entrada": {
+                "id": 19080,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Infec\u00e7\u00e3o Moderada ou Grave] Conduta",
+                "descricao": "Encaminhar ao cirurgi\u00e3o geral para avaliar necessidade de desbridamento de les\u00f5es, solicitar culturas e Ultrassom com doppler venoso e/ou arterial se necess\u00e1rio.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 18842,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quick_sofa_confusao_mental",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18843,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quick_sofa_FR_maior_22",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18844,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "quick_sofa_PAS_menor_100",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18845,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "herpes_labial",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18846,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "celulite",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18847,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "impetigo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18848,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "furunculos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18849,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "pe_diabetico",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18850,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "urticaria",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18851,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "erisipela",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18852,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "escabiose",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18853,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queimaduras",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18854,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "herpes_zoster",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18855,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "marcadores_gravidade_idade_maior_60",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18856,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "marcadores_gravidade_acometimento_facial",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18857,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "marcadores_gravidade_imunossupressao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18858,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "marcadores_gravidade_resustencia_ao_tratamento",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18859,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gravidade_nao_infectado",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18860,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gravidade_infeccao_leve",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18921,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gravidade_infeccao_moderada",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18922,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "gravidade_infeccao_grave",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18923,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "paciente_queixas_respitatorias",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18924,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queimadura_grau_i",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18925,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queimadura_grau_ii",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18926,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "queimadura_grau_iii",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18927,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "menor_10_superficie_corporal",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        },
+        {
+            "id": 18928,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "infeccao_secundaria",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18929,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "acometimento_facial",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18930,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18931,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18932,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Quick SOFA",
+            "descricao": "Quick SOFA",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18842,
+                18843,
+                18844
+            ],
+            "argumentos": [
+                "quick_sofa_confusao_mental",
+                "quick_sofa_FR_maior_22",
+                "quick_sofa_PAS_menor_100"
+            ]
+        },
+        {
+            "id": 18933,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Marcadores de Gravidade",
+            "descricao": "Marcadores de Gravidade",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18855,
+                18856,
+                18857,
+                18858
+            ],
+            "argumentos": [
+                "marcadores_gravidade_idade_maior_60",
+                "marcadores_gravidade_acometimento_facial",
+                "marcadores_gravidade_imunossupressao",
+                "marcadores_gravidade_resustencia_ao_tratamento"
+            ]
+        }
+    ]
+}

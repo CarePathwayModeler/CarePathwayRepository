@@ -1,0 +1,1994 @@
+{
+    "id": 3110,
+    "url": "",
+    "codigo": "H059",
+    "nome": "Icter\u00edcia Neonatal",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Pediatria",
+    "repositorio_id": 781,
+    "versao": 3,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:36:39.795521-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:36:30.172427-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:36:39.795521-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17149,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar tempo de vida",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8946,
+                    "url": "",
+                    "texto": "Tempo de vida do paciente:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16946,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "tempo_vida",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "> 14 dias de vida",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "< 14 dias de vida",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17187,
+                    "url": "",
+                    "nome": "S1 (< 14 dias de vida)",
+                    "descricao": "< 14 dias de vida",
+                    "passo_de_saida_id": 17149,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tempo de vida",
+                    "passo_de_entrada_id": 17150,
+                    "passo_de_entrada": "Tratamento: [<14 dias de vida] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17198,
+                    "url": "",
+                    "nome": "S12 (> 14 dias de vida)",
+                    "descricao": "> 14 dias de vida",
+                    "passo_de_saida_id": 17149,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tempo de vida",
+                    "passo_de_entrada_id": 17160,
+                    "passo_de_entrada": "Tratamento: [>14 dias de vida] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17150,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[<14 dias de vida] Conduta",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Comunicar a chefia local.</span></li>\n\t<li><span style=\"font-size:18px\">Solicitar Bilirrubina Total e Fra&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"font-size:18px\">Realizar Fototerapia com prote&ccedil;&atilde;o ocular enquanto aguarda resultado (biliber&ccedil;o e/ou bilitron).</span></li>\n\t<li><span style=\"font-size:18px\">Realizar controle de sinais vitais de 3/3h.</span></li>\n\t<li><span style=\"font-size:18px\">Leite materno livre demanda.&nbsp;</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "BILIRRUBINA TOTAL E FRACOES",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia neonatal e menor de 14 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "FOTOTERAPIA (BILIBERCO COM P. OCULAR)",
+                    "procedimento": "75060008",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "SINAIS VITAIS",
+                    "procedimento": "75130020",
+                    "frequencia": "3",
+                    "frequencia_display": "3/3",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17187,
+                    "url": "",
+                    "nome": "S1 (< 14 dias de vida)",
+                    "descricao": "< 14 dias de vida",
+                    "passo_de_saida_id": 17149,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tempo de vida",
+                    "passo_de_entrada_id": 17150,
+                    "passo_de_entrada": "Tratamento: [<14 dias de vida] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17188,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17150,
+                    "passo_de_saida": "Tratamento: [<14 dias de vida] Conduta",
+                    "passo_de_entrada_id": 17151,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17151,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar resultado",
+            "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"10\" rowspan=\"1\" style=\"text-align:center\">INDICA&Ccedil;&Atilde;O DE FOTOTERAPIA/EXSANGU&Iacute;NEOTRANSFUS&Atilde;O</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &lt; 35 SEM</td>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &gt; 35 SEM</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)<br />\n\t\t\tN&Iacute;VEL DE FOTOTERAPIA</td>\n\t\t\t<td colspan=\"1\" rowspan=\"3\">\n\t\t\t<p style=\"text-align:center\">IDADE</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">PESO DE<br />\n\t\t\t&nbsp; NASCIMENTO&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">24 - 48H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">48 - 72H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">72 - 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&gt; 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">FOTOTERAPIA</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">EXSANGUINEO<br />\n\t\t\tTRANSFUSAO</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&lt; 1500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">24h</td>\n\t\t\t<td style=\"text-align:center\">8</td>\n\t\t\t<td style=\"text-align:center\">10</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">36h</td>\n\t\t\t<td style=\"text-align:center\">9,5</td>\n\t\t\t<td style=\"text-align:center\">11,5</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">1501 - 2000g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">8</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">48h</td>\n\t\t\t<td style=\"text-align:center\">11</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">72h</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t\t<td style=\"text-align:center\">22</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">2001-2500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">12</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">96h</td>\n\t\t\t<td style=\"text-align:center\">14</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t\t<td style=\"text-align:center\">23</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 5 a 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t\t<td style=\"text-align:center\">24</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8947,
+                    "url": "",
+                    "texto": "Avaliar resultado conforme tabela:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16947,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "fototerapia",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Icter\u00edcia sem n\u00edvel de foto",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Em n\u00edvel de foto",
+                                "peso": 2.0
+                            },
+                            {
+                                "texto": "Em n\u00edvel de exsangu\u00edneotransfus\u00e3o",
+                                "peso": 3.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17188,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17150,
+                    "passo_de_saida": "Tratamento: [<14 dias de vida] Conduta",
+                    "passo_de_entrada_id": 17151,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17189,
+                    "url": "",
+                    "nome": "S3 (sem n\u00edvel de foto)",
+                    "descricao": "sem n\u00edvel de foto",
+                    "passo_de_saida_id": 17151,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "passo_de_entrada_id": 17152,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta com orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17190,
+                    "url": "",
+                    "nome": "S4 (em n\u00edvel de foto)",
+                    "descricao": "em n\u00edvel de foto",
+                    "passo_de_saida_id": 17151,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "passo_de_entrada_id": 17153,
+                    "passo_de_entrada": "Tratamento: [Em n\u00edvel de foto] Conduta",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17197,
+                    "url": "",
+                    "nome": "S11 (em n\u00edvel de exsangu\u00edneotransfus\u00e3o)",
+                    "descricao": "em n\u00edvel de exsangu\u00edneotransfus\u00e3o",
+                    "passo_de_saida_id": 17151,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "passo_de_entrada_id": 17159,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Em n\u00edvel de exsangu\u00edneotransfus\u00e3o] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17152,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Alta com orienta\u00e7\u00f5es",
+            "descricao": "<p><span style=\"font-size:18px\">Orienta&ccedil;&otilde;es para o paciente:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:18px\">Realizar banho de sol 2x&nbsp;ao dia&nbsp;(antes das 8:30h e ap&oacute;s &agrave;s 16h). Sem roupa.</span></li>\n\t<li><span style=\"font-size:18px\">Agendar Puericultura em at&eacute; 10 dias.</span></li>\n</ul>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17189,
+                    "url": "",
+                    "nome": "S3 (sem n\u00edvel de foto)",
+                    "descricao": "sem n\u00edvel de foto",
+                    "passo_de_saida_id": 17151,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "passo_de_entrada_id": 17152,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta com orienta\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17153,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Em n\u00edvel de foto] Conduta",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Manter paciente em Fototerapia.</span></li>\n\t<li><span style=\"font-size:18px\">Repetir Bilirrubina Total e Fra&ccedil;&otilde;es ap&oacute;s 12h.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "BILIRRUBINA TOTAL E FRACOES",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia em n\u00edvel de foto",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17190,
+                    "url": "",
+                    "nome": "S4 (em n\u00edvel de foto)",
+                    "descricao": "em n\u00edvel de foto",
+                    "passo_de_saida_id": 17151,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "passo_de_entrada_id": 17153,
+                    "passo_de_entrada": "Tratamento: [Em n\u00edvel de foto] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17191,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17153,
+                    "passo_de_saida": "Tratamento: [Em n\u00edvel de foto] Conduta",
+                    "passo_de_entrada_id": 17154,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar foto",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17154,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar foto",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8948,
+                    "url": "",
+                    "texto": "Paciente mant\u00e9m n\u00edvel de foto?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16948,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "nivel_foto",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17191,
+                    "url": "",
+                    "nome": "S5",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17153,
+                    "passo_de_saida": "Tratamento: [Em n\u00edvel de foto] Conduta",
+                    "passo_de_entrada_id": 17154,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar foto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17192,
+                    "url": "",
+                    "nome": "S6 (n\u00e3o mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "n\u00e3o mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17154,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar foto",
+                    "passo_de_entrada_id": 17155,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta com orienta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17193,
+                    "url": "",
+                    "nome": "S7 (mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17154,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar foto",
+                    "passo_de_entrada_id": 17156,
+                    "passo_de_entrada": "Tratamento: [Mant\u00e9m n\u00edvel de foto] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17155,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Alta com orienta\u00e7\u00e3o",
+            "descricao": "<p><span style=\"font-size:18px\">Orienta&ccedil;&otilde;es para o paciente:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:18px\">Retorno em 24h para ver rebote.&nbsp;</span></li>\n\t<li><span style=\"font-size:18px\">Realizar banho de sol 2x&nbsp;ao dia&nbsp;(antes das 8:30h e ap&oacute;s &agrave;s 16h). Sem roupa.</span></li>\n\t<li><span style=\"font-size:18px\">Agendar Puericultura em at&eacute; 10 dias.</span></li>\n</ul>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17192,
+                    "url": "",
+                    "nome": "S6 (n\u00e3o mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "n\u00e3o mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17154,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar foto",
+                    "passo_de_entrada_id": 17155,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta com orienta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17194,
+                    "url": "",
+                    "nome": "S8 (N\u00e3o mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "N\u00e3o mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17157,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar n\u00edvel de foto",
+                    "passo_de_entrada_id": 17155,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta com orienta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17156,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Mant\u00e9m n\u00edvel de foto] Conduta",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Manter paciente em Fototerapia por mais 12h.</span></li>\n\t<li><span style=\"font-size:18px\">Repetir Bilirrubina Total e Fra&ccedil;&otilde;es ap&oacute;s 12h.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "BILIRRUBINA TOTAL E FRACOES",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia em n\u00edvel de foto",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17193,
+                    "url": "",
+                    "nome": "S7 (mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17154,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar foto",
+                    "passo_de_entrada_id": 17156,
+                    "passo_de_entrada": "Tratamento: [Mant\u00e9m n\u00edvel de foto] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17196,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17156,
+                    "passo_de_saida": "Tratamento: [Mant\u00e9m n\u00edvel de foto] Conduta",
+                    "passo_de_entrada_id": 17157,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar n\u00edvel de foto",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17157,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar n\u00edvel de foto",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8949,
+                    "url": "",
+                    "texto": "Paciente mant\u00e9m n\u00edvel de foto?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16949,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "nivel_foto_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17196,
+                    "url": "",
+                    "nome": "S10",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17156,
+                    "passo_de_saida": "Tratamento: [Mant\u00e9m n\u00edvel de foto] Conduta",
+                    "passo_de_entrada_id": 17157,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar n\u00edvel de foto",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17194,
+                    "url": "",
+                    "nome": "S8 (N\u00e3o mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "N\u00e3o mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17157,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar n\u00edvel de foto",
+                    "passo_de_entrada_id": 17155,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Alta com orienta\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17195,
+                    "url": "",
+                    "nome": "S9 (Mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "Mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17157,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar n\u00edvel de foto",
+                    "passo_de_entrada_id": 17158,
+                    "passo_de_entrada": "Tratamento: Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17158,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Interna\u00e7\u00e3o",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [
+                {
+                    "url": "ADMISSION",
+                    "internacao": "10990011",
+                    "justificativa": "Paciente com icter\u00edcia neonatal e n\u00edvel de foto",
+                    "indicacao_clinica": "n/a",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17195,
+                    "url": "",
+                    "nome": "S9 (Mant\u00e9m n\u00edvel de foto)",
+                    "descricao": "Mant\u00e9m n\u00edvel de foto",
+                    "passo_de_saida_id": 17157,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar n\u00edvel de foto",
+                    "passo_de_entrada_id": 17158,
+                    "passo_de_entrada": "Tratamento: Interna\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17159,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "[Em n\u00edvel de exsangu\u00edneotransfus\u00e3o] Conduta",
+            "descricao": "<p><span style=\"font-size:18px\">Internar paciente em UTI Neonatal.&nbsp;</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17197,
+                    "url": "",
+                    "nome": "S11 (em n\u00edvel de exsangu\u00edneotransfus\u00e3o)",
+                    "descricao": "em n\u00edvel de exsangu\u00edneotransfus\u00e3o",
+                    "passo_de_saida_id": 17151,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar resultado",
+                    "passo_de_entrada_id": 17159,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: [Em n\u00edvel de exsangu\u00edneotransfus\u00e3o] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17160,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[>14 dias de vida] Conduta",
+            "descricao": "<p>- SEM NECESSIDADE DE AGUARDA EM FOTOTERAPIA</p>\n\n<p>- SOLICITAR OS SEGUINTES EXAMES:</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia neonatal com mais de 14 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GRUPO SANGUINEO (ABO E Rh)",
+                    "exame": "27040151",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia neonatal com mais de 14 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "BILIRRUBINA TOTAL E FRACOES",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia neonatal com mais de 14 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CONTAGEM DE RETICULOCITOS",
+                    "exame": "28040660",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia neonatal com mais de 14 dias de vida",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17198,
+                    "url": "",
+                    "nome": "S12 (> 14 dias de vida)",
+                    "descricao": "> 14 dias de vida",
+                    "passo_de_saida_id": 17149,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar tempo de vida",
+                    "passo_de_entrada_id": 17160,
+                    "passo_de_entrada": "Tratamento: [>14 dias de vida] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17199,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17160,
+                    "passo_de_saida": "Tratamento: [>14 dias de vida] Conduta",
+                    "passo_de_entrada_id": 17181,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17181,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar exames",
+            "descricao": "<p><span style=\"font-size:16px\">Avaliar eleva&ccedil;&atilde;o da Bilirrubina conforme a seguir:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">BD &gt; 1 mg/dl SE N&Iacute;VEL DE BT &lt; 5mg/dl; ou</span></li>\n\t<li><span style=\"font-size:16px\">BD &gt; 2&nbsp;mg/dl OU 20% DO TOTAL,&nbsp;SE&nbsp;BT &gt;&nbsp;5mg/dl.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8950,
+                    "url": "",
+                    "texto": "Avaliar resultado dos exames:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16950,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "resultado_exames",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Aumento de Bilirrubinas",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Eleva\u00e7\u00e3o de Reticul\u00f3citos ou Anemia",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17199,
+                    "url": "",
+                    "nome": "S13",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17160,
+                    "passo_de_saida": "Tratamento: [>14 dias de vida] Conduta",
+                    "passo_de_entrada_id": 17181,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17200,
+                    "url": "",
+                    "nome": "S14 (eleva\u00e7\u00e3o de reticul\u00f3citos)",
+                    "descricao": "eleva\u00e7\u00e3o de reticul\u00f3citos",
+                    "passo_de_saida_id": 17181,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames",
+                    "passo_de_entrada_id": 17182,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar hematologista",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17201,
+                    "url": "",
+                    "nome": "S15 (aumento de bilirrubinas)",
+                    "descricao": "aumento de bilirrubinas",
+                    "passo_de_saida_id": 17181,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames",
+                    "passo_de_entrada_id": 17183,
+                    "passo_de_entrada": "Tratamento: [Aumento bilirrubinas] Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17182,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar hematologista",
+            "descricao": "<p><span style=\"font-size:18px\">Encaminhar paciente ao ambulat&oacute;rio hematologista pedi&aacute;trico.</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17200,
+                    "url": "",
+                    "nome": "S14 (eleva\u00e7\u00e3o de reticul\u00f3citos)",
+                    "descricao": "eleva\u00e7\u00e3o de reticul\u00f3citos",
+                    "passo_de_saida_id": 17181,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames",
+                    "passo_de_entrada_id": 17182,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar hematologista",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17183,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Aumento bilirrubinas] Conduta",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Solicitar US de vias biliares.&nbsp;</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "US ABDOMEN SUPER-FIGADO-VIAS BILIARES VESIC",
+                    "exame": "33010013",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com aumento de bilirrubinas",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17201,
+                    "url": "",
+                    "nome": "S15 (aumento de bilirrubinas)",
+                    "descricao": "aumento de bilirrubinas",
+                    "passo_de_saida_id": 17181,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames",
+                    "passo_de_entrada_id": 17183,
+                    "passo_de_entrada": "Tratamento: [Aumento bilirrubinas] Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17202,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17183,
+                    "passo_de_saida": "Tratamento: [Aumento bilirrubinas] Conduta",
+                    "passo_de_entrada_id": 17184,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar ultrassom",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17184,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar ultrassom",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8951,
+                    "url": "",
+                    "texto": "Avaliar resultado da US:",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 16951,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "resultado_ultrassom",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Normal",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Alterado",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17202,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "-",
+                    "passo_de_saida_id": 17183,
+                    "passo_de_saida": "Tratamento: [Aumento bilirrubinas] Conduta",
+                    "passo_de_entrada_id": 17184,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar ultrassom",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17203,
+                    "url": "",
+                    "nome": "S17 (US alterado)",
+                    "descricao": "US alterado",
+                    "passo_de_saida_id": 17184,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar ultrassom",
+                    "passo_de_entrada_id": 17185,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17204,
+                    "url": "",
+                    "nome": "S18 (US normal)",
+                    "descricao": "US normal",
+                    "passo_de_saida_id": 17184,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar ultrassom",
+                    "passo_de_entrada_id": 17186,
+                    "passo_de_entrada": "Tratamento: Repetir BTF",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17185,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Comunicar l&iacute;der local devido a hip&oacute;tese de Colestase.&nbsp;</span></li>\n\t<li><span style=\"font-size:18px\">Avalia&ccedil;&atilde;o com Cirurgia Pedi&aacute;trica.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17203,
+                    "url": "",
+                    "nome": "S17 (US alterado)",
+                    "descricao": "US alterado",
+                    "passo_de_saida_id": 17184,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar ultrassom",
+                    "passo_de_entrada_id": 17185,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17186,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Repetir BTF",
+            "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Repetir BTF com 48h.</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "BILIRRUBINA TOTAL E FRACOES",
+                    "exame": "28010299",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Paciente com icter\u00edcia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17204,
+                    "url": "",
+                    "nome": "S18 (US normal)",
+                    "descricao": "US normal",
+                    "passo_de_saida_id": 17184,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar ultrassom",
+                    "passo_de_entrada_id": 17186,
+                    "passo_de_entrada": "Tratamento: Repetir BTF",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17187,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (< 14 dias de vida)",
+            "descricao": "< 14 dias de vida",
+            "passo_de_saida_id": 17149,
+            "passo_de_saida": {
+                "id": 17149,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tempo de vida",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17150,
+            "passo_de_entrada": {
+                "id": 17150,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[<14 dias de vida] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Comunicar a chefia local.</span></li>\n\t<li><span style=\"font-size:18px\">Solicitar Bilirrubina Total e Fra&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"font-size:18px\">Realizar Fototerapia com prote&ccedil;&atilde;o ocular enquanto aguarda resultado (biliber&ccedil;o e/ou bilitron).</span></li>\n\t<li><span style=\"font-size:18px\">Realizar controle de sinais vitais de 3/3h.</span></li>\n\t<li><span style=\"font-size:18px\">Leite materno livre demanda.&nbsp;</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16955,
+                "nome": "< 14 dias de vida",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16946,
+                    16953
+                ],
+                "argumentos": [
+                    "tempo_vida",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17188,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "-",
+            "passo_de_saida_id": 17150,
+            "passo_de_saida": {
+                "id": 17150,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[<14 dias de vida] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Comunicar a chefia local.</span></li>\n\t<li><span style=\"font-size:18px\">Solicitar Bilirrubina Total e Fra&ccedil;&otilde;es.</span></li>\n\t<li><span style=\"font-size:18px\">Realizar Fototerapia com prote&ccedil;&atilde;o ocular enquanto aguarda resultado (biliber&ccedil;o e/ou bilitron).</span></li>\n\t<li><span style=\"font-size:18px\">Realizar controle de sinais vitais de 3/3h.</span></li>\n\t<li><span style=\"font-size:18px\">Leite materno livre demanda.&nbsp;</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17151,
+            "passo_de_entrada": {
+                "id": 17151,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar resultado",
+                "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"10\" rowspan=\"1\" style=\"text-align:center\">INDICA&Ccedil;&Atilde;O DE FOTOTERAPIA/EXSANGU&Iacute;NEOTRANSFUS&Atilde;O</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &lt; 35 SEM</td>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &gt; 35 SEM</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)<br />\n\t\t\tN&Iacute;VEL DE FOTOTERAPIA</td>\n\t\t\t<td colspan=\"1\" rowspan=\"3\">\n\t\t\t<p style=\"text-align:center\">IDADE</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">PESO DE<br />\n\t\t\t&nbsp; NASCIMENTO&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">24 - 48H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">48 - 72H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">72 - 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&gt; 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">FOTOTERAPIA</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">EXSANGUINEO<br />\n\t\t\tTRANSFUSAO</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&lt; 1500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">24h</td>\n\t\t\t<td style=\"text-align:center\">8</td>\n\t\t\t<td style=\"text-align:center\">10</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">36h</td>\n\t\t\t<td style=\"text-align:center\">9,5</td>\n\t\t\t<td style=\"text-align:center\">11,5</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">1501 - 2000g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">8</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">48h</td>\n\t\t\t<td style=\"text-align:center\">11</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">72h</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t\t<td style=\"text-align:center\">22</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">2001-2500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">12</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">96h</td>\n\t\t\t<td style=\"text-align:center\">14</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t\t<td style=\"text-align:center\">23</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 5 a 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t\t<td style=\"text-align:center\">24</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17189,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (sem n\u00edvel de foto)",
+            "descricao": "sem n\u00edvel de foto",
+            "passo_de_saida_id": 17151,
+            "passo_de_saida": {
+                "id": 17151,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar resultado",
+                "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"10\" rowspan=\"1\" style=\"text-align:center\">INDICA&Ccedil;&Atilde;O DE FOTOTERAPIA/EXSANGU&Iacute;NEOTRANSFUS&Atilde;O</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &lt; 35 SEM</td>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &gt; 35 SEM</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)<br />\n\t\t\tN&Iacute;VEL DE FOTOTERAPIA</td>\n\t\t\t<td colspan=\"1\" rowspan=\"3\">\n\t\t\t<p style=\"text-align:center\">IDADE</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">PESO DE<br />\n\t\t\t&nbsp; NASCIMENTO&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">24 - 48H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">48 - 72H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">72 - 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&gt; 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">FOTOTERAPIA</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">EXSANGUINEO<br />\n\t\t\tTRANSFUSAO</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&lt; 1500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">24h</td>\n\t\t\t<td style=\"text-align:center\">8</td>\n\t\t\t<td style=\"text-align:center\">10</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">36h</td>\n\t\t\t<td style=\"text-align:center\">9,5</td>\n\t\t\t<td style=\"text-align:center\">11,5</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">1501 - 2000g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">8</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">48h</td>\n\t\t\t<td style=\"text-align:center\">11</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">72h</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t\t<td style=\"text-align:center\">22</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">2001-2500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">12</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">96h</td>\n\t\t\t<td style=\"text-align:center\">14</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t\t<td style=\"text-align:center\">23</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 5 a 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t\t<td style=\"text-align:center\">24</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17152,
+            "passo_de_entrada": {
+                "id": 17152,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta com orienta\u00e7\u00f5es",
+                "descricao": "<p><span style=\"font-size:18px\">Orienta&ccedil;&otilde;es para o paciente:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:18px\">Realizar banho de sol 2x&nbsp;ao dia&nbsp;(antes das 8:30h e ap&oacute;s &agrave;s 16h). Sem roupa.</span></li>\n\t<li><span style=\"font-size:18px\">Agendar Puericultura em at&eacute; 10 dias.</span></li>\n</ul>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16956,
+                "nome": "sem n\u00edvel de foto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16947,
+                    16952
+                ],
+                "argumentos": [
+                    "fototerapia",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17190,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (em n\u00edvel de foto)",
+            "descricao": "em n\u00edvel de foto",
+            "passo_de_saida_id": 17151,
+            "passo_de_saida": {
+                "id": 17151,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar resultado",
+                "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"10\" rowspan=\"1\" style=\"text-align:center\">INDICA&Ccedil;&Atilde;O DE FOTOTERAPIA/EXSANGU&Iacute;NEOTRANSFUS&Atilde;O</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &lt; 35 SEM</td>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &gt; 35 SEM</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)<br />\n\t\t\tN&Iacute;VEL DE FOTOTERAPIA</td>\n\t\t\t<td colspan=\"1\" rowspan=\"3\">\n\t\t\t<p style=\"text-align:center\">IDADE</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">PESO DE<br />\n\t\t\t&nbsp; NASCIMENTO&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">24 - 48H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">48 - 72H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">72 - 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&gt; 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">FOTOTERAPIA</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">EXSANGUINEO<br />\n\t\t\tTRANSFUSAO</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&lt; 1500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">24h</td>\n\t\t\t<td style=\"text-align:center\">8</td>\n\t\t\t<td style=\"text-align:center\">10</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">36h</td>\n\t\t\t<td style=\"text-align:center\">9,5</td>\n\t\t\t<td style=\"text-align:center\">11,5</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">1501 - 2000g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">8</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">48h</td>\n\t\t\t<td style=\"text-align:center\">11</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">72h</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t\t<td style=\"text-align:center\">22</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">2001-2500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">12</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">96h</td>\n\t\t\t<td style=\"text-align:center\">14</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t\t<td style=\"text-align:center\">23</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 5 a 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t\t<td style=\"text-align:center\">24</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17153,
+            "passo_de_entrada": {
+                "id": 17153,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Em n\u00edvel de foto] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Manter paciente em Fototerapia.</span></li>\n\t<li><span style=\"font-size:18px\">Repetir Bilirrubina Total e Fra&ccedil;&otilde;es ap&oacute;s 12h.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16957,
+                "nome": "em n\u00edvel de foto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16947,
+                    16953
+                ],
+                "argumentos": [
+                    "fototerapia",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17191,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5",
+            "descricao": "-",
+            "passo_de_saida_id": 17153,
+            "passo_de_saida": {
+                "id": 17153,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Em n\u00edvel de foto] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Manter paciente em Fototerapia.</span></li>\n\t<li><span style=\"font-size:18px\">Repetir Bilirrubina Total e Fra&ccedil;&otilde;es ap&oacute;s 12h.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17154,
+            "passo_de_entrada": {
+                "id": 17154,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar foto",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17192,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (n\u00e3o mant\u00e9m n\u00edvel de foto)",
+            "descricao": "n\u00e3o mant\u00e9m n\u00edvel de foto",
+            "passo_de_saida_id": 17154,
+            "passo_de_saida": {
+                "id": 17154,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar foto",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17155,
+            "passo_de_entrada": {
+                "id": 17155,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta com orienta\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:18px\">Orienta&ccedil;&otilde;es para o paciente:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:18px\">Retorno em 24h para ver rebote.&nbsp;</span></li>\n\t<li><span style=\"font-size:18px\">Realizar banho de sol 2x&nbsp;ao dia&nbsp;(antes das 8:30h e ap&oacute;s &agrave;s 16h). Sem roupa.</span></li>\n\t<li><span style=\"font-size:18px\">Agendar Puericultura em at&eacute; 10 dias.</span></li>\n</ul>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16958,
+                "nome": "n\u00e3o mant\u00e9m n\u00edvel de foto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16948
+                ],
+                "argumentos": [
+                    "nivel_foto"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17193,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (mant\u00e9m n\u00edvel de foto)",
+            "descricao": "mant\u00e9m n\u00edvel de foto",
+            "passo_de_saida_id": 17154,
+            "passo_de_saida": {
+                "id": 17154,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar foto",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17156,
+            "passo_de_entrada": {
+                "id": 17156,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Mant\u00e9m n\u00edvel de foto] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Manter paciente em Fototerapia por mais 12h.</span></li>\n\t<li><span style=\"font-size:18px\">Repetir Bilirrubina Total e Fra&ccedil;&otilde;es ap&oacute;s 12h.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16959,
+                "nome": "mant\u00e9m n\u00edvel de foto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16948
+                ],
+                "argumentos": [
+                    "nivel_foto"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17194,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (N\u00e3o mant\u00e9m n\u00edvel de foto)",
+            "descricao": "N\u00e3o mant\u00e9m n\u00edvel de foto",
+            "passo_de_saida_id": 17157,
+            "passo_de_saida": {
+                "id": 17157,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar n\u00edvel de foto",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17155,
+            "passo_de_entrada": {
+                "id": 17155,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Alta com orienta\u00e7\u00e3o",
+                "descricao": "<p><span style=\"font-size:18px\">Orienta&ccedil;&otilde;es para o paciente:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:18px\">Retorno em 24h para ver rebote.&nbsp;</span></li>\n\t<li><span style=\"font-size:18px\">Realizar banho de sol 2x&nbsp;ao dia&nbsp;(antes das 8:30h e ap&oacute;s &agrave;s 16h). Sem roupa.</span></li>\n\t<li><span style=\"font-size:18px\">Agendar Puericultura em at&eacute; 10 dias.</span></li>\n</ul>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 16960,
+                "nome": "N\u00e3o mant\u00e9m n\u00edvel de foto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    16949
+                ],
+                "argumentos": [
+                    "nivel_foto_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17195,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (Mant\u00e9m n\u00edvel de foto)",
+            "descricao": "Mant\u00e9m n\u00edvel de foto",
+            "passo_de_saida_id": 17157,
+            "passo_de_saida": {
+                "id": 17157,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar n\u00edvel de foto",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17158,
+            "passo_de_entrada": {
+                "id": 17158,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Interna\u00e7\u00e3o",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17001,
+                "nome": "Mant\u00e9m n\u00edvel de foto",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    16949
+                ],
+                "argumentos": [
+                    "nivel_foto_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17196,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10",
+            "descricao": "-",
+            "passo_de_saida_id": 17156,
+            "passo_de_saida": {
+                "id": 17156,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Mant\u00e9m n\u00edvel de foto] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Manter paciente em Fototerapia por mais 12h.</span></li>\n\t<li><span style=\"font-size:18px\">Repetir Bilirrubina Total e Fra&ccedil;&otilde;es ap&oacute;s 12h.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17157,
+            "passo_de_entrada": {
+                "id": 17157,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar n\u00edvel de foto",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17197,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (em n\u00edvel de exsangu\u00edneotransfus\u00e3o)",
+            "descricao": "em n\u00edvel de exsangu\u00edneotransfus\u00e3o",
+            "passo_de_saida_id": 17151,
+            "passo_de_saida": {
+                "id": 17151,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar resultado",
+                "descricao": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" dir=\"ltr\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"10\" rowspan=\"1\" style=\"text-align:center\">INDICA&Ccedil;&Atilde;O DE FOTOTERAPIA/EXSANGU&Iacute;NEOTRANSFUS&Atilde;O</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &lt; 35 SEM</td>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">RN &gt; 35 SEM</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)<br />\n\t\t\tN&Iacute;VEL DE FOTOTERAPIA</td>\n\t\t\t<td colspan=\"1\" rowspan=\"3\">\n\t\t\t<p style=\"text-align:center\">IDADE</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"4\" rowspan=\"1\" style=\"text-align:center\">BILIRRUBINA TOTAL (mg/dL)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">PESO DE<br />\n\t\t\t&nbsp; NASCIMENTO&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">24 - 48H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">48 - 72H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">72 - 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&gt; 96H<br />\n\t\t\t&nbsp; DE VIDA&nbsp;&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">FOTOTERAPIA</td>\n\t\t\t<td colspan=\"2\" rowspan=\"1\" style=\"text-align:center\">EXSANGUINEO<br />\n\t\t\tTRANSFUSAO</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; 35 - 37 SEM&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">&nbsp; &nbsp;&gt; 38 SEM&nbsp; &nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">&lt; 1500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">6</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">24h</td>\n\t\t\t<td style=\"text-align:center\">8</td>\n\t\t\t<td style=\"text-align:center\">10</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">36h</td>\n\t\t\t<td style=\"text-align:center\">9,5</td>\n\t\t\t<td style=\"text-align:center\">11,5</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">1501 - 2000g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">8</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">10</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">48h</td>\n\t\t\t<td style=\"text-align:center\">11</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">72h</td>\n\t\t\t<td style=\"text-align:center\">13</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">18</td>\n\t\t\t<td style=\"text-align:center\">22</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">2001-2500g</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">12</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td colspan=\"1\" rowspan=\"2\">\n\t\t\t<p style=\"text-align:center\">14</p>\n\t\t\t</td>\n\t\t\t<td style=\"text-align:center\">96h</td>\n\t\t\t<td style=\"text-align:center\">14</td>\n\t\t\t<td style=\"text-align:center\">16</td>\n\t\t\t<td style=\"text-align:center\">20</td>\n\t\t\t<td style=\"text-align:center\">23</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"text-align:center\">&nbsp; 5 a 7 dias&nbsp;&nbsp;</td>\n\t\t\t<td style=\"text-align:center\">15</td>\n\t\t\t<td style=\"text-align:center\">17</td>\n\t\t\t<td style=\"text-align:center\">21</td>\n\t\t\t<td style=\"text-align:center\">24</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17159,
+            "passo_de_entrada": {
+                "id": 17159,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "[Em n\u00edvel de exsangu\u00edneotransfus\u00e3o] Conduta",
+                "descricao": "<p><span style=\"font-size:18px\">Internar paciente em UTI Neonatal.&nbsp;</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17002,
+                "nome": "em n\u00edvel de exsangu\u00edneotransfus\u00e3o",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16947,
+                    16954
+                ],
+                "argumentos": [
+                    "fototerapia",
+                    "3"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17198,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (> 14 dias de vida)",
+            "descricao": "> 14 dias de vida",
+            "passo_de_saida_id": 17149,
+            "passo_de_saida": {
+                "id": 17149,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar tempo de vida",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17160,
+            "passo_de_entrada": {
+                "id": 17160,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[>14 dias de vida] Conduta",
+                "descricao": "<p>- SEM NECESSIDADE DE AGUARDA EM FOTOTERAPIA</p>\n\n<p>- SOLICITAR OS SEGUINTES EXAMES:</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17003,
+                "nome": "> 14 dias de vida",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16946,
+                    16952
+                ],
+                "argumentos": [
+                    "tempo_vida",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17199,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13",
+            "descricao": "-",
+            "passo_de_saida_id": 17160,
+            "passo_de_saida": {
+                "id": 17160,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[>14 dias de vida] Conduta",
+                "descricao": "<p>- SEM NECESSIDADE DE AGUARDA EM FOTOTERAPIA</p>\n\n<p>- SOLICITAR OS SEGUINTES EXAMES:</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17181,
+            "passo_de_entrada": {
+                "id": 17181,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar exames",
+                "descricao": "<p><span style=\"font-size:16px\">Avaliar eleva&ccedil;&atilde;o da Bilirrubina conforme a seguir:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">BD &gt; 1 mg/dl SE N&Iacute;VEL DE BT &lt; 5mg/dl; ou</span></li>\n\t<li><span style=\"font-size:16px\">BD &gt; 2&nbsp;mg/dl OU 20% DO TOTAL,&nbsp;SE&nbsp;BT &gt;&nbsp;5mg/dl.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17200,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (eleva\u00e7\u00e3o de reticul\u00f3citos)",
+            "descricao": "eleva\u00e7\u00e3o de reticul\u00f3citos",
+            "passo_de_saida_id": 17181,
+            "passo_de_saida": {
+                "id": 17181,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar exames",
+                "descricao": "<p><span style=\"font-size:16px\">Avaliar eleva&ccedil;&atilde;o da Bilirrubina conforme a seguir:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">BD &gt; 1 mg/dl SE N&Iacute;VEL DE BT &lt; 5mg/dl; ou</span></li>\n\t<li><span style=\"font-size:16px\">BD &gt; 2&nbsp;mg/dl OU 20% DO TOTAL,&nbsp;SE&nbsp;BT &gt;&nbsp;5mg/dl.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17182,
+            "passo_de_entrada": {
+                "id": 17182,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar hematologista",
+                "descricao": "<p><span style=\"font-size:18px\">Encaminhar paciente ao ambulat&oacute;rio hematologista pedi&aacute;trico.</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17004,
+                "nome": "eleva\u00e7\u00e3o de reticul\u00f3citos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16950,
+                    16953
+                ],
+                "argumentos": [
+                    "resultado_exames",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17201,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (aumento de bilirrubinas)",
+            "descricao": "aumento de bilirrubinas",
+            "passo_de_saida_id": 17181,
+            "passo_de_saida": {
+                "id": 17181,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar exames",
+                "descricao": "<p><span style=\"font-size:16px\">Avaliar eleva&ccedil;&atilde;o da Bilirrubina conforme a seguir:</span></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">BD &gt; 1 mg/dl SE N&Iacute;VEL DE BT &lt; 5mg/dl; ou</span></li>\n\t<li><span style=\"font-size:16px\">BD &gt; 2&nbsp;mg/dl OU 20% DO TOTAL,&nbsp;SE&nbsp;BT &gt;&nbsp;5mg/dl.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17183,
+            "passo_de_entrada": {
+                "id": 17183,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Aumento bilirrubinas] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Solicitar US de vias biliares.&nbsp;</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17005,
+                "nome": "aumento de bilirrubinas",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16950,
+                    16952
+                ],
+                "argumentos": [
+                    "resultado_exames",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17202,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16",
+            "descricao": "-",
+            "passo_de_saida_id": 17183,
+            "passo_de_saida": {
+                "id": 17183,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Aumento bilirrubinas] Conduta",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Solicitar US de vias biliares.&nbsp;</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17184,
+            "passo_de_entrada": {
+                "id": 17184,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17203,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17 (US alterado)",
+            "descricao": "US alterado",
+            "passo_de_saida_id": 17184,
+            "passo_de_saida": {
+                "id": 17184,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17185,
+            "passo_de_entrada": {
+                "id": 17185,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Comunicar l&iacute;der local devido a hip&oacute;tese de Colestase.&nbsp;</span></li>\n\t<li><span style=\"font-size:18px\">Avalia&ccedil;&atilde;o com Cirurgia Pedi&aacute;trica.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17006,
+                "nome": "US alterado",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16951,
+                    16953
+                ],
+                "argumentos": [
+                    "resultado_ultrassom",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17204,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18 (US normal)",
+            "descricao": "US normal",
+            "passo_de_saida_id": 17184,
+            "passo_de_saida": {
+                "id": 17184,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar ultrassom",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17186,
+            "passo_de_entrada": {
+                "id": 17186,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Repetir BTF",
+                "descricao": "<ul>\n\t<li><span style=\"font-size:18px\">Repetir BTF com 48h.</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17007,
+                "nome": "US normal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    16951,
+                    16952
+                ],
+                "argumentos": [
+                    "resultado_ultrassom",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 16946,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "tempo_vida",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "> 14 dias de vida",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "< 14 dias de vida",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16947,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "fototerapia",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Icter\u00edcia sem n\u00edvel de foto",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Em n\u00edvel de foto",
+                    "peso": 2.0
+                },
+                {
+                    "texto": "Em n\u00edvel de exsangu\u00edneotransfus\u00e3o",
+                    "peso": 3.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16948,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "nivel_foto",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16949,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "nivel_foto_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 16950,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "resultado_exames",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Aumento de Bilirrubinas",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Eleva\u00e7\u00e3o de Reticul\u00f3citos ou Anemia",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16951,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "resultado_ultrassom",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Normal",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Alterado",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 16952,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16953,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 16954,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        }
+    ]
+}

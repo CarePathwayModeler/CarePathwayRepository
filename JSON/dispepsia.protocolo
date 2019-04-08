@@ -1,0 +1,2420 @@
+{
+    "id": 3261,
+    "url": "",
+    "codigo": "H032",
+    "nome": "Dispepsia",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 361,
+    "versao": 5,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T15:21:56.359133-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T15:19:14.100319-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-29T15:21:56.359133-03:00"
+    },
+    "elementos": [
+        {
+            "id": 18654,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Anamnese Completa",
+            "descricao": "<p><strong>Realizar exame do abdome para excluir sinais de irrita&ccedil;&atilde;o peritoneal.</strong></p>",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9541,
+                    "url": "",
+                    "texto": "M\u00e1 digest\u00e3o",
+                    "categoria": "Sintomas Disp\u00e9pticos",
+                    "variavel": {
+                        "id": 18336,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_dispepticos_ma_digestao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9542,
+                    "url": "",
+                    "texto": "Pirose",
+                    "categoria": "Sintomas Disp\u00e9pticos",
+                    "variavel": {
+                        "id": 18337,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_dispepticos__pirose",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                },
+                {
+                    "id": 9543,
+                    "url": "",
+                    "texto": "Regurgita\u00e7\u00e3o",
+                    "categoria": "Sintomas Disp\u00e9pticos",
+                    "variavel": {
+                        "id": 18338,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_dispepticos_regurgitacao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 5
+                },
+                {
+                    "id": 9544,
+                    "url": "",
+                    "texto": "N\u00e1useas",
+                    "categoria": "Sintomas Disp\u00e9pticos",
+                    "variavel": {
+                        "id": 18339,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_dispepticos_nauseas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 6
+                },
+                {
+                    "id": 9545,
+                    "url": "",
+                    "texto": "V\u00f4mitos",
+                    "categoria": "Sintomas Disp\u00e9pticos",
+                    "variavel": {
+                        "id": 18340,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_dispepticos_vomitos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 9546,
+                    "url": "",
+                    "texto": "Saciedade precoce",
+                    "categoria": "Sintomas Disp\u00e9pticos",
+                    "variavel": {
+                        "id": 18381,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_dispepticos_saciedade_precoce",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9547,
+                    "url": "",
+                    "texto": "Eructa\u00e7\u00e3o excessiva",
+                    "categoria": "Sintomas Disp\u00e9pticos",
+                    "variavel": {
+                        "id": 18382,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sintomas_dispepticos_eructacao_excessiva",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9548,
+                    "url": "",
+                    "texto": "Dor persistente ou desconforto epig\u00e1strico?",
+                    "categoria": "Ocorr\u00eancia",
+                    "variavel": {
+                        "id": 18383,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "ocorrencia_dor_persistente",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 18711,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18654,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Anamnese Completa",
+                    "passo_de_entrada_id": 18655,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18655,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Sinais de Alarme",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9549,
+                    "url": "",
+                    "texto": "Sangramento gastrointestinal agudo/cr\u00f4nico (melena/hemat\u00eamese)",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18384,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_sangramento_gastrointestinal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9550,
+                    "url": "",
+                    "texto": "Perda de peso involunt\u00e1ria progressiva",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18385,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_perda_de_peso_involuntaria",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                },
+                {
+                    "id": 9551,
+                    "url": "",
+                    "texto": "V\u00f4mitos persistentes",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18386,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_vomitos_persistentes",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 5
+                },
+                {
+                    "id": 9552,
+                    "url": "",
+                    "texto": "Anemia por defici\u00eancia de ferro",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18387,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_anemia_deficiencia_ferro",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 6
+                },
+                {
+                    "id": 9553,
+                    "url": "",
+                    "texto": "Massa epig\u00e1strica",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18388,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_massa_epigastrica",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 9554,
+                    "url": "",
+                    "texto": "Doen\u00e7a p\u00e9ptica ulcerosa pr\u00e9via",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18389,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_doenca_peptica_ulcerosa_previa",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9555,
+                    "url": "",
+                    "texto": "Hist\u00f3ria familiar de c\u00e2ncer g\u00e1strico",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18390,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_historico_familiar_de_cancer_gastrico",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9556,
+                    "url": "",
+                    "texto": "Paciente maior de 50 anos",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18391,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais_alarme_maior_de_50_anos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18711,
+                    "url": "",
+                    "nome": "S1",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18654,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Anamnese Completa",
+                    "passo_de_entrada_id": 18655,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18712,
+                    "url": "",
+                    "nome": "S2 (com sinais de alarme)",
+                    "descricao": "com sinais de alarme",
+                    "passo_de_saida_id": 18655,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 18656,
+                    "passo_de_entrada": "Tratamento: [Com Sinais de Alarme] Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18713,
+                    "url": "",
+                    "nome": "S3 (sem sinais de alarme)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 18655,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 18657,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18656,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Com Sinais de Alarme] Exames",
+            "descricao": "<p><span style=\"font-size:16px\">Discutir com l&iacute;der local a necessidade de realizar Endoscopia</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Dispepsia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "UREIA",
+                    "exame": "28011414",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Dispepsia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATININA  (SANGUE)",
+                    "exame": "28010540",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Dispepsia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9641,
+                    "url": "",
+                    "medicamento": 36064,
+                    "codigo": "",
+                    "nome": "BUSCOPAN COMPOSTO AMPL 5 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": {
+                        "id": 3944,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "Inf.Lenta",
+                        "codigo_principio_ativo": 1328,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 3,
+                        "codigo_ordem_administracao": 1,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Lento",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 15,
+                        "quantidade_volume": 5,
+                        "quantidade_dosagem": 500,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9642,
+                    "url": "",
+                    "medicamento": 39144,
+                    "codigo": "",
+                    "nome": "ANTAK AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9643,
+                    "url": "",
+                    "medicamento": 43800,
+                    "codigo": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 500 ML TUBO 500 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "UD",
+                    "unidade_display": "UNIDADE",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18712,
+                    "url": "",
+                    "nome": "S2 (com sinais de alarme)",
+                    "descricao": "com sinais de alarme",
+                    "passo_de_saida_id": 18655,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 18656,
+                    "passo_de_entrada": "Tratamento: [Com Sinais de Alarme] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18714,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18656,
+                    "passo_de_saida": "Tratamento: [Com Sinais de Alarme] Exames",
+                    "passo_de_entrada_id": 18658,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Endoscopia",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18657,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar irrita\u00e7\u00e3o peritoneal",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9557,
+                    "url": "",
+                    "texto": "Sinais de irrita\u00e7\u00e3o peritoneal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18392,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "irritcao_peritoneal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18713,
+                    "url": "",
+                    "nome": "S3 (sem sinais de alarme)",
+                    "descricao": "sem sinais de alarme",
+                    "passo_de_saida_id": 18655,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Sinais de Alarme",
+                    "passo_de_entrada_id": 18657,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18720,
+                    "url": "",
+                    "nome": "S10 (exames normais)",
+                    "descricao": "exames normais",
+                    "passo_de_saida_id": 18703,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (2)",
+                    "passo_de_entrada_id": 18657,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18722,
+                    "url": "",
+                    "nome": "S12 (com irritacao peritoneal)",
+                    "descricao": "com irritacao peritoneal",
+                    "passo_de_saida_id": 18657,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "passo_de_entrada_id": 18682,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Solicitar Tomografia",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T15:20:58.541866-03:00"
+                    }
+                },
+                {
+                    "id": 18723,
+                    "url": "",
+                    "nome": "S13 (sem irritacao peritoneal)",
+                    "descricao": "sem irritacao peritoneal",
+                    "passo_de_saida_id": 18657,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "passo_de_entrada_id": 18706,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Averiguar medicamentos usados",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18658,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Endoscopia",
+            "descricao": "<p><span style=\"font-size:16px\">Caso o paciente tenha realizado Endoscopia, avaliar o resultado</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9558,
+                    "url": "",
+                    "texto": "Endoscopia Digestiva Alta com resultado positivo?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18393,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "endoscopia_igestiva_alta_positivo",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18714,
+                    "url": "",
+                    "nome": "S4",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18656,
+                    "passo_de_saida": "Tratamento: [Com Sinais de Alarme] Exames",
+                    "passo_de_entrada_id": 18658,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Endoscopia",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18715,
+                    "url": "",
+                    "nome": "S5 (endoscopia alterada)",
+                    "descricao": "endoscopia alterada",
+                    "passo_de_saida_id": 18658,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Endoscopia",
+                    "passo_de_entrada_id": 18701,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar ao Gastroenterologista",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18716,
+                    "url": "",
+                    "nome": "S6 (endoscopia normal)",
+                    "descricao": "endoscopia normal",
+                    "passo_de_saida_id": 18658,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Endoscopia",
+                    "passo_de_entrada_id": 18659,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar exames laboratoriais",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18659,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar exames laboratoriais",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9559,
+                    "url": "",
+                    "texto": "Exames laboratoriais evidenciam alguma patologia gastrointestinal?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18394,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "patologia_gastrointestinal",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18716,
+                    "url": "",
+                    "nome": "S6 (endoscopia normal)",
+                    "descricao": "endoscopia normal",
+                    "passo_de_saida_id": 18658,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Endoscopia",
+                    "passo_de_entrada_id": 18659,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar exames laboratoriais",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18717,
+                    "url": "",
+                    "nome": "S7 (com patologia gastrointestinal)",
+                    "descricao": "com patologia gastrointestinal",
+                    "passo_de_saida_id": 18659,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames laboratoriais",
+                    "passo_de_entrada_id": 18660,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18718,
+                    "url": "",
+                    "nome": "S8 (sem patologia gastrointestinal)",
+                    "descricao": "sem patologia gastrointestinal",
+                    "passo_de_saida_id": 18659,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames laboratoriais",
+                    "passo_de_entrada_id": 18702,
+                    "passo_de_entrada": "Tratamento: [Sem patologia gastrointestinal] Exames",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18660,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "Discutir quadro com l\u00edder local.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18717,
+                    "url": "",
+                    "nome": "S7 (com patologia gastrointestinal)",
+                    "descricao": "com patologia gastrointestinal",
+                    "passo_de_saida_id": 18659,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames laboratoriais",
+                    "passo_de_entrada_id": 18660,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18682,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Solicitar Tomografia",
+            "descricao": "Discutir caso com chefia local e aventar possibilidade de solicita\u00e7\u00e3o de TOMOGRAFIA COMPUTADORIZADA sob cuidados da pr\u00f3pria chefia.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:20:12.797087-03:00"
+            },
+            "sequencias_de_entrada": [
+                {
+                    "id": 18722,
+                    "url": "",
+                    "nome": "S12 (com irritacao peritoneal)",
+                    "descricao": "com irritacao peritoneal",
+                    "passo_de_saida_id": 18657,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "passo_de_entrada_id": 18682,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Solicitar Tomografia",
+                    "ultima_auditoria": {
+                        "usuario": "Intmed Software",
+                        "data": "2019-01-29T15:20:58.541866-03:00"
+                    }
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18701,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Encaminhar ao Gastroenterologista",
+            "descricao": "Encaminhar paciente ao Gastroenterologista.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18715,
+                    "url": "",
+                    "nome": "S5 (endoscopia alterada)",
+                    "descricao": "endoscopia alterada",
+                    "passo_de_saida_id": 18658,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Endoscopia",
+                    "passo_de_entrada_id": 18701,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Encaminhar ao Gastroenterologista",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18702,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "[Sem patologia gastrointestinal] Exames",
+            "descricao": "<p><span style=\"font-size:16px\">Solicitar exames para excluir doen&ccedil;a coronariana</span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Dispepsia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Dispepsia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CREATINO FOSFOQUINASE - CK MASSA",
+                    "exame": "28012119",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Dispepsia",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18718,
+                    "url": "",
+                    "nome": "S8 (sem patologia gastrointestinal)",
+                    "descricao": "sem patologia gastrointestinal",
+                    "passo_de_saida_id": 18659,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar exames laboratoriais",
+                    "passo_de_entrada_id": 18702,
+                    "passo_de_entrada": "Tratamento: [Sem patologia gastrointestinal] Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18721,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "Icondicional",
+                    "passo_de_saida_id": 18702,
+                    "passo_de_saida": "Tratamento: [Sem patologia gastrointestinal] Exames",
+                    "passo_de_entrada_id": 18703,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18703,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Exames (2)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9560,
+                    "url": "",
+                    "texto": "Exames alterados?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18395,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "exames_laboratoriais_alterados_2",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18721,
+                    "url": "",
+                    "nome": "S11",
+                    "descricao": "Icondicional",
+                    "passo_de_saida_id": 18702,
+                    "passo_de_saida": "Tratamento: [Sem patologia gastrointestinal] Exames",
+                    "passo_de_entrada_id": 18703,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Exames (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18719,
+                    "url": "",
+                    "nome": "S9 (exames alterados)",
+                    "descricao": "exames alterados",
+                    "passo_de_saida_id": 18703,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (2)",
+                    "passo_de_entrada_id": 18704,
+                    "passo_de_entrada": "Encaminhamento: Encaminhamento: Dor Tor\u00e1cica",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18720,
+                    "url": "",
+                    "nome": "S10 (exames normais)",
+                    "descricao": "exames normais",
+                    "passo_de_saida_id": 18703,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (2)",
+                    "passo_de_entrada_id": 18657,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18704,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Encaminhamento: Dor Tor\u00e1cica",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H020"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18719,
+                    "url": "",
+                    "nome": "S9 (exames alterados)",
+                    "descricao": "exames alterados",
+                    "passo_de_saida_id": 18703,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Exames (2)",
+                    "passo_de_entrada_id": 18704,
+                    "passo_de_entrada": "Encaminhamento: Encaminhamento: Dor Tor\u00e1cica",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18706,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Averiguar medicamentos usados",
+            "descricao": "<p>Avaliar se paciente faz uso de medicamentos que podem ser respons&aacute;veis pelos sintomas&nbsp;disp&eacute;pticos. Exemplo:</p>\n\n<ul>\n\t<li>AINE&nbsp;</li>\n\t<li>Bifosfonatos</li>\n\t<li>Coticosteroides</li>\n\t<li>AAS</li>\n\t<li>Marevan</li>\n\t<li>Clopidogrel, ticagrelor, prasugrel</li>\n\t<li>Fluoxetina,&nbsp;venlafaxina, duloxetina</li>\n\t<li>Espironolactona</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9561,
+                    "url": "",
+                    "texto": "Usa medicamentos que podem causar sintomas disp\u00e9pticos?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 18396,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "medicametos_sintomas_dispepticos",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18723,
+                    "url": "",
+                    "nome": "S13 (sem irritacao peritoneal)",
+                    "descricao": "sem irritacao peritoneal",
+                    "passo_de_saida_id": 18657,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar irrita\u00e7\u00e3o peritoneal",
+                    "passo_de_entrada_id": 18706,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Averiguar medicamentos usados",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18724,
+                    "url": "",
+                    "nome": "S14 (usa medicamentos dispepticos)",
+                    "descricao": "usa medicamentos dispepticos",
+                    "passo_de_saida_id": 18706,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar medicamentos usados",
+                    "passo_de_entrada_id": 18707,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Reavaliar Medica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18725,
+                    "url": "",
+                    "nome": "S15 (n\u00e3o usa medicamentos dispepticos)",
+                    "descricao": "n\u00e3o usa medicamentos dispepticos",
+                    "passo_de_saida_id": 18706,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar medicamentos usados",
+                    "passo_de_entrada_id": 18708,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aconselhamento de estilo de vida",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18707,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Reavaliar Medica\u00e7\u00f5es",
+            "descricao": "<p>Rever necessidade das medica&ccedil;&otilde;es em uso. Se n&atilde;o houver, descontinuar.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18724,
+                    "url": "",
+                    "nome": "S14 (usa medicamentos dispepticos)",
+                    "descricao": "usa medicamentos dispepticos",
+                    "passo_de_saida_id": 18706,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar medicamentos usados",
+                    "passo_de_entrada_id": 18707,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Reavaliar Medica\u00e7\u00f5es",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18726,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18707,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Reavaliar Medica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 18708,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aconselhamento de estilo de vida",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18708,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Aconselhamento de estilo de vida",
+            "descricao": "<p><strong><span style=\"font-size:16px\">&nbsp;ACONSELHAR MUDAN&Ccedil;A NO ESTILO DE VIDA</span></strong></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Alimenta&ccedil;&atilde;o saud&aacute;vel</span></li>\n\t<li><span style=\"font-size:16px\">Redu&ccedil;&atilde;o do peso</span></li>\n\t<li><span style=\"font-size:16px\">Suspens&atilde;o tabagismo</span></li>\n\t<li><span style=\"font-size:16px\">Evitar: &aacute;lcool, caf&eacute;, chocolate, frutas &aacute;cidas, pimenta, molho de tomate e refrigerante</span></li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18725,
+                    "url": "",
+                    "nome": "S15 (n\u00e3o usa medicamentos dispepticos)",
+                    "descricao": "n\u00e3o usa medicamentos dispepticos",
+                    "passo_de_saida_id": 18706,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Averiguar medicamentos usados",
+                    "passo_de_entrada_id": 18708,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aconselhamento de estilo de vida",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 18726,
+                    "url": "",
+                    "nome": "S16",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18707,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Reavaliar Medica\u00e7\u00f5es",
+                    "passo_de_entrada_id": 18708,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Aconselhamento de estilo de vida",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18727,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18708,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Aconselhamento de estilo de vida",
+                    "passo_de_entrada_id": 18709,
+                    "passo_de_entrada": "Receita: Tratar Parasitose e iniciar protetor g\u00e1strico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18709,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Tratar Parasitose e iniciar protetor g\u00e1strico",
+            "descricao": "<p><u><strong>Aten&ccedil;&atilde;o!&nbsp;</strong></u></p>\n\n<p>N&atilde;o prescrever ALBENDAZOL/SECNIDAZOL se o paciente j&aacute; tratou parasitose h&aacute; menos de 1 anos e n&atilde;o faz uso de &aacute;gua/alimentos n&atilde;o higienizados</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "Aten\u00e7\u00e3o!\u00a0\n\nN\u00e3o prescrever ALBENDAZOL/SECNIDAZOL se o paciente j\u00e1 tratou parasitose h\u00e1 menos de 1 anos e n\u00e3o faz uso de \u00e1gua/alimentos n\u00e3o higienizados",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4961,
+                    "url": "",
+                    "nome": "Albendazol 400mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 3,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "tomar ap\u00f3s o almo\u00e7o",
+                    "ordem": 1
+                },
+                {
+                    "id": 4962,
+                    "url": "",
+                    "nome": "Secnidazol 1g",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar ap\u00f3s o jantar no terceiro dia de tratamento",
+                    "ordem": 2
+                },
+                {
+                    "id": 4963,
+                    "url": "",
+                    "nome": "OMEPRAZOL 20MG COMP 1 UD",
+                    "medicamento": 142672,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 6,
+                    "unidade_duracao": "SS",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "INICIAR PROTETOR G\u00c1STRICO:\n\n01 comprimido, por via oral, 30min antes do caf\u00e9 da manh\u00e3 e 30min antes do jantar durante 4 - 6 semanas",
+                    "ordem": 3
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 18727,
+                    "url": "",
+                    "nome": "S17",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18708,
+                    "passo_de_saida": "Informa\u00e7\u00e3o: Aconselhamento de estilo de vida",
+                    "passo_de_entrada_id": 18709,
+                    "passo_de_entrada": "Receita: Tratar Parasitose e iniciar protetor g\u00e1strico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 18728,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18709,
+                    "passo_de_saida": "Receita: Tratar Parasitose e iniciar protetor g\u00e1strico",
+                    "passo_de_entrada_id": 18710,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 18710,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Informativo",
+            "descricao": "Instruir o paciente a marcar consulta com gastroenterologista caso n\u00e3o haja melhora dos sintomas.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 18728,
+                    "url": "",
+                    "nome": "S18",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 18709,
+                    "passo_de_saida": "Receita: Tratar Parasitose e iniciar protetor g\u00e1strico",
+                    "passo_de_entrada_id": 18710,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Informativo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 18711,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18654,
+            "passo_de_saida": {
+                "id": 18654,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Anamnese Completa",
+                "descricao": "<p><strong>Realizar exame do abdome para excluir sinais de irrita&ccedil;&atilde;o peritoneal.</strong></p>",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18655,
+            "passo_de_entrada": {
+                "id": 18655,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18712,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (com sinais de alarme)",
+            "descricao": "com sinais de alarme",
+            "passo_de_saida_id": 18655,
+            "passo_de_saida": {
+                "id": 18655,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18656,
+            "passo_de_entrada": {
+                "id": 18656,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Com Sinais de Alarme] Exames",
+                "descricao": "<p><span style=\"font-size:16px\">Discutir com l&iacute;der local a necessidade de realizar Endoscopia</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18402,
+                "nome": "sinais de alarme ou idade > 50",
+                "descricao": "",
+                "visivel": false,
+                "operador": "ouLogico",
+                "operador_display": "Ou L\u00f3gico",
+                "argumentos_ids": [
+                    18399,
+                    18391
+                ],
+                "argumentos": [
+                    "Sinais de Alarme >= 1",
+                    "sinais_alarme_maior_de_50_anos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18713,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (sem sinais de alarme)",
+            "descricao": "sem sinais de alarme",
+            "passo_de_saida_id": 18655,
+            "passo_de_saida": {
+                "id": 18655,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Sinais de Alarme",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18657,
+            "passo_de_entrada": {
+                "id": 18657,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar irrita\u00e7\u00e3o peritoneal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18403,
+                "nome": "sem sinais de alarme e < 50 anos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "eLogico",
+                "operador_display": "E L\u00f3gico",
+                "argumentos_ids": [
+                    18400,
+                    18401
+                ],
+                "argumentos": [
+                    "Sinais de Alarme < 1",
+                    "Menor de 50 anos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18714,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18656,
+            "passo_de_saida": {
+                "id": 18656,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Com Sinais de Alarme] Exames",
+                "descricao": "<p><span style=\"font-size:16px\">Discutir com l&iacute;der local a necessidade de realizar Endoscopia</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18658,
+            "passo_de_entrada": {
+                "id": 18658,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Endoscopia",
+                "descricao": "<p><span style=\"font-size:16px\">Caso o paciente tenha realizado Endoscopia, avaliar o resultado</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18715,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (endoscopia alterada)",
+            "descricao": "endoscopia alterada",
+            "passo_de_saida_id": 18658,
+            "passo_de_saida": {
+                "id": 18658,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Endoscopia",
+                "descricao": "<p><span style=\"font-size:16px\">Caso o paciente tenha realizado Endoscopia, avaliar o resultado</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18701,
+            "passo_de_entrada": {
+                "id": 18701,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Encaminhar ao Gastroenterologista",
+                "descricao": "Encaminhar paciente ao Gastroenterologista.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18404,
+                "nome": "endoscopia alterada",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18393
+                ],
+                "argumentos": [
+                    "endoscopia_igestiva_alta_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18716,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6 (endoscopia normal)",
+            "descricao": "endoscopia normal",
+            "passo_de_saida_id": 18658,
+            "passo_de_saida": {
+                "id": 18658,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Endoscopia",
+                "descricao": "<p><span style=\"font-size:16px\">Caso o paciente tenha realizado Endoscopia, avaliar o resultado</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18659,
+            "passo_de_entrada": {
+                "id": 18659,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar exames laboratoriais",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18405,
+                "nome": "endoscopia normal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18393
+                ],
+                "argumentos": [
+                    "endoscopia_igestiva_alta_positivo"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18717,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (com patologia gastrointestinal)",
+            "descricao": "com patologia gastrointestinal",
+            "passo_de_saida_id": 18659,
+            "passo_de_saida": {
+                "id": 18659,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar exames laboratoriais",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18660,
+            "passo_de_entrada": {
+                "id": 18660,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Discutir quadro com l\u00edder local.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18406,
+                "nome": "com patologia gastrointestinal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18394
+                ],
+                "argumentos": [
+                    "patologia_gastrointestinal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18718,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (sem patologia gastrointestinal)",
+            "descricao": "sem patologia gastrointestinal",
+            "passo_de_saida_id": 18659,
+            "passo_de_saida": {
+                "id": 18659,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar exames laboratoriais",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18702,
+            "passo_de_entrada": {
+                "id": 18702,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem patologia gastrointestinal] Exames",
+                "descricao": "<p><span style=\"font-size:16px\">Solicitar exames para excluir doen&ccedil;a coronariana</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18407,
+                "nome": "sem patologia gastrointestinal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18394
+                ],
+                "argumentos": [
+                    "patologia_gastrointestinal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18719,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (exames alterados)",
+            "descricao": "exames alterados",
+            "passo_de_saida_id": 18703,
+            "passo_de_saida": {
+                "id": 18703,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18704,
+            "passo_de_entrada": {
+                "id": 18704,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Encaminhamento: Dor Tor\u00e1cica",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    181
+                ]
+            },
+            "operacao": {
+                "id": 18408,
+                "nome": "exames alterados",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18395
+                ],
+                "argumentos": [
+                    "exames_laboratoriais_alterados_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18720,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (exames normais)",
+            "descricao": "exames normais",
+            "passo_de_saida_id": 18703,
+            "passo_de_saida": {
+                "id": 18703,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18657,
+            "passo_de_entrada": {
+                "id": 18657,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar irrita\u00e7\u00e3o peritoneal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18409,
+                "nome": "exames normais",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18395
+                ],
+                "argumentos": [
+                    "exames_laboratoriais_alterados_2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18721,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11",
+            "descricao": "Icondicional",
+            "passo_de_saida_id": 18702,
+            "passo_de_saida": {
+                "id": 18702,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "[Sem patologia gastrointestinal] Exames",
+                "descricao": "<p><span style=\"font-size:16px\">Solicitar exames para excluir doen&ccedil;a coronariana</span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18703,
+            "passo_de_entrada": {
+                "id": 18703,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Exames (2)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18722,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (com irritacao peritoneal)",
+            "descricao": "com irritacao peritoneal",
+            "passo_de_saida_id": 18657,
+            "passo_de_saida": {
+                "id": 18657,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar irrita\u00e7\u00e3o peritoneal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18682,
+            "passo_de_entrada": {
+                "id": 18682,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Solicitar Tomografia",
+                "descricao": "Discutir caso com chefia local e aventar possibilidade de solicita\u00e7\u00e3o de TOMOGRAFIA COMPUTADORIZADA sob cuidados da pr\u00f3pria chefia.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": {
+                    "usuario": "Intmed Software",
+                    "data": "2019-01-29T15:20:12.797087-03:00"
+                }
+            },
+            "operacao": {
+                "id": 18410,
+                "nome": "com irritacao peritoneal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18392
+                ],
+                "argumentos": [
+                    "irritcao_peritoneal"
+                ]
+            },
+            "ultima_auditoria": {
+                "usuario": "Intmed Software",
+                "data": "2019-01-29T15:20:58.541866-03:00"
+            }
+        },
+        {
+            "id": 18723,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (sem irritacao peritoneal)",
+            "descricao": "sem irritacao peritoneal",
+            "passo_de_saida_id": 18657,
+            "passo_de_saida": {
+                "id": 18657,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar irrita\u00e7\u00e3o peritoneal",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18706,
+            "passo_de_entrada": {
+                "id": 18706,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Averiguar medicamentos usados",
+                "descricao": "<p>Avaliar se paciente faz uso de medicamentos que podem ser respons&aacute;veis pelos sintomas&nbsp;disp&eacute;pticos. Exemplo:</p>\n\n<ul>\n\t<li>AINE&nbsp;</li>\n\t<li>Bifosfonatos</li>\n\t<li>Coticosteroides</li>\n\t<li>AAS</li>\n\t<li>Marevan</li>\n\t<li>Clopidogrel, ticagrelor, prasugrel</li>\n\t<li>Fluoxetina,&nbsp;venlafaxina, duloxetina</li>\n\t<li>Espironolactona</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18411,
+                "nome": "sem irritacao peritoneal",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18392
+                ],
+                "argumentos": [
+                    "irritcao_peritoneal"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18724,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (usa medicamentos dispepticos)",
+            "descricao": "usa medicamentos dispepticos",
+            "passo_de_saida_id": 18706,
+            "passo_de_saida": {
+                "id": 18706,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Averiguar medicamentos usados",
+                "descricao": "<p>Avaliar se paciente faz uso de medicamentos que podem ser respons&aacute;veis pelos sintomas&nbsp;disp&eacute;pticos. Exemplo:</p>\n\n<ul>\n\t<li>AINE&nbsp;</li>\n\t<li>Bifosfonatos</li>\n\t<li>Coticosteroides</li>\n\t<li>AAS</li>\n\t<li>Marevan</li>\n\t<li>Clopidogrel, ticagrelor, prasugrel</li>\n\t<li>Fluoxetina,&nbsp;venlafaxina, duloxetina</li>\n\t<li>Espironolactona</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18707,
+            "passo_de_entrada": {
+                "id": 18707,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Reavaliar Medica\u00e7\u00f5es",
+                "descricao": "<p>Rever necessidade das medica&ccedil;&otilde;es em uso. Se n&atilde;o houver, descontinuar.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18412,
+                "nome": "usa medicamentos dispepticos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    18396
+                ],
+                "argumentos": [
+                    "medicametos_sintomas_dispepticos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18725,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S15 (n\u00e3o usa medicamentos dispepticos)",
+            "descricao": "n\u00e3o usa medicamentos dispepticos",
+            "passo_de_saida_id": 18706,
+            "passo_de_saida": {
+                "id": 18706,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Averiguar medicamentos usados",
+                "descricao": "<p>Avaliar se paciente faz uso de medicamentos que podem ser respons&aacute;veis pelos sintomas&nbsp;disp&eacute;pticos. Exemplo:</p>\n\n<ul>\n\t<li>AINE&nbsp;</li>\n\t<li>Bifosfonatos</li>\n\t<li>Coticosteroides</li>\n\t<li>AAS</li>\n\t<li>Marevan</li>\n\t<li>Clopidogrel, ticagrelor, prasugrel</li>\n\t<li>Fluoxetina,&nbsp;venlafaxina, duloxetina</li>\n\t<li>Espironolactona</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18708,
+            "passo_de_entrada": {
+                "id": 18708,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aconselhamento de estilo de vida",
+                "descricao": "<p><strong><span style=\"font-size:16px\">&nbsp;ACONSELHAR MUDAN&Ccedil;A NO ESTILO DE VIDA</span></strong></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Alimenta&ccedil;&atilde;o saud&aacute;vel</span></li>\n\t<li><span style=\"font-size:16px\">Redu&ccedil;&atilde;o do peso</span></li>\n\t<li><span style=\"font-size:16px\">Suspens&atilde;o tabagismo</span></li>\n\t<li><span style=\"font-size:16px\">Evitar: &aacute;lcool, caf&eacute;, chocolate, frutas &aacute;cidas, pimenta, molho de tomate e refrigerante</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 18413,
+                "nome": "n\u00e3o usa medicamentos dispepticos",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    18396
+                ],
+                "argumentos": [
+                    "medicametos_sintomas_dispepticos"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18726,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S16",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18707,
+            "passo_de_saida": {
+                "id": 18707,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Reavaliar Medica\u00e7\u00f5es",
+                "descricao": "<p>Rever necessidade das medica&ccedil;&otilde;es em uso. Se n&atilde;o houver, descontinuar.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18708,
+            "passo_de_entrada": {
+                "id": 18708,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aconselhamento de estilo de vida",
+                "descricao": "<p><strong><span style=\"font-size:16px\">&nbsp;ACONSELHAR MUDAN&Ccedil;A NO ESTILO DE VIDA</span></strong></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Alimenta&ccedil;&atilde;o saud&aacute;vel</span></li>\n\t<li><span style=\"font-size:16px\">Redu&ccedil;&atilde;o do peso</span></li>\n\t<li><span style=\"font-size:16px\">Suspens&atilde;o tabagismo</span></li>\n\t<li><span style=\"font-size:16px\">Evitar: &aacute;lcool, caf&eacute;, chocolate, frutas &aacute;cidas, pimenta, molho de tomate e refrigerante</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18727,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S17",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18708,
+            "passo_de_saida": {
+                "id": 18708,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Aconselhamento de estilo de vida",
+                "descricao": "<p><strong><span style=\"font-size:16px\">&nbsp;ACONSELHAR MUDAN&Ccedil;A NO ESTILO DE VIDA</span></strong></p>\n\n<ul>\n\t<li><span style=\"font-size:16px\">Alimenta&ccedil;&atilde;o saud&aacute;vel</span></li>\n\t<li><span style=\"font-size:16px\">Redu&ccedil;&atilde;o do peso</span></li>\n\t<li><span style=\"font-size:16px\">Suspens&atilde;o tabagismo</span></li>\n\t<li><span style=\"font-size:16px\">Evitar: &aacute;lcool, caf&eacute;, chocolate, frutas &aacute;cidas, pimenta, molho de tomate e refrigerante</span></li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 18709,
+            "passo_de_entrada": {
+                "id": 18709,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratar Parasitose e iniciar protetor g\u00e1strico",
+                "descricao": "<p><u><strong>Aten&ccedil;&atilde;o!&nbsp;</strong></u></p>\n\n<p>N&atilde;o prescrever ALBENDAZOL/SECNIDAZOL se o paciente j&aacute; tratou parasitose h&aacute; menos de 1 anos e n&atilde;o faz uso de &aacute;gua/alimentos n&atilde;o higienizados</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Aten\u00e7\u00e3o!\u00a0\n\nN\u00e3o prescrever ALBENDAZOL/SECNIDAZOL se o paciente j\u00e1 tratou parasitose h\u00e1 menos de 1 anos e n\u00e3o faz uso de \u00e1gua/alimentos n\u00e3o higienizados"
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 18728,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S18",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 18709,
+            "passo_de_saida": {
+                "id": 18709,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Tratar Parasitose e iniciar protetor g\u00e1strico",
+                "descricao": "<p><u><strong>Aten&ccedil;&atilde;o!&nbsp;</strong></u></p>\n\n<p>N&atilde;o prescrever ALBENDAZOL/SECNIDAZOL se o paciente j&aacute; tratou parasitose h&aacute; menos de 1 anos e n&atilde;o faz uso de &aacute;gua/alimentos n&atilde;o higienizados</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": "Aten\u00e7\u00e3o!\u00a0\n\nN\u00e3o prescrever ALBENDAZOL/SECNIDAZOL se o paciente j\u00e1 tratou parasitose h\u00e1 menos de 1 anos e n\u00e3o faz uso de \u00e1gua/alimentos n\u00e3o higienizados"
+            },
+            "passo_de_entrada_id": 18710,
+            "passo_de_entrada": {
+                "id": 18710,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Informativo",
+                "descricao": "Instruir o paciente a marcar consulta com gastroenterologista caso n\u00e3o haja melhora dos sintomas.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 18336,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_dispepticos_ma_digestao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18337,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_dispepticos__pirose",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18338,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_dispepticos_regurgitacao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18339,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_dispepticos_nauseas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18340,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_dispepticos_vomitos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18381,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_dispepticos_saciedade_precoce",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18382,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sintomas_dispepticos_eructacao_excessiva",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18383,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "ocorrencia_dor_persistente",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18384,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_sangramento_gastrointestinal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18385,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_perda_de_peso_involuntaria",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18386,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_vomitos_persistentes",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18387,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_anemia_deficiencia_ferro",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18388,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_massa_epigastrica",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18389,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_doenca_peptica_ulcerosa_previa",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18390,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_historico_familiar_de_cancer_gastrico",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18391,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais_alarme_maior_de_50_anos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18392,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "irritcao_peritoneal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18393,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "endoscopia_igestiva_alta_positivo",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18394,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "patologia_gastrointestinal",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18395,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "exames_laboratoriais_alterados_2",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18396,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "medicametos_sintomas_dispepticos",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 18397,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 18398,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sinais de Alarme",
+            "descricao": "Sinais de Alarme",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                18384,
+                18385,
+                18386,
+                18387,
+                18388,
+                18389,
+                18390
+            ],
+            "argumentos": [
+                "sinais_alarme_sangramento_gastrointestinal",
+                "sinais_alarme_perda_de_peso_involuntaria",
+                "sinais_alarme_vomitos_persistentes",
+                "sinais_alarme_anemia_deficiencia_ferro",
+                "sinais_alarme_massa_epigastrica",
+                "sinais_alarme_doenca_peptica_ulcerosa_previa",
+                "sinais_alarme_historico_familiar_de_cancer_gastrico"
+            ]
+        },
+        {
+            "id": 18399,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sinais de Alarme >= 1",
+            "descricao": "Sinais de Alarme >= 1",
+            "visivel": true,
+            "operador": "maiorOuIgual",
+            "operador_display": "Maior Ou Igual",
+            "argumentos_ids": [
+                18398,
+                18397
+            ],
+            "argumentos": [
+                "Sinais de Alarme",
+                "1"
+            ]
+        },
+        {
+            "id": 18400,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Sinais de Alarme < 1",
+            "descricao": "Sinais de Alarme < 1",
+            "visivel": true,
+            "operador": "menorQue",
+            "operador_display": "Menor Que",
+            "argumentos_ids": [
+                18398,
+                18397
+            ],
+            "argumentos": [
+                "Sinais de Alarme",
+                "1"
+            ]
+        },
+        {
+            "id": 18401,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Menor de 50 anos",
+            "descricao": "Menor de 50 anos",
+            "visivel": true,
+            "operador": "naoLogico",
+            "operador_display": "N\u00e3o L\u00f3gico",
+            "argumentos_ids": [
+                18391
+            ],
+            "argumentos": [
+                "sinais_alarme_maior_de_50_anos"
+            ]
+        }
+    ]
+}

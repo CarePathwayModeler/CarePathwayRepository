@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="841" url="" name="[Viver Bem] DM2 (Diabetes Mellitus)" code="DIABETES_MELLITUS_2">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3741" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Tratamento DM?" description="Avaliar se paiente j&#xe1; realizou tratamento DM" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Est&#xe1; realizando tratamento DM?" url="" id="1701">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_dm" id="2781" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3742" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Prescrever Medica&#xe7;&#xe3;o Avulsa" description="Prescrever Medica&#xe7;&#xe3;o Avulsa" inputSequences="//@sequence.1" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Prescrever Medica&#xe7;&#xe3;o Avulsa?" url="" id="1702">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="2782" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3743" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Escolher Monoterapia" description="Escolher Monoterapia adequada para paciente" inputSequences="//@sequence.44" outputSequences="//@sequence.4 //@sequence.13">
+    <questions text="Op&#xe7;&#xe3;o 1: Prescrever Cloridato de Metoformina" url="" id="1703">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="monoterapia_opcao1" id="2783" weight="1" value="false"/>
+    </questions>
+    <questions text="Op&#xe7;&#xe3;o 2: Prescrever Cloridrato de Glibenclamida" url="" id="1704">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="monoterapia_opcao2" id="2784" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3744" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Prescrever Medica&#xe7;&#xe3;o" description="&lt;p>Prescrever medica&amp;ccedil;&amp;atilde;o avulsa via Conduta Complementar no menu lateral (&amp;agrave;&amp;nbsp;direita) mediante justificativa.&lt;/p>" inputSequences="//@sequence.2" outputSequences="//@sequence.36"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3745" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Reavalia&#xe7;&#xe3;o" description="Reavaliar valor de HbA1c" inputSequences="//@sequence.37" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Meta Terap&#xea;utica Atingida? (HbA1c &lt; 6,5%)" url="" id="1705">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_6_5_%" id="2785" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3746" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Reavalia&#xe7;&#xe3;o (2)" description="Averiguar novamente a taxa de HbA1c" inputSequences="//@sequence.39" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Meta Terap&#xea;utica Atingida? (HbA1c &lt; 6,5%)" url="" id="1706">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="opcao1_reavaliacao_hba1c_menor_6_5" id="2786" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3747" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Reavalia&#xe7;&#xe3;o" description="Reavalia taxa de HbA1c" inputSequences="//@sequence.38" outputSequences="//@sequence.16 //@sequence.17">
+    <questions text="Meta Terap&#xea;utica Atingida? (HbA1c &lt; 6,5%)" url="" id="1707">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_hba1c_menor_6_5" id="2787" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3748" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Reavalia&#xe7;&#xe3;o (2)" description="Reavaliar taxa de HbA1c" inputSequences="//@sequence.40" outputSequences="//@sequence.20 //@sequence.21">
+    <questions text="Meta Terap&#xea;utica Atingida? (HbA1c &lt; 6,5%)" url="" id="1708">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_reavaliacao_hba1c_menor_6_5" id="2788" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3749" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Escolher Duploterapia" description="Escolher op&#xe7;&#xe3;o de duploterapia" inputSequences="//@sequence.45" outputSequences="//@sequence.22 //@sequence.31">
+    <questions text="Op&#xe7;&#xe3;o 1 - Metformina 850mg (3,4g/dia) + Glibenclamida 5mg" url="" id="1709">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1" id="2789" weight="1" value="false"/>
+    </questions>
+    <questions text="Op&#xe7;&#xe3;o 2 - Metformina 850mg (1,7g/dia) + Glibenclamida 5mg" url="" id="1710">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao2" id="2790" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3750" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Duplo - Op&#xe7;&#xe3;o 1] Reavalia&#xe7;&#xe3;o" description="Reavaliar taxa de HbA1c" inputSequences="//@sequence.41" outputSequences="//@sequence.25 //@sequence.26">
+    <questions text="Meta Terap&#xea;utica Atingida? (HbA1c &lt; 6,5%)" url="" id="1711">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_hba1c_menor_que_6_5" id="2791" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3751" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Duplo - Op&#xe7;&#xe3;o 1] Reavalia&#xe7;&#xe3;o (2)" description="Reavaliar taxas de HbA1c" inputSequences="//@sequence.43" outputSequences="//@sequence.29 //@sequence.30">
+    <questions text="Meta Terap&#xea;utica Atingida? (HbA1c &lt; 6,5%)" url="" id="1712">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_reavaliacao_hba1c_menor_que_6_5" id="2792" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3752" type="Receita" type_verbose="Receita" url="" name="[Duplo - Op&#xe7;&#xe3;o 1] Tratamento" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>[&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>]&lt;/strong>&lt;br />&#xA;Se necess&amp;aacute;rio, prescrever medica&amp;ccedil;&amp;atilde;o avulsa via conduta complementar (no menu lateral &amp;agrave; direita) mediante justificativa.&lt;/span>&lt;/p>" inputSequences="//@sequence.22 //@sequence.25 //@sequence.47" outputSequences="//@sequence.23">
+    <item id="741" url="" name="CLORIDRATO DE METFORMINA" med_code="1854822847" presentation="COMP" access="1" quantity="1" period="15" period_unit="DD" frequency="4" frequency_unit="DD" orientations=""/>
+    <item id="742" url="" name="GLIBENCLAMIDA" med_code="1854816426" presentation="COMP" access="1" quantity="1" period="15" period_unit="DD" frequency="2" frequency_unit="DD" orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3753" type="Receita" type_verbose="Receita" url="" name="[Duplo - Op&#xe7;&#xe3;o 1] Tratamento Alternativo" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>[&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>]&lt;/strong>&lt;br />&#xA;Se necess&amp;aacute;rio, prescrever medica&amp;ccedil;&amp;atilde;o avulsa via conduta complementar (no menu lateral &amp;agrave; direita) mediante justificativa.&lt;/span>&lt;/p>" inputSequences="//@sequence.26 //@sequence.30 //@sequence.35 //@sequence.52" outputSequences="//@sequence.27">
+    <item id="743" url="" name="CLORIDRATO DE METFORMINA" med_code="1854822847" presentation="COMP" access="1" quantity="1" period="15" period_unit="DD" frequency="4" frequency_unit="DD" orientations="Tomar um comprimido de 8/8h. Uso cont&#xed;nuo."/>
+    <item id="744" url="" name="GLIBENCLAMIDA" med_code="1854816426" presentation="COMP" access="1" quantity="2" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar dois comprimidos de 12/12h. Uso cont&#xed;nuo"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3754" type="Receita" type_verbose="Receita" url="" name="[Duplo - Op&#xe7;&#xe3;o 2] Tratamento" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>[&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>]&lt;/strong>&lt;br />&#xA;Se necess&amp;aacute;rio, prescrever medica&amp;ccedil;&amp;atilde;o avulsa via conduta complementar (no menu lateral &amp;agrave; direita) mediante justificativa.&lt;/span>&lt;/p>" inputSequences="//@sequence.31 //@sequence.34 //@sequence.49" outputSequences="//@sequence.32">
+    <item id="745" url="" name="CLORIDRATO DE METFORMINA" med_code="1854822847" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo."/>
+    <item id="746" url="" name="GLIBENCLAMIDA" med_code="-2022334756" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3755" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Duplo - Op&#xe7;&#xe3;o 2] Reavalia&#xe7;&#xe3;o" description="Reavalia taxas de HbA1c" inputSequences="//@sequence.42" outputSequences="//@sequence.34 //@sequence.35">
+    <questions text="Meta Terap&#xea;utica Atingida? (HbA1c &lt; 6,5%)" url="" id="1713">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao2_reavaliacao_hba1c_menor_que_6_5" id="2793" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3756" type="Receita" type_verbose="Receita" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Tratamento" description="&lt;p>Receita para op&amp;ccedil;&amp;atilde;o 1 de monoterapia&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>&lt;span style=&quot;font-size:20px&quot;>[&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>]&lt;/span>&lt;/strong>&lt;br />&#xA;&lt;span style=&quot;font-size:20px&quot;>&lt;span style=&quot;font-family:Calibri,sans-serif&quot;>Se necess&amp;aacute;rio, prescrever medica&amp;ccedil;&amp;atilde;o avulsa via conduta complementar (no menu lateral &amp;agrave; direita) mediante justificativa.&lt;/span>&lt;/span>&lt;/p>" inputSequences="//@sequence.4 //@sequence.7" outputSequences="//@sequence.5">
+    <item id="747" url="" name="CLORIDRATO DE METFORMINA" med_code="1854822847" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3757" type="Receita" type_verbose="Receita" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Tratamento Alternativo" description="&lt;p>Tratamento alternativo para op&amp;ccedil;&amp;atilde;o 1 de monoterapia&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>[&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>]&lt;/strong>&lt;br />&#xA;Se necess&amp;aacute;rio, prescrever medica&amp;ccedil;&amp;atilde;o avulsa via conduta complementar (no menu lateral &amp;agrave; direita) mediante justificativa.&lt;/span>&lt;/p>" inputSequences="//@sequence.8 //@sequence.11 //@sequence.48" outputSequences="//@sequence.9">
+    <item id="748" url="" name="CLORIDRATO DE METFORMINA" med_code="1854822847" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="3" frequency_unit="DD" orientations="Uso cont&#xed;nuo."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3758" type="Receita" type_verbose="Receita" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Tratamento" description="&lt;p>Receita para monoterapia op&amp;ccedil;&amp;atilde;o 2&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>[&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>]&lt;/strong>&lt;br />&#xA;Se necess&amp;aacute;rio, prescrever medica&amp;ccedil;&amp;atilde;o avulsa via conduta complementar (no menu lateral &amp;agrave; direita) mediante justificativa.&lt;/span>&lt;/p>" inputSequences="//@sequence.13 //@sequence.16" outputSequences="//@sequence.14">
+    <item id="749" url="" name="GLIBENCLAMIDA" med_code="1854816426" presentation="COMP" access="1" quantity="1" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Uso cont&#xed;nuo"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="3759" type="Receita" type_verbose="Receita" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Tratamento Alternativo" description="&lt;p>Tratamento alternativo para monoterapia op&amp;ccedil;&amp;atilde;o 2&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>[&lt;u>ATEN&amp;Ccedil;&amp;Atilde;O&lt;/u>]&lt;/strong>&lt;br />&#xA;Se necess&amp;aacute;rio, prescrever medica&amp;ccedil;&amp;atilde;o avulsa via conduta complementar (no menu lateral &amp;agrave; direita) mediante justificativa.&lt;/span>&lt;/p>" inputSequences="//@sequence.17 //@sequence.20 //@sequence.50" outputSequences="//@sequence.18">
+    <item id="750" url="" name="GLIBENCLAMIDA" med_code="-2022334756" presentation="COMP" access="1" quantity="2" period="0" period_unit="DD" frequency="2" frequency_unit="DD" orientations="Tomar dois comprimidos por vez, duas vezes ao dia. Uso cont&#xed;nuo."/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="3760" type="Pausa" type_verbose="Pausa" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Pausa Ap&#xf3;s Retorno Trimestral" description="Pausar Protocolo ap&#xf3;s agendado o retorno em 3 meses" inputSequences="//@sequence.6" outputSequences="//@sequence.37"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="3761" type="Pausa" type_verbose="Pausa" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Pausa Ap&#xf3;s Retorno Trimestral (2)" description="Pausar protocolo ap&#xf3;s agendar consulta de retorno em 3 meses" inputSequences="//@sequence.10" outputSequences="//@sequence.39"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="3762" type="Pausa" type_verbose="Pausa" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Pausa ap&#xf3;s Retorno Trimestral" description="Pausar protocolo ap&#xf3;s agendamento de retorno trimestral" inputSequences="//@sequence.15" outputSequences="//@sequence.38"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="3763" type="Pausa" type_verbose="Pausa" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Pausa Retorno Trimestral (2)" description="Pausar Protocolo ap&#xf3;s agendamento de retorno trimestral" inputSequences="//@sequence.19" outputSequences="//@sequence.40"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="3764" type="Pausa" type_verbose="Pausa" url="" name="[Duplo - Op&#xe7;&#xe3;o 1]Pausa ap&#xf3;s Retorno Trimestral" description="Pausar Protocolo ap&#xf3;s agendamento de retorno trimestral do paciente" inputSequences="//@sequence.24" outputSequences="//@sequence.41"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="3765" type="Pausa" type_verbose="Pausa" url="" name="[Duplo - Op&#xe7;&#xe3;o 1] Pausa ap&#xf3;s Retorno Trimestral (2)" description="Pausar protocolo ap&#xf3;s agendamento de retorno trimestral de paciente" inputSequences="//@sequence.28" outputSequences="//@sequence.43"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="3766" type="Pausa" type_verbose="Pausa" url="" name="[Duplo - Op&#xe7;&#xe3;o 2] Pausa ap&#xf3;s Retorno Trimestral" description="Pausar Protocolo ap&#xf3;s agendamento de retorno trimestral do paciente" inputSequences="//@sequence.33" outputSequences="//@sequence.42"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3767" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="N&#xed;vel de HbA1c" description="Avaliar N&#xed;vel de HbA1c" inputSequences="//@sequence.0 //@sequence.3 //@sequence.36" outputSequences="//@sequence.44 //@sequence.45 //@sequence.46">
+    <questions text="HbA1c &lt; 7,5%" url="" id="1714">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_menor_7_5" id="2794" weight="1" value="false"/>
+    </questions>
+    <questions text="HbA1c >= 7,5% e &lt; 9%" url="" id="1715">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_entre_7_e_9" id="2795" weight="1" value="false"/>
+    </questions>
+    <questions text="HbA1c > 9%" url="" id="1716">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_maior_9" id="2796" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3768" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Mono 1] Dose M&#xe1;xima Atingida?" description="Verifica se titula&#xe7;&#xe3;o da medica&#xe7;&#xe3;o j&#xe1; atingiu a dose m&#xe1;xima" inputSequences="//@sequence.12" outputSequences="//@sequence.47 //@sequence.48">
+    <questions text="Dose m&#xe1;xima de Metformina di&#xe1;ria j&#xe1; foi atingida? (2500mg/dia)" url="" id="1717">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mono1_dose_maxima" id="2797" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3769" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Mono 2] Dose M&#xe1;xima Atingida?" description="" inputSequences="//@sequence.21" outputSequences="//@sequence.49 //@sequence.50">
+    <questions text="Dose di&#xe1;ria m&#xe1;xima de Glibenclamida j&#xe1; foi atingida? (20mg/dia)" url="" id="1718">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="dose_maxima_mono2" id="2798" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3770" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="[Duploterapia] Dose M&#xe1;xima Atingida?" description="" inputSequences="//@sequence.29" outputSequences="//@sequence.51 //@sequence.52">
+    <questions text="Dose m&#xe1;xima de Glibenclamida di&#xe1;ria j&#xe1; foi atingida? (20mg/dia)" url="" id="1719">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="duplo1_dose_maxima" id="2799" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3771" type="Processo" type_verbose="Processo" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Retorno Trimestral" description="" inputSequences="//@sequence.5" outputSequences="//@sequence.6">
+    <action id="41" process_id="3771" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3772" type="Processo" type_verbose="Processo" url="" name="[Mono - Op&#xe7;&#xe3;o 1] Retorno Trimestral (2)" description="" inputSequences="//@sequence.9" outputSequences="//@sequence.10">
+    <action id="42" process_id="3772" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3773" type="Processo" type_verbose="Processo" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Retorno Trimestral" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.15">
+    <action id="43" process_id="3773" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3774" type="Processo" type_verbose="Processo" url="" name="[Mono - Op&#xe7;&#xe3;o 2] Retorno Trimestral (2)" description="" inputSequences="//@sequence.18" outputSequences="//@sequence.19">
+    <action id="44" process_id="3774" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3775" type="Processo" type_verbose="Processo" url="" name="[Duplo - Op&#xe7;&#xe3;o 1] Retorno Trimestral" description="" inputSequences="//@sequence.23" outputSequences="//@sequence.24">
+    <action id="45" process_id="3775" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3776" type="Processo" type_verbose="Processo" url="" name="[Duplo - Op&#xe7;&#xe3;o 2] Retorno Trimestral" description="" inputSequences="//@sequence.32" outputSequences="//@sequence.33">
+    <action id="46" process_id="3776" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3777" type="Processo" type_verbose="Processo" url="" name="[Duplo - Op&#xe7;&#xe3;o 1] Retorno Trimestral (2)" description="" inputSequences="//@sequence.27" outputSequences="//@sequence.28">
+    <action id="47" process_id="3777" service="aprazamento" description="Retorno Trimestral"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3778" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Insulinoterapia" description="Iniciar processo de insulinoterapia com paciente." isTerminal="true" inputSequences="//@sequence.46 //@sequence.51"/>
+  <sequence inputStep="//@element.26" outputStep="//@element.0" id="3779" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (Com tratamento DM)" description="">
+    <operation name="Com tratamento DM" Operator="affirmation" id="2800">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_dm" id="2781" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="3780" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (Sem tratamento DM)" description="">
+    <operation name="Sem tratamento DM" id="2801">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_dm" id="2781" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="3781" type="Sequencia" type_verbose="Sequencia" url="" name="S3 (Com medica&#xe7;&#xe3;o avulsa)" description="">
+    <operation name="Com medica&#xe7;&#xe3;o avulsa" Operator="affirmation" id="2802">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="2782" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.1" id="3782" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (Sem medica&#xe7;&#xe3;o avulsa)" description="">
+    <operation name="Sem medica&#xe7;&#xe3;o avulsa" id="2803">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="2782" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.15" outputStep="//@element.2" id="3783" type="Sequencia" type_verbose="Sequencia" url="" name="S9 (Op&#xe7;&#xe3;o 1)" description="">
+    <operation name="Op&#xe7;&#xe3;o 1" Operator="affirmation" id="2804">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoterapia_opcao1" id="2783" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.30" outputStep="//@element.15" id="3784" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description=""/>
+  <sequence inputStep="//@element.19" outputStep="//@element.30" id="3785" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description=""/>
+  <sequence inputStep="//@element.15" outputStep="//@element.4" id="3786" type="Sequencia" type_verbose="Sequencia" url="" name="S12 (HbA1c &lt; 6.5%)" description="">
+    <operation name="HbA1c &lt; 6.5%" Operator="affirmation" id="2805">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_6_5_%" id="2785" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.4" id="3787" type="Sequencia" type_verbose="Sequencia" url="" name="S13 (HbA1c > 6.5%)" description="">
+    <operation name="HbA1c >= 6.5%" id="2806">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_6_5_%" id="2785" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.31" outputStep="//@element.16" id="3788" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description=""/>
+  <sequence inputStep="//@element.20" outputStep="//@element.31" id="3789" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description=""/>
+  <sequence inputStep="//@element.16" outputStep="//@element.5" id="3790" type="Sequencia" type_verbose="Sequencia" url="" name="S16 (HbA1C &lt; 6.5%)" description="">
+    <operation name="HbA1c &lt; 6.5" Operator="affirmation" id="2807">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao1_reavaliacao_hba1c_menor_6_5" id="2786" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.27" outputStep="//@element.5" id="3791" type="Sequencia" type_verbose="Sequencia" url="" name="S17 (HbA1C > 6.5%)" description="">
+    <operation name="HbA1C > 6.5%" id="2808">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao1_reavaliacao_hba1c_menor_6_5" id="2786" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.17" outputStep="//@element.2" id="3792" type="Sequencia" type_verbose="Sequencia" url="" name="S18 (Op&#xe7;&#xe3;o 2)" description="">
+    <operation name="Op&#xe7;&#xe3;o2" Operator="affirmation" id="2809">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="monoterapia_opcao2" id="2784" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.32" outputStep="//@element.17" id="3793" type="Sequencia" type_verbose="Sequencia" url="" name="S19" description=""/>
+  <sequence inputStep="//@element.21" outputStep="//@element.32" id="3794" type="Sequencia" type_verbose="Sequencia" url="" name="S20" description=""/>
+  <sequence inputStep="//@element.17" outputStep="//@element.6" id="3795" type="Sequencia" type_verbose="Sequencia" url="" name="S21 (HbA1c &lt; 6.5)" description="">
+    <operation name="HbA1c &lt; 6.5" Operator="affirmation" id="2810">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_hba1c_menor_6_5" id="2787" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.6" id="3796" type="Sequencia" type_verbose="Sequencia" url="" name="S22 (HbA1c > 6.5)" description="">
+    <operation name="HbA1c > 6.5" id="2811">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_hba1c_menor_6_5" id="2787" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.33" outputStep="//@element.18" id="3797" type="Sequencia" type_verbose="Sequencia" url="" name="S23" description=""/>
+  <sequence inputStep="//@element.22" outputStep="//@element.33" id="3798" type="Sequencia" type_verbose="Sequencia" url="" name="S24" description=""/>
+  <sequence inputStep="//@element.18" outputStep="//@element.7" id="3799" type="Sequencia" type_verbose="Sequencia" url="" name="S25 (HbA1c &lt; 6.5)" description="">
+    <operation name="HbA1c &lt; 6.5" Operator="affirmation" id="2812">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_reavaliacao_hba1c_menor_6_5" id="2788" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.28" outputStep="//@element.7" id="3800" type="Sequencia" type_verbose="Sequencia" url="" name="S26 (HbA1c > 6.5)" description="">
+    <operation name="HbA1c > 6.5" id="2813">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_reavaliacao_hba1c_menor_6_5" id="2788" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.8" id="3801" type="Sequencia" type_verbose="Sequencia" url="" name="S29 (Op&#xe7;&#xe3;o 1)" description="">
+    <operation name="Op&#xe7;&#xe3;o 1" Operator="affirmation" id="2814">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1" id="2789" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.34" outputStep="//@element.11" id="3802" type="Sequencia" type_verbose="Sequencia" url="" name="S30" description=""/>
+  <sequence inputStep="//@element.23" outputStep="//@element.34" id="3803" type="Sequencia" type_verbose="Sequencia" url="" name="S31" description=""/>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="3804" type="Sequencia" type_verbose="Sequencia" url="" name="S32 (HbA1c &lt; 6.5)" description="">
+    <operation name="HbA1c &lt; 6.5" Operator="affirmation" id="2815">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_hba1c_menor_que_6_5" id="2791" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.9" id="3805" type="Sequencia" type_verbose="Sequencia" url="" name="S33 (HbA1c > 6.5)" description="">
+    <operation name="HbA1c > 6.5" id="2816">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_hba1c_menor_que_6_5" id="2791" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.36" outputStep="//@element.12" id="3806" type="Sequencia" type_verbose="Sequencia" url="" name="S34" description=""/>
+  <sequence inputStep="//@element.24" outputStep="//@element.36" id="3807" type="Sequencia" type_verbose="Sequencia" url="" name="S35" description=""/>
+  <sequence inputStep="//@element.29" outputStep="//@element.10" id="3808" type="Sequencia" type_verbose="Sequencia" url="" name="S36 (HbA1c &lt; %6.5)" description="">
+    <operation name="HbA1c &lt; 6.5" Operator="affirmation" id="2817">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_reavaliacao_hba1c_menor_que_6_5" id="2792" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.10" id="3809" type="Sequencia" type_verbose="Sequencia" url="" name="S37 (HbA1c > 6.5%)" description="">
+    <operation name="HbA1c > 6.5" id="2818">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_reavaliacao_hba1c_menor_que_6_5" id="2792" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.8" id="3810" type="Sequencia" type_verbose="Sequencia" url="" name="S38 (Op&#xe7;&#xe3;o 2)" description="">
+    <operation name="Op&#xe7;&#xe3;o 2" Operator="affirmation" id="2819">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao2" id="2790" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.35" outputStep="//@element.13" id="3811" type="Sequencia" type_verbose="Sequencia" url="" name="S39" description=""/>
+  <sequence inputStep="//@element.25" outputStep="//@element.35" id="3812" type="Sequencia" type_verbose="Sequencia" url="" name="S40" description=""/>
+  <sequence inputStep="//@element.13" outputStep="//@element.14" id="3813" type="Sequencia" type_verbose="Sequencia" url="" name="S41 (HbA1c &lt; 6.5)" description="">
+    <operation name="HbA1c &lt; 6.5" Operator="affirmation" id="2820">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao2_reavaliacao_hba1c_menor_que_6_5" id="2793" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.14" id="3814" type="Sequencia" type_verbose="Sequencia" url="" name="S42 (HbA1c > 6.5)" description="">
+    <operation name="HbA1c > 6.5" id="2821">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao2_reavaliacao_hba1c_menor_que_6_5" id="2793" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.26" outputStep="//@element.3" id="3815" type="Sequencia" type_verbose="Sequencia" url="" name="S43 (Prescrever Medica&#xe7;&#xe3;o Avulsa para HbA1 &lt; 7,5%)" description=""/>
+  <sequence inputStep="//@element.4" outputStep="//@element.19" id="3816" type="Sequencia" type_verbose="Sequencia" url="" name="S44" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.21" id="3817" type="Sequencia" type_verbose="Sequencia" url="" name="S45" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.20" id="3818" type="Sequencia" type_verbose="Sequencia" url="" name="S46" description="-"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.22" id="3819" type="Sequencia" type_verbose="Sequencia" url="" name="S47" description="-"/>
+  <sequence inputStep="//@element.9" outputStep="//@element.23" id="3820" type="Sequencia" type_verbose="Sequencia" url="" name="S48" description="-"/>
+  <sequence inputStep="//@element.14" outputStep="//@element.25" id="3821" type="Sequencia" type_verbose="Sequencia" url="" name="S49" description="-"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.24" id="3822" type="Sequencia" type_verbose="Sequencia" url="" name="S50" description="-"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.26" id="3823" type="Sequencia" type_verbose="Sequencia" url="" name="S55 (HbA1c &lt; 7,5)" description="HbA1c &lt; 7,5">
+    <operation name="HbA1c &lt; 7,5" Operator="affirmation" id="2822">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_menor_7_5" id="2794" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.26" id="3824" type="Sequencia" type_verbose="Sequencia" url="" name="S56 (HbA1c entre 7,5 e 9)" description="HbA1c entre 7,5 e 9">
+    <operation name="HbA1c >= 7,5 e &lt; 9" Operator="affirmation" id="2823">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_entre_7_e_9" id="2795" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.37" outputStep="//@element.26" id="3825" type="Sequencia" type_verbose="Sequencia" url="" name="S57 (HbA1c > 9)" description="HbA1c > 9">
+    <operation name="HbA1c > 9" Operator="affirmation" id="2824">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_maior_9" id="2796" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.27" id="3826" type="Sequencia" type_verbose="Sequencia" url="" name="S58 (Dose maxima atingida)" description="Dose maxima atingida">
+    <operation name="Dose maxima atingida" Operator="affirmation" id="2825">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="mono1_dose_maxima" id="2797" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.16" outputStep="//@element.27" id="3827" type="Sequencia" type_verbose="Sequencia" url="" name="S59 (Dose maxima n&#xe3;o atingida)" description="Dose maxima n&#xe3;o atingida">
+    <operation name="Dose maxima n&#xe3;o atingida" id="2826">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="mono1_dose_maxima" id="2797" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.28" id="3828" type="Sequencia" type_verbose="Sequencia" url="" name="S60 (Dose m&#xe1;xima atingida)" description="Dose m&#xe1;xima atingida">
+    <operation name="Dose m&#xe1;xima atingida" Operator="affirmation" id="2827">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dose_maxima_mono2" id="2798" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.18" outputStep="//@element.28" id="3829" type="Sequencia" type_verbose="Sequencia" url="" name="S61 (Dose m&#xe1;xima n&#xe3;o atingida)" description="Dose m&#xe1;xima n&#xe3;o atingida">
+    <operation name="Dose m&#xe1;xima n&#xe3;o atingida" id="2828">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="dose_maxima_mono2" id="2798" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.37" outputStep="//@element.29" id="3830" type="Sequencia" type_verbose="Sequencia" url="" name="S62 (Dose maxima atingida)" description="Dose maxima atingida">
+    <operation name="Dose maxima atingida" Operator="affirmation" id="2829">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duplo1_dose_maxima" id="2799" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.12" outputStep="//@element.29" id="3831" type="Sequencia" type_verbose="Sequencia" url="" name="S63 (Dose maxima n&#xe3;o atingida)" description="Dose maxima n&#xe3;o atingida">
+    <operation name="Dose maxima n&#xe3;o atingida" id="2830">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="duplo1_dose_maxima" id="2799" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="tratamento_dm" id="2781" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="medicacao_avulsa" id="2782" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="monoterapia_opcao1" id="2783" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="monoterapia_opcao2" id="2784" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="hba1c_menor_6_5_%" id="2785" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="opcao1_reavaliacao_hba1c_menor_6_5" id="2786" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_hba1c_menor_6_5" id="2787" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="opcao2_reavaliacao_hba1c_menor_6_5" id="2788" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1" id="2789" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao2" id="2790" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_hba1c_menor_que_6_5" id="2791" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao1_reavaliacao_hba1c_menor_que_6_5" id="2792" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="duploterapia_opcao2_reavaliacao_hba1c_menor_que_6_5" id="2793" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_menor_7_5" id="2794" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_entre_7_e_9" id="2795" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="nivel_hba1c_maior_9" id="2796" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mono1_dose_maxima" id="2797" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="dose_maxima_mono2" id="2798" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="duplo1_dose_maxima" id="2799" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

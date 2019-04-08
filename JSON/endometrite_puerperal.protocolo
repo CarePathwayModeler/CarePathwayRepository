@@ -1,0 +1,1089 @@
+{
+    "id": 3133,
+    "url": "",
+    "codigo": "H041",
+    "nome": "Endometrite Puerperal",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Obstetr\u00edcia",
+    "repositorio_id": 481,
+    "versao": 2,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:38:09.603202-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:38:01.788847-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:38:09.603202-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17248,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Crit\u00e9rios de Sepse",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8972,
+                    "url": "",
+                    "texto": "Escala de Glasgow (GCS) < 15",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17031,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sepse_glasgow_menor_que_15",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 8973,
+                    "url": "",
+                    "texto": "FR >= 22",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17032,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sepse_fr_maior_22",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 3
+                },
+                {
+                    "id": 8974,
+                    "url": "",
+                    "texto": "PAS <= 100",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17033,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sepse_pas_menor_100",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 4
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17256,
+                    "url": "",
+                    "nome": "S1 (com sepse crit\u00e9rios de sepse)",
+                    "descricao": "com sepse crit\u00e9rios de sepse",
+                    "passo_de_saida_id": 17248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios de Sepse",
+                    "passo_de_entrada_id": 17249,
+                    "passo_de_entrada": "Encaminhamento: Protocolo SEPSE",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17257,
+                    "url": "",
+                    "nome": "S2 (sem sepse crit\u00e9rios de sepse)",
+                    "descricao": "sem sepse crit\u00e9rios de sepse",
+                    "passo_de_saida_id": 17248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios de Sepse",
+                    "passo_de_entrada_id": 17250,
+                    "passo_de_entrada": "Tratamento: Conduta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17249,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Protocolo SEPSE",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H012"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17256,
+                    "url": "",
+                    "nome": "S1 (com sepse crit\u00e9rios de sepse)",
+                    "descricao": "com sepse crit\u00e9rios de sepse",
+                    "passo_de_saida_id": 17248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios de Sepse",
+                    "passo_de_entrada_id": 17249,
+                    "passo_de_entrada": "Encaminhamento: Protocolo SEPSE",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17250,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Conduta",
+            "descricao": "<p><u><strong>Orienta&ccedil;&atilde;o</strong></u>:</p>\n\n<ul>\n\t<li>Avaliar necessidade de Ultrasom Transvaginal</li>\n\t<li>Avaliar necessidade de Cultura Intrainterina.</li>\n\t<li>Curva T&eacute;rmica e de pulso.</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "US PELVICA TRANSVAGINAL",
+                    "exame": "33010145",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Endometrite Puerperal",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "PCR  DETERMINACAO QUANTITATIVA",
+                    "exame": "28060865",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Endometrite Puerperal",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOCULTURA",
+                    "exame": "28100298",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Endometrite Puerperal",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "CULTURAS EM GERAL",
+                    "exame": "28100581",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Endometrite Puerperal",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 8987,
+                    "url": "",
+                    "medicamento": 43788,
+                    "codigo": "",
+                    "nome": "SORO FISIOLOGICO 0,9% 1000 ML TUBO 1000 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 6,
+                    "dose_diaria": 2000,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8988,
+                    "url": "",
+                    "medicamento": 121737,
+                    "codigo": "",
+                    "nome": "ORASTINA 5UI / ML AMPL 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 4,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 8989,
+                    "url": "",
+                    "medicamento": 38822,
+                    "codigo": "",
+                    "nome": "DALACIN 300 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 3,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "8",
+                    "frequencia_display": "8/8",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 8990,
+                    "url": "",
+                    "medicamento": 37400,
+                    "codigo": "",
+                    "nome": "GENTAMICINA 80 MG AMPL 2 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 3,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17257,
+                    "url": "",
+                    "nome": "S2 (sem sepse crit\u00e9rios de sepse)",
+                    "descricao": "sem sepse crit\u00e9rios de sepse",
+                    "passo_de_saida_id": 17248,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios de Sepse",
+                    "passo_de_entrada_id": 17250,
+                    "passo_de_entrada": "Tratamento: Conduta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17258,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17250,
+                    "passo_de_saida": "Tratamento: Conduta",
+                    "passo_de_entrada_id": 17251,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o (24 a 48h)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17251,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reavalia\u00e7\u00e3o (24 a 48h)",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8975,
+                    "url": "",
+                    "texto": "Houve melhora do quadro?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17034,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "reavaliacao_1_melhora",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17258,
+                    "url": "",
+                    "nome": "S3",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17250,
+                    "passo_de_saida": "Tratamento: Conduta",
+                    "passo_de_entrada_id": 17251,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o (24 a 48h)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17259,
+                    "url": "",
+                    "nome": "S4 (houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 17251,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o (24 a 48h)",
+                    "passo_de_entrada_id": 17252,
+                    "passo_de_entrada": "Receita: Alta + Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17260,
+                    "url": "",
+                    "nome": "S5 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 17251,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o (24 a 48h)",
+                    "passo_de_entrada_id": 17253,
+                    "passo_de_entrada": "Tratamento: Conduta (2)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17252,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Alta + Receita",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4596,
+                    "url": "",
+                    "nome": "SULFATO FERROSO 40MG DRAG 1 UD",
+                    "medicamento": 37028,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 42,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Tomar em jejum.",
+                    "ordem": 1
+                },
+                {
+                    "id": 4597,
+                    "url": "",
+                    "nome": "BUSCOPAN COMPOSTO COMP 1 UD",
+                    "medicamento": 36080,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Se dor.",
+                    "ordem": 2
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17259,
+                    "url": "",
+                    "nome": "S4 (houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 17251,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o (24 a 48h)",
+                    "passo_de_entrada_id": 17252,
+                    "passo_de_entrada": "Receita: Alta + Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17262,
+                    "url": "",
+                    "nome": "S7 (houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 17254,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17252,
+                    "passo_de_entrada": "Receita: Alta + Receita",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17253,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Conduta (2)",
+            "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:</p>\n\n<ul>\n\t<li>Reavaliar necessidade de US Transvaginal.</li>\n\t<li>Avaliar necessidade de adicionar tratamento com 75116: AMPICILINA 1 GR AMPL 1 UD / 6/6h, EV</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "US PELVICA TRANSVAGINAL",
+                    "exame": "33010145",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "Endometrite Puereral",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 8991,
+                    "url": "",
+                    "medicamento": 75116,
+                    "codigo": "",
+                    "nome": "AMPICILINA 1 GR AMPL 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "6",
+                    "frequencia_display": "6/6",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17260,
+                    "url": "",
+                    "nome": "S5 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 17251,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o (24 a 48h)",
+                    "passo_de_entrada_id": 17253,
+                    "passo_de_entrada": "Tratamento: Conduta (2)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17261,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17253,
+                    "passo_de_saida": "Tratamento: Conduta (2)",
+                    "passo_de_entrada_id": 17254,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17254,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Reavalia\u00e7\u00e3o",
+            "descricao": "Avaliar resultado do US Transvaginal e do quadro geral do paciente.",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 8976,
+                    "url": "",
+                    "texto": "Houve melhora do quadro?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17035,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "reavaliacao_2_melhora",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17261,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17253,
+                    "passo_de_saida": "Tratamento: Conduta (2)",
+                    "passo_de_entrada_id": 17254,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17262,
+                    "url": "",
+                    "nome": "S7 (houve melhora)",
+                    "descricao": "houve melhora",
+                    "passo_de_saida_id": 17254,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17252,
+                    "passo_de_entrada": "Receita: Alta + Receita",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17263,
+                    "url": "",
+                    "nome": "S8 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 17254,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17255,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17255,
+            "type": "Informacao",
+            "type_verbose": "Informa\u00e7\u00e3o",
+            "url": "",
+            "nome": "Discutir com l\u00edder local",
+            "descricao": "Discutir com l\u00edder local poss\u00edvel interna\u00e7\u00e3o e necessidade de Curagem/Curetagem.",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "sequencias_de_entrada": [
+                {
+                    "id": 17263,
+                    "url": "",
+                    "nome": "S8 (n\u00e3o houve melhora)",
+                    "descricao": "n\u00e3o houve melhora",
+                    "passo_de_saida_id": 17254,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Reavalia\u00e7\u00e3o",
+                    "passo_de_entrada_id": 17255,
+                    "passo_de_entrada": "Informa\u00e7\u00e3o: Discutir com l\u00edder local",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17256,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (com sepse crit\u00e9rios de sepse)",
+            "descricao": "com sepse crit\u00e9rios de sepse",
+            "passo_de_saida_id": 17248,
+            "passo_de_saida": {
+                "id": 17248,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Crit\u00e9rios de Sepse",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17249,
+            "passo_de_entrada": {
+                "id": 17249,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Protocolo SEPSE",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    65
+                ]
+            },
+            "operacao": {
+                "id": 17038,
+                "nome": "com sepse crit\u00e9rios de sepse",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    17037,
+                    17036
+                ],
+                "argumentos": [
+                    "Crit\u00e9rios SEPSE",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17257,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (sem sepse crit\u00e9rios de sepse)",
+            "descricao": "sem sepse crit\u00e9rios de sepse",
+            "passo_de_saida_id": 17248,
+            "passo_de_saida": {
+                "id": 17248,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Crit\u00e9rios de Sepse",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17250,
+            "passo_de_entrada": {
+                "id": 17250,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Conduta",
+                "descricao": "<p><u><strong>Orienta&ccedil;&atilde;o</strong></u>:</p>\n\n<ul>\n\t<li>Avaliar necessidade de Ultrasom Transvaginal</li>\n\t<li>Avaliar necessidade de Cultura Intrainterina.</li>\n\t<li>Curva T&eacute;rmica e de pulso.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17039,
+                "nome": "sem sepse crit\u00e9rios de sepse",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17037,
+                    17036
+                ],
+                "argumentos": [
+                    "Crit\u00e9rios SEPSE",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17258,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17250,
+            "passo_de_saida": {
+                "id": 17250,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Conduta",
+                "descricao": "<p><u><strong>Orienta&ccedil;&atilde;o</strong></u>:</p>\n\n<ul>\n\t<li>Avaliar necessidade de Ultrasom Transvaginal</li>\n\t<li>Avaliar necessidade de Cultura Intrainterina.</li>\n\t<li>Curva T&eacute;rmica e de pulso.</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17251,
+            "passo_de_entrada": {
+                "id": 17251,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavalia\u00e7\u00e3o (24 a 48h)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17259,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (houve melhora)",
+            "descricao": "houve melhora",
+            "passo_de_saida_id": 17251,
+            "passo_de_saida": {
+                "id": 17251,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavalia\u00e7\u00e3o (24 a 48h)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17252,
+            "passo_de_entrada": {
+                "id": 17252,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta + Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17040,
+                "nome": "houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17034
+                ],
+                "argumentos": [
+                    "reavaliacao_1_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17260,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (n\u00e3o houve melhora)",
+            "descricao": "n\u00e3o houve melhora",
+            "passo_de_saida_id": 17251,
+            "passo_de_saida": {
+                "id": 17251,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavalia\u00e7\u00e3o (24 a 48h)",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17253,
+            "passo_de_entrada": {
+                "id": 17253,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Conduta (2)",
+                "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:</p>\n\n<ul>\n\t<li>Reavaliar necessidade de US Transvaginal.</li>\n\t<li>Avaliar necessidade de adicionar tratamento com 75116: AMPICILINA 1 GR AMPL 1 UD / 6/6h, EV</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17041,
+                "nome": "n\u00e3o houve melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17034
+                ],
+                "argumentos": [
+                    "reavaliacao_1_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17261,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17253,
+            "passo_de_saida": {
+                "id": 17253,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Conduta (2)",
+                "descricao": "<p><u><strong>Orienta&ccedil;&otilde;es</strong></u>:</p>\n\n<ul>\n\t<li>Reavaliar necessidade de US Transvaginal.</li>\n\t<li>Avaliar necessidade de adicionar tratamento com 75116: AMPICILINA 1 GR AMPL 1 UD / 6/6h, EV</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17254,
+            "passo_de_entrada": {
+                "id": 17254,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavalia\u00e7\u00e3o",
+                "descricao": "Avaliar resultado do US Transvaginal e do quadro geral do paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17262,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (houve melhora)",
+            "descricao": "houve melhora",
+            "passo_de_saida_id": 17254,
+            "passo_de_saida": {
+                "id": 17254,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavalia\u00e7\u00e3o",
+                "descricao": "Avaliar resultado do US Transvaginal e do quadro geral do paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17252,
+            "passo_de_entrada": {
+                "id": 17252,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Alta + Receita",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17042,
+                "nome": "houve melhora (2)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17035
+                ],
+                "argumentos": [
+                    "reavaliacao_2_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17263,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (n\u00e3o houve melhora)",
+            "descricao": "n\u00e3o houve melhora",
+            "passo_de_saida_id": 17254,
+            "passo_de_saida": {
+                "id": 17254,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Reavalia\u00e7\u00e3o",
+                "descricao": "Avaliar resultado do US Transvaginal e do quadro geral do paciente.",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17255,
+            "passo_de_entrada": {
+                "id": 17255,
+                "type": "Informacao",
+                "type_verbose": "Informa\u00e7\u00e3o",
+                "url": "",
+                "nome": "Discutir com l\u00edder local",
+                "descricao": "Discutir com l\u00edder local poss\u00edvel interna\u00e7\u00e3o e necessidade de Curagem/Curetagem.",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17043,
+                "nome": "n\u00e3o houve melhora (2)",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17035
+                ],
+                "argumentos": [
+                    "reavaliacao_2_melhora"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17031,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sepse_glasgow_menor_que_15",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17032,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sepse_fr_maior_22",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17033,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sepse_pas_menor_100",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17034,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "reavaliacao_1_melhora",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17035,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "reavaliacao_2_melhora",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17036,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17037,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Crit\u00e9rios SEPSE",
+            "descricao": "Crit\u00e9rios SEPSE",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                17031,
+                17032,
+                17033
+            ],
+            "argumentos": [
+                "sepse_glasgow_menor_que_15",
+                "sepse_fr_maior_22",
+                "sepse_pas_menor_100"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="3139" url="" name="Tromboembolismo Pulmonar (TEP)" code="H055">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17614" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Aplicar Escore de Wells" description="&lt;p>&lt;u>&lt;strong>Suspeita cl&amp;iacute;nica:&lt;/strong>&lt;/u>&amp;nbsp;Paciente com dispneia s&amp;uacute;bita, taquipneia, dor pleur&amp;iacute;tica,&amp;nbsp;s&amp;iacute;ncope.&lt;br />&#xA;&lt;br />&#xA;&lt;strong>&lt;u>Fatores de risco:&lt;/u>&amp;nbsp;&lt;/strong>idade avan&amp;ccedil;ada, epis&amp;oacute;dio pr&amp;eacute;vio, hist&amp;oacute;ria familiar, cirurgia recente, trauma, imobiliza&amp;ccedil;&amp;atilde;o, neoplasia, uso de anticoncepcionais orais, obesidade, gravidez/puerp&amp;eacute;rio, tabagismo, HAS, ICC, s&amp;iacute;ndorme nefr&amp;oacute;tica, HPN, doen&amp;ccedil;as mieloproliferativas, doen&amp;ccedil;a infamat&amp;oacute;ria intestinal.&amp;nbsp;&lt;br />&#xA;&lt;br />&#xA;&lt;u>&lt;strong>Aplicar o Escore de Wells para c&amp;aacute;lculo da probabilidade de TEP&lt;/strong>&lt;/u>&lt;/p>" inputSequences="//@sequence.6" outputSequences="//@sequence.1 //@sequence.5">
+    <questions text="Avaliar quadro cl&#xed;nico:" url="" id="9097">
+      <answers xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17366" weight="1" value="0.0">
+        <option description="Hemoptise" weight="1"/>
+        <option description="C&#xe2;ncer" weight="1"/>
+        <option description="Frequ&#xea;ncia card&#xed;aca > 100/min" weight="1"/>
+        <option description="Cirurgia nos &#xfa;ltimos 30 dias ou imobiliza&#xe7;&#xe3;o >= 3 dias" weight="1"/>
+        <option description="TVP ou EP pr&#xe9;vios" weight="1"/>
+        <option description="Sinais cl&#xed;nicos de TVP" weight="3"/>
+        <option description="Diagn&#xf3;stico alternativo menos prov&#xe1;vel que EP" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17615" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar sala eixo vermelho" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Encaminhar para o eixo vermelho e passar caso com o l&amp;iacute;der local.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17616" type="Tratamento" type_verbose="Tratamento" url="" name="[Alto Risco] Conduta" description="&lt;p>&lt;span style=&quot;font-size:24px&quot;>Solicitar exames e encaminhar caso para l&amp;iacute;der local para aventar possibilidade de Angiotomografia de T&amp;oacute;rax:&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.5">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Paciente com alto risco de TEP" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com alto risco de TEP" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17617" type="Tratamento" type_verbose="Tratamento" url="" name="Solicitar D'Dimero" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <examination url="D' DIMERO" exam_id="28140110" limb_side="" quantity="1" reason="Paciente com suspeita de TEP" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="17618" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Descartar TEP" description="&lt;p>&lt;span style=&quot;font-size:20px&quot;>Descartar TEP e investigar diagn&amp;oacute;stico diferencial.&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.3"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="17619" type="Tratamento" type_verbose="Tratamento" url="" name="[D'Dimero Positivo] Conduta" description="&lt;p>&lt;span style=&quot;font-size:24px&quot;>Solicitar exames e encaminhar caso para l&amp;iacute;der local para aventar possibilidade de Angiotomografia de T&amp;oacute;rax:&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.4">
+    <examination url="UREIA" exam_id="28011414" limb_side="" quantity="1" reason="Paciente com alto risco de TEP" clinical_indication="n/a"/>
+    <examination url="CREATININA  (SANGUE)" exam_id="28010540" limb_side="" quantity="1" reason="Paciente com alto risco de TEP" clinical_indication="n/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17620" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar D'DIMERO" description="" inputSequences="//@sequence.2" outputSequences="//@sequence.3 //@sequence.4">
+    <questions text="Avaliar resultado do D'Dimero" url="" id="9098">
+      <answers xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17367" weight="1" value="0.0">
+        <option description="D'D&#xed;mero Negativo (&lt; 500 uG/l)" weight="1"/>
+        <option description="D'D&#xed;mero Positivo (> 500 uG/l)" weight="2"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="17621" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar instabilidade" description="" isInitial="true" outputSequences="//@sequence.0 //@sequence.6">
+    <questions text="Avaliar crit&#xe9;rios de instabilidade hemodin&#xe2;mica:" url="" id="9099">
+      <answers xsi:type="pathwayMetamodel:Choice" name="inst_hemodinamica" id="17368" weight="1" value="0.0">
+        <option description="Queda da press&#xe3;o arterial sist&#xf3;lica > 40 mmHg" weight="1"/>
+        <option description="Frequencia card&#xed;aca > 90bpm" weight="1"/>
+        <option description="Press&#xe3;o arterial sist&#xf3;lica &lt; 90mmHg" weight="1"/>
+        <option description="&#xcd;ndice card&#xed;aco &lt; 1,8 l/min/m&#xb2;" weight="1"/>
+        <option description="Press&#xf5;es de enchimento elevadas" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Pele fria e pegajosa" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.7" id="17622" type="Sequencia" type_verbose="Sequencia" url="" name="S1 (instabilidade hemodin&#xe2;mica)" description="paciente com instabilidade hemodin&#xe2;mica">
+    <operation name="paciente com instabilidade hemodin&#xe2;mica" Operator="greaterOrEqual" id="17374">
+      <operand xsi:type="pathwayMetamodel:Choice" name="inst_hemodinamica" id="17368" weight="1" value="0.0">
+        <option description="Queda da press&#xe3;o arterial sist&#xf3;lica > 40 mmHg" weight="1"/>
+        <option description="Frequencia card&#xed;aca > 90bpm" weight="1"/>
+        <option description="Press&#xe3;o arterial sist&#xf3;lica &lt; 90mmHg" weight="1"/>
+        <option description="&#xcd;ndice card&#xed;aco &lt; 1,8 l/min/m&#xb2;" weight="1"/>
+        <option description="Press&#xf5;es de enchimento elevadas" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Pele fria e pegajosa" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17370" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.0" id="17623" type="Sequencia" type_verbose="Sequencia" url="" name="S2 (baixo e intermedi&#xe1;rio risco)" description="baixo e intermedi&#xe1;rio risco">
+    <operation name="baixo e intermedi&#xe1;rio risco" Operator="affirmation" id="17375">
+      <operand xsi:type="pathwayMetamodel:Operation" name="escore wells &lt; 7" Operator="lessThan" id="17372">
+        <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17366" weight="1" value="0.0">
+          <option description="Hemoptise" weight="1"/>
+          <option description="C&#xe2;ncer" weight="1"/>
+          <option description="Frequ&#xea;ncia card&#xed;aca > 100/min" weight="1"/>
+          <option description="Cirurgia nos &#xfa;ltimos 30 dias ou imobiliza&#xe7;&#xe3;o >= 3 dias" weight="1"/>
+          <option description="TVP ou EP pr&#xe9;vios" weight="1"/>
+          <option description="Sinais cl&#xed;nicos de TVP" weight="3"/>
+          <option description="Diagn&#xf3;stico alternativo menos prov&#xe1;vel que EP" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="7" id="17369" weight="1" value="7.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="17624" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.6" id="17625" type="Sequencia" type_verbose="Sequencia" url="" name="S4 (d'dimero negativo)" description="d'dimero negativo">
+    <operation name="d'dimero negativo" Operator="equal" id="17376">
+      <operand xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17367" weight="1" value="0.0">
+        <option description="D'D&#xed;mero Negativo (&lt; 500 uG/l)" weight="1"/>
+        <option description="D'D&#xed;mero Positivo (> 500 uG/l)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17370" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.6" id="17626" type="Sequencia" type_verbose="Sequencia" url="" name="S5 (d'dimero positivo)" description="d'dimero positivo">
+    <operation name="d'dimero positivo" Operator="equal" id="17377">
+      <operand xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17367" weight="1" value="0.0">
+        <option description="D'D&#xed;mero Negativo (&lt; 500 uG/l)" weight="1"/>
+        <option description="D'D&#xed;mero Positivo (> 500 uG/l)" weight="2"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="2" id="17371" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.0" id="17627" type="Sequencia" type_verbose="Sequencia" url="" name="S6 (Alto Risco)" description="Alto Risco">
+    <operation name="Alto Risco" Operator="affirmation" id="17378">
+      <operand xsi:type="pathwayMetamodel:Operation" name="escore wells >= 7" Operator="greaterOrEqual" id="17373">
+        <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17366" weight="1" value="0.0">
+          <option description="Hemoptise" weight="1"/>
+          <option description="C&#xe2;ncer" weight="1"/>
+          <option description="Frequ&#xea;ncia card&#xed;aca > 100/min" weight="1"/>
+          <option description="Cirurgia nos &#xfa;ltimos 30 dias ou imobiliza&#xe7;&#xe3;o >= 3 dias" weight="1"/>
+          <option description="TVP ou EP pr&#xe9;vios" weight="1"/>
+          <option description="Sinais cl&#xed;nicos de TVP" weight="3"/>
+          <option description="Diagn&#xf3;stico alternativo menos prov&#xe1;vel que EP" weight="3"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Numeric" name="7" id="17369" weight="1" value="7.0"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.0" outputStep="//@element.7" id="17628" type="Sequencia" type_verbose="Sequencia" url="" name="S7 (sem instabilidade hemodin&#xe2;mica)" description="sem instabilidade hemodin&#xe2;mica">
+    <operation name="sem instabilidade hemodin&#xe2;mica" Operator="lessThan" id="17379">
+      <operand xsi:type="pathwayMetamodel:Choice" name="inst_hemodinamica" id="17368" weight="1" value="0.0">
+        <option description="Queda da press&#xe3;o arterial sist&#xf3;lica > 40 mmHg" weight="1"/>
+        <option description="Frequencia card&#xed;aca > 90bpm" weight="1"/>
+        <option description="Press&#xe3;o arterial sist&#xf3;lica &lt; 90mmHg" weight="1"/>
+        <option description="&#xcd;ndice card&#xed;aco &lt; 1,8 l/min/m&#xb2;" weight="1"/>
+        <option description="Press&#xf5;es de enchimento elevadas" weight="1"/>
+        <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+        <option description="Pele fria e pegajosa" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="1" id="17370" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <operation name="escore wells &lt; 7" Operator="lessThan" id="17372">
+    <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17366" weight="1" value="0.0">
+      <option description="Hemoptise" weight="1"/>
+      <option description="C&#xe2;ncer" weight="1"/>
+      <option description="Frequ&#xea;ncia card&#xed;aca > 100/min" weight="1"/>
+      <option description="Cirurgia nos &#xfa;ltimos 30 dias ou imobiliza&#xe7;&#xe3;o >= 3 dias" weight="1"/>
+      <option description="TVP ou EP pr&#xe9;vios" weight="1"/>
+      <option description="Sinais cl&#xed;nicos de TVP" weight="3"/>
+      <option description="Diagn&#xf3;stico alternativo menos prov&#xe1;vel que EP" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="7" id="17369" weight="1" value="7.0"/>
+  </operation>
+  <operation name="escore wells >= 7" Operator="greaterOrEqual" id="17373">
+    <operand xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17366" weight="1" value="0.0">
+      <option description="Hemoptise" weight="1"/>
+      <option description="C&#xe2;ncer" weight="1"/>
+      <option description="Frequ&#xea;ncia card&#xed;aca > 100/min" weight="1"/>
+      <option description="Cirurgia nos &#xfa;ltimos 30 dias ou imobiliza&#xe7;&#xe3;o >= 3 dias" weight="1"/>
+      <option description="TVP ou EP pr&#xe9;vios" weight="1"/>
+      <option description="Sinais cl&#xed;nicos de TVP" weight="3"/>
+      <option description="Diagn&#xf3;stico alternativo menos prov&#xe1;vel que EP" weight="3"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Numeric" name="7" id="17369" weight="1" value="7.0"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="escore_wells" id="17366" weight="1" value="0.0">
+    <option description="Hemoptise" weight="1"/>
+    <option description="C&#xe2;ncer" weight="1"/>
+    <option description="Frequ&#xea;ncia card&#xed;aca > 100/min" weight="1"/>
+    <option description="Cirurgia nos &#xfa;ltimos 30 dias ou imobiliza&#xe7;&#xe3;o >= 3 dias" weight="1"/>
+    <option description="TVP ou EP pr&#xe9;vios" weight="1"/>
+    <option description="Sinais cl&#xed;nicos de TVP" weight="3"/>
+    <option description="Diagn&#xf3;stico alternativo menos prov&#xe1;vel que EP" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="d_dimero" id="17367" weight="1" value="0.0">
+    <option description="D'D&#xed;mero Negativo (&lt; 500 uG/l)" weight="1"/>
+    <option description="D'D&#xed;mero Positivo (> 500 uG/l)" weight="2"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="inst_hemodinamica" id="17368" weight="1" value="0.0">
+    <option description="Queda da press&#xe3;o arterial sist&#xf3;lica > 40 mmHg" weight="1"/>
+    <option description="Frequencia card&#xed;aca > 90bpm" weight="1"/>
+    <option description="Press&#xe3;o arterial sist&#xf3;lica &lt; 90mmHg" weight="1"/>
+    <option description="&#xcd;ndice card&#xed;aco &lt; 1,8 l/min/m&#xb2;" weight="1"/>
+    <option description="Press&#xf5;es de enchimento elevadas" weight="1"/>
+    <option description="Altera&#xe7;&#xe3;o de consci&#xea;ncia" weight="1"/>
+    <option description="Pele fria e pegajosa" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="7" id="17369" weight="1" value="7.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="1" id="17370" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="2" id="17371" weight="1" value="2.0"/>
+</pathwayMetamodel:Pathway>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="741" url="" name="[M&#xe9;dico de Fam&#xed;lia] Diarreia" code="MF_DIAR">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3601" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Estado Geral" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Avaliar&amp;nbsp;Estado Geral do Paciente&lt;/strong>&lt;/span>&lt;/p>" isInitial="true" outputSequences="//@sequence.0 //@sequence.1">
+    <questions text="Estado Geral" url="" id="1641">
+      <answers xsi:type="pathwayMetamodel:Choice" name="hipovolemia_estado_geral" id="2681" weight="1" value="0.0">
+        <option description="Intranquilo"/>
+        <option description="Comatosos, hipot&#xf4;nico"/>
+        <option description="Alerta" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Sede" url="" id="1642">
+      <answers xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sede" id="2682" weight="1" value="0.0">
+        <option description="Bebe r&#xe1;pido e  avidamente"/>
+        <option description="Bebe mal ou n&#xe3;o &#xe9; capaz de beber"/>
+        <option description="Bebe normal, sem sede" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Pulso" url="" id="1643">
+      <answers xsi:type="pathwayMetamodel:Choice" name="hipovolemia_pulso" id="2683" weight="1" value="0.0">
+        <option description="R&#xe1;pido,  Fraco"/>
+        <option description="Muito Fraco ou Ausente"/>
+        <option description="Cheio" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Enchimento Capilar" url="" id="1644">
+      <answers xsi:type="pathwayMetamodel:Choice" name="hipovolemia_enchimento_capilar" id="2684" weight="1" value="0.0">
+        <option description="3 a 5 segundos"/>
+        <option description="Maior que 5 segundos"/>
+        <option description="At&#xe9; 3 segundos" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Olhos" url="" id="1645">
+      <answers xsi:type="pathwayMetamodel:Choice" name="hipovolemia_olhos" id="2685" weight="1" value="0.0">
+        <option description="Fundos"/>
+        <option description="Muito Fundos e secos"/>
+        <option description="Normais" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="L&#xe1;grimas" url="" id="1646">
+      <answers xsi:type="pathwayMetamodel:Choice" name="hipovolemia_lacrimas" id="2686" weight="1" value="0.0">
+        <option description="Ausente"/>
+        <option description="Presente" weight="1"/>
+      </answers>
+    </questions>
+    <questions text="Sinal de Prega" url="" id="1647">
+      <answers xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sinal_prega" id="2687" weight="1" value="0.0">
+        <option description="Desaparece  lentamente"/>
+        <option description="Desaparece  muito lentamente ( mais de 2 segundos)"/>
+        <option description="Desaparece rapidamente" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3602" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Encaminhar para Urg&#xea;ncia" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>Aten&amp;ccedil;&amp;atilde;o!&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>Realize o encaminhamento do paciente para urg&amp;ecirc;ncia.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3603" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Perfil do Paciente" description="" inputSequences="//@sequence.14" outputSequences="//@sequence.2 //@sequence.3">
+    <questions text="Paciente Pedi&#xe1;trico?" url="" id="1648">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="diar_paciente_pediatrico" id="2688" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3604" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Pedi&#xe1;trico] Orienta&#xe7;&#xf5;es Gerais" description="&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>Orientar a oferecer ou ingerir mais l&amp;iacute;quidos que o habitual&lt;/p>&#xA;&#xA;&lt;p>N&amp;atilde;o utilizar refrigerante.&lt;/p>&#xA;&#xA;&lt;p>N&amp;atilde;o ado&amp;ccedil;ar o ch&amp;aacute; ou suco.&lt;/p>&#xA;&#xA;&lt;p>Manter alimenta&amp;ccedil;&amp;atilde;o Habitual&lt;/p>&#xA;&#xA;&lt;p>Educa&amp;ccedil;&amp;atilde;o Geral para paciente ou acompanhante&lt;/p>&#xA;&#xA;&lt;p>Reconhecer sinais de desidrata&amp;ccedil;&amp;atilde;o&lt;/p>&#xA;&#xA;&lt;p>Ensinar prepara&amp;ccedil;&amp;atilde;o de Solu&amp;ccedil;&amp;atilde;o Oral&lt;/p>&#xA;&#xA;&lt;p>Praticar medidas de higiene pessoal e domiciliar&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>Prescrever via&amp;nbsp;&lt;strong>conduta complementar&lt;/strong>:&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Solu&amp;ccedil;&amp;atilde;o de Reidrata&amp;ccedil;&amp;atilde;o Oral (SRO) ap&amp;oacute;s evacua&amp;ccedil;&amp;otilde;es:&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;p style=&quot;margin-left:40px&quot;>Quantidade de l&amp;iacute;quidos que devem ser administrados/ingeridos ap&amp;oacute;s evacua&amp;ccedil;&amp;atilde;o diarreica&lt;/p>&#xA;&#xA;&lt;ol style=&quot;margin-left:40px&quot;>&#xA;&#x9;&lt;li>Menor de 1 ano 50 ml - 100 ml&lt;/li>&#xA;&#x9;&lt;li>De 1 - 10 anos 100 ml -&amp;nbsp;200 ml&lt;/li>&#xA;&lt;/ol>&#xA;&#xA;&lt;ul>&#xA;&#x9;&lt;li>Zinco: Deve ser administrado, uma vez ao dia, durante 10 a 14 dias:&lt;/li>&#xA;&lt;/ul>&#xA;&#xA;&lt;ol style=&quot;margin-left:40px&quot;>&#xA;&#x9;&lt;li>&amp;nbsp;At&amp;eacute; seis (6) meses de idade: 10mg/dia.&lt;/li>&#xA;&#x9;&lt;li>&amp;nbsp;Maiores de seis (6) meses de idade: 20mg/dia.&lt;/li>&#xA;&lt;/ol>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Persistindo sintomas retornar em 48 horas&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.2" outputSequences="//@sequence.4"/>
+  <element xsi:type="pathwayMetamodel:Information" id="3605" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="[Adulto] Orienta&#xe7;&#xf5;es Gerais" description="&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>Orientar a oferecer ou ingerir mais l&amp;iacute;quidos que o habitual&lt;/p>&#xA;&#xA;&lt;p>N&amp;atilde;o utilizar refrigerante.&lt;/p>&#xA;&#xA;&lt;p>N&amp;atilde;o ado&amp;ccedil;ar o ch&amp;aacute; ou suco.&lt;/p>&#xA;&#xA;&lt;p>Manter alimenta&amp;ccedil;&amp;atilde;o Habitual&lt;/p>&#xA;&#xA;&lt;p>Educa&amp;ccedil;&amp;atilde;o Geral para paciente ou acompanhante&lt;/p>&#xA;&#xA;&lt;p>Reconhecer sinais de desidrata&amp;ccedil;&amp;atilde;o&lt;/p>&#xA;&#xA;&lt;p>Ensinar prepara&amp;ccedil;&amp;atilde;o de Solu&amp;ccedil;&amp;atilde;o Oral&lt;/p>&#xA;&#xA;&lt;p>Praticar medidas de higiene pessoal e domiciliar&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;strong>Prescri&amp;ccedil;&amp;atilde;o via conduta complementar:&lt;/strong>&lt;/p>&#xA;&#xA;&lt;p>Solu&amp;ccedil;&amp;atilde;o de reidrata&amp;ccedil;&amp;atilde;o Oral (SRO) &amp;aacute; vontade&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Persistindo sintomas retornar em 48 horas&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.3" outputSequences="//@sequence.5"/>
+  <element xsi:type="pathwayMetamodel:Pause" id="3606" type="Pausa" type_verbose="Pausa" url="" name="Pausa de Protocolo" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Pausa de Protocolo, paciente orientado a retornar ap&amp;oacute;s 48h.&lt;/strong>&lt;/span>&lt;/p>" inputSequences="//@sequence.4 //@sequence.5" outputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3607" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Reavaliar Sinais e Sintomas" description="" inputSequences="//@sequence.6" outputSequences="//@sequence.7 //@sequence.8 //@sequence.10">
+    <questions text="Fa&#xe7;a uma avalia&#xe7;&#xe3;o do paciente ap&#xf3;s retorno:" url="" id="1649">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sinais_sintomas_paciente" id="2689" weight="1" value="0.0">
+        <option description="Houve melhora dos sintomas" weight="1"/>
+        <option description="Persist&#xea;ncia de sintomas por mais de 14 dias" weight="2"/>
+        <option description="Piora dos sintomas" weight="3"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="3608" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="" name="Orienta&#xe7;&#xf5;es Gerais" description="&lt;p>&lt;strong>Realize as &amp;uacute;ltimas orienta&amp;ccedil;&amp;otilde;es e finalize o Protocolo&lt;/strong>&lt;/p>" isTerminal="true" inputSequences="//@sequence.7 //@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Process" id="3609" type="Processo" type_verbose="Processo" url="" name="Encaminhamento para Especialidade" description="&lt;p>&lt;strong>Realize o encaminhamento para Gastroenterologia&lt;/strong>&lt;/p>" inputSequences="//@sequence.8 //@sequence.13" outputSequences="//@sequence.9">
+    <action id="1" process_id="3609" service="encaminhar_especialidade" description="Encaminhar para Gastroenterologia"/>
+    <action id="2" process_id="3609" service="encaminhar_especialidade" description="Encaminhar para Gastroenterologia - Pedi&#xe1;trico"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3610" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Plano A - Verificar Sinais de Perigo" description="" inputSequences="//@sequence.1" outputSequences="//@sequence.11 //@sequence.12">
+    <questions text="Marque os sintomas presente no Paciente" url="" id="1650">
+      <answers xsi:type="pathwayMetamodel:Choice" name="sintomas_de_perigo" id="2690" value="0.0">
+        <option description="Piora Diarreia" weight="1"/>
+        <option description="Recusa alimentos" weight="1"/>
+        <option description="V&#xf4;mitos repetidos" weight="1"/>
+        <option description="Sangue nas fezes" weight="1"/>
+        <option description="Muita Sede" weight="1"/>
+        <option description="Diminui&#xe7;&#xe3;o da diurese" weight="1"/>
+      </answers>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="3611" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="" name="Avaliar Per&#xed;odo dos Sintomas" description="" inputSequences="//@sequence.12" outputSequences="//@sequence.13 //@sequence.14">
+    <questions text="Persist&#xea;ncia de sintomas por mais de 14 dias?" url="" id="1651">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_por_mais_14_dias" id="2691" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Process" id="3612" type="Processo" type_verbose="Processo" url="" name="Encaminhamento para Urg&#xea;ncia" description="&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>Aten&amp;ccedil;&amp;atilde;o!&lt;/strong>&lt;/span>&lt;/p>&#xA;&#xA;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:20px&quot;>&lt;strong>Realize o encaminhamento do paciente para urg&amp;ecirc;ncia.&lt;/strong>&lt;/span>&lt;/p>" isTerminal="true" inputSequences="//@sequence.0 //@sequence.10 //@sequence.11">
+    <action id="3" process_id="3612" service="encaminhar_urgencia_msf" description="Encaminhar"/>
+  </element>
+  <sequence inputStep="//@element.11" outputStep="//@element.0" id="3613" type="Sequencia" type_verbose="Sequencia" url="" name="S1" description="-">
+    <operation name="Plano_B_ou_C" Operator="lessThan" id="2697">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sintomas_de_hipovolemia" Operator="addition" id="2696">
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_estado_geral" id="2681" weight="1" value="0.0">
+          <option description="Intranquilo"/>
+          <option description="Comatosos, hipot&#xf4;nico"/>
+          <option description="Alerta" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sede" id="2682" weight="1" value="0.0">
+          <option description="Bebe r&#xe1;pido e  avidamente"/>
+          <option description="Bebe mal ou n&#xe3;o &#xe9; capaz de beber"/>
+          <option description="Bebe normal, sem sede" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_pulso" id="2683" weight="1" value="0.0">
+          <option description="R&#xe1;pido,  Fraco"/>
+          <option description="Muito Fraco ou Ausente"/>
+          <option description="Cheio" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_enchimento_capilar" id="2684" weight="1" value="0.0">
+          <option description="3 a 5 segundos"/>
+          <option description="Maior que 5 segundos"/>
+          <option description="At&#xe9; 3 segundos" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_olhos" id="2685" weight="1" value="0.0">
+          <option description="Fundos"/>
+          <option description="Muito Fundos e secos"/>
+          <option description="Normais" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_lacrimas" id="2686" weight="1" value="0.0">
+          <option description="Ausente"/>
+          <option description="Presente" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sinal_prega" id="2687" weight="1" value="0.0">
+          <option description="Desaparece  lentamente"/>
+          <option description="Desaparece  muito lentamente ( mais de 2 segundos)"/>
+          <option description="Desaparece rapidamente" weight="1"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="QUATRO" id="2695" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.0" id="3614" type="Sequencia" type_verbose="Sequencia" url="" name="S2" description="-">
+    <operation name="Plano_A" Operator="greaterOrEqual" id="2698">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sintomas_de_hipovolemia" Operator="addition" id="2696">
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_estado_geral" id="2681" weight="1" value="0.0">
+          <option description="Intranquilo"/>
+          <option description="Comatosos, hipot&#xf4;nico"/>
+          <option description="Alerta" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sede" id="2682" weight="1" value="0.0">
+          <option description="Bebe r&#xe1;pido e  avidamente"/>
+          <option description="Bebe mal ou n&#xe3;o &#xe9; capaz de beber"/>
+          <option description="Bebe normal, sem sede" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_pulso" id="2683" weight="1" value="0.0">
+          <option description="R&#xe1;pido,  Fraco"/>
+          <option description="Muito Fraco ou Ausente"/>
+          <option description="Cheio" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_enchimento_capilar" id="2684" weight="1" value="0.0">
+          <option description="3 a 5 segundos"/>
+          <option description="Maior que 5 segundos"/>
+          <option description="At&#xe9; 3 segundos" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_olhos" id="2685" weight="1" value="0.0">
+          <option description="Fundos"/>
+          <option description="Muito Fundos e secos"/>
+          <option description="Normais" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_lacrimas" id="2686" weight="1" value="0.0">
+          <option description="Ausente"/>
+          <option description="Presente" weight="1"/>
+        </operand>
+        <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sinal_prega" id="2687" weight="1" value="0.0">
+          <option description="Desaparece  lentamente"/>
+          <option description="Desaparece  muito lentamente ( mais de 2 segundos)"/>
+          <option description="Desaparece rapidamente" weight="1"/>
+        </operand>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="QUATRO" id="2695" weight="1" value="4.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="3615" type="Sequencia" type_verbose="Sequencia" url="" name="S3" description="-">
+    <operation name="paciente_pediatrico" Operator="affirmation" id="2699">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diar_paciente_pediatrico" id="2688" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.2" id="3616" type="Sequencia" type_verbose="Sequencia" url="" name="S4" description="-">
+    <operation name="paciente_adulto" id="2700">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="diar_paciente_pediatrico" id="2688" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="3617" type="Sequencia" type_verbose="Sequencia" url="" name="S5" description="-"/>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="3618" type="Sequencia" type_verbose="Sequencia" url="" name="S6" description="-"/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="3619" type="Sequencia" type_verbose="Sequencia" url="" name="S7" description="-"/>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="3620" type="Sequencia" type_verbose="Sequencia" url="" name="S8" description="-">
+    <operation name="houve_melhora" Operator="equal" id="2701">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_sintomas_paciente" id="2689" weight="1" value="0.0">
+        <option description="Houve melhora dos sintomas" weight="1"/>
+        <option description="Persist&#xea;ncia de sintomas por mais de 14 dias" weight="2"/>
+        <option description="Piora dos sintomas" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="UM" id="2692" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="3621" type="Sequencia" type_verbose="Sequencia" url="" name="S9" description="-">
+    <operation name="persistencia_sintomas" Operator="equal" id="2702">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_sintomas_paciente" id="2689" weight="1" value="0.0">
+        <option description="Houve melhora dos sintomas" weight="1"/>
+        <option description="Persist&#xea;ncia de sintomas por mais de 14 dias" weight="2"/>
+        <option description="Piora dos sintomas" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="DOIS" id="2693" weight="1" value="2.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.8" id="3622" type="Sequencia" type_verbose="Sequencia" url="" name="S10" description="-"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.6" id="3623" type="Sequencia" type_verbose="Sequencia" url="" name="S11" description="-">
+    <operation name="houve_piora_sintomas" Operator="equal" id="2703">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sinais_sintomas_paciente" id="2689" weight="1" value="0.0">
+        <option description="Houve melhora dos sintomas" weight="1"/>
+        <option description="Persist&#xea;ncia de sintomas por mais de 14 dias" weight="2"/>
+        <option description="Piora dos sintomas" weight="3"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="TRES" id="2694" weight="1" value="3.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.11" outputStep="//@element.9" id="3624" type="Sequencia" type_verbose="Sequencia" url="" name="S12" description="-">
+    <operation name="sintomas_sinais_perigo" Operator="greaterOrEqual" id="2704">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas_de_perigo" id="2690" value="0.0">
+        <option description="Piora Diarreia" weight="1"/>
+        <option description="Recusa alimentos" weight="1"/>
+        <option description="V&#xf4;mitos repetidos" weight="1"/>
+        <option description="Sangue nas fezes" weight="1"/>
+        <option description="Muita Sede" weight="1"/>
+        <option description="Diminui&#xe7;&#xe3;o da diurese" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="UM" id="2692" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.10" outputStep="//@element.9" id="3625" type="Sequencia" type_verbose="Sequencia" url="" name="S13" description="-">
+    <operation name="sem_sinais_perigo" Operator="lessThan" id="2705">
+      <operand xsi:type="pathwayMetamodel:Choice" name="sintomas_de_perigo" id="2690" value="0.0">
+        <option description="Piora Diarreia" weight="1"/>
+        <option description="Recusa alimentos" weight="1"/>
+        <option description="V&#xf4;mitos repetidos" weight="1"/>
+        <option description="Sangue nas fezes" weight="1"/>
+        <option description="Muita Sede" weight="1"/>
+        <option description="Diminui&#xe7;&#xe3;o da diurese" weight="1"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="UM" id="2692" weight="1" value="1.0"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.10" id="3626" type="Sequencia" type_verbose="Sequencia" url="" name="S14" description="-">
+    <operation name="Sintomas_duram_mais_14_dias" Operator="affirmation" id="2706">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_por_mais_14_dias" id="2691" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.10" id="3627" type="Sequencia" type_verbose="Sequencia" url="" name="S15" description="-">
+    <operation name="sem_persistencia_de_sintomas" id="2707">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_por_mais_14_dias" id="2691" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <operation name="sintomas_de_hipovolemia" Operator="addition" id="2696">
+    <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_estado_geral" id="2681" weight="1" value="0.0">
+      <option description="Intranquilo"/>
+      <option description="Comatosos, hipot&#xf4;nico"/>
+      <option description="Alerta" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sede" id="2682" weight="1" value="0.0">
+      <option description="Bebe r&#xe1;pido e  avidamente"/>
+      <option description="Bebe mal ou n&#xe3;o &#xe9; capaz de beber"/>
+      <option description="Bebe normal, sem sede" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_pulso" id="2683" weight="1" value="0.0">
+      <option description="R&#xe1;pido,  Fraco"/>
+      <option description="Muito Fraco ou Ausente"/>
+      <option description="Cheio" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_enchimento_capilar" id="2684" weight="1" value="0.0">
+      <option description="3 a 5 segundos"/>
+      <option description="Maior que 5 segundos"/>
+      <option description="At&#xe9; 3 segundos" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_olhos" id="2685" weight="1" value="0.0">
+      <option description="Fundos"/>
+      <option description="Muito Fundos e secos"/>
+      <option description="Normais" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_lacrimas" id="2686" weight="1" value="0.0">
+      <option description="Ausente"/>
+      <option description="Presente" weight="1"/>
+    </operand>
+    <operand xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sinal_prega" id="2687" weight="1" value="0.0">
+      <option description="Desaparece  lentamente"/>
+      <option description="Desaparece  muito lentamente ( mais de 2 segundos)"/>
+      <option description="Desaparece rapidamente" weight="1"/>
+    </operand>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:Choice" name="hipovolemia_estado_geral" id="2681" weight="1" value="0.0">
+    <option description="Intranquilo"/>
+    <option description="Comatosos, hipot&#xf4;nico"/>
+    <option description="Alerta" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sede" id="2682" weight="1" value="0.0">
+    <option description="Bebe r&#xe1;pido e  avidamente"/>
+    <option description="Bebe mal ou n&#xe3;o &#xe9; capaz de beber"/>
+    <option description="Bebe normal, sem sede" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="hipovolemia_pulso" id="2683" weight="1" value="0.0">
+    <option description="R&#xe1;pido,  Fraco"/>
+    <option description="Muito Fraco ou Ausente"/>
+    <option description="Cheio" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="hipovolemia_enchimento_capilar" id="2684" weight="1" value="0.0">
+    <option description="3 a 5 segundos"/>
+    <option description="Maior que 5 segundos"/>
+    <option description="At&#xe9; 3 segundos" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="hipovolemia_olhos" id="2685" weight="1" value="0.0">
+    <option description="Fundos"/>
+    <option description="Muito Fundos e secos"/>
+    <option description="Normais" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="hipovolemia_lacrimas" id="2686" weight="1" value="0.0">
+    <option description="Ausente"/>
+    <option description="Presente" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="hipovolemia_sinal_prega" id="2687" weight="1" value="0.0">
+    <option description="Desaparece  lentamente"/>
+    <option description="Desaparece  muito lentamente ( mais de 2 segundos)"/>
+    <option description="Desaparece rapidamente" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="diar_paciente_pediatrico" id="2688" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sinais_sintomas_paciente" id="2689" weight="1" value="0.0">
+    <option description="Houve melhora dos sintomas" weight="1"/>
+    <option description="Persist&#xea;ncia de sintomas por mais de 14 dias" weight="2"/>
+    <option description="Piora dos sintomas" weight="3"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:Choice" name="sintomas_de_perigo" id="2690" value="0.0">
+    <option description="Piora Diarreia" weight="1"/>
+    <option description="Recusa alimentos" weight="1"/>
+    <option description="V&#xf4;mitos repetidos" weight="1"/>
+    <option description="Sangue nas fezes" weight="1"/>
+    <option description="Muita Sede" weight="1"/>
+    <option description="Diminui&#xe7;&#xe3;o da diurese" weight="1"/>
+  </variable>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_por_mais_14_dias" id="2691" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="UM" id="2692" weight="1" value="1.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="DOIS" id="2693" weight="1" value="2.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="TRES" id="2694" weight="1" value="3.0"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="QUATRO" id="2695" weight="1" value="4.0"/>
+</pathwayMetamodel:Pathway>

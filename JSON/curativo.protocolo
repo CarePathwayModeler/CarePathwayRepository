@@ -1,0 +1,307 @@
+{
+    "id": 3115,
+    "url": "",
+    "codigo": "H047",
+    "nome": "Curativo",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 561,
+    "versao": 6,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:42:24.669764-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:42:11.638110-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:42:24.669764-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17476,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Verificar sinais",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9070,
+                    "url": "",
+                    "texto": "H\u00e1 sinais infecciosos, necrose ou forma\u00e7\u00e3o de abscessos?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17262,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "sinais",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17479,
+                    "url": "",
+                    "nome": "S1 (h\u00e1 sinais)",
+                    "descricao": "h\u00e1 sinais",
+                    "passo_de_saida_id": 17476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sinais",
+                    "passo_de_entrada_id": 17478,
+                    "passo_de_entrada": "Encaminhamento: Encaminhamento para Partes Moles",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17480,
+                    "url": "",
+                    "nome": "S2 (n\u00e3o h\u00e1 sinais)",
+                    "descricao": "N\u00e3o h\u00e1 sinais",
+                    "passo_de_saida_id": 17476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sinais",
+                    "passo_de_entrada_id": 17477,
+                    "passo_de_entrada": "Tratamento: Curativo",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17477,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Curativo",
+            "descricao": "<p><span style=\"font-size:16px\">Selecione o tipo de curativo:</span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "CURATIVO COM ATADURA E GAZE ACOCHOADA",
+                    "procedimento": "76060004",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CURATIVO COM IRUXOL/KOLAGENASE PEQUENO",
+                    "procedimento": "76060006",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CURATIVO COM SULFADIAZINA",
+                    "procedimento": "76060005",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CURATIVO GRANDE",
+                    "procedimento": "76060003",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CURATIVO MEDIO",
+                    "procedimento": "76060002",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "CURATIVO PEQUENO",
+                    "procedimento": "76060001",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                },
+                {
+                    "url": "RETIRADA DE PONTOS",
+                    "procedimento": "76050007",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17480,
+                    "url": "",
+                    "nome": "S2 (n\u00e3o h\u00e1 sinais)",
+                    "descricao": "N\u00e3o h\u00e1 sinais",
+                    "passo_de_saida_id": 17476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sinais",
+                    "passo_de_entrada_id": 17477,
+                    "passo_de_entrada": "Tratamento: Curativo",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17478,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Encaminhamento para Partes Moles",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17479,
+                    "url": "",
+                    "nome": "S1 (h\u00e1 sinais)",
+                    "descricao": "h\u00e1 sinais",
+                    "passo_de_saida_id": 17476,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Verificar sinais",
+                    "passo_de_entrada_id": 17478,
+                    "passo_de_entrada": "Encaminhamento: Encaminhamento para Partes Moles",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17479,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (h\u00e1 sinais)",
+            "descricao": "h\u00e1 sinais",
+            "passo_de_saida_id": 17476,
+            "passo_de_saida": {
+                "id": 17476,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar sinais",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17478,
+            "passo_de_entrada": {
+                "id": 17478,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Encaminhamento para Partes Moles",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": []
+            },
+            "operacao": {
+                "id": 17263,
+                "nome": "h\u00e1 sinais",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17262
+                ],
+                "argumentos": [
+                    "sinais"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17480,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2 (n\u00e3o h\u00e1 sinais)",
+            "descricao": "N\u00e3o h\u00e1 sinais",
+            "passo_de_saida_id": 17476,
+            "passo_de_saida": {
+                "id": 17476,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Verificar sinais",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17477,
+            "passo_de_entrada": {
+                "id": 17477,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Curativo",
+                "descricao": "<p><span style=\"font-size:16px\">Selecione o tipo de curativo:</span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17264,
+                "nome": "n\u00e3o h\u00e1 sinais",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17262
+                ],
+                "argumentos": [
+                    "sinais"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17262,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "sinais",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        }
+    ]
+}

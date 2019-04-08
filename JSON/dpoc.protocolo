@@ -1,0 +1,2356 @@
+{
+    "id": 3140,
+    "url": "",
+    "codigo": "H046",
+    "nome": "DPOC",
+    "categoria": "Emerg\u00eancia",
+    "especialidade": "Clinica M\u00e9dica",
+    "repositorio_id": 541,
+    "versao": 4,
+    "ultima_auditoria": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:43:56.785892-03:00"
+    },
+    "criado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:43:47.219480-03:00"
+    },
+    "finalizado_por": {
+        "usuario": "Intmed Software",
+        "data": "2019-01-24T14:43:56.785892-03:00"
+    },
+    "elementos": [
+        {
+            "id": 17629,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Estado do Paciente",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9100,
+                    "url": "",
+                    "texto": "Estado do paciente",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17380,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "estado",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Est\u00e1vel",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Inst\u00e1vel",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17644,
+                    "url": "",
+                    "nome": "S3 (Quick Sofa < 2)",
+                    "descricao": "Quick Sofa < 2",
+                    "passo_de_saida_id": 17630,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios SEPSE",
+                    "passo_de_entrada_id": 17629,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Estado do Paciente",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17645,
+                    "url": "",
+                    "nome": "S5 (Inst\u00e1vel ou Exacerba\u00e7\u00e3o Grave)",
+                    "descricao": "Inst\u00e1vel ou Exacerba\u00e7\u00e3o Grave",
+                    "passo_de_saida_id": 17629,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Estado do Paciente",
+                    "passo_de_entrada_id": 17634,
+                    "passo_de_entrada": "Tratamento: Paciente Inst\u00e1vel ou Grave",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17646,
+                    "url": "",
+                    "nome": "S4 (Paciente Est\u00e1vel)",
+                    "descricao": "Paciente Est\u00e1vel",
+                    "passo_de_saida_id": 17629,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Estado do Paciente",
+                    "passo_de_entrada_id": 17633,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17630,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Crit\u00e9rios SEPSE",
+            "descricao": "",
+            "is_initial": true,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9101,
+                    "url": "",
+                    "texto": "Quick SOFA",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17381,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "quick_sofa",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Confus\u00e3o Mental",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "PAS < 100",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "FR > 22",
+                                "peso": 1.0
+                            }
+                        ],
+                        "multipla_resposta": true
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [],
+            "sequencias_de_saida": [
+                {
+                    "id": 17642,
+                    "url": "",
+                    "nome": "S1 (Quick Sofa >= 2)",
+                    "descricao": "Quick Sofa >= 2",
+                    "passo_de_saida_id": 17630,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios SEPSE",
+                    "passo_de_entrada_id": 17631,
+                    "passo_de_entrada": "Tratamento: Encaminhar ao Eixo Vermelho",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17644,
+                    "url": "",
+                    "nome": "S3 (Quick Sofa < 2)",
+                    "descricao": "Quick Sofa < 2",
+                    "passo_de_saida_id": 17630,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios SEPSE",
+                    "passo_de_entrada_id": 17629,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Estado do Paciente",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17631,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Encaminhar ao Eixo Vermelho",
+            "descricao": "<p><strong><span style=\"color:#e74c3c\">ENCAMINHAR AO EIXO VERMELHO.</span></strong></p>\n\n<p>Iniciar ATB na primeira hora, coleta de culturas, ressuscita&ccedil;&atilde;o vol&ecirc;mica, monitoriza&ccedil;&atilde;o</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "MONITORIZACAO HEMODINAMICA INVASIVA (POR 12 HORAS)",
+                    "procedimento": "14010046",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17642,
+                    "url": "",
+                    "nome": "S1 (Quick Sofa >= 2)",
+                    "descricao": "Quick Sofa >= 2",
+                    "passo_de_saida_id": 17630,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Crit\u00e9rios SEPSE",
+                    "passo_de_entrada_id": 17631,
+                    "passo_de_entrada": "Tratamento: Encaminhar ao Eixo Vermelho",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17643,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17631,
+                    "passo_de_saida": "Tratamento: Encaminhar ao Eixo Vermelho",
+                    "passo_de_entrada_id": 17632,
+                    "passo_de_entrada": "Encaminhamento: Protocolo de SEPSE",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17632,
+            "type": "Encaminhamento",
+            "type_verbose": "Encaminhamento",
+            "url": "",
+            "nome": "Protocolo de SEPSE",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "protocolos": [
+                "H012"
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17643,
+                    "url": "",
+                    "nome": "S2",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17631,
+                    "passo_de_saida": "Tratamento: Encaminhar ao Eixo Vermelho",
+                    "passo_de_entrada_id": 17632,
+                    "passo_de_entrada": "Encaminhamento: Protocolo de SEPSE",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17633,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+            "descricao": "<p>Classificar exacerba&ccedil;&atilde;o entre leve, moderada ou grave, checar sinais vitais, exame f&iacute;sico e oximetria. Investigar fatores precipitantes.</p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9102,
+                    "url": "",
+                    "texto": "Piora da dispn\u00e9ia",
+                    "categoria": "Crit\u00e9rios Cardinais",
+                    "variavel": {
+                        "id": 17382,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_cardinais_piora_dispneia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                },
+                {
+                    "id": 9103,
+                    "url": "",
+                    "texto": "Aumento da expectora\u00e7\u00e3o",
+                    "categoria": "Crit\u00e9rios Cardinais",
+                    "variavel": {
+                        "id": 17383,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_cardinais_aumento_expectoracao",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 5
+                },
+                {
+                    "id": 9104,
+                    "url": "",
+                    "texto": "Escarro que se torna purulento",
+                    "categoria": "Crit\u00e9rios Cardinais",
+                    "variavel": {
+                        "id": 17384,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "criterios_cardinais_escarro_purulento",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 6
+                },
+                {
+                    "id": 9105,
+                    "url": "",
+                    "texto": "Infec\u00e7\u00e3o das Vias A\u00e9reas Superiores (IVAS)",
+                    "categoria": "Achados Adicionais",
+                    "variavel": {
+                        "id": 17385,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "achados_adicionais_ivas",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 7
+                },
+                {
+                    "id": 9106,
+                    "url": "",
+                    "texto": "Febre Sem Causa Aparente",
+                    "categoria": "Achados Adicionais",
+                    "variavel": {
+                        "id": 17386,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "achados_adicionais_febre_sem_causa_aparente",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 8
+                },
+                {
+                    "id": 9107,
+                    "url": "",
+                    "texto": "Sibilos",
+                    "categoria": "Achados Adicionais",
+                    "variavel": {
+                        "id": 17387,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "achados_adicionais_sibilis",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 9
+                },
+                {
+                    "id": 9108,
+                    "url": "",
+                    "texto": "Aumento da Tosse",
+                    "categoria": "Achados Adicionais",
+                    "variavel": {
+                        "id": 17388,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "achados_adicionais_aumento_da_tosse",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 10
+                },
+                {
+                    "id": 9109,
+                    "url": "",
+                    "texto": "Taquipneia",
+                    "categoria": "Achados Adicionais",
+                    "variavel": {
+                        "id": 17389,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "achados_adicionais_taquipneia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 11
+                },
+                {
+                    "id": 9110,
+                    "url": "",
+                    "texto": "Taquicardia",
+                    "categoria": "Achados Adicionais",
+                    "variavel": {
+                        "id": 17390,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "achados_adicionais_taquicardia",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 12
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17646,
+                    "url": "",
+                    "nome": "S4 (Paciente Est\u00e1vel)",
+                    "descricao": "Paciente Est\u00e1vel",
+                    "passo_de_saida_id": 17629,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Estado do Paciente",
+                    "passo_de_entrada_id": 17633,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17650,
+                    "url": "",
+                    "nome": "S9 (Houve altera\u00e7\u00f5es)",
+                    "descricao": "Houve altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17637,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resultados dos Exames",
+                    "passo_de_entrada_id": 17633,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17641,
+                    "url": "",
+                    "nome": "S13 (Exacerba\u00e7\u00e3o Grave)",
+                    "descricao": "Exacerba\u00e7\u00e3o Grave",
+                    "passo_de_saida_id": 17633,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17634,
+                    "passo_de_entrada": "Tratamento: Paciente Inst\u00e1vel ou Grave",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17654,
+                    "url": "",
+                    "nome": "S14 (sem exacerba\u00e7\u00e3o grave)",
+                    "descricao": "sem exacerba\u00e7\u00e3o grave",
+                    "passo_de_saida_id": 17633,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17635,
+                    "passo_de_entrada": "Tratamento: Paciente Est\u00e1vel",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17634,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Paciente Inst\u00e1vel ou Grave",
+            "descricao": "<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Paciente deve ser encaminhado ao Eixo Vermelho.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Se n&atilde;o houver defini&ccedil;&atilde;o da causa da descompensa&ccedil;&atilde;o, solicitar D D&iacute;mero, Troponina e PRO-BNP.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Avaliar intuba&ccedil;&atilde;o orotraqueal<strong>.</strong></span></span></p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "SODIO (SANGUE)",
+                    "exame": "28011279",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "POTASSIO",
+                    "exame": "28011210",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GLICEMIA P/ FITA",
+                    "exame": "99011973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17641,
+                    "url": "",
+                    "nome": "S13 (Exacerba\u00e7\u00e3o Grave)",
+                    "descricao": "Exacerba\u00e7\u00e3o Grave",
+                    "passo_de_saida_id": 17633,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17634,
+                    "passo_de_entrada": "Tratamento: Paciente Inst\u00e1vel ou Grave",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17645,
+                    "url": "",
+                    "nome": "S5 (Inst\u00e1vel ou Exacerba\u00e7\u00e3o Grave)",
+                    "descricao": "Inst\u00e1vel ou Exacerba\u00e7\u00e3o Grave",
+                    "passo_de_saida_id": 17629,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Estado do Paciente",
+                    "passo_de_entrada_id": 17634,
+                    "passo_de_entrada": "Tratamento: Paciente Inst\u00e1vel ou Grave",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17652,
+                    "url": "",
+                    "nome": "S11 (Paciente inst\u00e1vel)",
+                    "descricao": "Paciente inst\u00e1vel",
+                    "passo_de_saida_id": 17638,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Permanece Est\u00e1vel?",
+                    "passo_de_entrada_id": 17634,
+                    "passo_de_entrada": "Tratamento: Paciente Inst\u00e1vel ou Grave",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17635,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Paciente Est\u00e1vel",
+            "descricao": "<p>Para diagn&oacute;sticos diferenciais, <u><strong>se necess&aacute;rio</strong></u>, solicitar: troponina, ckmb massa (s&iacute;ndrome coronariana aguda), d-d&iacute;mero (TEP).<br />\n<br />\n<u><strong>J&aacute; realizar as medica&ccedil;&otilde;es:</strong></u></p>\n\n<ul>\n\t<li>Berotec 10 gotas + atrovent 30 gotas + 3ml soro fisiol&oacute;gico 3ml (3x seguidas com intervalo de 20min)</li>\n\t<li>Cateter O2 (1-3 litros) se satura&ccedil;&atilde;o de oxig&ecirc;nio &lt; 90%</li>\n</ul>\n\n<p><br />\n<span style=\"color:null\"><strong>OBS: REAVALIAR AP&Oacute;S 1 HORA</strong></span></p>",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [
+                {
+                    "url": "RX TORAX P.A",
+                    "exame": "32050038",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GASOMETRIA ARTERIAL",
+                    "exame": "28010965",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "HEMOGRAMA COMPLETO COM REVISAO DE LAMINAS",
+                    "exame": "28040481",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "GLICEMIA P/ FITA",
+                    "exame": "99011973",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "ELETROCARDIOGRAMA",
+                    "exame": "20010010",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                },
+                {
+                    "url": "TROPONINA",
+                    "exame": "28011783",
+                    "lado_membro": "",
+                    "quantidade": 1,
+                    "justificativa": "DPOC com exacerba\u00e7\u00e3o grave",
+                    "indicacao_clinica": "n/a",
+                    "categoria": null
+                }
+            ],
+            "medicamentos": [
+                {
+                    "id": 9037,
+                    "url": "",
+                    "medicamento": 35173,
+                    "codigo": "",
+                    "nome": "BEROTEC GOTAS FRAS 20 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GT",
+                    "unidade_display": "GOTA",
+                    "via_acesso": 20,
+                    "dose_diaria": 10,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9038,
+                    "url": "",
+                    "medicamento": 35254,
+                    "codigo": "",
+                    "nome": "ATROVENT SOLUCAO FRAS 20 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GT",
+                    "unidade_display": "GOTA",
+                    "via_acesso": 20,
+                    "dose_diaria": 30,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9039,
+                    "url": "",
+                    "medicamento": 36390,
+                    "codigo": "",
+                    "nome": "HIDROCORTISONA 100 MG FRAP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 3,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": {
+                        "id": 3772,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1 FA + 18 ml AD",
+                        "codigo_principio_ativo": 1309,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 100,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [
+                {
+                    "url": "O2 UMIDO C/ CATETER NASAL",
+                    "procedimento": "75010001",
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "quantidade": 1,
+                    "categoria": null
+                }
+            ],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17654,
+                    "url": "",
+                    "nome": "S14 (sem exacerba\u00e7\u00e3o grave)",
+                    "descricao": "sem exacerba\u00e7\u00e3o grave",
+                    "passo_de_saida_id": 17633,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "passo_de_entrada_id": 17635,
+                    "passo_de_entrada": "Tratamento: Paciente Est\u00e1vel",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17647,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17635,
+                    "passo_de_saida": "Tratamento: Paciente Est\u00e1vel",
+                    "passo_de_entrada_id": 17636,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17636,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Resposta",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9111,
+                    "url": "",
+                    "texto": "Resposta \u00e0 medica\u00e7\u00e3o",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17391,
+                        "type": "Escolha",
+                        "type_verbose": "Escolha",
+                        "url": "",
+                        "nome": "resposta_a_medicacao",
+                        "peso": 1.0,
+                        "valor": null,
+                        "vinculo": null,
+                        "opcoes": [
+                            {
+                                "texto": "Resposta r\u00e1pida \u00e0s medica\u00e7\u00f5es",
+                                "peso": 1.0
+                            },
+                            {
+                                "texto": "Pouca melhora com tratamento inicial",
+                                "peso": 2.0
+                            }
+                        ],
+                        "multipla_resposta": false
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17647,
+                    "url": "",
+                    "nome": "S6",
+                    "descricao": "Incondicional",
+                    "passo_de_saida_id": 17635,
+                    "passo_de_saida": "Tratamento: Paciente Est\u00e1vel",
+                    "passo_de_entrada_id": 17636,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17648,
+                    "url": "",
+                    "nome": "S7 (Resposta r\u00e1pida)",
+                    "descricao": "Resposta r\u00e1pida",
+                    "passo_de_saida_id": 17636,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 17637,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Resultados dos Exames",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17649,
+                    "url": "",
+                    "nome": "S8 (Pouca melhora)",
+                    "descricao": "Pouca melhora",
+                    "passo_de_saida_id": 17636,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 17638,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Permanece Est\u00e1vel?",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17637,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Avaliar Resultados dos Exames",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9112,
+                    "url": "",
+                    "texto": "Houve altera\u00e7\u00e3o nos exames?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17392,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "exames_alterados",
+                        "peso": 1.0,
+                        "valor": false,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17648,
+                    "url": "",
+                    "nome": "S7 (Resposta r\u00e1pida)",
+                    "descricao": "Resposta r\u00e1pida",
+                    "passo_de_saida_id": 17636,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 17637,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Avaliar Resultados dos Exames",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17650,
+                    "url": "",
+                    "nome": "S9 (Houve altera\u00e7\u00f5es)",
+                    "descricao": "Houve altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17637,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resultados dos Exames",
+                    "passo_de_entrada_id": 17633,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17651,
+                    "url": "",
+                    "nome": "S10 (N\u00e3o houve altera\u00e7\u00f5es)",
+                    "descricao": "N\u00e3o houve altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17637,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resultados dos Exames",
+                    "passo_de_entrada_id": 17639,
+                    "passo_de_entrada": "Receita: Receita (Paciente com resposta r\u00e1pida)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17638,
+            "type": "AuxilioConduta",
+            "type_verbose": "Aux\u00edlio Conduta",
+            "url": "",
+            "nome": "Permanece Est\u00e1vel?",
+            "descricao": "",
+            "is_initial": false,
+            "is_terminal": false,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "perguntas": [
+                {
+                    "id": 9113,
+                    "url": "",
+                    "texto": "Paciente permanece est\u00e1vel?",
+                    "categoria": null,
+                    "variavel": {
+                        "id": 17393,
+                        "type": "SimOuNao",
+                        "type_verbose": "Sim Ou N\u00e3o",
+                        "url": "",
+                        "nome": "permanece_estavel",
+                        "peso": 1.0,
+                        "valor": true,
+                        "vinculo": null
+                    },
+                    "permitir_nao_se_aplica": false,
+                    "ordem": 1
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17649,
+                    "url": "",
+                    "nome": "S8 (Pouca melhora)",
+                    "descricao": "Pouca melhora",
+                    "passo_de_saida_id": 17636,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resposta",
+                    "passo_de_entrada_id": 17638,
+                    "passo_de_entrada": "Aux\u00edlio Conduta: Permanece Est\u00e1vel?",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": [
+                {
+                    "id": 17652,
+                    "url": "",
+                    "nome": "S11 (Paciente inst\u00e1vel)",
+                    "descricao": "Paciente inst\u00e1vel",
+                    "passo_de_saida_id": 17638,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Permanece Est\u00e1vel?",
+                    "passo_de_entrada_id": 17634,
+                    "passo_de_entrada": "Tratamento: Paciente Inst\u00e1vel ou Grave",
+                    "ultima_auditoria": null
+                },
+                {
+                    "id": 17653,
+                    "url": "",
+                    "nome": "S12 (Permanece est\u00e1vel)",
+                    "descricao": "Permanece est\u00e1vel",
+                    "passo_de_saida_id": 17638,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Permanece Est\u00e1vel?",
+                    "passo_de_entrada_id": 17640,
+                    "passo_de_entrada": "Tratamento: Tratamento (Paciente estabilizado)",
+                    "ultima_auditoria": null
+                }
+            ]
+        },
+        {
+            "id": 17639,
+            "type": "Receita",
+            "type_verbose": "Receita",
+            "url": "",
+            "nome": "Receita (Paciente com resposta r\u00e1pida)",
+            "descricao": "<ul>\n\t<li><span style=\"color:null\"><span style=\"font-size:16px\">Orientar vacina&ccedil;&atilde;o contra influenza anualmente e anti-pneumoc&oacute;cica com refor&ccedil;o ap&oacute;s 5 anos.</span></span></li>\n\t<li><span style=\"color:null\"><span style=\"font-size:16px\">Orientar paciente para retornar a&nbsp;emerg&ecirc;ncia se n&atilde;o houver melhora ou ocorrer piora dos sintomas.</span></span></li>\n</ul>\n\n<h2><strong><u><span style=\"font-size:16px\">Orienta&ccedil;&otilde;es para prescri&ccedil;&atilde;o de medicamentos:</span></u></strong></h2>\n\n<ul>\n\t<li><span style=\"font-size:14px\"><strong>Pacientes com exacerba&ccedil;&atilde;o leve:</strong>&nbsp;n&atilde;o prescrever antibioticoterapia.</span></li>\n\t<li><span style=\"font-size:14px\"><strong>Paciente com exacerba&ccedil;&atilde;o moderada ou grave:</strong>&nbsp;prescrever antibioticoterapia.</span></li>\n\t<li><span style=\"font-size:14px\"><strong>Pacientes de Baixo Risco</strong> (1 exacerba&ccedil;&atilde;o/ano, sem hospitaliza&ccedil;&atilde;o): Azitromicina 500mg, 01 comprimido, via oral, 24/24h por 05 dias</span></li>\n\t<li><span style=\"font-size:14px\">Prescrever Amoxicilina/Clavulonato 875/125mg&nbsp;<strong>ou&nbsp;</strong>Levofloxacino 750mg&nbsp;<u><strong>SE:</strong></u></span>\n\t<ul>\n\t\t<li><span style=\"font-size:14px\">Idade acima de 65 anos</span></li>\n\t\t<li><span style=\"font-size:14px\">Dispneia grave</span></li>\n\t\t<li><span style=\"font-size:14px\">Comorbidade significativa</span></li>\n\t\t<li><span style=\"font-size:14px\">Mais de 4 exacerba&ccedil;&otilde;es/ano</span></li>\n\t\t<li><span style=\"font-size:14px\">Hospitaliza&ccedil;&atilde;o por exacerba&ccedil;&atilde;o no &uacute;ltimo ano</span></li>\n\t\t<li><span style=\"font-size:14px\">Uso de corticoide sist&ecirc;mico nos &uacute;ltimos tr&ecirc;s meses</span></li>\n\t\t<li><span style=\"font-size:14px\">Uso de antibi&oacute;ticos nos 15 dias pr&eacute;vios</span></li>\n\t\t<li><span style=\"font-size:14px\">Desnutri&ccedil;&atilde;o</span></li>\n\t</ul>\n\t</li>\n</ul>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "manter_prescricao": false,
+            "orientacao_medica": "",
+            "tipo_receita": "N",
+            "medicamentos": [],
+            "itens_receita": [
+                {
+                    "id": 4638,
+                    "url": "",
+                    "nome": "Fumarato de formoterol + budesonida inalat\u00f3rio (6/100 mcg/dose)",
+                    "medicamento": null,
+                    "apresentacao": "DOSE",
+                    "via_acesso": 20,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 1
+                },
+                {
+                    "id": 4639,
+                    "url": "",
+                    "nome": "PREDNISONA 20 MG COMP 1 UD",
+                    "medicamento": 35742,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 2
+                },
+                {
+                    "id": 4640,
+                    "url": "",
+                    "nome": "Sulfato de salbutamol aerossol (100mcg/dose) aerossol",
+                    "medicamento": null,
+                    "apresentacao": "DOSE",
+                    "via_acesso": 20,
+                    "quantidade_receita": 2,
+                    "quantidade_duracao": 1,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 4,
+                    "unidade_frequencia": "DD",
+                    "complemento": "Apenas se crises de falta de ar",
+                    "ordem": 3
+                },
+                {
+                    "id": 4641,
+                    "url": "",
+                    "nome": "Azitromicina 500mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 5,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 4
+                },
+                {
+                    "id": 4642,
+                    "url": "",
+                    "nome": "Amoxicilina/Clavulanato 875/125mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 2,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 5
+                },
+                {
+                    "id": 4643,
+                    "url": "",
+                    "nome": "Levofloxacino 750mg",
+                    "medicamento": null,
+                    "apresentacao": "COMP",
+                    "via_acesso": 1,
+                    "quantidade_receita": 1,
+                    "quantidade_duracao": 7,
+                    "unidade_duracao": "DD",
+                    "quantidade_frequencia_uso": 1,
+                    "unidade_frequencia": "DD",
+                    "complemento": "",
+                    "ordem": 6
+                }
+            ],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17651,
+                    "url": "",
+                    "nome": "S10 (N\u00e3o houve altera\u00e7\u00f5es)",
+                    "descricao": "N\u00e3o houve altera\u00e7\u00f5es",
+                    "passo_de_saida_id": 17637,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Avaliar Resultados dos Exames",
+                    "passo_de_entrada_id": 17639,
+                    "passo_de_entrada": "Receita: Receita (Paciente com resposta r\u00e1pida)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17640,
+            "type": "Tratamento",
+            "type_verbose": "Tratamento",
+            "url": "",
+            "nome": "Tratamento (Paciente estabilizado)",
+            "descricao": "<ul>\n\t<li>Avaliar exames</li>\n\t<li>Realizar VNI</li>\n\t<li>Berotec 10 gotas + atrovent 30 gotas + 3ml soro fisiol&oacute;gico 3ml de 1/1h</li>\n</ul>\n\n<p><u>Tratar poss&iacute;veis diagn&oacute;sticos diferenciais, a&nbsp;depender do resultado dos exames</u><br />\n<br />\n<strong>Discutir com o l&iacute;der local internamento hospitalar</strong><br />\n&nbsp;</p>",
+            "is_initial": false,
+            "is_terminal": true,
+            "obrigatoriedade": false,
+            "ultima_auditoria": null,
+            "exames": [],
+            "medicamentos": [
+                {
+                    "id": 9040,
+                    "url": "",
+                    "medicamento": 35173,
+                    "codigo": "",
+                    "nome": "BEROTEC GOTAS FRAS 20 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GT",
+                    "unidade_display": "GOTA",
+                    "via_acesso": 20,
+                    "dose_diaria": 10,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9041,
+                    "url": "",
+                    "medicamento": 35254,
+                    "codigo": "",
+                    "nome": "ATROVENT SOLUCAO FRAS 20 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "GT",
+                    "unidade_display": "GOTA",
+                    "via_acesso": 20,
+                    "dose_diaria": 30,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "categoria": null,
+                    "ordem": 1,
+                    "padrao": null
+                },
+                {
+                    "id": 9042,
+                    "url": "",
+                    "medicamento": 43770,
+                    "codigo": "",
+                    "nome": "SORO FISIOLOGICO 0,9% - 1 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "ML",
+                    "unidade_display": "MILILITRO,CENTRIMETRO CUBICO (C3)",
+                    "via_acesso": 20,
+                    "dose_diaria": 3,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "1",
+                    "frequencia_display": "1/1",
+                    "categoria": null,
+                    "ordem": 2,
+                    "padrao": null
+                },
+                {
+                    "id": 9043,
+                    "url": "",
+                    "medicamento": 36390,
+                    "codigo": "",
+                    "nome": "HIDROCORTISONA 100 MG FRAP 1 UD",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 3,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 3,
+                    "padrao": {
+                        "id": 3773,
+                        "mnemonico": "EV",
+                        "administracao_diluicao": "1 FA + 18 ml AD",
+                        "codigo_principio_ativo": 1309,
+                        "codigo_diluente": 5259,
+                        "nome_diluente": "AGUA DESTILADA",
+                        "codigo_ocorrencia_diluicao": 1,
+                        "codigo_ordem_administracao": 4,
+                        "codigo_apresentacao_diluente": "AMPL",
+                        "tipo_acesso": "6",
+                        "tipo_administracao": "Bolus",
+                        "flag_tipo_administracao": "",
+                        "flag_fragmenta": "N",
+                        "quantidade_diluente": 18,
+                        "quantidade_volume": 1,
+                        "quantidade_dosagem": 100,
+                        "codigo_unidade_dosagem": "MG"
+                    }
+                },
+                {
+                    "id": 9044,
+                    "url": "",
+                    "medicamento": 118588,
+                    "codigo": "",
+                    "nome": "TAVANIC 500MG FRAP 100 ML",
+                    "descricao": "",
+                    "marca": "",
+                    "ambulatorial": null,
+                    "unidade": "AL",
+                    "unidade_display": "AMPOLA",
+                    "via_acesso": 6,
+                    "dose_diaria": 1,
+                    "ciclos": 1,
+                    "dias_intervalo": 1,
+                    "dias_tratamento": 1,
+                    "frequencia": "0",
+                    "frequencia_display": "Agora",
+                    "categoria": null,
+                    "ordem": 4,
+                    "padrao": null
+                }
+            ],
+            "medicamentos_pediatricos": [],
+            "procedimentos": [],
+            "internacoes": [],
+            "sequencias_de_entrada": [
+                {
+                    "id": 17653,
+                    "url": "",
+                    "nome": "S12 (Permanece est\u00e1vel)",
+                    "descricao": "Permanece est\u00e1vel",
+                    "passo_de_saida_id": 17638,
+                    "passo_de_saida": "Aux\u00edlio Conduta: Permanece Est\u00e1vel?",
+                    "passo_de_entrada_id": 17640,
+                    "passo_de_entrada": "Tratamento: Tratamento (Paciente estabilizado)",
+                    "ultima_auditoria": null
+                }
+            ],
+            "sequencias_de_saida": []
+        },
+        {
+            "id": 17641,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S13 (Exacerba\u00e7\u00e3o Grave)",
+            "descricao": "Exacerba\u00e7\u00e3o Grave",
+            "passo_de_saida_id": 17633,
+            "passo_de_saida": {
+                "id": 17633,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                "descricao": "<p>Classificar exacerba&ccedil;&atilde;o entre leve, moderada ou grave, checar sinais vitais, exame f&iacute;sico e oximetria. Investigar fatores precipitantes.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17634,
+            "passo_de_entrada": {
+                "id": 17634,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Paciente Inst\u00e1vel ou Grave",
+                "descricao": "<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Paciente deve ser encaminhado ao Eixo Vermelho.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Se n&atilde;o houver defini&ccedil;&atilde;o da causa da descompensa&ccedil;&atilde;o, solicitar D D&iacute;mero, Troponina e PRO-BNP.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Avaliar intuba&ccedil;&atilde;o orotraqueal<strong>.</strong></span></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17406,
+                "nome": "Com exacerba\u00e7\u00e3o grave",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17403
+                ],
+                "argumentos": [
+                    "Exacerba\u00e7\u00e3o Grave"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17642,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S1 (Quick Sofa >= 2)",
+            "descricao": "Quick Sofa >= 2",
+            "passo_de_saida_id": 17630,
+            "passo_de_saida": {
+                "id": 17630,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Crit\u00e9rios SEPSE",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17631,
+            "passo_de_entrada": {
+                "id": 17631,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Encaminhar ao Eixo Vermelho",
+                "descricao": "<p><strong><span style=\"color:#e74c3c\">ENCAMINHAR AO EIXO VERMELHO.</span></strong></p>\n\n<p>Iniciar ATB na primeira hora, coleta de culturas, ressuscita&ccedil;&atilde;o vol&ecirc;mica, monitoriza&ccedil;&atilde;o</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17407,
+                "nome": "Quick Sofa >= 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "maiorOuIgual",
+                "operador_display": "Maior Ou Igual",
+                "argumentos_ids": [
+                    17381,
+                    17394
+                ],
+                "argumentos": [
+                    "quick_sofa",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17643,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S2",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17631,
+            "passo_de_saida": {
+                "id": 17631,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Encaminhar ao Eixo Vermelho",
+                "descricao": "<p><strong><span style=\"color:#e74c3c\">ENCAMINHAR AO EIXO VERMELHO.</span></strong></p>\n\n<p>Iniciar ATB na primeira hora, coleta de culturas, ressuscita&ccedil;&atilde;o vol&ecirc;mica, monitoriza&ccedil;&atilde;o</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17632,
+            "passo_de_entrada": {
+                "id": 17632,
+                "type": "Encaminhamento",
+                "type_verbose": "Encaminhamento",
+                "url": "",
+                "nome": "Protocolo de SEPSE",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "protocolos_ids": [
+                    65
+                ]
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17644,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S3 (Quick Sofa < 2)",
+            "descricao": "Quick Sofa < 2",
+            "passo_de_saida_id": 17630,
+            "passo_de_saida": {
+                "id": 17630,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Crit\u00e9rios SEPSE",
+                "descricao": "",
+                "is_initial": true,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17629,
+            "passo_de_entrada": {
+                "id": 17629,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Estado do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17408,
+                "nome": "Quick Sofa < 2",
+                "descricao": "",
+                "visivel": false,
+                "operador": "menorQue",
+                "operador_display": "Menor Que",
+                "argumentos_ids": [
+                    17381,
+                    17394
+                ],
+                "argumentos": [
+                    "quick_sofa",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17645,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S5 (Inst\u00e1vel ou Exacerba\u00e7\u00e3o Grave)",
+            "descricao": "Inst\u00e1vel ou Exacerba\u00e7\u00e3o Grave",
+            "passo_de_saida_id": 17629,
+            "passo_de_saida": {
+                "id": 17629,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Estado do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17634,
+            "passo_de_entrada": {
+                "id": 17634,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Paciente Inst\u00e1vel ou Grave",
+                "descricao": "<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Paciente deve ser encaminhado ao Eixo Vermelho.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Se n&atilde;o houver defini&ccedil;&atilde;o da causa da descompensa&ccedil;&atilde;o, solicitar D D&iacute;mero, Troponina e PRO-BNP.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Avaliar intuba&ccedil;&atilde;o orotraqueal<strong>.</strong></span></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17409,
+                "nome": "Inst\u00e1vel",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17380,
+                    17394
+                ],
+                "argumentos": [
+                    "estado",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17646,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S4 (Paciente Est\u00e1vel)",
+            "descricao": "Paciente Est\u00e1vel",
+            "passo_de_saida_id": 17629,
+            "passo_de_saida": {
+                "id": 17629,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Estado do Paciente",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17633,
+            "passo_de_entrada": {
+                "id": 17633,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                "descricao": "<p>Classificar exacerba&ccedil;&atilde;o entre leve, moderada ou grave, checar sinais vitais, exame f&iacute;sico e oximetria. Investigar fatores precipitantes.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17410,
+                "nome": "Est\u00e1vel",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17380,
+                    17395
+                ],
+                "argumentos": [
+                    "estado",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17647,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S6",
+            "descricao": "Incondicional",
+            "passo_de_saida_id": 17635,
+            "passo_de_saida": {
+                "id": 17635,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Paciente Est\u00e1vel",
+                "descricao": "<p>Para diagn&oacute;sticos diferenciais, <u><strong>se necess&aacute;rio</strong></u>, solicitar: troponina, ckmb massa (s&iacute;ndrome coronariana aguda), d-d&iacute;mero (TEP).<br />\n<br />\n<u><strong>J&aacute; realizar as medica&ccedil;&otilde;es:</strong></u></p>\n\n<ul>\n\t<li>Berotec 10 gotas + atrovent 30 gotas + 3ml soro fisiol&oacute;gico 3ml (3x seguidas com intervalo de 20min)</li>\n\t<li>Cateter O2 (1-3 litros) se satura&ccedil;&atilde;o de oxig&ecirc;nio &lt; 90%</li>\n</ul>\n\n<p><br />\n<span style=\"color:null\"><strong>OBS: REAVALIAR AP&Oacute;S 1 HORA</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17636,
+            "passo_de_entrada": {
+                "id": 17636,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resposta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": null,
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17648,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S7 (Resposta r\u00e1pida)",
+            "descricao": "Resposta r\u00e1pida",
+            "passo_de_saida_id": 17636,
+            "passo_de_saida": {
+                "id": 17636,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resposta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17637,
+            "passo_de_entrada": {
+                "id": 17637,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resultados dos Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17411,
+                "nome": "Resposta r\u00e1pida",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17391,
+                    17395
+                ],
+                "argumentos": [
+                    "resposta_a_medicacao",
+                    "1"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17649,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S8 (Pouca melhora)",
+            "descricao": "Pouca melhora",
+            "passo_de_saida_id": 17636,
+            "passo_de_saida": {
+                "id": 17636,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resposta",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17638,
+            "passo_de_entrada": {
+                "id": 17638,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Permanece Est\u00e1vel?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17412,
+                "nome": "Pouca melhora",
+                "descricao": "",
+                "visivel": false,
+                "operador": "igual",
+                "operador_display": "Igual",
+                "argumentos_ids": [
+                    17391,
+                    17394
+                ],
+                "argumentos": [
+                    "resposta_a_medicacao",
+                    "2"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17650,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S9 (Houve altera\u00e7\u00f5es)",
+            "descricao": "Houve altera\u00e7\u00f5es",
+            "passo_de_saida_id": 17637,
+            "passo_de_saida": {
+                "id": 17637,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resultados dos Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17633,
+            "passo_de_entrada": {
+                "id": 17633,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                "descricao": "<p>Classificar exacerba&ccedil;&atilde;o entre leve, moderada ou grave, checar sinais vitais, exame f&iacute;sico e oximetria. Investigar fatores precipitantes.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17413,
+                "nome": "Houve altera\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17392
+                ],
+                "argumentos": [
+                    "exames_alterados"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17651,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S10 (N\u00e3o houve altera\u00e7\u00f5es)",
+            "descricao": "N\u00e3o houve altera\u00e7\u00f5es",
+            "passo_de_saida_id": 17637,
+            "passo_de_saida": {
+                "id": 17637,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Avaliar Resultados dos Exames",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17639,
+            "passo_de_entrada": {
+                "id": 17639,
+                "type": "Receita",
+                "type_verbose": "Receita",
+                "url": "",
+                "nome": "Receita (Paciente com resposta r\u00e1pida)",
+                "descricao": "<ul>\n\t<li><span style=\"color:null\"><span style=\"font-size:16px\">Orientar vacina&ccedil;&atilde;o contra influenza anualmente e anti-pneumoc&oacute;cica com refor&ccedil;o ap&oacute;s 5 anos.</span></span></li>\n\t<li><span style=\"color:null\"><span style=\"font-size:16px\">Orientar paciente para retornar a&nbsp;emerg&ecirc;ncia se n&atilde;o houver melhora ou ocorrer piora dos sintomas.</span></span></li>\n</ul>\n\n<h2><strong><u><span style=\"font-size:16px\">Orienta&ccedil;&otilde;es para prescri&ccedil;&atilde;o de medicamentos:</span></u></strong></h2>\n\n<ul>\n\t<li><span style=\"font-size:14px\"><strong>Pacientes com exacerba&ccedil;&atilde;o leve:</strong>&nbsp;n&atilde;o prescrever antibioticoterapia.</span></li>\n\t<li><span style=\"font-size:14px\"><strong>Paciente com exacerba&ccedil;&atilde;o moderada ou grave:</strong>&nbsp;prescrever antibioticoterapia.</span></li>\n\t<li><span style=\"font-size:14px\"><strong>Pacientes de Baixo Risco</strong> (1 exacerba&ccedil;&atilde;o/ano, sem hospitaliza&ccedil;&atilde;o): Azitromicina 500mg, 01 comprimido, via oral, 24/24h por 05 dias</span></li>\n\t<li><span style=\"font-size:14px\">Prescrever Amoxicilina/Clavulonato 875/125mg&nbsp;<strong>ou&nbsp;</strong>Levofloxacino 750mg&nbsp;<u><strong>SE:</strong></u></span>\n\t<ul>\n\t\t<li><span style=\"font-size:14px\">Idade acima de 65 anos</span></li>\n\t\t<li><span style=\"font-size:14px\">Dispneia grave</span></li>\n\t\t<li><span style=\"font-size:14px\">Comorbidade significativa</span></li>\n\t\t<li><span style=\"font-size:14px\">Mais de 4 exacerba&ccedil;&otilde;es/ano</span></li>\n\t\t<li><span style=\"font-size:14px\">Hospitaliza&ccedil;&atilde;o por exacerba&ccedil;&atilde;o no &uacute;ltimo ano</span></li>\n\t\t<li><span style=\"font-size:14px\">Uso de corticoide sist&ecirc;mico nos &uacute;ltimos tr&ecirc;s meses</span></li>\n\t\t<li><span style=\"font-size:14px\">Uso de antibi&oacute;ticos nos 15 dias pr&eacute;vios</span></li>\n\t\t<li><span style=\"font-size:14px\">Desnutri&ccedil;&atilde;o</span></li>\n\t</ul>\n\t</li>\n</ul>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null,
+                "manter_prescricao": false,
+                "orientacao_medica": ""
+            },
+            "operacao": {
+                "id": 17414,
+                "nome": "N\u00e3o houve altera\u00e7\u00f5es",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17392
+                ],
+                "argumentos": [
+                    "exames_alterados"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17652,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S11 (Paciente inst\u00e1vel)",
+            "descricao": "Paciente inst\u00e1vel",
+            "passo_de_saida_id": 17638,
+            "passo_de_saida": {
+                "id": 17638,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Permanece Est\u00e1vel?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17634,
+            "passo_de_entrada": {
+                "id": 17634,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Paciente Inst\u00e1vel ou Grave",
+                "descricao": "<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Paciente deve ser encaminhado ao Eixo Vermelho.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Se n&atilde;o houver defini&ccedil;&atilde;o da causa da descompensa&ccedil;&atilde;o, solicitar D D&iacute;mero, Troponina e PRO-BNP.</span></span></p>\n\n<p><span style=\"font-size:14px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Avaliar intuba&ccedil;&atilde;o orotraqueal<strong>.</strong></span></span></p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17415,
+                "nome": "Paciente inst\u00e1vel",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17393
+                ],
+                "argumentos": [
+                    "permanece_estavel"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17653,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S12 (Permanece est\u00e1vel)",
+            "descricao": "Permanece est\u00e1vel",
+            "passo_de_saida_id": 17638,
+            "passo_de_saida": {
+                "id": 17638,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Permanece Est\u00e1vel?",
+                "descricao": "",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17640,
+            "passo_de_entrada": {
+                "id": 17640,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Tratamento (Paciente estabilizado)",
+                "descricao": "<ul>\n\t<li>Avaliar exames</li>\n\t<li>Realizar VNI</li>\n\t<li>Berotec 10 gotas + atrovent 30 gotas + 3ml soro fisiol&oacute;gico 3ml de 1/1h</li>\n</ul>\n\n<p><u>Tratar poss&iacute;veis diagn&oacute;sticos diferenciais, a&nbsp;depender do resultado dos exames</u><br />\n<br />\n<strong>Discutir com o l&iacute;der local internamento hospitalar</strong><br />\n&nbsp;</p>",
+                "is_initial": false,
+                "is_terminal": true,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17416,
+                "nome": "Permanece est\u00e1vel",
+                "descricao": "",
+                "visivel": false,
+                "operador": "afirmativo",
+                "operador_display": "Afirmativo",
+                "argumentos_ids": [
+                    17393
+                ],
+                "argumentos": [
+                    "permanece_estavel"
+                ]
+            },
+            "ultima_auditoria": null
+        },
+        {
+            "id": 17654,
+            "type": "Sequencia",
+            "type_verbose": "Sequencia",
+            "url": "",
+            "nome": "S14 (sem exacerba\u00e7\u00e3o grave)",
+            "descricao": "sem exacerba\u00e7\u00e3o grave",
+            "passo_de_saida_id": 17633,
+            "passo_de_saida": {
+                "id": 17633,
+                "type": "AuxilioConduta",
+                "type_verbose": "Aux\u00edlio Conduta",
+                "url": "",
+                "nome": "Classifica\u00e7\u00e3o da Exacerba\u00e7\u00e3o + Exame F\u00edsico",
+                "descricao": "<p>Classificar exacerba&ccedil;&atilde;o entre leve, moderada ou grave, checar sinais vitais, exame f&iacute;sico e oximetria. Investigar fatores precipitantes.</p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "passo_de_entrada_id": 17635,
+            "passo_de_entrada": {
+                "id": 17635,
+                "type": "Tratamento",
+                "type_verbose": "Tratamento",
+                "url": "",
+                "nome": "Paciente Est\u00e1vel",
+                "descricao": "<p>Para diagn&oacute;sticos diferenciais, <u><strong>se necess&aacute;rio</strong></u>, solicitar: troponina, ckmb massa (s&iacute;ndrome coronariana aguda), d-d&iacute;mero (TEP).<br />\n<br />\n<u><strong>J&aacute; realizar as medica&ccedil;&otilde;es:</strong></u></p>\n\n<ul>\n\t<li>Berotec 10 gotas + atrovent 30 gotas + 3ml soro fisiol&oacute;gico 3ml (3x seguidas com intervalo de 20min)</li>\n\t<li>Cateter O2 (1-3 litros) se satura&ccedil;&atilde;o de oxig&ecirc;nio &lt; 90%</li>\n</ul>\n\n<p><br />\n<span style=\"color:null\"><strong>OBS: REAVALIAR AP&Oacute;S 1 HORA</strong></span></p>",
+                "is_initial": false,
+                "is_terminal": false,
+                "obrigatoriedade": false,
+                "ultima_auditoria": null
+            },
+            "operacao": {
+                "id": 17417,
+                "nome": "sem exacerba\u00e7\u00e3o grave",
+                "descricao": "",
+                "visivel": false,
+                "operador": "naoLogico",
+                "operador_display": "N\u00e3o L\u00f3gico",
+                "argumentos_ids": [
+                    17403
+                ],
+                "argumentos": [
+                    "Exacerba\u00e7\u00e3o Grave"
+                ]
+            },
+            "ultima_auditoria": null
+        }
+    ],
+    "expressoes_globais": [
+        {
+            "id": 17380,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "estado",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Est\u00e1vel",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Inst\u00e1vel",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17381,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "quick_sofa",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Confus\u00e3o Mental",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "PAS < 100",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "FR > 22",
+                    "peso": 1.0
+                }
+            ],
+            "multipla_resposta": true
+        },
+        {
+            "id": 17382,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_cardinais_piora_dispneia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17383,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_cardinais_aumento_expectoracao",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17384,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "criterios_cardinais_escarro_purulento",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17385,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "achados_adicionais_ivas",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17386,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "achados_adicionais_febre_sem_causa_aparente",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17387,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "achados_adicionais_sibilis",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17388,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "achados_adicionais_aumento_da_tosse",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17389,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "achados_adicionais_taquipneia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17390,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "achados_adicionais_taquicardia",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17391,
+            "type": "Escolha",
+            "type_verbose": "Escolha",
+            "url": "",
+            "nome": "resposta_a_medicacao",
+            "peso": 1.0,
+            "valor": null,
+            "vinculo": null,
+            "opcoes": [
+                {
+                    "texto": "Resposta r\u00e1pida \u00e0s medica\u00e7\u00f5es",
+                    "peso": 1.0
+                },
+                {
+                    "texto": "Pouca melhora com tratamento inicial",
+                    "peso": 2.0
+                }
+            ],
+            "multipla_resposta": false
+        },
+        {
+            "id": 17392,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "exames_alterados",
+            "peso": 1.0,
+            "valor": false,
+            "vinculo": null
+        },
+        {
+            "id": 17393,
+            "type": "SimOuNao",
+            "type_verbose": "Sim Ou N\u00e3o",
+            "url": "",
+            "nome": "permanece_estavel",
+            "peso": 1.0,
+            "valor": true,
+            "vinculo": null
+        },
+        {
+            "id": 17394,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "2",
+            "peso": 1.0,
+            "valor": 2.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17395,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "1",
+            "peso": 1.0,
+            "valor": 1.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17396,
+            "type": "Numerica",
+            "type_verbose": "Num\u00e9rica",
+            "url": "",
+            "nome": "3",
+            "peso": 1.0,
+            "valor": 3.0,
+            "vinculo": null,
+            "unidade": ""
+        },
+        {
+            "id": 17397,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Crit\u00e9rios Carinais",
+            "descricao": "Crit\u00e9rios Carinais",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                17382,
+                17383,
+                17384
+            ],
+            "argumentos": [
+                "criterios_cardinais_piora_dispneia",
+                "criterios_cardinais_aumento_expectoracao",
+                "criterios_cardinais_escarro_purulento"
+            ]
+        },
+        {
+            "id": 17398,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Achados Adicionais",
+            "descricao": "Achados Adicionais",
+            "visivel": true,
+            "operador": "adicao",
+            "operador_display": "Adi\u00e7\u00e3o",
+            "argumentos_ids": [
+                17385,
+                17386,
+                17387,
+                17388,
+                17389,
+                17390
+            ],
+            "argumentos": [
+                "achados_adicionais_ivas",
+                "achados_adicionais_febre_sem_causa_aparente",
+                "achados_adicionais_sibilis",
+                "achados_adicionais_aumento_da_tosse",
+                "achados_adicionais_taquipneia",
+                "achados_adicionais_taquicardia"
+            ]
+        },
+        {
+            "id": 17399,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Crit\u00e9rios Carinais == 1",
+            "descricao": "Crit\u00e9rios Carinais == 1",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17397,
+                17395
+            ],
+            "argumentos": [
+                "Crit\u00e9rios Carinais",
+                "1"
+            ]
+        },
+        {
+            "id": 17400,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Achados Adicionais == 1",
+            "descricao": "Achados Adicionais == 1",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17398,
+                17395
+            ],
+            "argumentos": [
+                "Achados Adicionais",
+                "1"
+            ]
+        },
+        {
+            "id": 17401,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Exacerba\u00e7\u00e3o Leve",
+            "descricao": "Exacerba\u00e7\u00e3o Leve",
+            "visivel": true,
+            "operador": "eLogico",
+            "operador_display": "E L\u00f3gico",
+            "argumentos_ids": [
+                17399,
+                17400
+            ],
+            "argumentos": [
+                "Crit\u00e9rios Carinais == 1",
+                "Achados Adicionais == 1"
+            ]
+        },
+        {
+            "id": 17402,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Exacerba\u00e7\u00e3o Moderada",
+            "descricao": "Exacerba\u00e7\u00e3o Moderada",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17397,
+                17394
+            ],
+            "argumentos": [
+                "Crit\u00e9rios Carinais",
+                "2"
+            ]
+        },
+        {
+            "id": 17403,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Exacerba\u00e7\u00e3o Grave",
+            "descricao": "Exacerba\u00e7\u00e3o Grave",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17397,
+                17396
+            ],
+            "argumentos": [
+                "Crit\u00e9rios Carinais",
+                "3"
+            ]
+        },
+        {
+            "id": 17404,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Paciente Est\u00e1vel",
+            "descricao": "Paciente Est\u00e1vel",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17395
+            ],
+            "argumentos": [
+                "1"
+            ]
+        },
+        {
+            "id": 17405,
+            "type": "Operacao",
+            "type_verbose": "Opera\u00e7\u00e3o",
+            "url": "",
+            "nome": "Paciente Inst\u00e1vel",
+            "descricao": "Paciente Inst\u00e1vel",
+            "visivel": true,
+            "operador": "igual",
+            "operador_display": "Igual",
+            "argumentos_ids": [
+                17394
+            ],
+            "argumentos": [
+                "2"
+            ]
+        }
+    ]
+}
